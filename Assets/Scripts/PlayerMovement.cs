@@ -10,7 +10,9 @@ public class PlayerMovement : MonoBehaviour
 
     [HideInInspector]
     public float lastHorizontalVector;
+    [HideInInspector]
     public float lastVerticalVector;
+    [HideInInspector]
     public Vector2 movementDirection;
 
     private void Start()
