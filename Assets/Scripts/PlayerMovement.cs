@@ -7,7 +7,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float movementSpeed;
     
     private Rigidbody2D _rigidBody;
-    private Vector2 _movementDirection;
+
+    [HideInInspector]
+    public float lastHorizontalVector;
+    public float lastVerticalVector;
+    public Vector2 movementDirection;
 
     private void Start()
     {
@@ -29,11 +33,17 @@ public class PlayerMovement : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        _movementDirection = new Vector2(moveX, moveY).normalized;
+        movementDirection = new Vector2(moveX, moveY).normalized;
+
+        if (movementDirection.x != 0)
+            lastHorizontalVector = movementDirection.x;
+
+        if (movementDirection.y != 0)
+            lastVerticalVector = movementDirection.y;
     }
 
     private void Move()
     {
-        _rigidBody.velocity = new Vector2(_movementDirection.x * movementSpeed, _movementDirection.y * movementSpeed);
+        _rigidBody.velocity = new Vector2(movementDirection.x * movementSpeed, movementDirection.y * movementSpeed);
     }
 }
