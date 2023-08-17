@@ -2,17 +2,22 @@ using UnityEngine;
 
 public class LookAtMouse : MonoBehaviour
 {
-    private Transform playerTransform;
+    private Camera mainCamera; // Reference to the main camera
+    private Transform playerTransform; // Reference to the player's transform
 
     private void Start()
     {
-        playerTransform = transform.parent;
+        mainCamera = Camera.main;
+        playerTransform = transform.parent; // Assuming the object is the child of the player
     }
 
     private void Update()
     {
         Vector3 mousePosition = Input.mousePosition;
-        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, Camera.main.nearClipPlane));
+        Vector3 mouseScreenPosition = mainCamera.WorldToScreenPoint(transform.position);
+        Vector3 offsetMousePosition = new Vector3(mousePosition.x, mousePosition.y, mouseScreenPosition.z);
+
+        Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(offsetMousePosition);
         Vector3 directionToMouse = mouseWorldPosition - transform.position;
         float rotationAngle = Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg;
 
