@@ -43,7 +43,7 @@ public class LookAtMouse : MonoBehaviour
         {
             transform.localScale = new Vector3(0.1f, 0.1f, 0.1f); // Reset scale
         }
-
+        
         transform.rotation = Quaternion.AngleAxis(rotationAngle, Vector3.forward);
         playerTransform.position = transform.position;
     }
