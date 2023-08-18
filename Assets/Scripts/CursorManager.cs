@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,9 +5,9 @@ public class CursorManager : MonoBehaviour
 {
     public static CursorManager Instance { get; private set; }
 
-    [SerializeField] private List<CursorAnimation> cursorAnimationList;
+    [SerializeField] private List<CursorAnimationData> cursorAnimationDataList;
     
-    private CursorAnimation _cursorAnimation;
+    private CursorAnimationData _cursorAnimation;
     private int _currentFrame;
     private int _frameCount;
     private float _frameTimer;
@@ -21,7 +20,16 @@ public class CursorManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+            Instance = this;
+        else
+        {
+            Destroy(gameObject);
+
+            return;
+        }
+
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
@@ -48,35 +56,25 @@ public class CursorManager : MonoBehaviour
         SetActiveCursorAnimation(GetCursorAnimation(cursorType));
     }
 
-    private CursorAnimation GetCursorAnimation(CursorType cursorType)
+    private CursorAnimationData GetCursorAnimation(CursorType cursorType)
     {
-        foreach (CursorAnimation cursorAnimation in cursorAnimationList)
+        foreach (CursorAnimationData cursorAnimationData in cursorAnimationDataList)
         {
-            if (cursorAnimation.cursorType == cursorType)
-                return cursorAnimation;
+            if (cursorAnimationData.cursorType == cursorType)
+                return cursorAnimationData;
         }
 
-        // Couldn't find this cursor type
-        return null;
+        return null; // Return null if no matching cursor animation data is found
     }
 
-    private void SetActiveCursorAnimation(CursorAnimation cursorAnimation)
+    private void SetActiveCursorAnimation(CursorAnimationData cursorAnimation)
     {
-        this._cursorAnimation = cursorAnimation;
+        _cursorAnimation = cursorAnimation;
 
         _currentFrame = 0;
 
         _frameTimer = _cursorAnimation.frameRate;
 
         _frameCount = _cursorAnimation.textureArray.Length;
-    }
-
-    [Serializable]
-    public class CursorAnimation
-    { 
-        public CursorType cursorType;
-        public Texture2D[] textureArray;
-        public float frameRate;
-        public Vector2 offset;
     }
 }
