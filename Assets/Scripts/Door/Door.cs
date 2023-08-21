@@ -18,7 +18,6 @@ public class Door : MonoBehaviour
     {
         if (player.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Colision");
             nextLevel.LoadLevel();
         }
     }
