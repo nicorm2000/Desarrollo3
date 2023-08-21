@@ -10,7 +10,7 @@ public class RoundCounter : MonoBehaviour
     
     [SerializeField] private int addRound = 1;
 
-    [SerializeField] private SpawnDoor spawnDoor;
+    [SerializeField] private Door spawnDoor;
 
     public int currentRound = 1;
 
