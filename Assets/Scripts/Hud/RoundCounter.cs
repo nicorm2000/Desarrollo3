@@ -10,8 +10,6 @@ public class RoundCounter : MonoBehaviour
     
     [SerializeField] private int addRound = 1;
 
-    [SerializeField] private Door spawnDoor;
-
     public int currentRound = 1;
 
     public int maxRounds = 5;
@@ -28,12 +26,6 @@ public class RoundCounter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) 
         {
             IncreaseRounds(addRound);
-        }
-
-        if (currentRound >= maxRounds)
-        {
-            currentRound = maxRounds;
-            spawnDoor.ActiveObject();
         }
     }
 

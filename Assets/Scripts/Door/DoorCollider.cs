@@ -3,16 +3,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class DoorCollider : MonoBehaviour
 {
-    [SerializeField] private GameObject door;
-
     [SerializeField] private NextLevel nextLevel;
-
-    void Start()
-    {
-        door.SetActive(false);
-    }
 
     private void OnTriggerEnter2D(Collider2D player)
     {
@@ -20,10 +13,5 @@ public class Door : MonoBehaviour
         {
             nextLevel.LoadLevel();
         }
-    }
-
-    public void ActiveObject()
-    {
-        door.SetActive(true);
     }
 }
