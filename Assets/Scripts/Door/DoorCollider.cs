@@ -19,7 +19,6 @@ public class DoorCollider : MonoBehaviour
         if (starTime == true) 
         {
             currentTime += Time.deltaTime;
-            Debug.Log(currentTime);
         }
 
         if (currentTime >= maxTime)
