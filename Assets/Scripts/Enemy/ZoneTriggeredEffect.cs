@@ -30,10 +30,10 @@ public class ZoneTriggeredEffect : MonoBehaviour
 
     private void TriggerEffect()
     {
-        int splashIndex = Random.Range(0, dropData.splashSprites.Count); // Assuming you have a list of prefabs in dropData
+        int splashIndex = Random.Range(0, dropData.splashSprites.Count);
         int materialIndex = Random.Range(0, dropData.materials.Count);
 
-        GameObject splashPrefab = dropData.splashSprites[splashIndex]; // Get the correct prefab
+        GameObject splashPrefab = dropData.splashSprites[splashIndex];
         GameObject splashObject = Instantiate(splashPrefab, transform.position, Quaternion.identity);
 
         SpriteRenderer spriteRenderer = splashObject.GetComponent<SpriteRenderer>();
@@ -46,7 +46,7 @@ public class ZoneTriggeredEffect : MonoBehaviour
 
     private IEnumerator FadeOutAndDestroy(GameObject splashObject, SpriteRenderer spriteRenderer)
     {
-        float startTime = Time.time;
+        float startTime = Time.deltaTime;
         float elapsedTime = 0f;
         Color originalColor = spriteRenderer.color;
 
