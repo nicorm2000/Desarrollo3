@@ -9,6 +9,8 @@ public class DoorCollider : MonoBehaviour
 
     [SerializeField] private GameObject transition;
 
+    [SerializeField] private RoundCounter roundCounter;
+
     private float currentTime = 0.0f;
     private float maxTime = 1f;
 
@@ -33,7 +35,9 @@ public class DoorCollider : MonoBehaviour
         {
             transition.SetActive(true);
 
-            starTime = true;
+            starTime = true; 
+            
+            roundCounter.maxRounds += 5;
         }
     }
 }

@@ -17,10 +17,15 @@ public class RoundCounter : MonoBehaviour
     void Start()
     {
         roundText.text = "Rounds: " + currentRound.ToString();
+
+        DontDestroyOnLoad(this); //Fix duplicate error.
     }
 
     void Update()
     {
+        PlayerPrefs.SetInt("CurrentRounds", currentRound);
+        PlayerPrefs.Save();
+
         roundText.text = "Rounds: " + currentRound.ToString();
 
         if (Input.GetKeyDown(KeyCode.Space)) 
