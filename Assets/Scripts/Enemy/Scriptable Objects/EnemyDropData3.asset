@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6143acde63c10f740a4cf8e4cb86fa24, type: 3}
+  m_Name: EnemyDropData3
+  m_EditorClassIdentifier: 
+  splashSprites:
+  - {fileID: 3167985388369358306, guid: b2ded105f17740642bf6704f8e043a2a, type: 3}
+  - {fileID: 2938915285224095959, guid: 18535d06a89e09d49bafbcc38c1929e4, type: 3}
+  - {fileID: 5528008241262070366, guid: e500dcdbd10780a449b20ef79409dd0e, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 5028603444b458842bd42bd5629239b0, type: 2}
+  - {fileID: 2100000, guid: 15aa2c41d39430a4eba420e9e901d19e, type: 2}
+  - {fileID: 2100000, guid: d0fe4cff082afb444ae56b556a3369cd, type: 2}
+  - {fileID: 2100000, guid: 0cc19e304b81648428ba0ec02253a1e8, type: 2}
+  - {fileID: 2100000, guid: 9fac3cbde46aa6a47ad8e12d9ea888d0, type: 2}
+  - {fileID: 2100000, guid: a2d3fb2c5836dba4a92a07d99d8c4dbc, type: 2}
+  objectLifespan: 5
