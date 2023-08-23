@@ -10,15 +10,30 @@ public class RoundCounter : MonoBehaviour
     
     [SerializeField] private int addRound = 1;
 
+    private static RoundCounter instance;
+
     public int currentRound = 1;
 
     public int maxRounds = 5;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            
+            DontDestroyOnLoad(this.gameObject);
+        }
+
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         roundText.text = "Rounds: " + currentRound.ToString();
-
-        DontDestroyOnLoad(this); //Fix duplicate error.
     }
 
     void Update()
@@ -37,5 +52,26 @@ public class RoundCounter : MonoBehaviour
     private void IncreaseRounds(int round) 
     {
         currentRound += round;   
+    }
+
+    public static RoundCounter Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<RoundCounter>();
+                
+                if (instance == null)
+                {
+                    GameObject singletonObject = new GameObject();
+                    
+                    instance = singletonObject.AddComponent<RoundCounter>();
+                    
+                    singletonObject.name = "RoundCounter (Singleton)";
+                }
+            }
+            return instance;
+        }
     }
 }

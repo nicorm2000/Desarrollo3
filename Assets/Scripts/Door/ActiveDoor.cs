@@ -14,6 +14,8 @@ public class ActiveDoor : MonoBehaviour
     {
         door.SetActive(false);
         isActive = false;
+
+        roundCounter = FindObjectOfType<RoundCounter>();
     }
 
     void Update()

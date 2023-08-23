@@ -16,6 +16,11 @@ public class DoorCollider : MonoBehaviour
 
     private bool starTime = false;
 
+    private void Start()
+    {
+        roundCounter = FindObjectOfType<RoundCounter>();
+    }
+
     private void Update()
     {
         if (starTime == true) 
