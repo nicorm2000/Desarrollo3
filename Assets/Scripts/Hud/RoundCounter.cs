@@ -8,10 +8,6 @@ public class RoundCounter : MonoBehaviour
 {
     [SerializeField] private TMP_Text roundText;
 
-    [SerializeField] private Shop shop;
-
-    [SerializeField] private int addRound = 1;
-
     private static RoundCounter instance;
 
     public int currentRound = 1;
@@ -40,21 +36,12 @@ public class RoundCounter : MonoBehaviour
 
     void Update()
     {
-        PlayerPrefs.SetInt("CurrentRounds", currentRound);
-        PlayerPrefs.Save();
-
         roundText.text = "Rounds: " + currentRound.ToString();
-
-        if (Input.GetKeyDown(KeyCode.Space)) 
-        {
-            IncreaseRounds(addRound);
-        }
     }
 
-    private void IncreaseRounds(int round) 
+    public void IncreaseRounds(int round) 
     {
         currentRound += round;
-        shop.ActiveShop();
     }
 
     public static RoundCounter Instance

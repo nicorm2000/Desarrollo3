@@ -5,18 +5,14 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     [SerializeField] private GameObject shopWindow;
+
     [SerializeField] private GameObject hud;
 
-    [SerializeField] private float playerHealth = 1.0f;
+    public float playerHealth = 1.0f;
 
-    [SerializeField] private float playerSpeed = 1.0f;
+    public float playerSpeed = 1.0f;
 
-    [SerializeField] private float playerDamage = 1.0f;
-
-    private void Start()
-    {
-        DesactiveShop();
-    }
+    public float playerDamage = 1.0f;
 
     public void ActiveShop() 
     {
