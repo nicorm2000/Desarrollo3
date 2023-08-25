@@ -7,7 +7,9 @@ using TMPro;
 public class RoundCounter : MonoBehaviour
 {
     [SerializeField] private TMP_Text roundText;
-    
+
+    [SerializeField] private Shop shop;
+
     [SerializeField] private int addRound = 1;
 
     private static RoundCounter instance;
@@ -51,7 +53,8 @@ public class RoundCounter : MonoBehaviour
 
     private void IncreaseRounds(int round) 
     {
-        currentRound += round;   
+        currentRound += round;
+        shop.ActiveShop();
     }
 
     public static RoundCounter Instance
