@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/NormalLevel.unity
+    path: Assets/Scenes/SceneChanger/NormalLevel.unity
     guid: 79e980350c5394e48bb671c2b62f1a04
   - enabled: 1
-    path: Assets/Scenes/ChooseWeaponLevel.unity
+    path: Assets/Scenes/SceneChanger/ChooseWeaponLevel.unity
     guid: 67c6c788cd3c9cf4b8d43a440cf17493
   m_configObjects: {}
