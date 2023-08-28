@@ -4,6 +4,7 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float lifespan;
+    [SerializeField] private float damage;
 
     private float timer;
 
@@ -22,5 +23,14 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         timer = lifespan;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            Debug.Log("Damage!");
+            collision.GetComponent<HealthSystem>().TakeDamage(damage);
+        }
     }
 }

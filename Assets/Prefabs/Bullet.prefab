@@ -100,6 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 5
   lifespan: 3
+  damage: 1
+  healthSystem: {fileID: -5129004534547528821, guid: 1d26883000583fa4d95ee31b544ed7ed, type: 3}
 --- !u!61 &954048138162336998
 BoxCollider2D:
   m_ObjectHideFlags: 0

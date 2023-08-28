@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AIChase : MonoBehaviour
@@ -28,14 +26,6 @@ public class AIChase : MonoBehaviour
             dir.Normalize();
 
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, chaseSpeed * Time.deltaTime);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet"))
-        {
-            Debug.Log("Damage!");
         }
     }
 }
