@@ -1,4 +1,4 @@
-Shader "Supyrb/Unlit/Texture"
+Shader "nicorm/Unlit/Texture"
 {
     Properties
     {
