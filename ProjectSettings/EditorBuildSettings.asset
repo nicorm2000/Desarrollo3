@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainTesting.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ShopSystem/NLShopSystem.unity
+    guid: e7e1c245f75e76746b913485b1f06bdc
+  - enabled: 1
+    path: Assets/Scenes/ShopSystem/CWShopSystem.unity
+    guid: d86f02d37a2e62148ab84c8704c4b756
   m_configObjects: {}
