@@ -11,7 +11,7 @@ public class AddRounds : MonoBehaviour
     [SerializeField] private int addRound = 1;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             roundCounter.IncreaseRounds(addRound);
             shop.ActiveShop();
