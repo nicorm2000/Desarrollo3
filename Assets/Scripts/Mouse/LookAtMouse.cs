@@ -37,11 +37,11 @@ public class LookAtMouse : MonoBehaviour
         // Flip the object horizontally if it crosses the 90-degree threshold
         if (rotationAngle > 90 || rotationAngle < -90)
         {
-            transform.localScale = new Vector3(0.1f, -0.1f, 0.1f); // Flip horizontally
+            transform.localScale = new Vector3(1f, -1f, 1f); // Flip horizontally
         }
         else
         {
-            transform.localScale = new Vector3(0.1f, 0.1f, 0.1f); // Reset scale
+            transform.localScale = new Vector3(1f, 1f, 1f); // Reset scale
         }
         
         transform.rotation = Quaternion.AngleAxis(rotationAngle, Vector3.forward);
