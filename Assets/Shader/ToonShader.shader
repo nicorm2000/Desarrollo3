@@ -23,24 +23,24 @@ Shader "nicorm/Unlit/Texture"
     }
 
         CGINCLUDE
-#include "UnityCG.cginc"
-
+    #include "UnityCG.cginc"
+    
             half4 _Color;
         sampler2D _MainTex;
         float4 _MainTex_ST;
-
+    
         struct appdata
         {
             float4 vertex : POSITION;
             float2 uv : TEXCOORD0;
         };
-
+    
         struct v2f
         {
             float2 uv : TEXCOORD0;
             float4 vertex : SV_POSITION;
         };
-
+    
         v2f vert(appdata v)
         {
             v2f o;
@@ -48,16 +48,17 @@ Shader "nicorm/Unlit/Texture"
             o.uv = TRANSFORM_TEX(v.uv, _MainTex);
             return o;
         }
-
+    
         half4 frag(v2f i) : SV_Target
         {
             return tex2D(_MainTex, i.uv) * _Color;
         }
-            struct v2fShadow {
+        struct v2fShadow 
+        {
             V2F_SHADOW_CASTER;
             UNITY_VERTEX_OUTPUT_STEREO
         };
-
+    
         v2fShadow vertShadow(appdata_base v)
         {
             v2fShadow o;
@@ -66,14 +67,14 @@ Shader "nicorm/Unlit/Texture"
             TRANSFER_SHADOW_CASTER_NORMALOFFSET(o)
                 return o;
         }
-
+    
         float4 fragShadow(v2fShadow i) : SV_Target
         {
             SHADOW_CASTER_FRAGMENT(i)
         }
-
+    
             ENDCG
-
+    
             SubShader
         {
             Stencil
@@ -86,7 +87,7 @@ Shader "nicorm/Unlit/Texture"
                 Fail[_StencilFail]
                 ZFail[_StencilZFail]
             }
-
+    
                 Pass
             {
                 Tags { "RenderType" = "Opaque" "Queue" = "Geometry" }
@@ -96,14 +97,14 @@ Shader "nicorm/Unlit/Texture"
                 ZWrite[_ZWrite]
                 ZTest[_ZTest]
                 ColorMask[_ColorMask]
-
+    
                 CGPROGRAM
                 #pragma target 3.0
                 #pragma vertex vert
                 #pragma fragment frag
                 ENDCG
             }
-
+    
                 // Pass to render object as a shadow caster
                 Pass
             {
@@ -114,7 +115,7 @@ Shader "nicorm/Unlit/Texture"
                 Offset[_Offset],[_Offset]
                 ZWrite[_ZWrite]
                 ZTest[_ZTest]
-
+    
                 CGPROGRAM
                 #pragma vertex vertShadow
                 #pragma fragment fragShadow
