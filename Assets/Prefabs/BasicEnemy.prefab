@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  componentToKeep: {fileID: -5129004534547528821}
 --- !u!212 &7699837152467073221
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -162,4 +163,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13830eb822c5fe340bca5ebed25f330f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropData: {fileID: 11400000, guid: 1ecd47809c2064c4399f205203da9d0c, type: 2}
+  dropData: {fileID: 11400000, guid: d1e545dd00ebe254f977e3d35bab8bb6, type: 2}

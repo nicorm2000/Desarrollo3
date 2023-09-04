@@ -3,13 +3,17 @@ using UnityEngine;
 public class HealthSystem : MonoBehaviour
 {
     [SerializeField] private float health = 0;
+    public Component componentToKeep;
     private ZoneTriggeredEffect _triggerEffect;
+    private SpriteRenderer _spriteRenderer;
+    private Collider2D _collider2D;
     private bool _dead = false;
-    private float _count;
 
     private void Start()
     {
         _triggerEffect = GetComponent<ZoneTriggeredEffect>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _collider2D = GetComponent<Collider2D>();
     }
 
     private void Update()
@@ -18,19 +22,21 @@ public class HealthSystem : MonoBehaviour
         {
             if (!_dead)
             {
-                _count++;
+                _spriteRenderer.enabled = false;
+                _collider2D.enabled = false;
 
                 _triggerEffect.TriggerEffect();
-                
-                if (_triggerEffect.dropData.objectLifespan <= 0)
-                {
 
-                    Destroy(gameObject);
-                }
-                
+                Invoke("DestroyEnemy", _triggerEffect.dropData.objectLifespan);
+
                 _dead = true;
             }
         }
+    }
+
+    public void DestroyEnemy()
+    {
+        Destroy(gameObject);
     }
 
     public void TakeDamage(float damage)
