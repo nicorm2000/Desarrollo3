@@ -3,7 +3,6 @@ using UnityEngine;
 public class HealthSystem : MonoBehaviour
 {
     [SerializeField] private float health = 0;
-    public Component componentToKeep;
     private ZoneTriggeredEffect _triggerEffect;
     private SpriteRenderer _spriteRenderer;
     private Collider2D _collider2D;
