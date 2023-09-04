@@ -5,30 +5,7 @@ public class ZoneTriggeredEffect : MonoBehaviour
 {
     public EnemyDropData dropData;
 
-    private bool isEffectTriggered = false;
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (IsPlayerLayer(collision.gameObject) && !isEffectTriggered)
-        {
-            TriggerEffect();
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (IsPlayerLayer(collision.gameObject))
-        {
-            isEffectTriggered = false;
-        }
-    }
-
-    private bool IsPlayerLayer(GameObject obj)
-    {
-        return obj.layer == LayerMask.NameToLayer("Player");
-    }
-
-    private void TriggerEffect()
+    public void TriggerEffect()
     {
         int splashIndex = Random.Range(0, dropData.splashSprites.Count);
         int materialIndex = Random.Range(0, dropData.materials.Count);
@@ -40,8 +17,6 @@ public class ZoneTriggeredEffect : MonoBehaviour
         spriteRenderer.material = dropData.materials[materialIndex];
 
         StartCoroutine(FadeOutAndDestroy(splashObject, spriteRenderer));
-
-        isEffectTriggered = true;
     }
 
     private IEnumerator FadeOutAndDestroy(GameObject splashObject, SpriteRenderer spriteRenderer)

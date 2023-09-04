@@ -6,5 +6,5 @@ public class EnemyDropData : ScriptableObject
 {
     public List<GameObject> splashSprites;
     public List<Material> materials;
-    public float objectLifespan = 5.0f; // Lifespan in seconds
+    public float objectLifespan; // Lifespan in seconds
 }
