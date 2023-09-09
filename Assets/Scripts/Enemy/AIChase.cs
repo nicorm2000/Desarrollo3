@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class AIChase : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
     [SerializeField] private float chaseSpeed;
+    private GameObject player;
 
     private bool isChasing = false;
     private float _distance;
+
+    private void Start()
+    {
+        player = GameObject.FindWithTag("Player");
+    }
 
     private void Update()
     {
