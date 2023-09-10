@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: -5129004534547528821}
   - component: {fileID: 7699837152467073221}
   - component: {fileID: -2853175424434337631}
+  - component: {fileID: -8772052323743216990}
   m_Layer: 8
-  m_Name: BasicEnemy Variant 2
+  m_Name: BasicEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,7 +139,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 22149aaee441d5c4181a2e5016a8dc62, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf6f44ae66d1cb54598c66a491e816b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -162,3 +163,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropData: {fileID: 11400000, guid: d1e545dd00ebe254f977e3d35bab8bb6, type: 2}
+--- !u!50 &-8772052323743216990
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779284332624663121}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
