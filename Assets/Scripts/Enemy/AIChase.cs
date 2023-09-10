@@ -3,14 +3,14 @@ using UnityEngine;
 public class AIChase : MonoBehaviour
 {
     [SerializeField] private float chaseSpeed;
-    private GameObject player;
+    private GameObject _player;
 
     private bool isChasing = false;
     private float _distance;
 
     private void Start()
     {
-        player = GameObject.FindWithTag("Player");
+        _player = GameObject.FindWithTag("Player");
     }
 
     private void Update()
@@ -21,16 +21,16 @@ public class AIChase : MonoBehaviour
 
             if (isChasing)
             {
-                _distance = Vector2.Distance(transform.position, player.transform.position);
+                _distance = Vector2.Distance(transform.position, _player.transform.position);
             }
         }
 
         if (isChasing)
         {
-            Vector2 dir = player.transform.position - transform.position;
+            Vector2 dir = _player.transform.position - transform.position;
             dir.Normalize();
 
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, chaseSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, _player.transform.position, chaseSpeed * Time.deltaTime);
         }
     }
 }
