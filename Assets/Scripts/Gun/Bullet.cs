@@ -32,5 +32,10 @@ public class Bullet : MonoBehaviour
             Debug.Log("Damage!");
             collision.GetComponent<HealthSystem>().TakeDamage(damage);
         }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
