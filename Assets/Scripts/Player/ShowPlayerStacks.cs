@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem.HID;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class ShowPlayerStacks : MonoBehaviour
 {
@@ -12,18 +13,18 @@ public class ShowPlayerStacks : MonoBehaviour
 
     [SerializeField] private TMP_Text damageText;
 
-    [SerializeField] private Shop shop;
+    [SerializeField] private Shop shopManager;
     void Start()
     {
-        healthText.text = "Health: " + shop.playerHealth.ToString();
-        speedText.text = "Speed: " + shop.playerSpeed.ToString();
-        damageText.text = "Damage: " + shop.playerDamage.ToString();
+        healthText.text = "Health: " + shopManager.playerHealth.ToString();
+        speedText.text = "Speed: " + shopManager.playerSpeed.ToString();
+        damageText.text = "Damage: " + shopManager.playerDamage.ToString();
     }
 
     void Update()
     {
-        healthText.text = "Health: " + shop.playerHealth.ToString();
-        speedText.text = "Speed: " + shop.playerSpeed.ToString();
-        damageText.text = "Damage: " + shop.playerDamage.ToString();
+        healthText.text = "Health: " + shopManager.playerHealth.ToString();
+        speedText.text = "Speed: " + shopManager.playerSpeed.ToString();
+        damageText.text = "Damage: " + shopManager.playerDamage.ToString();
     }
 }
