@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float spawnInterval;
     [SerializeField] private float spawnTime;
     [SerializeField] private Transform[] spawnPositions;
+    [SerializeField] private GameObject spawnIndicator;
 
     private void Start()
     {
