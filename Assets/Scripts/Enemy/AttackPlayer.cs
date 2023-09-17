@@ -6,17 +6,18 @@ public class AttackPlayer : MonoBehaviour
 {
     [SerializeField] private float damage;
 
-    PlayerHealth playerHealth;
+    private PlayerHealth playerHealth;
 
     private void Start()
     {
-        
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
-    private void OnTriggerEnter(Collider enemy)
+    private void OnTriggerEnter2D(Collider2D Enemy)
     {
-        if (enemy.gameObject.CompareTag("Player"))
+        if (Enemy.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Attack");
             playerHealth.takeDamage(damage);
         }
     }
