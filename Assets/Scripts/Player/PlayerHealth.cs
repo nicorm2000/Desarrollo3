@@ -9,15 +9,18 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float maxHealth;
     [SerializeField] private float health;
     [SerializeField] private bool _isDead;
+    [SerializeField] private HealthBar healthBar;
 
     void Start()
     {
         health = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     public void takeDamage(float damage) 
     {
         health -= damage;
+        healthBar.SetHealth(health);
     }
 
     public bool isDead() 
