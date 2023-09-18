@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SelectWeapon : MonoBehaviour
 {
-    [SerializeField] private NextLevel nextLevel;
-
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject levelSpawn;
 

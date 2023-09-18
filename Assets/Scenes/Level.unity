@@ -2672,8 +2672,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0011291504, y: 0.0001373291}
-  m_SizeDelta: {x: 126.6496, y: 26.8844}
+  m_AnchoredPosition: {x: -0.00042534, y: -0.0000095368}
+  m_SizeDelta: {x: 252.77, y: 49.424}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &364590389
 MonoBehaviour:
@@ -9928,7 +9928,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cb2d1b65c3707479899e816690a830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: {fileID: 0}
   player: {fileID: 193267617}
   levelSpawn: {fileID: 1662366594}
 --- !u!4 &1132396380
@@ -9940,13 +9939,13 @@ Transform:
   m_GameObject: {fileID: 1132396377}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -85.94913, y: 2.45, z: 0}
+  m_LocalPosition: {x: -0.34912872, y: 2.4499998, z: 0}
   m_LocalScale: {x: 1.8485, y: 1.8485, z: 1.8485}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 147449780}
   - {fileID: 740984375}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2141938729}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1148750396
 GameObject:
@@ -10749,7 +10748,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cb2d1b65c3707479899e816690a830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: {fileID: 0}
   player: {fileID: 193267617}
   levelSpawn: {fileID: 1662366594}
 --- !u!4 &1186112281
@@ -10761,13 +10759,13 @@ Transform:
   m_GameObject: {fileID: 1186112278}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -79.73913, y: 2.45, z: 0}
+  m_LocalPosition: {x: 5.8608704, y: 2.4499998, z: 0}
   m_LocalScale: {x: 1.8485, y: 1.8485, z: 1.8485}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2003158106}
   - {fileID: 507009395}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2141938729}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1189201634
 GameObject:
@@ -11632,7 +11630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cb2d1b65c3707479899e816690a830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: {fileID: 0}
   player: {fileID: 193267617}
   levelSpawn: {fileID: 1662366594}
 --- !u!4 &1297260549
@@ -11644,13 +11641,13 @@ Transform:
   m_GameObject: {fileID: 1297260546}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -91.469124, y: 2.45, z: 0}
+  m_LocalPosition: {x: -5.8691254, y: 2.4499998, z: 0}
   m_LocalScale: {x: 1.8485, y: 1.8485, z: 1.8485}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 25241835}
   - {fileID: 2036472519}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2141938729}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1306297976
 GameObject:
@@ -18424,6 +18421,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 743621336}
+  - {fileID: 1297260549}
+  - {fileID: 1132396380}
+  - {fileID: 1186112281}
   m_Father: {fileID: 129626821}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2143069409
@@ -18967,7 +18967,4 @@ SceneRoots:
   - {fileID: 568406366}
   - {fileID: 129626821}
   - {fileID: 1178792079}
-  - {fileID: 1297260549}
-  - {fileID: 1132396380}
-  - {fileID: 1186112281}
   - {fileID: 1181773014}
