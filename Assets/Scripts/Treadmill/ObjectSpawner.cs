@@ -8,8 +8,10 @@ public class ObjectSpawner : MonoBehaviour
     [SerializeField] private Transform targetPosition;
     [SerializeField] private float lerpSpeed = 1f;
     [SerializeField] private float despawnDelay = 1f;
+    [SerializeField] private float timeBetweenSpawns = 1f;
 
     private ObjectPool objectPool;
+    private bool isSpawning = false;
 
     private void Start()
     {
@@ -20,17 +22,41 @@ public class ObjectSpawner : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SpawnObject();
+            isSpawning = !isSpawning;
+
+            if (isSpawning)
+            {
+                StartCoroutine(SpawnObjects());
+            }
+            else
+            {
+                StopAllCoroutines();
+            }
         }
     }
 
-    private void SpawnObject()
+    private IEnumerator SpawnObjects()
     {
-        GameObject spawnedObject = objectPool.GetPooledObject();
-        spawnedObject.transform.position = spawnPosition.position;
-        spawnedObject.SetActive(true);
+        while (isSpawning)
+        {
+            int numPlatesToSpawn = Random.Range(1, 5); // Generate a random number between 1 and 4
 
-        StartCoroutine(LerpObject(spawnedObject));
+            for (int i = 0; i < numPlatesToSpawn; i++)
+            {
+                GameObject spawnedObject = objectPool.GetPooledObject();
+                spawnedObject.transform.position = spawnPosition.position;
+                spawnedObject.SetActive(true);
+
+                StartCoroutine(LerpObject(spawnedObject));
+            }
+
+            yield return new WaitForSeconds(timeBetweenSpawns);
+
+            if (Random.value < 0.5f) // Randomly skip a spawn
+            {
+                yield return new WaitForSeconds(timeBetweenSpawns);
+            }
+        }
     }
 
     private IEnumerator LerpObject(GameObject obj)
