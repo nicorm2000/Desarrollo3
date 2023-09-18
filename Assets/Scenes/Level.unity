@@ -15589,7 +15589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.000030518, y: 0.000045776367}
+  m_AnchoredPosition: {x: -0.000030517578, y: 0.000045776367}
   m_SizeDelta: {x: 0.000076294, y: 0.000095367}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1904064729
@@ -16363,9 +16363,9 @@ GameObject:
   - component: {fileID: 1996006894}
   - component: {fileID: 1996006900}
   - component: {fileID: 1996006899}
-  - component: {fileID: 1996006898}
   - component: {fileID: 1996006897}
   - component: {fileID: 1996006896}
+  - component: {fileID: 1996006898}
   - component: {fileID: 1996006895}
   m_Layer: 0
   m_Name: Treadmill

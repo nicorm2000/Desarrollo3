@@ -20,7 +20,6 @@ public class ActiveDoor : MonoBehaviour
     {
         if (roundCounter.currentRound == roundCounter.maxRounds)
         {
-            //StartCoroutine(PlayAnimationAndActivateObject());
             basket.SetActive(true);
         }
     }
