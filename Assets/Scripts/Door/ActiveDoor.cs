@@ -5,7 +5,8 @@ using UnityEngine;
 public class ActiveDoor : MonoBehaviour
 {
     [SerializeField] private GameObject door;
-
+    [SerializeField] private GameObject basket;
+    [SerializeField] private float delayTime;
     [SerializeField] private RoundCounter roundCounter;
 
     private bool isActive = false;
@@ -22,6 +23,15 @@ public class ActiveDoor : MonoBehaviour
     {
         if (roundCounter.currentRound == roundCounter.maxRounds && IsActive() == false)
         {
+            StartCoroutine(PlayAnimationAndActivateObject());
+        }
+
+        IEnumerator PlayAnimationAndActivateObject()
+        {
+            basket.SetActive(true);
+
+            yield return new WaitForSeconds(delayTime);
+
             ActiveObject();
         }
     }
