@@ -14,26 +14,9 @@ public class RoundCounter : MonoBehaviour
 
     [SerializeField] private Spawner[] spawner;
 
-    private static RoundCounter instance;
-
     public int currentRound = 1;
 
     public int maxRounds = 5;
-
-    //private void Awake()
-    //{
-    //    if (instance == null)
-    //    {
-    //        instance = this;
-
-    //        DontDestroyOnLoad(this.gameObject);
-    //    }
-
-    //    else
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
 
     void Start()
     {
@@ -57,25 +40,4 @@ public class RoundCounter : MonoBehaviour
         spawner[1].StartCoroutine(spawner[1].SpawnObjects());
         spawner[2].StartCoroutine(spawner[2].SpawnObjects());
     }
-
-    //public static RoundCounter Instance
-    //{
-    //    get
-    //    {
-    //        if (instance == null)
-    //        {
-    //            instance = FindObjectOfType<RoundCounter>();
-                
-    //            if (instance == null)
-    //            {
-    //                GameObject singletonObject = new GameObject();
-                    
-    //                instance = singletonObject.AddComponent<RoundCounter>();
-                    
-    //                singletonObject.name = "RoundCounter (Singleton)";
-    //            }
-    //        }
-    //        return instance;
-    //    }
-    //}
 }

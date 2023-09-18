@@ -10,6 +10,7 @@ public class DoorCollider : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject spawnWeaponSelect;
     [SerializeField] private GameObject doorCollider;
+    [SerializeField] private GameObject basket;
 
     private void Start()
     {
@@ -22,9 +23,9 @@ public class DoorCollider : MonoBehaviour
         {
             player.transform.position = spawnWeaponSelect.transform.position;
             doorCollider.SetActive(false);
-            
+            basket.SetActive(false);
+
             roundCounter.maxRounds += 5;
-            doorCollider.SetActive(false);
         }
     }
 }

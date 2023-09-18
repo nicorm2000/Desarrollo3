@@ -1031,6 +1031,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roundText: {fileID: 1662475355}
+  playerHealth: {fileID: 0}
+  doorCollider: {fileID: 0}
+  spawner: []
   currentRound: 1
   maxRounds: 5
 --- !u!4 &127761907
@@ -15599,9 +15602,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0def70c7aa6d7fa43b5139ff2d6ffa83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: {fileID: 1224685865}
-  transition: {fileID: 1598774089}
   roundCounter: {fileID: 127761906}
+  player: {fileID: 0}
+  spawnWeaponSelect: {fileID: 0}
+  doorCollider: {fileID: 0}
 --- !u!61 &2082787383
 BoxCollider2D:
   m_ObjectHideFlags: 0
