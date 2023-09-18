@@ -28,7 +28,7 @@ public class ObjectSpawner : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             isSpawning = !isSpawning;
 
@@ -49,7 +49,7 @@ public class ObjectSpawner : MonoBehaviour
     {
         while (isSpawning)
         {
-            int numPlatesToSpawn = Random.Range(1, 5); // Generate a random number between 1 and 4
+            int numPlatesToSpawn = Random.Range(1, 3); // Generate a random number between 1 and 4
 
             for (int i = 0; i < numPlatesToSpawn; i++)
             {

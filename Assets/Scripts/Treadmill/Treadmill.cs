@@ -13,4 +13,14 @@ public class Treadmill : MonoBehaviour
             rb.velocity = transform.right * treadmillSpeed;
         }
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Rigidbody2D rb = other.gameObject.GetComponent<Rigidbody2D>();
+
+        if (rb != null)
+        {
+            rb.velocity = transform.right / treadmillSpeed;
+        }
+    }
 }
