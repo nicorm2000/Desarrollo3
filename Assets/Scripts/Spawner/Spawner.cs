@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
         StartCoroutine(SpawnObjects());
     }
 
-    private IEnumerator SpawnObjects()
+    public IEnumerator SpawnObjects()
     {
         Debug.Log("Spawning!");
         yield return new WaitForSeconds(spawnTime);

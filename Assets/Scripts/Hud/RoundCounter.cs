@@ -12,6 +12,8 @@ public class RoundCounter : MonoBehaviour
 
     [SerializeField] private GameObject doorCollider;
 
+    [SerializeField] private Spawner[] spawner;
+
     private static RoundCounter instance;
 
     public int currentRound = 1;
@@ -51,6 +53,9 @@ public class RoundCounter : MonoBehaviour
     public void IncreaseRounds(int round) 
     {
         currentRound += round;
+        spawner[0].StartCoroutine(spawner[0].SpawnObjects());
+        spawner[1].StartCoroutine(spawner[1].SpawnObjects());
+        spawner[2].StartCoroutine(spawner[2].SpawnObjects());
     }
 
     //public static RoundCounter Instance
