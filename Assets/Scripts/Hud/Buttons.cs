@@ -7,12 +7,12 @@ public class Buttons : MonoBehaviour
 {
     [SerializeField] string[] sceneName;
 
-    public void Restart() 
+    public void LoadLevel() 
     {
         SceneManager.LoadScene(sceneName[0]);
     }
 
-    public void ReturnMenu() 
+    public void LoadMenu() 
     {
         SceneManager.LoadScene(sceneName[1]);
     }

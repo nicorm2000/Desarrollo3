@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/LoseMenu/MainMenu 1.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 0959a3b97efc5d84eaad04cbcdebfa7a
   - enabled: 1
-    path: Assets/Scenes/LoseMenu/Level 1.unity
+    path: Assets/Scenes/Level.unity
     guid: fe2254d2f358b0f4abf8f9959bf24344
   - enabled: 1
-    path: Assets/Scenes/LoseMenu/Lose.unity
+    path: Assets/Scenes/Lose.unity
     guid: b35e189e6d0be4942a071164a1a83b46
   m_configObjects: {}

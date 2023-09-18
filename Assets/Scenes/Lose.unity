@@ -344,7 +344,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709548248}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: ReturnMenu
+        m_MethodName: LoadMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -611,7 +611,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709548248}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: Restart
+        m_MethodName: LoadLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1375,8 +1375,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName:
-  - Level 1
-  - MainMenu 1
+  - Level
+  - MainMenu
 --- !u!1 &1903013977
 GameObject:
   m_ObjectHideFlags: 0
