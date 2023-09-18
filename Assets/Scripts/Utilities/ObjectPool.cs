@@ -16,7 +16,7 @@ public class ObjectPool
         // Check if there are any inactive objects in the pool
         foreach (GameObject obj in pooledObjects)
         {
-            if (!obj.activeInHierarchy)
+            if (!obj.activeSelf)
             {
                 return obj;
             }
@@ -30,5 +30,25 @@ public class ObjectPool
         newObj.SetActive(false);
 
         return newObj;
+    }
+
+    public void ReturnToPool(GameObject obj)
+    {
+        obj.SetActive(false);
+    }
+
+    public List<GameObject> GetActiveObjects()
+    {
+        List<GameObject> activeObjects = new List<GameObject>();
+
+        foreach (GameObject obj in pooledObjects)
+        {
+            if (obj.activeSelf)
+            {
+                activeObjects.Add(obj);
+            }
+        }
+
+        return activeObjects;
     }
 }

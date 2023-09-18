@@ -6,9 +6,7 @@ public class ObjectSpawner : MonoBehaviour
     [SerializeField] private GameObject objectPrefab;
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private Transform targetPosition;
-    [SerializeField] private float lerpSpeed = 1f;
-    [SerializeField] private float despawnDelay = 1f;
-    [SerializeField] private float timeBetweenSpawns = 1f;
+    [SerializeField] private float timeBetweenSpawns = 2f;
 
     private ObjectPool objectPool;
     private bool isSpawning = false;
@@ -20,9 +18,21 @@ public class ObjectSpawner : MonoBehaviour
 
     private void Update()
     {
+        // Check if spawned objects have reached the target position
+        foreach (var spawnedObject in objectPool.GetActiveObjects())
+        {
+            if (Vector3.Distance(spawnedObject.transform.position, targetPosition.position) < 0.01f)
+            {
+                spawnedObject.SetActive(false); // Deactivate the object
+                objectPool.ReturnToPool(spawnedObject); // Return the object to the object pool
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             isSpawning = !isSpawning;
+
+            Debug.Log("Plate spawn");
 
             if (isSpawning)
             {
@@ -45,34 +55,16 @@ public class ObjectSpawner : MonoBehaviour
             {
                 GameObject spawnedObject = objectPool.GetPooledObject();
                 spawnedObject.transform.position = spawnPosition.position;
+                spawnedObject.transform.rotation = Quaternion.Euler(-90f, 0f, 0f);
                 spawnedObject.SetActive(true);
 
-                StartCoroutine(LerpObject(spawnedObject));
+                yield return new WaitForSeconds(timeBetweenSpawns); // Add a delay between spawns
             }
-
-            yield return new WaitForSeconds(timeBetweenSpawns);
 
             if (Random.value < 0.5f) // Randomly skip a spawn
             {
                 yield return new WaitForSeconds(timeBetweenSpawns);
             }
         }
-    }
-
-    private IEnumerator LerpObject(GameObject obj)
-    {
-        float lerpTime = 0f;
-        Vector3 startPosition = obj.transform.position;
-
-        while (lerpTime < 1f)
-        {
-            lerpTime += Time.deltaTime * lerpSpeed;
-            obj.transform.position = Vector3.Lerp(startPosition, targetPosition.position, lerpTime);
-            yield return null;
-        }
-
-        yield return new WaitForSeconds(despawnDelay);
-
-        obj.SetActive(false);
     }
 }
