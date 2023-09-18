@@ -2672,8 +2672,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00042534, y: -0.0000095368}
-  m_SizeDelta: {x: 252.77, y: 49.424}
+  m_AnchoredPosition: {x: 0.00024414062, y: 0.029052734}
+  m_SizeDelta: {x: 252.6702, y: 49.424}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &364590389
 MonoBehaviour:
@@ -6891,8 +6891,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.046000004, y: 0.075}
   m_AnchorMax: {x: 0.18510377, y: 0.13884012}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.6499939, y: -0.115997314}
+  m_AnchoredPosition: {x: 0.6407471, y: -0.029022217}
+  m_SizeDelta: {x: 60.707, y: -0.058044}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &741458298
 MonoBehaviour:
@@ -15117,7 +15117,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1853870048}
-  - component: {fileID: 1853870049}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -15142,19 +15141,6 @@ Transform:
   - {fileID: 994568716}
   m_Father: {fileID: 129626821}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1853870049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1853870047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23d0991ef5dd8304d9592281e0bc9434, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelName: ChangeWeaponShopSystem
 --- !u!1 &1865553195
 GameObject:
   m_ObjectHideFlags: 0
@@ -15603,8 +15589,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.0000076293945, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000030518, y: 0.000045776367}
+  m_SizeDelta: {x: 0.000076294, y: 0.000095367}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1904064729
 MonoBehaviour:
@@ -18017,7 +18003,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2090790732}
-  - component: {fileID: 2090790733}
   m_Layer: 0
   m_Name: Hud
   m_TagString: Untagged
@@ -18041,18 +18026,6 @@ Transform:
   - {fileID: 833676937}
   m_Father: {fileID: 127761907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2090790733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2090790731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b41e720a6aee604dbbd75403d4dd457, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2104940473
 GameObject:
   m_ObjectHideFlags: 0
