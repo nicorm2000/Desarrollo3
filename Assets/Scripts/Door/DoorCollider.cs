@@ -5,44 +5,26 @@ using UnityEngine;
 
 public class DoorCollider : MonoBehaviour
 {
-    [SerializeField] private NextLevel nextLevel;
-
-    [SerializeField] private GameObject transition;
-
     [SerializeField] private RoundCounter roundCounter;
 
-    private float currentTime = 0.0f;
-    private float maxTime = 1f;
-
-    private bool starTime = false;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject spawnWeaponSelect;
+    [SerializeField] private GameObject doorCollider;
 
     private void Start()
     {
         roundCounter = FindObjectOfType<RoundCounter>();
     }
 
-    private void Update()
-    {
-        if (starTime == true) 
-        {
-            currentTime += Time.deltaTime;
-        }
-
-        if (currentTime >= maxTime)
-        {
-            nextLevel.LoadLevel();
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D player)
     {
         if (player.gameObject.CompareTag("Player"))
         {
-            transition.SetActive(true);
-
-            starTime = true; 
+            player.transform.position = spawnWeaponSelect.transform.position;
+            doorCollider.SetActive(false);
             
             roundCounter.maxRounds += 5;
+            doorCollider.SetActive(false);
         }
     }
 }

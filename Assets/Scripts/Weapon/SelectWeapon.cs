@@ -6,33 +6,15 @@ public class SelectWeapon : MonoBehaviour
 {
     [SerializeField] private NextLevel nextLevel;
 
-    [SerializeField] private GameObject transition;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject levelSpawn;
 
-    private float currentTime = 0.0f;
-    private float maxTime = 1f;
-
-    private bool starTime = false;
-
-    private void Update()
-    {
-        if (starTime == true)
-        {
-            currentTime += Time.deltaTime;
-        }
-
-        if (currentTime >= maxTime)
-        {
-            nextLevel.LoadLevel();
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D player)
     {
         if (player.gameObject.CompareTag("Player"))
         {
-            transition.SetActive(true);
-
-            starTime = true;
+            player.transform.position = levelSpawn.transform.position;
         }
     }
 }
