@@ -9,11 +9,13 @@ public class ObjectSpawner : MonoBehaviour
     [SerializeField] private float timeBetweenSpawns = 2f;
 
     private ObjectPool objectPool;
-    private bool isSpawning = false;
+    private bool isSpawning = true;
+    private Coroutine spawnCoroutine;
 
     private void Start()
     {
         objectPool = new ObjectPool(objectPrefab);
+        spawnCoroutine = StartCoroutine(SpawnObjects()); // Start spawning objects
     }
 
     private void Update()
@@ -32,15 +34,17 @@ public class ObjectSpawner : MonoBehaviour
         {
             isSpawning = !isSpawning;
 
-            Debug.Log("Plate spawn");
-
-            if (isSpawning)
+            if (!isSpawning)
             {
-                StartCoroutine(SpawnObjects());
+                Debug.Log("Stop plate spawn");
+
+                StopCoroutine(spawnCoroutine); // Stop spawning objects
             }
             else
             {
-                StopAllCoroutines();
+                Debug.Log("Plate spawn");
+
+                spawnCoroutine = StartCoroutine(SpawnObjects()); // Start spawning objects
             }
         }
     }
