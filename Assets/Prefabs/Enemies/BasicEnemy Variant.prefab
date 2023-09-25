@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7839296675979359151}
   - component: {fileID: 5770740514192762869}
   - component: {fileID: -2389195340548066958}
+  - component: {fileID: 2360646436227616192}
   - component: {fileID: -5129004534547528821}
   - component: {fileID: 7699837152467073221}
   - component: {fileID: -2853175424434337631}
@@ -80,12 +81,47 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.35
+--- !u!58 &2360646436227616192
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779284332624663121}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05, y: -0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.425
 --- !u!114 &-5129004534547528821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  enemyCollider2D: {fileID: -2389195340548066958}
+  enemyTriggerCollider2D: {fileID: 2360646436227616192}
 --- !u!212 &7699837152467073221
 SpriteRenderer:
   m_ObjectHideFlags: 0
