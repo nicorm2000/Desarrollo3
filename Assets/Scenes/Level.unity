@@ -21574,7 +21574,7 @@ GameObject:
   - component: {fileID: 1996006896}
   - component: {fileID: 1996006898}
   - component: {fileID: 1996006895}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Treadmill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21651,10 +21651,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1783
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
