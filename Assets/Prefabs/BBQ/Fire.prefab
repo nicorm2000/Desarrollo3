@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2170857294452907987}
   - component: {fileID: 1365987326227037845}
   - component: {fileID: 9094504915382957275}
+  - component: {fileID: -3873066383277025745}
+  m_Layer: 9
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +97,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -128,6 +130,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0000001}
   m_EdgeRadius: 0
+--- !u!114 &-3873066383277025745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
