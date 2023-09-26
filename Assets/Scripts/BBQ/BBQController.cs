@@ -8,8 +8,7 @@ public class BBQController : MonoBehaviour
     [SerializeField] private float timeBetweenActivations = 1.0f; // Time between activating the next fire
     [SerializeField] private float cooldownDuration = 10.0f; // Time to wait before restarting the loop
 
-    private int currentIndex = 0;
-    private bool isLooping = false;
+    private bool _fireLoop = true;
 
     private void Start()
     {
@@ -19,10 +18,8 @@ public class BBQController : MonoBehaviour
 
     private IEnumerator ActivateFireLoop()
     {
-        while (true)
+        while (_fireLoop)
         {
-            isLooping = true;
-
             for (int i = 0; i < fireObjects.Length; i++)
             {
                 // Activate the current fire object
@@ -46,8 +43,6 @@ public class BBQController : MonoBehaviour
                 // Deactivate the current fire object
                 fireObjects[i].SetActive(false);
             }
-
-            isLooping = false;
 
             // Wait for the cooldown duration before restarting the loop
             yield return new WaitForSeconds(cooldownDuration);
