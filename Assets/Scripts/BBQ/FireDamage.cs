@@ -7,17 +7,17 @@ public class FireDamage : MonoBehaviour
 
     private PlayerHealth playerHealth;
     private float lastDamageTime; // Record the time of the last damage application
+    private bool enterPlayer = false;
 
     private void Start()
     {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
-    private void OnTriggerStay2D(Collider2D Enemy)
+    private void Update()
     {
-        if (Enemy.gameObject.CompareTag("Player"))
+        if (enterPlayer)
         {
-            // Check if enough time has passed since the last damage
             if (Time.time - lastDamageTime >= damageCooldown)
             {
                 // Apply damage to the player
@@ -26,6 +26,23 @@ public class FireDamage : MonoBehaviour
                 // Record the time of the last damage application
                 lastDamageTime = Time.time;
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D Enemy)
+    {
+        Debug.Log("entro");
+        if (Enemy.gameObject.CompareTag("Player"))
+        {
+            enterPlayer = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            enterPlayer = false;
         }
     }
 }
