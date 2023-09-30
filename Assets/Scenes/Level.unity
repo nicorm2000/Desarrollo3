@@ -6829,11 +6829,34 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9160149820997449130, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: changeWeaponSprite
+      value: 
+      objectReference: {fileID: 1606884504}
+    - target: {fileID: 9160149820997449130, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: selectWeapon.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9160149820997449130, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: selectWeapon.Array.data[0]
+      value: 
+      objectReference: {fileID: 1297260548}
+    - target: {fileID: 9160149820997449130, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: selectWeapon.Array.data[1]
+      value: 
+      objectReference: {fileID: 1132396379}
+    - target: {fileID: 9160149820997449130, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: selectWeapon.Array.data[2]
+      value: 
+      objectReference: {fileID: 1186112280}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1340521639236908365, guid: a9df24e86a219ac458086842d36682f6, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5569180708625838545, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1606884504}
   m_SourcePrefab: {fileID: 100100000, guid: a9df24e86a219ac458086842d36682f6, type: 3}
 --- !u!1 &521873014
 GameObject:
@@ -14144,7 +14167,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &1132396379
 MonoBehaviour:
@@ -14161,6 +14184,9 @@ MonoBehaviour:
   player: {fileID: 193267617}
   levelSpawn: {fileID: 1662366594}
   pickUpWeaponText: {fileID: 1504585846}
+  changeWeaponSprite: {fileID: 1606884504}
+  weaponNumber: 1
+  playerCanTeleport: 0
 --- !u!4 &1132396380
 Transform:
   m_ObjectHideFlags: 0
@@ -15104,7 +15130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &1186112280
 MonoBehaviour:
@@ -15121,6 +15147,9 @@ MonoBehaviour:
   player: {fileID: 193267617}
   levelSpawn: {fileID: 1662366594}
   pickUpWeaponText: {fileID: 1504585846}
+  changeWeaponSprite: {fileID: 1606884504}
+  weaponNumber: 2
+  playerCanTeleport: 0
 --- !u!4 &1186112281
 Transform:
   m_ObjectHideFlags: 0
@@ -16378,7 +16407,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &1297260548
 MonoBehaviour:
@@ -16395,6 +16424,9 @@ MonoBehaviour:
   player: {fileID: 193267617}
   levelSpawn: {fileID: 1662366594}
   pickUpWeaponText: {fileID: 1504585846}
+  changeWeaponSprite: {fileID: 1606884504}
+  weaponNumber: 0
+  playerCanTeleport: 0
 --- !u!4 &1297260549
 Transform:
   m_ObjectHideFlags: 0
@@ -19025,6 +19057,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8288855876565343176, guid: 50baec2baa278b8458a806d77d78424c, type: 3}
   m_PrefabInstance: {fileID: 1601267836}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1606884501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5569180708625838545, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+  m_PrefabInstance: {fileID: 521703870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1606884503 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3462139810453423481, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+  m_PrefabInstance: {fileID: 521703870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1606884504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606884501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c2504d73d280f4b94e42aa2fd87f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newSprite:
+  - {fileID: 21300000, guid: 112b9f61b9efac543abd49bb57b4387a, type: 3}
+  - {fileID: 21300000, guid: 5e6dd72cce851a9479ab180099eccbf1, type: 3}
+  - {fileID: 21300000, guid: 17cd2f273184fb941891fbc16011f478, type: 3}
+  spriteRenderer: {fileID: 1606884503}
 --- !u!1001 &1611906633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25380,7 +25439,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.99, y: 2.5, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2141938729}

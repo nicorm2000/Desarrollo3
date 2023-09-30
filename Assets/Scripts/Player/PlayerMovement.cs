@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashCooldown = 1;
     [SerializeField] private Material _playerDashMaterial;
     
+    public  SelectWeapon[] selectWeapon;
+    
     private Rigidbody2D _rigidBody;
     private BoxCollider2D _playerCollider;
     private Color _originalColor;
@@ -81,6 +83,14 @@ public class PlayerMovement : MonoBehaviour
         if (dashCooldownCounter > 0)
         {
             dashCooldownCounter -= Time.deltaTime;  
+        }
+
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            for (int i = 0; i < 3; i++) 
+            {
+                selectWeapon[i].playerTeleport();
+            }
         }
     }
 

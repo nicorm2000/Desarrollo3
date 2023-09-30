@@ -8,6 +8,11 @@ public class SelectWeapon : MonoBehaviour
     [SerializeField] private GameObject levelSpawn;
     [SerializeField] private GameObject pickUpWeaponText;
 
+    [SerializeField] private ChangeWeaponSprite changeWeaponSprite;
+    public int weaponNumber;
+ 
+    public bool playerCanTeleport = false;
+
     private void Start()
     {
         pickUpWeaponText.SetActive(false);
@@ -17,9 +22,8 @@ public class SelectWeapon : MonoBehaviour
     {
         if (player.gameObject.CompareTag("Player"))
         {
+            playerCanTeleport = true;
             pickUpWeaponText.SetActive(true);
-            
-            //player.transform.position = levelSpawn.transform.position;
         }
     }
 
@@ -27,9 +31,17 @@ public class SelectWeapon : MonoBehaviour
     {
         if (player.gameObject.CompareTag("Player"))
         {
+            playerCanTeleport = false;
             pickUpWeaponText.SetActive(false);
+        }
+    }
 
-            //player.transform.position = levelSpawn.transform.position;
+    public void playerTeleport() 
+    {
+        if(playerCanTeleport == true) 
+        {
+            changeWeaponSprite.ChangeSprite(weaponNumber);
+            player.transform.position = levelSpawn.transform.position;
         }
     }
 }
