@@ -456,9 +456,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 455620987}
   - {fileID: 1545889526}
   - {fileID: 1915726982}
-  - {fileID: 455620987}
+  - {fileID: 268164868}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -586,15 +587,15 @@ RectTransform:
   m_GameObject: {fileID: 268164867}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.4847999, y: 2.4847999, z: 2.4847999}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 688727943}
-  m_Father: {fileID: 1915726982}
+  m_Father: {fileID: 112345377}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035156, y: -67.20862}
+  m_AnchoredPosition: {x: 280.99988, y: -330}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &268164869
@@ -641,9 +642,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ExitButton, Assembly-CSharp
-        m_MethodName: QuitGame
+      - m_Target: {fileID: 383962372}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2105,7 +2106,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 98068451}
-  - {fileID: 268164868}
   m_Father: {fileID: 112345377}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
