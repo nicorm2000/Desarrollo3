@@ -17942,6 +17942,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chopsticks 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6318415654408569740, guid: 0da9f5fccec422b41a957403a8a457cd, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2213155
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318415654408569740, guid: 0da9f5fccec422b41a957403a8a457cd, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0330139
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318415654408569740, guid: 0da9f5fccec422b41a957403a8a457cd, type: 3}
+      propertyPath: m_Size.z
+      value: 0.15417883
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318415654408569740, guid: 0da9f5fccec422b41a957403a8a457cd, type: 3}
+      propertyPath: m_Center.x
+      value: 0.110659234
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318415654408569740, guid: 0da9f5fccec422b41a957403a8a457cd, type: 3}
+      propertyPath: m_Center.y
+      value: 0.016515644
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318415654408569740, guid: 0da9f5fccec422b41a957403a8a457cd, type: 3}
+      propertyPath: m_Center.z
+      value: 0.039205097
+      objectReference: {fileID: 0}
     - target: {fileID: 8174107473831236993, guid: 0da9f5fccec422b41a957403a8a457cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.6269817
@@ -21800,7 +21824,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282283dfff9414448ba8eb7298af92d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 1502555313245178697, guid: 78023c65c7c26a540966e2bae38beb66, type: 3}
+  objectPrefabs:
+  - {fileID: 1502555313245178697, guid: 78023c65c7c26a540966e2bae38beb66, type: 3}
+  - {fileID: 1502555313245178697, guid: b246a9c63a09c7a43a7e694485a163b5, type: 3}
+  - {fileID: 1502555313245178697, guid: 39a223d18c8de444d9e7d16f0166a671, type: 3}
   spawnPosition: {fileID: 649154006}
   targetPosition: {fileID: 1161302773}
   timeBetweenSpawns: 2

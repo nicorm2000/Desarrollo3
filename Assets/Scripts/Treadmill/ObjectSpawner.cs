@@ -1,32 +1,45 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject objectPrefab;
+    [SerializeField] private List<GameObject> objectPrefabs;
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private Transform targetPosition;
     [SerializeField] private float timeBetweenSpawns = 2f;
 
-    private ObjectPool objectPool;
+    private List<ObjectPool> objectPools;
     private bool isSpawning = true;
     private Coroutine spawnCoroutine;
 
     private void Start()
     {
-        objectPool = new ObjectPool(objectPrefab);
+        objectPools = new List<ObjectPool>();
+
+        foreach (GameObject prefab in objectPrefabs)
+        {
+            ObjectPool objectPool = new ObjectPool(prefab);
+            objectPools.Add(objectPool);
+        }
+
         spawnCoroutine = StartCoroutine(SpawnObjects()); // Start spawning objects
     }
+
 
     private void Update()
     {
         // Check if spawned objects have reached the target position
-        foreach (var spawnedObject in objectPool.GetActiveObjects())
+        foreach (var objectPool in objectPools)
         {
-            if (Vector3.Distance(spawnedObject.transform.position, targetPosition.position) < 0.01f)
+            foreach (var spawnedObject in objectPool.GetActiveObjects())
             {
-                spawnedObject.SetActive(false); // Deactivate the object
-                objectPool.ReturnToPool(spawnedObject); // Return the object to the object pool
+                if (Vector3.Distance(spawnedObject.transform.position, targetPosition.position) < 0.01f)
+                {
+                    spawnedObject.SetActive(false); // Deactivate the object
+                    objectPool.ReturnToPool(spawnedObject); // Return the object to the object pool
+                }
             }
         }
 
@@ -57,7 +70,10 @@ public class ObjectSpawner : MonoBehaviour
 
             for (int i = 0; i < numPlatesToSpawn; i++)
             {
-                GameObject spawnedObject = objectPool.GetPooledObject();
+                int randomIndex = Random.Range(0, objectPools.Count); // Get a random index from the objectPools list
+                ObjectPool pool = objectPools[randomIndex];
+
+                GameObject spawnedObject = pool.GetPooledObject();
                 spawnedObject.transform.position = spawnPosition.position;
                 spawnedObject.transform.rotation = Quaternion.Euler(-90f, 0f, 0f);
                 spawnedObject.SetActive(true);
