@@ -4536,7 +4536,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2396cd472e82f445bda4e7ad9897f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slipFactor: 0.5
   speedMultiplier: 1.5
 --- !u!65 &412737309
 BoxCollider:
@@ -23430,7 +23429,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2396cd472e82f445bda4e7ad9897f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slipFactor: 0.5
   speedMultiplier: 1.5
 --- !u!65 &2044684649
 BoxCollider:
