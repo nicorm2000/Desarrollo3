@@ -3,8 +3,8 @@ using UnityEngine;
 public class HealthSystem : MonoBehaviour
 {
     [SerializeField] private float health = 0;
-    [SerializeField] private Collider2D enemyCollider2D;
-    [SerializeField] private Collider2D enemyTriggerCollider2D;
+    [SerializeField] private Collider enemyCollider;
+    [SerializeField] private Collider enemyTriggerCollider;
     private ZoneTriggeredEffect _triggerEffect;
     private SpriteRenderer _spriteRenderer;
     private bool _dead = false;
@@ -22,8 +22,8 @@ public class HealthSystem : MonoBehaviour
             if (!_dead)
             {
                 _spriteRenderer.enabled = false;
-                enemyCollider2D.enabled = false;
-                enemyTriggerCollider2D.enabled = false;
+                enemyCollider.enabled = false;
+                enemyTriggerCollider.enabled = false;
 
                 _triggerEffect.TriggerEffect();
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 610901709473716179}
   - component: {fileID: 6138646221061330646}
   - component: {fileID: 781800765007232928}
-  - component: {fileID: 201363726013867839}
+  - component: {fileID: 8842429396224094999}
   m_Layer: 9
   m_Name: Saucer
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &201363726013867839
+--- !u!136 &8842429396224094999
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,16 +94,16 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 3575
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.50000006
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: -0.00000047683716, y: 0.00000011920929, z: -0.00000047683716}
+  m_Height: 9.3
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
