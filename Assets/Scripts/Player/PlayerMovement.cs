@@ -10,8 +10,8 @@ public class PlayerMovement : MonoBehaviour
     
     public  SelectWeapon[] selectWeapon;
     
-    private Rigidbody2D _rigidBody;
-    private BoxCollider2D _playerCollider;
+    private Rigidbody _rigidBody;
+    private BoxCollider _playerCollider;
     private Color _originalColor;
     private float activeMoveSpeed;
     private float dashCounter;
@@ -26,8 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        _rigidBody = GetComponent<Rigidbody2D>();
-        _playerCollider = GetComponent<BoxCollider2D>();
+        _rigidBody = GetComponent<Rigidbody>();
+        _playerCollider = GetComponent<BoxCollider>();
         _playerDashMaterial = GetComponent<Renderer>().material;
         _originalColor = _playerDashMaterial.color;
         activeMoveSpeed = movementSpeed;

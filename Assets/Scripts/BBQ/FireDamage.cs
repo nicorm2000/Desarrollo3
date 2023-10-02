@@ -29,7 +29,7 @@ public class FireDamage : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D Enemy)
+    private void OnTriggerEnter(Collider Enemy)
     {
         Debug.Log("entro");
         if (Enemy.gameObject.CompareTag("Player"))
@@ -38,7 +38,7 @@ public class FireDamage : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {

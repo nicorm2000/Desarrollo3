@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AIChase : MonoBehaviour
 {
-    [SerializeField] private float chaseSpeed;
+    public float chaseSpeed;
     private GameObject _player;
 
     private float _distance;
@@ -15,10 +15,10 @@ public class AIChase : MonoBehaviour
     private void Update()
     {
         _distance = Vector2.Distance(transform.position, _player.transform.position);
-        
+
         Vector2 dir = _player.transform.position - transform.position;
         dir.Normalize();
 
-        transform.position = Vector2.MoveTowards(transform.position, _player.transform.position, chaseSpeed * Time.deltaTime);
+        transform.Translate(dir * chaseSpeed * Time.deltaTime);
     }
 }

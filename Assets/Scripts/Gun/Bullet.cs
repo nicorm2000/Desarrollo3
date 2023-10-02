@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
         timer = lifespan;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {

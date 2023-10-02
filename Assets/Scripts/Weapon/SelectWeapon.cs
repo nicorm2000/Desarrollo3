@@ -18,7 +18,7 @@ public class SelectWeapon : MonoBehaviour
         pickUpWeaponText.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D player)
+    private void OnTriggerEnter(Collider player)
     {
         if (player.gameObject.CompareTag("Player"))
         {
@@ -27,7 +27,7 @@ public class SelectWeapon : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D player)
+    private void OnTriggerExit(Collider player)
     {
         if (player.gameObject.CompareTag("Player"))
         {

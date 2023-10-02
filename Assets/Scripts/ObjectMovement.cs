@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ObjectMovement : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter(Collider other)
     {
         // Check if the colliding object has a specific tag
         if (other.CompareTag("Player"))
@@ -12,7 +12,7 @@ public class ObjectMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit(Collider other)
     {
         // Check if the colliding object has a specific tag
         if (other.CompareTag("Player"))

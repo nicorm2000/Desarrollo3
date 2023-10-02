@@ -4,9 +4,9 @@ public class Treadmill : MonoBehaviour
 {
     [SerializeField] private float treadmillSpeed = 5f;
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerStay(Collider other)
     {
-        Rigidbody2D rb = other.gameObject.GetComponent<Rigidbody2D>();
+        Rigidbody rb = other.gameObject.GetComponent<Rigidbody>();
 
         if (rb != null)
         {
@@ -14,9 +14,9 @@ public class Treadmill : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit(Collider other)
     {
-        Rigidbody2D rb = other.gameObject.GetComponent<Rigidbody2D>();
+        Rigidbody rb = other.gameObject.GetComponent<Rigidbody>();
 
         if (rb != null)
         {

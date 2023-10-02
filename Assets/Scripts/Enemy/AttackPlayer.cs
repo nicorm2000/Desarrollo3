@@ -11,7 +11,7 @@ public class AttackPlayer : MonoBehaviour
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
-    private void OnTriggerEnter2D(Collider2D Enemy)
+    private void OnTriggerEnter(Collider Enemy)
     {
         if (Enemy.gameObject.CompareTag("Player"))
         {
