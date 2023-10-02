@@ -55,6 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7543238300289498345}
   - component: {fileID: 3462139810453423481}
+  - component: {fileID: 6100415171331296213}
   m_Layer: 0
   m_Name: ARMA_SIN_MANOS
   m_TagString: Untagged
@@ -130,6 +131,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6100415171331296213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5569180708625838545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c2504d73d280f4b94e42aa2fd87f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newSprite:
+  - {fileID: 21300000, guid: 112b9f61b9efac543abd49bb57b4387a, type: 3}
+  - {fileID: 21300000, guid: 5e6dd72cce851a9479ab180099eccbf1, type: 3}
+  - {fileID: 21300000, guid: 17cd2f273184fb941891fbc16011f478, type: 3}
+  spriteRenderer: {fileID: 3462139810453423481}
 --- !u!1 &7195425578536629974
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,9 +209,8 @@ GameObject:
   - component: {fileID: 9160149820997449130}
   - component: {fileID: 9035469371857359941}
   - component: {fileID: 2223820343605897184}
-  - component: {fileID: 2776955962975801512}
-  - component: {fileID: 8739848151612205664}
   - component: {fileID: 2791571064387588381}
+  - component: {fileID: 4393350257254957213}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -315,7 +332,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!114 &9160149820997449130
 MonoBehaviour:
@@ -334,7 +351,10 @@ MonoBehaviour:
   dashLength: 0.25
   dashCooldown: 1
   _playerDashMaterial: {fileID: 2100000, guid: 0cc19e304b81648428ba0ec02253a1e8, type: 2}
-  selectWeapon: []
+  selectWeapon:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   lastHorizontalVector: 0
   lastVerticalVector: 0
   movementDirection: {x: 0, y: 0}
@@ -371,38 +391,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2776955962975801512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7469210322841030696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d9e5dafd6b77004ea216f25087a0042, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxYPosition: 12
-  minYPosition: -12
-  minScale: 0.75
-  maxScale: 1.25
---- !u!114 &8739848151612205664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7469210322841030696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d9e5dafd6b77004ea216f25087a0042, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxYPosition: 10
-  minYPosition: -10
-  minScale: 0.75
-  maxScale: 1.25
 --- !u!114 &2791571064387588381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,3 +407,17 @@ MonoBehaviour:
   health: 100
   _isDead: 0
   healthBar: {fileID: 0}
+--- !u!114 &4393350257254957213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7469210322841030696}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8f42f8cafb757e43809f14a638b0763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycastDistance: 1
+  zOffset: 0.5
