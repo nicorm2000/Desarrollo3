@@ -9,8 +9,7 @@ public class SelectWeapon : MonoBehaviour
     [SerializeField] private ChangeWeaponSprite changeWeaponSprite;
 
     public PlayerData playerData;
-
-    public int weaponNumber;
+    public WeaponData weaponData;
  
     public bool playerCanTeleport = false;
 
@@ -41,7 +40,7 @@ public class SelectWeapon : MonoBehaviour
     {
         if(playerCanTeleport == true) 
         {
-            changeWeaponSprite.ChangeSprite(weaponNumber);
+            changeWeaponSprite.ChangeSprite(weaponData.weaponID);
             playerData.model.transform.position = levelSpawn.transform.position;
         }
     }

@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float bulletSpeed;
-    [SerializeField] private float lifespan;
-    [SerializeField] private float damage;
+    private float damage;
 
     private float timer;
 
+    public WeaponData weaponData;
+
+    private void Start()
+    {
+        damage = weaponData.damage;
+        timer = weaponData.lifespan;
+    }
+
     private void Update()
     {
-        transform.Translate(Vector2.right * Time.deltaTime * bulletSpeed);
+        transform.Translate(Vector2.right * Time.deltaTime * weaponData.bulletSpeed);
 
         timer -= Time.deltaTime;
 
@@ -18,11 +24,6 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    private void Start()
-    {
-        timer = lifespan;
     }
 
     private void OnTriggerEnter(Collider collision)

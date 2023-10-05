@@ -6083,6 +6083,10 @@ PrefabInstance:
       propertyPath: playerData
       value: 
       objectReference: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+    - target: {fileID: 6100415171331296213, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weaponData
+      value: 
+      objectReference: {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
     - target: {fileID: 6429364731748367593, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: playerData
       value: 
@@ -6095,6 +6099,26 @@ PrefabInstance:
       propertyPath: playerData
       value: 
       objectReference: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+    - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weaponData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
+    - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weaponData.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weaponData.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
+    - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weaponData.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 07aa8a2279e9b2d4ab4941cfb619acbc, type: 2}
+    - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weaponData.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
     - target: {fileID: 9160149820997449130, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: playerData
       value: 
@@ -13704,7 +13728,7 @@ MonoBehaviour:
   pickUpWeaponText: {fileID: 1504585846}
   changeWeaponSprite: {fileID: 1606884504}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
-  weaponNumber: 1
+  weaponData: {fileID: 11400000, guid: 07aa8a2279e9b2d4ab4941cfb619acbc, type: 2}
   playerCanTeleport: 0
 --- !u!4 &1132396380
 Transform:
@@ -14595,7 +14619,7 @@ MonoBehaviour:
   pickUpWeaponText: {fileID: 1504585846}
   changeWeaponSprite: {fileID: 1606884504}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
-  weaponNumber: 2
+  weaponData: {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
   playerCanTeleport: 0
 --- !u!4 &1186112281
 Transform:
@@ -15764,7 +15788,7 @@ MonoBehaviour:
   pickUpWeaponText: {fileID: 1504585846}
   changeWeaponSprite: {fileID: 1606884504}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
-  weaponNumber: 0
+  weaponData: {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
   playerCanTeleport: 0
 --- !u!4 &1297260549
 Transform:
@@ -16137,6 +16161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPlaceholder: {fileID: 0}
+  enemyData: []
 --- !u!1 &1330588123
 GameObject:
   m_ObjectHideFlags: 0
