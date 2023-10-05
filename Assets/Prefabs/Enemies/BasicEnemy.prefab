@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseSpeed: 1
-  avoidanceDistance: 1
+  enemyData: {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!114 &-5129004534547528821
 MonoBehaviour:
@@ -66,9 +66,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ddd9aa9d7c4934ba96ad6daa6290a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  enemyCollider: {fileID: 5641821315093705386}
-  enemyTriggerCollider: {fileID: 4537057346123849985}
+  enemyCollider: {fileID: 4537057346123849985}
+  enemyTriggerCollider: {fileID: 5641821315093705386}
+  enemyData: {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}
 --- !u!212 &7699837152467073221
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 646c66060c2c9004db9c265f5001c254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  enemyData: {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}
 --- !u!54 &4317066104285272101
 Rigidbody:
   m_ObjectHideFlags: 0

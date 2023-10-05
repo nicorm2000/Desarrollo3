@@ -2,15 +2,19 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
-    [SerializeField] private float health = 0;
     [SerializeField] private Collider enemyCollider;
     [SerializeField] private Collider enemyTriggerCollider;
     private ZoneTriggeredEffect _triggerEffect;
     private SpriteRenderer _spriteRenderer;
     private bool _dead = false;
+    private float health = 0;
+
+    public EnemyData enemyData;
+
 
     private void Start()
     {
+        health = enemyData.health;
         _triggerEffect = GetComponent<ZoneTriggeredEffect>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }

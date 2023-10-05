@@ -4,6 +4,8 @@ public class CheatController : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPlaceholder;
 
+    public EnemyData[] enemyData;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -14,9 +16,11 @@ public class CheatController : MonoBehaviour
 
     private void DestroyEnemyPlaceholder()
     {
-        if (enemyPlaceholder != null)
+        for (int i = 0; i < enemyData.Length; i++)
+
+        if (enemyData[i].model != null)
         {
-            Destroy(enemyPlaceholder);
+            Destroy(enemyData[i].model);
         }
     }
 }

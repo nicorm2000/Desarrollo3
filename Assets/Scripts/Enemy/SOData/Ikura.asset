@@ -12,15 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cf5c79c482a364289b65bc639aa2a1, type: 3}
   m_Name: Ikura
   m_EditorClassIdentifier: 
-  suhsiName: Ikura
   model: {fileID: 0}
-  isMelee: 0
   bullet: {fileID: 7942789937546522980, guid: 1b712e26109792244a95e6c5dc0ff504, type: 3}
-  damage: 20
-  movementSpeed: 1
   animator: {fileID: 0}
+  dropData: {fileID: 11400000, guid: 1ecd47809c2064c4399f205203da9d0c, type: 2}
+  suhsiName: Ikura
+  isMelee: 0
+  damage: 20
   spawnAnimationName: Spawn
   spawnAnimationDuration: 1
   deathAnimationName: Death
   deathAnimationDuration: 1
-  dropData: {fileID: 11400000, guid: 1ecd47809c2064c4399f205203da9d0c, type: 2}
+  movementSpeed: 1
+  avoidanceDistance: 1
+  health: 3
+  _triggerEffect: {fileID: 0}
+  _spriteRenderer: {fileID: 0}

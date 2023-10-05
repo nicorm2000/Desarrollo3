@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class AttackPlayer : MonoBehaviour
 {
-    [SerializeField] private float damage;
-
     private PlayerHealth playerHealth;
+
+    public EnemyData enemyData;
 
     private void Start()
     {
@@ -15,7 +15,7 @@ public class AttackPlayer : MonoBehaviour
     {
         if (Enemy.gameObject.CompareTag("Player"))
         {
-            playerHealth.takeDamage(damage);
+            playerHealth.takeDamage(enemyData.damage);
         }
     }
 }

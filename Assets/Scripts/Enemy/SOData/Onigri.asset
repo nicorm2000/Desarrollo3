@@ -12,15 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cf5c79c482a364289b65bc639aa2a1, type: 3}
   m_Name: Onigri
   m_EditorClassIdentifier: 
-  suhsiName: Onigri
   model: {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
-  isMelee: 1
   bullet: {fileID: 0}
-  damage: 5
-  movementSpeed: 1
   animator: {fileID: 0}
+  dropData: {fileID: 11400000, guid: 9c264edfd79dc6b44be682c7e3c43a6a, type: 2}
+  suhsiName: Onigri
+  isMelee: 1
+  damage: 20
   spawnAnimationName: Spawn
   spawnAnimationDuration: 1
   deathAnimationName: Death
   deathAnimationDuration: 1
-  dropData: {fileID: 11400000, guid: 9c264edfd79dc6b44be682c7e3c43a6a, type: 2}
+  movementSpeed: 1
+  avoidanceDistance: 1
+  health: 3
+  _triggerEffect: {fileID: 0}
+  _spriteRenderer: {fileID: 0}
