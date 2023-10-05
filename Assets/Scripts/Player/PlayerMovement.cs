@@ -2,35 +2,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed;
-    [SerializeField] private float dashSpeed;
-    [SerializeField] private float dashLength = 0.5f;
-    [SerializeField] private float dashCooldown = 1;
-    [SerializeField] private Material _playerDashMaterial;
+    public PlayerData playerData;
     
     public  SelectWeapon[] selectWeapon;
-    
-    private Rigidbody _rigidBody;
-    private BoxCollider _playerCollider;
-    private Color _originalColor;
-    private float activeMoveSpeed;
-    private float dashCounter;
-    private float dashCooldownCounter;
-
-    [HideInInspector]
-    public float lastHorizontalVector;
-    [HideInInspector]
-    public float lastVerticalVector;
-    [HideInInspector]
-    public Vector2 movementDirection;
 
     private void Start()
     {
-        _rigidBody = GetComponent<Rigidbody>();
-        _playerCollider = GetComponent<BoxCollider>();
-        _playerDashMaterial = GetComponent<Renderer>().material;
-        _originalColor = _playerDashMaterial.color;
-        activeMoveSpeed = movementSpeed;
+        playerData._rigidBody = GetComponent<Rigidbody>();
+        playerData._playerCollider = GetComponent<BoxCollider>();
+        playerData._playerDashMaterial = GetComponent<Renderer>().material;
+        playerData._originalColor = playerData._playerDashMaterial.color;
+        playerData.activeMoveSpeed = playerData.speed;
     }
 
     private void Update()
@@ -48,41 +30,41 @@ public class PlayerMovement : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        movementDirection = new Vector2(moveX, moveY).normalized;
+        playerData.movementDirection = new Vector2(moveX, moveY).normalized;
 
-        if (movementDirection.x != 0)
-            lastHorizontalVector = movementDirection.x;
+        if (playerData.movementDirection.x != 0)
+            playerData.lastHorizontalVector = playerData.movementDirection.x;
 
-        if (movementDirection.y != 0)
-            lastVerticalVector = movementDirection.y;
+        if (playerData.movementDirection.y != 0)
+            playerData.lastVerticalVector = playerData.movementDirection.y;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (dashCooldownCounter <= 0 && dashCounter <= 0)
+            if (playerData.dashCooldownCounter <= 0 && playerData.dashCounter <= 0)
             {
-                _playerCollider.enabled = false;
-                _playerDashMaterial.color = Color.cyan;
-                activeMoveSpeed = dashSpeed;
-                dashCounter = dashLength;
+                playerData._playerCollider.enabled = false;
+                playerData._playerDashMaterial.color = Color.cyan;
+                playerData.activeMoveSpeed = playerData.dashSpeed;
+                playerData.dashCounter = playerData.dashLength;
             }
         }
 
-        if (dashCounter > 0)
+        if (playerData.dashCounter > 0)
         {
-            dashCounter -= Time.deltaTime;
+            playerData.dashCounter -= Time.deltaTime;
 
-            if (dashCounter <= 0) 
+            if (playerData.dashCounter <= 0) 
             {
-                activeMoveSpeed = movementSpeed;
-                dashCooldownCounter = dashCooldown;
-                _playerCollider.enabled = true;
-                _playerDashMaterial.color = _originalColor;
+                playerData.activeMoveSpeed = playerData.speed;
+                playerData.dashCooldownCounter = playerData.dashCooldown;
+                playerData._playerCollider.enabled = true;
+                playerData._playerDashMaterial.color = playerData._originalColor;
             }
         }
 
-        if (dashCooldownCounter > 0)
+        if (playerData.dashCooldownCounter > 0)
         {
-            dashCooldownCounter -= Time.deltaTime;  
+            playerData.dashCooldownCounter -= Time.deltaTime;  
         }
 
         if(Input.GetKeyDown(KeyCode.E))
@@ -96,6 +78,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        _rigidBody.velocity = new Vector2(movementDirection.x * activeMoveSpeed, movementDirection.y * activeMoveSpeed);
+        playerData._rigidBody.velocity = new Vector2(playerData.movementDirection.x * playerData.activeMoveSpeed, playerData.movementDirection.y * playerData.activeMoveSpeed);
     }
 }

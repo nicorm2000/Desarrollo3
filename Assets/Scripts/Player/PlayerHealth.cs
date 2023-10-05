@@ -3,43 +3,50 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private float maxHealth;
-    [SerializeField] private float health;
-    [SerializeField] private bool _isDead;
     [SerializeField] private HealthBar healthBar;
+    public PlayerData playerData;
+
 
     void Start()
     {
-        health = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        ResetPlayerStacks();
+        playerData.currentHealth = playerData.maxHealth;
+        healthBar.SetMaxHealth(playerData.maxHealth);
     }
 
     public void takeDamage(float damage) 
     {
-        health -= damage;
-        healthBar.SetHealth(health);
+        playerData.currentHealth -= damage;
+        healthBar.SetHealth(playerData.currentHealth);
     }
 
     public bool isDead() 
     {
-        if (health <= 0) 
-        { 
-            _isDead = true; 
+        if (playerData.currentHealth <= 0) 
+        {
+            playerData._isDead = true; 
         }
 
         else
         {
-            _isDead = false;
+            playerData._isDead = false;
         }
 
-        return _isDead;
+        return playerData._isDead;
+    }
+    public void ResetPlayerStacks()
+    {
+        playerData.healthStackID = 1;
+        playerData.speedStackID = 1;
+        playerData.damageStackID = 1;
     }
 
     private void Update()
     {
         if (isDead() == true) 
         {
-            health = 0;
+            ResetPlayerStacks();
+            playerData.currentHealth = 0;
             SceneManager.LoadScene(2);
         }
     }

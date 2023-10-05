@@ -411,9 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopWindow: {fileID: 1522232839}
   hud: {fileID: 2090790731}
-  playerHealth: 1
-  playerSpeed: 1
-  playerDamage: 1
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!114 &37278419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6086,10 +6084,22 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 741458299}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
     - target: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9035469371857359941, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+    - target: {fileID: 9160149820997449130, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
     - target: {fileID: 9160149820997449130, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: selectWeapon.Array.data[0]
       value: 
@@ -6812,7 +6822,7 @@ MonoBehaviour:
   healthText: {fileID: 607725736}
   speedText: {fileID: 626095185}
   damageText: {fileID: 1686816312}
-  shopManager: {fileID: 37278418}
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!1 &580872863
 GameObject:
   m_ObjectHideFlags: 0

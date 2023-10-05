@@ -9,18 +9,19 @@ public class ShowPlayerStacks : MonoBehaviour
 
     [SerializeField] private TMP_Text damageText;
 
-    [SerializeField] private Shop shopManager;
+    public PlayerData playerData;
+
     void Start()
     {
-        healthText.text = "Health: " + shopManager.playerHealth.ToString();
-        speedText.text = "Speed: " + shopManager.playerSpeed.ToString();
-        damageText.text = "Damage: " + shopManager.playerDamage.ToString();
+        healthText.text = "Health: " + playerData.healthStackID.ToString();
+        speedText.text = "Speed: " + playerData.speedStackID.ToString();
+        damageText.text = "Damage: " + playerData.damageStackID.ToString();
     }
 
     void Update()
     {
-        healthText.text = "Health: " + shopManager.playerHealth.ToString();
-        speedText.text = "Speed: " + shopManager.playerSpeed.ToString();
-        damageText.text = "Damage: " + shopManager.playerDamage.ToString();
+        healthText.text = "Health: " + playerData.healthStackID.ToString();
+        speedText.text = "Speed: " + playerData.speedStackID.ToString();
+        damageText.text = "Damage: " + playerData.damageStackID.ToString();
     }
 }

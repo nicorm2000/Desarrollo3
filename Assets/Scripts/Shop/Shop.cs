@@ -8,11 +8,7 @@ public class Shop : MonoBehaviour
 
     [SerializeField] private GameObject hud;
 
-    public float playerHealth = 1.0f;
-
-    public float playerSpeed = 1.0f;
-
-    public float playerDamage = 1.0f;
+    public PlayerData playerData;
 
     public void ActiveShop() 
     {
@@ -30,16 +26,16 @@ public class Shop : MonoBehaviour
 
     public void IncreaseHealth()
     {
-        playerHealth += 1f;
+        playerData.healthStackID += 1f;
     }
 
     public void IncreaseSpeed()
     {
-        playerSpeed += 1f;
+        playerData.speedStackID += 1f;
     }
 
     public void IncreaseDamage()
     {
-        playerDamage += 1f;
+        playerData.damageStackID += 1f;
     }
 }

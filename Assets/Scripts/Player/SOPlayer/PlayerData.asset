@@ -12,9 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1b04ce56bbade4a9d3bf07e7c6ea26, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  currentHealth: 0
-  maxHealth: 0
-  speed: 0
-  sprite: {fileID: 0}
+  currentHealth: 100
+  maxHealth: 100
+  speed: 5
+  _isDead: 0
   model: {fileID: 0}
   weaponData: {fileID: 0}
+  _animator: {fileID: 0}
+  _spriteRenderer: {fileID: 0}
+  dashSpeed: 10
+  dashLength: 0.25
+  dashCooldown: 1
+  activeMoveSpeed: 5
+  dashCounter: 0
+  dashCooldownCounter: 0
+  _rigidBody: {fileID: 0}
+  _playerCollider: {fileID: 0}
+  _playerDashMaterial: {fileID: 0}
+  _originalColor: {r: 1, g: 1, b: 1, a: 1}
+  lastHorizontalVector: 1
+  lastVerticalVector: -0.70710677
+  movementDirection: {x: 0, y: 0}
+  healthStackID: 0
+  speedStackID: 0
+  damageStackID: 0
