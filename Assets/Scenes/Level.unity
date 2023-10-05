@@ -25989,6 +25989,14 @@ PrefabInstance:
       value: Spawner2
       objectReference: {fileID: 0}
     - target: {fileID: 6465883582749330523, guid: 82dcb421d5e9b184c9135e9865c5bf6c, type: 3}
+      propertyPath: waveData
+      value: 
+      objectReference: {fileID: 11400000, guid: adcd4394bf139524888a0c34874f9b2c, type: 2}
+    - target: {fileID: 6465883582749330523, guid: 82dcb421d5e9b184c9135e9865c5bf6c, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}
+    - target: {fileID: 6465883582749330523, guid: 82dcb421d5e9b184c9135e9865c5bf6c, type: 3}
       propertyPath: amountToSpawn
       value: 20
       objectReference: {fileID: 0}
@@ -26041,12 +26049,20 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1303248434465955421, guid: 4d491d369007fc94382f33c58d311602, type: 3}
+      propertyPath: waveData
+      value: 
+      objectReference: {fileID: 11400000, guid: adcd4394bf139524888a0c34874f9b2c, type: 2}
+    - target: {fileID: 1303248434465955421, guid: 4d491d369007fc94382f33c58d311602, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: f43bbcc79f28a0943a0752730dd121af, type: 2}
+    - target: {fileID: 1303248434465955421, guid: 4d491d369007fc94382f33c58d311602, type: 3}
       propertyPath: spawnTime
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1303248434465955421, guid: 4d491d369007fc94382f33c58d311602, type: 3}
       propertyPath: amountToSpawn
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1303248434465955421, guid: 4d491d369007fc94382f33c58d311602, type: 3}
       propertyPath: objectToSpawn
@@ -26361,6 +26377,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1178792079}
     m_Modifications:
+    - target: {fileID: 1579174194850887523, guid: fba07cb46bc90ab43babab31d26d00f6, type: 3}
+      propertyPath: waveData
+      value: 
+      objectReference: {fileID: 11400000, guid: adcd4394bf139524888a0c34874f9b2c, type: 2}
+    - target: {fileID: 1579174194850887523, guid: fba07cb46bc90ab43babab31d26d00f6, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: bd7b1b114d37eda4888d68aff28b3e28, type: 2}
     - target: {fileID: 1579174194850887523, guid: fba07cb46bc90ab43babab31d26d00f6, type: 3}
       propertyPath: amountToSpawn
       value: 20

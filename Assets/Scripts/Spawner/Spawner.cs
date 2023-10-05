@@ -3,15 +3,20 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject objectToSpawn;
     [SerializeField] private int amountToSpawn;
     [SerializeField] private float spawnInterval;
     [SerializeField] private float spawnTime;
     [SerializeField] private Transform[] spawnPositions;
     [SerializeField] private GameObject spawnIndicator;
 
+    public WaveData waveData;
+    public EnemyData enemyData;
+
     private void Start()
     {
+        amountToSpawn = waveData.maxEnemies;
+        waveData.currentEnemies = waveData.maxEnemies;
+
         StartCoroutine(SpawnObjects());
     }
 
@@ -23,7 +28,7 @@ public class Spawner : MonoBehaviour
 
         for (int i = 0; i < amountToSpawn; i++)
         {
-            GameObject spawnedObject = Instantiate(objectToSpawn, GetRandomSpawnPosition(), Quaternion.identity);
+            GameObject spawnedObject = Instantiate(enemyData.model, GetRandomSpawnPosition(), Quaternion.identity);
             //Here will be the animation for the object to spawn
 
             yield return new WaitForSeconds(spawnInterval);

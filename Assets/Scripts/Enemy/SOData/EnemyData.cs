@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyData", menuName = "Custom/Enemy Data")]
 public class EnemyData : ScriptableObject
 {
+    [Header("Spawner")]
     public GameObject model;
     public GameObject bullet;
     public Animator animator;

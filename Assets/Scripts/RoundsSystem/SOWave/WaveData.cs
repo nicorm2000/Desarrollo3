@@ -8,6 +8,8 @@ public class WaveData : ScriptableObject
     [Header("RoundCounter")]
     public int currentRound;
     public int maxRounds;
+
+    [Header("Spawner")]
     public int currentEnemies;
     public int maxEnemies;
 
