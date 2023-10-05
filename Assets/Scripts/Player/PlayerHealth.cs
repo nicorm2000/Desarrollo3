@@ -6,10 +6,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private HealthBar healthBar;
     public PlayerData playerData;
 
-
     void Start()
     {
-        ResetPlayerStacks();
+        playerData.ResetPlayerStacks();
         playerData.currentHealth = playerData.maxHealth;
         healthBar.SetMaxHealth(playerData.maxHealth);
     }
@@ -34,18 +33,13 @@ public class PlayerHealth : MonoBehaviour
 
         return playerData._isDead;
     }
-    public void ResetPlayerStacks()
-    {
-        playerData.healthStackID = 1;
-        playerData.speedStackID = 1;
-        playerData.damageStackID = 1;
-    }
 
     private void Update()
     {
         if (isDead() == true) 
         {
-            ResetPlayerStacks();
+            playerData.ResetPlayerFireDamage();
+            playerData.ResetPlayerStacks();
             playerData.currentHealth = 0;
             SceneManager.LoadScene(2);
         }

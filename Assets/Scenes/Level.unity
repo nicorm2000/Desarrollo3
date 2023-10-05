@@ -2210,11 +2210,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 610901709473716179, guid: 9e82fe8d344cd224aa1f9ed4701a9605, type: 3}
   m_PrefabInstance: {fileID: 174877490}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &193267617 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
-  m_PrefabInstance: {fileID: 521703870}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &201030059
 GameObject:
   m_ObjectHideFlags: 0
@@ -6085,6 +6080,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 741458299}
     - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+    - target: {fileID: 6429364731748367593, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: playerData
       value: 
       objectReference: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
@@ -11457,6 +11456,7 @@ MonoBehaviour:
   target: {fileID: 1941617696}
   cameraFollowSpeed: 5
   offset: {x: 0, y: 0, z: -10}
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!1 &968820208
 GameObject:
   m_ObjectHideFlags: 0
@@ -13700,10 +13700,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cb2d1b65c3707479899e816690a830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 193267617}
   levelSpawn: {fileID: 1662366594}
   pickUpWeaponText: {fileID: 1504585846}
   changeWeaponSprite: {fileID: 1606884504}
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponNumber: 1
   playerCanTeleport: 0
 --- !u!4 &1132396380
@@ -14591,10 +14591,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cb2d1b65c3707479899e816690a830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 193267617}
   levelSpawn: {fileID: 1662366594}
   pickUpWeaponText: {fileID: 1504585846}
   changeWeaponSprite: {fileID: 1606884504}
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponNumber: 2
   playerCanTeleport: 0
 --- !u!4 &1186112281
@@ -15760,10 +15760,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cb2d1b65c3707479899e816690a830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 193267617}
   levelSpawn: {fileID: 1662366594}
   pickUpWeaponText: {fileID: 1504585846}
   changeWeaponSprite: {fileID: 1606884504}
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponNumber: 0
   playerCanTeleport: 0
 --- !u!4 &1297260549
@@ -22505,7 +22505,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
   m_PrefabInstance: {fileID: 521703870}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193267617}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 465f59f8c03e4004783549a309762a00, type: 3}
@@ -24604,10 +24604,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roundCounter: {fileID: 127761906}
-  player: {fileID: 193267617}
   spawnWeaponSelect: {fileID: 2079331784}
   doorCollider: {fileID: 2082787381}
   basket: {fileID: 568406364}
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!212 &2082787384
 SpriteRenderer:
   m_ObjectHideFlags: 0

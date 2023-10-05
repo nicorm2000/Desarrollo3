@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class SelectWeapon : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
     [SerializeField] private GameObject levelSpawn;
     [SerializeField] private GameObject pickUpWeaponText;
-
     [SerializeField] private ChangeWeaponSprite changeWeaponSprite;
+
+    public PlayerData playerData;
+
     public int weaponNumber;
  
     public bool playerCanTeleport = false;
@@ -41,7 +42,7 @@ public class SelectWeapon : MonoBehaviour
         if(playerCanTeleport == true) 
         {
             changeWeaponSprite.ChangeSprite(weaponNumber);
-            player.transform.position = levelSpawn.transform.position;
+            playerData.model.transform.position = levelSpawn.transform.position;
         }
     }
 }

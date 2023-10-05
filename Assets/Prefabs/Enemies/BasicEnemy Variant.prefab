@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseSpeed: 1
   avoidanceDistance: 1
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!114 &-5129004534547528821
 MonoBehaviour:
   m_ObjectHideFlags: 0

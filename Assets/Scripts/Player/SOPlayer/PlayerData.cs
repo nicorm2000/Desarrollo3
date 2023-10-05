@@ -42,4 +42,23 @@ public class PlayerData : ScriptableObject
     public float healthStackID;
     public float speedStackID;
     public float damageStackID;
+
+    [Header("FireDamage")]
+    public bool enterPlayer = false;
+
+    [Header("Look At Mouse")]
+    public Transform transform;
+
+    public void ResetPlayerStacks() 
+    {
+        enterPlayer = false;
+        healthStackID = 1;
+        speedStackID = 1;
+        damageStackID = 1;
+    }
+
+    public void ResetPlayerFireDamage() 
+    {
+        enterPlayer = false;
+    }
 }

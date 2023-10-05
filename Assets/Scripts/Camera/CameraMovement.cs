@@ -6,9 +6,11 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private float cameraFollowSpeed = 5f; // Player's transform
     [SerializeField] private Vector3 offset = new Vector3(0f, 0f, -10f); // Default camera offset
 
+    public PlayerData playerData;
+
     private void FixedUpdate()
     {
-        if (target == null)
+        if (playerData.transform == null)
         {
             Debug.LogWarning("Camera target is not assigned.");
             return;
