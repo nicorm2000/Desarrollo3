@@ -426,7 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roundCounter: {fileID: 127761906}
   shop: {fileID: 37278418}
-  addRound: 1
+  waveData: {fileID: 11400000, guid: adcd4394bf139524888a0c34874f9b2c, type: 2}
 --- !u!4 &37278420
 Transform:
   m_ObjectHideFlags: 0
@@ -1412,8 +1412,9 @@ MonoBehaviour:
   - {fileID: 1573001683}
   - {fileID: 285666130}
   - {fileID: 1423650790}
-  currentRound: 1
-  maxRounds: 5
+  currentRound: 0
+  maxRounds: 0
+  waveData: {fileID: 11400000, guid: adcd4394bf139524888a0c34874f9b2c, type: 2}
 --- !u!4 &127761907
 Transform:
   m_ObjectHideFlags: 0

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97eafc95deaddb49899dca1af1dec54, type: 3}
   m_Name: WaveData
   m_EditorClassIdentifier: 
-  currentRound: 0
-  maxRounds: 0
+  currentRound: 1
+  maxRounds: 5
   currentEnemies: 0
   maxEnemies: 0
+  addRound: 1

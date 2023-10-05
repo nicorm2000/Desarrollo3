@@ -14,12 +14,16 @@ public class RoundCounter : MonoBehaviour
 
     [SerializeField] private Spawner[] spawner;
 
-    public int currentRound = 1;
+    public int currentRound;
 
-    public int maxRounds = 5;
+    public int maxRounds;
+
+    public WaveData waveData;
 
     void Start()
     {
+        currentRound = waveData.currentRound;
+        maxRounds = waveData.maxRounds;
         roundText.text = "Rounds: " + currentRound.ToString();
     }
 

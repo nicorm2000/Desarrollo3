@@ -8,12 +8,13 @@ public class AddRounds : MonoBehaviour
 
     [SerializeField] private Shop shop;
 
-    [SerializeField] private int addRound = 1;
+    public WaveData waveData;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            roundCounter.IncreaseRounds(addRound);
+            roundCounter.IncreaseRounds(waveData.addRound);
             shop.ActiveShop();
         }
     }
