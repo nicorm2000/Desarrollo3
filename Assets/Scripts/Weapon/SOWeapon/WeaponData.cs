@@ -5,13 +5,20 @@ using UnityEngine;
 
 public class WeaponData : ScriptableObject
 {
-    public int weaponID;
     public Sprite sprite;
     public GameObject model;
-    public GameObject bullet;
     public bool isMeleeWeapon;
     public bool isShootWeapon;
+
+    [Header("SelectWeapon")]
+    public int weaponID;
+
+    [Header("Bullet")]
+    public float bulletSpeed;
+    public float lifespan;
     public float damage;
-    public float fireRate;
-    public float speedAttack;
+
+    [Header("Shoot")]
+    public GameObject bulletPrefab;
+    public float attackSpeed;
 }

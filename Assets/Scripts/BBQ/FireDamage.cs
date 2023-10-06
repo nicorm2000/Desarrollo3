@@ -5,18 +5,19 @@ public class FireDamage : MonoBehaviour
     [SerializeField] private float damage;
     [SerializeField] private float damageCooldown = 0.5f; // Cooldown time in seconds
 
+    public PlayerData playerData;
     private PlayerHealth playerHealth;
     private float lastDamageTime; // Record the time of the last damage application
-    private bool enterPlayer = false;
 
     private void Start()
     {
+        playerData.ResetPlayerFireDamage();
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
     private void Update()
     {
-        if (enterPlayer)
+        if (playerData.enterPlayer)
         {
             if (Time.time - lastDamageTime >= damageCooldown)
             {
@@ -34,7 +35,7 @@ public class FireDamage : MonoBehaviour
         Debug.Log("entro");
         if (Enemy.gameObject.CompareTag("Player"))
         {
-            enterPlayer = true;
+            playerData.enterPlayer = true;
         }
     }
 
@@ -42,7 +43,7 @@ public class FireDamage : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            enterPlayer = false;
+            playerData.enterPlayer = false;
         }
     }
 }

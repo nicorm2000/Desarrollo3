@@ -2,12 +2,15 @@ using UnityEngine;
 
 public class AttackPlayer : MonoBehaviour
 {
-    [SerializeField] private float damage;
-
     private PlayerHealth playerHealth;
+
+    private float damage;
+
+    public EnemyData enemyData;
 
     private void Start()
     {
+        damage = enemyData.damage;
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 

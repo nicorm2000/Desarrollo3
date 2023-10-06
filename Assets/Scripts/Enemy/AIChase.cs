@@ -3,24 +3,26 @@ using UnityEngine;
 public class AIChase : MonoBehaviour
 {
     public float chaseSpeed;
-    private GameObject _player;
-    public float avoidanceDistance = 1.0f; // Adjust this value as needed
+
+    public EnemyData enemyData;
+    public PlayerData playerData;
 
     private void Start()
     {
-        _player = GameObject.FindWithTag("Player");
+        chaseSpeed = enemyData.movementSpeed;
+        playerData.model = GameObject.FindWithTag("Player");
     }
 
     private void Update()
     {
-        Vector2 playerPosition = _player.transform.position;
+        Vector2 playerPosition = playerData.model.transform.position;
         Vector2 currentPosition = transform.position;
 
         // Calculate the direction towards the player
         Vector2 dirToPlayer = (playerPosition - currentPosition).normalized;
 
         // Check for collisions in front of the enemy using Raycast
-        RaycastHit2D hit = Physics2D.Raycast(currentPosition, dirToPlayer, avoidanceDistance);
+        RaycastHit2D hit = Physics2D.Raycast(currentPosition, dirToPlayer, enemyData.avoidanceDistance);
 
         Debug.DrawRay(currentPosition, dirToPlayer, Color.red);
 

@@ -3,12 +3,13 @@ using UnityEngine;
 public class LookAtMouse : MonoBehaviour
 {
     private Camera mainCamera; // Reference to the main camera
-    private Transform playerTransform; // Reference to the player's transform
+
+    public PlayerData playerData;
 
     private void Start()
     {
         mainCamera = Camera.main;
-        playerTransform = transform.parent; // Assuming the object is the child of the player
+        playerData.transform = transform.parent; // Assuming the object is the child of the player
     }
 
     private void Update()
@@ -45,6 +46,6 @@ public class LookAtMouse : MonoBehaviour
         }
         
         transform.rotation = Quaternion.AngleAxis(rotationAngle, Vector3.forward);
-        playerTransform.position = transform.position;
+        playerData.transform.position = transform.position;
     }
 }

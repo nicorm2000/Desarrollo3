@@ -411,9 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopWindow: {fileID: 1522232839}
   hud: {fileID: 2090790731}
-  playerHealth: 1
-  playerSpeed: 1
-  playerDamage: 1
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!114 &37278419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,7 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roundCounter: {fileID: 127761906}
   shop: {fileID: 37278418}
-  addRound: 1
+  waveData: {fileID: 11400000, guid: adcd4394bf139524888a0c34874f9b2c, type: 2}
 --- !u!4 &37278420
 Transform:
   m_ObjectHideFlags: 0
@@ -1414,8 +1412,9 @@ MonoBehaviour:
   - {fileID: 1573001683}
   - {fileID: 285666130}
   - {fileID: 1423650790}
-  currentRound: 1
-  maxRounds: 5
+  currentRound: 0
+  maxRounds: 0
+  waveData: {fileID: 11400000, guid: adcd4394bf139524888a0c34874f9b2c, type: 2}
 --- !u!4 &127761907
 Transform:
   m_ObjectHideFlags: 0
@@ -2211,11 +2210,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 610901709473716179, guid: 9e82fe8d344cd224aa1f9ed4701a9605, type: 3}
   m_PrefabInstance: {fileID: 174877490}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &193267617 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
-  m_PrefabInstance: {fileID: 521703870}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &201030059
 GameObject:
@@ -6086,10 +6080,50 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 741458299}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+    - target: {fileID: 6100415171331296213, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weaponData
+      value: 
+      objectReference: {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
+    - target: {fileID: 6429364731748367593, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
     - target: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9035469371857359941, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+    - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weaponData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
+    - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weaponData.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weaponData.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
+    - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weaponData.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 07aa8a2279e9b2d4ab4941cfb619acbc, type: 2}
+    - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weaponData.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
+    - target: {fileID: 9160149820997449130, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
     - target: {fileID: 9160149820997449130, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: selectWeapon.Array.data[0]
       value: 
@@ -6812,7 +6846,7 @@ MonoBehaviour:
   healthText: {fileID: 607725736}
   speedText: {fileID: 626095185}
   damageText: {fileID: 1686816312}
-  shopManager: {fileID: 37278418}
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!1 &580872863
 GameObject:
   m_ObjectHideFlags: 0
@@ -11447,6 +11481,7 @@ MonoBehaviour:
   target: {fileID: 1941617696}
   cameraFollowSpeed: 5
   offset: {x: 0, y: 0, z: -10}
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!1 &968820208
 GameObject:
   m_ObjectHideFlags: 0
@@ -13774,11 +13809,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cb2d1b65c3707479899e816690a830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 193267617}
   levelSpawn: {fileID: 1662366594}
   pickUpWeaponText: {fileID: 1504585846}
   changeWeaponSprite: {fileID: 1606884504}
-  weaponNumber: 1
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+  weaponData: {fileID: 11400000, guid: 07aa8a2279e9b2d4ab4941cfb619acbc, type: 2}
   playerCanTeleport: 0
 --- !u!4 &1132396380
 Transform:
@@ -14665,11 +14700,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cb2d1b65c3707479899e816690a830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 193267617}
   levelSpawn: {fileID: 1662366594}
   pickUpWeaponText: {fileID: 1504585846}
   changeWeaponSprite: {fileID: 1606884504}
-  weaponNumber: 2
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+  weaponData: {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
   playerCanTeleport: 0
 --- !u!4 &1186112281
 Transform:
@@ -15834,11 +15869,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cb2d1b65c3707479899e816690a830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 193267617}
   levelSpawn: {fileID: 1662366594}
   pickUpWeaponText: {fileID: 1504585846}
   changeWeaponSprite: {fileID: 1606884504}
-  weaponNumber: 0
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+  weaponData: {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
   playerCanTeleport: 0
 --- !u!4 &1297260549
 Transform:
@@ -16211,6 +16246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPlaceholder: {fileID: 0}
+  enemyData: []
 --- !u!1 &1330588123
 GameObject:
   m_ObjectHideFlags: 0
@@ -22579,7 +22615,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
   m_PrefabInstance: {fileID: 521703870}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193267617}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 465f59f8c03e4004783549a309762a00, type: 3}
@@ -24678,10 +24714,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roundCounter: {fileID: 127761906}
-  player: {fileID: 193267617}
   spawnWeaponSelect: {fileID: 2079331784}
   doorCollider: {fileID: 2082787381}
   basket: {fileID: 568406364}
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!212 &2082787384
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26037,6 +26073,14 @@ PrefabInstance:
       value: Spawner2
       objectReference: {fileID: 0}
     - target: {fileID: 6465883582749330523, guid: 82dcb421d5e9b184c9135e9865c5bf6c, type: 3}
+      propertyPath: waveData
+      value: 
+      objectReference: {fileID: 11400000, guid: adcd4394bf139524888a0c34874f9b2c, type: 2}
+    - target: {fileID: 6465883582749330523, guid: 82dcb421d5e9b184c9135e9865c5bf6c, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}
+    - target: {fileID: 6465883582749330523, guid: 82dcb421d5e9b184c9135e9865c5bf6c, type: 3}
       propertyPath: amountToSpawn
       value: 20
       objectReference: {fileID: 0}
@@ -26089,12 +26133,20 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1303248434465955421, guid: 4d491d369007fc94382f33c58d311602, type: 3}
+      propertyPath: waveData
+      value: 
+      objectReference: {fileID: 11400000, guid: adcd4394bf139524888a0c34874f9b2c, type: 2}
+    - target: {fileID: 1303248434465955421, guid: 4d491d369007fc94382f33c58d311602, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: f43bbcc79f28a0943a0752730dd121af, type: 2}
+    - target: {fileID: 1303248434465955421, guid: 4d491d369007fc94382f33c58d311602, type: 3}
       propertyPath: spawnTime
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1303248434465955421, guid: 4d491d369007fc94382f33c58d311602, type: 3}
       propertyPath: amountToSpawn
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1303248434465955421, guid: 4d491d369007fc94382f33c58d311602, type: 3}
       propertyPath: objectToSpawn
@@ -26409,6 +26461,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1178792079}
     m_Modifications:
+    - target: {fileID: 1579174194850887523, guid: fba07cb46bc90ab43babab31d26d00f6, type: 3}
+      propertyPath: waveData
+      value: 
+      objectReference: {fileID: 11400000, guid: adcd4394bf139524888a0c34874f9b2c, type: 2}
+    - target: {fileID: 1579174194850887523, guid: fba07cb46bc90ab43babab31d26d00f6, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: bd7b1b114d37eda4888d68aff28b3e28, type: 2}
     - target: {fileID: 1579174194850887523, guid: fba07cb46bc90ab43babab31d26d00f6, type: 3}
       propertyPath: amountToSpawn
       value: 20

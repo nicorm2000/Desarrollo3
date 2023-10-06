@@ -6,14 +6,15 @@ using UnityEngine;
 public class DoorCollider : MonoBehaviour
 {
     [SerializeField] private RoundCounter roundCounter;
-
-    [SerializeField] private GameObject player;
     [SerializeField] private GameObject spawnWeaponSelect;
     [SerializeField] private GameObject doorCollider;
     [SerializeField] private GameObject basket;
 
+    public PlayerData playerData;
+
     private void Start()
     {
+        playerData.model = GameObject.FindGameObjectWithTag("Player");
         roundCounter = FindObjectOfType<RoundCounter>();
     }
 

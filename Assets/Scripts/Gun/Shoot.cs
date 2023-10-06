@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-    [SerializeField] private GameObject bullet;
-    [SerializeField] private float attackSpeed = 10f; // Shots per second
+    public WeaponData weaponData;
 
     private float timeBetweenShots;
     private bool canShoot = true;
@@ -18,9 +17,9 @@ public class Shoot : MonoBehaviour
 
     private void ShootBullet()
     {
-        Instantiate(bullet, transform.position, transform.rotation);
+        Instantiate(weaponData.bulletPrefab, transform.position, transform.rotation);
         canShoot = false;
-        timeBetweenShots = 1f / attackSpeed;
+        timeBetweenShots = 1f / weaponData.attackSpeed;
         Invoke(nameof(EnableShooting), timeBetweenShots);
     }
 

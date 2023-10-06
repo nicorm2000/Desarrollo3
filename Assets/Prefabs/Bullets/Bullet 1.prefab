@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3483890908488079228}
   - component: {fileID: 6844609257836818166}
   m_Layer: 7
-  m_Name: Bullet
+  m_Name: Bullet 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0560ae9f6ef972443a2c87b9c9a6207c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a91b5b3710a62b4db235b961611c148, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,10 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8af356b5acc8fb45b711ea88d645f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 15
-  lifespan: 3
-  damage: 1
-  weaponData: {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
+  weaponData: {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
 --- !u!114 &1971574244084053114
 MonoBehaviour:
   m_ObjectHideFlags: 0
