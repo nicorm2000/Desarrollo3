@@ -13,11 +13,9 @@ MonoBehaviour:
   m_Name: Onigri
   m_EditorClassIdentifier: 
   model: {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
-  bullet: {fileID: 0}
   animator: {fileID: 0}
   dropData: {fileID: 11400000, guid: 9c264edfd79dc6b44be682c7e3c43a6a, type: 2}
   suhsiName: Onigri
-  isMelee: 1
   damage: 20
   spawnAnimationName: Spawn
   spawnAnimationDuration: 1
@@ -25,6 +23,13 @@ MonoBehaviour:
   deathAnimationDuration: 1
   movementSpeed: 1
   avoidanceDistance: 1
+  ifFollowingPlayer: 1
+  isMelee: 1
+  shootDistance: 5
+  fireRate: 1
+  nextFireTime: 0
+  bullet: {fileID: 0}
+  firePoint: {fileID: 0}
   health: 3
   _triggerEffect: {fileID: 0}
   _spriteRenderer: {fileID: 0}

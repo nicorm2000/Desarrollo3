@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cf5c79c482a364289b65bc639aa2a1, type: 3}
   m_Name: Ikura
   m_EditorClassIdentifier: 
-  model: {fileID: 1779284332624663121, guid: 1d26883000583fa4d95ee31b544ed7ed, type: 3}
-  bullet: {fileID: 7942789937546522980, guid: 1b712e26109792244a95e6c5dc0ff504, type: 3}
+  model: {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   animator: {fileID: 0}
   dropData: {fileID: 11400000, guid: 1ecd47809c2064c4399f205203da9d0c, type: 2}
   suhsiName: Ikura
-  isMelee: 0
   damage: 20
   spawnAnimationName: Spawn
   spawnAnimationDuration: 1
@@ -25,6 +23,14 @@ MonoBehaviour:
   deathAnimationDuration: 1
   movementSpeed: 1
   avoidanceDistance: 1
+  ifFollowingPlayer: 1
+  isMelee: 0
+  shootDistance: 5
+  fireRate: 4
+  nextFireTime: 0
+  lifeSpawn: 3
+  bulletSpeed: 10
+  bullet: {fileID: 6243113850147215193, guid: d7618c043af461a48970a8746eeecb95, type: 3}
   health: 3
   _triggerEffect: {fileID: 0}
   _spriteRenderer: {fileID: 0}
