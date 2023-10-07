@@ -27,7 +27,6 @@ public class EnemyData : ScriptableObject
 
     public float shootDistance;
     public float fireRate;
-    public float nextFireTime;
     public float lifeSpawn;
     public float bulletSpeed;
     public GameObject bullet;

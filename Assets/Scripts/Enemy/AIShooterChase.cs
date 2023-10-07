@@ -5,7 +5,6 @@ using UnityEngine;
 public class AIShooterChase : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
-    [SerializeField] private float maxTime;
 
     private bool isFollowingPlayer;
 
@@ -21,7 +20,7 @@ public class AIShooterChase : MonoBehaviour
 
     private void Start()
     {
-        nextFireTime = maxTime;
+        nextFireTime = enemyData.fireRate;
 
         enemyData.bullet = bullet;
         isFollowingPlayer = enemyData.ifFollowingPlayer;
@@ -91,7 +90,7 @@ public class AIShooterChase : MonoBehaviour
     private void Shoot()
     {
         enemyData.bullet = Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
-        nextFireTime = maxTime;
+        nextFireTime = enemyData.fireRate;
     }
 
     void OnDrawGizmosSelected()

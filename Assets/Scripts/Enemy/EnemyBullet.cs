@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
+    private PlayerHealth playerHealth;
+
     private float damage;
 
     private float timer;
 
     public EnemyData enemyData;
-    public PlayerData playerData;
-
-    public GameObject player;
 
     private void Start()
     {
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         damage = enemyData.damage;
         timer = enemyData.lifeSpawn;
     }
@@ -31,18 +31,18 @@ public class EnemyBullet : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        //if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
-        //{
-        //    Debug.Log("Damage!");
-        //    collision.GetComponent<HealthSystem>().TakeDamage(damage);
-        //    Destroy(gameObject);
-        //}
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Damage!");
+            playerHealth.takeDamage(damage);
+            Destroy(gameObject);
+        }
 
-        //if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
-        //{
-        //    Destroy(gameObject);
-        //}
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
