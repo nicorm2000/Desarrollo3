@@ -6,14 +6,16 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private Collider enemyTriggerCollider;
     private ZoneTriggeredEffect _triggerEffect;
     private SpriteRenderer _spriteRenderer;
-    private bool _dead = false;
     private float health = 0;
 
+    public bool _dead;
     public EnemyData enemyData;
+    public GameObject firePoint;
 
 
     private void Start()
     {
+        _dead = enemyData.isDead;
         health = enemyData.health;
         _triggerEffect = GetComponent<ZoneTriggeredEffect>();
         _spriteRenderer = GetComponent<SpriteRenderer>();

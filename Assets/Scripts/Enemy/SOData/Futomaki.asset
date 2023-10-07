@@ -13,11 +13,9 @@ MonoBehaviour:
   m_Name: Futomaki
   m_EditorClassIdentifier: 
   model: {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
-  bullet: {fileID: 0}
   animator: {fileID: 0}
   dropData: {fileID: 11400000, guid: d1e545dd00ebe254f977e3d35bab8bb6, type: 2}
   suhsiName: Futomaki
-  isMelee: 1
   damage: 20
   spawnAnimationName: Spawn
   spawnAnimationDuration: 1
@@ -25,6 +23,13 @@ MonoBehaviour:
   deathAnimationDuration: 1
   movementSpeed: 1
   avoidanceDistance: 1
+  ifFollowingPlayer: 1
+  isMelee: 1
+  shootDistance: 5
+  fireRate: 1
+  nextFireTime: 0
+  bullet: {fileID: 0}
+  firePoint: {fileID: 0}
   health: 3
   _triggerEffect: {fileID: 0}
   _spriteRenderer: {fileID: 0}

@@ -5,12 +5,10 @@ public class EnemyData : ScriptableObject
 {
     [Header("Spawner")]
     public GameObject model;
-    public GameObject bullet;
     public Animator animator;
     public EnemyDropData dropData;
 
     public string suhsiName;
-    public bool isMelee;
     public float damage;
     public string spawnAnimationName;
     public float spawnAnimationDuration;
@@ -22,9 +20,21 @@ public class EnemyData : ScriptableObject
     public float movementSpeed;
     public float avoidanceDistance;
 
+    public bool ifFollowingPlayer;
+    public bool isMelee;
+
+    [Header("ShooterEnemy")]
+
+    public float shootDistance;
+    public float fireRate;
+    public float lifeSpawn;
+    public float bulletSpeed;
+    public GameObject bullet;
+
     [Header("HealthSystem")]
 
     public float health;
+    public bool isDead;
     public ZoneTriggeredEffect _triggerEffect;
     public SpriteRenderer _spriteRenderer;
 }

@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5acd0b9e2ed2b8458fb827bcdc058b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData: {fileID: 0}
 --- !u!1 &5569180708625838545
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,8 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830101192c70d8b4ba186aeb25a7edb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 7942789937546522980, guid: 1b712e26109792244a95e6c5dc0ff504, type: 3}
-  attackSpeed: 10
+  weaponData: {fileID: 0}
 --- !u!1 &7469210322841030696
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,18 +346,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e059d8d9c8d0e3c46ac186324c43331b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
-  dashSpeed: 10
-  dashLength: 0.25
-  dashCooldown: 1
-  _playerDashMaterial: {fileID: 2100000, guid: 0cc19e304b81648428ba0ec02253a1e8, type: 2}
+  playerData: {fileID: 0}
   selectWeapon:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  lastHorizontalVector: 0
-  lastVerticalVector: 0
-  movementDirection: {x: 0, y: 0}
 --- !u!114 &9035469371857359941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,6 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c1a63562ffec1e438810406965df8b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData: {fileID: 0}
 --- !u!95 &2223820343605897184
 Animator:
   serializedVersion: 5
@@ -403,10 +397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 465f59f8c03e4004783549a309762a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  health: 100
-  _isDead: 0
   healthBar: {fileID: 0}
+  playerData: {fileID: 0}
 --- !u!114 &4393350257254957213
 MonoBehaviour:
   m_ObjectHideFlags: 0

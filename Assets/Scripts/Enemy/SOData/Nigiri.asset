@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35cf5c79c482a364289b65bc639aa2a1, type: 3}
-  m_Name: Ikura
+  m_Name: Nigiri
   m_EditorClassIdentifier: 
-  model: {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
+  model: {fileID: 1779284332624663121, guid: 1d26883000583fa4d95ee31b544ed7ed, type: 3}
   animator: {fileID: 0}
-  dropData: {fileID: 11400000, guid: 1ecd47809c2064c4399f205203da9d0c, type: 2}
-  suhsiName: Ikura
+  dropData: {fileID: 11400000, guid: 66a444bfdb8c109488e350b7074f8776, type: 2}
+  suhsiName: Niguiri
   damage: 20
   spawnAnimationName: Spawn
   spawnAnimationDuration: 1
@@ -24,13 +24,12 @@ MonoBehaviour:
   movementSpeed: 1
   avoidanceDistance: 1
   ifFollowingPlayer: 1
-  isMelee: 0
+  isMelee: 1
   shootDistance: 5
   fireRate: 1
-  lifeSpawn: 3
-  bulletSpeed: 10
+  nextFireTime: 0
   bullet: {fileID: 0}
+  firePoint: {fileID: 0}
   health: 3
-  isDead: 0
   _triggerEffect: {fileID: 0}
   _spriteRenderer: {fileID: 0}
