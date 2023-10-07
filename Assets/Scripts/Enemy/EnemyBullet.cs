@@ -40,11 +40,6 @@ public class EnemyBullet : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (collision.gameObject.CompareTag("Bullet_Collider"))
-        {
-            Destroy(gameObject);
-        }
-
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
         {
             Destroy(gameObject);
