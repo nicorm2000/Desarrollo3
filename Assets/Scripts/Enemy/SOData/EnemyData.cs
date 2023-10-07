@@ -35,6 +35,7 @@ public class EnemyData : ScriptableObject
     [Header("HealthSystem")]
 
     public float health;
+    public bool isDead;
     public ZoneTriggeredEffect _triggerEffect;
     public SpriteRenderer _spriteRenderer;
 }

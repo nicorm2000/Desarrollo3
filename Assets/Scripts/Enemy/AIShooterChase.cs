@@ -17,6 +17,8 @@ public class AIShooterChase : MonoBehaviour
     public EnemyData enemyData;
     public PlayerData playerData;
 
+    public HealthSystem healthSystem;
+
     private void Start()
     {
         nextFireTime = maxTime;
@@ -36,6 +38,7 @@ public class AIShooterChase : MonoBehaviour
         // Calcula el ángulo en grados y gira el objeto hacia el jugador
         float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
         firePoint.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
 
         if (isFollowingPlayer)
         {
@@ -73,7 +76,7 @@ public class AIShooterChase : MonoBehaviour
         {
             nextFireTime -= Time.deltaTime;
 
-            if (nextFireTime <= 0)
+            if (nextFireTime <= 0 && healthSystem._dead == false)
             {
                 Shoot();
             }

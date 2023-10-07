@@ -58,6 +58,7 @@ MonoBehaviour:
   firePoint: {fileID: 3477892896226474857}
   enemyData: {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+  healthSystem: {fileID: -5129004534547528821}
 --- !u!114 &-5129004534547528821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,7 +73,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCollider: {fileID: 6954440812407169117}
   enemyTriggerCollider: {fileID: 444156368333031594}
+  _dead: 0
   enemyData: {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}
+  firePoint: {fileID: 3477892896226474857}
 --- !u!212 &7699837152467073221
 SpriteRenderer:
   m_ObjectHideFlags: 0
