@@ -10,7 +10,8 @@ public class Treadmill : MonoBehaviour
 
         if (rb != null)
         {
-            rb.velocity = transform.right * treadmillSpeed;
+            Debug.Log("gameobject: " + other.gameObject.name);
+            rb.velocity = transform.right * treadmillSpeed * Time.deltaTime;
         }
     }
 
@@ -20,7 +21,7 @@ public class Treadmill : MonoBehaviour
 
         if (rb != null)
         {
-            rb.velocity = transform.right / treadmillSpeed;
+            rb.velocity = transform.right / treadmillSpeed * Time.deltaTime;
         }
     }
 }
