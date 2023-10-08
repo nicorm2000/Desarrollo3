@@ -1657,7 +1657,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1667,7 +1667,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -22527,6 +22527,8 @@ GameObject:
   - component: {fileID: 1759705845}
   - component: {fileID: 1759705846}
   - component: {fileID: 1759705847}
+  - component: {fileID: 1759705848}
+  - component: {fileID: 1759705849}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -22614,8 +22616,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4aecb14a40a09b4585ea26d8aff09b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  phrases:
+  - Hey, this is the shop!
+  - Please, choose your next weapon!
+  - Let the carnage begin!
+  animateText: 1
   textMeshPro: {fileID: 134319937}
   typingSpeed: 0.1
+--- !u!65 &1759705848
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759705844}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 19.820082, y: 21.681948, z: 24.685257}
+  m_Center: {x: -3.0226386, y: 5.2221575, z: 5.2094154}
+--- !u!65 &1759705849
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759705844}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.4665327, y: 3.2313225, z: 3.280833}
+  m_Center: {x: 0.009450298, y: -0.0206945, z: 1.5404171}
 --- !u!1 &1763287675
 GameObject:
   m_ObjectHideFlags: 0
