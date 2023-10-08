@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
     
     public  SelectWeapon[] selectWeapon;
 
+    public ConveyorBelt conveyorBelt;
+
     private void Start()
     {
         playerData._rigidBody = GetComponent<Rigidbody>();
@@ -78,6 +80,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        playerData._rigidBody.velocity = new Vector2(playerData.movementDirection.x * playerData.activeMoveSpeed, playerData.movementDirection.y * playerData.activeMoveSpeed);
+        if (conveyorBelt.isOnConveyorBelt)
+        {
+            playerData._rigidBody.velocity = new Vector2((playerData.movementDirection.x * playerData.activeMoveSpeed) + (conveyorBelt.conveyorBeltSpeed * Time.deltaTime), playerData.movementDirection.y * playerData.activeMoveSpeed);
+        }
+        else
+        {
+            playerData._rigidBody.velocity = new Vector2(playerData.movementDirection.x * playerData.activeMoveSpeed, playerData.movementDirection.y * playerData.activeMoveSpeed);
+        }
     }
 }
