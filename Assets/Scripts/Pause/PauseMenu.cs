@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -45,6 +46,13 @@ public class PauseMenu : MonoBehaviour
 
     public void ExitGame()
     {
+#if UNITY_EDITOR
+        if (EditorApplication.isPlaying)
+        {
+            EditorApplication.isPlaying = false;
+        }
+#endif
+
         Application.Quit();
     }
 }
