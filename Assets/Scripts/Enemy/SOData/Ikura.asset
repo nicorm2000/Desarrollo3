@@ -26,10 +26,10 @@ MonoBehaviour:
   ifFollowingPlayer: 1
   isMelee: 0
   shootDistance: 5
-  fireRate: 1
+  fireRate: 1.5
   lifeSpawn: 3
-  bulletSpeed: 10
-  bullet: {fileID: 0}
+  bulletSpeed: 3
+  bullet: {fileID: 6243113850147215193, guid: d7618c043af461a48970a8746eeecb95, type: 3}
   health: 3
   isDead: 0
   _triggerEffect: {fileID: 0}
