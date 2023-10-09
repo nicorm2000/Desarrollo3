@@ -97,8 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd269034fb8273245bbd047d1438114f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  playerDamage: 20
+  enemyDamage: 0.5
   damageCooldown: 1
+  enemyHealth: {fileID: -5129004534547528821, guid: 1d26883000583fa4d95ee31b544ed7ed, type: 3}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!65 &6052806503788051284
 BoxCollider:

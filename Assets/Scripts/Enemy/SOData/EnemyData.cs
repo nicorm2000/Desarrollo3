@@ -37,4 +37,7 @@ public class EnemyData : ScriptableObject
     public bool isDead;
     public ZoneTriggeredEffect _triggerEffect;
     public SpriteRenderer _spriteRenderer;
+
+    [Header("FireDamage")]
+    public bool enterEnemy = false;
 }

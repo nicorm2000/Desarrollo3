@@ -40,9 +40,9 @@ public class PlayerData : ScriptableObject
     public Vector2 movementDirection;
 
     [Header("Shop")]
-    public float healthStackID;
-    public float speedStackID;
-    public float damageStackID;
+    public float healthStackID = 0;
+    public float speedStackID = 0;
+    public float damageStackID = 0;
 
     [Header("FireDamage")]
     public bool enterPlayer = false;
@@ -53,9 +53,9 @@ public class PlayerData : ScriptableObject
     public void ResetPlayerStacks() 
     {
         enterPlayer = false;
-        healthStackID = 1;
-        speedStackID = 1;
-        damageStackID = 1;
+        healthStackID = 0;
+        speedStackID = 0;
+        damageStackID = 0;
     }
 
     public void ResetPlayerFireDamage() 

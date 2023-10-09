@@ -51,9 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ff78a32f3b44c4595bc0044bb6f7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 6243113850147215193, guid: d7618c043af461a48970a8746eeecb95, type: 3}
   chaseSpeed: 1
-  firePoint: {fileID: 0}
   enemyData: {fileID: 11400000, guid: bd7b1b114d37eda4888d68aff28b3e28, type: 2}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!114 &-5129004534547528821
@@ -70,7 +68,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCollider: {fileID: 672975656604940338}
   enemyTriggerCollider: {fileID: 214940116835824366}
+  _dead: 0
   enemyData: {fileID: 11400000, guid: bd7b1b114d37eda4888d68aff28b3e28, type: 2}
+  firePoint: {fileID: 0}
 --- !u!212 &7699837152467073221
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -195,10 +195,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.8
   m_Height: 1.25
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.06, z: 0}
 --- !u!136 &672975656604940338
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -218,7 +218,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.35
+  m_Radius: 0.65
   m_Height: 1.25
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.06, z: 0}

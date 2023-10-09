@@ -8,6 +8,8 @@ public class Shop : MonoBehaviour
 
     [SerializeField] private GameObject hud;
 
+    public SpriteCycle[] spriteCycle;
+
     public PlayerData playerData;
 
     public void ActiveShop() 
@@ -27,15 +29,21 @@ public class Shop : MonoBehaviour
     public void IncreaseHealth()
     {
         playerData.healthStackID += 1f;
+
+        spriteCycle[0].UpdateStatsUI(playerData.healthStackID);
     }
 
     public void IncreaseSpeed()
     {
         playerData.speedStackID += 1f;
+
+        spriteCycle[1].UpdateStatsUI(playerData.speedStackID);
     }
 
     public void IncreaseDamage()
     {
         playerData.damageStackID += 1f;
+
+        spriteCycle[2].UpdateStatsUI(playerData.damageStackID);
     }
 }

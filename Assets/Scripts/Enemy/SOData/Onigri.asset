@@ -16,7 +16,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   dropData: {fileID: 11400000, guid: 9c264edfd79dc6b44be682c7e3c43a6a, type: 2}
   suhsiName: Onigri
-  damage: 20
+  damage: 5
   spawnAnimationName: Spawn
   spawnAnimationDuration: 1
   deathAnimationName: Death
@@ -27,9 +27,11 @@ MonoBehaviour:
   isMelee: 1
   shootDistance: 5
   fireRate: 1
-  nextFireTime: 0
+  lifeSpawn: 0
+  bulletSpeed: 0
   bullet: {fileID: 0}
-  firePoint: {fileID: 0}
-  health: 3
+  health: 30
+  isDead: 0
   _triggerEffect: {fileID: 0}
   _spriteRenderer: {fileID: 0}
+  enterEnemy: 0

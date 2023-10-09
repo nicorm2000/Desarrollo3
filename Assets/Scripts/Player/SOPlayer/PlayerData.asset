@@ -24,15 +24,17 @@ MonoBehaviour:
   dashLength: 0.25
   dashCooldown: 1
   activeMoveSpeed: 5
-  dashCounter: 0
-  dashCooldownCounter: 0
+  dashCounter: -0.0033680997
+  dashCooldownCounter: -0.003507406
   _rigidBody: {fileID: 0}
   _playerCollider: {fileID: 0}
   _playerDashMaterial: {fileID: 0}
   _originalColor: {r: 1, g: 1, b: 1, a: 1}
   lastHorizontalVector: 1
-  lastVerticalVector: -0.70710677
+  lastVerticalVector: 0.70710677
   movementDirection: {x: 0, y: 0}
   healthStackID: 0
   speedStackID: 0
   damageStackID: 0
+  enterPlayer: 0
+  transform: {fileID: 0}
