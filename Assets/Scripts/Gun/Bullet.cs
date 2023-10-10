@@ -30,7 +30,6 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            Debug.Log("Damage!");
             collision.GetComponent<HealthSystem>().TakeDamage(damage);
             Destroy(gameObject);
         }

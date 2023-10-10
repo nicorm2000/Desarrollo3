@@ -35,7 +35,6 @@ public class FireDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider Enemy)
     {
-        Debug.Log("entro");
         if (Enemy.gameObject.CompareTag("Player"))
         {
             playerData.enterPlayer = true;

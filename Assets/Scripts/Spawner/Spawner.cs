@@ -22,9 +22,7 @@ public class Spawner : MonoBehaviour
 
     public IEnumerator SpawnObjects()
     {
-        Debug.Log("Spawning!");
         yield return new WaitForSeconds(spawnTime);
-        Debug.Log("Spawn time reached!");
 
         for (int i = 0; i < amountToSpawn; i++)
         {
