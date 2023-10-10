@@ -11,6 +11,6 @@ public class CursorObject : MonoBehaviour
 
     private void OnMouseExit()
     {
-        CursorManager.Instance.SetActiveCursorType(CursorManager.CursorType.RedDot);
+        CursorManager.Instance.SetActiveCursorType(CursorManager.CursorType.RotatingSquare);
     }
 }

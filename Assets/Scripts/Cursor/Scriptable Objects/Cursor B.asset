@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorType: 1
   textureArray:
-  - {fileID: 2800000, guid: 5a13067806d741b42b794e12ed23a081, type: 3}
-  frameRate: 0
+  - {fileID: 2800000, guid: 69727cf04a49e1745a1e7e46f7291184, type: 3}
+  - {fileID: 2800000, guid: 6992156b95c231d47b56f9875e7b96fc, type: 3}
+  - {fileID: 2800000, guid: e6c39301dacc9fb4cb99fa7d55b4dee7, type: 3}
+  - {fileID: 2800000, guid: e25685cf0354f2c47b6a18956fa9095e, type: 3}
+  frameRate: 0.1
   offset: {x: 16, y: 16}

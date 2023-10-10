@@ -14,8 +14,8 @@ public class CursorManager : MonoBehaviour
 
     public enum CursorType
     {
-        RedDot,
-        Cross
+        RotatingSquare,
+        Interact
     }
 
     private void Awake()
@@ -34,7 +34,7 @@ public class CursorManager : MonoBehaviour
 
     private void Start()
     {
-        SetActiveCursorType(CursorType.RedDot);
+        SetActiveCursorType(CursorType.RotatingSquare);
     }
 
     private void Update()
