@@ -10,6 +10,7 @@ public class EnemyBullet : MonoBehaviour
 
     private float timer;
 
+    public PlayerData playerData;
     public EnemyData enemyData;
 
     private void Start()
@@ -35,8 +36,11 @@ public class EnemyBullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Damage!");
-            playerHealth.takeDamage(damage);
+            if (!playerData.isDashing) 
+            {
+                playerHealth.takeDamage(damage);
+            }
+
             Destroy(gameObject);
         }
 

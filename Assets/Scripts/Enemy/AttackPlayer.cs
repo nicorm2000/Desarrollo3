@@ -6,6 +6,7 @@ public class AttackPlayer : MonoBehaviour
 
     private float damage;
 
+    public PlayerData playerData;
     public EnemyData enemyData;
 
     private void Start()
@@ -16,7 +17,7 @@ public class AttackPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider Enemy)
     {
-        if (Enemy.gameObject.CompareTag("Player"))
+        if (Enemy.gameObject.CompareTag("Player") && !playerData.isDashing)
         {
             playerHealth.takeDamage(damage);
         }

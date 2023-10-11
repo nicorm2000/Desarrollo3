@@ -20,7 +20,7 @@ public class FireDamage : MonoBehaviour
 
     private void Update()
     {
-        if (playerData.enterPlayer)
+        if (playerData.enterPlayer && !playerData.isDashing)
         {
             if (Time.time - lastDamageTime >= damageCooldown)
             {

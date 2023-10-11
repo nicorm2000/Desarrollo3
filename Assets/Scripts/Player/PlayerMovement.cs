@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (playerData.dashCooldownCounter <= 0 && playerData.dashCounter <= 0)
             {
-                playerData._playerCollider.enabled = false;
+                playerData.isDashing = true;
                 playerData._playerDashMaterial.color = Color.cyan;
                 playerData.activeMoveSpeed = playerData.dashSpeed;
                 playerData.dashCounter = playerData.dashLength;
@@ -57,9 +57,9 @@ public class PlayerMovement : MonoBehaviour
 
             if (playerData.dashCounter <= 0) 
             {
+                playerData.isDashing = false;
                 playerData.activeMoveSpeed = playerData.speed;
                 playerData.dashCooldownCounter = playerData.dashCooldown;
-                playerData._playerCollider.enabled = true;
                 playerData._playerDashMaterial.color = playerData._originalColor;
             }
         }

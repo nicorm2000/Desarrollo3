@@ -51,9 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ff78a32f3b44c4595bc0044bb6f7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 6243113850147215193, guid: d7618c043af461a48970a8746eeecb95, type: 3}
   chaseSpeed: 1
-  firePoint: {fileID: 0}
   enemyData: {fileID: 11400000, guid: e669acf245ccac044b5afe40a135676b, type: 2}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!114 &-5129004534547528821
@@ -70,7 +68,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCollider: {fileID: 4537057346123849985}
   enemyTriggerCollider: {fileID: 5641821315093705386}
+  _dead: 0
   enemyData: {fileID: 11400000, guid: e669acf245ccac044b5afe40a135676b, type: 2}
+  firePoint: {fileID: 0}
 --- !u!212 &7699837152467073221
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 646c66060c2c9004db9c265f5001c254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   enemyData: {fileID: 11400000, guid: e669acf245ccac044b5afe40a135676b, type: 2}
 --- !u!54 &4317066104285272101
 Rigidbody:
@@ -212,7 +213,7 @@ CapsuleCollider:
     m_Bits: 2039
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 2112
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0

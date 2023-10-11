@@ -20,13 +20,14 @@ public class PlayerData : ScriptableObject
     public Animator _animator;
     public SpriteRenderer _spriteRenderer;
 
-    [Header("Player Movement")]
+    [Header("Player Movement: Dash")]
     public float dashSpeed;
     public float dashLength = 0.25f;
     public float dashCooldown = 1;
     public float activeMoveSpeed;
     public float dashCounter;
     public float dashCooldownCounter;
+    public bool isDashing;
     public Rigidbody _rigidBody;
     public BoxCollider _playerCollider;
     public Material _playerDashMaterial;
