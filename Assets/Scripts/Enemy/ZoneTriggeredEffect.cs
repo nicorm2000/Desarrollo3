@@ -25,7 +25,7 @@ public class ZoneTriggeredEffect : MonoBehaviour
         float elapsedTime = 0f;
         Color originalColor = spriteRenderer.color;
 
-        while (elapsedTime < dropData.objectLifespan)
+        while (elapsedTime <= dropData.objectLifespan)
         {
             float normalizedTime = elapsedTime / dropData.objectLifespan;
             Color fadedColor = new Color(originalColor.r, originalColor.g, originalColor.b, 1f - normalizedTime);
