@@ -41,7 +41,7 @@ public class PlayerHealth : MonoBehaviour
             playerData.ResetPlayerFireDamage();
             playerData.ResetPlayerStacks();
             playerData.currentHealth = 0;
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
     }
 }
