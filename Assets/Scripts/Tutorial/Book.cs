@@ -5,9 +5,11 @@ using UnityEngine;
 public class Book : MonoBehaviour
 {
     [SerializeField] private float pageSpeed = 0.5f;
+    [SerializeField] private float waitTime = 1f;
     [SerializeField] private List<Transform> pages;
     [SerializeField] private GameObject backButton;
     [SerializeField] private GameObject nextButton;
+    [SerializeField] private GameObject playButton;
 
     private int _index = -1;
     private bool _rotate = false;
@@ -50,6 +52,7 @@ public class Book : MonoBehaviour
         if (_index == pages.Count - 1)
         {
             nextButton.SetActive(false); //If the page is last then the button is turned off
+            StartCoroutine(ActivatePlayButton());
         }
     }
 
@@ -71,11 +74,18 @@ public class Book : MonoBehaviour
         if (!nextButton.activeInHierarchy)
         {
             nextButton.SetActive(true); //Is active every time the page is turned back
+            playButton.SetActive(false);
         }
         if (_index - 1 == - 1)
         {
             backButton.SetActive(false); //If the page is first then the button is turned off
         }
+    }
+
+    private IEnumerator ActivatePlayButton()
+    {
+        yield return new WaitForSeconds(waitTime);
+        playButton.SetActive(true);
     }
 
     private IEnumerator Rotate(float angle, bool forward)
