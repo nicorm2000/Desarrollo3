@@ -1,0 +1,114 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Book : MonoBehaviour
+{
+    [SerializeField] private float pageSpeed = 0.5f;
+    [SerializeField] private float waitTime = 1f;
+    [SerializeField] private List<Transform> pages;
+    [SerializeField] private GameObject backButton;
+    [SerializeField] private GameObject nextButton;
+    [SerializeField] private GameObject playButton;
+
+    private int _index = -1;
+    private bool _rotate = false;
+
+    private void Start()
+    {
+        InitialState();
+    }
+
+    public void InitialState()
+    {
+        for (int i = 0; i < pages.Count; i++)
+        {
+            pages[i].transform.rotation = Quaternion.identity;
+        }
+        pages[0].SetAsLastSibling();
+        backButton.SetActive(false);
+    }
+
+    public void RotateNext()
+    {
+        if (_rotate)
+        {
+            return;
+        }    
+
+        _index++;
+        float angle = 180; //To rotate the page forward, the page needs to rotate 180 degrees in the Y axis
+        NextButtonActions();
+        pages[_index].SetAsLastSibling();
+        StartCoroutine(Rotate(angle, true));
+    }
+
+    public void NextButtonActions()
+    {
+        if (!backButton.activeInHierarchy)
+        {
+            backButton.SetActive(true); //Is active every time the page is turned forward
+        }
+        if (_index == pages.Count - 1)
+        {
+            nextButton.SetActive(false); //If the page is last then the button is turned off
+            StartCoroutine(ActivatePlayButton());
+        }
+    }
+
+    public void RotateBack() 
+    {
+        if (_rotate)
+        {
+            return;
+        }
+
+        float angle = 0; //To rotate the page backward, the page needs to have its rotation set to 0 degrees in the Y axis
+        pages[_index].SetAsLastSibling();
+        BackButtonActions();
+        StartCoroutine(Rotate(angle, false));
+    }
+
+    public void BackButtonActions()
+    {
+        if (!nextButton.activeInHierarchy)
+        {
+            nextButton.SetActive(true); //Is active every time the page is turned back
+            playButton.SetActive(false);
+        }
+        if (_index - 1 == - 1)
+        {
+            backButton.SetActive(false); //If the page is first then the button is turned off
+        }
+    }
+
+    private IEnumerator ActivatePlayButton()
+    {
+        yield return new WaitForSeconds(waitTime);
+        playButton.SetActive(true);
+    }
+
+    private IEnumerator Rotate(float angle, bool forward)
+    {
+        float value = 0f;
+        
+        while (true) 
+        {
+            _rotate = true;
+            Quaternion targetRotation = Quaternion.Euler(0, angle, 0);
+            value += Time.deltaTime * pageSpeed;
+            pages[_index].rotation = Quaternion.Slerp(pages[_index].rotation, targetRotation, value); //Smoothly turn the page
+            float angle1 = Quaternion.Angle(pages[_index].rotation, targetRotation); //Calculate the angle between the given angle and the current angle, of rotation
+            if (angle1 < 0.1f)
+            {
+                if (!forward) 
+                {
+                    _index--;
+                }
+                _rotate = false;
+                break;
+            }
+            yield return null;
+        }
+    }
+}
