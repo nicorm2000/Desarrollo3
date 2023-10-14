@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class AIShooterChase : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class AIShooterChase : MonoBehaviour
     public GameObject firePoint;
 
     public EnemyData enemyData;
-    public PlayerData playerData;
+    public GameObject target;
 
     public HealthSystem healthSystem;
 
@@ -25,13 +26,13 @@ public class AIShooterChase : MonoBehaviour
         enemyData.bullet = bullet;
         isFollowingPlayer = enemyData.ifFollowingPlayer;
         chaseSpeed = enemyData.movementSpeed;
-        playerData.model = GameObject.FindWithTag("Player");
+        target = GameObject.FindWithTag("Player");
     }
 
     private void Update()
     {
         // Calcula la dirección del jugador desde el objeto actual
-        Vector3 directionToPlayer = playerData.model.transform.position - transform.position;
+        Vector3 directionToPlayer = target.transform.position - transform.position;
         directionToPlayer.z = 0f;  // Asegúrate de que la dirección sea plana en Z para 2D
 
         // Calcula el ángulo en grados y gira el objeto hacia el jugador
@@ -41,7 +42,7 @@ public class AIShooterChase : MonoBehaviour
 
         if (isFollowingPlayer)
         {
-            Vector2 playerPosition = playerData.model.transform.position;
+            Vector2 playerPosition = target.transform.position;
             Vector2 currentPosition = transform.position;
 
             // Calculate the direction towards the player
@@ -52,7 +53,7 @@ public class AIShooterChase : MonoBehaviour
 
             Debug.DrawRay(currentPosition, dirToPlayer, Color.red);
 
-            if (Vector3.Distance(transform.position, playerData.model.transform.position) <= enemyData.shootDistance)
+            if (Vector3.Distance(transform.position, target.transform.position) <= enemyData.shootDistance)
             {
                 isFollowingPlayer = false;
             }
@@ -80,7 +81,7 @@ public class AIShooterChase : MonoBehaviour
                 Shoot();
             }
 
-            if (Vector3.Distance(transform.position, playerData.transform.position) > enemyData.shootDistance)
+            if (Vector3.Distance(transform.position, target.transform.position) > enemyData.shootDistance)
             {
                 isFollowingPlayer = true;
             }

@@ -5,17 +5,17 @@ public class AIChase : MonoBehaviour
     public float chaseSpeed;
 
     public EnemyData enemyData;
-    public PlayerData playerData;
+    public GameObject target;
 
     private void Start()
     {
         chaseSpeed = enemyData.movementSpeed;
-        playerData.model = GameObject.FindWithTag("Player");
+        target = GameObject.FindWithTag("Player");
     }
 
     private void Update()
     {
-        Vector2 playerPosition = playerData.model.transform.position;
+        Vector2 playerPosition = target.transform.position;
         Vector2 currentPosition = transform.position;
 
         // Calculate the direction towards the player
