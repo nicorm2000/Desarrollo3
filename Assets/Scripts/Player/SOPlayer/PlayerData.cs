@@ -14,7 +14,7 @@ public class PlayerData : ScriptableObject
     public float speed;
     public bool _isDead;
     public GameObject model;
-    public WeaponData weaponData;
+    public WeaponData[] weaponData;
 
     [Header("Player Animator")]
     public Animator _animator;
@@ -56,6 +56,12 @@ public class PlayerData : ScriptableObject
         healthStackID = 0;
         speedStackID = 0;
         damageStackID = 0;
+
+        speed = 5;
+        maxHealth = 100;
+        weaponData[0].damage = 1;
+        weaponData[1].damage = 1;
+        weaponData[2].damage = 1;
     }
 
     public void ResetPlayerFireDamage() 

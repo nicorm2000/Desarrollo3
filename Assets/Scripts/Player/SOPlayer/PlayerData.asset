@@ -17,7 +17,10 @@ MonoBehaviour:
   speed: 5
   _isDead: 0
   model: {fileID: 0}
-  weaponData: {fileID: 0}
+  weaponData:
+  - {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
+  - {fileID: 11400000, guid: 07aa8a2279e9b2d4ab4941cfb619acbc, type: 2}
+  - {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
   _animator: {fileID: 0}
   _spriteRenderer: {fileID: 0}
   dashSpeed: 12
@@ -29,12 +32,12 @@ MonoBehaviour:
   _playerCollider: {fileID: 0}
   _playerDashMaterial: {fileID: 0}
   _originalColor: {r: 1, g: 1, b: 1, a: 1}
-  lastHorizontalVector: -1
+  lastHorizontalVector: 1
   lastVerticalVector: -0.70710677
   movementDirection: {x: 0, y: 0}
   maxLevelStack: 5
   healthStackID: 0
   speedStackID: 0
-  damageStackID: 0
+  damageStackID: 5
   enterPlayer: 0
   transform: {fileID: 0}

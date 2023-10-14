@@ -8,6 +8,8 @@ public class Shop : MonoBehaviour
 
     [SerializeField] private GameObject hud;
 
+    [SerializeField] private UpgradePlayer upgradePlayer;
+
     public SpriteCycle[] spriteCycle;
 
     public PlayerData playerData;
@@ -32,6 +34,8 @@ public class Shop : MonoBehaviour
         {
             playerData.healthStackID += 1f;
 
+            upgradePlayer.UpgradeHealth(20f);
+
             spriteCycle[0].UpdateStatsUI(playerData.healthStackID);
         }
 
@@ -47,6 +51,8 @@ public class Shop : MonoBehaviour
         {
             playerData.speedStackID += 1f;
 
+            upgradePlayer.UpgradeSpeed(1f);
+
             spriteCycle[1].UpdateStatsUI(playerData.speedStackID);
         }
 
@@ -61,6 +67,8 @@ public class Shop : MonoBehaviour
         if (playerData.damageStackID < playerData.maxLevelStack)
         {
             playerData.damageStackID += 1f;
+
+            upgradePlayer.UpgradeDamage(1f);
 
             spriteCycle[2].UpdateStatsUI(playerData.damageStackID);
         }

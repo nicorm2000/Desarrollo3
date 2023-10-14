@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private float damage;
-
     private float timer;
 
     public WeaponData weaponData;
 
     private void Start()
     {
-        damage = weaponData.damage;
         timer = weaponData.lifespan;
     }
 
@@ -30,7 +27,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            collision.GetComponent<HealthSystem>().TakeDamage(damage);
+            collision.GetComponent<HealthSystem>().TakeDamage(weaponData.damage);
             Destroy(gameObject);
         }
 
