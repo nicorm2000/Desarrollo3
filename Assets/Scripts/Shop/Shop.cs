@@ -28,22 +28,46 @@ public class Shop : MonoBehaviour
 
     public void IncreaseHealth()
     {
-        playerData.healthStackID += 1f;
+        if(playerData.healthStackID < playerData.maxLevelStack) 
+        {
+            playerData.healthStackID += 1f;
 
-        spriteCycle[0].UpdateStatsUI(playerData.healthStackID);
+            spriteCycle[0].UpdateStatsUI(playerData.healthStackID);
+        }
+
+        else 
+        {
+            playerData.healthStackID = 5f;
+        }
     }
 
     public void IncreaseSpeed()
     {
-        playerData.speedStackID += 1f;
+        if (playerData.speedStackID < playerData.maxLevelStack)
+        {
+            playerData.speedStackID += 1f;
 
-        spriteCycle[1].UpdateStatsUI(playerData.speedStackID);
+            spriteCycle[1].UpdateStatsUI(playerData.speedStackID);
+        }
+
+        else
+        {
+            playerData.speedStackID = 5f;
+        }
     }
 
     public void IncreaseDamage()
     {
-        playerData.damageStackID += 1f;
+        if (playerData.damageStackID < playerData.maxLevelStack)
+        {
+            playerData.damageStackID += 1f;
 
-        spriteCycle[2].UpdateStatsUI(playerData.damageStackID);
+            spriteCycle[2].UpdateStatsUI(playerData.damageStackID);
+        }
+        
+        else 
+        {
+            playerData.damageStackID = 5f;
+        }
     }
 }

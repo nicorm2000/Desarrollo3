@@ -39,6 +39,7 @@ public class PlayerData : ScriptableObject
     public Vector2 movementDirection;
 
     [Header("Shop")]
+    public float maxLevelStack;
     public float healthStackID = 0;
     public float speedStackID = 0;
     public float damageStackID = 0;
