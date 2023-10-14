@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private float dashCounter = 0;
+    private float dashCoolDownCounter = 0;
+
     public PlayerData playerData;
     
     public  SelectWeapon[] selectWeapon;
@@ -42,31 +45,31 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (playerData.dashCooldownCounter <= 0 && playerData.dashCounter <= 0)
+            if (dashCoolDownCounter <= 0 && dashCounter <= 0)
             {
                 playerData.isDashing = true;
                 playerData._playerDashMaterial.color = Color.cyan;
                 playerData.activeMoveSpeed = playerData.dashSpeed;
-                playerData.dashCounter = playerData.dashLength;
+                dashCounter = playerData.dashLength;
             }
         }
 
-        if (playerData.dashCounter > 0)
+        if (dashCounter > 0)
         {
-            playerData.dashCounter -= Time.deltaTime;
+            dashCounter -= Time.deltaTime;
 
-            if (playerData.dashCounter <= 0) 
+            if (dashCounter <= 0) 
             {
                 playerData.isDashing = false;
                 playerData.activeMoveSpeed = playerData.speed;
-                playerData.dashCooldownCounter = playerData.dashCooldown;
+                dashCoolDownCounter = playerData.dashCooldown;
                 playerData._playerDashMaterial.color = playerData._originalColor;
             }
         }
 
-        if (playerData.dashCooldownCounter > 0)
+        if (dashCoolDownCounter > 0)
         {
-            playerData.dashCooldownCounter -= Time.deltaTime;  
+            dashCoolDownCounter -= Time.deltaTime;  
         }
 
         if(Input.GetKeyDown(KeyCode.E))

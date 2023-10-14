@@ -25,8 +25,6 @@ public class PlayerData : ScriptableObject
     public float dashLength = 0.25f;
     public float dashCooldown = 1;
     public float activeMoveSpeed;
-    public float dashCounter;
-    public float dashCooldownCounter;
     public bool isDashing;
     public Rigidbody _rigidBody;
     public BoxCollider _playerCollider;
