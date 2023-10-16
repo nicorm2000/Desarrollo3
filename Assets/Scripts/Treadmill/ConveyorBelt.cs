@@ -9,26 +9,44 @@ public class ConveyorBelt : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (playerRB != null)
+        Rigidbody rb = other.gameObject.GetComponent<Rigidbody>();
+
+        if (rb != null)
+        {
+            if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+            {
+                isOnConveyorBelt = true;
+            }
+            rb.velocity = transform.right * conveyorBeltSpeed * Time.deltaTime;
+        }
+        else if (playerRB != null)
         {
             if (other.gameObject.layer == LayerMask.NameToLayer("Player_ConveyorBelt"))
             {
                 isOnConveyorBelt = true;
             }
-
             playerRB.velocity = transform.right * conveyorBeltSpeed * Time.deltaTime;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (playerRB != null)
+        Rigidbody rb = other.gameObject.GetComponent<Rigidbody>();
+
+        if (rb != null)
+        {
+            if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+            {
+                isOnConveyorBelt = false;
+            }
+            rb.velocity = transform.right / conveyorBeltSpeed * Time.deltaTime;
+        }
+        else if (playerRB != null)
         {
             if (other.gameObject.layer == LayerMask.NameToLayer("Player_ConveyorBelt"))
             {
                 isOnConveyorBelt = false;
             }
-
             playerRB.velocity = transform.right / conveyorBeltSpeed * Time.deltaTime;
         }
     }

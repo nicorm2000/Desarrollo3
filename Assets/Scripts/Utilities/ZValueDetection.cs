@@ -6,7 +6,6 @@ public class ZValueDetection : MonoBehaviour
     [SerializeField] private LayerMask collisionLayer;
     [SerializeField] private float maxHeight;
 
-
     private void Update()
     {
         UpdateZPosition();
