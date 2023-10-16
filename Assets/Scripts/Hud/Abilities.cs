@@ -1,29 +1,34 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AbilitiesCooldown : MonoBehaviour
+public class Abilities : MonoBehaviour
 {
+    public PlayerData playerData;
+
     [Header("Dash")]
     public Image dashImage;
-    public float dashCooldown = 3f;
+    private float dashCooldown = 3f;
     public KeyCode dash = KeyCode.F1;
     private bool isCooldownDash = false;
 
     [Header("Shield")]
     public Image shieldImage;
-    public float shieldCooldown = 3f;
+    private float shieldCooldown = 3f;
     public KeyCode shield = KeyCode.F2;
     private bool isCooldownShield = false;
 
     [Header("Laser")]
     public Image laserImage;
-    public float laserCooldown = 3f;
+    private float laserCooldown = 3f;
     public KeyCode laser = KeyCode.F3;
     private bool isCooldownLaser = false;
 
     private void Start()
     {
+        dashCooldown = playerData.dashCooldown;
+        shieldCooldown = playerData.shieldCooldown;
+        laserCooldown = playerData.laserCooldown;
+
         dashImage.fillAmount = 0f;
         shieldImage.fillAmount = 0f;
         laserImage.fillAmount = 0f;

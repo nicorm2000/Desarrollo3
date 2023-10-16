@@ -7,16 +7,16 @@ public class PlayerMovement : MonoBehaviour
 
     public PlayerData playerData;
     
-    public  SelectWeapon[] selectWeapon;
+    public SelectWeapon[] selectWeapon;
 
     public ConveyorBelt conveyorBelt;
 
     private void Start()
     {
-        playerData._rigidBody = GetComponent<Rigidbody>();
-        playerData._playerCollider = GetComponent<BoxCollider>();
-        playerData._playerDashMaterial = GetComponent<Renderer>().material;
-        playerData._originalColor = playerData._playerDashMaterial.color;
+        playerData.rigidBody = GetComponent<Rigidbody>();
+        playerData.playerCollider = GetComponent<BoxCollider>();
+        playerData.playerDashMaterial = GetComponent<Renderer>().material;
+        playerData.dashColor = playerData.playerDashMaterial.color;
         playerData.activeMoveSpeed = playerData.speed;
     }
 
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
             if (dashCoolDownCounter <= 0 && dashCounter <= 0)
             {
                 playerData.isDashing = true;
-                playerData._playerDashMaterial.color = Color.cyan;
+                playerData.playerDashMaterial.color = Color.cyan;
                 playerData.activeMoveSpeed = playerData.dashSpeed;
                 dashCounter = playerData.dashLength;
             }
@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
                 playerData.isDashing = false;
                 playerData.activeMoveSpeed = playerData.speed;
                 dashCoolDownCounter = playerData.dashCooldown;
-                playerData._playerDashMaterial.color = playerData._originalColor;
+                playerData.playerDashMaterial.color = playerData.dashColor;
             }
         }
 
@@ -85,11 +85,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (conveyorBelt.isOnConveyorBelt)
         {
-            playerData._rigidBody.velocity = new Vector2((playerData.movementDirection.x * playerData.activeMoveSpeed) + (conveyorBelt.conveyorBeltSpeed * Time.deltaTime), playerData.movementDirection.y * playerData.activeMoveSpeed);
+            playerData.rigidBody.velocity = new Vector2((playerData.movementDirection.x * playerData.activeMoveSpeed) + (conveyorBelt.conveyorBeltSpeed * Time.deltaTime), playerData.movementDirection.y * playerData.activeMoveSpeed);
         }
         else
         {
-            playerData._rigidBody.velocity = new Vector2(playerData.movementDirection.x * playerData.activeMoveSpeed, playerData.movementDirection.y * playerData.activeMoveSpeed);
+            playerData.rigidBody.velocity = new Vector2(playerData.movementDirection.x * playerData.activeMoveSpeed, playerData.movementDirection.y * playerData.activeMoveSpeed);
         }
     }
 }

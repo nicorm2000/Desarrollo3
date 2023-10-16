@@ -20,16 +20,29 @@ public class PlayerData : ScriptableObject
     public Animator _animator;
     public SpriteRenderer _spriteRenderer;
 
-    [Header("Player Movement: Dash")]
+    [Header("Player Dash")]
     public float dashSpeed;
     public float dashLength = 0.25f;
-    public float dashCooldown = 1;
+    public float dashCooldown = 3;
     public float activeMoveSpeed;
     public bool isDashing;
-    public Rigidbody _rigidBody;
-    public BoxCollider _playerCollider;
-    public Material _playerDashMaterial;
-    public Color _originalColor;
+    public Rigidbody rigidBody;
+    public BoxCollider playerCollider;
+    public Material playerDashMaterial;
+    public Color dashColor;
+
+    [Header("Player Shiled")]
+    public float shieldCooldown;
+    public float shieldDuration;
+    public Color shieldColor;
+
+    [Header("Player Laser")]
+    public float laserCooldown;
+    public float laserDamage;
+    public float laserRange;
+    public float laserWidth;
+    public float laserDuration;
+    public Color laserColor;
 
     [HideInInspector]
     public float lastHorizontalVector;

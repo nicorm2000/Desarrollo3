@@ -11148,6 +11148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee09f1ab7780cf0459b4c3103e5817c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   dashImage: {fileID: 1946912803}
   dashCooldown: 3
   dash: 282
@@ -23013,17 +23014,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4aecb14a40a09b4585ea26d8aff09b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixedPhrases:
+  phrases:
   - Hey, this is the shop!
   - Please, choose your next weapon!
   - Let the carnage begin!
-  randomPhrases:
-  - Phrase 1
-  - Phrase 2
-  - Phrase 3
-  - Phrase 4
-  - Phrase 5
-  - Phrase 6
   animateText: 1
   textMeshPro: {fileID: 134319937}
   typingSpeed: 0.1
