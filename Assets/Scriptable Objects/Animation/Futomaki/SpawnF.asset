@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d451243ee58ab940b8450bdb9c37661, type: 3}
+  m_Name: SpawnF
+  m_EditorClassIdentifier: 
+  animationName: Spawn
+  frames:
+  - {fileID: 21300000, guid: b2f73518c3e249c4895fe98b012cba8a, type: 3}
+  - {fileID: 21300000, guid: a68f5f99807f914448319873c01ab7db, type: 3}
+  - {fileID: 21300000, guid: 14742b085b3fc8d4a94d209e885348c5, type: 3}
+  - {fileID: 21300000, guid: 186319ae8acce54488f2a3163ba04235, type: 3}
+  - {fileID: 21300000, guid: 6f17f42b6f0840a46beb076496a9940d, type: 3}
+  - {fileID: 21300000, guid: 0b4d1a99fb9aa3b4eb29d02169b3eff3, type: 3}
+  - {fileID: 21300000, guid: 71325cb4cf92eb645b023d570cebe24f, type: 3}
+  - {fileID: 21300000, guid: bd77b39599af87c40a84001fb43c76d1, type: 3}
+  - {fileID: 21300000, guid: 9f4c0f0a68c371d40a5b015321d96d61, type: 3}
+  - {fileID: 21300000, guid: 381850fccfd3c3a46be8c544158dc2e2, type: 3}
+  - {fileID: 21300000, guid: 242edd181a6ad9a4ebfb5fd32b6f3fad, type: 3}
+  - {fileID: 21300000, guid: d113c77d335aa7e41ae6cf02d3dcc32c, type: 3}
+  loop: 0
+  speed: 1

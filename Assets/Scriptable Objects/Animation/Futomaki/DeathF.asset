@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d451243ee58ab940b8450bdb9c37661, type: 3}
+  m_Name: DeathF
+  m_EditorClassIdentifier: 
+  animationName: Death
+  frames:
+  - {fileID: 21300000, guid: cc74a2cab6cace841a4f2542a16bbe09, type: 3}
+  - {fileID: 21300000, guid: f16b7d9d404802d439197097e975d155, type: 3}
+  - {fileID: 21300000, guid: ed8cdd8fa82b28e4f9a9b26637321128, type: 3}
+  - {fileID: 21300000, guid: 78e8ab92bf7276649bbae2d52f717f18, type: 3}
+  - {fileID: 21300000, guid: 4c015cfcaa8bb4b4fbf4b50b943a6e64, type: 3}
+  - {fileID: 21300000, guid: 42dfefae7a8217244a991d96a832a369, type: 3}
+  - {fileID: 21300000, guid: d5d008492f485514ba5d25d7d71c17f4, type: 3}
+  - {fileID: 21300000, guid: 00fb887677809044d852032aa652219a, type: 3}
+  - {fileID: 21300000, guid: 2b9b4bc0577188749b73e83d9eaa700e, type: 3}
+  loop: 0
+  speed: 1

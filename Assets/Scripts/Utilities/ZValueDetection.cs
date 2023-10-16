@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class ZValueDetection : MonoBehaviour
 {
-    [SerializeField] private Transform raycastOrigin;
+    [SerializeField] private Transform raycastTop;
+    [SerializeField] private Transform raycastBot;
     [SerializeField] private LayerMask collisionLayer;
     [SerializeField] private float maxHeight = 2f;
 
@@ -13,15 +14,32 @@ public class ZValueDetection : MonoBehaviour
 
     private void UpdateZPosition()
     {
-        RaycastHit hit;
-
-        if (Physics.Raycast(raycastOrigin.position, transform.forward, out hit, maxHeight, collisionLayer))
+        if (Physics.Raycast(raycastBot.position, transform.forward, out RaycastHit hit1, maxHeight, collisionLayer) 
+            && Physics.Raycast(raycastTop.position, transform.forward, out RaycastHit hit2, maxHeight, collisionLayer))
         {
-            Vector3 newPos = transform.position;
-            newPos.z = hit.point.z - 0.2f;
-            transform.position = newPos;
+            if (hit1.transform.position.z == hit2.transform.position.z)
+            {
+                Vector3 newPos = transform.position;
+                newPos.z = hit1.point.z - 0.2f;
+                transform.position = newPos;
+            }
+            else
+            {
+                Vector3 newPos = transform.position;
+                if (hit1.transform.position.z < hit2.transform.position.z)
+                {
+                    newPos.z = hit1.point.z - 0.2f;
+                    transform.position = newPos;
+                }
+                else if (hit1.transform.position.z > hit2.transform.position.z)
+                {
+                    newPos.z = hit2.point.z - 0.2f;
+                    transform.position = newPos;
+                }
+            }
         }
 
-        Debug.DrawRay(raycastOrigin.position, transform.forward * maxHeight, Color.red);
+        Debug.DrawRay(raycastTop.position, transform.forward * maxHeight, Color.red);
+        Debug.DrawRay(raycastBot.position, transform.forward * maxHeight, Color.red);
     }
 }

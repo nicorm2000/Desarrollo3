@@ -3,21 +3,13 @@ using UnityEngine;
 
 public class AnimatorUtility : MonoBehaviour
 {
-    [System.Serializable]
-    public class AnimationData
-    {
-        public string animationName;
-        public Sprite[] frames;
-        public bool loop;
-        public float speed;
-    }
-
     public AnimationData[] animations;
 
     private SpriteRenderer spriteRenderer;
 
     private string walk = "Walk";
-    private string idle = "Idle";
+    private string idle = "Spawn";
+    private string death = "Death";
 
     private void Awake()
     {
@@ -35,6 +27,11 @@ public class AnimatorUtility : MonoBehaviour
         {
             PlayAnimation(idle);
             Debug.Log("Idle Animation");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            PlayAnimation(death);
+            Debug.Log("Death Animation");
         }
     }
 

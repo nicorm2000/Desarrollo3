@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class AIShooterChase : MonoBehaviour
 {
@@ -16,8 +13,13 @@ public class AIShooterChase : MonoBehaviour
 
     public EnemyData enemyData;
     public GameObject target;
+    public AnimatorUtility animator;
 
     public HealthSystem healthSystem;
+
+    public string walk = "Walk";
+    public string idle = "Spawn";
+    public string death = "Death";
 
     private void Start()
     {
@@ -27,13 +29,31 @@ public class AIShooterChase : MonoBehaviour
         isFollowingPlayer = enemyData.ifFollowingPlayer;
         chaseSpeed = enemyData.movementSpeed;
         target = GameObject.FindWithTag("Player");
+
+        animator.PlayAnimation(walk);
     }
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            animator.PlayAnimation(walk);
+            Debug.Log("Walk Animation");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            animator.PlayAnimation(idle);
+            Debug.Log("Idle Animation");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            animator.PlayAnimation(death);
+            Debug.Log("Death Animation");
+        }
+
         // Calcula la dirección del jugador desde el objeto actual
         Vector3 directionToPlayer = target.transform.position - transform.position;
-        directionToPlayer.z = 0f;  // Asegúrate de que la dirección sea plana en Z para 2D
+        directionToPlayer.z = 0f;
 
         // Calcula el ángulo en grados y gira el objeto hacia el jugador
         float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
