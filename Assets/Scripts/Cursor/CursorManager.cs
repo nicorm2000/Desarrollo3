@@ -39,7 +39,7 @@ public class CursorManager : MonoBehaviour
 
     private void Update()
     {
-        _frameTimer -= Time.deltaTime;
+        _frameTimer -= Time.unscaledDeltaTime;
 
         if (_frameTimer <= 0 )
         {
