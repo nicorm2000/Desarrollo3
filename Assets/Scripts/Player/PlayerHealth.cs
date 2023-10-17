@@ -17,6 +17,11 @@ public class PlayerHealth : MonoBehaviour
     {
         playerData.currentHealth -= damage;
         healthBar.SetHealth(playerData.currentHealth);
+
+        if (playerData.currentHealth <= 0)
+        {
+            playerData.currentHealth = 0;
+        }
     }
 
     public bool isDead() 
