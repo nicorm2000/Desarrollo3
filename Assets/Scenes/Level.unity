@@ -6814,6 +6814,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1941617708}
+    - targetCorrespondingSourceObject: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1941617719}
   m_SourcePrefab: {fileID: 100100000, guid: a9df24e86a219ac458086842d36682f6, type: 3}
 --- !u!1 &521703871 stripped
 GameObject:
@@ -11150,13 +11153,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   dashImage: {fileID: 1946912803}
-  dashCooldown: 3
   dash: 282
   shieldImage: {fileID: 312420385}
-  shieldCooldown: 10
   shield: 283
   laserImage: {fileID: 553482193}
-  laserCooldown: 30
   laser: 284
 --- !u!1 &833993459
 GameObject:
@@ -25126,6 +25126,22 @@ CapsuleCollider:
   m_Height: 0.90625
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: -0.16}
+--- !u!114 &1941617719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521703871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15cdf09dc1d1662449024b2f821d1bbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceFieldPrefab: {fileID: 6776729520864554678, guid: 48c1c935c9393514f91fe4d03695607e, type: 3}
+  activationDuration: 5
+  cooldownDuration: 10
+  repelForce: 1000
 --- !u!1 &1946912801
 GameObject:
   m_ObjectHideFlags: 0
