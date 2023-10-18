@@ -5,6 +5,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private HealthBar healthBar;
     public PlayerData playerData;
+    public ScreenShake screenShake;
 
     void Start()
     {
@@ -15,6 +16,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void takeDamage(float damage) 
     {
+        StartCoroutine(screenShake.Shake());
+
         playerData.currentHealth -= damage;
         healthBar.SetHealth(playerData.currentHealth);
 
