@@ -8,17 +8,17 @@ public class ScreenShake : MonoBehaviour
 
     public IEnumerator Shake()
     {
-        Vector3 startPosition = transform.position;
+        Vector3 startPosition = transform.localPosition;
         float elapsedTime = 0f;
 
         while (elapsedTime < duration) 
         {
             elapsedTime += Time.deltaTime;
             float strength = animationCurve.Evaluate(elapsedTime / duration);
-            transform.position = startPosition + Random.insideUnitSphere * strength;
+            transform.localPosition = startPosition + Random.insideUnitSphere * strength;
             yield return null;
         }
 
-        transform.position = startPosition;
+        transform.localPosition = startPosition;
     }
 }

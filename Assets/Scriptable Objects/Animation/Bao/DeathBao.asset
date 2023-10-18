@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d451243ee58ab940b8450bdb9c37661, type: 3}
+  m_Name: DeathBao
+  m_EditorClassIdentifier: 
+  animationName: Death
+  frames:
+  - {fileID: 21300000, guid: 27c87ef08c1b8724db35a796691949c1, type: 3}
+  - {fileID: 21300000, guid: 920ee3cc1cc562e4283710742661b05c, type: 3}
+  - {fileID: 21300000, guid: cd04e492ad99c634e8a9b516d6286d40, type: 3}
+  - {fileID: 21300000, guid: b48293df716702d479daed0bc9177f2b, type: 3}
+  - {fileID: 21300000, guid: 864bd60cb4934f3488aa346a5df1d2cb, type: 3}
+  - {fileID: 21300000, guid: 68510358bbca45f42a210ec1cece3e04, type: 3}
+  loop: 0
+  speed: 1

@@ -8,7 +8,8 @@ public class AnimatorUtility : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private string walk = "Walk";
-    private string idle = "Spawn";
+    private string idle = "Idle";
+    private string spawn = "Spawn";
     private string death = "Death";
 
     private void Awake()
@@ -25,7 +26,19 @@ public class AnimatorUtility : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha9))
         {
-            PlayAnimation(idle);
+            for (int i = 0; i < animations.Length; i++)
+            {
+                if (animations[i].animationName == "Idle")
+                {
+                    PlayAnimation(idle);
+                    Debug.Log("Idle Animation");
+                }
+                else
+                {
+                    PlayAnimation(spawn);
+                    Debug.Log("Spawn Animation");
+                }
+            }
             Debug.Log("Idle Animation");
         }
         if (Input.GetKeyDown(KeyCode.Alpha8))
