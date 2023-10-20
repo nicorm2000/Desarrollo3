@@ -7,7 +7,6 @@ public class Abilities : MonoBehaviour
 
     [Header("Dash")]
     public Image dashImage;
-    public KeyCode dash = KeyCode.F1;
     public Color dashColor = Color.cyan;
     private float dashCooldown = 3f;
     private float dashCounter = 0;
