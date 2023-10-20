@@ -7,17 +7,18 @@ public class Abilities : MonoBehaviour
 
     [Header("Dash")]
     public Image dashImage;
+    public KeyCode dash = KeyCode.F2;
     public Color dashColor = Color.cyan;
     private float dashCooldown = 3f;
     private float dashCounter = 0;
     private float dashCoolDownCounter = 0;
 
-    [Header("Shield")]
-    public Image shieldImage;
-    public KeyCode shield = KeyCode.F2;
-    public Color shieldColor = Color.cyan;
-    private float shieldCooldown = 3f;
-    private bool isCooldownShield = false;
+    [Header("Slower")]
+    public Image slowerImage;
+    public KeyCode slower = KeyCode.F2;
+    public Color slowerColor = Color.cyan;
+    private float slowerCooldown = 3f;
+    private bool isCooldownSlower = false;
 
     [Header("Laser")]
     public Image laserImage;
@@ -29,18 +30,18 @@ public class Abilities : MonoBehaviour
     private void Start()
     {
         dashCooldown = playerData.dashCooldown;
-        shieldCooldown = playerData.shieldCooldown;
+        slowerCooldown = playerData.shieldCooldown;
         laserCooldown = playerData.laserCooldown;
 
         dashImage.fillAmount = 0f;
-        shieldImage.fillAmount = 0f;
+        slowerImage.fillAmount = 0f;
         laserImage.fillAmount = 0f;
     }
 
     private void Update()
     {
         Dash();
-        Shield();
+        Slower();
         Laser();
     }
 
@@ -65,30 +66,30 @@ public class Abilities : MonoBehaviour
         }
     }
 
-    private void Shield()
+    private void Slower()
     {
-        if (Input.GetKeyDown(shield) && !isCooldownShield)
+        if (Input.GetKeyDown(slower) && !isCooldownSlower)
         {
-            isCooldownShield = true;
-            shieldImage.fillAmount = 1f;
+            isCooldownSlower = true;
+            slowerImage.fillAmount = 1f;
         }
 
-        if (isCooldownShield)
+        if (isCooldownSlower)
         {
-            shieldImage.fillAmount -= 1 / shieldCooldown * Time.deltaTime;
+            slowerImage.fillAmount -= 1 / slowerCooldown * Time.deltaTime;
 
-            if (shieldImage.fillAmount <= 0f)
+            if (slowerImage.fillAmount <= 0f)
             {
-                shieldImage.fillAmount = 0f;
+                slowerImage.fillAmount = 0f;
 
-                isCooldownShield = false;
+                isCooldownSlower = false;
             }
         }
     }
 
     private void Dash()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && dashCoolDownCounter <= 0 && dashCounter <= 0)
+        if (Input.GetKeyDown(dash) && dashCoolDownCounter <= 0 && dashCounter <= 0)
         {
             dashCoolDownCounter = playerData.dashCooldown;
             dashCounter = playerData.dashLength;
