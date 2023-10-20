@@ -7,20 +7,24 @@ public class Abilities : MonoBehaviour
 
     [Header("Dash")]
     public Image dashImage;
-    private float dashCooldown = 3f;
     public KeyCode dash = KeyCode.F1;
-    private bool isCooldownDash = false;
+    public Color dashColor = Color.cyan;
+    private float dashCooldown = 3f;
+    private float dashCounter = 0;
+    private float dashCoolDownCounter = 0;
 
     [Header("Shield")]
     public Image shieldImage;
-    private float shieldCooldown = 3f;
     public KeyCode shield = KeyCode.F2;
+    public Color shieldColor = Color.cyan;
+    private float shieldCooldown = 3f;
     private bool isCooldownShield = false;
 
     [Header("Laser")]
     public Image laserImage;
-    private float laserCooldown = 3f;
     public KeyCode laser = KeyCode.F3;
+    public Color laserColor = Color.cyan;
+    private float laserCooldown = 3f;
     private bool isCooldownLaser = false;
 
     private void Start()
@@ -85,22 +89,32 @@ public class Abilities : MonoBehaviour
 
     private void Dash()
     {
-        if (Input.GetKeyDown(dash) && !isCooldownDash)
+        if (Input.GetKeyDown(KeyCode.Space) && dashCoolDownCounter <= 0 && dashCounter <= 0)
         {
-            isCooldownDash = true;
+            dashCoolDownCounter = playerData.dashCooldown;
+            dashCounter = playerData.dashLength;
+            playerData.isDashing = true;
+            playerData.playerDashMaterial.color = dashColor;
+            playerData.activeMoveSpeed = playerData.dashSpeed;
             dashImage.fillAmount = 1f;
         }
 
-        if (isCooldownDash)
+        if (dashCounter > 0)
         {
-            dashImage.fillAmount -= 1 / dashCooldown * Time.deltaTime;
+            dashCounter -= Time.deltaTime;
 
-            if (dashImage.fillAmount <= 0f )
+            if (dashCounter <= 0)
             {
-                dashImage.fillAmount = 0f;
-
-                isCooldownDash = false;
+                playerData.isDashing = false;
+                playerData.activeMoveSpeed = playerData.speed;
+                playerData.playerDashMaterial.color = playerData.dashColor;
             }
+        }
+
+        if (dashCoolDownCounter > 0)
+        {
+            dashCoolDownCounter -= Time.deltaTime;
+            dashImage.fillAmount = dashCoolDownCounter / playerData.dashCooldown;
         }
     }
 }

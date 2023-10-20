@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour
 
     public PlayerData playerData;
 
-    private void FixedUpdate()
+    private void FixedUpdate() // Keep the camera in FixedUpdate beacuase if not, the player looks blurry with its movement 
     {
         if (playerData.transform == null)
         {

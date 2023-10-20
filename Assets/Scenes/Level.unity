@@ -10810,10 +10810,13 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   dashImage: {fileID: 1946912803}
   dash: 282
+  dashColor: {r: 0, g: 1, b: 1, a: 1}
   shieldImage: {fileID: 312420385}
   shield: 283
+  shieldColor: {r: 1, g: 0, b: 0, a: 1}
   laserImage: {fileID: 553482193}
   laser: 284
+  laserColor: {r: 0, g: 1, b: 1, a: 1}
 --- !u!1 &833993459
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,7 +31,7 @@ public class PlayerData : ScriptableObject
     public Material playerDashMaterial;
     public Color dashColor;
 
-    [Header("Player Shiled")]
+    [Header("Player Shield")]
     public float shieldCooldown;
     public float shieldDuration;
     public Color shieldColor;
