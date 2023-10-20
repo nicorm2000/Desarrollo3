@@ -1,4 +1,4 @@
-Shader "Unlit/one-side"
+Shader "nicorm/one-side"
 {
     Properties
     {
