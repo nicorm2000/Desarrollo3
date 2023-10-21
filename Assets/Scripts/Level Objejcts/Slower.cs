@@ -14,9 +14,7 @@ public class Slower : MonoBehaviour
 
         if (aiChase != null)
         {
-            Debug.Log(aiChase.chaseSpeed + " 1");
             aiChase.chaseSpeed /= speedMultiplier;
-            Debug.Log(aiChase.chaseSpeed + " 2");
         }
         else if (aiShooterChase != null)
         {
@@ -31,9 +29,7 @@ public class Slower : MonoBehaviour
 
         if (aiChase != null)
         {
-            Debug.Log(aiChase.chaseSpeed + " 3");
             aiChase.chaseSpeed *= speedMultiplier;
-            Debug.Log(aiChase.chaseSpeed + " 4");
         }
         else if (aiShooterChase != null)
         {

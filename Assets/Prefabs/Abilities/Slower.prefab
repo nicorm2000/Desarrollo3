@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8821340721745492976}
   - component: {fileID: 260641515232051355}
   - component: {fileID: 7420002110748020687}
-  - component: {fileID: -5139068223594053649}
+  - component: {fileID: 8073246935748359060}
   m_Layer: 15
   m_Name: Slower
   m_TagString: Untagged
@@ -106,7 +106,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 8.054417}
   m_Center: {x: 0, y: 0, z: -3.5272083}
---- !u!114 &-5139068223594053649
+--- !u!114 &8073246935748359060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,3 +119,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMultiplier: 1.5
+  targetCollider: {fileID: 0}

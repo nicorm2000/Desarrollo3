@@ -98,7 +98,7 @@ public class Abilities : MonoBehaviour
     private IEnumerator DestroyAfterTime(GameObject obj)
     {
         yield return new WaitForSeconds(slowerLifetime);
-        Destroy(obj);
+        //Destroy(obj);
     }
 
     private void Dash()
