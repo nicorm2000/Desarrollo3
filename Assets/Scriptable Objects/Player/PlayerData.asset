@@ -31,7 +31,7 @@ MonoBehaviour:
   rigidBody: {fileID: 0}
   playerCollider: {fileID: 0}
   playerDashMaterial: {fileID: 0}
-  dashColor: {r: 0, g: 1, b: 1, a: 0}
+  dashColor: {r: 1, g: 1, b: 1, a: 1}
   shieldCooldown: 10
   shieldDuration: 3
   shieldColor: {r: 0, g: 0.0963881, b: 1, a: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
   laserDuration: 1
   laserColor: {r: 1, g: 0, b: 0, a: 0}
   lastHorizontalVector: -1
-  lastVerticalVector: -0.70710677
+  lastVerticalVector: -1
   movementDirection: {x: 0, y: 0}
   maxLevelStack: 5
   healthStackID: 0

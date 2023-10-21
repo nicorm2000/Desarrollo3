@@ -64,7 +64,6 @@ public class Abilities : MonoBehaviour
             if (laserImage.fillAmount <= 0f)
             {
                 laserImage.fillAmount = 0f;
-
                 isCooldownLaser = false;
             }
         }
