@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,9 @@ public class Abilities : MonoBehaviour
     public Image slowerImage;
     public KeyCode slower = KeyCode.F2;
     public Color slowerColor = Color.cyan;
+    public GameObject prefabToSpawn;
+    public float slowerLifetime = 5f;
+    public float slowerZOffset = 5f;
     private float slowerCooldown = 3f;
     private bool isCooldownSlower = false;
 
@@ -72,6 +76,10 @@ public class Abilities : MonoBehaviour
         {
             isCooldownSlower = true;
             slowerImage.fillAmount = 1f;
+
+            GameObject spawnedObject = Instantiate(prefabToSpawn, new Vector3(transform.position.x, transform.position.y, transform.position.z + slowerZOffset), Quaternion.identity);
+
+            StartCoroutine(DestroyAfterTime(spawnedObject));
         }
 
         if (isCooldownSlower)
@@ -85,6 +93,12 @@ public class Abilities : MonoBehaviour
                 isCooldownSlower = false;
             }
         }
+    }
+
+    private IEnumerator DestroyAfterTime(GameObject obj)
+    {
+        yield return new WaitForSeconds(slowerLifetime);
+        Destroy(obj);
     }
 
     private void Dash()

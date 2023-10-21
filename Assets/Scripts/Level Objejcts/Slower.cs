@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SlipperySurface : MonoBehaviour
+public class Slower : MonoBehaviour
 {
     [SerializeField] private float speedMultiplier = 1.5f; // Speed multiplier when inside the slippery zone
 
@@ -14,11 +14,13 @@ public class SlipperySurface : MonoBehaviour
 
         if (aiChase != null)
         {
-            aiChase.chaseSpeed *= speedMultiplier;
+            Debug.Log(aiChase.chaseSpeed + " 1");
+            aiChase.chaseSpeed /= speedMultiplier;
+            Debug.Log(aiChase.chaseSpeed + " 2");
         }
         else if (aiShooterChase != null)
         {
-            aiShooterChase.chaseSpeed *= speedMultiplier;
+            aiShooterChase.chaseSpeed /= speedMultiplier;
         }
     }
 
@@ -29,11 +31,13 @@ public class SlipperySurface : MonoBehaviour
 
         if (aiChase != null)
         {
-            aiChase.chaseSpeed /= speedMultiplier;
+            Debug.Log(aiChase.chaseSpeed + " 3");
+            aiChase.chaseSpeed *= speedMultiplier;
+            Debug.Log(aiChase.chaseSpeed + " 4");
         }
         else if (aiShooterChase != null)
         {
-            aiShooterChase.chaseSpeed /= speedMultiplier;
+            aiShooterChase.chaseSpeed *= speedMultiplier;
         }
     }
 }

@@ -6810,6 +6810,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1941617719}
+    - targetCorrespondingSourceObject: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1941617724}
   m_SourcePrefab: {fileID: 100100000, guid: a9df24e86a219ac458086842d36682f6, type: 3}
 --- !u!1 &521703871 stripped
 GameObject:
@@ -10852,7 +10855,6 @@ GameObject:
   - component: {fileID: 833676940}
   - component: {fileID: 833676939}
   - component: {fileID: 833676938}
-  - component: {fileID: 833676941}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -10945,28 +10947,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &833676941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833676936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee09f1ab7780cf0459b4c3103e5817c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
-  dashImage: {fileID: 1946912803}
-  dash: 32
-  dashColor: {r: 0, g: 1, b: 1, a: 1}
-  slowerImage: {fileID: 312420385}
-  slower: 283
-  slowerColor: {r: 0, g: 1, b: 1, a: 1}
-  laserImage: {fileID: 553482193}
-  laser: 284
-  laserColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &833993459
 GameObject:
   m_ObjectHideFlags: 0
@@ -25813,6 +25793,31 @@ MonoBehaviour:
   activationDuration: 5
   cooldownDuration: 10
   repelForce: 1000
+--- !u!114 &1941617724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521703871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee09f1ab7780cf0459b4c3103e5817c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+  dashImage: {fileID: 1946912803}
+  dash: 32
+  dashColor: {r: 0, g: 1, b: 1, a: 1}
+  slowerImage: {fileID: 312420385}
+  slower: 283
+  slowerColor: {r: 0, g: 1, b: 1, a: 1}
+  prefabToSpawn: {fileID: 1618985554996743741, guid: 75fdae941066af04fbb9e090590c6987, type: 3}
+  slowerLifetime: 10
+  slowerZOffset: 0.15
+  laserImage: {fileID: 553482193}
+  laser: 284
+  laserColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1946912801
 GameObject:
   m_ObjectHideFlags: 0
