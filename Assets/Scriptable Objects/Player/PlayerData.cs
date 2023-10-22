@@ -21,9 +21,9 @@ public class PlayerData : ScriptableObject
     public SpriteRenderer _spriteRenderer;
 
     [Header("Player Dash")]
+    public float dashCooldown = 3;
     public float dashSpeed;
     public float dashLength = 0.25f;
-    public float dashCooldown = 3;
     public float activeMoveSpeed;
     public bool isDashing;
     public Rigidbody rigidBody;

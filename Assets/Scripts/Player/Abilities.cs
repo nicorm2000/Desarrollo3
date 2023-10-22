@@ -28,6 +28,7 @@ public class Abilities : MonoBehaviour
     public Image laserImage;
     public KeyCode laser = KeyCode.F3;
     public Color laserColor = Color.cyan;
+    public GameObject laserObject;
     private float laserCooldown = 3f;
     private bool isCooldownLaser = false;
 
@@ -55,6 +56,8 @@ public class Abilities : MonoBehaviour
         {
             isCooldownLaser = true;
             laserImage.fillAmount = 1f;
+
+            StartCoroutine(ActivateLaser());
         }
 
         if (isCooldownLaser)
@@ -67,6 +70,13 @@ public class Abilities : MonoBehaviour
                 isCooldownLaser = false;
             }
         }
+    }
+
+    private IEnumerator ActivateLaser()
+    {
+        laserObject.SetActive(true);
+        yield return new WaitForSeconds(playerData.laserDuration);
+        laserObject.SetActive(false);
     }
 
     private void Slower()

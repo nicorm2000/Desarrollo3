@@ -42,9 +42,9 @@ MonoBehaviour:
   laserDuration: 1
   laserColor: {r: 1, g: 0, b: 0, a: 0}
   lastHorizontalVector: -1
-  lastVerticalVector: -1
+  lastVerticalVector: 1
   movementDirection: {x: 0, y: 0}
-  maxLevelStack: 5
+  maxLevelStack: 3
   healthStackID: 0
   speedStackID: 0
   damageStackID: 0
