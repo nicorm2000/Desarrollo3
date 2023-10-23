@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentRound: 1
   maxRounds: 5
-  currentEnemies: 6
-  maxEnemies: 6
-  spawnsCounter: 3
+  currentEnemies: 0
+  maxEnemies: 20
   addRound: 1

@@ -12,14 +12,7 @@ public class WaveData : ScriptableObject
     [Header("Spawner")]
     public int currentEnemies;
     public int maxEnemies;
-    public int spawnsCounter;
 
     [Header("AddRound")]
     public int addRound;
-
-    public void ResetWavesStacks() 
-    {
-        spawnsCounter = 3;
-        maxEnemies = 3;
-    }
 }

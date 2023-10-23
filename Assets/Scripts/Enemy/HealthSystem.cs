@@ -11,7 +11,6 @@ public class HealthSystem : MonoBehaviour
     public bool _dead;
     public EnemyData enemyData;
     public GameObject firePoint;
-    public WaveData waveData;
 
 
     private void Start()
@@ -37,8 +36,6 @@ public class HealthSystem : MonoBehaviour
                 Invoke("DestroyEnemy", _triggerEffect.dropData.objectLifespan);
 
                 _dead = true;
-
-                RemoveCurrentEnemy();
             }
         }
     }
@@ -51,18 +48,5 @@ public class HealthSystem : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
-    }
-
-    public void RemoveCurrentEnemy()
-    {
-        if (waveData.currentEnemies <= 0)
-        {
-            waveData.currentEnemies = 0;
-        }
-
-        else
-        {
-            waveData.currentEnemies--;
-        }
     }
 }

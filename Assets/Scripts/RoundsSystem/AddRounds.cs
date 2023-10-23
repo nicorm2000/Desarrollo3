@@ -12,7 +12,7 @@ public class AddRounds : MonoBehaviour
 
     void Update()
     {
-        if (waveData.currentEnemies <= 0)
+        if (Input.GetKeyDown(KeyCode.R))
         {
             roundCounter.IncreaseRounds(waveData.addRound);
             shop.ActiveShop();
