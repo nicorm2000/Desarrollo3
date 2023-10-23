@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ChangeWeaponSprite : MonoBehaviour
+public class ChangePlayerWeapon : MonoBehaviour
 {
     [SerializeField] private GameObject[] weapons;
 

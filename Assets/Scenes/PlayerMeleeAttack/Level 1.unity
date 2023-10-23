@@ -15451,7 +15451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1504585846}
-  changeWeaponSprite: {fileID: 2009772659}
+  changePlayerWeapon: {fileID: 2009772659}
   player: {fileID: 521703871}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponData: {fileID: 11400000, guid: 07aa8a2279e9b2d4ab4941cfb619acbc, type: 2}
@@ -16497,7 +16497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1504585846}
-  changeWeaponSprite: {fileID: 2009772659}
+  changePlayerWeapon: {fileID: 2009772659}
   player: {fileID: 521703871}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponData: {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
@@ -18286,7 +18286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1504585846}
-  changeWeaponSprite: {fileID: 2009772659}
+  changePlayerWeapon: {fileID: 2009772659}
   player: {fileID: 521703871}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponData: {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}

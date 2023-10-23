@@ -15,7 +15,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 17cd2f273184fb941891fbc16011f478, type: 3}
   model: {fileID: 0}
   isMeleeWeapon: 0
-  isShootWeapon: 0
+  isShootWeapon: 1
   weaponID: 2
   bulletSpeed: 15
   lifespan: 3
