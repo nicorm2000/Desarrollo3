@@ -43,8 +43,8 @@ jobs:
       - name: Set build name
         id: buildName
         run: |
-        sudo apt-get update
-        echo "DATE=$(date +'%d/%m/%y')" >> $GITHUB_ENV
+          sudo apt-get update
+          echo "DATE=$(date +'%d/%m/%y')" >> $GITHUB_ENV
 
       # Upload Artifact
       - name: Create Artifact
