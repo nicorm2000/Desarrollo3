@@ -7,11 +7,11 @@ public class DoorCollider : MonoBehaviour
     [SerializeField] private GameObject doorCollider;
     [SerializeField] private GameObject basket;
 
-    public PlayerData playerData;
+    [SerializeField] private GameObject player;
 
     private void Start()
     {
-        playerData.model = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         roundCounter = FindObjectOfType<RoundCounter>();
     }
 

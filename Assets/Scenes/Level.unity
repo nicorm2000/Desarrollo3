@@ -15291,6 +15291,7 @@ MonoBehaviour:
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1504585846}
   changeWeaponSprite: {fileID: 1606884504}
+  player: {fileID: 521703871}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponData: {fileID: 11400000, guid: 07aa8a2279e9b2d4ab4941cfb619acbc, type: 2}
   playerCanTeleport: 0
@@ -16336,6 +16337,7 @@ MonoBehaviour:
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1504585846}
   changeWeaponSprite: {fileID: 1606884504}
+  player: {fileID: 521703871}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponData: {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
   playerCanTeleport: 0
@@ -18124,6 +18126,7 @@ MonoBehaviour:
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1504585846}
   changeWeaponSprite: {fileID: 1606884504}
+  player: {fileID: 521703871}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponData: {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
   playerCanTeleport: 0
@@ -28196,7 +28199,7 @@ MonoBehaviour:
   spawnWeaponSelect: {fileID: 2079331784}
   doorCollider: {fileID: 2082787381}
   basket: {fileID: 1674702628}
-  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+  player: {fileID: 521703871}
 --- !u!212 &2082787384
 SpriteRenderer:
   m_ObjectHideFlags: 0
