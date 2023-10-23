@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1b04ce56bbade4a9d3bf07e7c6ea26, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  currentHealth: 100
+  currentHealth: 90
   maxHealth: 100
-  speed: 5
+  speed: 8
   _isDead: 0
   model: {fileID: 0}
   weaponData:
@@ -23,10 +23,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
   _animator: {fileID: 0}
   _spriteRenderer: {fileID: 0}
+  dashCooldown: 3
   dashSpeed: 12
   dashLength: 0.25
-  dashCooldown: 3
-  activeMoveSpeed: 5
+  activeMoveSpeed: 8
   isDashing: 0
   rigidBody: {fileID: 0}
   playerCollider: {fileID: 0}
@@ -42,11 +42,11 @@ MonoBehaviour:
   laserDuration: 1
   laserColor: {r: 1, g: 0, b: 0, a: 0}
   lastHorizontalVector: -1
-  lastVerticalVector: 1
+  lastVerticalVector: 0.70710677
   movementDirection: {x: 0, y: 0}
   maxLevelStack: 3
   healthStackID: 0
-  speedStackID: 0
+  speedStackID: 5
   damageStackID: 0
   enterPlayer: 0
   transform: {fileID: 0}
