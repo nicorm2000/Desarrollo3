@@ -1,6 +1,6 @@
 name: Build 😎
 
-on: [pull_request]
+on: [pull_request, push]
 
 jobs:
   UnityAndArtifact:
@@ -40,7 +40,7 @@ jobs:
           targetPlatform: StandaloneWindows
 
       # Output
-      - users: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v3
         with: 
           name: Build
           path: build
