@@ -2,16 +2,29 @@ using UnityEngine;
 
 public class ChangeWeaponSprite : MonoBehaviour
 {
-    [SerializeField] private Sprite[] newSprite;
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private GameObject[] weapons;
 
-    private void Start()
+    public void ChangeWeapon(int spriteNumber) 
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
+        switch (spriteNumber) 
+        {
+            case 0:
+                weapons[0].SetActive(true);
+                weapons[1].SetActive(false);
+                weapons[2].SetActive(false);
+            break; 
+            
+            case 1:
+                weapons[0].SetActive(false);
+                weapons[1].SetActive(true);
+                weapons[2].SetActive(false);
+            break;
 
-    public void ChangeSprite(int spriteNumber) 
-    {
-        spriteRenderer.sprite = newSprite[spriteNumber];   
+            case 2:
+                weapons[0].SetActive(false);
+                weapons[1].SetActive(false);
+                weapons[2].SetActive(true);
+                break; 
+        }
     }
 }

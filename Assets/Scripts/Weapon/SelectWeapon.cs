@@ -39,7 +39,7 @@ public class SelectWeapon : MonoBehaviour
     {
         if(playerCanTeleport == true) 
         {
-            changeWeaponSprite.ChangeSprite(weaponData.weaponID);
+            changeWeaponSprite.ChangeWeapon(weaponData.weaponID);
             player.transform.position = levelSpawn.transform.position;
         }
     }

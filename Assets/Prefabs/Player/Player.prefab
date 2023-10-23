@@ -109,7 +109,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7543238300289498345}
   - component: {fileID: 3462139810453423481}
-  - component: {fileID: 6100415171331296213}
   m_Layer: 0
   m_Name: ARMA_SIN_MANOS
   m_TagString: Untagged
@@ -185,23 +184,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6100415171331296213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5569180708625838545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93c2504d73d280f4b94e42aa2fd87f53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newSprite:
-  - {fileID: 21300000, guid: 112b9f61b9efac543abd49bb57b4387a, type: 3}
-  - {fileID: 21300000, guid: 5e6dd72cce851a9479ab180099eccbf1, type: 3}
-  - {fileID: 21300000, guid: 17cd2f273184fb941891fbc16011f478, type: 3}
-  spriteRenderer: {fileID: 3462139810453423481}
 --- !u!1 &7195425578536629974
 GameObject:
   m_ObjectHideFlags: 0
