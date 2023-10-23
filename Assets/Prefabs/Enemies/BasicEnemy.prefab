@@ -55,6 +55,10 @@ MonoBehaviour:
   chaseSpeed: 1
   enemyData: {fileID: 11400000, guid: e669acf245ccac044b5afe40a135676b, type: 2}
   target: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+  animator: {fileID: 0}
+  walk: Walk
+  idle: Spawn
+  death: Death
 --- !u!114 &-5129004534547528821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,6 +76,7 @@ MonoBehaviour:
   _dead: 0
   enemyData: {fileID: 11400000, guid: e669acf245ccac044b5afe40a135676b, type: 2}
   firePoint: {fileID: 0}
+  waveData: {fileID: 11400000, guid: adcd4394bf139524888a0c34874f9b2c, type: 2}
 --- !u!212 &7699837152467073221
 SpriteRenderer:
   m_ObjectHideFlags: 0

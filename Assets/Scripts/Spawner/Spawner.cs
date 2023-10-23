@@ -1,23 +1,48 @@
 using System.Collections;
+using System.Net.Http.Headers;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private int amountToSpawn;
+    [Header ("Spawner")]
     [SerializeField] private float spawnInterval;
     [SerializeField] private float spawnTime;
     [SerializeField] private Transform[] spawnPositions;
     [SerializeField] private GameObject spawnIndicator;
 
+    public int amountToSpawn;
+    public int enemiesToSpawn;
+
+    [Header("Round Counter")]
+    [SerializeField] private RoundCounter roundCounter;
+
+    [Header("Shop")]
+    [SerializeField] private Shop shop;
+
+    [Header("Spawners Administrator")]
+    [SerializeField] private SpawnsAdministrator spawnsAdministrator;
+
+    [Header("ScriptableObjects")]
     public WaveData waveData;
     public EnemyData enemyData;
 
     private void Start()
     {
-        amountToSpawn = waveData.maxEnemies;
-        waveData.currentEnemies = waveData.maxEnemies;
+        waveData.ResetWavesStacks();
+        spawnsAdministrator.EnemiesBySpawnCalculator(waveData.maxEnemies, waveData.spawnsCounter);
+        NextRound();
+    }
 
-        StartCoroutine(SpawnObjects());
+    private void Update()
+    {
+        if (waveData.currentEnemies <= 0)
+        {
+            roundCounter.IncreaseRounds(waveData.addRound);
+            shop.ActiveShop();
+            IncreaseMaxEnemies();
+            spawnsAdministrator.EnemiesBySpawnCalculator(waveData.maxEnemies, waveData.spawnsCounter);
+            NextRound();
+        }
     }
 
     public IEnumerator SpawnObjects()
@@ -28,6 +53,7 @@ public class Spawner : MonoBehaviour
         {
             GameObject spawnedObject = Instantiate(enemyData.model, GetRandomSpawnPosition(), Quaternion.identity);
             //Here will be the animation for the object to spawn
+            enemiesToSpawn--;
 
             yield return new WaitForSeconds(spawnInterval);
         }
@@ -44,5 +70,15 @@ public class Spawner : MonoBehaviour
         {
             return transform.position;
         }
+    }
+
+    private void NextRound() 
+    {
+        StartCoroutine(SpawnObjects());
+    }
+
+    public void IncreaseMaxEnemies() 
+    {
+        waveData.maxEnemies = waveData.maxEnemies * 2;
     }
 }
