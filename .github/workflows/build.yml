@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          lfs: false
+          lfs: true
 
       # Cache
       - uses: actions/cache@v3
@@ -40,7 +40,7 @@ jobs:
           targetPlatform: StandaloneWindows
 
       # Output
-      - users: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v3
         with: 
           name: Build
           path: build
