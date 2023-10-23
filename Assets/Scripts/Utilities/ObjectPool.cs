@@ -13,7 +13,6 @@ public class ObjectPool
 
     public GameObject GetPooledObject()
     {
-        // Check if there are any inactive objects in the pool
         foreach (GameObject obj in pooledObjects)
         {
             if (!obj.activeSelf)
@@ -22,7 +21,6 @@ public class ObjectPool
             }
         }
 
-        // If no inactive objects found, create a new one
         GameObject newObj = GameObject.Instantiate(objectPrefab);
 
         pooledObjects.Add(newObj);

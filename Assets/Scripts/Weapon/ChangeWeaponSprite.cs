@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ChangeWeaponSprite : MonoBehaviour
 {
     [SerializeField] private Sprite[] newSprite;
-
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     private void Start()

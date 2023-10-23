@@ -1,17 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
     [SerializeField] private GameObject shopWindow;
-
     [SerializeField] private GameObject hud;
-
     [SerializeField] private UpgradePlayer upgradePlayer;
 
     public SpriteCycle[] spriteCycle;
-
     public PlayerData playerData;
 
     public void ActiveShop() 

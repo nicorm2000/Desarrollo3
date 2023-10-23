@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UpgradePlayer : MonoBehaviour
@@ -16,7 +14,6 @@ public class UpgradePlayer : MonoBehaviour
             playerData.currentHealth = playerData.maxHealth;
             healthBar.SetMaxHealth(playerData.maxHealth);
             healthBar.SetHealth(playerData.currentHealth);
-
         }
 
         else 

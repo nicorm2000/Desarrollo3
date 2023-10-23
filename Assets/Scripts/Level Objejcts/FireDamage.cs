@@ -4,13 +4,13 @@ public class FireDamage : MonoBehaviour
 {
     [SerializeField] private float playerDamage;
     [SerializeField] private float enemyDamage;
-    [SerializeField] private float damageCooldown = 0.5f; // Cooldown time in seconds
+    [SerializeField] private float damageCooldown = 0.5f;
     [SerializeField] private HealthSystem enemyHealth;
 
 
     public PlayerData playerData;
     private PlayerHealth playerHealth;
-    private float lastDamageTime; // Record the time of the last damage application
+    private float lastDamageTime;
 
     private void Start()
     {
@@ -24,10 +24,8 @@ public class FireDamage : MonoBehaviour
         {
             if (Time.time - lastDamageTime >= damageCooldown)
             {
-                // Apply damage to the player
                 playerHealth.takeDamage(playerDamage);
 
-                // Record the time of the last damage application
                 lastDamageTime = Time.time;
             }
         }

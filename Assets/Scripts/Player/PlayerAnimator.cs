@@ -6,8 +6,8 @@ public class PlayerAnimator : MonoBehaviour
 
     private void Start()
     {
-        playerData._animator = GetComponent<Animator>();    
-        playerData._spriteRenderer = GetComponent<SpriteRenderer>();    
+        playerData._animator = GetComponent<Animator>();
+        playerData._spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -19,14 +19,20 @@ public class PlayerAnimator : MonoBehaviour
             SpriteDirectionChecker();
         }
         else
+        {
             playerData._animator.SetBool("Move", false);
+        }
     }
 
     private void SpriteDirectionChecker()
     {
-        if (playerData.lastHorizontalVector < 0 )
+        if (playerData.lastHorizontalVector < 0)
+        {
             playerData._spriteRenderer.flipX = true;
+        }
         else
+        {
             playerData._spriteRenderer.flipX = false;
+        }
     }
 }

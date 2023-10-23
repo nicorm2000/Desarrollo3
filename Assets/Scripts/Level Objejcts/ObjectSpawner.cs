@@ -24,21 +24,20 @@ public class ObjectSpawner : MonoBehaviour
             objectPools.Add(objectPool);
         }
 
-        spawnCoroutine = StartCoroutine(SpawnObjects()); // Start spawning objects
+        spawnCoroutine = StartCoroutine(SpawnObjects());
     }
 
 
     private void Update()
     {
-        // Check if spawned objects have reached the target position
         foreach (var objectPool in objectPools)
         {
             foreach (var spawnedObject in objectPool.GetActiveObjects())
             {
                 if (Vector3.Distance(spawnedObject.transform.position, targetPosition.position) < 0.01f)
                 {
-                    spawnedObject.SetActive(false); // Deactivate the object
-                    objectPool.ReturnToPool(spawnedObject); // Return the object to the object pool
+                    spawnedObject.SetActive(false);
+                    objectPool.ReturnToPool(spawnedObject);
                 }
             }
         }
@@ -51,13 +50,13 @@ public class ObjectSpawner : MonoBehaviour
             {
                 Debug.Log("Stop plate spawn");
 
-                StopCoroutine(spawnCoroutine); // Stop spawning objects
+                StopCoroutine(spawnCoroutine);
             }
             else
             {
                 Debug.Log("Plate spawn");
 
-                spawnCoroutine = StartCoroutine(SpawnObjects()); // Start spawning objects
+                spawnCoroutine = StartCoroutine(SpawnObjects());
             }
         }
     }
@@ -66,11 +65,11 @@ public class ObjectSpawner : MonoBehaviour
     {
         while (isSpawning)
         {
-            int numPlatesToSpawn = Random.Range(1, 3); // Generate a random number between 1 and 4
+            int numPlatesToSpawn = Random.Range(1, 3);
 
             for (int i = 0; i < numPlatesToSpawn; i++)
             {
-                int randomIndex = Random.Range(0, objectPools.Count); // Get a random index from the objectPools list
+                int randomIndex = Random.Range(0, objectPools.Count);
                 ObjectPool pool = objectPools[randomIndex];
 
                 GameObject spawnedObject = pool.GetPooledObject();
@@ -78,10 +77,10 @@ public class ObjectSpawner : MonoBehaviour
                 spawnedObject.transform.rotation = Quaternion.Euler(-90f, 0f, 0f);
                 spawnedObject.SetActive(true);
 
-                yield return new WaitForSeconds(timeBetweenSpawns); // Add a delay between spawns
+                yield return new WaitForSeconds(timeBetweenSpawns);
             }
 
-            if (Random.value < 0.5f) // Randomly skip a spawn
+            if (Random.value < 0.5f)
             {
                 yield return new WaitForSeconds(timeBetweenSpawns);
             }

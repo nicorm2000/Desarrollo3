@@ -93,7 +93,6 @@ public class AnimatorUtility : MonoBehaviour
                     if (frames[frames.Length - 1])
                     {
                         Debug.Log("Animation finished: " + frames[frames.Length - 1]);
-                        //Destroy(gameObject);
                     }
                 }
                 else

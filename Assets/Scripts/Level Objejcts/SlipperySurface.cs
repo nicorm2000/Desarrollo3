@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SlipperySurface : MonoBehaviour
 {
-    [SerializeField] private float speedMultiplier = 1.5f; // Speed multiplier when inside the slippery zone
+    [SerializeField] private float speedMultiplier = 1.5f;
 
     private AIChase aiChase;
     private AIShooterChase aiShooterChase;

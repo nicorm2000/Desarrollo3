@@ -27,7 +27,6 @@ public class Spawner : MonoBehaviour
         for (int i = 0; i < amountToSpawn; i++)
         {
             GameObject spawnedObject = Instantiate(enemyData.model, GetRandomSpawnPosition(), Quaternion.identity);
-            //Here will be the animation for the object to spawn
 
             yield return new WaitForSeconds(spawnInterval);
         }

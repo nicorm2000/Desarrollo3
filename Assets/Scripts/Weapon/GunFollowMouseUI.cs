@@ -17,7 +17,6 @@ public class GunFollowMouseUI : MonoBehaviour
     private void Update()
     {
         Vector3 mouseScreenPos = Input.mousePosition;
-
         Vector3 mouseWorldPos = cam.ScreenToViewportPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, 10f));//10 is the distance of the camera to the gun
 
         float newRotationX = Mathf.Clamp(mouseWorldPos.y - gunTransform.position.y, minYRotation, maxYRotation);

@@ -1,23 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class RoundCounter : MonoBehaviour
 {
     [SerializeField] private TMP_Text roundText;
-
     [SerializeField] private PlayerHealth playerHealth;
-
     [SerializeField] private GameObject doorCollider;
-
     [SerializeField] private Spawner[] spawner;
 
     public int currentRound;
-
     public int maxRounds;
-
     public WaveData waveData;
 
     void Start()

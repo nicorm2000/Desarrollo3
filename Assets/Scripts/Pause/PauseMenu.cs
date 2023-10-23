@@ -52,7 +52,6 @@ public class PauseMenu : MonoBehaviour
             EditorApplication.isPlaying = false;
         }
 #endif
-
         Application.Quit();
     }
 }
