@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1b04ce56bbade4a9d3bf07e7c6ea26, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  currentHealth: 90
+  currentHealth: 100
   maxHealth: 100
   speed: 8
   _isDead: 0
-  model: {fileID: 0}
   weaponData:
   - {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
   - {fileID: 11400000, guid: 07aa8a2279e9b2d4ab4941cfb619acbc, type: 2}
@@ -44,7 +43,7 @@ MonoBehaviour:
   lastHorizontalVector: -1
   lastVerticalVector: 0.70710677
   movementDirection: {x: 0, y: 0}
-  maxLevelStack: 3
+  maxLevelStack: 5
   healthStackID: 0
   speedStackID: 5
   damageStackID: 0
