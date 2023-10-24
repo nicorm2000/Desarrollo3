@@ -15,6 +15,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(sceneName[2]);
     }
 
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene(sceneName[3]);
+    }
+
     public void LoadMenu()
     {
         SceneManager.LoadScene(sceneName[0]);
