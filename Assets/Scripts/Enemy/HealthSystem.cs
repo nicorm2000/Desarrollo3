@@ -6,7 +6,7 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private Collider enemyTriggerCollider;
     private ZoneTriggeredEffect _triggerEffect;
     private SpriteRenderer _spriteRenderer;
-    private float health = 0;
+    [SerializeField] private float health = 0;
 
     public bool _dead;
     public EnemyData enemyData;

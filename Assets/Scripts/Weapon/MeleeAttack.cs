@@ -8,16 +8,23 @@ using static UnityEngine.UI.Image;
 
 public class MeleeAttack : MonoBehaviour
 {
-    [SerializeField] private float attackRange;
+    [SerializeField] private Vector3 attackRange;
     [SerializeField] private LayerMask attackLayer;
     [SerializeField] private GameObject weapon;
+    [SerializeField] private float maxTimeToAttack;
+    private float timeToAttack;
 
 
-    RaycastHit hit;
-    Quaternion rotation;
-    Vector3 size;
+    private RaycastHit hit;
+    private Quaternion rotation;
+    private Vector3 size;
 
     public WeaponData weaponData;
+
+    private void Start()
+    {
+        timeToAttack = maxTimeToAttack;
+    }
 
     private void Update()
     {
@@ -25,16 +32,25 @@ public class MeleeAttack : MonoBehaviour
         {
             Attack();
         }
+
+        timeToAttack -= Time.deltaTime;
     }
 
     private void Attack() 
     {
         rotation = weapon.transform.rotation;
-        size = new Vector3(attackRange, attackRange, 0.5f);
+        size = attackRange;
 
-        if (Physics.BoxCast(weapon.transform.position, size * 0.5f, weapon.transform.forward, out hit, rotation, attackRange, attackLayer))
+        if (timeToAttack <= 0) 
         {
-            hit.collider.GetComponent<HealthSystem>().TakeDamage(weaponData.damage);
+            if (Physics.BoxCast(weapon.transform.position, size * 0.5f, weapon.transform.forward, out hit, rotation, attackRange.y, attackLayer))
+            {
+                hit.collider.GetComponent<HealthSystem>().TakeDamage(weaponData.damage);
+                timeToAttack = maxTimeToAttack;
+            }
+
+            timeToAttack = maxTimeToAttack;
+            Debug.Log("Pego");
         }
     }
 
