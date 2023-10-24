@@ -6721,7 +6721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &500957435
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6783,7 +6783,7 @@ Transform:
   m_GameObject: {fileID: 500957434}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.207, y: -0.091, z: 0}
+  m_LocalPosition: {x: 0.442, y: -0.091, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7116,7 +7116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5569180708625838545, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6100415171331296213, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponData
@@ -25878,7 +25878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1903058594}
   - component: {fileID: 1903058595}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25893,13 +25893,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903058593}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.269, y: 0.032, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.248, y: -0.004, z: 0}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 500957436}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1903058595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25909,9 +25909,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1903058593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 830101192c70d8b4ba186aeb25a7edb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4dc9642593b2c7c459d7af4418081598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackRange: 1
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  weapon: {fileID: 1903058593}
   weaponData: {fileID: 11400000, guid: 07aa8a2279e9b2d4ab4941cfb619acbc, type: 2}
 --- !u!1 &1905034530 stripped
 GameObject:
