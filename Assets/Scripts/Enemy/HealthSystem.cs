@@ -4,6 +4,7 @@ public class HealthSystem : MonoBehaviour
 {
     [SerializeField] private Collider enemyCollider;
     [SerializeField] private Collider enemyTriggerCollider;
+    [SerializeField] private GameObject shadow;
     private ZoneTriggeredEffect _triggerEffect;
     private SpriteRenderer _spriteRenderer;
     private float health = 0;
@@ -30,6 +31,7 @@ public class HealthSystem : MonoBehaviour
                 _spriteRenderer.enabled = false;
                 enemyCollider.enabled = false;
                 enemyTriggerCollider.enabled = false;
+                shadow.SetActive(false);
 
                 _triggerEffect.TriggerEffect();
 
