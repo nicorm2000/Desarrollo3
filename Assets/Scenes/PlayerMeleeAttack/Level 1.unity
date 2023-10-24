@@ -6715,6 +6715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 500957436}
   - component: {fileID: 500957435}
+  - component: {fileID: 500957437}
   m_Layer: 0
   m_Name: Swordfish
   m_TagString: Untagged
@@ -6783,13 +6784,34 @@ Transform:
   m_GameObject: {fileID: 500957434}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.442, y: -0.091, z: 0}
+  m_LocalPosition: {x: 0.494, y: -0.091, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1903058594}
   m_Father: {fileID: 2009772658}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &500957437
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500957434}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41f7a08021dbcfa44bbc97253dd63794, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &507009394
 GameObject:
   m_ObjectHideFlags: 0
@@ -25919,6 +25941,7 @@ MonoBehaviour:
   weapon: {fileID: 1903058593}
   maxTimeToAttack: 0.5
   weaponData: {fileID: 11400000, guid: 07aa8a2279e9b2d4ab4941cfb619acbc, type: 2}
+  attackAnimation: {fileID: 500957437}
 --- !u!1 &1905034530 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 38178f397a2263f468be6e2b110c2e1d, type: 3}

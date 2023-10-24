@@ -14,12 +14,13 @@ public class MeleeAttack : MonoBehaviour
     [SerializeField] private float maxTimeToAttack;
     private float timeToAttack;
 
-
     private RaycastHit hit;
     private Quaternion rotation;
     private Vector3 size;
 
     public WeaponData weaponData;
+
+    public Animator attackAnimation;
 
     private void Start()
     {
@@ -45,6 +46,7 @@ public class MeleeAttack : MonoBehaviour
         {
             if (Physics.BoxCast(weapon.transform.position, size * 0.5f, weapon.transform.forward, out hit, rotation, attackRange.y, attackLayer))
             {
+                attackAnimation.Play("MeleeAttack");
                 hit.collider.GetComponent<HealthSystem>().TakeDamage(weaponData.damage);
                 timeToAttack = maxTimeToAttack;
             }
