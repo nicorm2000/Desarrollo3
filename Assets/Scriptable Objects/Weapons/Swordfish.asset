@@ -19,6 +19,6 @@ MonoBehaviour:
   weaponID: 1
   bulletSpeed: 15
   lifespan: 3
-  damage: 1
+  damage: 10
   bulletPrefab: {fileID: 0}
   attackSpeed: 10
