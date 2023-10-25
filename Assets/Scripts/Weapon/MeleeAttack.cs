@@ -46,13 +46,11 @@ public class MeleeAttack : MonoBehaviour
         {
             if (Physics.BoxCast(weapon.transform.position, size * 0.5f, weapon.transform.forward, out hit, rotation, attackRange.y, attackLayer))
             {
-                attackAnimation.Play("MeleeAttack");
                 hit.collider.GetComponent<HealthSystem>().TakeDamage(weaponData.damage);
                 timeToAttack = maxTimeToAttack;
             }
 
             timeToAttack = maxTimeToAttack;
-            Debug.Log("Pego");
         }
     }
 
