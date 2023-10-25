@@ -4,7 +4,7 @@ public class SelectWeapon : MonoBehaviour
 {
     [SerializeField] private GameObject levelSpawn;
     [SerializeField] private GameObject pickUpWeaponText;
-    [SerializeField] private ChangeWeaponSprite changeWeaponSprite;
+    [SerializeField] private ChangePlayerWeapon changePlayerWeapon;
     [SerializeField] private GameObject player;
 
     public PlayerData playerData;
@@ -39,7 +39,7 @@ public class SelectWeapon : MonoBehaviour
     {
         if(playerCanTeleport == true) 
         {
-            changeWeaponSprite.ChangeSprite(weaponData.weaponID);
+            changePlayerWeapon.ChangeWeapon(weaponData.weaponID);
             player.transform.position = levelSpawn.transform.position;
         }
     }

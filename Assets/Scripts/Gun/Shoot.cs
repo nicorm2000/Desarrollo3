@@ -17,10 +17,13 @@ public class Shoot : MonoBehaviour
 
     private void ShootBullet()
     {
-        Instantiate(weaponData.bulletPrefab, transform.position, transform.rotation);
-        canShoot = false;
-        timeBetweenShots = 1f / weaponData.attackSpeed;
-        Invoke(nameof(EnableShooting), timeBetweenShots);
+        if (weaponData.isShootWeapon == true) 
+        {
+            Instantiate(weaponData.bulletPrefab, transform.position, transform.rotation);
+            canShoot = false;
+            timeBetweenShots = 1f / weaponData.attackSpeed;
+            Invoke(nameof(EnableShooting), timeBetweenShots);
+        }
     }
 
     private void EnableShooting()

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 5e6dd72cce851a9479ab180099eccbf1, type: 3}
   model: {fileID: 0}
-  isMeleeWeapon: 0
+  isMeleeWeapon: 1
   isShootWeapon: 0
   weaponID: 1
   bulletSpeed: 15
