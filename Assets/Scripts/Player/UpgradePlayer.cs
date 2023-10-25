@@ -16,9 +16,11 @@ public class UpgradePlayer : MonoBehaviour
             healthBar.SetHealth(playerData.currentHealth);
         }
 
-        else 
+        else
         {
             playerData.maxHealth += number;
+            playerData.currentHealth += number;
+            healthBar.SetMaxHealth(playerData.maxHealth);
             healthBar.SetHealth(playerData.currentHealth);
         }
     }
