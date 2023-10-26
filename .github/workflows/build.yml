@@ -5,7 +5,7 @@ on: [pull_request, push]
 jobs:
   UnityAndArtifact:
     name: Building for unity ✨
-    runs-on: debian-latest
+    runs-on: windows-latest
     steps:
       # Checkout
       - name: Checkout repository
