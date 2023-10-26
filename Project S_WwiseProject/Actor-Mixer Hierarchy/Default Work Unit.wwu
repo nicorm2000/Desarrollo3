@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="mainTheme" ID="{125B22F9-9EFE-4339-964C-4939AAAA8556}" ShortID="32341727">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="mainTheme" ID="{0C97144D-AA16-4FC3-B1EF-91794511149F}">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>mainTheme.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="277254803"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="mainTheme" ID="{0C97144D-AA16-4FC3-B1EF-91794511149F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
