@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5641821315093705386}
   - component: {fileID: 4537057346123849985}
   - component: {fileID: 8780360866334264520}
+  - component: {fileID: 5290204582291922668}
   m_Layer: 8
   m_Name: BasicEnemy
   m_TagString: Enemy
@@ -75,9 +76,11 @@ MonoBehaviour:
   enemyCollider: {fileID: 4537057346123849985}
   enemyTriggerCollider: {fileID: 5641821315093705386}
   shadow: {fileID: 6526430211005384866}
+  health: 0
   _dead: 0
   enemyData: {fileID: 11400000, guid: e669acf245ccac044b5afe40a135676b, type: 2}
   firePoint: {fileID: 0}
+  hitMarker: {fileID: 5290204582291922668}
 --- !u!212 &7699837152467073221
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -243,6 +246,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animations: []
+--- !u!114 &5290204582291922668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779284332624663121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51aad18f0a6a4ff4e903a955af32ad69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 7699837152467073221}
+  maxTimer: 0.2
 --- !u!1 &6526430211005384866
 GameObject:
   m_ObjectHideFlags: 0

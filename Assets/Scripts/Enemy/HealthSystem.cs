@@ -13,6 +13,9 @@ public class HealthSystem : MonoBehaviour
     public EnemyData enemyData;
     public GameObject firePoint;
 
+    [Header("Hit Marker")]
+    [SerializeField] private HitMarker hitMarker;
+
 
     private void Start()
     {
@@ -50,5 +53,6 @@ public class HealthSystem : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        hitMarker.HitEnemy();
     }
 }

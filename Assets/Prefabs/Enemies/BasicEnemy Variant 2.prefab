@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 444156368333031594}
   - component: {fileID: 293908872381631134}
   - component: {fileID: 5807914300279068040}
+  - component: {fileID: -2754815290973936051}
   m_Layer: 8
   m_Name: BasicEnemy Variant 2
   m_TagString: Enemy
@@ -75,9 +76,11 @@ MonoBehaviour:
   enemyCollider: {fileID: 6954440812407169117}
   enemyTriggerCollider: {fileID: 444156368333031594}
   shadow: {fileID: 8363480197720831659}
+  health: 0
   _dead: 0
   enemyData: {fileID: 11400000, guid: f43bbcc79f28a0943a0752730dd121af, type: 2}
   firePoint: {fileID: 0}
+  hitMarker: {fileID: -2754815290973936051}
 --- !u!212 &7699837152467073221
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -246,6 +249,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9f6359689937fb4499b8cafa73bd3129, type: 2}
   - {fileID: 11400000, guid: f34d3bce40728b24fae0a22248dbbc53, type: 2}
   - {fileID: 11400000, guid: 9c642af0ccc303f418e5927f97a5f204, type: 2}
+--- !u!114 &-2754815290973936051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779284332624663121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51aad18f0a6a4ff4e903a955af32ad69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 7699837152467073221}
+  maxTimer: 0.2
 --- !u!1 &8363480197720831659
 GameObject:
   m_ObjectHideFlags: 0
