@@ -1,53 +1,57 @@
-using System;
 using UnityEngine;
+
+[System.Serializable]
+public class Wave
+{
+    public short waveIndex;
+    public short numberOfEnemies;
+    public GameObject[] enemyType;
+    public float spawnInterval;
+}
 
 public class WaveManager : MonoBehaviour
 {
-    private IWave[] _wave;
-    private int _currentWaveIndex = 0;
+    public Wave[] waves;
+    public Transform[] spawnPoints;
 
-    private void Start()
-    {
-        _wave = new IWave[]
-        {
-            new Wave1(),
-            new Wave2(),
-            new Wave3()
-        };
-
-        ActivateCurrentWave();
-    }
+    private Wave _currentWave;
+    private int _currentWaveIndex;
+    private float _nextSpawnTime;
+    private bool _canSpawn = true;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.N))
+        _currentWave = waves[_currentWaveIndex];
+        SpawnWave();
+        GameObject[] totalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        if (totalEnemies.Length == 0 && !_canSpawn && _currentWaveIndex + 1 != waves.Length)
         {
-            DeactivateCurrentWave();
-            SwitchToNextWave();
+            SpawnNextWave();
         }
     }
 
-    private void ActivateCurrentWave()
+    private void SpawnNextWave()
     {
-        _wave[_currentWaveIndex].Activate();
+        _currentWaveIndex++;
+        _canSpawn = true;
     }
 
-    private void DeactivateCurrentWave()
+    private void SpawnWave()
     {
-        _wave[_currentWaveIndex].Deactivate();
-    }
+        if (_canSpawn && _nextSpawnTime < Time.time)
+        {
+            GameObject randomEnemy = _currentWave.enemyType[Random.Range(0, _currentWave.enemyType.Length)];
+            Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+            Instantiate(randomEnemy, randomSpawnPoint.position, Quaternion.identity);
+            
+            _currentWave.numberOfEnemies--;
+            _nextSpawnTime = Time.time + _currentWave.spawnInterval;
 
-    private void SwitchToNextWave()
-    {
-        if (_currentWaveIndex < _wave.Length - 1)
-        {
-            _currentWaveIndex++;
-            ActivateCurrentWave();
-        }
-        else 
-        {
-            Debug.Log("Final wave");
-            _currentWaveIndex = _wave.Length - 1;
+            if (_currentWave.numberOfEnemies == 0)
+            {
+                _canSpawn = false;
+            }
         }
     }
 }
