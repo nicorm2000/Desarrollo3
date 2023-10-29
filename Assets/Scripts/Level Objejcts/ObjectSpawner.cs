@@ -41,24 +41,6 @@ public class ObjectSpawner : MonoBehaviour
                 }
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            isSpawning = !isSpawning;
-
-            if (!isSpawning)
-            {
-                Debug.Log("Stop plate spawn");
-
-                StopCoroutine(spawnCoroutine);
-            }
-            else
-            {
-                Debug.Log("Plate spawn");
-
-                spawnCoroutine = StartCoroutine(SpawnObjects());
-            }
-        }
     }
 
     private IEnumerator SpawnObjects()

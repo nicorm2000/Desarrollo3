@@ -6,6 +6,11 @@
 				<Sound Name="mainTheme" ID="{125B22F9-9EFE-4339-964C-4939AAAA8556}" ShortID="32341727">
 					<PropertyList>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-25</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
