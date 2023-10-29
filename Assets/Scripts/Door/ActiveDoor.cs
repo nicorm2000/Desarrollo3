@@ -5,13 +5,13 @@ public class ActiveDoor : MonoBehaviour
     [SerializeField] private GameObject door;
     [SerializeField] private GameObject basket;
     [SerializeField] private float delayTime;
-    [SerializeField] private RoundCounter roundCounter;
+    [SerializeField] private WaveCounter roundCounter;
 
     void Start()
     {
         door.SetActive(false);
 
-        roundCounter = FindObjectOfType<RoundCounter>();
+        roundCounter = FindObjectOfType<WaveCounter>();
     }
 
     void Update()
