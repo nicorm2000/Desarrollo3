@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Wave2 : MonoBehaviour
+public class Wave2 : IWave
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Activate()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Deactivate()
     {
-        
+
     }
 }
