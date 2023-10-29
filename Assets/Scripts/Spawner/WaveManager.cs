@@ -17,6 +17,7 @@ public class WaveManager : MonoBehaviour
     public Wave[] waves;
     public Transform[] spawnPoints;
     public GameObject waveName;
+    public GameObject waveCompleted;
     public TMP_Text roundText;
 
     private Wave _currentWave;
@@ -33,14 +34,18 @@ public class WaveManager : MonoBehaviour
 
         if (totalEnemies.Length == 0)
         {
-            if (!_canSpawn && _currentWaveIndex + 1 != waves.Length)
+            if (_currentWaveIndex + 1 != waves.Length)
             {
-                StartCoroutine(WaveShowUI(1));
-                SpawnNextWave();
+                if (!_canSpawn)
+                {
+                    StartCoroutine(WaveShowUI(1));
+                    SpawnNextWave();
+                }
             }
             else
             {
                 Debug.Log("Game Finished");
+                waveCompleted.SetActive(true);
             }
         }
     }
