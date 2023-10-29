@@ -16,12 +16,12 @@ public class WaveCounter : MonoBehaviour
     {
         currentRound = waveData.currentRound;
         maxRounds = waveData.maxRounds;
-        roundText.text = "Wave: " + currentRound.ToString();
+        //roundText.text = "Wave: " + currentRound.ToString();
     }
 
     void Update()
     {
-        roundText.text = "Wave: " + currentRound.ToString();
+        //roundText.text = "Wave: " + currentRound.ToString();
 
         if (currentRound == maxRounds)
         {
