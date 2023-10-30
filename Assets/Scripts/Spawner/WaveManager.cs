@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Wave
@@ -45,6 +45,7 @@ public class WaveManager : MonoBehaviour
             {
                 Debug.Log("Game Finished");
                 waveCompleted.SetActive(true);
+                SceneManager.LoadScene(5);
             }
         }
     }
