@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public class Wave
 {
+    [Header("Wave ID")]
     public short waveIndex;
+
+    [Header("Wave Properties")]
     public short numberOfEnemies;
     public GameObject[] enemyType;
     public float spawnInterval;
