@@ -22,8 +22,6 @@ public class DoorCollider : MonoBehaviour
             player.transform.position = spawnWeaponSelect.transform.position;
             doorCollider.SetActive(false);
             basket.SetActive(false);
-
-            roundCounter.maxRounds += 5;
         }
     }
 }

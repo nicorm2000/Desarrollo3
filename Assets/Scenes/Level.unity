@@ -8069,7 +8069,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &523511013
@@ -9416,7 +9416,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &606069875
@@ -11636,6 +11636,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4408764ea3217c46ad0f470df195860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door: {fileID: 2082787381}
+  basket: {fileID: 1674702628}
+  popUp: {fileID: 37278418}
   waves:
   - waveIndex: 1
     numberOfEnemies: 10
@@ -11652,82 +11655,82 @@ MonoBehaviour:
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     spawnInterval: 0.5
-  - waveIndex: 3
+  - waveIndex: 4
     numberOfEnemies: 10
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     spawnInterval: 0.5
-  - waveIndex: 3
+  - waveIndex: 5
     numberOfEnemies: 15
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     spawnInterval: 0.5
-  - waveIndex: 3
+  - waveIndex: 6
     numberOfEnemies: 7
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
     spawnInterval: 0.5
-  - waveIndex: 3
+  - waveIndex: 7
     numberOfEnemies: 7
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
     spawnInterval: 0.5
-  - waveIndex: 3
+  - waveIndex: 8
     numberOfEnemies: 7
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
     spawnInterval: 0.5
-  - waveIndex: 3
+  - waveIndex: 9
     numberOfEnemies: 7
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
     spawnInterval: 0.5
-  - waveIndex: 3
+  - waveIndex: 10
     numberOfEnemies: 7
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
     spawnInterval: 0.5
-  - waveIndex: 3
+  - waveIndex: 11
     numberOfEnemies: 7
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
     spawnInterval: 0.5
-  - waveIndex: 3
+  - waveIndex: 12
     numberOfEnemies: 7
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
     spawnInterval: 0.5
-  - waveIndex: 3
+  - waveIndex: 13
     numberOfEnemies: 7
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
     spawnInterval: 0.5
-  - waveIndex: 3
+  - waveIndex: 14
     numberOfEnemies: 7
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
     spawnInterval: 0.5
-  - waveIndex: 3
+  - waveIndex: 15
     numberOfEnemies: 7
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
@@ -14384,7 +14387,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 37278418}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: DesactiveShop
+        m_MethodName: DeactivatePopUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15013,7 +15016,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 37278418}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: DesactiveShop
+        m_MethodName: DeactivatePopUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15531,7 +15534,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 37278418}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: DesactiveShop
+        m_MethodName: DeactivatePopUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18574,10 +18577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172ef41d909b12346a36016f01d43bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 2082787381}
-  basket: {fileID: 1674702628}
-  delayTime: 0
-  roundCounter: {fileID: 127761909}
 --- !u!4 &1268057499
 Transform:
   m_ObjectHideFlags: 0
@@ -24068,7 +24067,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1658343874
