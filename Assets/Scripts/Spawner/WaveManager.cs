@@ -1,12 +1,15 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Wave
 {
+    [Header("Wave ID")]
     public short waveIndex;
+
+    [Header("Wave Properties")]
     public short numberOfEnemies;
     public GameObject[] enemyType;
     public float spawnInterval;
@@ -14,6 +17,12 @@ public class Wave
 
 public class WaveManager : MonoBehaviour
 {
+    [SerializeField] private GameObject door;
+    [SerializeField] private GameObject basket;
+    [SerializeField] private Shop popUp;
+
+    private int _maxWaves = 5;
+
     public Wave[] waves;
     public Transform[] spawnPoints;
     public GameObject waveName;
@@ -30,7 +39,6 @@ public class WaveManager : MonoBehaviour
         _currentWave = waves[_currentWaveIndex];
         SpawnWave();
         GameObject[] totalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
-        roundText.text = "Wave: " + (_currentWaveIndex + 1f).ToString();
 
         if (totalEnemies.Length == 0)
         {
@@ -38,22 +46,26 @@ public class WaveManager : MonoBehaviour
             {
                 if (!_canSpawn)
                 {
-                    StartCoroutine(WaveShowUI(1));
+                    popUp.ActivatePopUp();
                     SpawnNextWave();
+                    StartCoroutine(WaveShowUI());
                 }
             }
             else
             {
                 Debug.Log("Game Finished");
                 waveCompleted.SetActive(true);
+                SceneManager.LoadScene(5);
             }
+
+            ActiveShop();
         }
     }
 
-    public IEnumerator WaveShowUI(int index)
+    public IEnumerator WaveShowUI()
     {
         waveName.SetActive(true);
-        waveName.GetComponent<TextMeshProUGUI>().text = "Wave: " + waves[_currentWaveIndex + index].waveIndex;
+        waveName.GetComponent<TextMeshProUGUI>().text = "Wave: " + waves[_currentWaveIndex].waveIndex;
         yield return new WaitForSeconds(3f);
         waveName.SetActive(false);
     }
@@ -66,6 +78,7 @@ public class WaveManager : MonoBehaviour
 
     private void SpawnWave()
     {
+        roundText.text = "Wave: " + (waves[_currentWaveIndex].waveIndex).ToString();
         if (_canSpawn && _nextSpawnTime < Time.time)
         {
             GameObject randomEnemy = _currentWave.enemyType[Random.Range(0, _currentWave.enemyType.Length)];
@@ -79,6 +92,16 @@ public class WaveManager : MonoBehaviour
             {
                 _canSpawn = false;
             }
+        }
+    }
+
+    private void ActiveShop() 
+    {
+        if (waves[_currentWaveIndex].waveIndex == _maxWaves) 
+        {
+            basket.SetActive(true);
+            door.SetActive(true);
+            _maxWaves += 5;
         }
     }
 }
