@@ -86,7 +86,7 @@ public class Abilities : MonoBehaviour
             isCooldownSlower = true;
             slowerImage.fillAmount = 1f;
 
-            GameObject spawnedObject = Instantiate(prefabToSpawn, new Vector3(transform.position.x, transform.position.y, transform.position.z + slowerZOffset), Quaternion.identity);
+            GameObject spawnedObject = Instantiate(prefabToSpawn, new Vector3(transform.position.x, transform.position.y, transform.position.z + slowerZOffset), Quaternion.Euler(-90f, 0f, 0f));
 
             StartCoroutine(DestroyAfterTime(spawnedObject));
         }
