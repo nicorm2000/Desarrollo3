@@ -30,7 +30,6 @@ public class WaveManager : MonoBehaviour
         _currentWave = waves[_currentWaveIndex];
         SpawnWave();
         GameObject[] totalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
-        roundText.text = "Wave: " + (_currentWaveIndex + 1f).ToString();
 
         if (totalEnemies.Length == 0)
         {
@@ -66,6 +65,7 @@ public class WaveManager : MonoBehaviour
 
     private void SpawnWave()
     {
+        roundText.text = "Wave: " + (_currentWaveIndex + 1f).ToString();
         if (_canSpawn && _nextSpawnTime < Time.time)
         {
             GameObject randomEnemy = _currentWave.enemyType[Random.Range(0, _currentWave.enemyType.Length)];
