@@ -1,33 +1,81 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
     public WeaponData weaponData;
+    public float weaponOverheat;
+    public float overheatIncreaseAmount;
+    public float overheatDecreaseRate;
+    public TMP_Text currentOH;
 
-    private float timeBetweenShots;
-    private bool canShoot = true;
+    private float _currentOverheat = 0f;
+    private float _timeBetweenShots;
+    private bool _canShoot = true;
+    private bool _overHeat = false;
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && canShoot)
+        if (!_overHeat && _canShoot && Input.GetMouseButton(0))
         {
-            ShootBullet();
+            if (_currentOverheat < weaponOverheat)
+            {
+                ShootBullet();
+
+                _currentOverheat += overheatIncreaseAmount;
+
+                if (_currentOverheat >= weaponOverheat)
+                {
+                    StartCoroutine(ShootCooldown());
+                }
+            }
         }
+
+        ManageOverheat();
+
+        currentOH.text = ((int)_currentOverheat).ToString();
     }
 
     private void ShootBullet()
     {
-        if (weaponData.isShootWeapon == true) 
+        if (weaponData.isShootWeapon)
         {
             Instantiate(weaponData.bulletPrefab, transform.position, transform.rotation);
-            canShoot = false;
-            timeBetweenShots = 1f / weaponData.attackSpeed;
-            Invoke(nameof(EnableShooting), timeBetweenShots);
+            _canShoot = false;
+            _timeBetweenShots = 1f / weaponData.attackSpeed;
+            Invoke(nameof(EnableShooting), _timeBetweenShots);
         }
     }
 
     private void EnableShooting()
     {
-        canShoot = true;
+        _canShoot = true;
+    }
+
+    private void ManageOverheat()
+    {
+        if (_currentOverheat > 0f)
+        {
+            _currentOverheat -= overheatDecreaseRate * Time.deltaTime;
+
+            if (_currentOverheat <= 0f)
+            {
+                _currentOverheat = 0f;
+                _canShoot = true;
+            }
+        }
+    }
+
+    private IEnumerator ShootCooldown()
+    {
+        _overHeat = true;
+        
+        while (_currentOverheat > 0f) 
+        {
+            yield return null;
+        }
+
+        _overHeat = false;
     }
 }
