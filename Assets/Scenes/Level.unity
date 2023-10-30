@@ -32981,6 +32981,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1967428187217795333, guid: 89523ff41de499b40a4117161c601a89, type: 3}
+      propertyPath: m_Size.z
+      value: 48.35812
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967428187217795333, guid: 89523ff41de499b40a4117161c601a89, type: 3}
+      propertyPath: m_Center.x
+      value: -0.00000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967428187217795333, guid: 89523ff41de499b40a4117161c601a89, type: 3}
+      propertyPath: m_Center.z
+      value: -1.0638356
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967428187217795333, guid: 89523ff41de499b40a4117161c601a89, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967428187217795333, guid: 89523ff41de499b40a4117161c601a89, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 130679
+      objectReference: {fileID: 0}
     - target: {fileID: 6779167509645009501, guid: 89523ff41de499b40a4117161c601a89, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 65143
