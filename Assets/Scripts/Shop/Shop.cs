@@ -9,14 +9,14 @@ public class Shop : MonoBehaviour
     public SpriteCycle[] spriteCycle;
     public PlayerData playerData;
 
-    public void ActiveShop() 
+    public void ActivateShop() 
     {
         shopWindow.SetActive(true);
         hud.SetActive(false);
         Time.timeScale = 0.0f;
     }
 
-    public void DesactiveShop()
+    public void DeactivateShop()
     {
         shopWindow.SetActive(false);
         hud.SetActive(true);

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ActiveDoor : MonoBehaviour
+public class ActivateDoor : MonoBehaviour
 {
     [SerializeField] private GameObject door;
     [SerializeField] private GameObject basket;
@@ -22,7 +22,7 @@ public class ActiveDoor : MonoBehaviour
         }
     }
 
-    public void ActiveObject()
+    public void ActivateObject()
     {
         door.SetActive(true);
     }

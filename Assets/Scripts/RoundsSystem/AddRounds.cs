@@ -22,7 +22,7 @@ public class AddRounds : MonoBehaviour
 
             roundCounter.IncreaseRounds(waveData.addRound);
 
-            shop.ActiveShop();
+            shop.ActivateShop();
 
             foreach (GameObject obj in slowerObjects)
             {
