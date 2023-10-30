@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Shoot : MonoBehaviour
     public float overheatIncreaseAmount;
     public float overheatDecreaseRate;
     public TMP_Text currentOH;
+    public Image weaponBlack;
+    public Image weaponRed;
 
     private float _currentOverheat = 0f;
     private float _timeBetweenShots;
@@ -34,7 +37,7 @@ public class Shoot : MonoBehaviour
 
         ManageOverheat();
 
-        currentOH.text = ((int)_currentOverheat).ToString();
+        currentOH.text = ((int)_currentOverheat).ToString();//Borrar texto y poner aca el fill
     }
 
     private void ShootBullet()
