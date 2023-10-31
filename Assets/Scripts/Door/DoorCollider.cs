@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class DoorCollider : MonoBehaviour
 {
-    [SerializeField] private WaveCounter roundCounter;
     [SerializeField] private GameObject spawnWeaponSelect;
     [SerializeField] private GameObject doorCollider;
     [SerializeField] private GameObject basket;
@@ -12,7 +11,6 @@ public class DoorCollider : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        roundCounter = FindObjectOfType<WaveCounter>();
     }
 
     private void OnTriggerEnter(Collider player)

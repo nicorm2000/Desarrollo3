@@ -538,7 +538,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 37278420}
-  - component: {fileID: 37278419}
   - component: {fileID: 37278418}
   m_Layer: 0
   m_Name: ShopManager
@@ -567,21 +566,6 @@ MonoBehaviour:
   - {fileID: 1036694872}
   - {fileID: 950710410}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
---- !u!114 &37278419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 37278417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 737abe23c2a3e10439fad59bb9790960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roundCounter: {fileID: 127761909}
-  shop: {fileID: 37278418}
-  waveData: {fileID: 11400000, guid: adcd4394bf139524888a0c34874f9b2c, type: 2}
 --- !u!4 &37278420
 Transform:
   m_ObjectHideFlags: 0
@@ -31449,7 +31433,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0def70c7aa6d7fa43b5139ff2d6ffa83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roundCounter: {fileID: 0}
   spawnWeaponSelect: {fileID: 2079331784}
   doorCollider: {fileID: 2082787381}
   basket: {fileID: 1674702628}
