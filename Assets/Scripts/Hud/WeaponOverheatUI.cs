@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class WeaponOverheatUI : MonoBehaviour
 {
+    enum Weapons
+    {
+        Uzi,
+        Famas
+    }
+
     [Header("WeaponUI")]
     
     public Slider overheatSlider;
@@ -44,14 +50,18 @@ public class WeaponOverheatUI : MonoBehaviour
     {
         switch (weaponID)
         {
-            case 0:
+            case (int)Weapons.Uzi:
+
                 famasUI.SetActive(true);
                 uziUI.SetActive(false);
+
                 break;
 
-            case 1:
+            case (int)Weapons.Famas:
+
                 famasUI.SetActive(false);
                 uziUI.SetActive(true);
+
                 break;
         }
     }

@@ -4,20 +4,23 @@ using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
-    [SerializeField] private WeaponOverheatUI weaponOverheatUI;
+    [Header("WeaponOverheat")]
     public WeaponData weaponData;
     public float weaponOverheat;
     public float overheatIncreaseAmount;
     public float overheatDecreaseRate;
-    public Image weaponBlack;
-    public Image weaponRed;
 
     private float _currentOverheat = 0f;
     private float _timeBetweenShots;
     private bool _canShoot = true;
     private bool _overHeat = false;
+    
+    [Header("WeaponOverheatUI")]
+    [SerializeField] private WeaponOverheatUI weaponOverheatUI;
 
-    [SerializeField] private GameObject weaponUI;
+    public Image weaponBlack;
+    public Image weaponRed;
+
     [SerializeField] private GameObject overHeatText;
 
     private void Start()
