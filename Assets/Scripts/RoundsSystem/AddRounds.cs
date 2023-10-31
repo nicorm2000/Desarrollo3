@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AddRounds : MonoBehaviour
 {
-    [SerializeField] private RoundCounter roundCounter;
+    [SerializeField] private WaveCounter roundCounter;
     [SerializeField] private Shop shop;
 
     public WaveData waveData;
@@ -22,7 +22,7 @@ public class AddRounds : MonoBehaviour
 
             roundCounter.IncreaseRounds(waveData.addRound);
 
-            shop.ActiveShop();
+            //shop.ActivateShop();
 
             foreach (GameObject obj in slowerObjects)
             {

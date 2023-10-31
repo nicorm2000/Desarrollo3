@@ -6,6 +6,7 @@ public class CursorManager : MonoBehaviour
     public static CursorManager Instance { get; private set; }
 
     [SerializeField] private List<CursorAnimationData> cursorAnimationDataList;
+    [SerializeField] private CursorType cursorType;
     
     private CursorAnimationData _cursorAnimation;
     private int _currentFrame;
@@ -34,7 +35,7 @@ public class CursorManager : MonoBehaviour
 
     private void Start()
     {
-        SetActiveCursorType(CursorType.RotatingSquare);
+        SetActiveCursorType(cursorType);
     }
 
     private void Update()

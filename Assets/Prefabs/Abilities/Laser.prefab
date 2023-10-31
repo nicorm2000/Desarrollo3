@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 296049249673461059}
   - component: {fileID: 6609772702152121477}
   - component: {fileID: 9196883740090596122}
-  - component: {fileID: 6779167509645009501}
   - component: {fileID: 4988748519302646094}
+  - component: {fileID: 1967428187217795333}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -85,27 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6779167509645009501
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63088570189165513}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 65271
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4988748519302646094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,3 +99,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyDamage: 100
   enemyHealth: {fileID: -5129004534547528821, guid: 1d26883000583fa4d95ee31b544ed7ed, type: 3}
+--- !u!65 &1967428187217795333
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63088570189165513}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 130679
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -0.00000011920929, y: 0, z: 0}

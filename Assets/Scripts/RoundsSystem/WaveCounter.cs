@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class RoundCounter : MonoBehaviour
+public class WaveCounter : MonoBehaviour
 {
     [SerializeField] private TMP_Text roundText;
     [SerializeField] private PlayerHealth playerHealth;
@@ -16,12 +16,12 @@ public class RoundCounter : MonoBehaviour
     {
         currentRound = waveData.currentRound;
         maxRounds = waveData.maxRounds;
-        roundText.text = "Rounds: " + currentRound.ToString();
+        //roundText.text = "Wave: " + currentRound.ToString();
     }
 
     void Update()
     {
-        roundText.text = "Rounds: " + currentRound.ToString();
+        //roundText.text = "Wave: " + currentRound.ToString();
 
         if (currentRound == maxRounds)
         {
