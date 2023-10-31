@@ -19,6 +19,7 @@ public class Shoot : MonoBehaviour
     private bool _overHeat = false;
 
     [SerializeField] private GameObject weaponUI;
+    [SerializeField] private GameObject overHeatText;
 
     private void Start()
     {
@@ -82,11 +83,15 @@ public class Shoot : MonoBehaviour
     private IEnumerator ShootCooldown()
     {
         _overHeat = true;
-        
+
+        overHeatText.SetActive(true);
+
         while (_currentOverheat > 0f) 
         {
             yield return null;
         }
+
+        overHeatText.SetActive(false);
 
         _overHeat = false;
     }
