@@ -34,6 +34,9 @@ public class WaveManager : MonoBehaviour
     private float _nextSpawnTime;
     private bool _canSpawn = true;
 
+    [Header("Abilities")]
+    [SerializeField] private Abilities abilities;
+
     private void Update()
     {
         _currentWave = waves[currentWaveIndex];
@@ -72,6 +75,7 @@ public class WaveManager : MonoBehaviour
 
     private void SpawnNextWave()
     {
+        abilities.DestroySlowers();
         currentWaveIndex++;
         _canSpawn = true;
     }

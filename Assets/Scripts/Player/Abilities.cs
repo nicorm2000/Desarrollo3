@@ -38,8 +38,11 @@ public class Abilities : MonoBehaviour
     private float laserCooldown = 3f;
     private bool isCooldownLaser = false;
 
+    private int targetLayer;
+
     private void Start()
     {
+        targetLayer = LayerMask.NameToLayer("Slower");
         dashCooldown = playerData.dashCooldown;
         slowerCooldown = playerData.shieldCooldown;
         laserCooldown = playerData.laserCooldown;
@@ -121,7 +124,6 @@ public class Abilities : MonoBehaviour
     private IEnumerator DestroyAfterTime(GameObject obj)
     {
         yield return new WaitForSeconds(slowerLifetime);
-        //Destroy(obj);
     }
 
     private void Dash()
@@ -152,6 +154,19 @@ public class Abilities : MonoBehaviour
         {
             dashCoolDownCounter -= Time.deltaTime;
             dashImage.fillAmount = dashCoolDownCounter / playerData.dashCooldown;
+        }
+    }
+
+    public void DestroySlowers()
+    {
+        GameObject[] slowerObjects = GameObject.FindObjectsOfType<GameObject>();
+
+        foreach (GameObject obj in slowerObjects)
+        {
+            if (obj.layer == targetLayer)
+            {
+                Destroy(obj);
+            }
         }
     }
 }

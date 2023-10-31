@@ -11779,6 +11779,7 @@ MonoBehaviour:
   waveCompleted: {fileID: 5175507}
   roundText: {fileID: 1662475355}
   currentWaveIndex: 0
+  abilities: {fileID: 1941617724}
 --- !u!1 &766050912 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8513424388201257645, guid: 5fb6f3a6e904b7b44b6cca0cb6fc54c4, type: 3}
