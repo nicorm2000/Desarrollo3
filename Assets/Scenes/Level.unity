@@ -7673,6 +7673,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1516056427}
     - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: overHeatText
+      value: 
+      objectReference: {fileID: 1909702298}
+    - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: overheatTime
       value: 5
       objectReference: {fileID: 0}
@@ -11774,6 +11778,7 @@ MonoBehaviour:
   waveName: {fileID: 1611522409}
   waveCompleted: {fileID: 5175507}
   roundText: {fileID: 1662475355}
+  currentWaveIndex: 0
 --- !u!1 &766050912 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8513424388201257645, guid: 5fb6f3a6e904b7b44b6cca0cb6fc54c4, type: 3}
@@ -12416,7 +12421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &825329473
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15067,7 +15072,7 @@ GameObject:
   - component: {fileID: 1034054067}
   - component: {fileID: 1034054066}
   m_Layer: 5
-  m_Name: Shield
+  m_Name: Slower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28109,7 +28114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1882951107
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28570,7 +28575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1909702299
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29250,15 +29255,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+  waveManager: {fileID: 760154691}
   dashImage: {fileID: 1946912803}
   dash: 32
   dashColor: {r: 0, g: 1, b: 1, a: 1}
+  slowerLogo: {fileID: 825329472}
   slowerImage: {fileID: 312420385}
   slower: 50
   slowerColor: {r: 1, g: 1, b: 0, a: 1}
   prefabToSpawn: {fileID: 5360607739328788941, guid: 068c7a8d12bb2ec40ad0ff3fc3a882fc, type: 3}
   slowerLifetime: 10
   slowerZOffset: 0.1
+  laserLogo: {fileID: 1882951106}
   laserImage: {fileID: 553482193}
   laser: 51
   laserColor: {r: 1, g: 0, b: 0, a: 1}
@@ -29409,6 +29417,7 @@ MonoBehaviour:
   weaponBlack: {fileID: 645429421}
   weaponRed: {fileID: 1636758986}
   weaponUI: {fileID: 771723439}
+  overHeatText: {fileID: 1909702298}
 --- !u!1 &1946912801
 GameObject:
   m_ObjectHideFlags: 0

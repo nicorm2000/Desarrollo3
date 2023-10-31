@@ -1,5 +1,4 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -83,7 +82,6 @@ public class Shoot : MonoBehaviour
     private IEnumerator ShootCooldown()
     {
         _overHeat = true;
-
         overHeatText.SetActive(true);
 
         while (_currentOverheat > 0f) 
@@ -92,7 +90,6 @@ public class Shoot : MonoBehaviour
         }
 
         overHeatText.SetActive(false);
-
         _overHeat = false;
     }
 

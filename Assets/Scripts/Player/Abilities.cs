@@ -4,7 +4,11 @@ using UnityEngine.UI;
 
 public class Abilities : MonoBehaviour
 {
-    public PlayerData playerData;
+    [Header("Player Data")]
+    [SerializeField] private PlayerData playerData;
+
+    [Header("Wave Data")]
+    [SerializeField] private WaveManager waveManager;
 
     [Header("Dash")]
     public Image dashImage;
@@ -15,6 +19,7 @@ public class Abilities : MonoBehaviour
     private float dashCoolDownCounter = 0;
 
     [Header("Slower")]
+    public GameObject slowerLogo;
     public Image slowerImage;
     public KeyCode slower = KeyCode.F2;
     public Color slowerColor = Color.cyan;
@@ -25,6 +30,7 @@ public class Abilities : MonoBehaviour
     private bool isCooldownSlower = false;
 
     [Header("Laser")]
+    public GameObject laserLogo;
     public Image laserImage;
     public KeyCode laser = KeyCode.F3;
     public Color laserColor = Color.cyan;
@@ -52,22 +58,26 @@ public class Abilities : MonoBehaviour
 
     private void Laser()
     {
-        if (Input.GetKeyDown(laser) && !isCooldownLaser)
+        if (waveManager.currentWaveIndex >= 9)
         {
-            isCooldownLaser = true;
-            laserImage.fillAmount = 1f;
-
-            StartCoroutine(ActivateLaser());
-        }
-
-        if (isCooldownLaser)
-        {
-            laserImage.fillAmount -= 1 / laserCooldown * Time.deltaTime;
-
-            if (laserImage.fillAmount <= 0f)
+            laserLogo.SetActive(true);
+            if (Input.GetKeyDown(laser) && !isCooldownLaser)
             {
-                laserImage.fillAmount = 0f;
-                isCooldownLaser = false;
+                isCooldownLaser = true;
+                laserImage.fillAmount = 1f;
+
+                StartCoroutine(ActivateLaser());
+            }
+
+            if (isCooldownLaser)
+            {
+                laserImage.fillAmount -= 1 / laserCooldown * Time.deltaTime;
+
+                if (laserImage.fillAmount <= 0f)
+                {
+                    laserImage.fillAmount = 0f;
+                    isCooldownLaser = false;
+                }
             }
         }
     }
@@ -81,25 +91,29 @@ public class Abilities : MonoBehaviour
 
     private void Slower()
     {
-        if (Input.GetKeyDown(slower) && !isCooldownSlower)
+        if (waveManager.currentWaveIndex >= 4)
         {
-            isCooldownSlower = true;
-            slowerImage.fillAmount = 1f;
-
-            GameObject spawnedObject = Instantiate(prefabToSpawn, new Vector3(transform.position.x, transform.position.y, transform.position.z + slowerZOffset), Quaternion.Euler(-90f, 0f, 0f));
-
-            StartCoroutine(DestroyAfterTime(spawnedObject));
-        }
-
-        if (isCooldownSlower)
-        {
-            slowerImage.fillAmount -= 1 / slowerCooldown * Time.deltaTime;
-
-            if (slowerImage.fillAmount <= 0f)
+            slowerLogo.SetActive(true);
+            if (Input.GetKeyDown(slower) && !isCooldownSlower)
             {
-                slowerImage.fillAmount = 0f;
+                isCooldownSlower = true;
+                slowerImage.fillAmount = 1f;
 
-                isCooldownSlower = false;
+                GameObject spawnedObject = Instantiate(prefabToSpawn, new Vector3(transform.position.x, transform.position.y, transform.position.z + slowerZOffset), Quaternion.Euler(-90f, 0f, 0f));
+
+                StartCoroutine(DestroyAfterTime(spawnedObject));
+            }
+
+            if (isCooldownSlower)
+            {
+                slowerImage.fillAmount -= 1 / slowerCooldown * Time.deltaTime;
+
+                if (slowerImage.fillAmount <= 0f)
+                {
+                    slowerImage.fillAmount = 0f;
+
+                    isCooldownSlower = false;
+                }
             }
         }
     }

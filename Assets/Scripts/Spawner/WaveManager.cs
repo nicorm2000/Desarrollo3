@@ -28,21 +28,21 @@ public class WaveManager : MonoBehaviour
     public GameObject waveName;
     public GameObject waveCompleted;
     public TMP_Text roundText;
+    public int currentWaveIndex;
 
     private Wave _currentWave;
-    private int _currentWaveIndex;
     private float _nextSpawnTime;
     private bool _canSpawn = true;
 
     private void Update()
     {
-        _currentWave = waves[_currentWaveIndex];
+        _currentWave = waves[currentWaveIndex];
         StartCoroutine(SpawnWave());
         GameObject[] totalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         if (totalEnemies.Length == 0)
         {
-            if (_currentWaveIndex + 1 != waves.Length)
+            if (currentWaveIndex + 1 != waves.Length)
             {
                 if (!_canSpawn)
                 {
@@ -65,20 +65,20 @@ public class WaveManager : MonoBehaviour
     public IEnumerator WaveShowUI()
     {
         waveName.SetActive(true);
-        waveName.GetComponent<TextMeshProUGUI>().text = "Wave: " + waves[_currentWaveIndex].waveIndex;
+        waveName.GetComponent<TextMeshProUGUI>().text = "Wave: " + waves[currentWaveIndex].waveIndex;
         yield return new WaitForSeconds(3f);
         waveName.SetActive(false);
     }
 
     private void SpawnNextWave()
     {
-        _currentWaveIndex++;
+        currentWaveIndex++;
         _canSpawn = true;
     }
 
     private IEnumerator SpawnWave()
     {
-        roundText.text = "Wave: " + (waves[_currentWaveIndex].waveIndex).ToString();
+        roundText.text = "Wave: " + (waves[currentWaveIndex].waveIndex).ToString();
         if (_canSpawn && _nextSpawnTime < Time.time)
         {
             GameObject randomEnemy = _currentWave.enemyType[Random.Range(0, _currentWave.enemyType.Length)];
@@ -99,7 +99,7 @@ public class WaveManager : MonoBehaviour
 
     private void ActiveShop() 
     {
-        if (waves[_currentWaveIndex].waveIndex == _maxWaves) 
+        if (waves[currentWaveIndex].waveIndex == _maxWaves) 
         {
             basket.SetActive(true);
             door.SetActive(true);
