@@ -11,7 +11,7 @@ public class ZoneTriggeredEffect : MonoBehaviour
         int materialIndex = Random.Range(0, dropData.materials.Count);
 
         GameObject splashPrefab = dropData.splashSprites[splashIndex];
-        GameObject splashObject = Instantiate(splashPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.5f), Quaternion.identity);
+        GameObject splashObject = Instantiate(splashPrefab, transform.position, Quaternion.identity);
 
         SpriteRenderer spriteRenderer = splashObject.GetComponent<SpriteRenderer>();
         spriteRenderer.material = dropData.materials[materialIndex];

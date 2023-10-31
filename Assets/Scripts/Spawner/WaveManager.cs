@@ -37,7 +37,7 @@ public class WaveManager : MonoBehaviour
     private void Update()
     {
         _currentWave = waves[_currentWaveIndex];
-        SpawnWave();
+        StartCoroutine(SpawnWave());
         GameObject[] totalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         if (totalEnemies.Length == 0)
@@ -76,7 +76,7 @@ public class WaveManager : MonoBehaviour
         _canSpawn = true;
     }
 
-    private void SpawnWave()
+    private IEnumerator SpawnWave()
     {
         roundText.text = "Wave: " + (waves[_currentWaveIndex].waveIndex).ToString();
         if (_canSpawn && _nextSpawnTime < Time.time)
@@ -93,6 +93,8 @@ public class WaveManager : MonoBehaviour
                 _canSpawn = false;
             }
         }
+
+        yield return null;
     }
 
     private void ActiveShop() 
