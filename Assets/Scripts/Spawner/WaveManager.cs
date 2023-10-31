@@ -83,7 +83,7 @@ public class WaveManager : MonoBehaviour
         {
             GameObject randomEnemy = _currentWave.enemyType[Random.Range(0, _currentWave.enemyType.Length)];
             Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-            Instantiate(randomEnemy, randomSpawnPoint.position, Quaternion.identity);
+            Instantiate(randomEnemy, new Vector3(randomSpawnPoint.position.x, randomSpawnPoint.position.y, randomSpawnPoint.position.z + 0.5f), Quaternion.identity);
 
             _currentWave.numberOfEnemies--;
             _nextSpawnTime = Time.time + _currentWave.spawnInterval;
