@@ -16,9 +16,9 @@ MonoBehaviour:
   model: {fileID: 0}
   isMeleeWeapon: 1
   isShootWeapon: 0
-  weaponID: 1
+  weaponID: 3
   bulletSpeed: 15
   lifespan: 3
-  damage: 10
+  damage: 12
   bulletPrefab: {fileID: 0}
   attackSpeed: 10

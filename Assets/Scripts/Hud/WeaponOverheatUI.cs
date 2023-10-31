@@ -8,7 +8,8 @@ public class WeaponOverheatUI : MonoBehaviour
     enum Weapons
     {
         Uzi,
-        Famas
+        Famas,
+        Sniper
     }
 
     [Header("WeaponUI")]
@@ -17,7 +18,7 @@ public class WeaponOverheatUI : MonoBehaviour
 
     [SerializeField] private GameObject famasUI;
     [SerializeField] private GameObject uziUI;
-    [SerializeField] private WeaponData weaponData;
+    [SerializeField] private GameObject sniperUI;
 
     [Header("WeaponUI Images")]
 
@@ -54,6 +55,7 @@ public class WeaponOverheatUI : MonoBehaviour
 
                 famasUI.SetActive(true);
                 uziUI.SetActive(false);
+                sniperUI.SetActive(false);
 
                 break;
 
@@ -61,6 +63,15 @@ public class WeaponOverheatUI : MonoBehaviour
 
                 famasUI.SetActive(false);
                 uziUI.SetActive(true);
+                sniperUI.SetActive(false);
+
+                break;
+
+            case (int)Weapons.Sniper:
+
+                famasUI.SetActive(false);
+                uziUI.SetActive(false);
+                sniperUI.SetActive(true);
 
                 break;
         }

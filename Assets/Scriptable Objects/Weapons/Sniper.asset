@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f7d9191183631488a8626457379b3d, type: 3}
   m_Name: Sniper
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 9a75aa9f079f7ae4b9a14e71f9948955, type: 3}
   model: {fileID: 0}
   isMeleeWeapon: 0
   isShootWeapon: 1
@@ -20,5 +20,5 @@ MonoBehaviour:
   bulletSpeed: 15
   lifespan: 3
   damage: 3
-  bulletPrefab: {fileID: 0}
-  attackSpeed: 10
+  bulletPrefab: {fileID: 7942789937546522980, guid: 34085ce4b870d574895de834a02807ac, type: 3}
+  attackSpeed: 1
