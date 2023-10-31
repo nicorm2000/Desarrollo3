@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
+    [SerializeField] private WeaponOverheatUI weaponOverheatUI;
     public WeaponData weaponData;
     public float weaponOverheat;
     public float overheatIncreaseAmount;
     public float overheatDecreaseRate;
-    public TMP_Text currentOH;
     public Image weaponBlack;
     public Image weaponRed;
 
@@ -17,6 +17,13 @@ public class Shoot : MonoBehaviour
     private float _timeBetweenShots;
     private bool _canShoot = true;
     private bool _overHeat = false;
+
+    [SerializeField] private GameObject weaponUI;
+
+    private void Start()
+    {
+        weaponOverheatUI.maxSliderOverheat = weaponOverheat;
+    }
 
     private void Update()
     {
@@ -27,6 +34,7 @@ public class Shoot : MonoBehaviour
                 ShootBullet();
 
                 _currentOverheat += overheatIncreaseAmount;
+                weaponOverheatUI.currentSliderOverheat -= 1;
 
                 if (_currentOverheat >= weaponOverheat)
                 {
@@ -35,9 +43,9 @@ public class Shoot : MonoBehaviour
             }
         }
 
+        CheckShootWeapon();
         ManageOverheat();
-
-        currentOH.text = ((int)_currentOverheat).ToString();//Borrar texto y poner aca el fill
+        weaponOverheatUI.SetCurrentOverheat(_currentOverheat);
     }
 
     private void ShootBullet()
@@ -54,6 +62,7 @@ public class Shoot : MonoBehaviour
     private void EnableShooting()
     {
         _canShoot = true;
+        weaponOverheatUI.currentSliderOverheat = weaponOverheatUI.maxSliderOverheat;
     }
 
     private void ManageOverheat()
@@ -80,5 +89,13 @@ public class Shoot : MonoBehaviour
         }
 
         _overHeat = false;
+    }
+
+    public void CheckShootWeapon()
+    {
+        if (weaponData.isShootWeapon == true)
+        {
+            weaponOverheatUI.CheckTypeOfWeapon();
+        }
     }
 }
