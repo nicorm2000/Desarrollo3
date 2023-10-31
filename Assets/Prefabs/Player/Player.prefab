@@ -125,7 +125,7 @@ Transform:
   m_GameObject: {fileID: 5569180708625838545}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.207, y: -0.091, z: 0}
+  m_LocalPosition: {x: 0.596, y: -0.091, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -228,7 +228,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830101192c70d8b4ba186aeb25a7edb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponOverheatUI: {fileID: 0}
   weaponData: {fileID: 0}
+  weaponOverheat: 0
+  overheatIncreaseAmount: 0
+  overheatDecreaseRate: 0
+  weaponBlack: {fileID: 0}
+  weaponRed: {fileID: 0}
+  weaponUI: {fileID: 0}
+  overHeatText: {fileID: 0}
 --- !u!1 &7469210322841030696
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +317,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -817769808, guid: 14bf8f9a61263fd4694f6a1429507951, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93a210f0a74a08042a5ad21800f0279b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
