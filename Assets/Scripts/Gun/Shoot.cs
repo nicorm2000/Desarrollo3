@@ -22,6 +22,7 @@ public class Shoot : MonoBehaviour
     public Image weaponRed;
 
     [SerializeField] private GameObject overHeatText;
+    [SerializeField] private GameObject overHeatEffect;
 
     private void Start()
     {
@@ -86,6 +87,7 @@ public class Shoot : MonoBehaviour
     {
         _overHeat = true;
         overHeatText.SetActive(true);
+        overHeatEffect.SetActive(true);
 
         while (_currentOverheat > 0f) 
         {
@@ -93,6 +95,7 @@ public class Shoot : MonoBehaviour
         }
 
         overHeatText.SetActive(false);
+        overHeatEffect.SetActive(false);
         _overHeat = false;
     }
 
