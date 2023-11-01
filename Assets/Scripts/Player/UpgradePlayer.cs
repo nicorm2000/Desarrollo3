@@ -2,36 +2,31 @@ using UnityEngine;
 
 public class UpgradePlayer : MonoBehaviour
 {
-    [SerializeField] private HealthBar healthBar;
+    [SerializeField] private PlayerData playerData;
+    [SerializeField] private PlayerHealthUI playerHealthUI;
 
-    public PlayerData playerData;
-
-    public void UpgradeHealth(float number) 
+    public void UpgradeHealth(float number)
     {
-        if(playerData.currentHealth == playerData.maxHealth) 
+        if (playerData.currentHealth == playerData.maxHealth)
         {
-            playerData.maxHealth += number;
             playerData.currentHealth = playerData.maxHealth;
-            healthBar.SetMaxHealth(playerData.maxHealth);
-            healthBar.SetHealth(playerData.currentHealth);
         }
-
         else
         {
-            playerData.maxHealth += number;
             playerData.currentHealth += number;
-            healthBar.SetMaxHealth(playerData.maxHealth);
-            healthBar.SetHealth(playerData.currentHealth);
         }
+        playerData.maxHealth += number;
+
+        playerHealthUI.SetMaxAndCurrentHealth(playerData.maxHealth, playerData.currentHealth);
     }
 
-    public void UpgradeSpeed(float number) 
+    public void UpgradeSpeed(float number)
     {
         playerData.speed += number;
         playerData.activeMoveSpeed = playerData.speed;
     }
 
-    public void UpgradeDamage(float number) 
+    public void UpgradeDamage(float number)
     {
         playerData.weaponData[0].damage += number;
         playerData.weaponData[1].damage += number;

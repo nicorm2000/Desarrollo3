@@ -8,19 +8,12 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _currentHealthText;
 
     public PlayerData playerData;
-
     public Slider slider;
 
-    private void Start()
+    private void SetHealthText(float maxHealth, float currentHealth)
     {
-        _maxHealthText.text = "/" + playerData.maxHealth.ToString();
-        _currentHealthText.text = playerData.currentHealth.ToString();
-    }
-
-    private void Update()
-    {
-        _maxHealthText.text = "/" + playerData.maxHealth.ToString();
-        _currentHealthText.text = playerData.currentHealth.ToString();
+        _maxHealthText.text = "/" + maxHealth.ToString();
+        _currentHealthText.text = currentHealth.ToString();
     }
 
     public void SetMaxHealth(float health) 

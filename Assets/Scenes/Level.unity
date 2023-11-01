@@ -607,7 +607,7 @@ Transform:
   m_GameObject: {fileID: 47816578}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.118752, y: -14.8125, z: 0}
+  m_LocalPosition: {x: -11.368752, y: -14.8125, z: 0}
   m_LocalScale: {x: 3.9281998, y: 3.9281998, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6823,6 +6823,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 350674183}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &433290769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 433290770}
+  m_Layer: 0
+  m_Name: ----------AUDIO&SFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &433290770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433290769}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &435437617
 GameObject:
   m_ObjectHideFlags: 0
@@ -7803,7 +7834,7 @@ PrefabInstance:
     - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 1089286546}
+      objectReference: {fileID: 0}
     - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: playerData
       value: 
@@ -7812,6 +7843,10 @@ PrefabInstance:
       propertyPath: screenShake
       value: 
       objectReference: {fileID: 963194230}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: playerHealthUI
+      value: 
+      objectReference: {fileID: 1941617730}
     - target: {fileID: 4071947474369335987, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
@@ -8036,6 +8071,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1941617724}
+    - targetCorrespondingSourceObject: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1941617730}
     - targetCorrespondingSourceObject: {fileID: 3632110441304715640, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2009772659}
@@ -9667,7 +9705,7 @@ Transform:
   m_GameObject: {fileID: 600454244}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.006248, y: 8.1875, z: -0.00000047683716}
+  m_LocalPosition: {x: 12.756248, y: 8.1875, z: -0.00000047683716}
   m_LocalScale: {x: 3.9281998, y: 3.9281998, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11824,7 +11862,7 @@ Transform:
   m_GameObject: {fileID: 743621335}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.025002, y: 8.1875, z: 0}
+  m_LocalPosition: {x: -11.275002, y: 8.1875, z: 0}
   m_LocalScale: {x: 3.9281998, y: 3.9281998, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12088,7 +12126,7 @@ Transform:
   m_GameObject: {fileID: 764287423}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.849998, y: -14.8125, z: 0}
+  m_LocalPosition: {x: 12.599998, y: -14.8125, z: 0}
   m_LocalScale: {x: 3.9281998, y: 3.9281998, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16493,7 +16531,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1089286545}
   - component: {fileID: 1089286547}
-  - component: {fileID: 1089286546}
   m_Layer: 5
   m_Name: LifeBar
   m_TagString: Untagged
@@ -16525,22 +16562,6 @@ RectTransform:
   m_AnchoredPosition: {x: -87.000854, y: -14.864868}
   m_SizeDelta: {x: 190.0032, y: 25.013}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1089286546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089286544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f181127b7496b2c45bcc40fcf5937be8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHealthText: {fileID: 852256658}
-  _currentHealthText: {fileID: 1247569955}
-  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
-  slider: {fileID: 1089286547}
 --- !u!114 &1089286547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24422,6 +24443,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 95d8b4727c8974c46a57d0bda6c457fe, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 95d8b4727c8974c46a57d0bda6c457fe, type: 3}
       propertyPath: m_Name
       value: shopVOXEL
@@ -30085,7 +30110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbfece3bd7fdd147b62a90137a0bff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 1089286546}
+  playerHealthUI: {fileID: 1941617730}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!136 &1941617714
 CapsuleCollider:
@@ -30139,6 +30164,23 @@ MonoBehaviour:
   laser: 51
   laserColor: {r: 1, g: 0, b: 0, a: 1}
   laserObject: {fileID: 2057951902}
+--- !u!114 &1941617730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521703871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c3f290e0aae3e4893d6c9752cc6425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  border: {fileID: 132561238}
+  _maxHealthText: {fileID: 852256658}
+  _currentHealthText: {fileID: 1247569955}
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+  slider: {fileID: 1089286547}
 --- !u!1001 &1944036849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34445,5 +34487,6 @@ SceneRoots:
   - {fileID: 1674702629}
   - {fileID: 1424465022}
   - {fileID: 129626821}
+  - {fileID: 433290770}
   - {fileID: 1351502571}
   - {fileID: 724137219}

@@ -1,42 +1,31 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private HealthBar healthBar;
-    [SerializeField] private Image border;
-    public PlayerData playerData;
-    public ScreenShake screenShake;
+    [SerializeField] private PlayerData playerData;
+    [SerializeField] private ScreenShake screenShake;
+    [SerializeField] private PlayerHealthUI playerHealthUI;
 
     void Start()
     {
         playerData.ResetPlayerStacks();
         playerData.currentHealth = playerData.maxHealth;
-        healthBar.SetMaxHealth(playerData.maxHealth);
+        playerHealthUI.SetMaxAndCurrentHealth(playerData.maxHealth, playerData.currentHealth);
     }
 
     public void takeDamage(float damage) 
     {
         StartCoroutine(screenShake.Shake());
-        StartCoroutine(ChangeBorderColor(Color.black));
+        StartCoroutine(playerHealthUI.ChangeBorderColor(Color.red));
         
         playerData.currentHealth -= damage;
-        healthBar.SetHealth(playerData.currentHealth);
+        playerHealthUI.SetHealth(playerData.currentHealth);
 
         if (playerData.currentHealth <= 0)
         {
             playerData.currentHealth = 0;
         }
-    }
-
-    public IEnumerator ChangeBorderColor(Color color)
-    {
-        border.color = color;
-        yield return new WaitForSeconds(3f);
-
-        border.color = Color.white;
     }
 
     public bool isDead() 
