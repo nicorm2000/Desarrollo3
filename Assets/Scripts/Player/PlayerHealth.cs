@@ -1,9 +1,12 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private Image border;
     public PlayerData playerData;
     public ScreenShake screenShake;
 
@@ -17,7 +20,8 @@ public class PlayerHealth : MonoBehaviour
     public void takeDamage(float damage) 
     {
         StartCoroutine(screenShake.Shake());
-
+        StartCoroutine(ChangeBorderColor(Color.black));
+        
         playerData.currentHealth -= damage;
         healthBar.SetHealth(playerData.currentHealth);
 
@@ -25,6 +29,14 @@ public class PlayerHealth : MonoBehaviour
         {
             playerData.currentHealth = 0;
         }
+    }
+
+    public IEnumerator ChangeBorderColor(Color color)
+    {
+        border.color = color;
+        yield return new WaitForSeconds(3f);
+
+        border.color = Color.white;
     }
 
     public bool isDead() 

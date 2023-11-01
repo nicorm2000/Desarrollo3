@@ -2689,6 +2689,7 @@ GameObject:
   - component: {fileID: 170495844}
   - component: {fileID: 170495843}
   - component: {fileID: 170495842}
+  - component: {fileID: 170495845}
   m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
@@ -2810,6 +2811,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170495840}
   m_CullTransparentMesh: 1
+--- !u!114 &170495845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170495840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1370068673}
+          m_TargetAssemblyTypeName: CursorObject, Assembly-CSharp
+          m_MethodName: MouseInteract
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1370068673}
+          m_TargetAssemblyTypeName: CursorObject, Assembly-CSharp
+          m_MethodName: MouseNotInteract
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &170746285
 GameObject:
   m_ObjectHideFlags: 0
@@ -7737,6 +7783,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: border
+      value: 
+      objectReference: {fileID: 132561238}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1089286546}
@@ -7969,9 +8019,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1941617708}
-    - targetCorrespondingSourceObject: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1941617719}
     - targetCorrespondingSourceObject: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1941617724}
@@ -18537,6 +18584,7 @@ GameObject:
   - component: {fileID: 1200166411}
   - component: {fileID: 1200166410}
   - component: {fileID: 1200166409}
+  - component: {fileID: 1200166412}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -18658,6 +18706,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200166407}
   m_CullTransparentMesh: 1
+--- !u!114 &1200166412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200166407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1370068673}
+          m_TargetAssemblyTypeName: CursorObject, Assembly-CSharp
+          m_MethodName: MouseInteract
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1370068673}
+          m_TargetAssemblyTypeName: CursorObject, Assembly-CSharp
+          m_MethodName: MouseNotInteract
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1211408930
 GameObject:
   m_ObjectHideFlags: 0
@@ -21180,13 +21273,14 @@ GameObject:
   - component: {fileID: 1370068672}
   - component: {fileID: 1370068671}
   - component: {fileID: 1370068670}
+  - component: {fileID: 1370068673}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1370068669
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21274,6 +21368,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1370068673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370068668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69f7f3fd23d752145990d7a86cc424e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 636620757600229402}
 --- !u!1 &1373453220
 GameObject:
   m_ObjectHideFlags: 0
@@ -21839,6 +21946,7 @@ GameObject:
   - component: {fileID: 1428511257}
   - component: {fileID: 1428511259}
   - component: {fileID: 1428511258}
+  - component: {fileID: 1428511261}
   m_Layer: 5
   m_Name: BackgroundImage
   m_TagString: Untagged
@@ -21903,6 +22011,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428511256}
   m_CullTransparentMesh: 1
+--- !u!114 &1428511261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428511256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: CursorObject, Assembly-CSharp
+          m_MethodName: MouseInteract
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: CursorObject, Assembly-CSharp
+          m_MethodName: MouseNotInteract
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1436140018
 GameObject:
   m_ObjectHideFlags: 0
@@ -24948,6 +25101,7 @@ GameObject:
   - component: {fileID: 1623355295}
   - component: {fileID: 1623355294}
   - component: {fileID: 1623355293}
+  - component: {fileID: 1623355296}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -25069,6 +25223,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623355291}
   m_CullTransparentMesh: 1
+--- !u!114 &1623355296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623355291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1370068673}
+          m_TargetAssemblyTypeName: CursorObject, Assembly-CSharp
+          m_MethodName: MouseInteract
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1370068673}
+          m_TargetAssemblyTypeName: CursorObject, Assembly-CSharp
+          m_MethodName: MouseNotInteract
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1629159986 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 38b47d57ec80cc24b9c6147cd745f7a4, type: 3}
@@ -29773,22 +29972,6 @@ CapsuleCollider:
   m_Height: 0.90625
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: -0.16}
---- !u!114 &1941617719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521703871}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15cdf09dc1d1662449024b2f821d1bbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forceFieldPrefab: {fileID: 6776729520864554678, guid: 48c1c935c9393514f91fe4d03695607e, type: 3}
-  activationDuration: 5
-  cooldownDuration: 10
-  repelForce: 1000
 --- !u!114 &1941617724
 MonoBehaviour:
   m_ObjectHideFlags: 0

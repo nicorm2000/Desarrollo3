@@ -550,6 +550,7 @@ GameObject:
   - component: {fileID: 971112760}
   - component: {fileID: 971112759}
   - component: {fileID: 971112758}
+  - component: {fileID: 971112762}
   m_Layer: 0
   m_Name: WinMenu
   m_TagString: Untagged
@@ -644,6 +645,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &971112762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971112757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69f7f3fd23d752145990d7a86cc424e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 1462889341}
 --- !u!1 &1072637028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,7 +1303,7 @@ MonoBehaviour:
   cursorAnimationDataList:
   - {fileID: 11400000, guid: 1e014e4d4e385404cb452515b00e4156, type: 2}
   - {fileID: 11400000, guid: 03c6221f9abb8374188cc9d92c7aff72, type: 2}
-  cursorType: 1
+  cursorType: 0
 --- !u!4 &1462889342
 Transform:
   m_ObjectHideFlags: 0
@@ -1317,6 +1331,7 @@ GameObject:
   - component: {fileID: 1718357078}
   - component: {fileID: 1718357077}
   - component: {fileID: 1718357076}
+  - component: {fileID: 1718357079}
   m_Layer: 0
   m_Name: ReturnMenuButton
   m_TagString: Untagged
@@ -1438,6 +1453,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718357074}
   m_CullTransparentMesh: 1
+--- !u!114 &1718357079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718357074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 971112762}
+          m_TargetAssemblyTypeName: CursorObject, Assembly-CSharp
+          m_MethodName: MouseInteract
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 971112762}
+          m_TargetAssemblyTypeName: CursorObject, Assembly-CSharp
+          m_MethodName: MouseNotInteract
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2049317465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1510,7 @@ GameObject:
   - component: {fileID: 2049317469}
   - component: {fileID: 2049317468}
   - component: {fileID: 2049317467}
+  - component: {fileID: 2049317470}
   m_Layer: 0
   m_Name: ExitButton
   m_TagString: Untagged
@@ -1571,6 +1632,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049317465}
   m_CullTransparentMesh: 1
+--- !u!114 &2049317470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049317465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 971112762}
+          m_TargetAssemblyTypeName: CursorObject, Assembly-CSharp
+          m_MethodName: MouseInteract
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 971112762}
+          m_TargetAssemblyTypeName: CursorObject, Assembly-CSharp
+          m_MethodName: MouseNotInteract
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2094652770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,6 +1720,7 @@ GameObject:
   - component: {fileID: 2097781728}
   - component: {fileID: 2097781727}
   - component: {fileID: 2097781726}
+  - component: {fileID: 2097781729}
   m_Layer: 0
   m_Name: RestartButton
   m_TagString: Untagged
@@ -1735,6 +1842,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097781724}
   m_CullTransparentMesh: 1
+--- !u!114 &2097781729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097781724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 971112762}
+          m_TargetAssemblyTypeName: CursorObject, Assembly-CSharp
+          m_MethodName: MouseInteract
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 971112762}
+          m_TargetAssemblyTypeName: CursorObject, Assembly-CSharp
+          m_MethodName: MouseNotInteract
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2145961640
 GameObject:
   m_ObjectHideFlags: 0

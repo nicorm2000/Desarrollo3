@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class CursorManager : MonoBehaviour
 {
-    public static CursorManager Instance { get; private set; }
-
     [SerializeField] private List<CursorAnimationData> cursorAnimationDataList;
     [SerializeField] private CursorType cursorType;
     

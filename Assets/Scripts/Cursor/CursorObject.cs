@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class CursorObject : MonoBehaviour
 {
-    [SerializeField] private CursorManager.CursorType cursorType;
+    [SerializeField] private CursorManager cursor;
 
-    private void OnMouseEnter()
+    public void MouseInteract()
     {
-        CursorManager.Instance.SetActiveCursorType(cursorType);
+        cursor.SetActiveCursorType(CursorManager.CursorType.Interact);
     }
 
-    private void OnMouseExit()
+    public void MouseNotInteract()
     {
-        CursorManager.Instance.SetActiveCursorType(CursorManager.CursorType.RotatingSquare);
+        cursor.SetActiveCursorType(CursorManager.CursorType.RotatingSquare);
     }
 }
