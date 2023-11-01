@@ -12,7 +12,7 @@ public class Conversation : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player") && Time.timeScale != 0)
         {
             StartCoroutine(AnimateText());
         }
@@ -20,7 +20,7 @@ public class Conversation : MonoBehaviour
 
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player") && Time.timeScale != 0)
         {
             StopCoroutine(AnimateText());
         }

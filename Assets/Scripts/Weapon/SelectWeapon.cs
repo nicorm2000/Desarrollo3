@@ -35,9 +35,9 @@ public class SelectWeapon : MonoBehaviour
         }
     }
 
-    public void playerTeleport() 
+    public void PlayerTeleport() 
     {
-        if(playerCanTeleport == true) 
+        if (playerCanTeleport) 
         {
             changePlayerWeapon.ChangeWeapon(weaponData.weaponID);
             player.transform.position = levelSpawn.transform.position;

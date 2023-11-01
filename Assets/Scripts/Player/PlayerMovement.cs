@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         {
             for (int i = 0; i < 3; i++) 
             {
-                selectWeapon[i].playerTeleport();
+                selectWeapon[i].PlayerTeleport();
             }
         }
     }

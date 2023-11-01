@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Wave
@@ -25,51 +24,55 @@ public class WaveManager : MonoBehaviour
 
     public Wave[] waves;
     public Transform[] spawnPoints;
-    public GameObject waveName;
-    public GameObject waveCompleted;
-    public TMP_Text roundText;
-    public int currentWaveIndex;
+
+    public int currentWaveIndex { get; private set; }
 
     private Wave _currentWave;
     private float _nextSpawnTime;
     private bool _canSpawn = true;
 
+    [Header("UI")]
+    public WaveUI waveUI;
+
     [Header("Abilities")]
     [SerializeField] private Abilities abilities;
+
+    private void Start()
+    {
+        currentWaveIndex = 12;
+        waveUI.ShowWaveText(waves[currentWaveIndex].waveIndex);
+    }
 
     private void Update()
     {
         _currentWave = waves[currentWaveIndex];
-        StartCoroutine(SpawnWave());
+        SpawnWave();
 
-        if (HealthSystem.enemyCount == 0)
+        if (HealthSystem.enemyCount != 0)
         {
+            return;
+        }
+
+        if (waves[currentWaveIndex].waveIndex == _maxWaves)
+        {
+            ActivateShop();
+            SetShopWaves();
+        }
+
+        if (!_canSpawn)
+        {
+            SpawnNextWave();
             if (currentWaveIndex + 1 != waves.Length)
             {
-                if (!_canSpawn)
-                {
-                    popUp.ActivatePopUp();
-                    SpawnNextWave();
-                    StartCoroutine(WaveShowUI());
-                }
+                popUp.ActivatePopUp();
+                StartCoroutine(waveUI.WaveShowUI(waves[currentWaveIndex].waveIndex));
             }
             else
             {
                 Debug.Log("Game Finished");
-                waveCompleted.SetActive(true);
-                SceneManager.LoadScene(5);
+                StartCoroutine(waveUI.WaveCompletedShowUI());
             }
-
-            ActiveShop();
         }
-    }
-
-    public IEnumerator WaveShowUI()
-    {
-        waveName.SetActive(true);
-        waveName.GetComponent<TextMeshProUGUI>().text = "Wave: " + waves[currentWaveIndex].waveIndex;
-        yield return new WaitForSeconds(3f);
-        waveName.SetActive(false);
     }
 
     private void SpawnNextWave()
@@ -79,9 +82,8 @@ public class WaveManager : MonoBehaviour
         _canSpawn = true;
     }
 
-    private IEnumerator SpawnWave()
+    private void SpawnWave()
     {
-        roundText.text = "Wave: " + (waves[currentWaveIndex].waveIndex).ToString();
         if (_canSpawn && _nextSpawnTime < Time.time)
         {
             GameObject randomEnemy = _currentWave.enemyType[Random.Range(0, _currentWave.enemyType.Length)];
@@ -96,17 +98,16 @@ public class WaveManager : MonoBehaviour
                 _canSpawn = false;
             }
         }
-
-        yield return null;
     }
 
-    private void ActiveShop() 
+    private void ActivateShop()
     {
-        if (waves[currentWaveIndex].waveIndex == _maxWaves) 
-        {
-            basket.SetActive(true);
-            door.SetActive(true);
-            _maxWaves += 5;
-        }
+        basket.SetActive(true);
+        door.SetActive(true);
+    }
+
+    private void SetShopWaves()
+    {
+        _maxWaves += 5;
     }
 }
