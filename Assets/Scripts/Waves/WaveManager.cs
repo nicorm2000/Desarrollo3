@@ -39,7 +39,6 @@ public class WaveManager : MonoBehaviour
 
     private void Start()
     {
-        currentWaveIndex = 12;
         waveUI.ShowWaveText(waves[currentWaveIndex].waveIndex);
     }
 

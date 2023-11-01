@@ -19,20 +19,6 @@ public class CursorManager : MonoBehaviour
         Interact
     }
 
-    private void Awake()
-    {
-        if (Instance == null)
-            Instance = this;
-        else
-        {
-            Destroy(gameObject);
-
-            return;
-        }
-
-        DontDestroyOnLoad(gameObject);
-    }
-
     private void Start()
     {
         SetActiveCursorType(cursorType);
