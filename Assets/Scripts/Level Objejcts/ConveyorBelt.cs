@@ -13,7 +13,7 @@ public class ConveyorBelt : MonoBehaviour
 
         if (rb != null)
         {
-            if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+            if (other.gameObject.layer == LayerMask.NameToLayer("Player_ConveyorBelt"))
             {
                 isOnConveyorBelt = true;
             }
@@ -21,7 +21,7 @@ public class ConveyorBelt : MonoBehaviour
         }
         else if (playerRB != null)
         {
-            if (other.gameObject.layer == LayerMask.NameToLayer("Player_ConveyorBelt"))
+            if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
             {
                 isOnConveyorBelt = true;
             }
@@ -35,7 +35,7 @@ public class ConveyorBelt : MonoBehaviour
 
         if (rb != null)
         {
-            if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+            if (other.gameObject.layer == LayerMask.NameToLayer("Player_ConveyorBelt"))
             {
                 isOnConveyorBelt = false;
             }
@@ -43,7 +43,7 @@ public class ConveyorBelt : MonoBehaviour
         }
         else if (playerRB != null)
         {
-            if (other.gameObject.layer == LayerMask.NameToLayer("Player_ConveyorBelt"))
+            if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
             {
                 isOnConveyorBelt = false;
             }

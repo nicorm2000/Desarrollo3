@@ -5,20 +5,25 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private Collider enemyCollider;
     [SerializeField] private Collider enemyTriggerCollider;
     [SerializeField] private GameObject shadow;
+    [SerializeField] private float health = 0;
     private ZoneTriggeredEffect _triggerEffect;
     private SpriteRenderer _spriteRenderer;
-    [SerializeField] private float health = 0;
 
     public bool _dead;
     public EnemyData enemyData;
     public GameObject firePoint;
+    public static int enemyCount;
 
     [Header("Hit Marker")]
     [SerializeField] private HitMarker hitMarker;
 
-
     private void Start()
     {
+        if (gameObject.tag == "Enemy")
+        {
+            enemyCount++;
+        }
+
         _dead = enemyData.isDead;
         health = enemyData.health;
         _triggerEffect = GetComponent<ZoneTriggeredEffect>();
@@ -47,6 +52,11 @@ public class HealthSystem : MonoBehaviour
 
     public void DestroyEnemy()
     {
+        if (gameObject.tag == "Enemy")
+        {
+            enemyCount--;
+        }
+
         Destroy(gameObject);
     }
 

@@ -41,9 +41,8 @@ public class WaveManager : MonoBehaviour
     {
         _currentWave = waves[currentWaveIndex];
         StartCoroutine(SpawnWave());
-        GameObject[] totalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-        if (totalEnemies.Length == 0)
+        if (HealthSystem.enemyCount == 0)
         {
             if (currentWaveIndex + 1 != waves.Length)
             {

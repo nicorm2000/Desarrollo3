@@ -34,7 +34,7 @@ public class ObjectSpawner : MonoBehaviour
         {
             foreach (var spawnedObject in objectPool.GetActiveObjects())
             {
-                if (Vector3.Distance(spawnedObject.transform.position, targetPosition.position) < 0.01f)
+                if (Vector3.Distance(spawnedObject.transform.position, targetPosition.position) < 1f)
                 {
                     spawnedObject.SetActive(false);
                     objectPool.ReturnToPool(spawnedObject);
