@@ -11,6 +11,7 @@ public class AnimatorUtility : MonoBehaviour
     private string idle = "Idle";
     private string spawn = "Spawn";
     private string death = "Death";
+    private string dash = "Dash";
 
     private void Awake()
     {
@@ -45,6 +46,11 @@ public class AnimatorUtility : MonoBehaviour
         {
             PlayAnimation(death);
             Debug.Log("Death Animation");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            PlayAnimation(dash);
+            Debug.Log("Dash Animation");
         }
     }
 
