@@ -12109,6 +12109,9 @@ MonoBehaviour:
   waveName: {fileID: 1611522409}
   waveCompleted: {fileID: 5175507}
   waveText: {fileID: 1662475355}
+  waveShowDuration: 3
+  waveShowCompletedDuration: 3
+  winScene: 5
 --- !u!1 &764287423
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,9 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class WaveUI : MonoBehaviour
 {
+    [Header("GameObjects")]
     [SerializeField] GameObject waveName;
     [SerializeField] GameObject waveCompleted;
+    
+    [Header("Text Mesh Pro")]
     [SerializeField] TMP_Text waveText;
+
+    [Header("Animation Duration")]
+    [SerializeField] private float waveShowDuration;
+    [SerializeField] private float waveShowCompletedDuration;
+
+    [Header("Win Scene")]
+    [SerializeField] private int winScene;
 
     public void ShowWaveText(int index)
     {
@@ -19,7 +29,7 @@ public class WaveUI : MonoBehaviour
         ShowWaveText(index);
         waveName.SetActive(true);
         waveName.GetComponent<TextMeshProUGUI>().text = "Wave: " + index.ToString();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(waveShowDuration);
 
         waveName.SetActive(false);
     }
@@ -27,8 +37,8 @@ public class WaveUI : MonoBehaviour
     public IEnumerator WaveCompletedShowUI()
     {
         waveCompleted.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(waveShowCompletedDuration);
 
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(winScene);
     }
 }

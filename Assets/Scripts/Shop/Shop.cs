@@ -36,9 +36,8 @@ public class Shop : MonoBehaviour
         {
             playerData.healthStackID += Constants.ONE_F;
             upgradePlayer.UpgradeHealth(healthUpgradeAmount);
-            spriteCycle[0].UpdateStatsUI(playerData.healthStackID);
+            spriteCycle[Constants.HEALTH_ID].UpdateStatsUI(playerData.healthStackID);
         }
-
         else 
         {
             playerData.healthStackID = Constants.MAX_AMOUNT_OF_STACKS;
@@ -51,9 +50,8 @@ public class Shop : MonoBehaviour
         {
             playerData.speedStackID += Constants.ONE_F;
             upgradePlayer.UpgradeSpeed(Constants.ONE_F);
-            spriteCycle[1].UpdateStatsUI(playerData.speedStackID);
+            spriteCycle[Constants.SPEED_ID].UpdateStatsUI(playerData.speedStackID);
         }
-
         else
         {
             playerData.speedStackID = Constants.MAX_AMOUNT_OF_STACKS;
@@ -66,9 +64,8 @@ public class Shop : MonoBehaviour
         {
             playerData.damageStackID += Constants.ONE_F;
             upgradePlayer.UpgradeDamage(Constants.ONE_F);
-            spriteCycle[2].UpdateStatsUI(playerData.damageStackID);
-        }
-        
+            spriteCycle[Constants.DAMAGE_ID].UpdateStatsUI(playerData.damageStackID);
+        } 
         else 
         {
             playerData.damageStackID = Constants.MAX_AMOUNT_OF_STACKS;

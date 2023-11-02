@@ -21,12 +21,12 @@ public class WaveManager : MonoBehaviour
     [Header("Shop Dependencies")]
     [SerializeField] private Shop shop;
 
-
+    [Header("Wave Configuration")]
     [SerializeField] private Wave[] waves;
     [SerializeField] private Transform[] spawnPoints;
 
     [Header("Wave UI Dependencies")]
-    public WaveUI waveUI;
+    [SerializeField] private WaveUI waveUI;
 
     [Header("Abilities Dependencies")]
     [SerializeField] private Abilities abilities;
