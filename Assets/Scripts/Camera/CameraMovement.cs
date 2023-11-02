@@ -2,13 +2,19 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    [Header("Target to Follow")]
     [SerializeField] private Transform target;
-    [SerializeField] private float cameraFollowSpeed = 5f;
-    [SerializeField] private Vector3 offset = new Vector3(0f, 0f, -10f);
+    
+    [Header("Camera Follow Speed")]
+    [SerializeField] private float cameraFollowSpeed;
+    
+    [Header("Camera Offset")]
+    [SerializeField] private Vector3 offset;
 
-    public PlayerData playerData;
+    [Header("Player Data Dependencies")]
+    [SerializeField] private PlayerData playerData;
 
-    private void FixedUpdate() // Keep the camera in FixedUpdate beacuase if not, the player looks blurry with its movement 
+    private void FixedUpdate() //Keep the camera in FixedUpdate beacuase if not, the player looks blurry with its movement 
     {
         if (playerData.transform == null)
         {

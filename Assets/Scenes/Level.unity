@@ -1975,8 +1975,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c1431d80935cee34b9fd4113e7d94866, type: 2}
-  m_sharedMaterial: {fileID: 8233435915380040242, guid: c1431d80935cee34b9fd4113e7d94866, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 452212e7099879b439fc8cd3d5a2aadf, type: 2}
+  m_sharedMaterial: {fileID: -8625278114968906367, guid: 452212e7099879b439fc8cd3d5a2aadf, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11977,7 +11977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 2082787381}
   basket: {fileID: 1674702628}
-  shop: {fileID: 0}
+  shop: {fileID: 37278418}
   waves:
   - waveIndex: 1
     numberOfEnemies: 10
