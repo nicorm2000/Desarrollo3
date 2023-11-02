@@ -8,7 +8,6 @@ using System;
 public class PlayerData : ScriptableObject
 {
     [Header("Player Movement")]
-
     public float currentHealth;
     public float maxHealth;
     public float speed;

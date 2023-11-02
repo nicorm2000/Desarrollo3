@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class UpgradePlayer : MonoBehaviour
 {
+    [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
+    
+    [Header("Player Health UI Dependencies")]
     [SerializeField] private PlayerHealthUI playerHealthUI;
 
     public void UpgradeHealth(float number)

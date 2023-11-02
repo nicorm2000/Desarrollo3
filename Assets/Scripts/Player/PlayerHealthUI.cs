@@ -1,15 +1,22 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using TMPro;
 
 public class PlayerHealthUI : MonoBehaviour
 {
+    [Header("Images")]
     [SerializeField] private Image border;
+
+    [Header("Text Mesh Pro")]
     [SerializeField] private TextMeshProUGUI _maxHealthText;
     [SerializeField] private TextMeshProUGUI _currentHealthText;
-    [SerializeField] private PlayerData playerData;
+
+    [Header("Sliders")]
     [SerializeField] private Slider slider;
+
+    [Header("Player Data Dependencies")]
+    [SerializeField] private PlayerData playerData;
 
     private void SetMaxHealthText(float maxHealth)
     {
@@ -42,10 +49,10 @@ public class PlayerHealthUI : MonoBehaviour
         SetHealth(currentHealth);
     }
 
-    public IEnumerator ChangeBorderColor(Color color)
+    public IEnumerator ChangeBorderColor(Color color, float duration)
     {
         border.color = color;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(duration);
 
         border.color = Color.white;
     }

@@ -14,26 +14,30 @@ public class Wave
 
 public class WaveManager : MonoBehaviour
 {
+    [Header("GameObjects")]
     [SerializeField] private GameObject door;
     [SerializeField] private GameObject basket;
-    [SerializeField] private Shop popUp;
+    
+    [Header("Shop Dependencies")]
+    [SerializeField] private Shop shop;
 
-    private int _maxWaves = 5;
 
-    public Wave[] waves;
-    public Transform[] spawnPoints;
+    [SerializeField] private Wave[] waves;
+    [SerializeField] private Transform[] spawnPoints;
+
+    [Header("Wave UI Dependencies")]
+    public WaveUI waveUI;
+
+    [Header("Abilities Dependencies")]
+    [SerializeField] private Abilities abilities;
 
     public int currentWaveIndex { get; private set; }
 
+    private int _maxWaves = Constants.ROUNDS_BETWEEN_SHOPS;
     private Wave _currentWave;
     private float _nextSpawnTime;
     private bool _canSpawn = true;
 
-    [Header("UI")]
-    public WaveUI waveUI;
-
-    [Header("Abilities")]
-    [SerializeField] private Abilities abilities;
 
     private void Start()
     {
@@ -45,7 +49,7 @@ public class WaveManager : MonoBehaviour
         _currentWave = waves[currentWaveIndex];
         SpawnWave();
 
-        if (HealthSystem.enemyCount != 0)
+        if (HealthSystem.enemyCount != Constants.ZERO)
         {
             return;
         }
@@ -59,9 +63,9 @@ public class WaveManager : MonoBehaviour
         if (!_canSpawn)
         {
             SpawnNextWave();
-            if (currentWaveIndex + 1 != waves.Length)
+            if (currentWaveIndex + Constants.ONE != waves.Length)
             {
-                popUp.ActivatePopUp();
+                shop.ActivatePopUp();
                 StartCoroutine(waveUI.WaveShowUI(waves[currentWaveIndex].waveIndex));
             }
             else
@@ -83,14 +87,14 @@ public class WaveManager : MonoBehaviour
     {
         if (_canSpawn && _nextSpawnTime < Time.time)
         {
-            GameObject randomEnemy = _currentWave.enemyType[Random.Range(0, _currentWave.enemyType.Length)];
-            Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-            Instantiate(randomEnemy, new Vector3(randomSpawnPoint.position.x, randomSpawnPoint.position.y, randomSpawnPoint.position.z + 0.5f), Quaternion.identity);
+            GameObject randomEnemy = _currentWave.enemyType[Random.Range(Constants.ZERO, _currentWave.enemyType.Length)];
+            Transform randomSpawnPoint = spawnPoints[Random.Range(Constants.ZERO, spawnPoints.Length)];
+            Instantiate(randomEnemy, new Vector3(randomSpawnPoint.position.x, randomSpawnPoint.position.y, randomSpawnPoint.position.z + Constants.Z_VALUE_OFFSET), Quaternion.identity);
 
             _currentWave.numberOfEnemies--;
             _nextSpawnTime = Time.time + _currentWave.spawnInterval;
 
-            if (_currentWave.numberOfEnemies == 0)
+            if (_currentWave.numberOfEnemies == Constants.ONE)
             {
                 _canSpawn = false;
             }
@@ -105,6 +109,6 @@ public class WaveManager : MonoBehaviour
 
     private void SetShopWaves()
     {
-        _maxWaves += 5;
+        _maxWaves += Constants.ROUNDS_BETWEEN_SHOPS;
     }
 }
