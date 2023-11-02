@@ -7,7 +7,6 @@ public class FireDamage : MonoBehaviour
     [SerializeField] private float damageCooldown = 0.5f;
     [SerializeField] private HealthSystem enemyHealth;
 
-
     public PlayerData playerData;
     private PlayerHealth playerHealth;
     private float lastDamageTime;
