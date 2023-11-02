@@ -16,6 +16,9 @@ public class PlayerHealth : MonoBehaviour
     [Header("Lose Scene")]
     [SerializeField] private int loseScene;
 
+    /// <summary>
+    /// Initializes the player's data and updates the player's health UI.
+    /// </summary>
     void Start()
     {
         playerData.ResetPlayerStacks();
@@ -23,6 +26,10 @@ public class PlayerHealth : MonoBehaviour
         playerHealthUI.SetMaxAndCurrentHealth(playerData.maxHealth, playerData.currentHealth);
     }
 
+    /// <summary>
+    /// Inflicts damage to the player, triggers screen shake and UI color change, updates health UI, and handles player death.
+    /// </summary>
+    /// <param name="damage">The amount of damage to inflict.</param>
     public void takeDamage(float damage) 
     {
         StartCoroutine(screenShake.Shake());
@@ -43,6 +50,9 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Handles the actions when the player dies, resets player data, and loads the lose scene.
+    /// </summary>
     private void PlayerDies()
     {
         playerData.ResetPlayerFireDamage();

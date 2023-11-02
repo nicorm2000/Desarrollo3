@@ -38,12 +38,17 @@ public class WaveManager : MonoBehaviour
     private float _nextSpawnTime;
     private bool _canSpawn = true;
 
-
+    /// <summary>
+    /// Starts the game by showing the current wave index on the wave UI.
+    /// </summary>
     private void Start()
     {
         waveUI.ShowWaveText(waves[currentWaveIndex].waveIndex);
     }
 
+    /// <summary>
+    /// Updates the game state, spawns waves, activates the shop, and handles wave progression.
+    /// </summary>
     private void Update()
     {
         _currentWave = waves[currentWaveIndex];
@@ -66,16 +71,19 @@ public class WaveManager : MonoBehaviour
             if (currentWaveIndex + Constants.ONE != waves.Length)
             {
                 shop.ActivatePopUp();
-                StartCoroutine(waveUI.WaveShowUI(waves[currentWaveIndex].waveIndex));
+                StartCoroutine(waveUI.ShowWaveUI(waves[currentWaveIndex].waveIndex));
             }
             else
             {
                 Debug.Log("Game Finished");
-                StartCoroutine(waveUI.WaveCompletedShowUI());
+                StartCoroutine(waveUI.ShowWaveCompletedUI());
             }
         }
     }
 
+    /// <summary>
+    /// Spawns the next wave of enemies.
+    /// </summary>
     private void SpawnNextWave()
     {
         abilities.DestroySlowers();
@@ -83,6 +91,9 @@ public class WaveManager : MonoBehaviour
         _canSpawn = true;
     }
 
+    /// <summary>
+    /// Spawns individual enemies within the current wave.
+    /// </summary>
     private void SpawnWave()
     {
         if (_canSpawn && _nextSpawnTime < Time.time)
@@ -101,12 +112,18 @@ public class WaveManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Activates the shop UI elements.
+    /// </summary>
     private void ActivateShop()
     {
         basket.SetActive(true);
         door.SetActive(true);
     }
 
+    /// <summary>
+    /// Sets the number of waves before the next shop becomes available.
+    /// </summary>
     private void SetShopWaves()
     {
         _maxWaves += Constants.ROUNDS_BETWEEN_SHOPS;

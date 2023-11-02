@@ -19,12 +19,21 @@ public class WaveUI : MonoBehaviour
     [Header("Win Scene")]
     [SerializeField] private int winScene;
 
+    /// <summary>
+    /// Displays the wave index on the waveText UI element.
+    /// </summary>
+    /// <param name="index">The index of the wave to display.</param>
     public void ShowWaveText(int index)
     {
         waveText.text = "Wave: " + index.ToString();
     }
 
-    public IEnumerator WaveShowUI(int index)
+    /// <summary>
+    /// Shows the wave UI elements for a specified duration and then hides them.
+    /// </summary>
+    /// <param name="index">The index of the wave to display.</param>
+    /// <returns>An IEnumerator for coroutine execution.</returns>
+    public IEnumerator ShowWaveUI(int index)
     {
         ShowWaveText(index);
         waveName.SetActive(true);
@@ -34,7 +43,11 @@ public class WaveUI : MonoBehaviour
         waveName.SetActive(false);
     }
 
-    public IEnumerator WaveCompletedShowUI()
+    /// <summary>
+    /// Shows the wave completed UI element for a specified duration and then loads the win scene.
+    /// </summary>
+    /// <returns>An IEnumerator for coroutine execution.</returns>
+    public IEnumerator ShowWaveCompletedUI()
     {
         waveCompleted.SetActive(true);
         yield return new WaitForSeconds(waveShowCompletedDuration);

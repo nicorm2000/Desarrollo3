@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class Slower : MonoBehaviour
 {
-    [SerializeField] private float speedMultiplier = 1.5f;
+    [Header("Slow Speed")]
+    [SerializeField] private float speedMultiplier;
 
     private AIChase aiChase;
     private AIShooterChase aiShooterChase;
 
+    /// <summary>
+    /// Handles the event when a collider enters the trigger.
+    /// </summary>
+    /// <param name="other">The collider that entered the trigger.</param>
     private void OnTriggerEnter(Collider other)
     {
         aiChase = other.GetComponent<AIChase>();
@@ -22,6 +27,10 @@ public class Slower : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Handles the event when a collider exits the trigger.
+    /// </summary>
+    /// <param name="other">The collider that exited the trigger.</param>
     private void OnTriggerExit(Collider other)
     {
         aiChase = other.GetComponent<AIChase>();

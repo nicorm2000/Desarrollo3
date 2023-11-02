@@ -16,6 +16,9 @@ public class Shop : MonoBehaviour
     [Header("Sprite Cycle Dependencies")]
     [SerializeField] private SpriteCycle[] spriteCycle;
 
+    /// <summary>
+    /// Activates the shop pop-up, deactivates the HUD, and freezes the game time.
+    /// </summary>
     public void ActivatePopUp() 
     {
         shopWindow.SetActive(true);
@@ -23,6 +26,9 @@ public class Shop : MonoBehaviour
         Time.timeScale = Constants.ZERO_F;
     }
 
+    /// <summary>
+    /// Deactivates the shop pop-up, activates the HUD, and resumes the game time.
+    /// </summary>
     public void DeactivatePopUp()
     {
         shopWindow.SetActive(false);
@@ -30,6 +36,9 @@ public class Shop : MonoBehaviour
         Time.timeScale = Constants.ONE_F;
     }
 
+    /// <summary>
+    /// Increases the player's health if the health stack ID is below the maximum level stack.
+    /// </summary>
     public void IncreaseHealth()
     {
         if(playerData.healthStackID < playerData.maxLevelStack) 
@@ -44,6 +53,9 @@ public class Shop : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Increases the player's speed if the speed stack ID is below the maximum level stack.
+    /// </summary>
     public void IncreaseSpeed()
     {
         if (playerData.speedStackID < playerData.maxLevelStack)
@@ -58,6 +70,9 @@ public class Shop : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Increases the player's damage if the damage stack ID is below the maximum level stack.
+    /// </summary>
     public void IncreaseDamage()
     {
         if (playerData.damageStackID < playerData.maxLevelStack)

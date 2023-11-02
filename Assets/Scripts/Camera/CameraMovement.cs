@@ -11,6 +11,9 @@ public class CameraMovement : MonoBehaviour
     [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
 
+    /// <summary>
+    /// Updates the camera position in the LateUpdate phase to follow the player's target.
+    /// </summary>
     private void LateUpdate()
     {
         if (playerData.transform == null)
