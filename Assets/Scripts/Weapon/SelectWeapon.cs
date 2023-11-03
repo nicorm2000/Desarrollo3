@@ -2,45 +2,56 @@ using UnityEngine;
 
 public class SelectWeapon : MonoBehaviour
 {
-    [SerializeField] private GameObject levelSpawn;
-    [SerializeField] private GameObject pickUpWeaponText;
+    [Header("Interacting Layers")]
+    [SerializeField] private LayerMask includeLayer;
+
+    [Header("Teleport Trasnform")]
+    [SerializeField] private Transform levelSpawn;
+
+    [Header("Player Trasnform")]
+    [SerializeField] private Transform player;
+
+    [Header("Selec tWeapon UI Dependencies")]
+    [SerializeField] private SelectWeaponUI selectWeaponUI;
+
+    [Header("Change Player Weapon Dependencies")]
     [SerializeField] private ChangePlayerWeapon changePlayerWeapon;
-    [SerializeField] private GameObject player;
 
-    public PlayerData playerData;
-    public WeaponData weaponData;
- 
-    public bool playerCanTeleport = false;
+    [Header("Weapon Data Dependencies")]
+    [SerializeField] private WeaponData weaponData;
 
-    private void Start()
+    /// <summary>
+    /// Called when another collider enters the trigger.
+    /// Sets the weapon selection text on the UI if the entering collider's layer is included in the specified layer mask.
+    /// </summary>
+    /// <param name="other">The collider that entered the trigger.</param>
+    private void OnTriggerEnter(Collider other)
     {
-        pickUpWeaponText.SetActive(false);
-    }
-
-    private void OnTriggerEnter(Collider player)
-    {
-        if (player.gameObject.CompareTag("Player"))
+        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
-            playerCanTeleport = true;
-            pickUpWeaponText.SetActive(true);
+            selectWeaponUI.SetWeaponSelectionText(true);
         }
     }
 
-    private void OnTriggerExit(Collider player)
+    /// <summary>
+    /// Called when another collider exits the trigger.
+    /// Sets the weapon selection text on the UI to false if the exiting collider's layer is included in the specified layer mask.
+    /// </summary>
+    /// <param name="other">The collider that exited the trigger.</param>
+    private void OnTriggerExit(Collider other)
     {
-        if (player.gameObject.CompareTag("Player"))
+        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
-            playerCanTeleport = false;
-            pickUpWeaponText.SetActive(false);
+            selectWeaponUI.SetWeaponSelectionText(false);
         }
     }
 
-    public void PlayerTeleport() 
+    /// <summary>
+    /// Teleports the player to a specified position and changes their weapon.
+    /// </summary>
+    public void PlayerTeleport()
     {
-        if (playerCanTeleport) 
-        {
-            changePlayerWeapon.ChangeWeapon(weaponData.weaponID);
-            player.transform.position = levelSpawn.transform.position;
-        }
+        changePlayerWeapon.ChangeWeapon(weaponData.weaponID);
+        player.transform.position = levelSpawn.position;
     }
 }
