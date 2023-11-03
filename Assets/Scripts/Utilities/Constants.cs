@@ -9,6 +9,10 @@ public static class Constants
     public const float TWO_F = 2.0f;
     #endregion
 
+    #region ANGLES
+    public const float NINETY = 90.0f;
+    #endregion
+
     #region Z_VALUE_OFFSET_VALUES
     public const float Z_VALUE_OFFSET = -0.5f;
     #endregion

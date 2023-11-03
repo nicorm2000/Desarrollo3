@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class LookAtMouse : MonoBehaviour
 {
+    [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
 
     /// <summary>
@@ -52,8 +53,8 @@ public class LookAtMouse : MonoBehaviour
     /// <param name="rotationAngle">The rotation angle.</param>
     private void SetScaleAndRotation(float rotationAngle)
     {
-        transform.localScale = new Vector3(1f, rotationAngle > 90 || rotationAngle < -90 ? -1f : 1f, 1f);
-        transform.rotation = Quaternion.Euler(0f, 0f, rotationAngle);
+        transform.localScale = new Vector3(Constants.ONE_F, rotationAngle > Constants.NINETY || rotationAngle < -Constants.NINETY ? -Constants.ONE_F : Constants.ONE_F, Constants.ONE_F);
+        transform.rotation = Quaternion.Euler(Constants.ZERO_F, Constants.ZERO_F, rotationAngle);
     }
 
     /// <summary>
