@@ -16,7 +16,7 @@ public class ScreenShake : MonoBehaviour
         Vector3 startPosition = GetStartPosition();
         float elapsedTime = Constants.ZERO_F;
 
-        while (elapsedTime < duration) 
+        while (elapsedTime < duration)
         {
             elapsedTime += Time.deltaTime;
             float strength = CalculateStrength(elapsedTime);
