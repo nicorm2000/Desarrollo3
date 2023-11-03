@@ -21309,8 +21309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1925dc24356425942af24191fe4863c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cheatsText: {fileID: 1046934544}
   enemyWaveUpdater: {fileID: 279060190}
-  enemyTextWaveUpdater: {fileID: 1046934544}
   waveManager: {fileID: 760154691}
 --- !u!1 &1330588123
 GameObject:
