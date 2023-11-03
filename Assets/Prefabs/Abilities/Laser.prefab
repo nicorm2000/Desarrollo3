@@ -97,8 +97,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04329bbbe44a1ec46b8464e74108ce23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDamage: 100
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 384
   enemyHealth: {fileID: -5129004534547528821, guid: 1d26883000583fa4d95ee31b544ed7ed, type: 3}
+  enemyDamage: 100
 --- !u!65 &1967428187217795333
 BoxCollider:
   m_ObjectHideFlags: 0
