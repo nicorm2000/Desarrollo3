@@ -13,13 +13,8 @@ public class AIShooterChase : MonoBehaviour
 
     public EnemyData enemyData;
     public GameObject target;
-    public AnimatorUtility animator;
 
     public HealthSystem healthSystem;
-
-    public string walk = "Walk";
-    public string idle = "Spawn";
-    public string death = "Death";
 
     private void Start()
     {
@@ -29,28 +24,10 @@ public class AIShooterChase : MonoBehaviour
         isFollowingPlayer = enemyData.ifFollowingPlayer;
         chaseSpeed = enemyData.movementSpeed;
         target = GameObject.FindWithTag("Player");
-
-        animator.PlayAnimation(walk);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            animator.PlayAnimation(walk);
-            Debug.Log("Walk Animation");
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha9))
-        {
-            animator.PlayAnimation(idle);
-            Debug.Log("Idle Animation");
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha8))
-        {
-            animator.PlayAnimation(death);
-            Debug.Log("Death Animation");
-        }
-
         Vector3 directionToPlayer = target.transform.position - transform.position;
         directionToPlayer.z = 0f;
 

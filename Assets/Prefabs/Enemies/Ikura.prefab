@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: 6954440812407169117}
   - component: {fileID: 444156368333031594}
   - component: {fileID: 293908872381631134}
-  - component: {fileID: 3752531181036883942}
   - component: {fileID: 4970129750647362044}
+  - component: {fileID: 73422391711311762}
   m_Layer: 8
   m_Name: Ikura
   m_TagString: Enemy
@@ -60,11 +60,7 @@ MonoBehaviour:
   firePoint: {fileID: 3477892896226474857}
   enemyData: {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}
   target: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
-  animator: {fileID: 3752531181036883942}
   healthSystem: {fileID: -5129004534547528821}
-  walk: Walk
-  idle: Spawn
-  death: Death
 --- !u!114 &-5129004534547528821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,22 +233,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &3752531181036883942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1779284332624663121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54791f204dffbb4458934d140962b9d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animations:
-  - {fileID: 11400000, guid: 9735d62267cbc1240a72dd552d10398e, type: 2}
-  - {fileID: 11400000, guid: 6d412a7cef162ae43ac248dea2f3fdb2, type: 2}
-  - {fileID: 11400000, guid: 8df31f8d22584704cbce9df92f7deafd, type: 2}
 --- !u!114 &4970129750647362044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,6 +247,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 7699837152467073221}
   maxTimer: 0.2
+--- !u!95 &73422391711311762
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779284332624663121}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: db03db695ab7f87429a140547ae4accb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3477892896226474857
 GameObject:
   m_ObjectHideFlags: 0
