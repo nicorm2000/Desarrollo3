@@ -18,7 +18,7 @@ public class LevelToShop : MonoBehaviour
     /// <param name="other">The collider that entered the trigger.</param>
     private void OnTriggerEnter(Collider other)
     {
-        if (((1 << other.gameObject.layer) & includeLayer) != 0)
+        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
             other.transform.position = transform.position;
             doorCollider.SetActive(false);

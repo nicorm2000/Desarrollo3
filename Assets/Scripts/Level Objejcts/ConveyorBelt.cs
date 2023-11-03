@@ -23,7 +23,7 @@ public class ConveyorBelt : MonoBehaviour
 
         if (rb != null)
         {
-            if (((1 << other.gameObject.layer) & includePlayerLayer) != 0)
+            if (((Constants.ONE << other.gameObject.layer) & includePlayerLayer) != Constants.ZERO)
             {
                 isOnConveyorBelt = true;
             }
@@ -41,7 +41,7 @@ public class ConveyorBelt : MonoBehaviour
 
         if (rb != null)
         {
-            if (((1 << other.gameObject.layer) & includePlayerLayer) != 0)
+            if (((Constants.ONE << other.gameObject.layer) & includePlayerLayer) != Constants.ZERO)
             {
                 isOnConveyorBelt = false;
             }
