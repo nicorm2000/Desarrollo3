@@ -3,7 +3,7 @@ using UnityEngine;
 public class ConveyorBelt : MonoBehaviour
 {
     [Header("Interacting Layers")]
-    [SerializeField] private LayerMask includePlayerLayer;
+    [SerializeField] private LayerMask includeLayer;
 
     [Header("Conveyor Belt Speeds")]
     [SerializeField] private float _conveyorBeltSpeed;
@@ -23,7 +23,7 @@ public class ConveyorBelt : MonoBehaviour
 
         if (rb != null)
         {
-            if (((Constants.ONE << other.gameObject.layer) & includePlayerLayer) != Constants.ZERO)
+            if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
             {
                 isOnConveyorBelt = true;
             }
@@ -41,7 +41,7 @@ public class ConveyorBelt : MonoBehaviour
 
         if (rb != null)
         {
-            if (((Constants.ONE << other.gameObject.layer) & includePlayerLayer) != Constants.ZERO)
+            if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
             {
                 isOnConveyorBelt = false;
             }

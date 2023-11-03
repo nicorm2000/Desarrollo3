@@ -2,12 +2,20 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    [SerializeField] private float enemyDamage;
-    [SerializeField] private HealthSystem enemyHealth;
+    [Header("Interacting Layers")]
+    [SerializeField] private LayerMask includeLayer;
 
+    [Header("Health System Dependencies")]
+    [SerializeField] private HealthSystem enemyHealth;
+    [SerializeField] private float enemyDamage;
+
+    /// <summary>
+    /// Handles the event when a collider enters the trigger, causing damage to the collider's health system if its layer is included.
+    /// </summary>
+    /// <param name="other">The collider that entered the trigger.</param>
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
             other.GetComponent<HealthSystem>().TakeDamage(enemyDamage);
         }
