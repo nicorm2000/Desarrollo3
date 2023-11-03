@@ -2,9 +2,11 @@ public static class Constants
 {
     #region NUMBERS
     public const int ZERO = 0;
-    public const int ONE = 0;
+    public const int ONE = 1;
+    public const int TWO = 2;
     public const float ZERO_F = 0f;
     public const float ONE_F = 1.0f;
+    public const float TWO_F = 2.0f;
     #endregion
 
     #region Z_VALUE_OFFSET_VALUES

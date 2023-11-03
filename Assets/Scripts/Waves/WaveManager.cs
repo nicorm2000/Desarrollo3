@@ -17,7 +17,7 @@ public class WaveManager : MonoBehaviour
     [Header("GameObjects")]
     [SerializeField] private GameObject door;
     [SerializeField] private GameObject basket;
-    
+
     [Header("Shop Dependencies")]
     [SerializeField] private Shop shop;
 
@@ -78,6 +78,24 @@ public class WaveManager : MonoBehaviour
                 Debug.Log("Game Finished");
                 StartCoroutine(waveUI.ShowWaveCompletedUI());
             }
+        }
+    }
+
+    /// <summary>
+    /// Updates the wave value and displays the corresponding wave text on the UI.
+    /// </summary>
+    public void UpdateWaveValue()
+    {
+        if (currentWaveIndex >= waves.Length - Constants.ONE)
+        {
+            return;
+        }
+        else 
+        {
+            currentWaveIndex++;
+            Debug.Log(currentWaveIndex);
+            Debug.Log(waves.Length - Constants.ONE);
+            waveUI.ShowWaveText(waves[currentWaveIndex].waveIndex);
         }
     }
 

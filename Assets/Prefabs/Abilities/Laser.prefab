@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   includeLayer:
     serializedVersion: 2
-    m_Bits: 384
+    m_Bits: 256
   enemyHealth: {fileID: -5129004534547528821, guid: 1d26883000583fa4d95ee31b544ed7ed, type: 3}
   enemyDamage: 100
 --- !u!65 &1967428187217795333

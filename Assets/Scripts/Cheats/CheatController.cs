@@ -1,26 +1,30 @@
 using UnityEngine;
 
+#if UNITY_EDITOR
 public class CheatController : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPlaceholder;
+    [Header("Cheats")]
+    [SerializeField] private GameObject cheatsText;
+    
+    [Header("Wave Manager")]
+    [SerializeField] private GameObject enemyWaveUpdater;
+    [SerializeField] private WaveManager waveManager;
 
-    public EnemyData[] enemyData;
-
-    private void Update()
+    /// <summary>
+    /// Starts the cheats.
+    /// </summary>
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            DestroyEnemyPlaceholder();
-        }
+        cheatsText.SetActive(true);
+        enemyWaveUpdater.SetActive(true);
     }
 
-    private void DestroyEnemyPlaceholder()
+    /// <summary>
+    /// Updates the wave in the wave manager.
+    /// </summary>
+    public void UpdateWave()
     {
-        for (int i = 0; i < enemyData.Length; i++)
-
-        if (enemyData[i].model != null)
-        {
-            Destroy(enemyData[i].model);
-        }
+        waveManager.UpdateWaveValue();
     }
 }
+#endif
