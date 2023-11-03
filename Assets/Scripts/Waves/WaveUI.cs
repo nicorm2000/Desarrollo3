@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
 public class WaveUI : MonoBehaviour
 {
@@ -16,8 +15,9 @@ public class WaveUI : MonoBehaviour
     [SerializeField] private float waveShowDuration;
     [SerializeField] private float waveShowCompletedDuration;
 
-    [Header("Win Scene")]
-    [SerializeField] private int winScene;
+    [Header("Scene Manager Dependencies")]
+    [SerializeField] private MySceneManager mySceneManager;
+    [SerializeField] private string winScene;
 
     /// <summary>
     /// Displays the wave index on the waveText UI element.
@@ -52,6 +52,6 @@ public class WaveUI : MonoBehaviour
         waveCompleted.SetActive(true);
         yield return new WaitForSeconds(waveShowCompletedDuration);
 
-        SceneManager.LoadScene(winScene);
+        mySceneManager.LoadSceneByName(winScene);
     }
 }

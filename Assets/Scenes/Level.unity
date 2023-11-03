@@ -1574,7 +1574,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1370068668}
-  scene: 0
+  mySceneManager: {fileID: 433192595}
+  sceneName: MainMenu
 --- !u!114 &127761909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6899,6 +6900,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 350674183}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &433192593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 433192594}
+  - component: {fileID: 433192595}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &433192594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433192593}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &433192595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433192593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20bf2194df1f06b49b99bcda2b3d2cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &433290769
 GameObject:
   m_ObjectHideFlags: 0
@@ -7913,7 +7958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: loseScene
-      value: 3
+      value: Lose
       objectReference: {fileID: 0}
     - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: playerData
@@ -7923,6 +7968,10 @@ PrefabInstance:
       propertyPath: screenShake
       value: 
       objectReference: {fileID: 963194230}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: mySceneManager
+      value: 
+      objectReference: {fileID: 433192595}
     - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: playerHealthUI
       value: 
@@ -12190,7 +12239,8 @@ MonoBehaviour:
   waveText: {fileID: 1662475355}
   waveShowDuration: 3
   waveShowCompletedDuration: 3
-  winScene: 5
+  mySceneManager: {fileID: 433192595}
+  winScene: Win
 --- !u!1 &764287423
 GameObject:
   m_ObjectHideFlags: 0
@@ -34652,6 +34702,7 @@ SceneRoots:
   - {fileID: 1980217874}
   - {fileID: 521703870}
   - {fileID: 435437618}
+  - {fileID: 433192594}
   - {fileID: 760154690}
   - {fileID: 1327362359}
   - {fileID: 5189041369103466874}

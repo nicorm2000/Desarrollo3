@@ -1,11 +1,10 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
-    
+
     [Header("Screen Shake Dependencies")]
     [SerializeField] private ScreenShake screenShake;
     
@@ -13,8 +12,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private PlayerHealthUI playerHealthUI;
     [SerializeField] private float borderColorDuration;
 
-    [Header("Lose Scene")]
-    [SerializeField] private int loseScene;
+    [Header("Scene Manager Dependencies")]
+    [SerializeField] private MySceneManager mySceneManager;
+    [SerializeField] private string loseScene;
 
     /// <summary>
     /// Initializes the player's data and updates the player's health UI.
@@ -58,6 +58,6 @@ public class PlayerHealth : MonoBehaviour
         playerData.ResetPlayerFireDamage();
         playerData.ResetPlayerStacks();
         playerData.currentHealth = Constants.ZERO_F;
-        SceneManager.LoadScene(loseScene);
+        mySceneManager.LoadSceneByName(loseScene);
     }
 }

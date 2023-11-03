@@ -895,13 +895,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1435219475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ce76e4ca97f1d41b239450d1388afb, type: 3}
+  m_Script: {fileID: 11500000, guid: 20bf2194df1f06b49b99bcda2b3d2cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName:
-  - MainMenu
-  - Tutorial
-  - Level
 --- !u!4 &1435219477
 Transform:
   m_ObjectHideFlags: 0
@@ -1181,7 +1177,7 @@ GameObject:
   - component: {fileID: 1812733061}
   - component: {fileID: 1812733064}
   m_Layer: 5
-  m_Name: Button
+  m_Name: BackToMainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1253,14 +1249,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1435219476}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: LoadMenu
-        m_Mode: 1
+        m_MethodName: LoadSceneByName
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1812733062
