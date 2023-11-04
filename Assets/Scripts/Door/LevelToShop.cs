@@ -2,9 +2,6 @@ using UnityEngine;
 
 public class LevelToShop : MonoBehaviour
 {
-    [Header("Interacting Layers")]
-    [SerializeField] private LayerMask includeLayer;
-
     [Header("Teleport Location")]
     [SerializeField] private Transform spawnWeaponSelect;
 
@@ -15,12 +12,12 @@ public class LevelToShop : MonoBehaviour
     /// <summary>
     /// Handles the event when a collider enters the trigger, performs specific actions if the collider's layer is included.
     /// </summary>
-    /// <param name="other">The collider that entered the trigger.</param>
-    private void OnTriggerEnter(Collider other)
+    /// <param name="player">The collider that entered the trigger.</param>
+    private void OnTriggerEnter(Collider player)
     {
-        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
+        if (player.gameObject.CompareTag("Player"))
         {
-            other.transform.position = transform.position;
+            player.transform.position = spawnWeaponSelect.transform.position;
             doorCollider.SetActive(false);
             basket.SetActive(false);
         }
