@@ -15,10 +15,16 @@ public class EnemyAnimationsStateController : MonoBehaviour
     private void OnEnable()
     {
         aiChase.onEnemyWalkChange += HandleEnemyMovementChange;
+        aiShooterChase.onShooterEnemyWalkChange += HandleShooterEnemyMovement;
         healthSystem.onEnemyDeadChange += HandleEnemyDeadChange;
     }
 
     private void HandleEnemyMovementChange(bool isWalkin) 
+    {
+        animator.SetBool("IsWalking", isWalkin);
+    }
+
+    private void HandleShooterEnemyMovement(bool isWalkin) 
     {
         animator.SetBool("IsWalking", isWalkin);
     }
@@ -31,6 +37,7 @@ public class EnemyAnimationsStateController : MonoBehaviour
     private void OnDisable()
     {
         aiChase.onEnemyWalkChange -= HandleEnemyMovementChange;
+        aiShooterChase.onShooterEnemyWalkChange -= HandleShooterEnemyMovement;
         healthSystem.onEnemyDeadChange -= HandleEnemyDeadChange;
     }
 }

@@ -46,8 +46,8 @@ public class HealthSystem : MonoBehaviour
     {
         if (health <= 0)
         {
-            timer -= Time.deltaTime;
             onEnemyDeadChange?.Invoke(!_dead);
+            timer -= Time.deltaTime;
 
             if (!_dead && timer <= 0)
             {

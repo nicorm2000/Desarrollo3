@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 293908872381631134}
   - component: {fileID: 4970129750647362044}
   - component: {fileID: 73422391711311762}
+  - component: {fileID: -5462635961587623063}
   m_Layer: 8
   m_Name: Ikura
   m_TagString: Enemy
@@ -55,12 +56,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffd3f73c0c2411d4f9fcbcc344262568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 6243113850147215193, guid: d7618c043af461a48970a8746eeecb95, type: 3}
   chaseSpeed: 1
+  bullet: {fileID: 6243113850147215193, guid: d7618c043af461a48970a8746eeecb95, type: 3}
   firePoint: {fileID: 3477892896226474857}
   enemyData: {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}
   target: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
   healthSystem: {fileID: -5129004534547528821}
+  maxTime: 1
 --- !u!114 &-5129004534547528821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,14 +75,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ddd9aa9d7c4934ba96ad6daa6290a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dead: 0
+  enemyData: {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}
+  firePoint: {fileID: 3477892896226474857}
   enemyCollider: {fileID: 6954440812407169117}
   enemyTriggerCollider: {fileID: 444156368333031594}
   shadow: {fileID: 8568182000946973724}
   health: 0
-  _dead: 0
-  enemyData: {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}
-  firePoint: {fileID: 3477892896226474857}
   hitMarker: {fileID: 4970129750647362044}
+  maxTime: 0.5
 --- !u!212 &7699837152467073221
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -268,6 +271,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-5462635961587623063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779284332624663121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e40a5b158ce054a8af9ddb4eeb99c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 73422391711311762}
+  aiChase: {fileID: 5770740514192762869, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
+  aiShooterChase: {fileID: 7899699859354876490}
+  healthSystem: {fileID: -5129004534547528821}
 --- !u!1 &3477892896226474857
 GameObject:
   m_ObjectHideFlags: 0
