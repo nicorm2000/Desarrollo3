@@ -1,25 +1,33 @@
+using System;
 using UnityEngine;
 
 public class AIShooterChase : MonoBehaviour
 {
-    [SerializeField] private GameObject bullet;
+
+    [Header("Setup")]
+    private bool isWalking;
+
+    public event Action<bool> onShooterEnemyWalkChange;
 
     private bool isFollowingPlayer;
 
     private float nextFireTime;
 
     public float chaseSpeed;
+
+    [Header("Referemces")]
+    [SerializeField] private GameObject bullet;
     public GameObject firePoint;
 
     public EnemyData enemyData;
     public GameObject target;
-    public AnimatorUtility animator;
 
     public HealthSystem healthSystem;
 
-    public string walk = "Walk";
-    public string idle = "Spawn";
-    public string death = "Death";
+    [Header("Timer")]
+    [SerializeField] private float maxTime = 1f;
+    private float timer = 0f;
+
 
     private void Start()
     {
@@ -29,26 +37,27 @@ public class AIShooterChase : MonoBehaviour
         isFollowingPlayer = enemyData.ifFollowingPlayer;
         chaseSpeed = enemyData.movementSpeed;
         target = GameObject.FindWithTag("Player");
-
-        animator.PlayAnimation(walk);
+        timer = maxTime;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha0))
+        ShooterEnemyMovement();
+
+        if (healthSystem._dead) 
         {
-            animator.PlayAnimation(walk);
-            Debug.Log("Walk Animation");
+            onShooterEnemyWalkChange?.Invoke(false);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha9))
+    }
+
+    private void ShooterEnemyMovement() 
+    {
+        timer -= Time.deltaTime;
+
+        if (timer <= 0f)
         {
-            animator.PlayAnimation(idle);
-            Debug.Log("Idle Animation");
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha8))
-        {
-            animator.PlayAnimation(death);
-            Debug.Log("Death Animation");
+            timer = maxTime;
+            isWalking = true;
         }
 
         Vector3 directionToPlayer = target.transform.position - transform.position;
@@ -56,7 +65,6 @@ public class AIShooterChase : MonoBehaviour
 
         float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
         firePoint.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-
 
         if (isFollowingPlayer)
         {
@@ -68,6 +76,8 @@ public class AIShooterChase : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(currentPosition, dirToPlayer, enemyData.avoidanceDistance);
 
             Debug.DrawRay(currentPosition, dirToPlayer, Color.red);
+
+            onShooterEnemyWalkChange?.Invoke(isWalking);
 
             if (Vector3.Distance(transform.position, target.transform.position) <= enemyData.shootDistance)
             {

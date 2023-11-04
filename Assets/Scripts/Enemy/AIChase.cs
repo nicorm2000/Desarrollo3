@@ -1,44 +1,50 @@
+using System;
 using UnityEngine;
 
 public class AIChase : MonoBehaviour
 {
+    [Header("Setup")]
     public float chaseSpeed;
 
+    public event Action<bool> onEnemyWalkChange;
+
+    private bool isWalking;
+
+    [Header("References")]
+    [SerializeField] private HealthSystem healthSystem;
     public EnemyData enemyData;
     public GameObject target;
-    public AnimatorUtility animator;
+    
 
-    public string walk = "Walk";
-    public string idle = "Spawn";
-    public string death = "Death";
+    [Header("Timer")]
+    [SerializeField] private float maxTime = 1f;
+    private float timer = 0f;
 
     private void Start()
     {
         chaseSpeed = enemyData.movementSpeed;
         target = GameObject.FindWithTag("Player");
-
-        if (animator.animations != null)
-        {
-            animator.PlayAnimation(walk);
-        }
+        timer = maxTime;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha0) && animator.animations != null)
+        EnemyMovement();
+
+        if (healthSystem._dead) 
         {
-            animator.PlayAnimation(walk);
-            Debug.Log("Walk Animation");
+            onEnemyWalkChange?.Invoke(false);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha9) && animator.animations != null)
+    }
+
+    private void EnemyMovement() 
+    {
+        timer -= Time.deltaTime;
+
+        if (timer <= 0f)
         {
-            animator.PlayAnimation(idle);
-            Debug.Log("Idle Animation");
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha8) && animator.animations != null)
-        {
-            animator.PlayAnimation(death);
-            Debug.Log("Death Animation");
+            timer = maxTime;
+            isWalking = true;
         }
 
         Vector2 playerPosition = target.transform.position;
@@ -49,6 +55,8 @@ public class AIChase : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(currentPosition, dirToPlayer, enemyData.avoidanceDistance);
 
         Debug.DrawRay(currentPosition, dirToPlayer, Color.red);
+
+        onEnemyWalkChange?.Invoke(isWalking);
 
         if (hit.collider != null)
         {

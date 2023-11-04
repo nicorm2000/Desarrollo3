@@ -11,7 +11,7 @@ public class PlayerData : ScriptableObject
     public float currentHealth;
     public float maxHealth;
     public float speed;
-    public bool _isDead;
+    public bool _isDead = false;
     public WeaponData[] weaponData;
 
     [Header("Player Animator")]

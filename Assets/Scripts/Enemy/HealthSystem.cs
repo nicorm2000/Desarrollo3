@@ -1,11 +1,10 @@
+using System;
+using System.Threading;
 using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
-    [SerializeField] private Collider enemyCollider;
-    [SerializeField] private Collider enemyTriggerCollider;
-    [SerializeField] private GameObject shadow;
-    [SerializeField] private float health = 0;
+    [Header("Setup")]
     private ZoneTriggeredEffect _triggerEffect;
     private SpriteRenderer _spriteRenderer;
 
@@ -14,8 +13,20 @@ public class HealthSystem : MonoBehaviour
     public GameObject firePoint;
     public static int enemyCount;
 
+    public event Action<bool> onEnemyDeadChange;
+
+    [Header("References")]
+    [SerializeField] private Collider enemyCollider;
+    [SerializeField] private Collider enemyTriggerCollider;
+    [SerializeField] private GameObject shadow;
+    [SerializeField] private float health = 0;
+
     [Header("Hit Marker")]
     [SerializeField] private HitMarker hitMarker;
+
+    [Header("Timer")]
+    [SerializeField] private float maxTime = 0;
+    private float timer = 0f;
 
     private void Start()
     {
@@ -28,24 +39,27 @@ public class HealthSystem : MonoBehaviour
         health = enemyData.health;
         _triggerEffect = GetComponent<ZoneTriggeredEffect>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        timer = maxTime;
     }
 
     private void Update()
     {
         if (health <= 0)
         {
-            if (!_dead)
+            onEnemyDeadChange?.Invoke(!_dead);
+            timer -= Time.deltaTime;
+
+            if (!_dead && timer <= 0)
             {
-                _spriteRenderer.enabled = false;
                 enemyCollider.enabled = false;
                 enemyTriggerCollider.enabled = false;
                 shadow.SetActive(false);
 
                 _triggerEffect.TriggerEffect();
 
-                Invoke("DestroyEnemy", _triggerEffect.dropData.objectLifespan);
-
                 _dead = true;
+
+                DestroyEnemyTimer();
             }
         }
     }
@@ -56,7 +70,8 @@ public class HealthSystem : MonoBehaviour
         {
             enemyCount--;
         }
-
+        
+        onEnemyDeadChange?.Invoke(false);
         Destroy(gameObject);
     }
 
@@ -64,5 +79,11 @@ public class HealthSystem : MonoBehaviour
     {
         health -= damage;
         hitMarker.HitEnemy();
+    }
+
+    private void DestroyEnemyTimer() 
+    { 
+        _spriteRenderer.enabled = false;
+        Invoke("DestroyEnemy", _triggerEffect.dropData.objectLifespan);  
     }
 }
