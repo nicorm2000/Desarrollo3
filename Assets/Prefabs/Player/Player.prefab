@@ -228,15 +228,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830101192c70d8b4ba186aeb25a7edb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponOverheatUI: {fileID: 0}
   weaponData: {fileID: 0}
   weaponOverheat: 0
   overheatIncreaseAmount: 0
   overheatDecreaseRate: 0
+  weaponOverheatUI: {fileID: 0}
   weaponBlack: {fileID: 0}
   weaponRed: {fileID: 0}
-  weaponUI: {fileID: 0}
   overHeatText: {fileID: 0}
+  overHeatEffect: {fileID: 0}
 --- !u!1 &7469210322841030696
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +419,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 465f59f8c03e4004783549a309762a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
   playerData: {fileID: 0}
   screenShake: {fileID: 0}
+  playerHealthUI: {fileID: 0}
+  borderColorDuration: 0
+  mySceneManager: {fileID: 0}
+  loseScene: 
