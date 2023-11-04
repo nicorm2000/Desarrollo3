@@ -56,6 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseSpeed: 1
+  healthSystem: {fileID: -5129004534547528821}
   enemyData: {fileID: 11400000, guid: bd7b1b114d37eda4888d68aff28b3e28, type: 2}
   target: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
   maxTime: 1

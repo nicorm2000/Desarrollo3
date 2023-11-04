@@ -42,6 +42,16 @@ public class AIShooterChase : MonoBehaviour
 
     private void Update()
     {
+        ShooterEnemyMovement();
+
+        if (healthSystem._dead) 
+        {
+            onShooterEnemyWalkChange?.Invoke(false);
+        }
+    }
+
+    private void ShooterEnemyMovement() 
+    {
         timer -= Time.deltaTime;
 
         if (timer <= 0f)

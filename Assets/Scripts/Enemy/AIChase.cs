@@ -11,8 +11,10 @@ public class AIChase : MonoBehaviour
     private bool isWalking;
 
     [Header("References")]
+    [SerializeField] private HealthSystem healthSystem;
     public EnemyData enemyData;
     public GameObject target;
+    
 
     [Header("Timer")]
     [SerializeField] private float maxTime = 1f;
@@ -27,33 +29,11 @@ public class AIChase : MonoBehaviour
 
     private void Update()
     {
-        timer -= Time.deltaTime;
+        EnemyMovement();
 
-        if (timer <= 0f) 
+        if (healthSystem._dead) 
         {
-            timer = maxTime;
-            isWalking = true;
-        }
-
-        Vector2 playerPosition = target.transform.position;
-        Vector2 currentPosition = transform.position;
-
-        Vector2 dirToPlayer = (playerPosition - currentPosition).normalized;
-
-        RaycastHit2D hit = Physics2D.Raycast(currentPosition, dirToPlayer, enemyData.avoidanceDistance);
-
-        Debug.DrawRay(currentPosition, dirToPlayer, Color.red);
-
-        onEnemyWalkChange?.Invoke(isWalking);
-
-        if (hit.collider != null)
-        {
-            Vector2 avoidanceDirection = Vector2.Perpendicular(hit.normal).normalized;
-            transform.Translate(avoidanceDirection * chaseSpeed * Time.deltaTime);
-        }
-        else
-        {
-            transform.Translate(dirToPlayer * chaseSpeed * Time.deltaTime);
+            onEnemyWalkChange?.Invoke(false);
         }
     }
 
