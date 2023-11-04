@@ -9,10 +9,15 @@ public class PlayerAnimationStateController : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private Abilities abilities;
+    [SerializeField] private PlayerHealth playerHealth;
 
     private void OnEnable()
     {
-        
+        playerMovement.onPlayerWalkChange += HandlePlayerMovementChange;
+        playerMovement.onPlayerIdleChange += HandlePlayerIdleChange;
+        abilities.onPlayerDashChange += HandlePlayerDashChange;
+        playerHealth.onPlayerDeadChange += HandlePlayerDeadChange;
     }
 
     private void HandlePlayerIdleChange(bool isIdle)
@@ -37,6 +42,9 @@ public class PlayerAnimationStateController : MonoBehaviour
 
     private void OnDisable()
     {
-        
+        playerMovement.onPlayerWalkChange -= HandlePlayerMovementChange;
+        playerMovement.onPlayerIdleChange -= HandlePlayerIdleChange;
+        abilities.onPlayerDashChange -= HandlePlayerDashChange;
+        playerHealth.onPlayerDeadChange -= HandlePlayerDeadChange;
     }
 }

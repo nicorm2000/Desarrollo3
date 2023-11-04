@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Abilities : MonoBehaviour
 {
+    public event Action<bool> onPlayerDashChange;
+
     [Header("Player Data")]
     [SerializeField] private PlayerData playerData;
 
@@ -130,9 +133,10 @@ public class Abilities : MonoBehaviour
     {
         if (Input.GetKeyDown(dash) && dashCoolDownCounter <= 0 && dashCounter <= 0)
         {
+            playerData.isDashing = true;
+            onPlayerDashChange?.Invoke(playerData.isDashing);
             dashCoolDownCounter = playerData.dashCooldown;
             dashCounter = playerData.dashLength;
-            playerData.isDashing = true;
             playerData.playerDashMaterial.color = dashColor;
             playerData.activeMoveSpeed = playerData.dashSpeed;
             dashImage.fillAmount = 1f;
@@ -145,6 +149,7 @@ public class Abilities : MonoBehaviour
             if (dashCounter <= 0)
             {
                 playerData.isDashing = false;
+                onPlayerDashChange?.Invoke(playerData.isDashing);
                 playerData.activeMoveSpeed = playerData.speed;
                 playerData.playerDashMaterial.color = playerData.dashColor;
             }

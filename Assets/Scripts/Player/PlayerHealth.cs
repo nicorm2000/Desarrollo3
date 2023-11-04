@@ -1,7 +1,16 @@
+using System;
+using System.Threading;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [Header("Setup")]
+    [SerializeField] private float maxTime = 0.5f;
+    private float timer;
+
+
+    public event Action<bool> onPlayerDeadChange;
+
     [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
 
@@ -24,6 +33,16 @@ public class PlayerHealth : MonoBehaviour
         playerData.ResetPlayerStacks();
         playerData.currentHealth = playerData.maxHealth;
         playerHealthUI.SetMaxAndCurrentHealth(playerData.maxHealth, playerData.currentHealth);
+        timer = maxTime;
+    }
+
+    private void Update()
+    {   
+        if(playerData._isDead == true)
+        {
+            timer -= Time.deltaTime;
+            PlayerDies();
+        }
     }
 
     /// <summary>
@@ -42,11 +61,12 @@ public class PlayerHealth : MonoBehaviour
         {
             playerData.currentHealth = Constants.ZERO_F;
             playerData._isDead = true;
-            PlayerDies();
+            onPlayerDeadChange?.Invoke(playerData._isDead);
         }
         else
         {
             playerData._isDead = false;
+            onPlayerDeadChange?.Invoke(playerData._isDead);
         }
     }
 
@@ -58,6 +78,10 @@ public class PlayerHealth : MonoBehaviour
         playerData.ResetPlayerFireDamage();
         playerData.ResetPlayerStacks();
         playerData.currentHealth = Constants.ZERO_F;
-        mySceneManager.LoadSceneByName(loseScene);
+
+        if (timer <= 0) 
+        {
+            mySceneManager.LoadSceneByName(loseScene);
+        }
     }
 }

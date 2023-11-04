@@ -1,7 +1,15 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public event Action<bool> onPlayerIdleChange;
+    public event Action<bool> onPlayerWalkChange;
+
+    private bool isWalking = false;
+    private bool isIdle = true;
+
+    [Header("References")]
     public PlayerData playerData;
     
     public SelectWeapon[] selectWeapon;
@@ -33,14 +41,31 @@ public class PlayerMovement : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
 
         playerData.movementDirection = new Vector2(moveX, moveY).normalized;
+        onPlayerWalkChange?.Invoke(isIdle);
 
-        if (playerData.movementDirection.x != 0)
+        if (playerData.movementDirection.x != 0) 
+        {
+            isIdle = false;
+            onPlayerWalkChange?.Invoke(false);
+
             playerData.lastHorizontalVector = playerData.movementDirection.x;
+            isWalking = true;
 
-        if (playerData.movementDirection.y != 0)
+            onPlayerWalkChange?.Invoke(isWalking);
+        }
+
+        if (playerData.movementDirection.y != 0) 
+        {
+            isIdle = false;
+            onPlayerWalkChange?.Invoke(false);
+
             playerData.lastVerticalVector = playerData.movementDirection.y;
+            isWalking = true;
 
-        if(Input.GetKeyDown(KeyCode.E))
+            onPlayerWalkChange?.Invoke(isWalking);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
         {
             for (int i = 0; i < 3; i++) 
             {
