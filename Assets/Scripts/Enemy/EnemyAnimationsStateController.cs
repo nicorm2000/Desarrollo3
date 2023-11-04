@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class EnemyAnimationsStateController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Setup")]
+    [SerializeField] private Animator animator;
+
+    [Header("References")]
+    [SerializeField] private AIChase aiChase;
+    [SerializeField] private AIShooterChase aiShooterChase;
+    [SerializeField] private HealthSystem healthSystem;
+
+    private void OnEnable()
     {
-        
+        aiChase.onEnemyWalkChange += HandleEnemyMovementChange;
+        healthSystem.onEnemyDeadChange += HandleEnemyDeadChange;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void HandleEnemyMovementChange(bool isWalkin) 
     {
-        
+        animator.SetBool("IsWalking", isWalkin);
+    }
+
+    private void HandleEnemyDeadChange(bool isDead) 
+    {
+        animator.SetBool("IsDead", isDead);
+    }
+
+    private void OnDisable()
+    {
+        aiChase.onEnemyWalkChange -= HandleEnemyMovementChange;
+        healthSystem.onEnemyDeadChange -= HandleEnemyDeadChange;
     }
 }

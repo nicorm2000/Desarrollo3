@@ -57,6 +57,8 @@ MonoBehaviour:
   chaseSpeed: 1
   enemyData: {fileID: 11400000, guid: bd7b1b114d37eda4888d68aff28b3e28, type: 2}
   target: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+  healthSystem: {fileID: -5129004534547528821}
+  maxTime: 1
 --- !u!114 &-5129004534547528821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +79,7 @@ MonoBehaviour:
   enemyData: {fileID: 11400000, guid: bd7b1b114d37eda4888d68aff28b3e28, type: 2}
   firePoint: {fileID: 0}
   hitMarker: {fileID: -6078158141094380862}
+  maxTime: 0.5
 --- !u!212 &7699837152467073221
 SpriteRenderer:
   m_ObjectHideFlags: 0
