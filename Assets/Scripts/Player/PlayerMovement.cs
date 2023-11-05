@@ -27,7 +27,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        InputManagement();
+        if (playerData._isDead == false) 
+        {
+            InputManagement();
+        }
     }
 
     private void FixedUpdate()

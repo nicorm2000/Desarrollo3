@@ -3273,6 +3273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830101192c70d8b4ba186aeb25a7edb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponData: {fileID: 11400000, guid: c6ae86df7e63a0140b6a976b49dcabee, type: 2}
   weaponOverheat: 100
   overheatIncreaseAmount: 40
@@ -8087,7 +8088,7 @@ PrefabInstance:
       objectReference: {fileID: 132561238}
     - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: maxTime
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: healthBar
@@ -8181,6 +8182,10 @@ PrefabInstance:
       propertyPath: weaponRed
       value: 
       objectReference: {fileID: 1347483447}
+    - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
     - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponData
       value: 
@@ -31069,6 +31074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830101192c70d8b4ba186aeb25a7edb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponData: {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
   weaponOverheat: 100
   overheatIncreaseAmount: 5
