@@ -3283,6 +3283,7 @@ MonoBehaviour:
   weaponRed: {fileID: 1347483447}
   overHeatText: {fileID: 1909702298}
   overHeatEffect: {fileID: 2099446138}
+  screenShake: {fileID: 963194230}
 --- !u!1 &205387884
 GameObject:
   m_ObjectHideFlags: 0
@@ -8193,6 +8194,74 @@ PrefabInstance:
       propertyPath: borderColorDuration
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[1].time
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[2].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[1].value
+      value: 0.2004717
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[0].inSlope
+      value: 1.0023584
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[1].inSlope
+      value: -0.24650033
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[2].inSlope
+      value: -0.2505896
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[0].outSlope
+      value: 1.0023584
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[1].outSlope
+      value: -0.24650033
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[2].outSlope
+      value: -0.2505896
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[1].outWeight
+      value: 0.32291666
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: animationCurve.m_Curve.Array.data[2].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
     - target: {fileID: 4071947474369335987, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
@@ -8265,6 +8334,10 @@ PrefabInstance:
       propertyPath: weaponData
       value: 
       objectReference: {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
+    - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: screenShake
+      value: 
+      objectReference: {fileID: 963194230}
     - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponBlack
       value: 
@@ -14901,39 +14974,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b088b3a9c272c4f9bd1e0a9fbbcd48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1.3364111
-      outSlope: 1.3364111
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.15000103
-      value: 0.20046306
-      inSlope: -0.15517108
-      outSlope: -0.15517108
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.30392075
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -0.23583919
-      outSlope: -0.23583919
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31190,6 +31230,7 @@ MonoBehaviour:
   weaponRed: {fileID: 1636758986}
   overHeatText: {fileID: 1909702298}
   overHeatEffect: {fileID: 2099446138}
+  screenShake: {fileID: 963194230}
 --- !u!1 &1946912801
 GameObject:
   m_ObjectHideFlags: 0
