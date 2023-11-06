@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerAnimator : MonoBehaviour
+public class PlayerFlip : MonoBehaviour
 {
     public PlayerData playerData;
 
@@ -23,9 +23,20 @@ public class PlayerAnimator : MonoBehaviour
         {
             playerData._spriteRenderer.flipX = true;
         }
+
         else
         {
             playerData._spriteRenderer.flipX = false;
         }
+    }
+
+    public void FlipPlayerX() 
+    {
+        playerData.lastHorizontalVector = playerData.movementDirection.x;
+    }
+
+    public void FlipPlayerY() 
+    {
+        playerData.lastVerticalVector = playerData.movementDirection.y;
     }
 }

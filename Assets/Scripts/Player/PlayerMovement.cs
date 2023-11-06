@@ -1,4 +1,5 @@
 using System;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -15,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public SelectWeapon[] selectWeapon;
 
     public ConveyorBelt conveyorBelt;
+
+    public PlayerFlip playerFlip;
 
     private void Start()
     {
@@ -50,9 +53,9 @@ public class PlayerMovement : MonoBehaviour
             isIdle = false;
             onPlayerIdleChange?.Invoke(isIdle);
 
-            playerData.lastHorizontalVector = playerData.movementDirection.x;
-            isWalking = true;
+            playerFlip.FlipPlayerX();
 
+            isWalking = true;
             onPlayerWalkChange?.Invoke(isWalking);
         }
         if (playerData.movementDirection.y != 0) 
@@ -60,9 +63,9 @@ public class PlayerMovement : MonoBehaviour
             isIdle = false;
             onPlayerIdleChange?.Invoke(isIdle);
 
-            playerData.lastVerticalVector = playerData.movementDirection.y;
-            isWalking = true;
+            playerFlip.FlipPlayerY();
 
+            isWalking = true;
             onPlayerWalkChange?.Invoke(isWalking);
         }
 
