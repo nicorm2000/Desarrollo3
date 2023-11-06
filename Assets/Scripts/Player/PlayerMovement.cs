@@ -37,16 +37,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void InputManagement()
     {
+        RestartIdleAnimation();
+
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
         playerData.movementDirection = new Vector2(moveX, moveY).normalized;
-        onPlayerWalkChange?.Invoke(isIdle);
+
 
         if (playerData.movementDirection.x != 0) 
         {
             isIdle = false;
-            onPlayerWalkChange?.Invoke(false);
+            onPlayerIdleChange?.Invoke(isIdle);
 
             playerData.lastHorizontalVector = playerData.movementDirection.x;
             isWalking = true;
@@ -56,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         if (playerData.movementDirection.y != 0) 
         {
             isIdle = false;
-            onPlayerWalkChange?.Invoke(false);
+            onPlayerIdleChange?.Invoke(isIdle);
 
             playerData.lastVerticalVector = playerData.movementDirection.y;
             isWalking = true;
@@ -83,5 +85,13 @@ public class PlayerMovement : MonoBehaviour
         {
             playerData.rigidBody.velocity = new Vector2(playerData.movementDirection.x * playerData.activeMoveSpeed, playerData.movementDirection.y * playerData.activeMoveSpeed);
         }
+    }
+
+    private void RestartIdleAnimation() 
+    {
+        isWalking = false;
+        isIdle = true;
+        onPlayerIdleChange?.Invoke(isIdle);
+        onPlayerWalkChange?.Invoke(isWalking);
     }
 }
