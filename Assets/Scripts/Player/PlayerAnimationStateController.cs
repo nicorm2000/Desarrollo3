@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAnimationStateController : MonoBehaviour
@@ -18,6 +16,13 @@ public class PlayerAnimationStateController : MonoBehaviour
         playerMovement.onPlayerIdleChange += HandlePlayerIdleChange;
         abilities.onPlayerDashChange += HandlePlayerDashChange;
         playerHealth.onPlayerDeadChange += HandlePlayerDeadChange;
+    }
+    private void OnDisable()
+    {
+        playerMovement.onPlayerWalkChange -= HandlePlayerMovementChange;
+        playerMovement.onPlayerIdleChange -= HandlePlayerIdleChange;
+        abilities.onPlayerDashChange -= HandlePlayerDashChange;
+        playerHealth.onPlayerDeadChange -= HandlePlayerDeadChange;
     }
 
     private void HandlePlayerIdleChange(bool isIdle)
@@ -38,13 +43,5 @@ public class PlayerAnimationStateController : MonoBehaviour
     private void HandlePlayerDeadChange(bool isDead) 
     {
         animator.SetBool("IsDead", isDead);
-    }
-
-    private void OnDisable()
-    {
-        playerMovement.onPlayerWalkChange -= HandlePlayerMovementChange;
-        playerMovement.onPlayerIdleChange -= HandlePlayerIdleChange;
-        abilities.onPlayerDashChange -= HandlePlayerDashChange;
-        playerHealth.onPlayerDeadChange -= HandlePlayerDeadChange;
     }
 }

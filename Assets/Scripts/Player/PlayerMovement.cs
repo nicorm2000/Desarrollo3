@@ -56,7 +56,6 @@ public class PlayerMovement : MonoBehaviour
 
             onPlayerWalkChange?.Invoke(isWalking);
         }
-
         if (playerData.movementDirection.y != 0) 
         {
             isIdle = false;
