@@ -47,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
 
         playerData.movementDirection = new Vector2(moveX, moveY).normalized;
 
-
         if (playerData.movementDirection.x != 0) 
         {
             isIdle = false;

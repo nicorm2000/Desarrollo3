@@ -21,8 +21,10 @@ public class AIShooterChase : MonoBehaviour
 
     public EnemyData enemyData;
     public GameObject target;
-
     public HealthSystem healthSystem;
+   
+    public FlipEnemy flipEnemy;
+
 
     [Header("Timer")]
     [SerializeField] private float maxTime = 1f;
@@ -71,11 +73,11 @@ public class AIShooterChase : MonoBehaviour
             Vector2 playerPosition = target.transform.position;
             Vector2 currentPosition = transform.position;
 
-            Vector2 dirToPlayer = (playerPosition - currentPosition).normalized;
+            enemyData.movementDirection = (playerPosition - currentPosition).normalized;
 
-            RaycastHit2D hit = Physics2D.Raycast(currentPosition, dirToPlayer, enemyData.avoidanceDistance);
+            RaycastHit2D hit = Physics2D.Raycast(currentPosition, enemyData.movementDirection, enemyData.avoidanceDistance);
 
-            Debug.DrawRay(currentPosition, dirToPlayer, Color.red);
+            Debug.DrawRay(currentPosition, enemyData.movementDirection, Color.red);
 
             onShooterEnemyWalkChange?.Invoke(isWalking);
 
@@ -88,11 +90,15 @@ public class AIShooterChase : MonoBehaviour
             {
                 Vector2 avoidanceDirection = Vector2.Perpendicular(hit.normal).normalized;
                 transform.Translate(avoidanceDirection * chaseSpeed * Time.deltaTime);
+
+                CheckDirectionToFlip();
             }
 
             else
             {
-                transform.Translate(dirToPlayer * chaseSpeed * Time.deltaTime);
+                transform.Translate(enemyData.movementDirection * chaseSpeed * Time.deltaTime);
+
+                CheckDirectionToFlip();
             }
         }
 
@@ -122,5 +128,18 @@ public class AIShooterChase : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, enemyData.shootDistance);
+    }
+
+    private void CheckDirectionToFlip()
+    {
+        if (enemyData.movementDirection.x != 0)
+        {
+            flipEnemy.FlipEnemyX();
+        }
+
+        if (enemyData.movementDirection.y != 0)
+        {
+            flipEnemy.FlipEnemyY();
+        }
     }
 }

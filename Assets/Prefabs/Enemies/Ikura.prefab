@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 4970129750647362044}
   - component: {fileID: 73422391711311762}
   - component: {fileID: -5462635961587623063}
+  - component: {fileID: 5452798672346223186}
   m_Layer: 8
   m_Name: Ikura
   m_TagString: Enemy
@@ -62,6 +63,7 @@ MonoBehaviour:
   enemyData: {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}
   target: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
   healthSystem: {fileID: -5129004534547528821}
+  flipEnemy: {fileID: 5452798672346223186}
   maxTime: 1
 --- !u!114 &-5129004534547528821
 MonoBehaviour:
@@ -287,6 +289,20 @@ MonoBehaviour:
   aiChase: {fileID: 5770740514192762869, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
   aiShooterChase: {fileID: 7899699859354876490}
   healthSystem: {fileID: -5129004534547528821}
+--- !u!114 &5452798672346223186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779284332624663121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c05fc6f5e45884b870473d995d1241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}
+  playerSprite: {fileID: 7699837152467073221}
 --- !u!1 &3477892896226474857
 GameObject:
   m_ObjectHideFlags: 0
