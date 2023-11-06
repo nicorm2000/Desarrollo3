@@ -515,7 +515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 1551883420}
   moveSpeed: 20
-  returnSpeedMultiplier: 2
+  returnSpeedMultiplier: 0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
