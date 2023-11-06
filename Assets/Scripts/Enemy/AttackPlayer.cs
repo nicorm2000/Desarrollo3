@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class AttackPlayer : MonoBehaviour
@@ -12,6 +13,7 @@ public class AttackPlayer : MonoBehaviour
     [SerializeField] private EnemyData enemyData;
 
     private float damage;
+    private bool invulnerability = false;
 
     private void Start()
     {
@@ -22,8 +24,18 @@ public class AttackPlayer : MonoBehaviour
     {
         if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO && !playerData.isDashing)
         {
-            Debug.Log("a");
-            other.gameObject.GetComponent<PlayerHealth>().takeDamage(damage);
+            if (!invulnerability)
+            {
+                other.gameObject.GetComponent<PlayerHealth>().takeDamage(damage);
+                invulnerability = true;
+            }
+            StartCoroutine(CooldownCoroutine());
         }
+    }
+
+    private IEnumerator CooldownCoroutine()
+    {
+        yield return new WaitForSeconds(playerData.invulnerabilityTime);
+        invulnerability = false;
     }
 }

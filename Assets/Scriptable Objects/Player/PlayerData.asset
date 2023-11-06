@@ -20,6 +20,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
   - {fileID: 11400000, guid: 07aa8a2279e9b2d4ab4941cfb619acbc, type: 2}
   - {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
+  invulnerabilityTime: 1
   _animator: {fileID: 0}
   _spriteRenderer: {fileID: 0}
   dashCooldown: 3

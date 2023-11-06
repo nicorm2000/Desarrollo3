@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 
@@ -13,6 +12,9 @@ public class PlayerData : ScriptableObject
     public float speed;
     public bool _isDead = false;
     public WeaponData[] weaponData;
+
+    [Header("Player Invulnerability")]
+    public float invulnerabilityTime;
 
     [Header("Player Animator")]
     public Animator _animator;
