@@ -14,30 +14,30 @@ public class Abilities : MonoBehaviour
     [SerializeField] private WaveManager waveManager;
 
     [Header("Dash")]
-    public Image dashImage;
-    public KeyCode dash = KeyCode.F2;
-    public Color dashColor = Color.cyan;
+    [SerializeField] private Image dashImage;
+    [SerializeField] private KeyCode dash = KeyCode.F2;
+    [SerializeField] private Color dashColor = Color.cyan;
     private float dashCooldown = 3f;
     private float dashCounter = 0;
     private float dashCoolDownCounter = 0;
 
     [Header("Slower")]
-    public GameObject slowerLogo;
-    public Image slowerImage;
-    public KeyCode slower = KeyCode.F2;
-    public Color slowerColor = Color.cyan;
-    public GameObject prefabToSpawn;
-    public float slowerLifetime = 5f;
-    public float slowerZOffset = 5f;
+    [SerializeField] private GameObject slowerLogo;
+    [SerializeField] private Image slowerImage;
+    [SerializeField] private KeyCode slower = KeyCode.F2;
+    [SerializeField] private Color slowerColor = Color.cyan;
+    [SerializeField] private GameObject prefabToSpawn;
+    [SerializeField] private float slowerLifetime = 5f;
+    [SerializeField] private float slowerZOffset = 5f;
     private float slowerCooldown = 3f;
     private bool isCooldownSlower = false;
 
     [Header("Laser")]
-    public GameObject laserLogo;
-    public Image laserImage;
-    public KeyCode laser = KeyCode.F3;
-    public Color laserColor = Color.cyan;
-    public GameObject laserObject;
+    [SerializeField] private GameObject laserLogo;
+    [SerializeField] private Image laserImage;
+    [SerializeField] private KeyCode laser = KeyCode.F3;
+    [SerializeField] private Color laserColor = Color.cyan;
+    [SerializeField] private GameObject laserObject;
     private float laserCooldown = 3f;
     private bool isCooldownLaser = false;
 
