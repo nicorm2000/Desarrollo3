@@ -76,12 +76,12 @@ public class PlayerHealth : MonoBehaviour
     private void PlayerDies()
     {
         playerData.ResetPlayerFireDamage();
-        playerData.ResetPlayerStacks();
         playerData.currentHealth = Constants.ZERO_F;
 
         if (timer <= 0) 
         {
             mySceneManager.LoadSceneByName(loseScene);
+            playerData.ResetPlayerStacks();
         }
     }
 }

@@ -63,6 +63,7 @@ public class PlayerData : ScriptableObject
 
     public void ResetPlayerStacks() 
     {
+        _isDead = false;
         enterPlayer = false;
         healthStackID = 0;
         speedStackID = 0;
