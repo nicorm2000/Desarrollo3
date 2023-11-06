@@ -3,27 +3,44 @@ using UnityEngine;
 public class CameraDrag : MonoBehaviour
 {
     [Header("Drag Configuration")]
-    [SerializeField] private float dragSpeed;
-    [SerializeField] private Vector3 cameraPos;
-    [SerializeField] private Vector3 cameraOrigin;
+    [SerializeField] private Transform targetTransform;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float returnSpeedMultiplier;
 
-    private void LateUpdate()
+    private Vector3 initialPosition;
+    private bool isDragging = false;
+
+    private void Start()
     {
-        if (Input.GetMouseButton(1))
+        initialPosition = transform.position;
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(1))
         {
-            cameraOrigin = Input.mousePosition;
-            return;
+            isDragging = true;
         }
 
-        if (!Input.GetMouseButton(1))
+        if (Input.GetMouseButtonUp(1))
         {
-            cameraOrigin = cameraPos;
-            return;
+            isDragging = false;
         }
 
-        Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - cameraOrigin);
-        Vector3 move = new Vector3(pos.x * dragSpeed * Time.deltaTime, 0, pos.y * dragSpeed * Time.deltaTime);
+        if (isDragging)
+        {
+            float mouseX = Input.GetAxis("Mouse X");
+            float mouseY = Input.GetAxis("Mouse Y");
 
-        transform.Translate(move, Space.World);
+            Vector3 movement = new Vector3(-mouseX, -mouseY, 0f) * moveSpeed * Time.deltaTime;
+            transform.Translate(movement, Space.World);
+        }
+        else
+        {
+            transform.position = Vector3.Lerp(transform.position, targetTransform.position, moveSpeed * Time.deltaTime);
+            float distance = Vector3.Distance(transform.position, initialPosition);
+            float returnSpeed = moveSpeed * returnSpeedMultiplier / distance;
+            transform.position = Vector3.Lerp(transform.position, initialPosition, Mathf.Clamp01(returnSpeed * Time.deltaTime));
+        }
     }
 }
