@@ -56,13 +56,13 @@ public class WaveManager : MonoBehaviour
 
         if (HealthSystem.enemyCount != Constants.ZERO)
         {
-            return;
-        }
+            if (waves[currentWaveIndex].waveIndex == _maxWaves)
+            {
+                ActivateShop();
+                SetShopWaves();
+            }
 
-        if (waves[currentWaveIndex].waveIndex == _maxWaves)
-        {
-            ActivateShop();
-            SetShopWaves();
+            return;
         }
 
         if (!_canSpawn)
@@ -90,7 +90,7 @@ public class WaveManager : MonoBehaviour
         {
             return;
         }
-        else 
+        else
         {
             currentWaveIndex++;
             Debug.Log(currentWaveIndex);

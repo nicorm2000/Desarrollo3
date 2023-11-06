@@ -3273,7 +3273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830101192c70d8b4ba186aeb25a7edb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponData: {fileID: 11400000, guid: c6ae86df7e63a0140b6a976b49dcabee, type: 2}
   weaponOverheat: 100
   overheatIncreaseAmount: 40
@@ -31074,7 +31073,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830101192c70d8b4ba186aeb25a7edb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponData: {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
   weaponOverheat: 100
   overheatIncreaseAmount: 5
@@ -31716,7 +31714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   includeLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   _conveyorBeltSpeed: 200
 --- !u!23 &1996006899
 MeshRenderer:
@@ -33098,6 +33096,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnWeaponSelect: {fileID: 2079331785}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 64
   doorCollider: {fileID: 2082787381}
   basket: {fileID: 1674702628}
 --- !u!4 &2082787385
