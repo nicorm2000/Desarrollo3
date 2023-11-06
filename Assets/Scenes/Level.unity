@@ -8074,6 +8074,80 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487098595}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &503203926
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1941617696}
+    m_Modifications:
+    - target: {fileID: 1985147029888108066, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419241411677229725, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419241411677229725, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419241411677229725, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419241411677229725, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419241411677229725, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419241411677229725, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419241411677229725, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419241411677229725, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419241411677229725, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419241411677229725, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451043014529213519, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+      propertyPath: lengthInSec
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451043014529213519, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166106469925922464, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+      propertyPath: m_Name
+      value: Dust
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+--- !u!4 &503203927 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3419241411677229725, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+  m_PrefabInstance: {fileID: 503203926}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &521703870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8484,6 +8558,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1973117993556571072, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 115717015}
+    - targetCorrespondingSourceObject: {fileID: 1973117993556571072, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 503203927}
     - targetCorrespondingSourceObject: {fileID: 4071947474369335987, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       insertIndex: 0
       addedObject: {fileID: 2099446139}
@@ -30493,6 +30570,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!198 &1911285158 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5451043014529213519, guid: a1095b58f8c31fb49b42e63d66e4f962, type: 3}
+  m_PrefabInstance: {fileID: 503203926}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1914936633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31015,6 +31097,7 @@ MonoBehaviour:
   dashImage: {fileID: 1946912803}
   dash: 32
   dashColor: {r: 0, g: 1, b: 1, a: 1}
+  dustParticles: {fileID: 1911285158}
   slowerLogo: {fileID: 825329472}
   slowerImage: {fileID: 312420385}
   slower: 50

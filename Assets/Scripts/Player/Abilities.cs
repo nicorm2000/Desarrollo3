@@ -17,6 +17,7 @@ public class Abilities : MonoBehaviour
     [SerializeField] private Image dashImage;
     [SerializeField] private KeyCode dash = KeyCode.F2;
     [SerializeField] private Color dashColor = Color.cyan;
+    [SerializeField] private ParticleSystem dustParticles;
     private float dashCooldown = 3f;
     private float dashCounter = 0;
     private float dashCoolDownCounter = 0;
@@ -134,6 +135,7 @@ public class Abilities : MonoBehaviour
         if (Input.GetKeyDown(dash) && dashCoolDownCounter <= 0 && dashCounter <= 0)
         {
             playerData.isDashing = true;
+            dustParticles.Play();
             onPlayerDashChange?.Invoke(playerData.isDashing);
             dashCoolDownCounter = playerData.dashCooldown;
             dashCounter = playerData.dashLength;
