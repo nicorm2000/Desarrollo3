@@ -8,8 +8,10 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float maxTime = 0.5f;
     private float timer;
 
-
     public event Action<bool> onPlayerDeadChange;
+
+    [Header("Camera Shake Configuration")]
+    [SerializeField] private float duration;
 
     [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
@@ -51,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
     /// <param name="damage">The amount of damage to inflict.</param>
     public void takeDamage(float damage) 
     {
-        StartCoroutine(screenShake.Shake());
+        StartCoroutine(screenShake.Shake(duration));
         StartCoroutine(playerHealthUI.ChangeBorderColor(Color.red, borderColorDuration));
         
         playerData.currentHealth -= damage;

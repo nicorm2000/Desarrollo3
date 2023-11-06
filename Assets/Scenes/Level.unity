@@ -3790,6 +3790,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 29.412
       objectReference: {fileID: 0}
+    - target: {fileID: 8588351371002803502, guid: 2113218d76d074246bff746ba2506d73, type: 3}
+      propertyPath: playerHealthUI
+      value: 
+      objectReference: {fileID: 1941617730}
     - target: {fileID: 9222395689140452985, guid: 2113218d76d074246bff746ba2506d73, type: 3}
       propertyPath: m_Name
       value: MedKit (1)
@@ -8156,6 +8160,10 @@ PrefabInstance:
     - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: maxTime
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: duration
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: healthBar
@@ -14926,7 +14934,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  duration: 1
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0

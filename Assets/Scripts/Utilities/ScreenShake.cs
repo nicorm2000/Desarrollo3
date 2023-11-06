@@ -5,13 +5,12 @@ public class ScreenShake : MonoBehaviour
 {
     [Header("Animation Configuration")]
     [SerializeField] private AnimationCurve animationCurve;
-    [SerializeField] private float duration;
 
     /// <summary>
     /// Performs a shake effect over a specified duration.
     /// </summary>
     /// <returns>An enumerator for the shake effect.</returns>
-    public IEnumerator Shake()
+    public IEnumerator Shake(float duration)
     {
         Vector3 startPosition = GetStartPosition();
         float elapsedTime = Constants.ZERO_F;
@@ -19,22 +18,12 @@ public class ScreenShake : MonoBehaviour
         while (elapsedTime < duration)
         {
             elapsedTime += Time.deltaTime;
-            float strength = CalculateStrength(elapsedTime);
+            float strength = animationCurve.Evaluate(elapsedTime / duration);
             ApplyOffset(startPosition, strength);
             yield return null;
         }
 
         ResetPosition(startPosition);
-    }
-
-    /// <summary>
-    /// Calculates the strength of the shake based on the elapsed time.
-    /// </summary>
-    /// <param name="elapsedTime">The elapsed time since the shake started.</param>
-    /// <returns>The strength of the shake.</returns>
-    private float CalculateStrength(float elapsedTime)
-    {
-        return animationCurve.Evaluate(elapsedTime / duration);
     }
 
     /// <summary>
