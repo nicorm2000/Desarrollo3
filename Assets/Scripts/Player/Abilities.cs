@@ -137,7 +137,6 @@ public class Abilities : MonoBehaviour
             onPlayerDashChange?.Invoke(playerData.isDashing);
             dashCoolDownCounter = playerData.dashCooldown;
             dashCounter = playerData.dashLength;
-            playerData.playerDashMaterial.color = dashColor;
             playerData.activeMoveSpeed = playerData.dashSpeed;
             dashImage.fillAmount = 1f;
         }
@@ -151,7 +150,6 @@ public class Abilities : MonoBehaviour
                 playerData.isDashing = false;
                 onPlayerDashChange?.Invoke(playerData.isDashing);
                 playerData.activeMoveSpeed = playerData.speed;
-                playerData.playerDashMaterial.color = playerData.dashColor;
             }
         }
 
