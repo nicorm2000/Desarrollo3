@@ -8110,6 +8110,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 93a210f0a74a08042a5ad21800f0279b, type: 3}
+    - target: {fileID: 1674601915196207430, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674601915196207430, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674601915196207430, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1973117993556571072, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -85.80882
@@ -21965,7 +21977,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1370068669
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28307,7 +28319,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5ec502e3c505f9c4a8a4e2bd2c1968c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c1e46e1eca15c3541ae04b660ee50ecc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
