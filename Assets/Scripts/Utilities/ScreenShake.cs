@@ -3,14 +3,11 @@ using UnityEngine;
 
 public class ScreenShake : MonoBehaviour
 {
-    [Header("Animation Configuration")]
-    [SerializeField] private AnimationCurve animationCurve;
-
     /// <summary>
     /// Performs a shake effect over a specified duration.
     /// </summary>
     /// <returns>An enumerator for the shake effect.</returns>
-    public IEnumerator Shake(float duration)
+    public IEnumerator Shake(float duration, AnimationCurve animationCurve)
     {
         Vector3 startPosition = GetStartPosition();
         float elapsedTime = Constants.ZERO_F;

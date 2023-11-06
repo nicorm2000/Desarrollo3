@@ -2,24 +2,28 @@ using UnityEngine;
 
 public class AttackPlayer : MonoBehaviour
 {
-    private PlayerHealth playerHealth;
+    [Header("Interacting Layers")]
+    [SerializeField] private LayerMask includeLayer;
+
+    [Header("Player Data Dependencies")]
+    [SerializeField] private PlayerData playerData;
+
+    [Header("Enemy Data Dependencies")]
+    [SerializeField] private EnemyData enemyData;
 
     private float damage;
-
-    public PlayerData playerData;
-    public EnemyData enemyData;
 
     private void Start()
     {
         damage = enemyData.damage;
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
-    private void OnTriggerEnter(Collider Enemy)
+    private void OnTriggerEnter(Collider other)
     {
-        if (Enemy.gameObject.CompareTag("Player") && !playerData.isDashing)
+        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO && !playerData.isDashing)
         {
-            playerHealth.takeDamage(damage);
+            Debug.Log("a");
+            other.gameObject.GetComponent<PlayerHealth>().takeDamage(damage);
         }
     }
 }
