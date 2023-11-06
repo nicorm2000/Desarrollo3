@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: -2754815290973936051}
   - component: {fileID: 2919823242023150736}
   - component: {fileID: -3042730842400570739}
+  - component: {fileID: -7042003597646239741}
   m_Layer: 8
   m_Name: Futomaki
   m_TagString: Enemy
@@ -59,6 +60,7 @@ MonoBehaviour:
   healthSystem: {fileID: -5129004534547528821}
   enemyData: {fileID: 11400000, guid: f43bbcc79f28a0943a0752730dd121af, type: 2}
   target: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+  flipEnemy: {fileID: -7042003597646239741}
   maxTime: 1
 --- !u!114 &-5129004534547528821
 MonoBehaviour:
@@ -158,7 +160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 646c66060c2c9004db9c265f5001c254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invulnerable: 1
   includeLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -288,6 +289,20 @@ MonoBehaviour:
   aiChase: {fileID: 5770740514192762869}
   aiShooterChase: {fileID: 7899699859354876490, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   healthSystem: {fileID: -5129004534547528821}
+--- !u!114 &-7042003597646239741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779284332624663121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c05fc6f5e45884b870473d995d1241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: f43bbcc79f28a0943a0752730dd121af, type: 2}
+  playerSprite: {fileID: 7699837152467073221}
 --- !u!1 &8363480197720831659
 GameObject:
   m_ObjectHideFlags: 0

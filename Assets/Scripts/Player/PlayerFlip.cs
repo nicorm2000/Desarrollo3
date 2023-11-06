@@ -1,13 +1,10 @@
 using UnityEngine;
 
-public class PlayerAnimator : MonoBehaviour
+public class PlayerFlip : MonoBehaviour
 {
     public PlayerData playerData;
 
-    private void Start()
-    {
-        playerData._spriteRenderer = GetComponent<SpriteRenderer>();
-    }
+    public SpriteRenderer playerSprite;
 
     private void Update()
     {
@@ -21,11 +18,22 @@ public class PlayerAnimator : MonoBehaviour
     {
         if (playerData.lastHorizontalVector < 0)
         {
-            playerData._spriteRenderer.flipX = true;
+            playerSprite.flipX = true;
         }
+
         else
         {
-            playerData._spriteRenderer.flipX = false;
+            playerSprite.flipX = false;
         }
+    }
+
+    public void FlipPlayerX()
+    {
+        playerData.lastHorizontalVector = playerData.movementDirection.x;
+    }
+
+    public void FlipPlayerY()
+    {
+        playerData.lastVerticalVector = playerData.movementDirection.y;
     }
 }

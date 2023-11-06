@@ -1,4 +1,5 @@
 using System;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -11,10 +12,12 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("References")]
     public PlayerData playerData;
-    
+
     public SelectWeapon[] selectWeapon;
 
     public ConveyorBelt conveyorBelt;
+
+    public PlayerFlip playerFlip;
 
     private void Start()
     {
@@ -44,31 +47,30 @@ public class PlayerMovement : MonoBehaviour
 
         playerData.movementDirection = new Vector2(moveX, moveY).normalized;
 
-
-        if (playerData.movementDirection.x != 0) 
+        if (playerData.movementDirection.x != 0)
         {
             isIdle = false;
             onPlayerIdleChange?.Invoke(isIdle);
 
-            playerData.lastHorizontalVector = playerData.movementDirection.x;
-            isWalking = true;
+            playerFlip.FlipPlayerX();
 
+            isWalking = true;
             onPlayerWalkChange?.Invoke(isWalking);
         }
-        if (playerData.movementDirection.y != 0) 
+        if (playerData.movementDirection.y != 0)
         {
             isIdle = false;
             onPlayerIdleChange?.Invoke(isIdle);
 
-            playerData.lastVerticalVector = playerData.movementDirection.y;
-            isWalking = true;
+            playerFlip.FlipPlayerY();
 
+            isWalking = true;
             onPlayerWalkChange?.Invoke(isWalking);
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            for (int i = 0; i < 3; i++) 
+            for (int i = 0; i < 3; i++)
             {
                 selectWeapon[i].PlayerTeleport();
             }
@@ -87,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void RestartIdleAnimation() 
+    private void RestartIdleAnimation()
     {
         isWalking = false;
         isIdle = true;

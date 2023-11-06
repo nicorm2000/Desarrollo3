@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4537057346123849985}
   - component: {fileID: 8780360866334264520}
   - component: {fileID: 5290204582291922668}
+  - component: {fileID: 3027005082857409508}
   m_Layer: 8
   m_Name: BasicEnemy
   m_TagString: Enemy
@@ -58,6 +59,7 @@ MonoBehaviour:
   healthSystem: {fileID: 0}
   enemyData: {fileID: 11400000, guid: e669acf245ccac044b5afe40a135676b, type: 2}
   target: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+  flipEnemy: {fileID: 3027005082857409508}
   maxTime: 1
 --- !u!114 &-5129004534547528821
 MonoBehaviour:
@@ -157,7 +159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 646c66060c2c9004db9c265f5001c254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invulnerable: 1
   includeLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -263,6 +264,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 7699837152467073221}
   maxTimer: 0.2
+--- !u!114 &3027005082857409508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779284332624663121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c05fc6f5e45884b870473d995d1241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: e669acf245ccac044b5afe40a135676b, type: 2}
+  playerSprite: {fileID: 7699837152467073221}
 --- !u!1 &6526430211005384866
 GameObject:
   m_ObjectHideFlags: 0

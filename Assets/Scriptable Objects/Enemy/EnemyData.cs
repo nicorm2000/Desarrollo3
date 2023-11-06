@@ -3,6 +3,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyData", menuName = "Custom/Enemy Data")]
 public class EnemyData : ScriptableObject
 {
+    [HideInInspector]
+    public float lastHorizontalVector;
+    [HideInInspector]
+    public float lastVerticalVector;
+    [HideInInspector]
+    public Vector2 movementDirection;
+
     [Header("Spawner")]
     public GameObject model;
     public Animator animator;
