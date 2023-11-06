@@ -11,14 +11,12 @@ public class PlayerHealth : MonoBehaviour
     public event Action<bool> onPlayerDeadChange;
 
     [Header("Camera Shake Configuration")]
+    [SerializeField] private ScreenShake screenShake;
     [SerializeField] private float duration;
     [SerializeField] private AnimationCurve animationCurve;
 
     [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
-
-    [Header("Screen Shake Dependencies")]
-    [SerializeField] private ScreenShake screenShake;
     
     [Header("Player Health UI Dependencies")]
     [SerializeField] private PlayerHealthUI playerHealthUI;

@@ -5,24 +5,27 @@ using UnityEngine.UI;
 public class Shoot : MonoBehaviour
 {
     [Header("WeaponOverheat")]
-    public WeaponData weaponData;
-    public float weaponOverheat;
-    public float overheatIncreaseAmount;
-    public float overheatDecreaseRate;
+    [SerializeField] private WeaponData weaponData;
+    [SerializeField] private float weaponOverheat;
+    [SerializeField] private float overheatIncreaseAmount;
+    [SerializeField] private float overheatDecreaseRate;
 
     private float _currentOverheat = 0f;
     private float _timeBetweenShots;
     private bool _canShoot = true;
     private bool _overHeat = false;
-    
+
     [Header("WeaponOverheatUI")]
     [SerializeField] private WeaponOverheatUI weaponOverheatUI;
 
-    public Image weaponBlack;
-    public Image weaponRed;
+    [SerializeField] private Image weaponBlack;
+    [SerializeField] private Image weaponRed;
 
     [SerializeField] private GameObject overHeatText;
     [SerializeField] private GameObject overHeatEffect;
+
+    [Header("Screen Shake Dependencies")]
+    [SerializeField] private ScreenShake screenShake;
 
     private void Start()
     {
@@ -54,13 +57,15 @@ public class Shoot : MonoBehaviour
 
     private void ShootBullet()
     {
-        if (weaponData.isShootWeapon)
+        if (weaponData.heavyWeapon)
         {
-            Instantiate(weaponData.bulletPrefab, transform.position, transform.rotation);
-            _canShoot = false;
-            _timeBetweenShots = 1f / weaponData.attackSpeed;
-            Invoke(nameof(EnableShooting), _timeBetweenShots);
+            StartCoroutine(screenShake.Shake(weaponData.duration, weaponData.animationCurve));
         }
+
+        Instantiate(weaponData.bulletPrefab, transform.position, transform.rotation);
+        _canShoot = false;
+        _timeBetweenShots = 1f / weaponData.attackSpeed;
+        Invoke(nameof(EnableShooting), _timeBetweenShots);
     }
 
     private void EnableShooting()
@@ -89,7 +94,7 @@ public class Shoot : MonoBehaviour
         overHeatText.SetActive(true);
         overHeatEffect.SetActive(true);
 
-        while (_currentOverheat > 0f) 
+        while (_currentOverheat > 0f)
         {
             yield return null;
         }
