@@ -38,7 +38,7 @@ public class Shoot : MonoBehaviour
         {
             if (_currentOverheat < weaponOverheat)
             {
-                ShootBullet();
+                ShootLogic();
 
                 _currentOverheat += overheatIncreaseAmount;
                 weaponOverheatUI.currentSliderOverheat -= 1;
@@ -55,7 +55,7 @@ public class Shoot : MonoBehaviour
         weaponOverheatUI.SetCurrentOverheat(_currentOverheat);
     }
 
-    private void ShootBullet()
+    public void ShootLogic()
     {
         if (weaponData.heavyWeapon)
         {

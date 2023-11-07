@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -27,24 +28,15 @@ public class PlayerMovement : MonoBehaviour
         playerData.activeMoveSpeed = playerData.speed;
     }
 
-    private void Update()
-    {
-        InputManagement();
-    }
-
     private void FixedUpdate()
     {
+        MoveLogic();
         Move();
     }
 
-    private void InputManagement()
+    private void MoveLogic()
     {
         RestartIdleAnimation();
-
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
-
-        playerData.movementDirection = new Vector2(moveX, moveY).normalized;
 
         if (playerData.movementDirection.x != 0)
         {
@@ -67,13 +59,20 @@ public class PlayerMovement : MonoBehaviour
             onPlayerWalkChange?.Invoke(isWalking);
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                selectWeapon[i].PlayerTeleport();
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    for (int i = 0; i < 3; i++)
+        //    {
+        //        selectWeapon[i].PlayerTeleport();
+        //    }
+        //}
+    }
+
+    public void Movement(InputValue value) 
+    {
+        var movementInput = value.Get<Vector2>();
+
+        playerData.movementDirection = new Vector2(movementInput.x, movementInput.y).normalized;
     }
 
     private void Move()

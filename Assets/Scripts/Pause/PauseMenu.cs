@@ -8,31 +8,16 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private MySceneManager mySceneManager;
     [SerializeField] private string sceneName;
 
-    private bool isPaused = false;
+    public bool isPaused = false;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (isPaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
-        }
-    }
-
-    public void ResumeGame()
+    public void Resume()
     {
         Time.timeScale = 1f;
         isPaused = false;
         pauseMenuUI.SetActive(false);
     }
 
-    public void PauseGame()
+    public void Pause()
     {
         Time.timeScale = 0f;
         isPaused = true;

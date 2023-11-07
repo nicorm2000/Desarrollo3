@@ -63,10 +63,14 @@ public class PlayerData : ScriptableObject
     [Header("Look At Mouse")]
     public Transform transform;
 
+    [Header("Shoot")]
+    public bool haveAGun;
+
     public void ResetPlayerStacks() 
     {
         _isDead = false;
         enterPlayer = false;
+        haveAGun = false;
         healthStackID = 0;
         speedStackID = 0;
         damageStackID = 0;

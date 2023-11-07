@@ -237,6 +237,7 @@ MonoBehaviour:
   weaponRed: {fileID: 0}
   overHeatText: {fileID: 0}
   overHeatEffect: {fileID: 0}
+  screenShake: {fileID: 0}
 --- !u!1 &7469210322841030696
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,9 +249,8 @@ GameObject:
   - component: {fileID: 1973117993556571072}
   - component: {fileID: 1674601915196207430}
   - component: {fileID: 190424449155853884}
-  - component: {fileID: 9160149820997449130}
-  - component: {fileID: 9035469371857359941}
   - component: {fileID: 2223820343605897184}
+  - component: {fileID: 9160149820997449130}
   - component: {fileID: 2791571064387588381}
   m_Layer: 6
   m_Name: Player
@@ -355,37 +355,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &9160149820997449130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7469210322841030696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e059d8d9c8d0e3c46ac186324c43331b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerData: {fileID: 0}
-  selectWeapon:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  conveyorBelt: {fileID: 0}
---- !u!114 &9035469371857359941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7469210322841030696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c1a63562ffec1e438810406965df8b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerData: {fileID: 0}
 --- !u!95 &2223820343605897184
 Animator:
   serializedVersion: 5
@@ -407,6 +376,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9160149820997449130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7469210322841030696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e059d8d9c8d0e3c46ac186324c43331b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 0}
+  selectWeapon:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  conveyorBelt: {fileID: 0}
+  playerFlip: {fileID: 0}
 --- !u!114 &2791571064387588381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,8 +407,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 465f59f8c03e4004783549a309762a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData: {fileID: 0}
+  maxTime: 0.5
   screenShake: {fileID: 0}
+  duration: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  playerData: {fileID: 0}
   playerHealthUI: {fileID: 0}
   borderColorDuration: 0
   mySceneManager: {fileID: 0}
