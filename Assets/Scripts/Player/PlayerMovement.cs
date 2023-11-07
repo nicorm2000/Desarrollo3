@@ -59,13 +59,13 @@ public class PlayerMovement : MonoBehaviour
             onPlayerWalkChange?.Invoke(isWalking);
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                selectWeapon[i].PlayerTeleport();
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    for (int i = 0; i < 3; i++)
+        //    {
+        //        selectWeapon[i].PlayerTeleport();
+        //    }
+        //}
     }
 
     public void Movement(InputValue value) 

@@ -6,15 +6,24 @@ using UnityEngine.InputSystem;
 public class PlayerInputManager : MonoBehaviour
 {
     [Header("Refernces")]
-    private PlayerMovement playerMovement;
+    [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private Shoot playerShoot;
+    [SerializeField] private SelectWeapon[] selectWeapon;
 
-    private void Start()
-    {
-        playerMovement = GetComponent<PlayerMovement>();
-    }
+
+    [Header("Player Data")]
+    [SerializeField] private PlayerData playerData;
 
     public void OnMove(InputValue value)
     {
         playerMovement.Movement(value);
+    }
+
+    public void OnInteract() 
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            selectWeapon[i].PlayerTeleport();
+        }
     }
 }
