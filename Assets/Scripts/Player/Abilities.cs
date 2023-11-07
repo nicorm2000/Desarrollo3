@@ -58,23 +58,16 @@ public class Abilities : MonoBehaviour
 
     private void Update()
     {
-        Dash();
-        Slower();
-        Laser();
+        DashCounter();
+        SlowerCounter();
+        LaserCounter();
     }
 
-    private void Laser()
+    private void LaserCounter()
     {
         if (waveManager.currentWaveIndex >= 9)
         {
             laserLogo.SetActive(true);
-            if (Input.GetKeyDown(laser) && !isCooldownLaser)
-            {
-                isCooldownLaser = true;
-                laserImage.fillAmount = 1f;
-
-                StartCoroutine(ActivateLaser());
-            }
 
             if (isCooldownLaser)
             {
@@ -89,6 +82,20 @@ public class Abilities : MonoBehaviour
         }
     }
 
+    public void LaserLogic()
+    {
+        if (waveManager.currentWaveIndex >= 9)
+        {
+            if (!isCooldownLaser)
+            {
+                isCooldownLaser = true;
+                laserImage.fillAmount = 1f;
+
+                StartCoroutine(ActivateLaser());
+            }
+        }
+    }
+
     private IEnumerator ActivateLaser()
     {
         laserObject.SetActive(true);
@@ -96,20 +103,11 @@ public class Abilities : MonoBehaviour
         laserObject.SetActive(false);
     }
 
-    private void Slower()
+    private void SlowerCounter()
     {
         if (waveManager.currentWaveIndex >= 4)
         {
             slowerLogo.SetActive(true);
-            if (Input.GetKeyDown(slower) && !isCooldownSlower)
-            {
-                isCooldownSlower = true;
-                slowerImage.fillAmount = 1f;
-
-                GameObject spawnedObject = Instantiate(prefabToSpawn, new Vector3(transform.position.x, transform.position.y, transform.position.z + slowerZOffset), Quaternion.Euler(-90f, 0f, 0f));
-
-                StartCoroutine(DestroyAfterTime(spawnedObject));
-            }
 
             if (isCooldownSlower)
             {
@@ -125,24 +123,29 @@ public class Abilities : MonoBehaviour
         }
     }
 
+    public void SlowerLogic() 
+    {
+        if (waveManager.currentWaveIndex >= 4)
+        {
+            if (!isCooldownSlower)
+            {
+                isCooldownSlower = true;
+                slowerImage.fillAmount = 1f;
+
+                GameObject spawnedObject = Instantiate(prefabToSpawn, new Vector3(transform.position.x, transform.position.y, transform.position.z + slowerZOffset), Quaternion.Euler(-90f, 0f, 0f));
+
+                StartCoroutine(DestroyAfterTime(spawnedObject));
+            }
+        }
+    }
+
     private IEnumerator DestroyAfterTime(GameObject obj)
     {
         yield return new WaitForSeconds(slowerLifetime);
     }
 
-    private void Dash()
+    private void DashCounter()
     {
-        if (Input.GetKeyDown(dash) && dashCoolDownCounter <= 0 && dashCounter <= 0)
-        {
-            playerData.isDashing = true;
-            dustParticles.Play();
-            onPlayerDashChange?.Invoke(playerData.isDashing);
-            dashCoolDownCounter = playerData.dashCooldown;
-            dashCounter = playerData.dashLength;
-            playerData.activeMoveSpeed = playerData.dashSpeed;
-            dashImage.fillAmount = 1f;
-        }
-
         if (dashCounter > 0)
         {
             dashCounter -= Time.deltaTime;
@@ -159,6 +162,20 @@ public class Abilities : MonoBehaviour
         {
             dashCoolDownCounter -= Time.deltaTime;
             dashImage.fillAmount = dashCoolDownCounter / playerData.dashCooldown;
+        }
+    }
+
+    public void DashLogic() 
+    {
+        if (dashCoolDownCounter <= 0 && dashCounter <= 0)
+        {
+            playerData.isDashing = true;
+            dustParticles.Play();
+            onPlayerDashChange?.Invoke(playerData.isDashing);
+            dashCoolDownCounter = playerData.dashCooldown;
+            dashCounter = playerData.dashLength;
+            playerData.activeMoveSpeed = playerData.dashSpeed;
+            dashImage.fillAmount = 1f;
         }
     }
 

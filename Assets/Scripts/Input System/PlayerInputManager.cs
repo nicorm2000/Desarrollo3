@@ -9,7 +9,7 @@ public class PlayerInputManager : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private Shoot playerShoot;
     [SerializeField] private SelectWeapon[] selectWeapon;
-
+    [SerializeField] private Abilities abilities;
 
     [Header("Player Data")]
     [SerializeField] private PlayerData playerData;
@@ -25,5 +25,20 @@ public class PlayerInputManager : MonoBehaviour
         {
             selectWeapon[i].PlayerTeleport();
         }
+    }
+
+    public void OnDash() 
+    {
+        abilities.DashLogic();
+    }
+
+    public void OnSlower()
+    {
+        abilities.SlowerLogic();
+    }
+
+    public void OnLaser()
+    {
+        abilities.LaserLogic();
     }
 }
