@@ -30895,14 +30895,14 @@ MonoBehaviour:
   dustParticles: {fileID: 1911285158}
   slowerLogo: {fileID: 825329472}
   slowerImage: {fileID: 312420385}
-  slower: 50
+  slower: 101
   slowerColor: {r: 1, g: 1, b: 0, a: 1}
   prefabToSpawn: {fileID: 5360607739328788941, guid: 068c7a8d12bb2ec40ad0ff3fc3a882fc, type: 3}
   slowerLifetime: 10
   slowerZOffset: 0.1
   laserLogo: {fileID: 1882951106}
   laserImage: {fileID: 553482193}
-  laser: 51
+  laser: 113
   laserColor: {r: 1, g: 0, b: 0, a: 1}
   laserObject: {fileID: 2057951902}
 --- !u!114 &1941617730
