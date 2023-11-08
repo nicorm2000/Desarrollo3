@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class CameraDrag : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class CameraDrag : MonoBehaviour
     [SerializeField] private Transform targetTransform;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float returnSpeedTime;
+    [SerializeField] private float offsetZ;
     [SerializeField] private AnimationCurve returnAnimationCurve;
 
     private Vector3 initialPosition;
@@ -16,14 +18,15 @@ public class CameraDrag : MonoBehaviour
 
     private Coroutine coroutine = null;
 
-    private void Start()
-    {
-        initialPosition = transform.position;
-        releasePosition = initialPosition;
-    }
-
     private void Update()
     {
+        initialPosition = new Vector3(targetTransform.position.x, targetTransform.position.y, targetTransform.position.z + offsetZ);
+        
+        if (!isDragging && coroutine == null)
+        {
+            transform.position = initialPosition;
+        }
+
         if (Input.GetMouseButtonDown(1))
         {
             isDragging = true;
