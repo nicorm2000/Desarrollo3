@@ -5,8 +5,16 @@ using System.Collections;
 
 public class PlayerHealthUI : MonoBehaviour
 {
+    [Header("Animation Curve")]
+    [SerializeField] private AnimationCurve borderCurve;
+
     [Header("Images")]
-    [SerializeField] private Image border;
+    [SerializeField] private Image border1;
+    [SerializeField] private Image border2;
+    [SerializeField] private Image border3;
+
+    [Header("Border Duration")]
+    [SerializeField] private float borderColorDuration;
 
     [Header("Text Mesh Pro")]
     [SerializeField] private TextMeshProUGUI _maxHealthText;
@@ -71,15 +79,40 @@ public class PlayerHealthUI : MonoBehaviour
     }
 
     /// <summary>
-    /// Changes the border color of the UI element for a specified duration.
+    /// Gradually changes the border color by lowering the alpha value using an animation curve.
     /// </summary>
-    /// <param name="color">The target color for the border.</param>
-    /// <param name="duration">The duration of the color change.</param>
-    public IEnumerator ChangeBorderColor(Color color, float duration)
+    /// <returns>IEnumerator</returns>
+    public IEnumerator ChangeBorderColor()
     {
-        border.color = color;
-        yield return new WaitForSeconds(duration);
+        border1.color = new Color(border1.color.r, border1.color.g, border1.color.b, 1.0f);
+        border2.color = new Color(border2.color.r, border2.color.g, border2.color.b, 1.0f);
+        border3.color = new Color(border3.color.r, border3.color.g, border3.color.b, 1.0f);
 
-        border.color = Color.white;
+        Color initialColor = border1.color;
+        float timer = 0f;
+
+        border3.gameObject.SetActive(true);
+        border1.gameObject.SetActive(true);
+        border2.gameObject.SetActive(true);
+
+        while (timer < borderColorDuration)
+        {
+            float progress = timer / borderColorDuration;
+            float alpha = borderCurve.Evaluate(progress);
+
+            Color currentColor = initialColor;
+            currentColor.a = Mathf.Lerp(initialColor.a, 0f, alpha);
+
+            border1.color = currentColor;
+            border2.color = currentColor;
+            border3.color = currentColor;
+
+            yield return null;
+            timer += Time.deltaTime;
+        }
+
+        border1.gameObject.SetActive(false);
+        border2.gameObject.SetActive(false);
+        border3.gameObject.SetActive(false);
     }
 }

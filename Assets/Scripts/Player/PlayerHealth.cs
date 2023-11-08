@@ -19,7 +19,6 @@ public class PlayerHealth : MonoBehaviour
     
     [Header("Player Health UI Dependencies")]
     [SerializeField] private PlayerHealthUI playerHealthUI;
-    [SerializeField] private float borderColorDuration;
 
     [Header("Scene Manager Dependencies")]
     [SerializeField] private MySceneManager mySceneManager;
@@ -52,7 +51,7 @@ public class PlayerHealth : MonoBehaviour
     public void takeDamage(float damage) 
     {
         StartCoroutine(screenShake.Shake(duration, animationCurve));
-        StartCoroutine(playerHealthUI.ChangeBorderColor(Color.red, borderColorDuration));
+        StartCoroutine(playerHealthUI.ChangeBorderColor());
         
         playerData.currentHealth -= damage;
         playerHealthUI.SetHealth(playerData.currentHealth);
