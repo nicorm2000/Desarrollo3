@@ -1,13 +1,14 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScrollingCredits : MonoBehaviour
 {
     [Header("Scroll Configuration")]
     [SerializeField] private float scrollTime;
+    [SerializeField] private Transform initialPosition;
+    [SerializeField] private Transform targetPosition;
     [SerializeField] private AnimationCurve scrollSpeedCurve;
-    [SerializeField] private Vector3 initialPosition;
-    [SerializeField] private Vector3 targetPosition;
 
     [Header("Main Menu Button")]
     [SerializeField] private GameObject mainMenuButton;
@@ -19,9 +20,13 @@ public class ScrollingCredits : MonoBehaviour
     [SerializeField] private GameObject object1;
     [SerializeField] private GameObject object2;
     [SerializeField] private GameObject object3;
+    [SerializeField] private GameObject object4;
+
+    private Vector3 startPosition;
 
     private void Start()
     {
+        startPosition = gameObject.transform.position;
         StartCoroutine(ScrollCredits());
     }
 
@@ -34,9 +39,13 @@ public class ScrollingCredits : MonoBehaviour
             float progress = timer / scrollTime;
             float scrollSpeed = scrollSpeedCurve.Evaluate(progress);
 
-            transform.position = Vector3.Lerp(initialPosition, targetPosition, scrollSpeed);
-
+            transform.position = Vector3.Lerp(initialPosition.position, targetPosition.position, scrollSpeed);
             timer += Time.deltaTime;
+
+            if (progress <= object3Time)
+            {
+                object4.SetActive(true);
+            }
 
             if (progress >= object1Time)
             {
@@ -57,7 +66,7 @@ public class ScrollingCredits : MonoBehaviour
             yield return null;
         }
 
-        transform.position = targetPosition;
+        transform.position = targetPosition.position;
         mainMenuButton.SetActive(true);
     }
 }
