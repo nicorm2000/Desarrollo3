@@ -2618,17 +2618,19 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   mainMenuButton: {fileID: 1812733059}
-  object1Time: 0.33
-  object2Time: 0.4
-  object3Time: 0.6
-  object4Time: 0.8
-  object5Time: 0.99
+  objectTime:
+  - 0.2
+  - 0.35
+  - 0.55
+  - 0.75
+  - 0.99
+  objects:
+  - {fileID: 1808812400}
+  - {fileID: 1303128679}
+  - {fileID: 1681039915}
+  - {fileID: 1487538865}
+  - {fileID: 1151124483}
   mainMenuWhileCreditsTime: 0.99
-  object1: {fileID: 1808812400}
-  object2: {fileID: 1303128679}
-  object3: {fileID: 1681039915}
-  object4: {fileID: 1487538865}
-  object5: {fileID: 1151124483}
   mainMenuWhileCredits: {fileID: 204227730}
 --- !u!1 &1435219475
 GameObject:

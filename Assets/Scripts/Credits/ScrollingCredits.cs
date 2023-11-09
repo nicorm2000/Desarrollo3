@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ScrollingCredits : MonoBehaviour
@@ -13,24 +14,24 @@ public class ScrollingCredits : MonoBehaviour
     [SerializeField] private GameObject mainMenuButton;
 
     [Header("Objects Appearing")]
-    [SerializeField] private float object1Time;
-    [SerializeField] private float object2Time;
-    [SerializeField] private float object3Time;
-    [SerializeField] private float object4Time;
-    [SerializeField] private float object5Time;
+    [SerializeField] private float[] objectTime;
+    [SerializeField] private GameObject[] objects;
+
+    [Header("Menu Button While Credits")]
     [SerializeField] private float mainMenuWhileCreditsTime;
-    [SerializeField] private GameObject object1;
-    [SerializeField] private GameObject object2;
-    [SerializeField] private GameObject object3;
-    [SerializeField] private GameObject object4;
-    [SerializeField] private GameObject object5;
     [SerializeField] private GameObject mainMenuWhileCredits;
 
-    private Vector3 startPosition;
+    private Dictionary<float, GameObject> objectsToActivate;
 
     private void Start()
     {
-        startPosition = gameObject.transform.position;
+        objectsToActivate = new Dictionary<float, GameObject>();
+
+        for (int i = 0; i < objectTime.Length; i++)
+        {
+            objectsToActivate.Add(objectTime[i], objects[i]);
+        }
+
         StartCoroutine(ScrollCredits());
     }
 
@@ -51,29 +52,12 @@ public class ScrollingCredits : MonoBehaviour
                 mainMenuWhileCredits.SetActive(true);
             }
 
-            if (progress >= object1Time)
+            foreach (var kvp in objectsToActivate)
             {
-                object1.SetActive(true);
-            }
-
-            if (progress >= object2Time)
-            {
-                object2.SetActive(true);
-            }
-
-            if (progress >= object3Time)
-            {
-                object3.SetActive(true);
-            }
-
-            if (progress >= object4Time)
-            {
-                object4.SetActive(true);
-            }
-
-            if (progress >= object5Time)
-            {
-                object5.SetActive(true);
+                if (progress >= kvp.Key)
+                {
+                    kvp.Value.SetActive(true);
+                }
             }
 
             yield return null;
