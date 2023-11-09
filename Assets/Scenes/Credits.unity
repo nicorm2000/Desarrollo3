@@ -2055,6 +2055,7 @@ GameObject:
   - component: {fileID: 1151124484}
   - component: {fileID: 1151124486}
   - component: {fileID: 1151124485}
+  - component: {fileID: 1151124487}
   m_Layer: 5
   m_Name: Object5
   m_TagString: Untagged
@@ -2071,15 +2072,15 @@ RectTransform:
   m_GameObject: {fileID: 1151124483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 468548386}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 832, y: 191}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1151124485
 MonoBehaviour:
@@ -2101,7 +2102,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 18b6e9d3624bb134c9495338849fc429, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2119,6 +2120,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151124483}
   m_CullTransparentMesh: 1
+--- !u!95 &1151124487
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151124483}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a505fb1c0321f34408704c7c70fab0f4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1239006997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,14 +2645,14 @@ MonoBehaviour:
   - 0.35
   - 0.55
   - 0.75
-  - 0.99
+  - 0.9
   objects:
   - {fileID: 1808812400}
   - {fileID: 1303128679}
   - {fileID: 1681039915}
   - {fileID: 1487538865}
   - {fileID: 1151124483}
-  mainMenuWhileCreditsTime: 0.99
+  mainMenuWhileCreditsTime: 0.9
   mainMenuWhileCredits: {fileID: 204227730}
 --- !u!1 &1435219475
 GameObject:

@@ -51,6 +51,10 @@ public class ScrollingCredits : MonoBehaviour
             {
                 mainMenuWhileCredits.SetActive(true);
             }
+            else
+            {
+                mainMenuWhileCredits.SetActive(false);
+            }
 
             foreach (var kvp in objectsToActivate)
             {
