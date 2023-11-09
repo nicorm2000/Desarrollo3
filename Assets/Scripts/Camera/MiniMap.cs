@@ -2,12 +2,21 @@ using UnityEngine;
 
 public class MiniMap : MonoBehaviour
 {
-    [SerializeField] private Transform player;
+    [SerializeField] private GameObject map;
 
-    private void LateUpdate()
+    public bool isMapActive = false;
+
+    public void ActivateMap()
     {
-        Vector3 newPosition = player.position;
-        newPosition.z = transform.position.z;
-        transform.position = newPosition;
+        isMapActive = true;
+
+        map.SetActive(true);
+    }
+
+    public void DeactivateMap()
+    {
+        isMapActive = false;
+
+        map.SetActive(false);
     }
 }

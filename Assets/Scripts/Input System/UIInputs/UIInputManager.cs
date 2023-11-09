@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -11,6 +9,9 @@ public class UIInputManger : MonoBehaviour
 
     [SerializeField] private GameObject resumeButton;
 
+    [SerializeField] private MiniMap miniMap;
+    [SerializeField] private GameObject miniM;
+
     UIInputs action;
 
     private void Awake()
@@ -21,8 +22,11 @@ public class UIInputManger : MonoBehaviour
     void Start()
     {
         pauseMenu = GetComponent<PauseMenu>();
+        miniMap = GetComponent<MiniMap>();
 
         action.UI.Pause.performed += _ => IsPaused();
+
+        action.UI.Map.performed += _ => IsMiniMap();
     }
 
     private void IsPaused()
@@ -32,11 +36,26 @@ public class UIInputManger : MonoBehaviour
             ResumeGame();
             EventSystem.current.SetSelectedGameObject(null);
         }
-
         else
         {
             PauseGame();
             EventSystem.current.SetSelectedGameObject(resumeButton);
+        }
+    }
+
+    private void IsMiniMap()
+    {
+        if (miniMap.isMapActive == true)
+        {
+            Debug.Log("a");
+            ActivateMiniMap();
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+        else
+        {
+            Debug.Log("b");
+            DeativateMiniMap();
+            EventSystem.current.SetSelectedGameObject(miniM);
         }
     }
 
@@ -58,5 +77,15 @@ public class UIInputManger : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenu.Resume();
+    }
+
+    public void ActivateMiniMap()
+    {
+        miniMap.ActivateMap();
+    }
+
+    public void DeativateMiniMap()
+    {
+        miniMap.DeactivateMap();
     }
 }
