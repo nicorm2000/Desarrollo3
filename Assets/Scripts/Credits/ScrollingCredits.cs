@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ScrollingCredits : MonoBehaviour
 {
@@ -17,10 +16,15 @@ public class ScrollingCredits : MonoBehaviour
     [SerializeField] private float object1Time;
     [SerializeField] private float object2Time;
     [SerializeField] private float object3Time;
+    [SerializeField] private float object4Time;
+    [SerializeField] private float object5Time;
+    [SerializeField] private float mainMenuWhileCreditsTime;
     [SerializeField] private GameObject object1;
     [SerializeField] private GameObject object2;
     [SerializeField] private GameObject object3;
     [SerializeField] private GameObject object4;
+    [SerializeField] private GameObject object5;
+    [SerializeField] private GameObject mainMenuWhileCredits;
 
     private Vector3 startPosition;
 
@@ -42,9 +46,9 @@ public class ScrollingCredits : MonoBehaviour
             transform.position = Vector3.Lerp(initialPosition.position, targetPosition.position, scrollSpeed);
             timer += Time.deltaTime;
 
-            if (progress <= object3Time)
+            if (progress <= mainMenuWhileCreditsTime)
             {
-                object4.SetActive(true);
+                mainMenuWhileCredits.SetActive(true);
             }
 
             if (progress >= object1Time)
@@ -62,6 +66,15 @@ public class ScrollingCredits : MonoBehaviour
                 object3.SetActive(true);
             }
 
+            if (progress >= object4Time)
+            {
+                object4.SetActive(true);
+            }
+
+            if (progress >= object5Time)
+            {
+                object5.SetActive(true);
+            }
 
             yield return null;
         }
