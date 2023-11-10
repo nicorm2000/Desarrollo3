@@ -10,7 +10,6 @@ public class UIInputManger : MonoBehaviour
     [SerializeField] private GameObject resumeButton;
 
     [SerializeField] private MiniMap miniMap;
-    [SerializeField] private GameObject miniM;
 
     UIInputs action;
 
@@ -22,7 +21,6 @@ public class UIInputManger : MonoBehaviour
     void Start()
     {
         pauseMenu = GetComponent<PauseMenu>();
-        miniMap = GetComponent<MiniMap>();
 
         action.UI.Pause.performed += _ => IsPaused();
 
@@ -45,17 +43,13 @@ public class UIInputManger : MonoBehaviour
 
     private void IsMiniMap()
     {
-        if (miniMap.isMapActive == true)
+        if (miniMap.isMapActive)
         {
-            Debug.Log("a");
             ActivateMiniMap();
-            EventSystem.current.SetSelectedGameObject(null);
         }
         else
         {
-            Debug.Log("b");
             DeativateMiniMap();
-            EventSystem.current.SetSelectedGameObject(miniM);
         }
     }
 
