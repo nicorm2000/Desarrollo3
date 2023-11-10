@@ -29,13 +29,10 @@ public class MedKit : MonoBehaviour, IPickable
     #region INTERFACE_METHODS
     public void ApplyEffect()
     {
-        if (isActive) 
+        if (isActive)
         {
-            if (playerData.currentHealth <= playerData.maxHealth)
-            {
-                playerData.currentHealth += healAmount;
-                playerHealthUI.SetHealth(playerData.currentHealth);
-            }
+            playerData.currentHealth += healAmount;
+            playerHealthUI.SetHealth(playerData.currentHealth);
             isActive = false;
             ModifyVisuals(cooldownMaterial);
             StartCooldown();
@@ -54,7 +51,7 @@ public class MedKit : MonoBehaviour, IPickable
     {
         Renderer renderer = GetComponent<Renderer>();
         if (renderer != null)
-        { 
+        {
             renderer.material = material;
         }
     }
@@ -68,7 +65,7 @@ public class MedKit : MonoBehaviour, IPickable
     #region UNITY_METHODS
     private void OnTriggerEnter(Collider other)
     {
-        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
+        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO && playerData.currentHealth < playerData.maxHealth)
         {
             ApplyEffect();
         }
