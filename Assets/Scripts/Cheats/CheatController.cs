@@ -1,6 +1,5 @@
 using UnityEngine;
 
-#if UNITY_EDITOR
 public class CheatController : MonoBehaviour
 {
     [Header("Cheats")]
@@ -27,4 +26,3 @@ public class CheatController : MonoBehaviour
         waveManager.UpdateWaveValue();
     }
 }
-#endif
