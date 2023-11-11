@@ -16,6 +16,9 @@ public class Shop : MonoBehaviour
     [Header("Sprite Cycle Dependencies")]
     [SerializeField] private SpriteCycle[] spriteCycle;
 
+    [Header("Cursor Object Dependencies")]
+    [SerializeField] private CursorObject cursorObject;
+
     /// <summary>
     /// Activates the shop pop-up, deactivates the HUD, and freezes the game time.
     /// </summary>
@@ -31,6 +34,7 @@ public class Shop : MonoBehaviour
     /// </summary>
     public void DeactivatePopUp()
     {
+        cursorObject.MouseNotInteract();
         shopWindow.SetActive(false);
         hud.SetActive(true);
         Time.timeScale = Constants.ONE_F;

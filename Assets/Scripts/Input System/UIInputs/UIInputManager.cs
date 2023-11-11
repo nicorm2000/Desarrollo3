@@ -11,6 +11,8 @@ public class UIInputManger : MonoBehaviour
 
     [SerializeField] private MiniMap miniMap;
 
+    [SerializeField] private CursorObject cursorObject;
+
     UIInputs action;
 
     private void Awake()
@@ -70,6 +72,7 @@ public class UIInputManger : MonoBehaviour
 
     public void ResumeGame()
     {
+        cursorObject.MouseNotInteract();
         pauseMenu.Resume();
     }
 
