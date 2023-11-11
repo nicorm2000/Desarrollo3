@@ -3045,6 +3045,7 @@ MonoBehaviour:
   overHeatText: {fileID: 1909702298}
   overHeatEffect: {fileID: 2099446138}
   screenShake: {fileID: 963194230}
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!1 &205387884
 GameObject:
   m_ObjectHideFlags: 0
@@ -30948,6 +30949,7 @@ MonoBehaviour:
   overHeatText: {fileID: 1909702298}
   overHeatEffect: {fileID: 2099446138}
   screenShake: {fileID: 963194230}
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!1 &1946912801
 GameObject:
   m_ObjectHideFlags: 0

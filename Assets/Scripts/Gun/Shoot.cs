@@ -28,6 +28,8 @@ public class Shoot : MonoBehaviour
     [Header("Screen Shake Dependencies")]
     [SerializeField] private ScreenShake screenShake;
 
+    [SerializeField] private PlayerData playerData;
+
     private void Start()
     {
         weaponOverheatUI.maxSliderOverheat = weaponOverheat;
@@ -35,7 +37,10 @@ public class Shoot : MonoBehaviour
 
     private void Update()
     {
-        StartShoot();
+        if(playerData._isDead == false) 
+        {
+            StartShoot();
+        }
     }
 
     public void StartShoot() 

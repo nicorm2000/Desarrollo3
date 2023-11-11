@@ -19,24 +19,37 @@ public class PlayerInputManager : MonoBehaviour
 
     public void OnInteract() 
     {
-        for (int i = 0; i < 3; i++)
+        if (playerData._isDead == false)
         {
-            selectWeapon[i].PlayerTeleport();
+            for (int i = 0; i < 3; i++)
+            {
+                selectWeapon[i].PlayerTeleport();
+            }
         }
     }
 
     public void OnDash() 
     {
-        abilities.DashLogic();
+        if (playerData._isDead == false)
+        {
+            abilities.DashLogic();
+        }
     }
 
     public void OnSlower()
     {
-        abilities.SlowerLogic();
+        if (playerData._isDead == false)
+        {
+            abilities.SlowerLogic();
+        }
     }
 
     public void OnLaser()
     {
-        abilities.LaserLogic();
+        if (playerData._isDead == false) 
+        {
+            abilities.LaserLogic();
+
+        }
     }
 }
