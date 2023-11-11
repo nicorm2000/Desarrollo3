@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
@@ -34,6 +35,11 @@ public class Shoot : MonoBehaviour
 
     private void Update()
     {
+        StartShoot();
+    }
+
+    public void StartShoot() 
+    {
         if (!_overHeat && _canShoot && Input.GetMouseButton(0))
         {
             if (_currentOverheat < weaponOverheat)
@@ -50,7 +56,7 @@ public class Shoot : MonoBehaviour
             }
         }
 
-        CheckShootWeapon();
+        weaponOverheatUI.CheckTypeOfWeapon();
         ManageOverheat();
         weaponOverheatUI.SetCurrentOverheat(_currentOverheat);
     }
@@ -102,13 +108,5 @@ public class Shoot : MonoBehaviour
         overHeatText.SetActive(false);
         overHeatEffect.SetActive(false);
         _overHeat = false;
-    }
-
-    public void CheckShootWeapon()
-    {
-        if (weaponData.isShootWeapon == true)
-        {
-            weaponOverheatUI.CheckTypeOfWeapon();
-        }
     }
 }

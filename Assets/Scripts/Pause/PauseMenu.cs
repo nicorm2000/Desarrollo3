@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenuUI;
     [SerializeField] private MySceneManager mySceneManager;
     [SerializeField] private string sceneName;
+    [SerializeField] private Shop shop;
 
     public bool isPaused = false;
 
@@ -13,14 +14,18 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         isPaused = false;
-        pauseMenuUI.SetActive(false);
+        pauseMenuUI.SetActive(false);   
     }
 
     public void Pause()
     {
-        Time.timeScale = 0f;
-        isPaused = true;
-        pauseMenuUI.SetActive(true);
+        if (!shop.isPopUpActive)
+        {
+            Time.timeScale = 0f;
+            isPaused = true;
+            pauseMenuUI.SetActive(true);
+
+        }
     }
 
     public void GoToMainMenu()

@@ -19,11 +19,14 @@ public class Shop : MonoBehaviour
     [Header("Cursor Object Dependencies")]
     [SerializeField] private CursorObject cursorObject;
 
+    public bool isPopUpActive = false;
+
     /// <summary>
     /// Activates the shop pop-up, deactivates the HUD, and freezes the game time.
     /// </summary>
     public void ActivatePopUp() 
     {
+        isPopUpActive = true;
         shopWindow.SetActive(true);
         hud.SetActive(false);
         Time.timeScale = Constants.ZERO_F;
@@ -34,6 +37,7 @@ public class Shop : MonoBehaviour
     /// </summary>
     public void DeactivatePopUp()
     {
+        isPopUpActive = false;
         cursorObject.MouseNotInteract();
         shopWindow.SetActive(false);
         hud.SetActive(true);

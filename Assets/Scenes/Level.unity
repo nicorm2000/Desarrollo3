@@ -568,6 +568,7 @@ MonoBehaviour:
   - {fileID: 1036694872}
   - {fileID: 950710410}
   cursorObject: {fileID: 127761909}
+  isPopUpActive: 0
 --- !u!4 &37278420
 Transform:
   m_ObjectHideFlags: 0
@@ -1579,6 +1580,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 1370068668}
   mySceneManager: {fileID: 433192595}
   sceneName: MainMenu
+  shop: {fileID: 37278418}
   isPaused: 0
 --- !u!114 &127761909
 MonoBehaviour:
@@ -1606,7 +1608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 127761908}
-  resumeButton: {fileID: 0}
+  resumeButton: {fileID: 1821822562}
   miniMap: {fileID: 127761911}
   cursorObject: {fileID: 127761909}
 --- !u!114 &127761911
