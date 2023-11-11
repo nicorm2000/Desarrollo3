@@ -48,11 +48,11 @@ public class HealthSystem : MonoBehaviour
         {
             onEnemyDeadChange?.Invoke(!_dead);
             timer -= Time.deltaTime;
+            enemyCollider.enabled = false;
+            enemyTriggerCollider.enabled = false;
 
             if (!_dead && timer <= 0)
             {
-                enemyCollider.enabled = false;
-                enemyTriggerCollider.enabled = false;
                 shadow.SetActive(false);
 
                 _triggerEffect.TriggerEffect();
