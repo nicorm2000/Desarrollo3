@@ -1,8 +1,12 @@
+using System;
 using UnityEngine;
 
 public class CubeInput : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
+
+    public static event Action<Vector2> OnRightMouseButtonDown;
+    public static event Action<Vector2> OnRightMouseButtonUp;
 
     void Update()
     {
@@ -21,6 +25,16 @@ public class CubeInput : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += new Vector3(5f, 0, 0) * moveSpeed * Time.deltaTime;
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            OnRightMouseButtonDown?.Invoke(Input.mousePosition);
+        }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            OnRightMouseButtonUp?.Invoke(Input.mousePosition);
         }
     }
 }

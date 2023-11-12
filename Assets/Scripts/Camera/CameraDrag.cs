@@ -17,29 +17,41 @@ public class CameraDrag : MonoBehaviour
 
     private Coroutine coroutine = null;
 
+    private void Start()
+    {
+        CubeInput.OnRightMouseButtonDown += StartDragging;
+        CubeInput.OnRightMouseButtonUp += StopDragging;
+    }
+
+    private void OnDestroy()
+    {
+        CubeInput.OnRightMouseButtonDown -= StartDragging;
+        CubeInput.OnRightMouseButtonUp -= StopDragging;
+    }
+
+    private void StartDragging(Vector2 mousePosition)
+    {
+        isDragging = true;
+    }
+
+    private void StopDragging(Vector2 mousePosition)
+    {
+        isDragging = false;
+        releasePosition = transform.position;
+
+        if (coroutine == null)
+        {
+            coroutine = StartCoroutine(ReturnToOriginalPosition());
+        }
+    }
+
     private void Update()
     {
         initialPosition = new Vector3(targetTransform.position.x, targetTransform.position.y, targetTransform.position.z + offsetZ);
-        
+
         if (!isDragging && coroutine == null)
         {
             transform.position = initialPosition;
-        }
-
-        if (Input.GetMouseButtonDown(1))
-        {
-            isDragging = true;
-        }
-
-        if (Input.GetMouseButtonUp(1))
-        {
-            isDragging = false;
-            releasePosition = transform.position;
-
-            if (coroutine == null)
-            {
-                coroutine = StartCoroutine(ReturnToOriginalPosition());
-            }
         }
 
         if (isDragging)
