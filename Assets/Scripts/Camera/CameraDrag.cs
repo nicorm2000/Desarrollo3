@@ -7,8 +7,10 @@ public class CameraDrag : MonoBehaviour
     [SerializeField] private Transform targetTransform;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float returnSpeedTime;
-    [SerializeField] private float offsetZ;
     [SerializeField] private AnimationCurve returnAnimationCurve;
+
+    [Header("Cammera Configuration")]
+    [SerializeField] private float offsetZ;
 
     private Vector3 initialPosition;
     private Vector3 releasePosition;
@@ -17,34 +19,27 @@ public class CameraDrag : MonoBehaviour
 
     private Coroutine coroutine = null;
 
+    /// <summary>
+    /// Subscribes to the right mouse button down and up events.
+    /// </summary>
     private void Start()
     {
         CubeInput.OnRightMouseButtonDown += StartDragging;
         CubeInput.OnRightMouseButtonUp += StopDragging;
     }
 
+    /// <summary>
+    /// Unsubscribes from the right mouse button down and up events.
+    /// </summary>
     private void OnDestroy()
     {
         CubeInput.OnRightMouseButtonDown -= StartDragging;
         CubeInput.OnRightMouseButtonUp -= StopDragging;
     }
 
-    private void StartDragging(Vector2 mousePosition)
-    {
-        isDragging = true;
-    }
-
-    private void StopDragging(Vector2 mousePosition)
-    {
-        isDragging = false;
-        releasePosition = transform.position;
-
-        if (coroutine == null)
-        {
-            coroutine = StartCoroutine(ReturnToOriginalPosition());
-        }
-    }
-
+    /// <summary>
+    /// Updates the position of the object based on input and dragging state.
+    /// </summary>
     private void Update()
     {
         initialPosition = new Vector3(targetTransform.position.x, targetTransform.position.y, targetTransform.position.z + offsetZ);
@@ -63,6 +58,33 @@ public class CameraDrag : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Starts the dragging behavior when the right mouse button is pressed.
+    /// </summary>
+    /// <param name="mousePosition">The position of the mouse when the button is pressed.</param>
+    private void StartDragging(Vector2 mousePosition)
+    {
+        isDragging = true;
+    }
+
+    /// <summary>
+    /// Stops the dragging behavior when the right mouse button is released.
+    /// </summary>
+    /// <param name="mousePosition">The position of the mouse when the button is released.</param>
+    private void StopDragging(Vector2 mousePosition)
+    {
+        isDragging = false;
+        releasePosition = transform.position;
+
+        if (coroutine == null)
+        {
+            coroutine = StartCoroutine(ReturnToOriginalPosition());
+        }
+    }
+
+    /// <summary>
+    /// Coroutine that returns the object to its original position after being released from dragging.
+    /// </summary>
     private IEnumerator ReturnToOriginalPosition()
     {
         timer = 0;
