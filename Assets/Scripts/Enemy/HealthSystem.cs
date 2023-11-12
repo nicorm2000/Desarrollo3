@@ -1,5 +1,4 @@
 using System;
-using System.Threading;
 using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
@@ -7,6 +6,7 @@ public class HealthSystem : MonoBehaviour
     [Header("Setup")]
     private ZoneTriggeredEffect _triggerEffect;
     private SpriteRenderer _spriteRenderer;
+    [SerializeField] private GameObject miniMapIcon;
 
     public bool _dead;
     public EnemyData enemyData;
@@ -50,6 +50,7 @@ public class HealthSystem : MonoBehaviour
             timer -= Time.deltaTime;
             enemyCollider.enabled = false;
             enemyTriggerCollider.enabled = false;
+            miniMapIcon.SetActive(false);
 
             if (!_dead && timer <= 0)
             {
