@@ -3,23 +3,24 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputManager : MonoBehaviour
 {
-    public bool isButtonPress = false;
-
     [Header("Refernces")]
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private Shoot playerShoot;
     [SerializeField] private SelectWeapon[] selectWeapon;
     [SerializeField] private Abilities abilities;
+    [SerializeField] private LookAtMouse lookAtMouse;
 
     [Header("Player Data")]
     [SerializeField] private PlayerData playerData;
+
+    public Vector2 mousePosition { get; private set; }
 
     public void OnMove(InputValue value)
     {
         playerMovement.Movement(value);
     }
 
-    public void OnShootPress() 
+    public void OnShootPress()
     {
         if (!playerData._isDead)
         {
@@ -27,12 +28,17 @@ public class PlayerInputManager : MonoBehaviour
         }
     }
 
-    public void OnShootNotPress() 
+    public void OnMousePosition(InputValue value)
+    {
+        mousePosition = value.Get<Vector2>();
+    }
+
+    public void OnShootNotPress()
     {
         playerData.isButtonPress = false;
     }
 
-    public void OnInteract() 
+    public void OnInteract()
     {
         if (playerData._isDead == false)
         {
@@ -43,7 +49,7 @@ public class PlayerInputManager : MonoBehaviour
         }
     }
 
-    public void OnDash() 
+    public void OnDash()
     {
         if (playerData._isDead == false)
         {
@@ -61,7 +67,7 @@ public class PlayerInputManager : MonoBehaviour
 
     public void OnLaser()
     {
-        if (playerData._isDead == false) 
+        if (playerData._isDead == false)
         {
             abilities.LaserLogic();
         }

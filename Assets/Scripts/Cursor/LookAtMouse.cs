@@ -1,16 +1,20 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class LookAtMouse : MonoBehaviour
 {
     [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
 
+    [Header("Player Input Manager Dependencies")]
+    [SerializeField] private PlayerInputManager playerInputManager;
+
     /// <summary>
     /// Sets the transform parent of the player data.
     /// </summary>
     private void Start()
     {
-        SetPlayerDataTransformParent();
+        playerData.transform = transform.parent;
     }
 
     /// <summary>
@@ -29,7 +33,7 @@ public class LookAtMouse : MonoBehaviour
     /// <returns>The mouse position in the world space.</returns>
     private Vector3 GetMouseWorldPosition()
     {
-        Vector3 mousePosition = Input.mousePosition;
+        Vector2 mousePosition = playerInputManager.mousePosition;
         Vector3 mouseScreenPosition = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 offsetMousePosition = new Vector3(mousePosition.x, mousePosition.y, mouseScreenPosition.z);
 
@@ -55,13 +59,5 @@ public class LookAtMouse : MonoBehaviour
     {
         transform.localScale = new Vector3(Constants.ONE_F, rotationAngle > Constants.NINETY || rotationAngle < -Constants.NINETY ? -Constants.ONE_F : Constants.ONE_F, Constants.ONE_F);
         transform.rotation = Quaternion.Euler(Constants.ZERO_F, Constants.ZERO_F, rotationAngle);
-    }
-
-    /// <summary>
-    /// Sets the transform parent of the player data.
-    /// </summary>
-    private void SetPlayerDataTransformParent()
-    {
-        playerData.transform = transform.parent;
     }
 }

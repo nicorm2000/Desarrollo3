@@ -33,15 +33,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Mouse",
-                    "type": "Value",
-                    "id": "334ca349-a99b-40d3-965e-664db69c19ce",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
                     "name": "Interact",
                     "type": "Button",
                     "id": "cf55436d-9e00-4432-ab16-6740e808b6dd",
@@ -73,6 +64,15 @@
                     "type": "Button",
                     "id": "1285d931-dfc8-4390-bf64-c07e3755cf58",
                     "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "MousePosition",
+                    "type": "Value",
+                    "id": "413e1975-1305-4f84-9ba0-fc3dac8d3e4e",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -133,17 +133,6 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "8531950a-048f-4082-a264-3635a592748d",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Mouse",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
@@ -208,6 +197,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "ShootNotPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45d53837-5b1d-4061-aa62-571d67c3613a",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MousePosition",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
