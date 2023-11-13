@@ -16,7 +16,6 @@ public class CameraDrag : MonoBehaviour
     private Vector3 releasePosition;
     private float timer = 0f;
     private bool isDragging = false;
-
     private Coroutine coroutine = null;
 
     /// <summary>

@@ -408,6 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
+  screenEdgeThreshold: 10
 --- !u!212 &363886501
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1174,7 +1175,6 @@ MonoBehaviour:
   targetTransform: {fileID: 363886499}
   moveSpeed: 20
   returnSpeedTime: 1
-  offsetZ: -10
   returnAnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -1199,6 +1199,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  offsetZ: -10
 --- !u!1 &1626310442
 GameObject:
   m_ObjectHideFlags: 0
