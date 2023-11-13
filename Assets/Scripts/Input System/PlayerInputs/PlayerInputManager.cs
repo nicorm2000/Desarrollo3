@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputManager : MonoBehaviour
 {
+    public bool isButtonPress = false;
+
     [Header("Refernces")]
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private Shoot playerShoot;
@@ -15,6 +17,19 @@ public class PlayerInputManager : MonoBehaviour
     public void OnMove(InputValue value)
     {
         playerMovement.Movement(value);
+    }
+
+    public void OnShootPress() 
+    {
+        if (!playerData._isDead)
+        {
+            playerData.isButtonPress = true;
+        }
+    }
+
+    public void OnShootNotPress() 
+    {
+        playerData.isButtonPress = false;
     }
 
     public void OnInteract() 

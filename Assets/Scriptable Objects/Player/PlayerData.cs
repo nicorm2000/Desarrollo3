@@ -65,6 +65,7 @@ public class PlayerData : ScriptableObject
 
     [Header("Shoot")]
     public bool haveAGun;
+    public bool isButtonPress;
 
     public void ResetPlayerStacks() 
     {

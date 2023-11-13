@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
@@ -15,12 +16,12 @@ public class Shoot : MonoBehaviour
 
     [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
-
     [SerializeField] private GunOverheat gunOverheat;
+
 
     private void Update()
     {
-        if (playerData._isDead == false)
+        if (playerData.isButtonPress) 
         {
             StartShoot();
         }
@@ -28,7 +29,7 @@ public class Shoot : MonoBehaviour
 
     public void StartShoot()
     {
-        if (!gunOverheat._overHeat && gunOverheat._canShoot && Input.GetMouseButton(0))
+        if (!gunOverheat._overHeat && gunOverheat._canShoot)
         {
             if (gunOverheat._currentOverheat < gunOverheat.weaponOverheat)
             {
@@ -47,8 +48,7 @@ public class Shoot : MonoBehaviour
         }
 
         Instantiate(weaponData.bulletPrefab, transform.position, transform.rotation);
-        gunOverheat._canShoot = false;
-        gunOverheat._timeBetweenShots = 1f / weaponData.attackSpeed;
+        DisableShooting();
         Invoke(nameof(EnableShooting), gunOverheat._timeBetweenShots);
     }
 
@@ -63,12 +63,12 @@ public class Shoot : MonoBehaviour
         if (gunOverheat._currentOverheat > 0f)
         {
             gunOverheat._currentOverheat -= gunOverheat.overheatDecreaseRate * Time.deltaTime;
+        }
 
-            if (gunOverheat._currentOverheat <= 0f)
-            {
-                gunOverheat._currentOverheat = 0f;
-                gunOverheat._canShoot = true;
-            }
+        if (gunOverheat._currentOverheat <= 0f)
+        {
+            gunOverheat._currentOverheat = 0f;
+            gunOverheat._canShoot = true;
         }
     }
 
