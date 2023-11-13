@@ -4,18 +4,11 @@ using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
-    [Header("WeaponOverheat")]
+    [Header("WeaponData")]
     [SerializeField] private WeaponData weaponData;
-    [SerializeField] private float weaponOverheat;
-    [SerializeField] private float overheatIncreaseAmount;
-    [SerializeField] private float overheatDecreaseRate;
 
     [Header("WeaponOverheatUI")]
     [SerializeField] private WeaponOverheatUI weaponOverheatUI;
-    [SerializeField] private Image weaponBlack;
-    [SerializeField] private Image weaponRed;
-    [SerializeField] private GameObject overHeatText;
-    [SerializeField] private GameObject overHeatEffect;
 
     [Header("Screen Shake Dependencies")]
     [SerializeField] private ScreenShake screenShake;
@@ -23,45 +16,27 @@ public class Shoot : MonoBehaviour
     [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
 
-    private float _currentOverheat = 0f;
-    private float _timeBetweenShots;
-    private bool _canShoot = true;
-    private bool _overHeat = false;
-
-    private void Start()
-    {
-        weaponOverheatUI.maxSliderOverheat = weaponOverheat;
-    }
+    [SerializeField] private GunOverheat gunOverheat;
 
     private void Update()
     {
-        if(playerData._isDead == false) 
+        if (playerData._isDead == false)
         {
             StartShoot();
         }
     }
 
-    public void StartShoot() 
+    public void StartShoot()
     {
-        if (!_overHeat && _canShoot && Input.GetMouseButton(0))
+        if (!gunOverheat._overHeat && gunOverheat._canShoot && Input.GetMouseButton(0))
         {
-            if (_currentOverheat < weaponOverheat)
+            if (gunOverheat._currentOverheat < gunOverheat.weaponOverheat)
             {
                 ShootLogic();
 
-                _currentOverheat += overheatIncreaseAmount;
-                weaponOverheatUI.currentSliderOverheat -= 1;
-
-                if (_currentOverheat >= weaponOverheat)
-                {
-                    StartCoroutine(ShootCooldown());
-                }
+                gunOverheat.OverheatLogic();
             }
         }
-
-        weaponOverheatUI.CheckTypeOfWeapon();
-        ManageOverheat();
-        weaponOverheatUI.SetCurrentOverheat(_currentOverheat);
     }
 
     public void ShootLogic()
@@ -72,44 +47,50 @@ public class Shoot : MonoBehaviour
         }
 
         Instantiate(weaponData.bulletPrefab, transform.position, transform.rotation);
-        _canShoot = false;
-        _timeBetweenShots = 1f / weaponData.attackSpeed;
-        Invoke(nameof(EnableShooting), _timeBetweenShots);
+        gunOverheat._canShoot = false;
+        gunOverheat._timeBetweenShots = 1f / weaponData.attackSpeed;
+        Invoke(nameof(EnableShooting), gunOverheat._timeBetweenShots);
     }
 
     private void EnableShooting()
     {
-        _canShoot = true;
+        gunOverheat._canShoot = true;
         weaponOverheatUI.currentSliderOverheat = weaponOverheatUI.maxSliderOverheat;
     }
 
     private void ManageOverheat()
     {
-        if (_currentOverheat > 0f)
+        if (gunOverheat._currentOverheat > 0f)
         {
-            _currentOverheat -= overheatDecreaseRate * Time.deltaTime;
+            gunOverheat._currentOverheat -= gunOverheat.overheatDecreaseRate * Time.deltaTime;
 
-            if (_currentOverheat <= 0f)
+            if (gunOverheat._currentOverheat <= 0f)
             {
-                _currentOverheat = 0f;
-                _canShoot = true;
+                gunOverheat._currentOverheat = 0f;
+                gunOverheat._canShoot = true;
             }
         }
     }
 
+    public void DisableShooting()
+    {
+        gunOverheat._canShoot = false;
+        gunOverheat._timeBetweenShots = 1f / weaponData.attackSpeed;
+    }
+
     private IEnumerator ShootCooldown()
     {
-        _overHeat = true;
-        overHeatText.SetActive(true);
-        overHeatEffect.SetActive(true);
+        gunOverheat._overHeat = true;
+        gunOverheat.overHeatText.SetActive(true);
+        gunOverheat.overHeatEffect.SetActive(true);
 
-        while (_currentOverheat > 0f)
+        while (gunOverheat._currentOverheat > 0f)
         {
             yield return null;
         }
 
-        overHeatText.SetActive(false);
-        overHeatEffect.SetActive(false);
-        _overHeat = false;
+        gunOverheat.overHeatText.SetActive(false);
+        gunOverheat.overHeatEffect.SetActive(false);
+        gunOverheat._overHeat = false;
     }
 }
