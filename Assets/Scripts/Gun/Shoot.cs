@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
@@ -11,24 +10,23 @@ public class Shoot : MonoBehaviour
     [SerializeField] private float overheatIncreaseAmount;
     [SerializeField] private float overheatDecreaseRate;
 
-    private float _currentOverheat = 0f;
-    private float _timeBetweenShots;
-    private bool _canShoot = true;
-    private bool _overHeat = false;
-
     [Header("WeaponOverheatUI")]
     [SerializeField] private WeaponOverheatUI weaponOverheatUI;
-
     [SerializeField] private Image weaponBlack;
     [SerializeField] private Image weaponRed;
-
     [SerializeField] private GameObject overHeatText;
     [SerializeField] private GameObject overHeatEffect;
 
     [Header("Screen Shake Dependencies")]
     [SerializeField] private ScreenShake screenShake;
 
+    [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
+
+    private float _currentOverheat = 0f;
+    private float _timeBetweenShots;
+    private bool _canShoot = true;
+    private bool _overHeat = false;
 
     private void Start()
     {

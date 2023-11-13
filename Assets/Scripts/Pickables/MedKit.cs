@@ -6,6 +6,7 @@ public class MedKit : MonoBehaviour, IPickable
     [Header("MedKit Configuration")]
     [SerializeField] private float healAmount;
     [SerializeField] private float coolDownTime;
+    [SerializeField] private GameObject medkitIcon;
 
     [Header("Materials Dependencies")]
     [SerializeField] private Material activeMaterial;
@@ -22,19 +23,15 @@ public class MedKit : MonoBehaviour, IPickable
 
     private bool isActive = true;
 
-    #region INTERFACE_VARIABLES
     public float CooldownTime => coolDownTime;
-    #endregion
 
-    #region INTERFACE_METHODS
     public void ApplyEffect()
     {
         if (isActive)
         {
-            playerData.currentHealth += healAmount;
-            playerHealthUI.SetHealth(playerData.currentHealth);
+            Heal();
             isActive = false;
-            ModifyVisuals(cooldownMaterial);
+            ModifyVisuals(cooldownMaterial, false);
             StartCooldown();
         }
     }
@@ -47,25 +44,38 @@ public class MedKit : MonoBehaviour, IPickable
         }
     }
 
-    public void ModifyVisuals(Material material)
+    public void ModifyVisuals(Material material, bool icon)
     {
         Renderer renderer = GetComponent<Renderer>();
         if (renderer != null)
         {
             renderer.material = material;
         }
+
+        medkitIcon.SetActive(icon);
     }
 
     public bool IsReadyForPickUp()
     {
         return isActive;
     }
-    #endregion
 
-    #region UNITY_METHODS
+    private void Heal()
+    {
+        if ((playerData.currentHealth += healAmount) > playerData.maxHealth)
+        {
+            playerData.currentHealth = playerData.maxHealth;
+        }
+        else
+        {
+            playerData.currentHealth += healAmount;
+        }
+        playerHealthUI.SetHealth(playerData.currentHealth);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO && playerData.currentHealth < playerData.maxHealth)
+        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
             ApplyEffect();
         }
@@ -75,7 +85,6 @@ public class MedKit : MonoBehaviour, IPickable
     {
         yield return new WaitForSeconds(coolDownTime);
         isActive = true;
-        ModifyVisuals(activeMaterial);
+        ModifyVisuals(activeMaterial, true);
     }
-    #endregion
 }

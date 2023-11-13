@@ -217,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healAmount: 20
   coolDownTime: 30
+  medkitIcon: {fileID: 1079883453892501861}
   activeMaterial: {fileID: 2100000, guid: bef2b9c7e65e3f34c9c8c4bb2e59b06d, type: 2}
   cooldownMaterial: {fileID: 2100000, guid: 6f8b5004bc20467469eb55b46437cd15, type: 2}
   includeLayer:

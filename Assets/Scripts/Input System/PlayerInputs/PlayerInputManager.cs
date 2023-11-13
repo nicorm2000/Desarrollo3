@@ -49,7 +49,6 @@ public class PlayerInputManager : MonoBehaviour
         if (playerData._isDead == false) 
         {
             abilities.LaserLogic();
-
         }
     }
 }
