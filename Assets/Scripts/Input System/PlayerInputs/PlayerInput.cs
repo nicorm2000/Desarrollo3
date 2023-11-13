@@ -37,12 +37,21 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Shoot"",
+                    ""name"": ""ShootPress"",
                     ""type"": ""Button"",
                     ""id"": ""956383a5-1cdc-48e0-b77f-6a8ad435c579"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ShootNotPress"",
+                    ""type"": ""Button"",
+                    ""id"": ""e2e19c56-7304-446f-ac75-2507e78390ed"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -165,7 +174,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Shoot"",
+                    ""action"": ""ShootPress"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -212,6 +221,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Laser"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1ce1704b-f5e2-4cde-8e5b-3a922a86212d"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ShootNotPress"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -221,7 +241,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
-        m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
+        m_Player_ShootPress = m_Player.FindAction("ShootPress", throwIfNotFound: true);
+        m_Player_ShootNotPress = m_Player.FindAction("ShootNotPress", throwIfNotFound: true);
         m_Player_Mouse = m_Player.FindAction("Mouse", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
@@ -289,7 +310,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
-    private readonly InputAction m_Player_Shoot;
+    private readonly InputAction m_Player_ShootPress;
+    private readonly InputAction m_Player_ShootNotPress;
     private readonly InputAction m_Player_Mouse;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Dash;
@@ -300,7 +322,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         private @PlayerInput m_Wrapper;
         public PlayerActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
-        public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
+        public InputAction @ShootPress => m_Wrapper.m_Player_ShootPress;
+        public InputAction @ShootNotPress => m_Wrapper.m_Player_ShootNotPress;
         public InputAction @Mouse => m_Wrapper.m_Player_Mouse;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
@@ -318,9 +341,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
-            @Shoot.started += instance.OnShoot;
-            @Shoot.performed += instance.OnShoot;
-            @Shoot.canceled += instance.OnShoot;
+            @ShootPress.started += instance.OnShootPress;
+            @ShootPress.performed += instance.OnShootPress;
+            @ShootPress.canceled += instance.OnShootPress;
+            @ShootNotPress.started += instance.OnShootNotPress;
+            @ShootNotPress.performed += instance.OnShootNotPress;
+            @ShootNotPress.canceled += instance.OnShootNotPress;
             @Mouse.started += instance.OnMouse;
             @Mouse.performed += instance.OnMouse;
             @Mouse.canceled += instance.OnMouse;
@@ -343,9 +369,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
-            @Shoot.started -= instance.OnShoot;
-            @Shoot.performed -= instance.OnShoot;
-            @Shoot.canceled -= instance.OnShoot;
+            @ShootPress.started -= instance.OnShootPress;
+            @ShootPress.performed -= instance.OnShootPress;
+            @ShootPress.canceled -= instance.OnShootPress;
+            @ShootNotPress.started -= instance.OnShootNotPress;
+            @ShootNotPress.performed -= instance.OnShootNotPress;
+            @ShootNotPress.canceled -= instance.OnShootNotPress;
             @Mouse.started -= instance.OnMouse;
             @Mouse.performed -= instance.OnMouse;
             @Mouse.canceled -= instance.OnMouse;
@@ -381,7 +410,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
-        void OnShoot(InputAction.CallbackContext context);
+        void OnShootPress(InputAction.CallbackContext context);
+        void OnShootNotPress(InputAction.CallbackContext context);
         void OnMouse(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);

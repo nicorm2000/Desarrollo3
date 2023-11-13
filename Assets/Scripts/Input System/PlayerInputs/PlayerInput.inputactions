@@ -15,12 +15,21 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Shoot",
+                    "name": "ShootPress",
                     "type": "Button",
                     "id": "956383a5-1cdc-48e0-b77f-6a8ad435c579",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ShootNotPress",
+                    "type": "Button",
+                    "id": "e2e19c56-7304-446f-ac75-2507e78390ed",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)",
                     "initialStateCheck": false
                 },
                 {
@@ -143,7 +152,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Shoot",
+                    "action": "ShootPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -188,6 +197,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Laser",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1ce1704b-f5e2-4cde-8e5b-3a922a86212d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShootNotPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
