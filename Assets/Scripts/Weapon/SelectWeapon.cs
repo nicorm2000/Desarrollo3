@@ -53,7 +53,6 @@ public class SelectWeapon : MonoBehaviour
     public void CheckPlayerTeleport()
     {
         playerData.haveAGun = true;
-        changePlayerWeapon.ChangeWeapon(weaponData.weaponID);
         increaseSizeOn.ActiveTransition();
 
         if (isPlayerOnTeleportArea == true)
@@ -64,6 +63,7 @@ public class SelectWeapon : MonoBehaviour
 
     public void PlayerTeleport() 
     {
+        changePlayerWeapon.ChangeWeapon(weaponData.weaponID);
         player.transform.position = levelSpawn.transform.position;
     }
 }
