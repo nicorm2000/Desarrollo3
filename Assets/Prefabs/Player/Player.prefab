@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+  playerInputManager: {fileID: 43016677604891885}
 --- !u!114 &271190921871362969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1132,6 +1133,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   abilities: {fileID: 464711979963327155}
+  lookAtMouse: {fileID: 6429364731748367593}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!114 &9160149820997449130
 MonoBehaviour:

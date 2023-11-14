@@ -6,15 +6,14 @@ public class FireDamage : MonoBehaviour
     [SerializeField] private float enemyDamage;
     [SerializeField] private float damageCooldown = 0.5f;
     [SerializeField] private HealthSystem enemyHealth;
+    [SerializeField] private PlayerHealth playerHealth;
 
     public PlayerData playerData;
-    private PlayerHealth playerHealth;
     private float lastDamageTime;
 
     private void Start()
     {
         playerData.ResetPlayerFireDamage();
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
     private void Update()

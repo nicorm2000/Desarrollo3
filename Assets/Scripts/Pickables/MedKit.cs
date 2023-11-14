@@ -66,10 +66,6 @@ public class MedKit : MonoBehaviour, IPickable
         {
             playerData.currentHealth = playerData.maxHealth;
         }
-        else
-        {
-            playerData.currentHealth += healAmount;
-        }
         playerHealthUI.SetHealth(playerData.currentHealth);
     }
 
