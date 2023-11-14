@@ -11,7 +11,8 @@ public class Transitions : MonoBehaviour
     [SerializeField] private float maxTime;
     private float timer;
 
-    private bool startTrasition;
+    private bool startTrasition = false;
+    private bool isEnded = false;
 
     private void Start()
     {
@@ -35,6 +36,7 @@ public class Transitions : MonoBehaviour
 
     public void ActiveTransition() 
     {
+        isEnded = false;
         startTrasition = true;
         transition.SetActive(true);
     }
@@ -42,5 +44,15 @@ public class Transitions : MonoBehaviour
     public void DisableTransition() 
     {
         transition.SetActive(false);
+        isEnded = true;
+    }
+
+    public bool isTransitionFinish() 
+    {
+        if (isEnded == true)
+        return true;
+
+        else 
+        return false;
     }
 }

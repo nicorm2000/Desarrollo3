@@ -1,7 +1,11 @@
+using System.Threading;
 using UnityEngine;
 
 public class SelectWeapon : MonoBehaviour
 {
+    [SerializeField] private Transitions increaseSizeOn;
+    [SerializeField] private Transitions increaseSizeOff;
+
     [SerializeField] private GameObject levelSpawn;
     [SerializeField] private GameObject pickUpWeaponText;
     [SerializeField] private ChangePlayerWeapon changePlayerWeapon;
@@ -11,17 +15,28 @@ public class SelectWeapon : MonoBehaviour
     public WeaponData weaponData;
 
     public bool playerCanTeleport = false;
+    public bool isPlayerOnTeleportArea = false;
 
     private void Start()
     {
         pickUpWeaponText.SetActive(false);
     }
 
+    private void Update()
+    {
+        if(playerCanTeleport == true && increaseSizeOn.isTransitionFinish() == true) 
+        {
+            increaseSizeOff.ActiveTransition();
+            PlayerTeleport();
+            playerCanTeleport = false;
+        }
+    }
+
     private void OnTriggerEnter(Collider player)
     {
         if (player.gameObject.CompareTag("Player"))
         {
-            playerCanTeleport = true;
+            isPlayerOnTeleportArea = true;
             pickUpWeaponText.SetActive(true);
         }
     }
@@ -30,18 +45,25 @@ public class SelectWeapon : MonoBehaviour
     {
         if (player.gameObject.CompareTag("Player"))
         {
-            playerCanTeleport = false;
+            isPlayerOnTeleportArea = false;
             pickUpWeaponText.SetActive(false);
         }
     }
 
-    public void PlayerTeleport()
+    public void CheckPlayerTeleport()
     {
-        if (playerCanTeleport)
+        playerData.haveAGun = true;
+        changePlayerWeapon.ChangeWeapon(weaponData.weaponID);
+        increaseSizeOn.ActiveTransition();
+
+        if (isPlayerOnTeleportArea == true)
         {
-            playerData.haveAGun = true;
-            changePlayerWeapon.ChangeWeapon(weaponData.weaponID);
-            player.transform.position = levelSpawn.transform.position;
+            playerCanTeleport = true;
         }
+    }
+
+    public void PlayerTeleport() 
+    {
+        player.transform.position = levelSpawn.transform.position;
     }
 }

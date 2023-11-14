@@ -5,6 +5,8 @@ public class UIInputManger : MonoBehaviour
 {
     [Header("References")]
 
+    [SerializeField] private Transitions increaseSizeOff;
+
     [SerializeField] private PauseMenu pauseMenu;
 
     [SerializeField] private GameObject resumeButton;
@@ -22,6 +24,8 @@ public class UIInputManger : MonoBehaviour
 
     void Start()
     {
+        increaseSizeOff.ActiveTransition();
+
         pauseMenu = GetComponent<PauseMenu>();
 
         action.UI.Pause.performed += _ => IsPaused();
