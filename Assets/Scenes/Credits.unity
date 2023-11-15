@@ -1331,7 +1331,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3700}
+  m_AnchoredPosition: {x: 0, y: -3750}
   m_SizeDelta: {x: 1500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &635486010
@@ -1354,7 +1354,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Franco Guerra\r"
+  m_text: 'Franco Guerra
+
+
+    Eugenio Taboada'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1431d80935cee34b9fd4113e7d94866, type: 2}
   m_sharedMaterial: {fileID: 8233435915380040242, guid: c1431d80935cee34b9fd4113e7d94866, type: 2}
@@ -1381,7 +1384,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 66.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2645,14 +2648,14 @@ MonoBehaviour:
   - 0.35
   - 0.55
   - 0.75
-  - 0.9
+  - 0.925
   objects:
   - {fileID: 1808812400}
   - {fileID: 1303128679}
   - {fileID: 1681039915}
   - {fileID: 1487538865}
   - {fileID: 1151124483}
-  mainMenuWhileCreditsTime: 0.9
+  mainMenuWhileCreditsTime: 0.925
   mainMenuWhileCredits: {fileID: 204227730}
 --- !u!1 &1435219475
 GameObject:
