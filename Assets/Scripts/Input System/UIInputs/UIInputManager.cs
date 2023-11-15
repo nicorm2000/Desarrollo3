@@ -15,7 +15,7 @@ public class UIInputManger : MonoBehaviour
 
     [SerializeField] private CursorObject cursorObject;
 
-    UIInputs action;
+    private UIInputs action;
 
     private void Awake()
     {

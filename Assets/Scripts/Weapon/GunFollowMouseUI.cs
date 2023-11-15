@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class GunFollowMouseUI : MonoBehaviour
 {
-    [SerializeField] private float minYRotation = -30f;
-    [SerializeField] private float maxYRotation = 30f;
-    [SerializeField] private float rotationSpeed = 5f;
+    [SerializeField] private float minYRotation;
+    [SerializeField] private float maxYRotation;
+    [SerializeField] private float rotationSpeed;
 
     private Transform gunTransform;
     private Camera cam;
@@ -17,7 +17,7 @@ public class GunFollowMouseUI : MonoBehaviour
     private void Update()
     {
         Vector3 mouseScreenPos = Input.mousePosition;
-        Vector3 mouseWorldPos = cam.ScreenToViewportPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, 10f));//10 is the distance of the camera to the gun
+        Vector3 mouseWorldPos = cam.ScreenToViewportPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, 10f));
 
         float newRotationX = Mathf.Clamp(mouseWorldPos.y - gunTransform.position.y, minYRotation, maxYRotation);
 

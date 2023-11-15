@@ -4,17 +4,22 @@ using UnityEngine;
 public class Conversation : MonoBehaviour
 {
     [SerializeField] private string[] phrases = { "Hey, this is the shop!", "Please, choose your next weapon!", "Let the carnage begin!" };
-    [SerializeField] private bool animateText = true;
     [SerializeField] private TMPro.TextMeshProUGUI textMeshPro;
-    [SerializeField] private float typingSpeed = 0.1f;
+    [SerializeField] private float typingSpeed;
 
+    private bool animateText = true;
     private int currentIndex = 0;
+
+    private void Start()
+    {
+        StartCoroutine(AnimateText());
+    }
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player") && Time.timeScale != 0)
         {
-            StartCoroutine(AnimateText());
+            animateText = true;
         }
     }
 
@@ -22,7 +27,7 @@ public class Conversation : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player") && Time.timeScale != 0)
         {
-            StopCoroutine(AnimateText());
+            animateText = false;
         }
     }
 
@@ -38,7 +43,7 @@ public class Conversation : MonoBehaviour
             {
                 textMeshPro.text += currentPhrase[i];
 
-                yield return new WaitForSeconds(typingSpeed);
+                yield return new WaitForSeconds(typingSpeed * Time.deltaTime);
             }
 
             yield return new WaitForSeconds(2f);
