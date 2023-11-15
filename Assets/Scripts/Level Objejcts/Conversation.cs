@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class Conversation : MonoBehaviour
 {
-    [SerializeField] private string[] phrases = { "Hey, this is the shop!", "Please, choose your next weapon!", "Let the carnage begin!" };
+    [Header("Conversation Configuration")]
     [SerializeField] private TMPro.TextMeshProUGUI textMeshPro;
     [SerializeField] private float typingSpeed;
+    [SerializeField] private string[] phrases = { "Hey, this is the shop!", "Please, choose your next weapon!", "Let the carnage begin!" };
 
     private bool animateText = true;
     private int currentIndex = 0;

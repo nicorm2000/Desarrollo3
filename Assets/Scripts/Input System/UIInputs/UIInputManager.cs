@@ -3,16 +3,17 @@ using UnityEngine.EventSystems;
 
 public class UIInputManger : MonoBehaviour
 {
-    [Header("References")]
-
+    [Header("Transition Dependencies")]
     [SerializeField] private Transitions increaseSizeOff;
 
+    [Header("Pause Menu Dependencies")]
     [SerializeField] private PauseMenu pauseMenu;
-
     [SerializeField] private GameObject resumeButton;
 
+    [Header("Mini Map Dependencies")]
     [SerializeField] private MiniMap miniMap;
 
+    [Header("Cursor Dependencies")]
     [SerializeField] private CursorObject cursorObject;
 
     private UIInputs action;
