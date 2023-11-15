@@ -35,7 +35,7 @@ public class UIInputManger : MonoBehaviour
 
     private void IsPaused()
     {
-        if (pauseMenu.isPaused == true)
+        if (pauseMenu.isPaused)
         {
             ResumeGame();
             EventSystem.current.SetSelectedGameObject(null);
@@ -49,7 +49,7 @@ public class UIInputManger : MonoBehaviour
 
     private void IsMiniMap()
     {
-        if (miniMap.isMapActive)
+        if (miniMap.isMapActive && !pauseMenu.isPaused)
         {
             ActivateMiniMap();
         }
@@ -71,6 +71,10 @@ public class UIInputManger : MonoBehaviour
 
     public void PauseGame()
     {
+        if (!miniMap.isMapActive)
+        {
+            miniMap.DeactivateMap();
+        }
         pauseMenu.Pause();
     }
 
