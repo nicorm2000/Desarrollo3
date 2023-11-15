@@ -5698,6 +5698,27 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4068373912626513877, guid: 5fb6f3a6e904b7b44b6cca0cb6fc54c4, type: 3}
+--- !u!65 &444505857
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444505851}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 523767
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0068383515, y: 0.011561759, z: 0.006726436}
+  m_Center: {x: -0.000036046913, y: -0.004111595, z: -0.000021807242}
 --- !u!1 &444874082
 GameObject:
   m_ObjectHideFlags: 0
@@ -9486,6 +9507,27 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4068373912626513877, guid: 5fb6f3a6e904b7b44b6cca0cb6fc54c4, type: 3}
+--- !u!65 &766050918
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766050912}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 523767
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0068383515, y: 0.011993854, z: 0.0067264363}
+  m_Center: {x: -0.000036046902, y: -0.0014149571, z: -0.00002180728}
 --- !u!1 &770529830
 GameObject:
   m_ObjectHideFlags: 0
@@ -11720,6 +11762,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8513424388201257645, guid: 5fb6f3a6e904b7b44b6cca0cb6fc54c4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 444505853}
+    - targetCorrespondingSourceObject: {fileID: -8513424388201257645, guid: 5fb6f3a6e904b7b44b6cca0cb6fc54c4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 444505857}
   m_SourcePrefab: {fileID: 100100000, guid: 5fb6f3a6e904b7b44b6cca0cb6fc54c4, type: 3}
 --- !u!1001 &1004809218
 PrefabInstance:
@@ -13613,6 +13658,27 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4068373912626513877, guid: 5fb6f3a6e904b7b44b6cca0cb6fc54c4, type: 3}
+--- !u!65 &1098134430
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098134424}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 523767
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0068383515, y: 0.011561759, z: 0.006726436}
+  m_Center: {x: -0.000036046913, y: -0.004111595, z: -0.000021807242}
 --- !u!1001 &1101559409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15485,6 +15551,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8513424388201257645, guid: 5fb6f3a6e904b7b44b6cca0cb6fc54c4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 766050914}
+    - targetCorrespondingSourceObject: {fileID: -8513424388201257645, guid: 5fb6f3a6e904b7b44b6cca0cb6fc54c4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 766050918}
   m_SourcePrefab: {fileID: 100100000, guid: 5fb6f3a6e904b7b44b6cca0cb6fc54c4, type: 3}
 --- !u!4 &1221741596 stripped
 Transform:
@@ -22428,6 +22497,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8513424388201257645, guid: 5fb6f3a6e904b7b44b6cca0cb6fc54c4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1098134426}
+    - targetCorrespondingSourceObject: {fileID: -8513424388201257645, guid: 5fb6f3a6e904b7b44b6cca0cb6fc54c4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1098134430}
   m_SourcePrefab: {fileID: 100100000, guid: 5fb6f3a6e904b7b44b6cca0cb6fc54c4, type: 3}
 --- !u!1 &1710681197
 GameObject:

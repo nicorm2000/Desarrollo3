@@ -14,15 +14,8 @@ public class UpgradePlayer : MonoBehaviour
     /// <param name="number">The amount to upgrade the health by.</param>
     public void UpgradeHealth(float number)
     {
-        if (playerData.currentHealth == playerData.maxHealth)
-        {
-            playerData.currentHealth = playerData.maxHealth;
-        }
-        else
-        {
-            playerData.currentHealth += number;
-        }
         playerData.maxHealth += number;
+        playerData.currentHealth += number;
 
         playerHealthUI.SetMaxAndCurrentHealth(playerData.maxHealth, playerData.currentHealth);
     }
