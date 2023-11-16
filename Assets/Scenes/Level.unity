@@ -9541,6 +9541,7 @@ MonoBehaviour:
   - {fileID: 639829615}
   waveUI: {fileID: 760154692}
   abilities: {fileID: 1941617724}
+  increaseSizeOn: {fileID: 908161859}
 --- !u!114 &760154692
 MonoBehaviour:
   m_ObjectHideFlags: 0

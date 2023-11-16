@@ -11,7 +11,6 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("Transition Dependencies")]
     [SerializeField] private Transitions increaseSizeOn;
-    [SerializeField] private Transitions increaseSizeOff;
 
     private float transitonOnTime = 1f;
     private float transitonStart = 7f;

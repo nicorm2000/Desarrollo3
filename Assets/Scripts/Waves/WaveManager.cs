@@ -31,6 +31,10 @@ public class WaveManager : MonoBehaviour
     [Header("Abilities Dependencies")]
     [SerializeField] private Abilities abilities;
 
+    [Header("Transition Dependencies")]
+    [SerializeField] private Transitions increaseSizeOn;
+    private float timeToWaitTransition = 1f;
+
     public int currentWaveIndex { get; private set; }
 
     private int _maxWaves = Constants.ROUNDS_BETWEEN_SHOPS;
@@ -76,6 +80,8 @@ public class WaveManager : MonoBehaviour
             else
             {
                 Debug.Log("Game Finished");
+                StartCoroutine(increaseSizeOn.ActiveTransition(timeToWaitTransition));
+                StartCoroutine(increaseSizeOn.DisableTransition(timeToWaitTransition));
                 StartCoroutine(waveUI.ShowWaveCompletedUI());
             }
         }
