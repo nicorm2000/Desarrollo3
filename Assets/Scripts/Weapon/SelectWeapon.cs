@@ -45,7 +45,7 @@ public class SelectWeapon : MonoBehaviour
         }
     }
 
-    public void CheckPlayerTeleport()
+    public void CheckPlayerTeleportToLevel()
     {
         playerData.haveAGun = true;
 

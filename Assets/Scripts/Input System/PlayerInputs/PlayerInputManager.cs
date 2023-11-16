@@ -7,6 +7,7 @@ public class PlayerInputManager : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private Shoot playerShoot;
     [SerializeField] private SelectWeapon[] selectWeapon;
+    [SerializeField] private LevelToShop levelToShop;
     [SerializeField] private Abilities abilities;
     [SerializeField] private LookAtMouse lookAtMouse;
 
@@ -44,8 +45,10 @@ public class PlayerInputManager : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
-                selectWeapon[i].CheckPlayerTeleport();
+                selectWeapon[i].CheckPlayerTeleportToLevel();
             }
+
+            levelToShop.CheckPlayerTeleportToShop();
         }
     }
 
