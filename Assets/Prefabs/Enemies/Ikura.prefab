@@ -86,6 +86,7 @@ MonoBehaviour:
   enemyTriggerCollider: {fileID: 444156368333031594}
   shadow: {fileID: 8568182000946973724}
   health: 0
+  objectLifespanOffset: 0.5
   hitMarker: {fileID: 4970129750647362044}
   maxTime: 0.5
 --- !u!212 &7699837152467073221

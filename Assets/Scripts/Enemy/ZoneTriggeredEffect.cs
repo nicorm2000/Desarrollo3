@@ -21,7 +21,7 @@ public class ZoneTriggeredEffect : MonoBehaviour
 
     private IEnumerator FadeOutAndDestroy(GameObject splashObject, SpriteRenderer spriteRenderer)
     {
-        float startTime = Time.deltaTime;
+        float startTime = Time.time;
         float elapsedTime = 0f;
         Color originalColor = spriteRenderer.color;
 
@@ -31,10 +31,11 @@ public class ZoneTriggeredEffect : MonoBehaviour
             Color fadedColor = new Color(originalColor.r, originalColor.g, originalColor.b, 1f - normalizedTime);
             spriteRenderer.color = fadedColor;
 
-            elapsedTime += Time.deltaTime;
+            elapsedTime = Time.time - startTime;
+            Debug.Log(elapsedTime);
             yield return null;
         }
-
+        Debug.Log("Coroutine completed");
         Destroy(splashObject);
     }
 }

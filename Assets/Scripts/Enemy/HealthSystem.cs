@@ -20,6 +20,7 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private Collider enemyTriggerCollider;
     [SerializeField] private GameObject shadow;
     [SerializeField] private float health = 0;
+    [SerializeField] private float objectLifespanOffset;
 
     [Header("Hit Marker")]
     [SerializeField] private HitMarker hitMarker;
@@ -85,6 +86,6 @@ public class HealthSystem : MonoBehaviour
     private void DestroyEnemyTimer() 
     { 
         _spriteRenderer.enabled = false;
-        Invoke("DestroyEnemy", _triggerEffect.dropData.objectLifespan);  
+        Invoke("DestroyEnemy", _triggerEffect.dropData.objectLifespan + objectLifespanOffset);  
     }
 }
