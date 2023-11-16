@@ -18,7 +18,6 @@ public class LevelToShop : MonoBehaviour
     private float timeToWait = 1f;
     private float transitonOffTime = 2f;
 
-
     [Header("Teleport Location")]
     [SerializeField] private Transform spawnWeaponSelect;
 
