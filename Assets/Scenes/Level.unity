@@ -6385,9 +6385,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194230}
     - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: increaseSizeOn
+      value: 
+      objectReference: {fileID: 908161859}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: mySceneManager
       value: 
       objectReference: {fileID: 433192595}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: increaseSizeOff
+      value: 
+      objectReference: {fileID: 908161860}
     - target: {fileID: 2957269687264150804, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: screenShake
       value: 

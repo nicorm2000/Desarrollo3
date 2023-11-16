@@ -4,10 +4,17 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Setup")]
-    [SerializeField] private float maxTime = 0.5f;
+    [SerializeField] private float maxTime = 10f;
     private float timer;
 
     public event Action<bool> onPlayerDeadChange;
+
+    [Header("Transition Dependencies")]
+    [SerializeField] private Transitions increaseSizeOn;
+    [SerializeField] private Transitions increaseSizeOff;
+
+    private float transitonOnTime = 1f;
+    private float transitonStart = 7f;
 
     [Header("Camera Shake Configuration")]
     [SerializeField] private ScreenShake screenShake;
@@ -76,6 +83,12 @@ public class PlayerHealth : MonoBehaviour
     {
         playerData.ResetPlayerFireDamage();
         playerData.currentHealth = Constants.ZERO_F;
+
+        if (timer <= transitonStart)
+        {
+            StartCoroutine(increaseSizeOn.ActiveTransition(transitonOnTime));
+            StartCoroutine(increaseSizeOn.DisableTransition(transitonOnTime));
+        }
 
         if (timer <= 0) 
         {
