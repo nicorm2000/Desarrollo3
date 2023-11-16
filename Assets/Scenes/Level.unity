@@ -10094,6 +10094,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.010022591, y: 0.011507422, z: 0.0100225955}
   m_Center: {x: 2.8175945e-10, y: 0.0010482395, z: -2.3082256e-10}
+--- !u!1 &791532832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3548212096093048743, guid: c2fcf2e833a0f394fa07fd526b71f0bf, type: 3}
+  m_PrefabInstance: {fileID: 908161857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &825329472
 GameObject:
   m_ObjectHideFlags: 0
@@ -11073,7 +11078,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7407706228834718047, guid: c2fcf2e833a0f394fa07fd526b71f0bf, type: 3}
   m_PrefabInstance: {fileID: 908161857}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 791532832}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dde795d660d2917448705c9adb6983be, type: 3}
@@ -14083,6 +14088,7 @@ MonoBehaviour:
   pickUpWeaponText: {fileID: 1183394189}
   changePlayerWeapon: {fileID: 2009772659}
   player: {fileID: 521703871}
+  transitionOff: {fileID: 791532832}
   playerCanTeleport: 0
   isPlayerOnTeleportArea: 0
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
@@ -15018,6 +15024,7 @@ MonoBehaviour:
   pickUpWeaponText: {fileID: 1183394189}
   changePlayerWeapon: {fileID: 2009772659}
   player: {fileID: 521703871}
+  transitionOff: {fileID: 791532832}
   playerCanTeleport: 0
   isPlayerOnTeleportArea: 0
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
@@ -16687,6 +16694,7 @@ MonoBehaviour:
   pickUpWeaponText: {fileID: 1183394189}
   changePlayerWeapon: {fileID: 2009772659}
   player: {fileID: 521703871}
+  transitionOff: {fileID: 791532832}
   playerCanTeleport: 0
   isPlayerOnTeleportArea: 0
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
@@ -27092,6 +27100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportText: {fileID: 683118237}
+  canTeleport: 0
+  isPlayerOnTeleportArea: 0
   player: {fileID: 521703871}
   increaseSizeOn: {fileID: 908161859}
   increaseSizeOff: {fileID: 908161860}
@@ -27099,7 +27109,6 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 64
-  doorCollider: {fileID: 2082787381}
   basket: {fileID: 1674702628}
 --- !u!4 &2082787385
 Transform:

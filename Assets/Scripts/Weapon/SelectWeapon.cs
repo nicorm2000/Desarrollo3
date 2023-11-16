@@ -15,6 +15,8 @@ public class SelectWeapon : MonoBehaviour
     [SerializeField] private ChangePlayerWeapon changePlayerWeapon;
     [SerializeField] private GameObject player;
 
+    [SerializeField] private GameObject transitionOff;
+
     public bool playerCanTeleport = false;
     public bool isPlayerOnTeleportArea = false;
 
@@ -50,13 +52,13 @@ public class SelectWeapon : MonoBehaviour
 
         if (isPlayerOnTeleportArea == true)
         {
+            transitionOff.SetActive(false);
             StartCoroutine(increaseSizeOn.ActiveTransition(transitonOnTime));
             StartCoroutine(increaseSizeOn.DisableTransition(transitonOnTime));
             playerCanTeleport = true;
         }
 
         StartCoroutine(PlayerTeleport(transitonOnTime));
-
     }
 
     public IEnumerator PlayerTeleport(float timeToWait) 

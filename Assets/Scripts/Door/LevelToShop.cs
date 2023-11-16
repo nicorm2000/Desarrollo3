@@ -6,8 +6,8 @@ public class LevelToShop : MonoBehaviour
 {
     [SerializeField] private GameObject teleportText;
 
-    private bool canTeleport = false;
-    private bool isPlayerOnTeleportArea = false;
+    public bool canTeleport = false;
+    public bool isPlayerOnTeleportArea = false;
 
     [Header("Player References")]
     [SerializeField] private GameObject player;
@@ -15,8 +15,7 @@ public class LevelToShop : MonoBehaviour
     [Header("Transition Dependencies")]
     [SerializeField] private Transitions increaseSizeOn;
     [SerializeField] private Transitions increaseSizeOff;
-    private float timeToWait = 1f;
-    private float transitonOffTime = 2f;
+    private float timeToWaitTransition = 1f;
 
     [Header("Teleport Location")]
     [SerializeField] private Transform spawnWeaponSelect;
@@ -25,7 +24,6 @@ public class LevelToShop : MonoBehaviour
     [SerializeField] private LayerMask includeLayer;
 
     [Header("GameObjects to Deactivate")]
-    [SerializeField] private GameObject doorCollider;
     [SerializeField] private GameObject basket;
 
     private void Start()
@@ -39,7 +37,7 @@ public class LevelToShop : MonoBehaviour
     /// <param name="player">The collider that entered the trigger.</param>
     private void OnTriggerEnter(Collider other)
     {
-        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
+        if (other.gameObject.CompareTag("Player"))
         {
             isPlayerOnTeleportArea = true;
             teleportText.SetActive(true);
@@ -48,7 +46,7 @@ public class LevelToShop : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
+        if (other.gameObject.CompareTag("Player"))
         {
             isPlayerOnTeleportArea = false;
             teleportText.SetActive(false);
@@ -59,12 +57,12 @@ public class LevelToShop : MonoBehaviour
     {
         if (isPlayerOnTeleportArea == true) 
         {
-            StartCoroutine(increaseSizeOn.ActiveTransition(timeToWait));
-            StartCoroutine(increaseSizeOn.DisableTransition(timeToWait));
+            StartCoroutine(increaseSizeOn.ActiveTransition(timeToWaitTransition));
+            StartCoroutine(increaseSizeOn.DisableTransition(timeToWaitTransition));
             canTeleport = true;
         }
 
-        StartCoroutine(TeleportToShop(timeToWait));
+        StartCoroutine(TeleportToShop(timeToWaitTransition));
     }
 
     public IEnumerator TeleportToShop(float timeToWait) 
@@ -74,11 +72,12 @@ public class LevelToShop : MonoBehaviour
         if (canTeleport == true) 
         {
             player.transform.position = spawnWeaponSelect.transform.position;
-            StartCoroutine(increaseSizeOff.ActiveTransition(transitonOffTime));
-            StartCoroutine(increaseSizeOff.DisableTransition(transitonOffTime));
+            StartCoroutine(increaseSizeOff.ActiveTransition(timeToWaitTransition));
+            StartCoroutine(increaseSizeOff.DisableTransition(timeToWaitTransition));
         }
 
-        doorCollider.SetActive(false);
+        canTeleport = false;
+        isPlayerOnTeleportArea = false;
         basket.SetActive(false);
         teleportText.SetActive(false);
     }
