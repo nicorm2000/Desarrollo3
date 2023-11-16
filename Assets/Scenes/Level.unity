@@ -1128,6 +1128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 127761907}
+  - component: {fileID: 127761912}
   - component: {fileID: 127761908}
   - component: {fileID: 127761910}
   - component: {fileID: 127761909}
@@ -1209,9 +1210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ec5a94ef3213646be935df06062cea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  increaseSizeOff: {fileID: 908161860}
   pauseMenu: {fileID: 127761908}
-  resumeButton: {fileID: 0}
+  resumeButton: {fileID: 2077806467}
   miniMap: {fileID: 127761911}
   cursorObject: {fileID: 127761909}
 --- !u!114 &127761911
@@ -1228,6 +1228,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 1397132613}
   isMapActive: 0
+--- !u!114 &127761912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127761905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8634125432f3f1243b68f43fb8b9deb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increaseSizeOff: {fileID: 908161860}
 --- !u!1 &128263355
 GameObject:
   m_ObjectHideFlags: 0
@@ -5488,7 +5501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20bf2194df1f06b49b99bcda2b3d2cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  increaseSizeOn: {fileID: 0}
+  increaseSizeOn: {fileID: 908161859}
 --- !u!1 &433290769
 GameObject:
   m_ObjectHideFlags: 0
@@ -13922,8 +13935,6 @@ MonoBehaviour:
   player: {fileID: 521703871}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponData: {fileID: 11400000, guid: c6ae86df7e63a0140b6a976b49dcabee, type: 2}
-  playerCanTeleport: 0
-  isPlayerOnTeleportArea: 0
 --- !u!4 &1132396380
 Transform:
   m_ObjectHideFlags: 0
@@ -14857,8 +14868,6 @@ MonoBehaviour:
   player: {fileID: 521703871}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponData: {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
-  playerCanTeleport: 0
-  isPlayerOnTeleportArea: 0
 --- !u!4 &1186112281
 Transform:
   m_ObjectHideFlags: 0
@@ -16534,8 +16543,6 @@ MonoBehaviour:
   player: {fileID: 521703871}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   weaponData: {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
-  playerCanTeleport: 0
-  isPlayerOnTeleportArea: 0
 --- !u!4 &1297260549
 Transform:
   m_ObjectHideFlags: 0
@@ -26934,6 +26941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0def70c7aa6d7fa43b5139ff2d6ffa83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 521703871}
   increaseSizeOn: {fileID: 908161859}
   spawnWeaponSelect: {fileID: 2079331785}
   includeLayer:

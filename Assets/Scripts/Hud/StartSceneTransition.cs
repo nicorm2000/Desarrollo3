@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartMenuTransition : MonoBehaviour
+public class StartScenesTransition : MonoBehaviour
 {
     [Header("Transition Dependencies")]
     [SerializeField] private Transitions increaseSizeOff;

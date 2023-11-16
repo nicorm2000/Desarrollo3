@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class LevelToShop : MonoBehaviour
 {
+    [Header("Player References")]
+    [SerializeField] private GameObject player;
+
     [Header("Transition Dependencies")]
     [SerializeField] private Transitions increaseSizeOn;
     private float timeToWait = 1f;
@@ -24,9 +27,16 @@ public class LevelToShop : MonoBehaviour
     {
         if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
-            other.transform.position = spawnWeaponSelect.transform.position;
-            doorCollider.SetActive(false);
-            basket.SetActive(false);
+            StartCoroutine(increaseSizeOn.ActiveTransition(timeToWait));
+            StartCoroutine(increaseSizeOn.DisableTransition(timeToWait));
+            Invoke("TeleportToShop", 1f);
         }
+    }
+
+    private void TeleportToShop() 
+    {
+        player.transform.position = spawnWeaponSelect.transform.position;
+        doorCollider.SetActive(false);
+        basket.SetActive(false);
     }
 }
