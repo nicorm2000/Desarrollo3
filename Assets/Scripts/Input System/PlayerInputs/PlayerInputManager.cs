@@ -11,6 +11,9 @@ public class PlayerInputManager : MonoBehaviour
     [SerializeField] private Abilities abilities;
     [SerializeField] private LookAtMouse lookAtMouse;
 
+    [Header("Bao Basket Reference")]
+    [SerializeField] private GameObject baoBasket;
+
     [Header("Player Data")]
     [SerializeField] private PlayerData playerData;
 
@@ -48,7 +51,10 @@ public class PlayerInputManager : MonoBehaviour
                 selectWeapon[i].CheckPlayerTeleportToLevel();
             }
 
-            levelToShop.CheckPlayerTeleportToShop();
+            if (baoBasket.activeSelf == true) 
+            {
+                levelToShop.CheckPlayerTeleportToShop();
+            }
         }
     }
 
