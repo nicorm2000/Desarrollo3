@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Book : MonoBehaviour
 {
+    [Header("Transition Dependencies")]
+    [SerializeField] private Transitions increaseSizeOff;
+    private float timeToWait = 1f;
+
     [SerializeField] private float pageSpeed = 0.5f;
     [SerializeField] private float waitTime = 1f;
     [SerializeField] private List<Transform> pages;
@@ -16,6 +20,9 @@ public class Book : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(increaseSizeOff.ActiveTransition(timeToWait));
+        StartCoroutine(increaseSizeOff.DisableTransition(timeToWait));
+
         InitialState();
     }
 

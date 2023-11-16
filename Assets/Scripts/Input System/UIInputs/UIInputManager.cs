@@ -5,6 +5,7 @@ public class UIInputManger : MonoBehaviour
 {
     [Header("Transition Dependencies")]
     [SerializeField] private Transitions increaseSizeOff;
+    private float timeToWait = 1f;
 
     [Header("Pause Menu Dependencies")]
     [SerializeField] private PauseMenu pauseMenu;
@@ -25,8 +26,8 @@ public class UIInputManger : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(increaseSizeOff.ActiveTransition(1f));
-        StartCoroutine(increaseSizeOff.DisableTransition(1f));
+        StartCoroutine(increaseSizeOff.ActiveTransition(timeToWait));
+        StartCoroutine(increaseSizeOff.DisableTransition(timeToWait));
 
         pauseMenu = GetComponent<PauseMenu>();
 

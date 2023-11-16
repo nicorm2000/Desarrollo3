@@ -8,6 +8,9 @@ public class SelectWeapon : MonoBehaviour
     [SerializeField] private Transitions increaseSizeOn;
     [SerializeField] private Transitions increaseSizeOff;
 
+    private float transitonOnTime = 1f;
+    private float transitonOffTime = 2f;
+
     [SerializeField] private GameObject levelSpawn;
     [SerializeField] private GameObject pickUpWeaponText;
     [SerializeField] private ChangePlayerWeapon changePlayerWeapon;
@@ -48,8 +51,8 @@ public class SelectWeapon : MonoBehaviour
 
         if (isPlayerOnTeleportArea == true)
         {
-            StartCoroutine(increaseSizeOn.ActiveTransition(1f));
-            StartCoroutine(increaseSizeOn.DisableTransition(1f));
+            StartCoroutine(increaseSizeOn.ActiveTransition(transitonOnTime));
+            StartCoroutine(increaseSizeOn.DisableTransition(transitonOnTime));
             playerCanTeleport = true;
         }
 
@@ -67,7 +70,7 @@ public class SelectWeapon : MonoBehaviour
         }
         
         playerCanTeleport = true;
-        StartCoroutine(increaseSizeOff.ActiveTransition(2f));
-        StartCoroutine(increaseSizeOff.DisableTransition(2f));
+        StartCoroutine(increaseSizeOff.ActiveTransition(transitonOffTime));
+        StartCoroutine(increaseSizeOff.DisableTransition(transitonOffTime));
     }
 }

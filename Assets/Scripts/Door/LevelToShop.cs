@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class LevelToShop : MonoBehaviour
 {
+    [Header("Transition Dependencies")]
+    [SerializeField] private Transitions increaseSizeOn;
+    private float timeToWait = 1f;
+
     [Header("Teleport Location")]
     [SerializeField] private Transform spawnWeaponSelect;
 

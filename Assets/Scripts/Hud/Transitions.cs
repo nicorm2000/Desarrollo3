@@ -6,12 +6,6 @@ public class Transitions : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject transition;
-
-    //[Header("Setup")]
-    //[SerializeField] private float maxTime;
-    //private float timer;
-
-    //private bool startTrasition = false;
     private bool isEnded = false;
 
     public IEnumerator ActiveTransition(float timeToWait) 
