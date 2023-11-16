@@ -25,7 +25,8 @@ public class UIInputManger : MonoBehaviour
 
     void Start()
     {
-        increaseSizeOff.ActiveTransition();
+        StartCoroutine(increaseSizeOff.ActiveTransition(1f));
+        StartCoroutine(increaseSizeOff.DisableTransition(1f));
 
         pauseMenu = GetComponent<PauseMenu>();
 

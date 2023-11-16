@@ -1,8 +1,10 @@
-using System.Threading;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SelectWeapon : MonoBehaviour
 {
+    [Header("Transition Dependencies")]
     [SerializeField] private Transitions increaseSizeOn;
     [SerializeField] private Transitions increaseSizeOff;
 
@@ -20,16 +22,6 @@ public class SelectWeapon : MonoBehaviour
     private void Start()
     {
         pickUpWeaponText.SetActive(false);
-    }
-
-    private void Update()
-    {
-        if(playerCanTeleport == true && increaseSizeOn.isTransitionFinish() == true) 
-        {
-            increaseSizeOff.ActiveTransition();
-            PlayerTeleport();
-            playerCanTeleport = false;
-        }
     }
 
     private void OnTriggerEnter(Collider player)
@@ -53,17 +45,29 @@ public class SelectWeapon : MonoBehaviour
     public void CheckPlayerTeleport()
     {
         playerData.haveAGun = true;
-        increaseSizeOn.ActiveTransition();
 
         if (isPlayerOnTeleportArea == true)
         {
+            StartCoroutine(increaseSizeOn.ActiveTransition(1f));
+            StartCoroutine(increaseSizeOn.DisableTransition(1f));
             playerCanTeleport = true;
         }
+
+        StartCoroutine(PlayerTeleport(1f));
     }
 
-    public void PlayerTeleport() 
+    public IEnumerator PlayerTeleport(float timeToWait) 
     {
-        changePlayerWeapon.ChangeWeapon(weaponData.weaponID);
-        player.transform.position = levelSpawn.transform.position;
+        yield return new WaitForSeconds(timeToWait);
+
+        if (playerCanTeleport == true) 
+        {
+            changePlayerWeapon.ChangeWeapon(weaponData.weaponID);
+            player.transform.position = levelSpawn.transform.position;
+        }
+        
+        playerCanTeleport = true;
+        StartCoroutine(increaseSizeOff.ActiveTransition(2f));
+        StartCoroutine(increaseSizeOff.DisableTransition(2f));
     }
 }

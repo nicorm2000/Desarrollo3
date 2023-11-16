@@ -7,42 +7,25 @@ public class Transitions : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameObject transition;
 
-    [Header("Setup")]
-    [SerializeField] private float maxTime;
-    private float timer;
+    //[Header("Setup")]
+    //[SerializeField] private float maxTime;
+    //private float timer;
 
-    private bool startTrasition = false;
+    //private bool startTrasition = false;
     private bool isEnded = false;
 
-    private void Start()
-    {
-        timer = maxTime;
-    }
-
-    void Update()
-    {
-        if (startTrasition) 
-        {
-            timer -= Time.deltaTime;
-        }
-
-        if (timer <= 0) 
-        {
-            startTrasition = false;
-            DisableTransition();
-            timer = maxTime;
-        }
-    }
-
-    public void ActiveTransition() 
+    public IEnumerator ActiveTransition(float timeToWait) 
     {
         isEnded = false;
-        startTrasition = true;
         transition.SetActive(true);
+        yield return new WaitForSeconds(timeToWait);
+        isEnded = true;
     }
-    
-    public void DisableTransition() 
+
+    public IEnumerator DisableTransition(float timeToWait)
     {
+        isEnded = false;
+        yield return new WaitForSeconds(timeToWait);
         transition.SetActive(false);
         isEnded = true;
     }
