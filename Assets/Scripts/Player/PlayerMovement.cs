@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        playerData.ResetPlayerStacks();
         playerData.rigidBody = GetComponent<Rigidbody>();
         playerData.playerCollider = GetComponent<BoxCollider>();
         playerData.playerDashMaterial = GetComponent<Renderer>().material;
