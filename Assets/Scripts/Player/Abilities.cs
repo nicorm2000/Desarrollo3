@@ -15,7 +15,6 @@ public class Abilities : MonoBehaviour
 
     [Header("Dash")]
     [SerializeField] private Image dashImage;
-    [SerializeField] private KeyCode dash = KeyCode.F2;
     [SerializeField] private Color dashColor = Color.cyan;
     [SerializeField] private ParticleSystem dustParticles;
     private float dashCooldown = 3f;
@@ -25,7 +24,6 @@ public class Abilities : MonoBehaviour
     [Header("Slower")]
     [SerializeField] private GameObject slowerLogo;
     [SerializeField] private Image slowerImage;
-    [SerializeField] private KeyCode slower = KeyCode.F2;
     [SerializeField] private Color slowerColor = Color.cyan;
     [SerializeField] private GameObject prefabToSpawn;
     [SerializeField] private float slowerLifetime = 5f;
@@ -36,7 +34,6 @@ public class Abilities : MonoBehaviour
     [Header("Laser")]
     [SerializeField] private GameObject laserLogo;
     [SerializeField] private Image laserImage;
-    [SerializeField] private KeyCode laser = KeyCode.F3;
     [SerializeField] private Color laserColor = Color.cyan;
     [SerializeField] private GameObject laserObject;
     private float laserCooldown = 3f;

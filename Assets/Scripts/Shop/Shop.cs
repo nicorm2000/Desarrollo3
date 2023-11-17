@@ -8,6 +8,7 @@ public class Shop : MonoBehaviour
 
     [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
+    private float damageToIncease = 5f;
 
     [Header("Upgrade Player Dependencies")]
     [SerializeField] private UpgradePlayer upgradePlayer;
@@ -86,7 +87,7 @@ public class Shop : MonoBehaviour
         if (playerData.damageStackID < playerData.maxLevelStack)
         {
             playerData.damageStackID += Constants.ONE_F;
-            upgradePlayer.UpgradeDamage(Constants.ONE_F);
+            upgradePlayer.UpgradeDamage(damageToIncease);
             spriteCycle[Constants.DAMAGE_ID].UpdateStatsUI(playerData.damageStackID);
         } 
         else 
