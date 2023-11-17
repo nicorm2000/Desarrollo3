@@ -91,8 +91,8 @@ public class PlayerHealth : MonoBehaviour
 
         if (timer <= 0) 
         {
-            mySceneManager.LoadSceneByName(loseScene);
             playerData.ResetPlayerStacks();
+            mySceneManager.LoadSceneByName(loseScene);
         }
     }
 }
