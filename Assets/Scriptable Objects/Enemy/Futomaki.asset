@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cf5c79c482a364289b65bc639aa2a1, type: 3}
   m_Name: Futomaki
   m_EditorClassIdentifier: 
+  lastHorizontalVector: 0
+  lastVerticalVector: 0
+  movementDirection: {x: 0, y: 0}
   model: {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
   animator: {fileID: 0}
   dropData: {fileID: 11400000, guid: d1e545dd00ebe254f977e3d35bab8bb6, type: 2}
@@ -30,7 +33,7 @@ MonoBehaviour:
   lifeSpawn: 0
   bulletSpeed: 0
   bullet: {fileID: 0}
-  health: 3
+  health: 100
   isDead: 0
   _triggerEffect: {fileID: 0}
   _spriteRenderer: {fileID: 0}
