@@ -78,9 +78,9 @@ public class PlayerData : ScriptableObject
 
         speed = 5;
         maxHealth = 100;
-        weaponData[0].damage = 1;
-        weaponData[1].damage = 10;
-        weaponData[2].damage = 1;
+        weaponData[0].damage = 35;
+        weaponData[1].damage = 250;
+        weaponData[2].damage = 15;
     }
 
     public void ResetPlayerFireDamage() 
