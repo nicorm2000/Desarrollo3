@@ -1,7 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
@@ -17,7 +15,6 @@ public class Shoot : MonoBehaviour
     [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
     [SerializeField] private GunOverheat gunOverheat;
-
 
     private void Update()
     {
