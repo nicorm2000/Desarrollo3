@@ -30,6 +30,7 @@ namespace AK
         static const AkUniqueID SHOOTSNIPER = 3097990443U;
         static const AkUniqueID SHOOTUZI = 3176895516U;
         static const AkUniqueID TURNPAGE = 2936962349U;
+        static const AkUniqueID TUTORIAL = 3762955427U;
     } // namespace EVENTS
 
     namespace SWITCHES

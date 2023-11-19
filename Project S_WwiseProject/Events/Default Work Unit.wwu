@@ -360,6 +360,27 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Tutorial" ID="{7C65264B-A404-4078-8397-B77B895AADA2}">
+					<ChildrenList>
+						<Action Name="" ID="{A5F4CF76-1047-4A11-B0D0-A90FE331B21A}" ShortID="296003386">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Tutorial" ID="{8A9D41B1-EAED-4F2A-B76D-EE208C67F420}" WorkUnitID="{6B540857-EB6A-43D3-87A8-9C419C8C8F73}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4C11E539-1730-419B-A6CE-1F379FC54067}" ShortID="891363185">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Tutorial" ID="{8A9D41B1-EAED-4F2A-B76D-EE208C67F420}" WorkUnitID="{6B540857-EB6A-43D3-87A8-9C419C8C8F73}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

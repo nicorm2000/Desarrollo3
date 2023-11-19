@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 3af410611e2c92469af731b5137fe77a
     GuidInternal: 
-    m_lastTime: -8585011749375114238
+    m_lastTime: -8585011743996697015
     List:
     - name: Click
       guid: 29fd55656c568345b13d2c4c3e9a71e3
@@ -298,8 +298,8 @@ MonoBehaviour:
         guid: f15d5dca6717554b9fcb74cf08a348a7
       Path: Events\Default Work Unit\Music
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Scream
       guid: 4b613d6d585b4b4786acf7bfbfb98980
       id: 737767022
@@ -385,6 +385,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.785229
       minDuration: 1.416937
+    - name: Tutorial
+      guid: 4b26657c04a478408397b77b895aada2
+      id: 3762955427
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: Tutorial
+        ObjectType: 3
+        guid: 4b26657c04a478408397b77b895aada2
+      Path: Events\Default Work Unit\Tutorial
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2275978049">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2237002801">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -255,6 +255,14 @@
 						<File Id="169643596" Language="SFX">
 							<ShortName>UI_TurningPage.wav</ShortName>
 							<Path>SFX\UI_TurningPage_74B490CA.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3762955427" Name="Tutorial" ObjectPath="\Events\Default Work Unit\Tutorial" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="277254803" Language="SFX">
+							<ShortName>mainTheme.wav</ShortName>
+							<Path>SFX\mainTheme_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
