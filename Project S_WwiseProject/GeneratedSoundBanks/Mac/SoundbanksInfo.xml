@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2237002801">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3143336771">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -137,6 +137,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3982605422" Name="Laser" ObjectPath="\Events\Default Work Unit\Laser" DurationType="OneShot" DurationMin="2.283083" DurationMax="2.283083">
+					<IncludedMemoryFiles>
+						<File Id="11758809" Language="SFX">
+							<ShortName>PlayerSkillBeam.wav</ShortName>
+							<Path>SFX\PlayerSkillBeam_EA14B6FC.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="4016454680" Name="Laugh" ObjectPath="\Events\Default Work Unit\Laugh" DurationType="OneShot" DurationMin="3.183604" DurationMax="3.183604">
 					<IncludedMemoryFiles>
 						<File Id="1020595081" Language="SFX">
@@ -150,6 +158,14 @@
 						<File Id="277254803" Language="SFX">
 							<ShortName>mainTheme.wav</ShortName>
 							<Path>SFX\mainTheme_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2026920480" Name="Roll" ObjectPath="\Events\Default Work Unit\Roll" DurationType="OneShot" DurationMin="0.54325" DurationMax="0.54325">
+					<IncludedMemoryFiles>
+						<File Id="193992199" Language="SFX">
+							<ShortName>PlayerSkillRoll.wav</ShortName>
+							<Path>SFX\PlayerSkillRoll_90A63FCE.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -250,6 +266,14 @@
 						<ActionSetSwitchEntry Id="862615877" Name="Uzi" ObjectPath="\Switches\Default Work Unit\Weapons\Uzi"/>
 					</ActionSetSwitch>
 				</Event>
+				<Event Id="236860119" Name="Splat" ObjectPath="\Events\Default Work Unit\Splat" DurationType="OneShot" DurationMin="0.546771" DurationMax="0.546771">
+					<IncludedMemoryFiles>
+						<File Id="937201692" Language="SFX">
+							<ShortName>PlayerSkillSplat.wav</ShortName>
+							<Path>SFX\PlayerSkillSplat_C5503650.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2936962349" Name="TurnPage" ObjectPath="\Events\Default Work Unit\TurnPage" DurationType="OneShot" DurationMin="1.416937" DurationMax="1.785229">
 					<IncludedMemoryFiles>
 						<File Id="169643596" Language="SFX">
@@ -268,6 +292,10 @@
 				</Event>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="11758809" Language="SFX">
+					<ShortName>PlayerSkillBeam.wav</ShortName>
+					<Path>SFX\PlayerSkillBeam_EA14B6FC.wem</Path>
+				</File>
 				<File Id="45467557" Language="SFX">
 					<ShortName>RifleGunfire-004.wav</ShortName>
 					<Path>SFX\RifleGunfire-004_10C4C929.wem</Path>
@@ -295,6 +323,10 @@
 				<File Id="169643596" Language="SFX">
 					<ShortName>UI_TurningPage.wav</ShortName>
 					<Path>SFX\UI_TurningPage_74B490CA.wem</Path>
+				</File>
+				<File Id="193992199" Language="SFX">
+					<ShortName>PlayerSkillRoll.wav</ShortName>
+					<Path>SFX\PlayerSkillRoll_90A63FCE.wem</Path>
 				</File>
 				<File Id="196164197" Language="SFX">
 					<ShortName>RifleEmptyMag-001.wav</ShortName>
@@ -379,6 +411,10 @@
 				<File Id="932633481" Language="SFX">
 					<ShortName>RifleGunfire-002.wav</ShortName>
 					<Path>SFX\RifleGunfire-002_10C4C929.wem</Path>
+				</File>
+				<File Id="937201692" Language="SFX">
+					<ShortName>PlayerSkillSplat.wav</ShortName>
+					<Path>SFX\PlayerSkillSplat_C5503650.wem</Path>
 				</File>
 				<File Id="973734017" Language="SFX">
 					<ShortName>UziGunfire-004.wav</ShortName>

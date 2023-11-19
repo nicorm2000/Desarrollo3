@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 3af410611e2c92469af731b5137fe77a
     GuidInternal: 
-    m_lastTime: -8585011743996697015
+    m_lastTime: -8585011733082979893
     List:
     - name: Click
       guid: 29fd55656c568345b13d2c4c3e9a71e3
@@ -266,6 +266,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Laser
+      guid: 2abf6868187f9446a38113969fb1ba82
+      id: 3982605422
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: Laser
+        ObjectType: 3
+        guid: 2abf6868187f9446a38113969fb1ba82
+      Path: Events\Default Work Unit\Laser
+      maxAttenuation: 0
+      maxDuration: 2.283083
+      minDuration: 2.283083
     - name: Laugh
       guid: cca0bd8636759b48a5656623a7b3d503
       id: 4016454680
@@ -300,6 +317,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Roll
+      guid: c30b99300860f641a2760f1e30c95810
+      id: 2026920480
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: Roll
+        ObjectType: 3
+        guid: c30b99300860f641a2760f1e30c95810
+      Path: Events\Default Work Unit\Roll
+      maxAttenuation: 0
+      maxDuration: 0.54325
+      minDuration: 0.54325
     - name: Scream
       guid: 4b613d6d585b4b4786acf7bfbfb98980
       id: 737767022
@@ -368,6 +402,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.085
       minDuration: 0.031479
+    - name: Splat
+      guid: 0cf0b7c5aac43f46bb1097958cf80c09
+      id: 236860119
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: Splat
+        ObjectType: 3
+        guid: 0cf0b7c5aac43f46bb1097958cf80c09
+      Path: Events\Default Work Unit\Splat
+      maxAttenuation: 0
+      maxDuration: 0.546771
+      minDuration: 0.546771
     - name: TurnPage
       guid: 9ba42c1000779d479a7b3c77fa28cac3
       id: 2936962349
@@ -575,7 +626,7 @@ MonoBehaviour:
     m_lastTime: -8585034087828296152
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000700000017000000180000001b0000001c00000004010000050100000701000008010000
+  ExpandedWaapiItemIds: 05000000060000000700000017000000180000001b0000001c000000710000007200000004010000050100000701000008010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

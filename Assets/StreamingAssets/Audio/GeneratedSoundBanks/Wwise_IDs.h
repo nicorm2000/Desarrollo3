@@ -23,12 +23,15 @@ namespace AK
         static const AkUniqueID FOOTSTEPSPLAYER = 3865216745U;
         static const AkUniqueID GRILL = 3760814375U;
         static const AkUniqueID INTRO = 1125500713U;
+        static const AkUniqueID LASER = 3982605422U;
         static const AkUniqueID LAUGH = 4016454680U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID ROLL = 2026920480U;
         static const AkUniqueID SCREAM = 737767022U;
         static const AkUniqueID SHOOTFAMAS = 643270054U;
         static const AkUniqueID SHOOTSNIPER = 3097990443U;
         static const AkUniqueID SHOOTUZI = 3176895516U;
+        static const AkUniqueID SPLAT = 236860119U;
         static const AkUniqueID TURNPAGE = 2936962349U;
         static const AkUniqueID TUTORIAL = 3762955427U;
     } // namespace EVENTS

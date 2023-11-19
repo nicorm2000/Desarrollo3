@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	236860119	Splat			\Default Work Unit\Splat	
 	333089542	CooldownFamas			\Default Work Unit\CooldownFamas	
 	443235554	FootstepsEnemies			\Default Work Unit\FootstepsEnemies	
 	643270054	ShootFamas			\Default Work Unit\ShootFamas	
@@ -7,6 +8,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1125500713	Intro			\Default Work Unit\Intro	
 	1584507803	Click			\Default Work Unit\Click	
 	1687970961	ConveyorBelt			\Default Work Unit\ConveyorBelt	
+	2026920480	Roll			\Default Work Unit\Roll	
 	2936962349	TurnPage			\Default Work Unit\TurnPage	
 	3097990443	ShootSniper			\Default Work Unit\ShootSniper	
 	3176895516	ShootUzi			\Default Work Unit\ShootUzi	
@@ -14,6 +16,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3760814375	Grill			\Default Work Unit\Grill	
 	3762955427	Tutorial			\Default Work Unit\Tutorial	
 	3865216745	FootstepsPlayer			\Default Work Unit\FootstepsPlayer	
+	3982605422	Laser			\Default Work Unit\Laser	
 	3991942870	Music			\Default Work Unit\Music	
 	4016454680	Laugh			\Default Work Unit\Laugh	
 	4259908363	CooldownSniper			\Default Work Unit\CooldownSniper	
@@ -26,6 +29,7 @@ Switch	ID	Name	Switch Group			Notes
 	3620752402	Loaded	Weapons_ammo			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	11758809	Laser	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\PlayerSkillBeam_EA14B6FC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilities\Laser		438416
 	45467557	RifleGunfire-004	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\RifleGunfire-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Loaded\RifleGunfire-004		8284
 	51529185	Cooldown	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\UziCooldown_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Cooldown		993548
 	78108305	Scream	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Voice_Scream_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Scream		384372
@@ -34,6 +38,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	152369639	Footsteps_Player_2	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Footsteps_Player_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Player\Footsteps_Player_2		124216
 	169562177	ConveyorBelt	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\ConveyorBelt_57BE3351.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\ConveyorBelt		3235264
 	169643596	UI_TurningPage	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\UI_TurningPage_74B490CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_TurningPage		305432
+	193992199	Roll	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\PlayerSkillRoll_90A63FCE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilities\Roll		104368
 	196164197	RifleEmptyMag-001	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\RifleEmptyMag-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Empty\RifleEmptyMag-001		14128
 	201673485	Footsteps_Player_1	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Footsteps_Player_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Player\Footsteps_Player_1		117802
 	209719382	SniperGunfire-001	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\SniperGunfire-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Loaded\SniperGunfire-001		98080
@@ -57,6 +62,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	834402619	Grill	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Grill_370B157C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Grill		5961080
 	887801688	filmConversation	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\filmConversation_35A4FCA7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PeopleTalking\filmConversation		5253896
 	932633481	RifleGunfire-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\RifleGunfire-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Loaded\RifleGunfire-002		7874
+	937201692	Splat	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\PlayerSkillSplat_C5503650.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilities\Splat		105044
 	973734017	UziGunfire-004	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\UziGunfire-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Loaded\UziGunfire-004		8224
 	979923448	UziGunfire-003	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\UziGunfire-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Loaded\UziGunfire-003		5166
 	1009135126	SniperEmptyMag-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\SniperEmptyMag-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Empty\SniperEmptyMag-002		16708

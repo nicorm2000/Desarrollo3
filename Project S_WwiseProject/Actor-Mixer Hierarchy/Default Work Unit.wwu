@@ -1481,6 +1481,116 @@
 						<ActiveSource Name="Voice_Laugh" ID="{DE475716-87F6-409D-B6D7-0A935360CBBD}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Folder Name="Abilities" ID="{B3032D95-294F-455A-863C-9A532171B5B4}" ShortID="200189752">
+					<ChildrenList>
+						<Sound Name="Laser" ID="{AC0FB076-CBD1-451A-9636-D311BD784F39}" ShortID="595748378">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="PlayerSkillBeam" ID="{6EC2BB56-9BF1-49AF-8B3A-1E4D82361598}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.348632995495496"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.83880765765766"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>PlayerSkillBeam.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="11758809"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="PlayerSkillBeam" ID="{6EC2BB56-9BF1-49AF-8B3A-1E4D82361598}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Roll" ID="{921E76F6-29C4-425C-ACE9-FC842670AF0B}" ShortID="1038446671">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>35</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{793C4FCD-6532-407C-BFB9-CF3DE056A6E6}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="PlayerSkillRoll" ID="{EFB36804-487D-43B7-A8D8-03DD66D7FE23}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.418449324324324"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>PlayerSkillRoll.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="193992199"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="PlayerSkillRoll" ID="{EFB36804-487D-43B7-A8D8-03DD66D7FE23}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Splat" ID="{E8354DE7-1B7C-4134-BA51-2C1204A56302}" ShortID="819473380">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>35</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="PlayerSkillSplat" ID="{3798D831-4D56-4F29-9D0A-67EB51466D3D}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.300723958333333"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>PlayerSkillSplat.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="937201692"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="PlayerSkillSplat" ID="{3798D831-4D56-4F29-9D0A-67EB51466D3D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
