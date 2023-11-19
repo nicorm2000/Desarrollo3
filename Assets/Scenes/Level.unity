@@ -490,6 +490,8 @@ MonoBehaviour:
   - {fileID: 1036694872}
   - {fileID: 950710410}
   cursorObject: {fileID: 127761909}
+  audioManager: {fileID: 1351502573}
+  click: Click
   isPopUpActive: 0
 --- !u!4 &37278420
 Transform:
@@ -1106,6 +1108,8 @@ MonoBehaviour:
   inactiveButton: {fileID: 21300000, guid: 18ec6aa2551a1214db29e74f2a70b532, type: 3}
   mySceneManager: {fileID: 433192595}
   sceneName: MainMenu
+  audioManager: {fileID: 1351502573}
+  click: Click
 --- !u!114 &127761909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3900,7 +3904,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &296075858
 Transform:
   m_ObjectHideFlags: 0
@@ -4907,30 +4911,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 433192595}
-        m_TargetAssemblyTypeName: MySceneManager, Assembly-CSharp
-        m_MethodName: SetSceneName
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: MainMenu
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 433192595}
-        m_TargetAssemblyTypeName: MySceneManager, Assembly-CSharp
-        m_MethodName: LoadSceneWithTransition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &394153636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5918,6 +5898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   increaseSizeOn: {fileID: 908161859}
+  audioManager: {fileID: 1351502573}
 --- !u!1 &433290769
 GameObject:
   m_ObjectHideFlags: 0
@@ -9694,7 +9675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &724137219
 Transform:
   m_ObjectHideFlags: 0
@@ -13362,7 +13343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1044897502
 Transform:
   m_ObjectHideFlags: 0
@@ -14846,6 +14827,7 @@ MonoBehaviour:
   changePlayerWeapon: {fileID: 2009772659}
   player: {fileID: 521703871}
   transitionOff: {fileID: 791532832}
+  audioManager: {fileID: 1351502573}
   playerCanTeleport: 0
   isPlayerOnTeleportArea: 0
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
@@ -16049,6 +16031,7 @@ MonoBehaviour:
   changePlayerWeapon: {fileID: 2009772659}
   player: {fileID: 521703871}
   transitionOff: {fileID: 791532832}
+  audioManager: {fileID: 1351502573}
   playerCanTeleport: 0
   isPlayerOnTeleportArea: 0
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
@@ -17997,6 +17980,7 @@ MonoBehaviour:
   changePlayerWeapon: {fileID: 2009772659}
   player: {fileID: 521703871}
   transitionOff: {fileID: 791532832}
+  audioManager: {fileID: 1351502573}
   playerCanTeleport: 0
   isPlayerOnTeleportArea: 0
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
@@ -19043,6 +19027,7 @@ GameObject:
   - component: {fileID: 1351502571}
   - component: {fileID: 1351502570}
   - component: {fileID: 1351502572}
+  - component: {fileID: 1351502573}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -19114,6 +19099,21 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!114 &1351502573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351502569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b446fc0bba2e9694199584e3e1cfb6ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventNames:
+  - Click
+  - turnPage
 --- !u!1001 &1353435516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27844,7 +27844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1950445034
 Transform:
   m_ObjectHideFlags: 0

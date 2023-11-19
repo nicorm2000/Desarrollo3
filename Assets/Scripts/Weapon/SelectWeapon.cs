@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SelectWeapon : MonoBehaviour
@@ -14,7 +13,6 @@ public class SelectWeapon : MonoBehaviour
     [SerializeField] private GameObject pickUpWeaponText;
     [SerializeField] private ChangePlayerWeapon changePlayerWeapon;
     [SerializeField] private GameObject player;
-
     [SerializeField] private GameObject transitionOff;
 
     public bool playerCanTeleport = false;

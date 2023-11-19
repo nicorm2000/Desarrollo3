@@ -20,6 +20,10 @@ public class Shop : MonoBehaviour
     [Header("Cursor Object Dependencies")]
     [SerializeField] private CursorObject cursorObject;
 
+    [Header("Audio Manager")]
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private string click;
+
     public bool isPopUpActive = false;
 
     /// <summary>
@@ -38,6 +42,7 @@ public class Shop : MonoBehaviour
     /// </summary>
     public void DeactivatePopUp()
     {
+        audioManager.PlaySound(click);
         isPopUpActive = false;
         cursorObject.MouseNotInteract();
         shopWindow.SetActive(false);
