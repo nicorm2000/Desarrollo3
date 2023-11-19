@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{96DE4057-CE0E-4F4F-8122-A79587657419}" SchemaVersion="103">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{96DE4057-CE0E-4F4F-8122-A79587657419}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{96DE4057-CE0E-4F4F-8122-A79587657419}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Weapons" ID="{B704A89F-3261-49A4-8C0D-BD29CA1D48CF}">
+					<ChildrenList>
+						<Switch Name="Famas" ID="{FE4AA9EE-4804-485A-A5A3-CFAE316994CE}"/>
+						<Switch Name="Sniper" ID="{1305F924-A73F-4EF7-BFE3-7059E57DE99A}"/>
+						<Switch Name="Uzi" ID="{EE8FB17D-F7BB-4DB3-8D8C-A42C51908DD6}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Weapons_ammo" ID="{7DB88A39-ECA8-4B24-B268-5E4AAA126ACC}">
+					<ChildrenList>
+						<Switch Name="Empty" ID="{978DAA3E-DD4E-45AB-A77A-6800B6889F4A}"/>
+						<Switch Name="Loaded" ID="{FCC9D247-759A-452B-AE52-73EF0DF0EB34}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>
