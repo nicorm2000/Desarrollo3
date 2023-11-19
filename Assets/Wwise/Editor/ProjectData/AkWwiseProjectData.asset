@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 3af410611e2c92469af731b5137fe77a
     GuidInternal: 
-    m_lastTime: -8585011941583613912
+    m_lastTime: -8585011749375114238
     List:
     - name: Click
       guid: 29fd55656c568345b13d2c4c3e9a71e3
@@ -249,6 +249,40 @@ MonoBehaviour:
       maxAttenuation: 17
       maxDuration: -1
       minDuration: -1
+    - name: Intro
+      guid: 7928ff60e1e4ac4e8755157df840299e
+      id: 1125500713
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: Intro
+        ObjectType: 3
+        guid: 7928ff60e1e4ac4e8755157df840299e
+      Path: Events\Default Work Unit\Intro
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Laugh
+      guid: cca0bd8636759b48a5656623a7b3d503
+      id: 4016454680
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: Laugh
+        ObjectType: 3
+        guid: cca0bd8636759b48a5656623a7b3d503
+      Path: Events\Default Work Unit\Laugh
+      maxAttenuation: 0
+      maxDuration: 3.183604
+      minDuration: 3.183604
     - name: Music
       guid: f15d5dca6717554b9fcb74cf08a348a7
       id: 3991942870
@@ -266,6 +300,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Scream
+      guid: 4b613d6d585b4b4786acf7bfbfb98980
+      id: 737767022
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: Scream
+        ObjectType: 3
+        guid: 4b613d6d585b4b4786acf7bfbfb98980
+      Path: Events\Default Work Unit\Scream
+      maxAttenuation: 0
+      maxDuration: 3.001604
+      minDuration: 3.001604
     - name: ShootFamas
       guid: 50dde35ceb0a0b4c84d26e68514d1707
       id: 643270054
@@ -507,7 +558,7 @@ MonoBehaviour:
     m_lastTime: -8585034087828296152
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000700000017000000180000001b0000001c0000000401000005010000
+  ExpandedWaapiItemIds: 05000000060000000700000017000000180000001b0000001c00000004010000050100000701000008010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

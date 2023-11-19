@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="4250962177">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2275978049">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -129,11 +129,35 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3991942870" Name="Music" ObjectPath="\Events\Default Work Unit\Music" DurationType="OneShot" DurationMin="0." DurationMax="0.">
+				<Event Id="1125500713" Name="Intro" ObjectPath="\Events\Default Work Unit\Intro" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="277254803" Language="SFX">
 							<ShortName>mainTheme.wav</ShortName>
 							<Path>SFX\mainTheme_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4016454680" Name="Laugh" ObjectPath="\Events\Default Work Unit\Laugh" DurationType="OneShot" DurationMin="3.183604" DurationMax="3.183604">
+					<IncludedMemoryFiles>
+						<File Id="1020595081" Language="SFX">
+							<ShortName>Voice_Laugh.wav</ShortName>
+							<Path>SFX\Voice_Laugh_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3991942870" Name="Music" ObjectPath="\Events\Default Work Unit\Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="277254803" Language="SFX">
+							<ShortName>mainTheme.wav</ShortName>
+							<Path>SFX\mainTheme_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="737767022" Name="Scream" ObjectPath="\Events\Default Work Unit\Scream" DurationType="OneShot" DurationMin="3.001604" DurationMax="3.001604">
+					<IncludedMemoryFiles>
+						<File Id="78108305" Language="SFX">
+							<ShortName>Voice_Scream.wav</ShortName>
+							<Path>SFX\Voice_Scream_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -239,6 +263,10 @@
 				<File Id="45467557" Language="SFX">
 					<ShortName>RifleGunfire-004.wav</ShortName>
 					<Path>SFX\RifleGunfire-004_10C4C929.wem</Path>
+				</File>
+				<File Id="78108305" Language="SFX">
+					<ShortName>Voice_Scream.wav</ShortName>
+					<Path>SFX\Voice_Scream_10C4C929.wem</Path>
 				</File>
 				<File Id="80193230" Language="SFX">
 					<ShortName>RifleEmptyMag-002.wav</ShortName>
@@ -355,6 +383,10 @@
 				<File Id="1009135126" Language="SFX">
 					<ShortName>SniperEmptyMag-002.wav</ShortName>
 					<Path>SFX\SniperEmptyMag-002_10C4C929.wem</Path>
+				</File>
+				<File Id="1020595081" Language="SFX">
+					<ShortName>Voice_Laugh.wav</ShortName>
+					<Path>SFX\Voice_Laugh_10C4C929.wem</Path>
 				</File>
 				<File Id="1042105654" Language="SFX">
 					<ShortName>Footsteps_Player_5.wav</ShortName>

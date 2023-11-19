@@ -22,7 +22,10 @@ namespace AK
         static const AkUniqueID FOOTSTEPSENEMIES = 443235554U;
         static const AkUniqueID FOOTSTEPSPLAYER = 3865216745U;
         static const AkUniqueID GRILL = 3760814375U;
+        static const AkUniqueID INTRO = 1125500713U;
+        static const AkUniqueID LAUGH = 4016454680U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SCREAM = 737767022U;
         static const AkUniqueID SHOOTFAMAS = 643270054U;
         static const AkUniqueID SHOOTSNIPER = 3097990443U;
         static const AkUniqueID SHOOTUZI = 3176895516U;

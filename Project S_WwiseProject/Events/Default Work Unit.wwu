@@ -297,6 +297,69 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Laugh" ID="{86BDA0CC-7536-489B-A565-6623A7B3D503}">
+					<ChildrenList>
+						<Action Name="" ID="{7BFF312B-E5E2-445E-8D2B-B7B9D8EB6758}" ShortID="705194854">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Laugh" ID="{F59622C2-F1FD-4849-9E33-1BF51618416D}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FC562B55-AA12-469C-8F2F-9113B20F2D9A}" ShortID="1048385089">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Laugh" ID="{F59622C2-F1FD-4849-9E33-1BF51618416D}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Scream" ID="{6D3D614B-5B58-474B-86AC-F7BFBFB98980}">
+					<ChildrenList>
+						<Action Name="" ID="{DD866BF5-8E6C-4C3C-929F-F916ABE1D9B3}" ShortID="174283414">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Scream" ID="{5AD990C8-440E-4DF5-BB0F-0D0448F34742}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7C7B2EC4-389A-4FFB-BDA6-0049A715CDC4}" ShortID="867680096">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Scream" ID="{5AD990C8-440E-4DF5-BB0F-0D0448F34742}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Intro" ID="{60FF2879-E4E1-4EAC-8755-157DF840299E}">
+					<ChildrenList>
+						<Action Name="" ID="{82FCDECA-4CD0-46F5-87D8-8B6027306C9A}" ShortID="409323432">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Intro" ID="{6778A0BD-EC51-4216-B352-DCF2CC85BF4E}" WorkUnitID="{6B540857-EB6A-43D3-87A8-9C419C8C8F73}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9E6CEB50-306F-4DE2-B2AC-B5738E2DFF09}" ShortID="363990631">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Intro" ID="{6778A0BD-EC51-4216-B352-DCF2CC85BF4E}" WorkUnitID="{6B540857-EB6A-43D3-87A8-9C419C8C8F73}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
