@@ -255,8 +255,48 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Click" ID="{6555FD29-566C-4583-B13D-2C4C3E9A71E3}"/>
-				<Event Name="TurnPage" ID="{102CA49B-7700-479D-9A7B-3C77FA28CAC3}"/>
+				<Event Name="Click" ID="{6555FD29-566C-4583-B13D-2C4C3E9A71E3}">
+					<ChildrenList>
+						<Action Name="" ID="{4FBB4B83-6ADF-4C3B-847B-EF228EB1D6F4}" ShortID="697194976">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_ClickOn2" ID="{00CEA174-582B-4357-947A-AD0D5774BB39}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3061F33D-5794-4D24-9DB1-42C76B4D4128}" ShortID="86417575">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_ClickOn2" ID="{00CEA174-582B-4357-947A-AD0D5774BB39}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="TurnPage" ID="{102CA49B-7700-479D-9A7B-3C77FA28CAC3}">
+					<ChildrenList>
+						<Action Name="" ID="{C4E3D6CB-2611-43BD-920A-F1FBCE436174}" ShortID="210101483">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_TurningPage" ID="{4935F077-3256-456B-95F1-6EC5EF5B3C4E}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EEAB088E-011A-4CC4-ABE7-6852AE3B0497}" ShortID="969763682">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_TurningPage" ID="{4935F077-3256-456B-95F1-6EC5EF5B3C4E}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
