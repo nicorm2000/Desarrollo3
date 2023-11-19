@@ -14,11 +14,11 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID CLICK = 1584507803U;
-        static const AkUniqueID CONVERSATION = 999367376U;
         static const AkUniqueID CONVEYORBELT = 1687970961U;
         static const AkUniqueID COOLDOWNFAMAS = 333089542U;
         static const AkUniqueID COOLDOWNSNIPER = 4259908363U;
         static const AkUniqueID COOLDOWNUZI = 3686178940U;
+        static const AkUniqueID FILMCONVERSATION = 2129816966U;
         static const AkUniqueID FOOTSTEPSENEMIES = 443235554U;
         static const AkUniqueID FOOTSTEPSPLAYER = 3865216745U;
         static const AkUniqueID GRILL = 3760814375U;
@@ -27,6 +27,7 @@ namespace AK
         static const AkUniqueID LAUGH = 4016454680U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID ROLL = 2026920480U;
+        static const AkUniqueID ROMANTICCONVERSATION = 1242093309U;
         static const AkUniqueID SCREAM = 737767022U;
         static const AkUniqueID SHOOTFAMAS = 643270054U;
         static const AkUniqueID SHOOTSNIPER = 3097990443U;

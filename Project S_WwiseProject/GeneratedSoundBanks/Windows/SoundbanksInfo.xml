@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3143336771">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2052517703">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -26,18 +26,6 @@
 						<File Id="311343723" Language="SFX">
 							<ShortName>UI_ClickOn2.wav</ShortName>
 							<Path>SFX\UI_ClickOn2_6E1208F6.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="999367376" Name="Conversation" ObjectPath="\Events\Default Work Unit\Conversation" MaxAttenuation="15." DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="480149809" Language="SFX">
-							<ShortName>romanticConversation.wav</ShortName>
-							<Path>SFX\romanticConversation_DBBDE2E2.wem</Path>
-						</File>
-						<File Id="887801688" Language="SFX">
-							<ShortName>filmConversation.wav</ShortName>
-							<Path>SFX\filmConversation_35A4FCA7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -70,6 +58,14 @@
 						<File Id="51529185" Language="SFX">
 							<ShortName>UziCooldown.wav</ShortName>
 							<Path>SFX\UziCooldown_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2129816966" Name="FilmConversation" ObjectPath="\Events\Default Work Unit\FilmConversation" MaxAttenuation="25." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="887801688" Language="SFX">
+							<ShortName>filmConversation.wav</ShortName>
+							<Path>SFX\filmConversation_35A4FCA7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -166,6 +162,14 @@
 						<File Id="193992199" Language="SFX">
 							<ShortName>PlayerSkillRoll.wav</ShortName>
 							<Path>SFX\PlayerSkillRoll_90A63FCE.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1242093309" Name="RomanticConversation" ObjectPath="\Events\Default Work Unit\RomanticConversation" MaxAttenuation="25." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="480149809" Language="SFX">
+							<ShortName>romanticConversation.wav</ShortName>
+							<Path>SFX\romanticConversation_DBBDE2E2.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

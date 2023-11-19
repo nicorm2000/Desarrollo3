@@ -19,7 +19,7 @@
 									<Custom>
 										<Attenuation Name="Attenuation (Custom)" ID="{0E5F28AB-F582-4D36-8B39-EDB1D4285B8E}" ShortID="75362911">
 											<PropertyList>
-												<Property Name="RadiusMax" Type="Real64" Value="15"/>
+												<Property Name="RadiusMax" Type="Real64" Value="25"/>
 											</PropertyList>
 											<CurveUsageInfoList>
 												<VolumeDryUsage>
@@ -35,7 +35,7 @@
 																	<Flags>5</Flags>
 																</Point>
 																<Point>
-																	<XPos>15</XPos>
+																	<XPos>25</XPos>
 																	<YPos>-200</YPos>
 																	<Flags>37</Flags>
 																</Point>
@@ -108,6 +108,11 @@
 								<Sound Name="romanticConversation" ID="{6EF873FF-F723-4F86-81A2-B53298CE7F15}" ShortID="126183703">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">

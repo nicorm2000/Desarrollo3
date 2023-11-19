@@ -3506,7 +3506,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &279060191
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3904,7 +3904,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &296075858
 Transform:
   m_ObjectHideFlags: 0
@@ -5899,6 +5899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   increaseSizeOn: {fileID: 908161859}
   audioManager: {fileID: 1351502573}
+  click: 
 --- !u!1 &433290769
 GameObject:
   m_ObjectHideFlags: 0
@@ -6567,6 +6568,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1186112280}
     - target: {fileID: 464711979963327155, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: roll
+      value: Roll
+      objectReference: {fileID: 0}
+    - target: {fileID: 464711979963327155, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: laser
+      value: Laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 464711979963327155, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: splat
+      value: Splat
+      objectReference: {fileID: 0}
+    - target: {fileID: 464711979963327155, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: dashImage
       value: 
       objectReference: {fileID: 1946912803}
@@ -6590,6 +6603,10 @@ PrefabInstance:
       propertyPath: waveManager
       value: 
       objectReference: {fileID: 760154691}
+    - target: {fileID: 464711979963327155, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
     - target: {fileID: 471063530683274035, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: screenShake
       value: 
@@ -11384,7 +11401,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 8720136bafa31c84dabbebe690a0c2d4, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: ee02ee671170ab84eb62a26fc5c1532c, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -13388,7 +13405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1046934545
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14827,7 +14844,6 @@ MonoBehaviour:
   changePlayerWeapon: {fileID: 2009772659}
   player: {fileID: 521703871}
   transitionOff: {fileID: 791532832}
-  audioManager: {fileID: 1351502573}
   playerCanTeleport: 0
   isPlayerOnTeleportArea: 0
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
@@ -16031,7 +16047,6 @@ MonoBehaviour:
   changePlayerWeapon: {fileID: 2009772659}
   player: {fileID: 521703871}
   transitionOff: {fileID: 791532832}
-  audioManager: {fileID: 1351502573}
   playerCanTeleport: 0
   isPlayerOnTeleportArea: 0
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
@@ -17980,7 +17995,6 @@ MonoBehaviour:
   changePlayerWeapon: {fileID: 2009772659}
   player: {fileID: 521703871}
   transitionOff: {fileID: 791532832}
-  audioManager: {fileID: 1351502573}
   playerCanTeleport: 0
   isPlayerOnTeleportArea: 0
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
@@ -18620,7 +18634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1327362359
 Transform:
   m_ObjectHideFlags: 0
@@ -19111,9 +19125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b446fc0bba2e9694199584e3e1cfb6ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventNames:
-  - Click
-  - turnPage
 --- !u!1001 &1353435516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21496,6 +21507,50 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.009242884, y: 0.03251969, z: 0.009213691}
   m_Center: {x: -0.000043791464, y: 0.0032933059, z: 0.000029194292}
+--- !u!1 &1504507315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1504507316}
+  - component: {fileID: 1504507317}
+  m_Layer: 0
+  m_Name: LevelAudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1504507316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504507315}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 16.944336}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1504507317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504507315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d37a76568a324d248a7f4790b3daa738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1504585846
 GameObject:
   m_ObjectHideFlags: 0
@@ -26088,7 +26143,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 8720136bafa31c84dabbebe690a0c2d4, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 4f520f97c611e764b881d8f96340efc3, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -30538,6 +30593,7 @@ SceneRoots:
   - {fileID: 760154690}
   - {fileID: 1327362359}
   - {fileID: 5189041369103466874}
+  - {fileID: 1504507316}
   - {fileID: 1681379770}
   - {fileID: 127761907}
   - {fileID: 1181773014}

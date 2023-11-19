@@ -3,22 +3,22 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{6110F43A-2C1E-4692-9AF7-31B5137FE77A}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Conversation" ID="{BEADD4A6-3C41-4C2A-BB2D-F8F830329F40}">
+				<Event Name="FilmConversation" ID="{BEADD4A6-3C41-4C2A-BB2D-F8F830329F40}">
 					<ChildrenList>
-						<Action Name="" ID="{2B1625C5-7B37-44AD-BAF5-3351F524C52C}" ShortID="1033926203">
+						<Action Name="" ID="{2B4BC882-B4D6-4FC8-A350-CF32A52322B7}" ShortID="292566771">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="PeopleTalking" ID="{51E67192-7E11-42E3-A972-9E403419FD5F}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+									<ObjectRef Name="filmConversation" ID="{D4524CCF-27EE-4AB6-B16C-C70B246DCF83}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{32CB732F-4C92-4C56-AEC8-EFEACD31516B}" ShortID="173248731">
+						<Action Name="" ID="{1C57CF78-E91B-490F-9FC9-A0B7732A9B2F}" ShortID="1050732622">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="PeopleTalking" ID="{51E67192-7E11-42E3-A972-9E403419FD5F}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+									<ObjectRef Name="filmConversation" ID="{D4524CCF-27EE-4AB6-B16C-C70B246DCF83}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -439,6 +439,24 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Splat" ID="{E8354DE7-1B7C-4134-BA51-2C1204A56302}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="RomanticConversation" ID="{42A9D897-3591-4FD3-A27C-197C3F1DD666}">
+					<ChildrenList>
+						<Action Name="" ID="{606A5744-CD2F-4B5F-ADB1-EC11C53BDF52}" ShortID="346032702">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="romanticConversation" ID="{6EF873FF-F723-4F86-81A2-B53298CE7F15}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5F278DF3-08EC-451A-BCD2-538904142210}" ShortID="650114678">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="romanticConversation" ID="{6EF873FF-F723-4F86-81A2-B53298CE7F15}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -36,6 +36,13 @@ public class Abilities : MonoBehaviour
     [SerializeField] private Image laserImage;
     [SerializeField] private Color laserColor = Color.cyan;
     [SerializeField] private GameObject laserObject;
+
+    [Header("Audio Manager")]
+    [SerializeField] AudioManager audioManager;
+    [SerializeField] string roll;
+    [SerializeField] string splat;
+    [SerializeField] string laser;
+
     private float laserCooldown = 3f;
     private bool isCooldownLaser = false;
 
@@ -85,6 +92,7 @@ public class Abilities : MonoBehaviour
         {
             if (!isCooldownLaser)
             {
+                audioManager.PlaySound(laser);
                 isCooldownLaser = true;
                 laserImage.fillAmount = 1f;
 
@@ -120,12 +128,13 @@ public class Abilities : MonoBehaviour
         }
     }
 
-    public void SlowerLogic() 
+    public void SlowerLogic()
     {
         if (waveManager.currentWaveIndex >= 4)
         {
             if (!isCooldownSlower)
             {
+                audioManager.PlaySound(splat);
                 isCooldownSlower = true;
                 slowerImage.fillAmount = 1f;
 
@@ -162,10 +171,11 @@ public class Abilities : MonoBehaviour
         }
     }
 
-    public void DashLogic() 
+    public void DashLogic()
     {
         if (dashCoolDownCounter <= 0 && dashCounter <= 0)
         {
+            audioManager.PlaySound(roll);
             playerData.isDashing = true;
             dustParticles.Play();
             onPlayerDashChange?.Invoke(playerData.isDashing);
