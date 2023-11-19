@@ -1324,6 +1324,87 @@
 						</SwitchContainer>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="UI" ID="{5337D090-A0A7-41CD-829A-04A6A495B03D}" ShortID="157516378">
+					<ChildrenList>
+						<Sound Name="UI_ClickOn2" ID="{00CEA174-582B-4357-947A-AD0D5774BB39}" ShortID="558020666">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_ClickOn2" ID="{466A32D0-F2AC-40F7-9512-D7CA2D5DFC59}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0136927835684751"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0215172313218895"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.055"/>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>UI_ClickOn2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="311343723"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_ClickOn2" ID="{466A32D0-F2AC-40F7-9512-D7CA2D5DFC59}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_TurningPage" ID="{4935F077-3256-456B-95F1-6EC5EF5B3C4E}" ShortID="539482064">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E93D2768-1F78-45F0-91F2-7371973CAC0D}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_TurningPage" ID="{AE43606E-273B-4312-B480-7FB732EBA0FF}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0650938509034286"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.173157550076832"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>UI_TurningPage.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="169643596"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_TurningPage" ID="{AE43606E-273B-4312-B480-7FB732EBA0FF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

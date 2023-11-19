@@ -1,6 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6110F43A-2C1E-4692-9AF7-31B5137FE77A}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{6110F43A-2C1E-4692-9AF7-31B5137FE77A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{6110F43A-2C1E-4692-9AF7-31B5137FE77A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Conversation" ID="{BEADD4A6-3C41-4C2A-BB2D-F8F830329F40}">
+					<ChildrenList>
+						<Action Name="" ID="{2B1625C5-7B37-44AD-BAF5-3351F524C52C}" ShortID="1033926203">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PeopleTalking" ID="{51E67192-7E11-42E3-A972-9E403419FD5F}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{32CB732F-4C92-4C56-AEC8-EFEACD31516B}" ShortID="173248731">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PeopleTalking" ID="{51E67192-7E11-42E3-A972-9E403419FD5F}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ConveyorBelt" ID="{BC540C59-A5F5-4320-AE80-4F51B59B5D95}">
+					<ChildrenList>
+						<Action Name="" ID="{21CED619-EC92-4C02-97FF-4E904E773388}" ShortID="395222066">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ConveyorBelt" ID="{8C7A0669-D443-4415-A5DB-7286056BA913}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CC2170EE-EA9C-4707-BB11-16152662D0B6}" ShortID="340167106">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ConveyorBelt" ID="{8C7A0669-D443-4415-A5DB-7286056BA913}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="CooldownFamas" ID="{DCBAF760-3291-4F09-9232-4483D4C753ED}">
+					<ChildrenList>
+						<Action Name="" ID="{DF74DCA9-8901-472C-9B76-C199F3A1B43C}" ShortID="1030302884">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cooldown" ID="{F5D6A8CA-42FC-4778-85EB-BE069E4D59C5}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E16CE572-4DC8-44E9-9618-C7F5F054D3E3}" ShortID="379039345">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cooldown" ID="{F5D6A8CA-42FC-4778-85EB-BE069E4D59C5}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="CooldownSniper" ID="{829D5B59-21C2-49FA-A7A1-101DF838C4E5}">
+					<ChildrenList>
+						<Action Name="" ID="{34F64972-FBF8-4E1D-81D6-A19455D59EA4}" ShortID="645476243">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cooldown" ID="{ABCF9934-1F79-401D-B2BD-B17D7AA8EB7B}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DC614D60-65B0-4761-B27D-755B0E87CBD3}" ShortID="121011738">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cooldown" ID="{ABCF9934-1F79-401D-B2BD-B17D7AA8EB7B}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="CooldownUzi" ID="{AE2BBA37-E5CA-4D22-BFBC-EB78BB737815}">
+					<ChildrenList>
+						<Action Name="" ID="{B19DF9AE-485D-4D20-B12A-CE6796C2D7C2}" ShortID="389728814">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cooldown" ID="{B83645D1-9F09-4D8D-A514-73977A5C4929}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4F48F407-E116-4E93-920C-9ADE2DBEC9AD}" ShortID="422488154">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cooldown" ID="{B83645D1-9F09-4D8D-A514-73977A5C4929}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FootstepsEnemies" ID="{AD3B5061-2E0F-46D6-A0E3-92866D573A5B}">
+					<ChildrenList>
+						<Action Name="" ID="{CEF7133A-3103-4630-A893-78B4F975ED3E}" ShortID="13493424">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Enemy" ID="{7A9E0303-5271-44E5-A7D1-25AE7472F7CD}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{078D39A1-B854-4050-9829-0C7AFADA15E0}" ShortID="687433419">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Enemy" ID="{7A9E0303-5271-44E5-A7D1-25AE7472F7CD}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FootstepsPlayer" ID="{8AB6CA71-5CCF-4CCB-9790-6F0E4CB830B6}">
+					<ChildrenList>
+						<Action Name="" ID="{C3BAB727-56C8-439C-9FE6-143C4BCB4328}" ShortID="682093629">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player" ID="{44BA8C53-798F-43F1-802F-FE738C38524B}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F96558B7-809E-46A0-9E0B-855122787674}" ShortID="263350550">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player" ID="{44BA8C53-798F-43F1-802F-FE738C38524B}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Grill" ID="{54ED5A82-A9AB-41C8-B013-8764B4DC6EFA}">
+					<ChildrenList>
+						<Action Name="" ID="{29738877-6007-4A72-A48A-F2E45F30F9F6}" ShortID="843609679">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Grill" ID="{9BB3CFDB-E2DB-45D7-9A85-0C9F446AC1B6}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FD908AA1-8342-4959-8216-A7F0D29C6B1E}" ShortID="331495375">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Grill" ID="{9BB3CFDB-E2DB-45D7-9A85-0C9F446AC1B6}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ShootFamas" ID="{5CE3DD50-0AEB-4C0B-84D2-6E68514D1707}">
+					<ChildrenList>
+						<Action Name="" ID="{9572A3C9-6AD3-488D-8369-D3A09165FFDA}" ShortID="469966792">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Famas" ID="{FE4AA9EE-4804-485A-A5A3-CFAE316994CE}" WorkUnitID="{96DE4057-CE0E-4F4F-8122-A79587657419}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E45EBA62-07A7-4827-B9EA-4B9A8E52F9E0}" ShortID="925729610">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Famas" ID="{F7F2B905-DEBC-4939-9E99-BA0EA784A026}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ShootSniper" ID="{692A8E4F-2D9E-4549-A355-9474D22D9525}">
+					<ChildrenList>
+						<Action Name="" ID="{B3E6D17A-5657-4FF5-9689-E88EEF78875C}" ShortID="131278320">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sniper" ID="{1305F924-A73F-4EF7-BFE3-7059E57DE99A}" WorkUnitID="{96DE4057-CE0E-4F4F-8122-A79587657419}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C49DF3E9-7EFF-4893-9E33-8E016171E52A}" ShortID="327851390">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sniper" ID="{20A8C51A-F6FD-4816-9E0F-9150ED63CB0B}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ShootUzi" ID="{865B4D60-B882-4AF6-A600-D9D5CF655730}">
+					<ChildrenList>
+						<Action Name="" ID="{D4D89285-F938-4C40-A11B-35F17DF22F09}" ShortID="277391558">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Uzi" ID="{EE8FB17D-F7BB-4DB3-8D8C-A42C51908DD6}" WorkUnitID="{96DE4057-CE0E-4F4F-8122-A79587657419}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6102706A-35E5-4667-ACE7-0FB2840BBA64}" ShortID="894203247">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UZI" ID="{3E95DBF8-A7A2-4CCE-A81E-BF1B66042407}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Music" ID="{CA5D5DF1-1767-4B55-9FCB-74CF08A348A7}">
+					<ChildrenList>
+						<Action Name="" ID="{B347930E-C985-4B79-B415-7B5006C7DA6D}" ShortID="505742597">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{B0F6EAE3-5921-4C7D-A48B-BD401E024E28}" WorkUnitID="{6B540857-EB6A-43D3-87A8-9C419C8C8F73}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{61C21056-B8B3-4A60-941E-7DDFB4D67B1D}" ShortID="701791508">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{B0F6EAE3-5921-4C7D-A48B-BD401E024E28}" WorkUnitID="{6B540857-EB6A-43D3-87A8-9C419C8C8F73}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Click" ID="{6555FD29-566C-4583-B13D-2C4C3E9A71E3}"/>
+				<Event Name="TurnPage" ID="{102CA49B-7700-479D-9A7B-3C77FA28CAC3}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
