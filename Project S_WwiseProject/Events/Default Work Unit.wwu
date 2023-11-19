@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6110F43A-2C1E-4692-9AF7-31B5137FE77A}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{6110F43A-2C1E-4692-9AF7-31B5137FE77A}" PersistMode="Standalone">
-			<ChildrenList>
-				<Event Name="Play_Amb" ID="{C4DA3273-8A6F-4AB7-98C9-7E4E42177043}">
-					<ChildrenList>
-						<Action Name="" ID="{0BAAA302-CAB9-4873-9E5B-CB9F6FAA967B}" ShortID="497320610">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="mainTheme" ID="{125B22F9-9EFE-4339-964C-4939AAAA8556}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{288B8356-C20F-4B17-8749-4A20B423D474}" ShortID="167075778">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="mainTheme" ID="{125B22F9-9EFE-4339-964C-4939AAAA8556}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{6110F43A-2C1E-4692-9AF7-31B5137FE77A}" PersistMode="Standalone"/>
 	</Events>
 </WwiseDocument>
