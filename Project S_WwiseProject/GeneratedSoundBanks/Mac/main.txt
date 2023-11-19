@@ -1,6 +1,62 @@
 Event	ID	Name			Wwise Object Path	Notes
-	2959533290	Play_Amb			\Default Work Unit\Play_Amb	
+	333089542	CooldownFamas			\Default Work Unit\CooldownFamas	
+	443235554	FootstepsEnemies			\Default Work Unit\FootstepsEnemies	
+	643270054	ShootFamas			\Default Work Unit\ShootFamas	
+	999367376	Conversation			\Default Work Unit\Conversation	
+	1584507803	Click			\Default Work Unit\Click	
+	1687970961	ConveyorBelt			\Default Work Unit\ConveyorBelt	
+	2936962349	TurnPage			\Default Work Unit\TurnPage	
+	3097990443	ShootSniper			\Default Work Unit\ShootSniper	
+	3176895516	ShootUzi			\Default Work Unit\ShootUzi	
+	3686178940	CooldownUzi			\Default Work Unit\CooldownUzi	
+	3760814375	Grill			\Default Work Unit\Grill	
+	3865216745	FootstepsPlayer			\Default Work Unit\FootstepsPlayer	
+	3991942870	Music			\Default Work Unit\Music	
+	4259908363	CooldownSniper			\Default Work Unit\CooldownSniper	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3677545409	Weapons_ammo			\Default Work Unit\Weapons_ammo	
+
+Switch	ID	Name	Switch Group			Notes
+	3354297748	Empty	Weapons_ammo			
+	3620752402	Loaded	Weapons_ammo			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	277254803	mainTheme	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\mainTheme_81238AE1.wem		\Actor-Mixer Hierarchy\Default Work Unit\mainTheme		7168064
+	45467557	RifleGunfire-004	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\RifleGunfire-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Loaded\RifleGunfire-004		8284
+	51529185	Cooldown	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\UziCooldown_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Cooldown		993548
+	80193230	RifleEmptyMag-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\RifleEmptyMag-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Empty\RifleEmptyMag-002		13552
+	98181527	RifleGunfire-003	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\RifleGunfire-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Loaded\RifleGunfire-003		7436
+	152369639	Footsteps_Player_2	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Footsteps_Player_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Player\Footsteps_Player_2		124216
+	169562177	ConveyorBelt	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\ConveyorBelt_57BE3351.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\ConveyorBelt		3235264
+	169643596	UI_TurningPage	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\UI_TurningPage_74B490CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_TurningPage		305432
+	196164197	RifleEmptyMag-001	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\RifleEmptyMag-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Empty\RifleEmptyMag-001		14128
+	201673485	Footsteps_Player_1	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Footsteps_Player_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Player\Footsteps_Player_1		117802
+	209719382	SniperGunfire-001	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\SniperGunfire-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Loaded\SniperGunfire-001		98080
+	211043125	SniperGunfire-003	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\SniperGunfire-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Loaded\SniperGunfire-003		99974
+	232622653	Footsteps_Player_3	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Footsteps_Player_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Player\Footsteps_Player_3		124216
+	263833320	UziEmptyMag-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\UziEmptyMag-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Empty\UziEmptyMag-002		6108
+	277254803	mainTheme	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\mainTheme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\IntroMainTheme\mainTheme		25872064
+	287055274	Cooldown	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\SniperCooldown_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Cooldown		984704
+	307801661	SniperEmptyMag-001	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\SniperEmptyMag-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Empty\SniperEmptyMag-001		15424
+	311343723	UI_ClickOn2	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\UI_ClickOn2_6E1208F6.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_ClickOn2		19344
+	315054637	UziGunfire-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\UziGunfire-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Loaded\UziGunfire-002		5856
+	328273585	Footsteps_Enemies_A_2	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Footsteps_Enemies_A_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Enemy\Footsteps_Enemies_A_2		113882
+	409067037	RifleGunfire-001	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\RifleGunfire-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Loaded\RifleGunfire-001		8818
+	419086052	Footsteps_Enemies_A_3	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Footsteps_Enemies_A_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Enemy\Footsteps_Enemies_A_3		107110
+	450423694	UziGunfire-001	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\UziGunfire-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Loaded\UziGunfire-001		6170
+	480149809	romanticConversation	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\romanticConversation_DBBDE2E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PeopleTalking\romanticConversation		7813424
+	483170663	Cooldown	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\RifleCooldown_3620EBCC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Cooldown		984912
+	509604822	Footsteps_Enemies_A_4	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Footsteps_Enemies_A_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Enemy\Footsteps_Enemies_A_4		115306
+	639313971	Footsteps_Enemies_A_1	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Footsteps_Enemies_A_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Enemy\Footsteps_Enemies_A_1		116376
+	785732627	SniperGunfire-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\SniperGunfire-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Loaded\SniperGunfire-002		103724
+	834402619	Grill	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Grill_370B157C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Grill		5961080
+	887801688	filmConversation	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\filmConversation_35A4FCA7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PeopleTalking\filmConversation		5253896
+	932633481	RifleGunfire-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\RifleGunfire-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Loaded\RifleGunfire-002		7874
+	973734017	UziGunfire-004	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\UziGunfire-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Loaded\UziGunfire-004		8224
+	979923448	UziGunfire-003	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\UziGunfire-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Loaded\UziGunfire-003		5166
+	1009135126	SniperEmptyMag-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\SniperEmptyMag-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Empty\SniperEmptyMag-002		16708
+	1042105654	Footsteps_Player_5	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Footsteps_Player_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Player\Footsteps_Player_5		125284
+	1047770942	Footsteps_Player_4	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Footsteps_Player_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Player\Footsteps_Player_4		124572
+	1063476344	Footsteps_Enemies_A_5	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Footsteps_Enemies_A_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Enemy\Footsteps_Enemies_A_5		120652
+	1067180262	UziEmptyMag-001	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\UziEmptyMag-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Empty\UziEmptyMag-001		7208
 

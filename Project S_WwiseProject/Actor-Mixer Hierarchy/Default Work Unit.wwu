@@ -1327,6 +1327,13 @@
 				<Folder Name="UI" ID="{5337D090-A0A7-41CD-829A-04A6A495B03D}" ShortID="157516378">
 					<ChildrenList>
 						<Sound Name="UI_ClickOn2" ID="{00CEA174-582B-4357-947A-AD0D5774BB39}" ShortID="558020666">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>

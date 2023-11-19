@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.Collections.AllocatorManager;
 
 public class Book : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class Book : MonoBehaviour
     [SerializeField] private GameObject backButton;
     [SerializeField] private GameObject nextButton;
     [SerializeField] private GameObject playButton;
+
+    [Header("Audio Manager")]
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private string turnPage;
 
     private int _index = -1;
     private bool _rotate = false;
@@ -34,8 +39,9 @@ public class Book : MonoBehaviour
         if (_rotate)
         {
             return;
-        }    
+        }
 
+        audioManager.PlaySound(turnPage);
         _index++;
         float angle = 180;
         NextButtonActions();
@@ -63,6 +69,7 @@ public class Book : MonoBehaviour
             return;
         }
 
+        audioManager.PlaySound(turnPage);
         float angle = 0;
         pages[_index].SetAsLastSibling();
         BackButtonActions();

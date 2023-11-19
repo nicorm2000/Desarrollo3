@@ -1148,6 +1148,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1173581146}
   - component: {fileID: 1173581145}
+  - component: {fileID: 1173581147}
+  - component: {fileID: 1173581148}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -1195,6 +1197,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1173581147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173581144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68035cd51497bdb45be4bd0d5c2e30dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9a46f18edb0d79e40851ffb6fada3ff2, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
+--- !u!114 &1173581148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173581144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b446fc0bba2e9694199584e3e1cfb6ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1181773011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,6 +1474,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   increaseSizeOn: {fileID: 1333583425}
+  audioManager: {fileID: 1173581148}
+  click: Click
 --- !u!4 &1768161252
 Transform:
   m_ObjectHideFlags: 0
@@ -1465,6 +1505,6 @@ SceneRoots:
   - {fileID: 1181773014}
   - {fileID: 353048543}
   - {fileID: 1768161252}
-  - {fileID: 1173581146}
   - {fileID: 1010939186}
   - {fileID: 454560177}
+  - {fileID: 1173581146}

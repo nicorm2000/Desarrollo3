@@ -13,8 +13,48 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAY_AMB = 2959533290U;
+        static const AkUniqueID CLICK = 1584507803U;
+        static const AkUniqueID CONVERSATION = 999367376U;
+        static const AkUniqueID CONVEYORBELT = 1687970961U;
+        static const AkUniqueID COOLDOWNFAMAS = 333089542U;
+        static const AkUniqueID COOLDOWNSNIPER = 4259908363U;
+        static const AkUniqueID COOLDOWNUZI = 3686178940U;
+        static const AkUniqueID FOOTSTEPSENEMIES = 443235554U;
+        static const AkUniqueID FOOTSTEPSPLAYER = 3865216745U;
+        static const AkUniqueID GRILL = 3760814375U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SHOOTFAMAS = 643270054U;
+        static const AkUniqueID SHOOTSNIPER = 3097990443U;
+        static const AkUniqueID SHOOTUZI = 3176895516U;
+        static const AkUniqueID TURNPAGE = 2936962349U;
     } // namespace EVENTS
+
+    namespace SWITCHES
+    {
+        namespace WEAPONS
+        {
+            static const AkUniqueID GROUP = 1467963052U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID FAMAS = 2821460987U;
+                static const AkUniqueID SNIPER = 2550763292U;
+                static const AkUniqueID UZI = 862615877U;
+            } // namespace SWITCH
+        } // namespace WEAPONS
+
+        namespace WEAPONS_AMMO
+        {
+            static const AkUniqueID GROUP = 3677545409U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID EMPTY = 3354297748U;
+                static const AkUniqueID LOADED = 3620752402U;
+            } // namespace SWITCH
+        } // namespace WEAPONS_AMMO
+
+    } // namespace SWITCHES
 
     namespace BANKS
     {

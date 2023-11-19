@@ -12,16 +12,502 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c05c26013c1a3947b781aa4c02d769b, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
-  AuxBusWwu: []
-  BankWwu: []
-  EventWwu: []
-  RtpcWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  TriggerWwu: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Virtual Acoustics
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 4223a3686c4109478e7ed29528df1d47
+    ParentPath: Virtual Acoustics\Default Work Unit
+    guid: 4223a3686c4109478e7ed29528df1d47
+    GuidInternal: 
+    m_lastTime: -8585034087828136112
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 575a9845c542444394dfd29888a832bf
+    ParentPath: Master-Mixer Hierarchy\Default Work Unit
+    guid: 575a9845c542444394dfd29888a832bf
+    GuidInternal: 
+    m_lastTime: -8585034087829703651
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 575a9845c542444394dfd29888a832bf
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 30beb28910178f449ebdc0bc6c1a585e
+    ParentPath: SoundBanks\Default Work Unit
+    guid: 30beb28910178f449ebdc0bc6c1a585e
+    GuidInternal: 
+    m_lastTime: -8585011844418850727
+    List:
+    - name: main
+      guid: 65504061b930a547a54895fa61c9e604
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 30beb28910178f449ebdc0bc6c1a585e
+      - ElementName: main
+        ObjectType: 7
+        guid: 65504061b930a547a54895fa61c9e604
+      Path: SoundBanks\Default Work Unit\main
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 3af410611e2c92469af731b5137fe77a
+    ParentPath: Events\Default Work Unit
+    guid: 3af410611e2c92469af731b5137fe77a
+    GuidInternal: 
+    m_lastTime: -8585011941583613912
+    List:
+    - name: Click
+      guid: 29fd55656c568345b13d2c4c3e9a71e3
+      id: 1584507803
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: Click
+        ObjectType: 3
+        guid: 29fd55656c568345b13d2c4c3e9a71e3
+      Path: Events\Default Work Unit\Click
+      maxAttenuation: 0
+      maxDuration: 0.100417
+      minDuration: 0.100417
+    - name: Conversation
+      guid: a6d4adbe413c2a4cbb2df8f830329f40
+      id: 999367376
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: Conversation
+        ObjectType: 3
+        guid: a6d4adbe413c2a4cbb2df8f830329f40
+      Path: Events\Default Work Unit\Conversation
+      maxAttenuation: 15
+      maxDuration: -1
+      minDuration: -1
+    - name: ConveyorBelt
+      guid: 590c54bcf5a52043ae804f51b59b5d95
+      id: 1687970961
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: ConveyorBelt
+        ObjectType: 3
+        guid: 590c54bcf5a52043ae804f51b59b5d95
+      Path: Events\Default Work Unit\ConveyorBelt
+      maxAttenuation: 12
+      maxDuration: -1
+      minDuration: -1
+    - name: CooldownFamas
+      guid: 60f7badc9132094f92324483d4c753ed
+      id: 333089542
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: CooldownFamas
+        ObjectType: 3
+        guid: 60f7badc9132094f92324483d4c753ed
+      Path: Events\Default Work Unit\CooldownFamas
+      maxAttenuation: 0
+      maxDuration: 5.129416
+      minDuration: 5.129416
+    - name: CooldownSniper
+      guid: 595b9d82c221fa49a7a1101df838c4e5
+      id: 4259908363
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: CooldownSniper
+        ObjectType: 3
+        guid: 595b9d82c221fa49a7a1101df838c4e5
+      Path: Events\Default Work Unit\CooldownSniper
+      maxAttenuation: 0
+      maxDuration: 5.128334
+      minDuration: 5.128334
+    - name: CooldownUzi
+      guid: 37ba2baecae5224dbfbceb78bb737815
+      id: 3686178940
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: CooldownUzi
+        ObjectType: 3
+        guid: 37ba2baecae5224dbfbceb78bb737815
+      Path: Events\Default Work Unit\CooldownUzi
+      maxAttenuation: 0
+      maxDuration: 5.174396
+      minDuration: 5.174396
+    - name: FootstepsEnemies
+      guid: 61503bad0f2ed646a0e392866d573a5b
+      id: 443235554
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: FootstepsEnemies
+        ObjectType: 3
+        guid: 61503bad0f2ed646a0e392866d573a5b
+      Path: Events\Default Work Unit\FootstepsEnemies
+      maxAttenuation: 0
+      maxDuration: 1.256125
+      minDuration: 1.115062
+    - name: FootstepsPlayer
+      guid: 71cab68acf5ccb4c97906f0e4cb830b6
+      id: 3865216745
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: FootstepsPlayer
+        ObjectType: 3
+        guid: 71cab68acf5ccb4c97906f0e4cb830b6
+      Path: Events\Default Work Unit\FootstepsPlayer
+      maxAttenuation: 0
+      maxDuration: 1.304375
+      minDuration: 1.226437
+    - name: Grill
+      guid: 825aed54aba9c841b0138764b4dc6efa
+      id: 3760814375
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: Grill
+        ObjectType: 3
+        guid: 825aed54aba9c841b0138764b4dc6efa
+      Path: Events\Default Work Unit\Grill
+      maxAttenuation: 17
+      maxDuration: -1
+      minDuration: -1
+    - name: Music
+      guid: f15d5dca6717554b9fcb74cf08a348a7
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: Music
+        ObjectType: 3
+        guid: f15d5dca6717554b9fcb74cf08a348a7
+      Path: Events\Default Work Unit\Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ShootFamas
+      guid: 50dde35ceb0a0b4c84d26e68514d1707
+      id: 643270054
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: ShootFamas
+        ObjectType: 3
+        guid: 50dde35ceb0a0b4c84d26e68514d1707
+      Path: Events\Default Work Unit\ShootFamas
+      maxAttenuation: 0
+      maxDuration: 0.102355
+      minDuration: 0.065546
+    - name: ShootSniper
+      guid: 4f8e2a699e2d4945a3559474d22d9525
+      id: 3097990443
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: ShootSniper
+        ObjectType: 3
+        guid: 4f8e2a699e2d4945a3559474d22d9525
+      Path: Events\Default Work Unit\ShootSniper
+      maxAttenuation: 0
+      maxDuration: 1.157292
+      minDuration: 0.08
+    - name: ShootUzi
+      guid: 604d5b8682b8f64aa600d9d5cf655730
+      id: 3176895516
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: ShootUzi
+        ObjectType: 3
+        guid: 604d5b8682b8f64aa600d9d5cf655730
+      Path: Events\Default Work Unit\ShootUzi
+      maxAttenuation: 0
+      maxDuration: 0.085
+      minDuration: 0.031479
+    - name: TurnPage
+      guid: 9ba42c1000779d479a7b3c77fa28cac3
+      id: 2936962349
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: TurnPage
+        ObjectType: 3
+        guid: 9ba42c1000779d479a7b3c77fa28cac3
+      Path: Events\Default Work Unit\TurnPage
+      maxAttenuation: 0
+      maxDuration: 1.785229
+      minDuration: 1.416937
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: e9be0c57c704234199bd1346d9c03688
+    ParentPath: Game Parameters\Default Work Unit
+    guid: e9be0c57c704234199bd1346d9c03688
+    GuidInternal: 
+    m_lastTime: -8585034087829167692
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 3591ab73d9acd6499536a6e724806059
+    ParentPath: States\Default Work Unit
+    guid: 3591ab73d9acd6499536a6e724806059
+    GuidInternal: 
+    m_lastTime: -8585034087828676102
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 5740de960ece4f4f8122a79587657419
+    ParentPath: Switches\Default Work Unit
+    guid: 5740de960ece4f4f8122a79587657419
+    GuidInternal: 
+    m_lastTime: -8585012469004588718
+    List:
+    - name: Weapons
+      guid: 9fa804b76132a4498c0dbd29ca1d48cf
+      id: 1467963052
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5740de960ece4f4f8122a79587657419
+      - ElementName: Weapons
+        ObjectType: 11
+        guid: 9fa804b76132a4498c0dbd29ca1d48cf
+      Path: Switches\Default Work Unit\Weapons
+      values:
+      - name: Famas
+        guid: eea94afe04485a48a5a3cfae316994ce
+        id: 2821460987
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5740de960ece4f4f8122a79587657419
+        - ElementName: Weapons
+          ObjectType: 11
+          guid: 9fa804b76132a4498c0dbd29ca1d48cf
+        - ElementName: Famas
+          ObjectType: 10
+          guid: eea94afe04485a48a5a3cfae316994ce
+      - name: Sniper
+        guid: 24f905133fa7f74ebfe37059e57de99a
+        id: 2550763292
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5740de960ece4f4f8122a79587657419
+        - ElementName: Weapons
+          ObjectType: 11
+          guid: 9fa804b76132a4498c0dbd29ca1d48cf
+        - ElementName: Sniper
+          ObjectType: 10
+          guid: 24f905133fa7f74ebfe37059e57de99a
+      - name: Uzi
+        guid: 7db18feebbf7b34d8d8ca42c51908dd6
+        id: 862615877
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5740de960ece4f4f8122a79587657419
+        - ElementName: Weapons
+          ObjectType: 11
+          guid: 9fa804b76132a4498c0dbd29ca1d48cf
+        - ElementName: Uzi
+          ObjectType: 10
+          guid: 7db18feebbf7b34d8d8ca42c51908dd6
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Weapons_ammo
+      guid: 398ab87da8ec244bb2685e4aaa126acc
+      id: 3677545409
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5740de960ece4f4f8122a79587657419
+      - ElementName: Weapons_ammo
+        ObjectType: 11
+        guid: 398ab87da8ec244bb2685e4aaa126acc
+      Path: Switches\Default Work Unit\Weapons_ammo
+      values:
+      - name: Empty
+        guid: 3eaa8d974eddab45a77a6800b6889f4a
+        id: 3354297748
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5740de960ece4f4f8122a79587657419
+        - ElementName: Weapons_ammo
+          ObjectType: 11
+          guid: 398ab87da8ec244bb2685e4aaa126acc
+        - ElementName: Empty
+          ObjectType: 10
+          guid: 3eaa8d974eddab45a77a6800b6889f4a
+      - name: Loaded
+        guid: 47d2c9fc9a752b45ae5273ef0df0eb34
+        id: 3620752402
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 5740de960ece4f4f8122a79587657419
+        - ElementName: Weapons_ammo
+          ObjectType: 11
+          guid: 398ab87da8ec244bb2685e4aaa126acc
+        - ElementName: Loaded
+          ObjectType: 10
+          guid: 47d2c9fc9a752b45ae5273ef0df0eb34
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Triggers
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 7c1c60d25133b4489627899fa0359356
+    ParentPath: Triggers\Default Work Unit
+    guid: 7c1c60d25133b4489627899fa0359356
+    GuidInternal: 
+    m_lastTime: -8585034087828296152
+    List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 05000000060000000700000017000000180000001b0000001c0000000401000005010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

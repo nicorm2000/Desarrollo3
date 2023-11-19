@@ -16,20 +16,380 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3863182045">
+		<SoundBank Id="3161908922" Language="SFX" Hash="4250962177">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2959533290" Name="Play_Amb" ObjectPath="\Events\Default Work Unit\Play_Amb" DurationType="Infinite">
+				<Event Id="1584507803" Name="Click" ObjectPath="\Events\Default Work Unit\Click" DurationType="OneShot" DurationMin="0.100417" DurationMax="0.100417">
+					<IncludedMemoryFiles>
+						<File Id="311343723" Language="SFX">
+							<ShortName>UI_ClickOn2.wav</ShortName>
+							<Path>SFX\UI_ClickOn2_6E1208F6.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="999367376" Name="Conversation" ObjectPath="\Events\Default Work Unit\Conversation" MaxAttenuation="15." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="480149809" Language="SFX">
+							<ShortName>romanticConversation.wav</ShortName>
+							<Path>SFX\romanticConversation_DBBDE2E2.wem</Path>
+						</File>
+						<File Id="887801688" Language="SFX">
+							<ShortName>filmConversation.wav</ShortName>
+							<Path>SFX\filmConversation_35A4FCA7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1687970961" Name="ConveyorBelt" ObjectPath="\Events\Default Work Unit\ConveyorBelt" MaxAttenuation="12." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="169562177" Language="SFX">
+							<ShortName>ConveyorBelt.wav</ShortName>
+							<Path>SFX\ConveyorBelt_57BE3351.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="333089542" Name="CooldownFamas" ObjectPath="\Events\Default Work Unit\CooldownFamas" DurationType="OneShot" DurationMin="5.129416" DurationMax="5.129416">
+					<IncludedMemoryFiles>
+						<File Id="483170663" Language="SFX">
+							<ShortName>RifleCooldown.wav</ShortName>
+							<Path>SFX\RifleCooldown_3620EBCC.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4259908363" Name="CooldownSniper" ObjectPath="\Events\Default Work Unit\CooldownSniper" DurationType="OneShot" DurationMin="5.128334" DurationMax="5.128334">
+					<IncludedMemoryFiles>
+						<File Id="287055274" Language="SFX">
+							<ShortName>SniperCooldown.wav</ShortName>
+							<Path>SFX\SniperCooldown_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3686178940" Name="CooldownUzi" ObjectPath="\Events\Default Work Unit\CooldownUzi" DurationType="OneShot" DurationMin="5.174396" DurationMax="5.174396">
+					<IncludedMemoryFiles>
+						<File Id="51529185" Language="SFX">
+							<ShortName>UziCooldown.wav</ShortName>
+							<Path>SFX\UziCooldown_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="443235554" Name="FootstepsEnemies" ObjectPath="\Events\Default Work Unit\FootstepsEnemies" DurationType="OneShot" DurationMin="1.115062" DurationMax="1.256125">
+					<IncludedMemoryFiles>
+						<File Id="328273585" Language="SFX">
+							<ShortName>Footsteps_Enemies_A_2.wav</ShortName>
+							<Path>SFX\Footsteps_Enemies_A_2_10C4C929.wem</Path>
+						</File>
+						<File Id="419086052" Language="SFX">
+							<ShortName>Footsteps_Enemies_A_3.wav</ShortName>
+							<Path>SFX\Footsteps_Enemies_A_3_10C4C929.wem</Path>
+						</File>
+						<File Id="509604822" Language="SFX">
+							<ShortName>Footsteps_Enemies_A_4.wav</ShortName>
+							<Path>SFX\Footsteps_Enemies_A_4_10C4C929.wem</Path>
+						</File>
+						<File Id="639313971" Language="SFX">
+							<ShortName>Footsteps_Enemies_A_1.wav</ShortName>
+							<Path>SFX\Footsteps_Enemies_A_1_10C4C929.wem</Path>
+						</File>
+						<File Id="1063476344" Language="SFX">
+							<ShortName>Footsteps_Enemies_A_5.wav</ShortName>
+							<Path>SFX\Footsteps_Enemies_A_5_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3865216745" Name="FootstepsPlayer" ObjectPath="\Events\Default Work Unit\FootstepsPlayer" DurationType="OneShot" DurationMin="1.226437" DurationMax="1.304375">
+					<IncludedMemoryFiles>
+						<File Id="152369639" Language="SFX">
+							<ShortName>Footsteps_Player_2.wav</ShortName>
+							<Path>SFX\Footsteps_Player_2_10C4C929.wem</Path>
+						</File>
+						<File Id="201673485" Language="SFX">
+							<ShortName>Footsteps_Player_1.wav</ShortName>
+							<Path>SFX\Footsteps_Player_1_10C4C929.wem</Path>
+						</File>
+						<File Id="232622653" Language="SFX">
+							<ShortName>Footsteps_Player_3.wav</ShortName>
+							<Path>SFX\Footsteps_Player_3_10C4C929.wem</Path>
+						</File>
+						<File Id="1042105654" Language="SFX">
+							<ShortName>Footsteps_Player_5.wav</ShortName>
+							<Path>SFX\Footsteps_Player_5_10C4C929.wem</Path>
+						</File>
+						<File Id="1047770942" Language="SFX">
+							<ShortName>Footsteps_Player_4.wav</ShortName>
+							<Path>SFX\Footsteps_Player_4_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3760814375" Name="Grill" ObjectPath="\Events\Default Work Unit\Grill" MaxAttenuation="17." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="834402619" Language="SFX">
+							<ShortName>Grill.wav</ShortName>
+							<Path>SFX\Grill_370B157C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3991942870" Name="Music" ObjectPath="\Events\Default Work Unit\Music" DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<IncludedMemoryFiles>
 						<File Id="277254803" Language="SFX">
 							<ShortName>mainTheme.wav</ShortName>
-							<Path>SFX\mainTheme_81238AE1.wem</Path>
+							<Path>SFX\mainTheme_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="643270054" Name="ShootFamas" ObjectPath="\Events\Default Work Unit\ShootFamas" DurationType="OneShot" DurationMin="0.065546" DurationMax="0.102355">
+					<IncludedMemoryFiles>
+						<File Id="45467557" Language="SFX">
+							<ShortName>RifleGunfire-004.wav</ShortName>
+							<Path>SFX\RifleGunfire-004_10C4C929.wem</Path>
+						</File>
+						<File Id="80193230" Language="SFX">
+							<ShortName>RifleEmptyMag-002.wav</ShortName>
+							<Path>SFX\RifleEmptyMag-002_10C4C929.wem</Path>
+						</File>
+						<File Id="98181527" Language="SFX">
+							<ShortName>RifleGunfire-003.wav</ShortName>
+							<Path>SFX\RifleGunfire-003_10C4C929.wem</Path>
+						</File>
+						<File Id="196164197" Language="SFX">
+							<ShortName>RifleEmptyMag-001.wav</ShortName>
+							<Path>SFX\RifleEmptyMag-001_10C4C929.wem</Path>
+						</File>
+						<File Id="409067037" Language="SFX">
+							<ShortName>RifleGunfire-001.wav</ShortName>
+							<Path>SFX\RifleGunfire-001_10C4C929.wem</Path>
+						</File>
+						<File Id="932633481" Language="SFX">
+							<ShortName>RifleGunfire-002.wav</ShortName>
+							<Path>SFX\RifleGunfire-002_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="2821460987" Name="Famas" ObjectPath="\Switches\Default Work Unit\Weapons\Famas"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="3097990443" Name="ShootSniper" ObjectPath="\Events\Default Work Unit\ShootSniper" DurationType="OneShot" DurationMin="0.08" DurationMax="1.157292">
+					<IncludedMemoryFiles>
+						<File Id="209719382" Language="SFX">
+							<ShortName>SniperGunfire-001.wav</ShortName>
+							<Path>SFX\SniperGunfire-001_10C4C929.wem</Path>
+						</File>
+						<File Id="211043125" Language="SFX">
+							<ShortName>SniperGunfire-003.wav</ShortName>
+							<Path>SFX\SniperGunfire-003_10C4C929.wem</Path>
+						</File>
+						<File Id="307801661" Language="SFX">
+							<ShortName>SniperEmptyMag-001.wav</ShortName>
+							<Path>SFX\SniperEmptyMag-001_10C4C929.wem</Path>
+						</File>
+						<File Id="785732627" Language="SFX">
+							<ShortName>SniperGunfire-002.wav</ShortName>
+							<Path>SFX\SniperGunfire-002_10C4C929.wem</Path>
+						</File>
+						<File Id="1009135126" Language="SFX">
+							<ShortName>SniperEmptyMag-002.wav</ShortName>
+							<Path>SFX\SniperEmptyMag-002_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="2550763292" Name="Sniper" ObjectPath="\Switches\Default Work Unit\Weapons\Sniper"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="3176895516" Name="ShootUzi" ObjectPath="\Events\Default Work Unit\ShootUzi" DurationType="OneShot" DurationMin="0.031479" DurationMax="0.085">
+					<IncludedMemoryFiles>
+						<File Id="263833320" Language="SFX">
+							<ShortName>UziEmptyMag-002.wav</ShortName>
+							<Path>SFX\UziEmptyMag-002_10C4C929.wem</Path>
+						</File>
+						<File Id="315054637" Language="SFX">
+							<ShortName>UziGunfire-002.wav</ShortName>
+							<Path>SFX\UziGunfire-002_10C4C929.wem</Path>
+						</File>
+						<File Id="450423694" Language="SFX">
+							<ShortName>UziGunfire-001.wav</ShortName>
+							<Path>SFX\UziGunfire-001_10C4C929.wem</Path>
+						</File>
+						<File Id="973734017" Language="SFX">
+							<ShortName>UziGunfire-004.wav</ShortName>
+							<Path>SFX\UziGunfire-004_10C4C929.wem</Path>
+						</File>
+						<File Id="979923448" Language="SFX">
+							<ShortName>UziGunfire-003.wav</ShortName>
+							<Path>SFX\UziGunfire-003_10C4C929.wem</Path>
+						</File>
+						<File Id="1067180262" Language="SFX">
+							<ShortName>UziEmptyMag-001.wav</ShortName>
+							<Path>SFX\UziEmptyMag-001_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="862615877" Name="Uzi" ObjectPath="\Switches\Default Work Unit\Weapons\Uzi"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="2936962349" Name="TurnPage" ObjectPath="\Events\Default Work Unit\TurnPage" DurationType="OneShot" DurationMin="1.416937" DurationMax="1.785229">
+					<IncludedMemoryFiles>
+						<File Id="169643596" Language="SFX">
+							<ShortName>UI_TurningPage.wav</ShortName>
+							<Path>SFX\UI_TurningPage_74B490CA.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="45467557" Language="SFX">
+					<ShortName>RifleGunfire-004.wav</ShortName>
+					<Path>SFX\RifleGunfire-004_10C4C929.wem</Path>
+				</File>
+				<File Id="80193230" Language="SFX">
+					<ShortName>RifleEmptyMag-002.wav</ShortName>
+					<Path>SFX\RifleEmptyMag-002_10C4C929.wem</Path>
+				</File>
+				<File Id="98181527" Language="SFX">
+					<ShortName>RifleGunfire-003.wav</ShortName>
+					<Path>SFX\RifleGunfire-003_10C4C929.wem</Path>
+				</File>
+				<File Id="152369639" Language="SFX">
+					<ShortName>Footsteps_Player_2.wav</ShortName>
+					<Path>SFX\Footsteps_Player_2_10C4C929.wem</Path>
+				</File>
+				<File Id="169562177" Language="SFX">
+					<ShortName>ConveyorBelt.wav</ShortName>
+					<Path>SFX\ConveyorBelt_57BE3351.wem</Path>
+				</File>
+				<File Id="169643596" Language="SFX">
+					<ShortName>UI_TurningPage.wav</ShortName>
+					<Path>SFX\UI_TurningPage_74B490CA.wem</Path>
+				</File>
+				<File Id="196164197" Language="SFX">
+					<ShortName>RifleEmptyMag-001.wav</ShortName>
+					<Path>SFX\RifleEmptyMag-001_10C4C929.wem</Path>
+				</File>
+				<File Id="201673485" Language="SFX">
+					<ShortName>Footsteps_Player_1.wav</ShortName>
+					<Path>SFX\Footsteps_Player_1_10C4C929.wem</Path>
+				</File>
+				<File Id="209719382" Language="SFX">
+					<ShortName>SniperGunfire-001.wav</ShortName>
+					<Path>SFX\SniperGunfire-001_10C4C929.wem</Path>
+				</File>
+				<File Id="211043125" Language="SFX">
+					<ShortName>SniperGunfire-003.wav</ShortName>
+					<Path>SFX\SniperGunfire-003_10C4C929.wem</Path>
+				</File>
+				<File Id="232622653" Language="SFX">
+					<ShortName>Footsteps_Player_3.wav</ShortName>
+					<Path>SFX\Footsteps_Player_3_10C4C929.wem</Path>
+				</File>
+				<File Id="263833320" Language="SFX">
+					<ShortName>UziEmptyMag-002.wav</ShortName>
+					<Path>SFX\UziEmptyMag-002_10C4C929.wem</Path>
+				</File>
+				<File Id="277254803" Language="SFX">
+					<ShortName>mainTheme.wav</ShortName>
+					<Path>SFX\mainTheme_D79FB2B7.wem</Path>
+				</File>
+				<File Id="307801661" Language="SFX">
+					<ShortName>SniperEmptyMag-001.wav</ShortName>
+					<Path>SFX\SniperEmptyMag-001_10C4C929.wem</Path>
+				</File>
+				<File Id="311343723" Language="SFX">
+					<ShortName>UI_ClickOn2.wav</ShortName>
+					<Path>SFX\UI_ClickOn2_6E1208F6.wem</Path>
+				</File>
+				<File Id="315054637" Language="SFX">
+					<ShortName>UziGunfire-002.wav</ShortName>
+					<Path>SFX\UziGunfire-002_10C4C929.wem</Path>
+				</File>
+				<File Id="328273585" Language="SFX">
+					<ShortName>Footsteps_Enemies_A_2.wav</ShortName>
+					<Path>SFX\Footsteps_Enemies_A_2_10C4C929.wem</Path>
+				</File>
+				<File Id="409067037" Language="SFX">
+					<ShortName>RifleGunfire-001.wav</ShortName>
+					<Path>SFX\RifleGunfire-001_10C4C929.wem</Path>
+				</File>
+				<File Id="419086052" Language="SFX">
+					<ShortName>Footsteps_Enemies_A_3.wav</ShortName>
+					<Path>SFX\Footsteps_Enemies_A_3_10C4C929.wem</Path>
+				</File>
+				<File Id="450423694" Language="SFX">
+					<ShortName>UziGunfire-001.wav</ShortName>
+					<Path>SFX\UziGunfire-001_10C4C929.wem</Path>
+				</File>
+				<File Id="480149809" Language="SFX">
+					<ShortName>romanticConversation.wav</ShortName>
+					<Path>SFX\romanticConversation_DBBDE2E2.wem</Path>
+				</File>
+				<File Id="509604822" Language="SFX">
+					<ShortName>Footsteps_Enemies_A_4.wav</ShortName>
+					<Path>SFX\Footsteps_Enemies_A_4_10C4C929.wem</Path>
+				</File>
+				<File Id="639313971" Language="SFX">
+					<ShortName>Footsteps_Enemies_A_1.wav</ShortName>
+					<Path>SFX\Footsteps_Enemies_A_1_10C4C929.wem</Path>
+				</File>
+				<File Id="785732627" Language="SFX">
+					<ShortName>SniperGunfire-002.wav</ShortName>
+					<Path>SFX\SniperGunfire-002_10C4C929.wem</Path>
+				</File>
+				<File Id="834402619" Language="SFX">
+					<ShortName>Grill.wav</ShortName>
+					<Path>SFX\Grill_370B157C.wem</Path>
+				</File>
+				<File Id="887801688" Language="SFX">
+					<ShortName>filmConversation.wav</ShortName>
+					<Path>SFX\filmConversation_35A4FCA7.wem</Path>
+				</File>
+				<File Id="932633481" Language="SFX">
+					<ShortName>RifleGunfire-002.wav</ShortName>
+					<Path>SFX\RifleGunfire-002_10C4C929.wem</Path>
+				</File>
+				<File Id="973734017" Language="SFX">
+					<ShortName>UziGunfire-004.wav</ShortName>
+					<Path>SFX\UziGunfire-004_10C4C929.wem</Path>
+				</File>
+				<File Id="979923448" Language="SFX">
+					<ShortName>UziGunfire-003.wav</ShortName>
+					<Path>SFX\UziGunfire-003_10C4C929.wem</Path>
+				</File>
+				<File Id="1009135126" Language="SFX">
+					<ShortName>SniperEmptyMag-002.wav</ShortName>
+					<Path>SFX\SniperEmptyMag-002_10C4C929.wem</Path>
+				</File>
+				<File Id="1042105654" Language="SFX">
+					<ShortName>Footsteps_Player_5.wav</ShortName>
+					<Path>SFX\Footsteps_Player_5_10C4C929.wem</Path>
+				</File>
+				<File Id="1047770942" Language="SFX">
+					<ShortName>Footsteps_Player_4.wav</ShortName>
+					<Path>SFX\Footsteps_Player_4_10C4C929.wem</Path>
+				</File>
+				<File Id="1063476344" Language="SFX">
+					<ShortName>Footsteps_Enemies_A_5.wav</ShortName>
+					<Path>SFX\Footsteps_Enemies_A_5_10C4C929.wem</Path>
+				</File>
+				<File Id="1067180262" Language="SFX">
+					<ShortName>UziEmptyMag-001.wav</ShortName>
+					<Path>SFX\UziEmptyMag-001_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+			<SwitchGroups>
+				<SwitchGroup Id="862615877" Name="Uzi" ObjectPath="\Switches\Default Work Unit\Weapons\Uzi" GUID="{EE8FB17D-F7BB-4DB3-8D8C-A42C51908DD6}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="2550763292" Name="Sniper" ObjectPath="\Switches\Default Work Unit\Weapons\Sniper" GUID="{1305F924-A73F-4EF7-BFE3-7059E57DE99A}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="2821460987" Name="Famas" ObjectPath="\Switches\Default Work Unit\Weapons\Famas" GUID="{FE4AA9EE-4804-485A-A5A3-CFAE316994CE}">
+					<Switches/>
+				</SwitchGroup>
+				<SwitchGroup Id="3677545409" Name="Weapons_ammo" ObjectPath="\Switches\Default Work Unit\Weapons_ammo" GUID="{7DB88A39-ECA8-4B24-B268-5E4AAA126ACC}">
+					<Switches>
+						<Switch Id="3354297748" Name="Empty" ObjectPath="\Switches\Default Work Unit\Weapons_ammo\Empty" GUID="{978DAA3E-DD4E-45AB-A77A-6800B6889F4A}"/>
+						<Switch Id="3620752402" Name="Loaded" ObjectPath="\Switches\Default Work Unit\Weapons_ammo\Loaded" GUID="{FCC9D247-759A-452B-AE52-73EF0DF0EB34}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

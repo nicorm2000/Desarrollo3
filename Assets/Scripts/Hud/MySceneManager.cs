@@ -5,6 +5,11 @@ public class MySceneManager : MonoBehaviour
 {
     [Header("Transition Dependencies")]
     [SerializeField] private Transitions increaseSizeOn;
+
+    [Header("Audio Manager")]
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private string click;
+
     private float timeToWait = 1f;
     private string sceneName = "Null";
 
@@ -13,6 +18,7 @@ public class MySceneManager : MonoBehaviour
         StartCoroutine(increaseSizeOn.ActiveTransition(timeToWait));
         StartCoroutine(increaseSizeOn.DisableTransition(timeToWait));
 
+        audioManager.PlaySound(click);
         Invoke("LoadScene", 1f);
     }
 
@@ -46,6 +52,7 @@ public class MySceneManager : MonoBehaviour
             UnityEditor.EditorApplication.isPlaying = false;
         }
 #endif
+        audioManager.PlaySound(click);
         Application.Quit();
     }
 
@@ -55,6 +62,7 @@ public class MySceneManager : MonoBehaviour
     /// <param name="link">The URL to open.</param>
     public void OpenURL(string link)
     {
+        audioManager.PlaySound(click);
         Application.OpenURL(link);
     }
 }
