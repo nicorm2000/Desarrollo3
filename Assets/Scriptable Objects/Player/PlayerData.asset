@@ -54,3 +54,5 @@ MonoBehaviour:
   isButtonPress: 0
   death: PlayerDeath
   damageHit: PlayerDamageHit
+  shopFall: ShopFallDown
+  pickUpWeapon: WeaponPickup

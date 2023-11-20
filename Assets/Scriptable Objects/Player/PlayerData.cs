@@ -70,6 +70,8 @@ public class PlayerData : ScriptableObject
     [Header("SFX")]
     public string death;
     public string damageHit;
+    public string shopFall;
+    public string pickUpWeapon;
 
     public void ResetPlayerStacks() 
     {

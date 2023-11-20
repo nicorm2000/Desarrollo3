@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelToShop : MonoBehaviour
@@ -11,6 +10,7 @@ public class LevelToShop : MonoBehaviour
 
     [Header("Player References")]
     [SerializeField] private GameObject player;
+    [SerializeField] private PlayerData playerData;
 
     [Header("Transition Dependencies")]
     [SerializeField] private Transitions increaseSizeOn;
@@ -25,6 +25,9 @@ public class LevelToShop : MonoBehaviour
 
     [Header("GameObjects to Deactivate")]
     [SerializeField] private GameObject basket;
+
+    [Header("Audio Manager")]
+    [SerializeField] AudioManager audioManager;
 
     private void Start()
     {
@@ -80,5 +83,10 @@ public class LevelToShop : MonoBehaviour
         isPlayerOnTeleportArea = false;
         basket.SetActive(false);
         teleportText.SetActive(false);
+
+        if (!AudioManager.muteSFX)
+        {
+            audioManager.PlaySound(playerData.shopFall);
+        }
     }
 }

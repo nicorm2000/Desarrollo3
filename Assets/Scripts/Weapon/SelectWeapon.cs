@@ -7,6 +7,9 @@ public class SelectWeapon : MonoBehaviour
     [SerializeField] private Transitions increaseSizeOn;
     [SerializeField] private Transitions increaseSizeOff;
 
+    [Header("Audio Manager")]
+    [SerializeField] AudioManager audioManager;
+
     private float transitonOnTime = 1f;
 
     [SerializeField] private GameObject levelSpawn;
@@ -54,6 +57,11 @@ public class SelectWeapon : MonoBehaviour
             StartCoroutine(increaseSizeOn.ActiveTransition(transitonOnTime));
             StartCoroutine(increaseSizeOn.DisableTransition(transitonOnTime));
             playerCanTeleport = true;
+        }
+
+        if (!AudioManager.muteSFX)
+        {
+            audioManager.PlaySound(playerData.pickUpWeapon);
         }
 
         StartCoroutine(PlayerTeleport(transitonOnTime));

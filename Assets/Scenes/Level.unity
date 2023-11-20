@@ -14700,6 +14700,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   increaseSizeOn: {fileID: 908161859}
   increaseSizeOff: {fileID: 908161860}
+  audioManager: {fileID: 1351502573}
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1183394189}
   changePlayerWeapon: {fileID: 2009772659}
@@ -15903,6 +15904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   increaseSizeOn: {fileID: 908161859}
   increaseSizeOff: {fileID: 908161860}
+  audioManager: {fileID: 1351502573}
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1183394189}
   changePlayerWeapon: {fileID: 2009772659}
@@ -17851,6 +17853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   increaseSizeOn: {fileID: 908161859}
   increaseSizeOff: {fileID: 908161860}
+  audioManager: {fileID: 1351502573}
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1183394189}
   changePlayerWeapon: {fileID: 2009772659}
@@ -28963,6 +28966,7 @@ MonoBehaviour:
   canTeleport: 0
   isPlayerOnTeleportArea: 0
   player: {fileID: 521703871}
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   increaseSizeOn: {fileID: 908161859}
   increaseSizeOff: {fileID: 908161860}
   spawnWeaponSelect: {fileID: 2079331785}
@@ -28970,6 +28974,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   basket: {fileID: 1674702628}
+  audioManager: {fileID: 1351502573}
 --- !u!4 &2082787385
 Transform:
   m_ObjectHideFlags: 0
