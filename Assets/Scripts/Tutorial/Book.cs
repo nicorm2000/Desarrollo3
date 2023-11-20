@@ -39,7 +39,7 @@ public class Book : MonoBehaviour
         {
             return;
         }
-        if (!AudioManager.mute)
+        if (!AudioManager.muteSFX)
         {
             audioManager.PlaySound(turnPage);
         }
@@ -70,7 +70,7 @@ public class Book : MonoBehaviour
             return;
         }
 
-        if (!AudioManager.mute)
+        if (!AudioManager.muteSFX)
         {
             audioManager.PlaySound(turnPage);
         }

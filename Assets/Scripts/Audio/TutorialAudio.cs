@@ -8,7 +8,7 @@ public class TutorialAudio : MonoBehaviour
 
     private void Start()
     {
-        if (!AudioManager.mute)
+        if (!AudioManager.muteSFX)
         {
             audioManager.PlaySound(tutorial);
         }

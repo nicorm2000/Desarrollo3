@@ -9,7 +9,7 @@ public class LoseAudio : MonoBehaviour
 
     private void Start()
     {
-        if (!AudioManager.mute)
+        if (!AudioManager.muteSFX)
         {
             audioManager.PlaySound(scream);
             audioManager.PlaySound(grill);

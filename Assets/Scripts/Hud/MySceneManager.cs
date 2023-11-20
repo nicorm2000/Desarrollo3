@@ -19,7 +19,7 @@ public class MySceneManager : MonoBehaviour
         StartCoroutine(increaseSizeOn.DisableTransition(timeToWait));
 
         audioManager.StopSounds();
-        if (!AudioManager.mute)
+        if (!AudioManager.muteSFX)
         {
             audioManager.PlaySound(click);
         }

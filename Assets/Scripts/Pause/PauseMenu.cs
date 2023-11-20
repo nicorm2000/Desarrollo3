@@ -32,7 +32,7 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void Resume()
     {
-        if (!AudioManager.mute)
+        if (!AudioManager.muteSFX)
         {
             audioManager.PlaySound(click);
         }
@@ -48,7 +48,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (!shop.isPopUpActive)
         {
-            if (!AudioManager.mute)
+            if (!AudioManager.muteSFX)
             {
                 audioManager.PlaySound(click);
             }
@@ -77,7 +77,7 @@ public class PauseMenu : MonoBehaviour
             EditorApplication.isPlaying = false;
         }
 #endif
-        if (!AudioManager.mute)
+        if (!AudioManager.muteSFX)
         {
             audioManager.PlaySound(click);
         }
@@ -106,7 +106,7 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void ActivatePauseWindow()
     {
-        if (!AudioManager.mute)
+        if (!AudioManager.muteSFX)
         {
             audioManager.PlaySound(click);
         }
@@ -121,7 +121,7 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void ActivateOptionsWindow()
     {
-        if (!AudioManager.mute)
+        if (!AudioManager.muteSFX)
         {
             audioManager.PlaySound(click);
         }

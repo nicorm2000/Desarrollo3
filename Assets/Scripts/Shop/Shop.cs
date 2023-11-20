@@ -42,7 +42,7 @@ public class Shop : MonoBehaviour
     /// </summary>
     public void DeactivatePopUp()
     {
-        if (!AudioManager.mute)
+        if (!AudioManager.muteSFX)
         {
             audioManager.PlaySound(click);
         }

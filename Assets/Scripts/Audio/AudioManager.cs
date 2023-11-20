@@ -2,10 +2,16 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static bool mute = false;
+    public static bool muteSFX = false;
+    public static bool muteMusic = false;
     public bool isPlaying = false;
 
     public void PlaySound(string audioEvent)
+    {
+        AkSoundEngine.PostEvent(audioEvent, gameObject);
+    }
+
+    public void PlaySound(string audioEvent, GameObject gameObject)
     {
         AkSoundEngine.PostEvent(audioEvent, gameObject);
     }
@@ -17,8 +23,8 @@ public class AudioManager : MonoBehaviour
 
     public void Mute()
     {
-        mute = !mute;
-        Debug.Log(mute);
+        muteSFX = !muteSFX;
+        Debug.Log(muteSFX);
 
         StopSounds();
 

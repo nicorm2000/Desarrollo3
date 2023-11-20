@@ -93,7 +93,7 @@ public class Abilities : MonoBehaviour
         {
             if (!isCooldownLaser)
             {
-                if (!AudioManager.mute)
+                if (!AudioManager.muteSFX)
                 {
                     audioManager.PlaySound(laser);
                 }
@@ -138,7 +138,7 @@ public class Abilities : MonoBehaviour
         {
             if (!isCooldownSlower)
             {
-                if (!AudioManager.mute)
+                if (!AudioManager.muteSFX)
                 {
                     audioManager.PlaySound(splat);
                 }
@@ -182,7 +182,7 @@ public class Abilities : MonoBehaviour
     {
         if (dashCoolDownCounter <= 0 && dashCounter <= 0)
         {
-            if (!AudioManager.mute)
+            if (!AudioManager.muteSFX)
             {
                 audioManager.PlaySound(roll);
             }

@@ -9,7 +9,7 @@ public class WinAudio : MonoBehaviour
 
     private void Start()
     {
-        if (!AudioManager.mute)
+        if (!AudioManager.muteSFX)
         {
             audioManager.PlaySound(laugh);
             audioManager.PlaySound(grill);
