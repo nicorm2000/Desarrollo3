@@ -8,6 +8,9 @@ public class CreditsAudio : MonoBehaviour
 
     private void Start()
     {
-        audioManager.PlaySound(intro);
+        if (!AudioManager.mute)
+        { 
+            audioManager.PlaySound(intro);
+        }
     }
 }

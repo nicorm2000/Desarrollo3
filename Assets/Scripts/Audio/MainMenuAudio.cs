@@ -8,6 +8,9 @@ public class MainMenuAudio : MonoBehaviour
 
     private void Start()
     {
-        audioManager.PlaySound(intro);
+        if (!AudioManager.mute)
+        {
+            audioManager.PlaySound(intro);
+        }
     }
 }
