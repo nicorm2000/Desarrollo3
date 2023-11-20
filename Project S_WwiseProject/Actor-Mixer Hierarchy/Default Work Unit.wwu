@@ -337,6 +337,35 @@
 								<ActiveSource Name="Grill" ID="{AA3FC06E-9F80-4CC7-BEA9-82C38CB91150}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="ShopFallDown" ID="{AF8F74DD-D06A-4B04-9041-D433563C3A60}" ShortID="823284979">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ShopFallDown" ID="{08FA2869-E6F3-4B44-909A-267C5B97FF37}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.485121457489875"/>
+										<Property Name="FadeOutShape" Type="int16" Value="2"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.634700573549255"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ShopFallDown.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1003545355"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="ShopFallDown" ID="{08FA2869-E6F3-4B44-909A-267C5B97FF37}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Footsteps" ID="{16C74E90-7FC4-4247-AFFC-FE1CD9B07EF8}" ShortID="938539900">
@@ -1327,6 +1356,34 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
+						<Sound Name="WeaponPickup" ID="{83D865D5-FB67-4BF2-909A-78FB6E6489BD}" ShortID="591689769">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WeaponPickup" ID="{D2FEBFB5-E5B5-48B0-AD75-B81AE9BF16F5}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.117587044534413"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.133117408906883"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>WeaponPickup.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="13970989"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="WeaponPickup" ID="{D2FEBFB5-E5B5-48B0-AD75-B81AE9BF16F5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{5337D090-A0A7-41CD-829A-04A6A495B03D}" ShortID="157516378">
@@ -1592,6 +1649,500 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="PlayerSkillSplat" ID="{3798D831-4D56-4F29-9D0A-67EB51466D3D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemy" ID="{563F32AD-E82A-40EC-89E4-7A5D223CD3A7}" ShortID="94141935">
+					<ChildrenList>
+						<Sound Name="OnigiriDeath" ID="{120A3B7E-F8F9-4103-B4AE-18CC7F5A3960}" ShortID="391240708">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<Custom>
+										<Attenuation Name="Attenuation (Custom)" ID="{97660E71-69F1-4B20-BE6F-33E9811E823B}" ShortID="814270903">
+											<PropertyList>
+												<Property Name="RadiusMax" Type="Real64" Value="20"/>
+											</PropertyList>
+											<CurveUsageInfoList>
+												<VolumeDryUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="VolumeDry" ID="{99CBADFD-200E-4121-86AA-8FA78A05A824}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>20</XPos>
+																	<YPos>-200</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</VolumeDryUsage>
+												<VolumeWetGameUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetGameUsage>
+												<VolumeWetUserUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetUserUsage>
+												<LowPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</LowPassFilterUsage>
+												<HighPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</HighPassFilterUsage>
+												<SpreadUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</SpreadUsage>
+												<FocusUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</FocusUsage>
+											</CurveUsageInfoList>
+										</Attenuation>
+									</Custom>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="OnigiriDeath" ID="{43801253-30DA-4B1E-AC94-6B77645F0CCC}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.790824083445795"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>OnigiriDeath.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="45999561"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="OnigiriDeath" ID="{43801253-30DA-4B1E-AC94-6B77645F0CCC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="OnigiriGrunt1" ID="{50C16AB5-192C-47C4-9DF0-48C4A63A35DD}" ShortID="271831752">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{59B7C43A-6344-42BC-AB64-C9B1DD042874}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{406EB9FB-A05A-4C3D-AD6A-62091BB1CB31}">
+												<PropertyList>
+													<Property Name="Min" Type="Real64" Value="-20"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<Custom>
+										<Attenuation Name="Attenuation (Custom)" ID="{D8E0202B-F413-495F-BD2E-ABDC6B6925AD}" ShortID="466089154">
+											<PropertyList>
+												<Property Name="RadiusMax" Type="Real64" Value="20"/>
+											</PropertyList>
+											<CurveUsageInfoList>
+												<VolumeDryUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="VolumeDry" ID="{D461A520-D1A8-441C-9DC3-975D44FB0463}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>20</XPos>
+																	<YPos>-200</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</VolumeDryUsage>
+												<VolumeWetGameUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetGameUsage>
+												<VolumeWetUserUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetUserUsage>
+												<LowPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</LowPassFilterUsage>
+												<HighPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</HighPassFilterUsage>
+												<SpreadUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</SpreadUsage>
+												<FocusUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</FocusUsage>
+											</CurveUsageInfoList>
+										</Attenuation>
+									</Custom>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="OnigiriGrunt1" ID="{D3F77191-3FDE-4724-8C53-3E5E2ED131F1}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.495645833333334"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>OnigiriGrunt1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="657552065"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="OnigiriGrunt1" ID="{D3F77191-3FDE-4724-8C53-3E5E2ED131F1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IkuraDeath" ID="{3B9B8F8E-CDF4-4639-B746-8BA8AC8D3396}" ShortID="617165650">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<Custom>
+										<Attenuation Name="Attenuation (Custom)" ID="{C9D01475-31A5-43C6-AF51-1966A5213658}" ShortID="900977932">
+											<PropertyList>
+												<Property Name="RadiusMax" Type="Real64" Value="20"/>
+											</PropertyList>
+											<CurveUsageInfoList>
+												<VolumeDryUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="VolumeDry" ID="{E4F05203-A8B8-4CF3-BA12-7760535C3B74}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>20</XPos>
+																	<YPos>-200</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</VolumeDryUsage>
+												<VolumeWetGameUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetGameUsage>
+												<VolumeWetUserUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetUserUsage>
+												<LowPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</LowPassFilterUsage>
+												<HighPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</HighPassFilterUsage>
+												<SpreadUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</SpreadUsage>
+												<FocusUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</FocusUsage>
+											</CurveUsageInfoList>
+										</Attenuation>
+									</Custom>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SushiRollDeath2" ID="{B421467F-FED4-4FE6-AB5F-20485FCA2A69}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.376465305892937"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.402809379217274"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>SushiRollDeath2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="283542091"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SushiRollDeath2" ID="{B421467F-FED4-4FE6-AB5F-20485FCA2A69}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FutomakiDeath" ID="{05C7673E-CB38-4DC0-8189-06B86D89687E}" ShortID="981815403">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<Custom>
+										<Attenuation Name="Attenuation (Custom)" ID="{6241DCA0-AF67-4789-9E38-F952239C07AD}" ShortID="730579385">
+											<PropertyList>
+												<Property Name="RadiusMax" Type="Real64" Value="20"/>
+											</PropertyList>
+											<CurveUsageInfoList>
+												<VolumeDryUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="VolumeDry" ID="{41761BF2-F85D-4DF4-9078-FC32B343340F}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>20</XPos>
+																	<YPos>-200</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</VolumeDryUsage>
+												<VolumeWetGameUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetGameUsage>
+												<VolumeWetUserUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetUserUsage>
+												<LowPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</LowPassFilterUsage>
+												<HighPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</HighPassFilterUsage>
+												<SpreadUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</SpreadUsage>
+												<FocusUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</FocusUsage>
+											</CurveUsageInfoList>
+										</Attenuation>
+									</Custom>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SushiRollDeath" ID="{287C15EB-D0E2-4E7F-A669-945EDA7CE1F9}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.473337944219523"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>SushiRollDeath.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="484635598"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SushiRollDeath" ID="{287C15EB-D0E2-4E7F-A669-945EDA7CE1F9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IkuraProjectile" ID="{9A8EC36D-3774-4E79-A9E0-F664D9BCE855}" ShortID="700208225">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<Custom>
+										<Attenuation Name="Attenuation (Custom)" ID="{E4ED5F2A-3BF1-429D-AF29-8119E9D5107B}" ShortID="962268996">
+											<PropertyList>
+												<Property Name="RadiusMax" Type="Real64" Value="20"/>
+											</PropertyList>
+											<CurveUsageInfoList>
+												<VolumeDryUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="VolumeDry" ID="{944DB8EC-577F-4921-BFD5-8F434405C4C5}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>20</XPos>
+																	<YPos>-200</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</VolumeDryUsage>
+												<VolumeWetGameUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetGameUsage>
+												<VolumeWetUserUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetUserUsage>
+												<LowPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</LowPassFilterUsage>
+												<HighPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</HighPassFilterUsage>
+												<SpreadUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</SpreadUsage>
+												<FocusUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</FocusUsage>
+											</CurveUsageInfoList>
+										</Attenuation>
+									</Custom>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SushiRollProjectile" ID="{04EA1C37-9549-400B-8F5E-EAD57789086F}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.203571749887539"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.203571749887539"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>SushiRollProjectile.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="778056077"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SushiRollProjectile" ID="{04EA1C37-9549-400B-8F5E-EAD57789086F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Player" ID="{52B7E77D-4858-4CE1-9B51-AD5A1743E651}" ShortID="1007940730">
+					<ChildrenList>
+						<Sound Name="PlayerDamageHit" ID="{1AC92D6B-4DB1-49E8-9257-CD9F3440B481}" ShortID="623049849">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="PlayerDamageHit2" ID="{5486AB8E-D2FF-4E9D-AB84-F5A332EA4775}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.443578216374269"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>PlayerDamageHit2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="831139886"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="PlayerDamageHit2" ID="{5486AB8E-D2FF-4E9D-AB84-F5A332EA4775}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="PlayerDeath" ID="{D95889EF-E67E-4646-B5C3-83AB204EF09F}" ShortID="809287855">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="PlayerDeath" ID="{D550FB16-1EB3-4712-A83D-DA94191CF963}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.47998791048133"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.50481992240216"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>PlayerDeath.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="708636483"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="PlayerDeath" ID="{D550FB16-1EB3-4712-A83D-DA94191CF963}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

@@ -15,6 +15,8 @@ public class AIShooterChase : MonoBehaviour
 
     public float chaseSpeed;
 
+    private AudioManager _audioManager;
+
     [Header("Referemces")]
     [SerializeField] private GameObject bullet;
     public GameObject firePoint;
@@ -33,6 +35,7 @@ public class AIShooterChase : MonoBehaviour
 
     private void Start()
     {
+        _audioManager = GetComponent<AudioManager>();
         nextFireTime = enemyData.fireRate;
 
         enemyData.bullet = bullet;
@@ -120,6 +123,10 @@ public class AIShooterChase : MonoBehaviour
 
     private void Shoot()
     {
+        if (!AudioManager.muteSFX)
+        {
+            _audioManager.PlaySound(enemyData.projectile);
+        }
         enemyData.bullet = Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
         nextFireTime = enemyData.fireRate;
     }

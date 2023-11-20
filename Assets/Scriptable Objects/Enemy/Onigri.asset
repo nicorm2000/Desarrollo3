@@ -38,3 +38,5 @@ MonoBehaviour:
   _triggerEffect: {fileID: 0}
   _spriteRenderer: {fileID: 0}
   enterEnemy: 0
+  death: OnigiriDeath
+  projectile: 

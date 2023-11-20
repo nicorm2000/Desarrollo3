@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cf5c79c482a364289b65bc639aa2a1, type: 3}
   m_Name: Nigiri
   m_EditorClassIdentifier: 
+  lastHorizontalVector: 0
+  lastVerticalVector: 0
+  movementDirection: {x: 0, y: 0}
   model: {fileID: 1779284332624663121, guid: 1d26883000583fa4d95ee31b544ed7ed, type: 3}
   animator: {fileID: 0}
   dropData: {fileID: 11400000, guid: 66a444bfdb8c109488e350b7074f8776, type: 2}
@@ -27,9 +30,13 @@ MonoBehaviour:
   isMelee: 1
   shootDistance: 5
   fireRate: 1
-  nextFireTime: 0
+  lifeSpawn: 0
+  bulletSpeed: 0
   bullet: {fileID: 0}
-  firePoint: {fileID: 0}
   health: 3
+  isDead: 0
   _triggerEffect: {fileID: 0}
   _spriteRenderer: {fileID: 0}
+  enterEnemy: 0
+  death: Death
+  projectile: 

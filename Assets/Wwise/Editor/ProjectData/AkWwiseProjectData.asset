@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 3af410611e2c92469af731b5137fe77a
     GuidInternal: 
-    m_lastTime: -8585011205703689574
+    m_lastTime: -8585011184671932841
     List:
     - name: Click
       guid: 29fd55656c568345b13d2c4c3e9a71e3
@@ -249,6 +249,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.304375
       minDuration: 1.226437
+    - name: FutomakiDeath
+      guid: 81c779833791b3489c4a76b3588dc39c
+      id: 2032173003
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: FutomakiDeath
+        ObjectType: 3
+        guid: 81c779833791b3489c4a76b3588dc39c
+      Path: Events\Default Work Unit\FutomakiDeath
+      maxAttenuation: 20
+      maxDuration: 0.689083
+      minDuration: 0.689083
     - name: Grill
       guid: 825aed54aba9c841b0138764b4dc6efa
       id: 3760814375
@@ -266,6 +283,40 @@ MonoBehaviour:
       maxAttenuation: 17
       maxDuration: -1
       minDuration: -1
+    - name: IkuraDeath
+      guid: 9ccaf74cabf4e047bae8231d2af39e7b
+      id: 3392074037
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: IkuraDeath
+        ObjectType: 3
+        guid: 9ccaf74cabf4e047bae8231d2af39e7b
+      Path: Events\Default Work Unit\IkuraDeath
+      maxAttenuation: 20
+      maxDuration: 0.402809
+      minDuration: 0.402809
+    - name: IkuraProjectile
+      guid: 061b08b5f2f6f343800a4ab292b5bed0
+      id: 3355135784
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: IkuraProjectile
+        ObjectType: 3
+        guid: 061b08b5f2f6f343800a4ab292b5bed0
+      Path: Events\Default Work Unit\IkuraProjectile
+      maxAttenuation: 20
+      maxDuration: 0.108095
+      minDuration: 0.108095
     - name: Intro
       guid: 7928ff60e1e4ac4e8755157df840299e
       id: 1125500713
@@ -334,6 +385,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: OnigiriDeath
+      guid: 7b5be7d42c09b14280bc65b72260fbed
+      id: 1702629134
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: OnigiriDeath
+        ObjectType: 3
+        guid: 7b5be7d42c09b14280bc65b72260fbed
+      Path: Events\Default Work Unit\OnigiriDeath
+      maxAttenuation: 20
+      maxDuration: 1.026271
+      minDuration: 1.026271
+    - name: PlayerDamageHit
+      guid: 56b31a0615aa0744b4c66c83a8f17ebd
+      id: 2062279300
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: PlayerDamageHit
+        ObjectType: 3
+        guid: 56b31a0615aa0744b4c66c83a8f17ebd
+      Path: Events\Default Work Unit\PlayerDamageHit
+      maxAttenuation: 0
+      maxDuration: 0.506458
+      minDuration: 0.506458
+    - name: PlayerDeath
+      guid: 8dab24367dfbb541988e903df48b58b3
+      id: 1656947812
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: PlayerDeath
+        ObjectType: 3
+        guid: 8dab24367dfbb541988e903df48b58b3
+      Path: Events\Default Work Unit\PlayerDeath
+      maxAttenuation: 0
+      maxDuration: 1.50482
+      minDuration: 1.50482
     - name: Roll
       guid: c30b99300860f641a2760f1e30c95810
       id: 2026920480
@@ -436,6 +538,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.085
       minDuration: 0.031479
+    - name: ShopFallDown
+      guid: 405a98a8ce4c1748ad78e5c0d6b39905
+      id: 3877889958
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: ShopFallDown
+        ObjectType: 3
+        guid: 405a98a8ce4c1748ad78e5c0d6b39905
+      Path: Events\Default Work Unit\ShopFallDown
+      maxAttenuation: 0
+      maxDuration: 0.634701
+      minDuration: 0.634701
     - name: Splat
       guid: 0cf0b7c5aac43f46bb1097958cf80c09
       id: 236860119
@@ -487,6 +606,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: WeaponPickup
+      guid: 4d5db0f80c9f4841812aebfa15fa4b8b
+      id: 2883364373
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: WeaponPickup
+        ObjectType: 3
+        guid: 4d5db0f80c9f4841812aebfa15fa4b8b
+      Path: Events\Default Work Unit\WeaponPickup
+      maxAttenuation: 0
+      maxDuration: 0.822
+      minDuration: 0.822
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

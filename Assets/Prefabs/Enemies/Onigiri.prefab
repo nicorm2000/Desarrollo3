@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 4121518359325872364}
   - component: {fileID: -3145617446936746343}
   - component: {fileID: 7636271272611184411}
+  - component: {fileID: -858704301949087891}
   m_Layer: 8
   m_Name: Onigiri
   m_TagString: Enemy
@@ -390,6 +391,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: bd7b1b114d37eda4888d68aff28b3e28, type: 2}
   playerSprite: {fileID: 7699837152467073221}
+--- !u!114 &-858704301949087891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779284332624663121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b446fc0bba2e9694199584e3e1cfb6ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlaying: 0
 --- !u!1 &5253802654078565013
 GameObject:
   m_ObjectHideFlags: 0

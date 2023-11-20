@@ -32,10 +32,8 @@ public class ZoneTriggeredEffect : MonoBehaviour
             spriteRenderer.color = fadedColor;
 
             elapsedTime = Time.time - startTime;
-            Debug.Log(elapsedTime);
             yield return null;
         }
-        Debug.Log("Coroutine completed");
         Destroy(splashObject);
     }
 }

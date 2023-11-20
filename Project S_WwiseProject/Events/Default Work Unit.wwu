@@ -480,6 +480,174 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="WeaponPickup" ID="{F8B05D4D-9F0C-4148-812A-EBFA15FA4B8B}">
+					<ChildrenList>
+						<Action Name="" ID="{134F4E4F-7B92-407C-9438-2C3E53A73BFA}" ShortID="1057800801">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WeaponPickup" ID="{83D865D5-FB67-4BF2-909A-78FB6E6489BD}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6C4B47CE-37EF-4F89-B578-1C8A72B87D4A}" ShortID="25217271">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WeaponPickup" ID="{83D865D5-FB67-4BF2-909A-78FB6E6489BD}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ShopFallDown" ID="{A8985A40-4CCE-4817-AD78-E5C0D6B39905}">
+					<ChildrenList>
+						<Action Name="" ID="{2FAEEA08-B019-4DBC-8AE5-342DB5DDC472}" ShortID="125247288">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ShopFallDown" ID="{AF8F74DD-D06A-4B04-9041-D433563C3A60}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6DE0403E-B093-4F33-A4E7-B947EB35C866}" ShortID="551544919">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ShopFallDown" ID="{AF8F74DD-D06A-4B04-9041-D433563C3A60}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="OnigiriDeath" ID="{D4E75B7B-092C-42B1-80BC-65B72260FBED}">
+					<ChildrenList>
+						<Action Name="" ID="{601CB6FF-5E4F-4936-94BD-E7B93B9BCAD7}" ShortID="616135954">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OnigiriDeath" ID="{120A3B7E-F8F9-4103-B4AE-18CC7F5A3960}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B65E6741-19FA-4170-BF42-33C4FBD4A854}" ShortID="784392219">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OnigiriDeath" ID="{120A3B7E-F8F9-4103-B4AE-18CC7F5A3960}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FutomakiDeath" ID="{8379C781-9137-48B3-9C4A-76B3588DC39C}">
+					<ChildrenList>
+						<Action Name="" ID="{2792E533-5856-4DE7-B24B-C59E9F4F6917}" ShortID="67032639">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FutomakiDeath" ID="{05C7673E-CB38-4DC0-8189-06B86D89687E}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AE0365B3-7ACB-48C8-A94F-A32150DB6244}" ShortID="351444250">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FutomakiDeath" ID="{05C7673E-CB38-4DC0-8189-06B86D89687E}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="IkuraDeath" ID="{4CF7CA9C-F4AB-47E0-BAE8-231D2AF39E7B}">
+					<ChildrenList>
+						<Action Name="" ID="{92E71C59-5EC4-4BE1-A79F-75160E23AA91}" ShortID="970031501">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="IkuraDeath" ID="{3B9B8F8E-CDF4-4639-B746-8BA8AC8D3396}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{44248E8D-043D-4D26-9572-781D582E1F2A}" ShortID="259743951">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="IkuraDeath" ID="{3B9B8F8E-CDF4-4639-B746-8BA8AC8D3396}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="IkuraProjectile" ID="{B5081B06-F6F2-43F3-800A-4AB292B5BED0}">
+					<ChildrenList>
+						<Action Name="" ID="{F1286950-FF0A-46FD-9631-4E480F25F7A8}" ShortID="15810360">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="IkuraProjectile" ID="{9A8EC36D-3774-4E79-A9E0-F664D9BCE855}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6F4439FF-E9F7-42BD-8758-C6227BE05A0A}" ShortID="902785500">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="IkuraProjectile" ID="{9A8EC36D-3774-4E79-A9E0-F664D9BCE855}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PlayerDamageHit" ID="{061AB356-AA15-4407-B4C6-6C83A8F17EBD}">
+					<ChildrenList>
+						<Action Name="" ID="{5C027934-6A9B-4AF1-B9B9-7EC2A26BCABE}" ShortID="789769538">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerDamageHit" ID="{1AC92D6B-4DB1-49E8-9257-CD9F3440B481}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{98173380-8903-48FB-BCD7-74241117BF4F}" ShortID="929607574">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerDamageHit" ID="{1AC92D6B-4DB1-49E8-9257-CD9F3440B481}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PlayerDeath" ID="{3624AB8D-FB7D-41B5-988E-903DF48B58B3}">
+					<ChildrenList>
+						<Action Name="" ID="{CEB8EEC1-3202-4FED-BE3E-7C1965BF562A}" ShortID="866540580">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerDeath" ID="{D95889EF-E67E-4646-B5C3-83AB204EF09F}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2E2CDE3D-4C30-410C-BC74-E20D1B6A02D8}" ShortID="621173429">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerDeath" ID="{D95889EF-E67E-4646-B5C3-83AB204EF09F}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

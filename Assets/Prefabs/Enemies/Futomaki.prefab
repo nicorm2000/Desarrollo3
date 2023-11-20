@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 2919823242023150736}
   - component: {fileID: -3042730842400570739}
   - component: {fileID: -7042003597646239741}
+  - component: {fileID: -3517702907615306706}
   m_Layer: 8
   m_Name: Futomaki
   m_TagString: Enemy
@@ -86,6 +87,7 @@ MonoBehaviour:
   objectLifespanOffset: 0.5
   hitMarker: {fileID: -2754815290973936051}
   maxTime: 0.5
+  audioManager: {fileID: 0}
 --- !u!212 &7699837152467073221
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -306,6 +308,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: f43bbcc79f28a0943a0752730dd121af, type: 2}
   playerSprite: {fileID: 7699837152467073221}
+--- !u!114 &-3517702907615306706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779284332624663121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b446fc0bba2e9694199584e3e1cfb6ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlaying: 0
 --- !u!1 &6838947366498731248
 GameObject:
   m_ObjectHideFlags: 0

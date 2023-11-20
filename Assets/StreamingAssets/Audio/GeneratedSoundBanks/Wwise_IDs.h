@@ -22,20 +22,28 @@ namespace AK
         static const AkUniqueID FILMCONVERSATION = 2129816966U;
         static const AkUniqueID FOOTSTEPSENEMIES = 443235554U;
         static const AkUniqueID FOOTSTEPSPLAYER = 3865216745U;
+        static const AkUniqueID FUTOMAKIDEATH = 2032173003U;
         static const AkUniqueID GRILL = 3760814375U;
+        static const AkUniqueID IKURADEATH = 3392074037U;
+        static const AkUniqueID IKURAPROJECTILE = 3355135784U;
         static const AkUniqueID INTRO = 1125500713U;
         static const AkUniqueID LASER = 3982605422U;
         static const AkUniqueID LAUGH = 4016454680U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID ONIGIRIDEATH = 1702629134U;
+        static const AkUniqueID PLAYERDAMAGEHIT = 2062279300U;
+        static const AkUniqueID PLAYERDEATH = 1656947812U;
         static const AkUniqueID ROLL = 2026920480U;
         static const AkUniqueID ROMANTICCONVERSATION = 1242093309U;
         static const AkUniqueID SCREAM = 737767022U;
         static const AkUniqueID SHOOTFAMAS = 643270054U;
         static const AkUniqueID SHOOTSNIPER = 3097990443U;
         static const AkUniqueID SHOOTUZI = 3176895516U;
+        static const AkUniqueID SHOPFALLDOWN = 3877889958U;
         static const AkUniqueID SPLAT = 236860119U;
         static const AkUniqueID TURNPAGE = 2936962349U;
         static const AkUniqueID TUTORIAL = 3762955427U;
+        static const AkUniqueID WEAPONPICKUP = 2883364373U;
     } // namespace EVENTS
 
     namespace SWITCHES

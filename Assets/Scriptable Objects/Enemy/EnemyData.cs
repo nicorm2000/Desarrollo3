@@ -47,4 +47,8 @@ public class EnemyData : ScriptableObject
 
     [Header("FireDamage")]
     public bool enterEnemy = false;
+
+    [Header("SFX")]
+    public string death;
+    public string projectile;
 }
