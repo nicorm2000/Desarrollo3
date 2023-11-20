@@ -10,6 +10,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1687970961	ConveyorBelt			\Default Work Unit\ConveyorBelt	
 	2026920480	Roll			\Default Work Unit\Roll	
 	2129816966	FilmConversation			\Default Work Unit\FilmConversation	
+	2201105581	Credits			\Default Work Unit\Credits	
 	2936962349	TurnPage			\Default Work Unit\TurnPage	
 	3097990443	ShootSniper			\Default Work Unit\ShootSniper	
 	3176895516	ShootUzi			\Default Work Unit\ShootUzi	
@@ -46,7 +47,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	211043125	SniperGunfire-003	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\SniperGunfire-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Loaded\SniperGunfire-003		99974
 	232622653	Footsteps_Player_3	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Footsteps_Player_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Player\Footsteps_Player_3		124216
 	263833320	UziEmptyMag-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\UziEmptyMag-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Empty\UziEmptyMag-002		6108
-	277254803	mainTheme	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\mainTheme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\IntroMainTheme\mainTheme		25872064
+	277254803	mainTheme	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\mainTheme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MainTheme1\mainTheme		25872064
 	287055274	Cooldown	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\SniperCooldown_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Cooldown		984704
 	307801661	SniperEmptyMag-001	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\SniperEmptyMag-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Empty\SniperEmptyMag-001		15424
 	311343723	UI_ClickOn2	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\UI_ClickOn2_6E1208F6.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_ClickOn2		19344
@@ -58,6 +59,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	480149809	romanticConversation	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\romanticConversation_DBBDE2E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PeopleTalking\romanticConversation		7813424
 	483170663	Cooldown	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\RifleCooldown_3620EBCC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Cooldown		984912
 	509604822	Footsteps_Enemies_A_4	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Footsteps_Enemies_A_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Enemy\Footsteps_Enemies_A_4		115306
+	561579131	creditos	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\creditos_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Credits\creditos\creditos		4096064
 	639313971	Footsteps_Enemies_A_1	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Footsteps_Enemies_A_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Enemy\Footsteps_Enemies_A_1		116376
 	785732627	SniperGunfire-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\SniperGunfire-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Loaded\SniperGunfire-002		103724
 	834402619	Grill	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Grill_370B157C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Grill		5961080

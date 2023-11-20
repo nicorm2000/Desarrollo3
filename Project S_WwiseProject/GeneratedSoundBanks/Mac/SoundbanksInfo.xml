@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2052517703">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3027140758">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -58,6 +58,14 @@
 						<File Id="51529185" Language="SFX">
 							<ShortName>UziCooldown.wav</ShortName>
 							<Path>SFX\UziCooldown_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2201105581" Name="Credits" ObjectPath="\Events\Default Work Unit\Credits" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="561579131" Language="SFX">
+							<ShortName>creditos.wav</ShortName>
+							<Path>SFX\creditos_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -395,6 +403,10 @@
 				<File Id="509604822" Language="SFX">
 					<ShortName>Footsteps_Enemies_A_4.wav</ShortName>
 					<Path>SFX\Footsteps_Enemies_A_4_10C4C929.wem</Path>
+				</File>
+				<File Id="561579131" Language="SFX">
+					<ShortName>creditos.wav</ShortName>
+					<Path>SFX\creditos_D79FB2B7.wem</Path>
 				</File>
 				<File Id="639313971" Language="SFX">
 					<ShortName>Footsteps_Enemies_A_1.wav</ShortName>

@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID COOLDOWNFAMAS = 333089542U;
         static const AkUniqueID COOLDOWNSNIPER = 4259908363U;
         static const AkUniqueID COOLDOWNUZI = 3686178940U;
+        static const AkUniqueID CREDITS = 2201105581U;
         static const AkUniqueID FILMCONVERSATION = 2129816966U;
         static const AkUniqueID FOOTSTEPSENEMIES = 443235554U;
         static const AkUniqueID FOOTSTEPSPLAYER = 3865216745U;

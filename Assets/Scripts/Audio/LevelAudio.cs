@@ -13,6 +13,7 @@ public class LevelAudio : MonoBehaviour
     [SerializeField] private GameObject grillRGO;
     [SerializeField] private string conveyorBelt;
     [SerializeField] private GameObject[] conveyorBeltGO;
+    [SerializeField] private string music;
 
     private void Start()
     {
@@ -26,6 +27,7 @@ public class LevelAudio : MonoBehaviour
             {
                 audioManager.PlaySound(conveyorBelt, conveyorBeltGO[i]);
             }
+            audioManager.PlaySound(music);
         }
     }
 

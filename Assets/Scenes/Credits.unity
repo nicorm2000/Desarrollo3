@@ -2076,9 +2076,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ceadabfdfd3f084eba9e6994905a577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muteManager: {fileID: 0}
   audioManager: {fileID: 1589391703}
-  intro: Intro
+  credits: Credits
 --- !u!1 &1105900307
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,6 +3314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b446fc0bba2e9694199584e3e1cfb6ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlaying: 0
 --- !u!1 &1595739138
 GameObject:
   m_ObjectHideFlags: 0

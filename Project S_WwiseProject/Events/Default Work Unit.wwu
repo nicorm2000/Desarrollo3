@@ -462,6 +462,24 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Credits" ID="{59E26CE5-3B54-43FB-A736-F7B433258AD8}">
+					<ChildrenList>
+						<Action Name="" ID="{F3FAE1E0-AB77-44AE-AD52-17DA7B0F2406}" ShortID="575873771">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Credits" ID="{6AE5A357-56CA-4C99-84E0-27568CC1AEC0}" WorkUnitID="{6B540857-EB6A-43D3-87A8-9C419C8C8F73}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3A9865AA-98E2-413A-B391-C2B891367D1F}" ShortID="144416650">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Credits" ID="{6AE5A357-56CA-4C99-84E0-27568CC1AEC0}" WorkUnitID="{6B540857-EB6A-43D3-87A8-9C419C8C8F73}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
