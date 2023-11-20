@@ -59,20 +59,19 @@ public class SelectWeapon : MonoBehaviour
             playerCanTeleport = true;
         }
 
-        if (!AudioManager.muteSFX)
-        {
-            audioManager.PlaySound(playerData.pickUpWeapon);
-        }
-
         StartCoroutine(PlayerTeleport(transitonOnTime));
     }
 
-    public IEnumerator PlayerTeleport(float timeToWait) 
+    public IEnumerator PlayerTeleport(float timeToWait)
     {
         yield return new WaitForSeconds(timeToWait);
 
-        if (playerCanTeleport == true) 
+        if (playerCanTeleport == true)
         {
+            if (!AudioManager.muteSFX)
+            {
+                audioManager.PlaySound(playerData.pickUpWeapon);
+            }
             changePlayerWeapon.ChangeWeapon(weaponData.weaponID);
             player.transform.position = levelSpawn.transform.position;
             StartCoroutine(increaseSizeOff.ActiveTransition(transitonOnTime));

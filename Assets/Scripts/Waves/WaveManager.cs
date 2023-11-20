@@ -35,6 +35,10 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private Transitions increaseSizeOn;
     private float timeToWaitTransition = 1f;
 
+    [Header("Audio Manager")]
+    [SerializeField] AudioManager audioManager;
+    [SerializeField] private string waveBegins;
+
     public int currentWaveIndex { get; private set; }
 
     private int _maxWaves = Constants.ROUNDS_BETWEEN_SHOPS;
@@ -74,6 +78,10 @@ public class WaveManager : MonoBehaviour
             SpawnNextWave();
             if (currentWaveIndex + Constants.ONE != waves.Length)
             {
+                if (!AudioManager.muteSFX)
+                {
+                    audioManager.PlaySound(waveBegins);
+                }
                 shop.ActivatePopUp();
                 StartCoroutine(waveUI.ShowWaveUI(waves[currentWaveIndex].waveIndex));
             }
@@ -129,7 +137,7 @@ public class WaveManager : MonoBehaviour
             _currentWave.numberOfEnemies--;
             _nextSpawnTime = Time.time + _currentWave.spawnInterval;
 
-            if (_currentWave.numberOfEnemies == Constants.ONE)
+            if (_currentWave.numberOfEnemies <= Constants.ZERO)
             {
                 _canSpawn = false;
             }

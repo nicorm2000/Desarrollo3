@@ -366,6 +366,34 @@
 								<ActiveSource Name="ShopFallDown" ID="{08FA2869-E6F3-4B44-909A-267C5B97FF37}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="WaveBegin" ID="{2EA3A473-61C9-4905-A639-68A9A8900C78}" ShortID="403794308">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Musical, Plucked, Short Phrase, Musical Accent, Mysterious, Japanese Instrument, Shamisen 02 SND96989" ID="{21E460C9-789E-4ACF-940D-3F8C25B5CB4A}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.02530853576249"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.02530853576249"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Musical, Plucked, Short Phrase, Musical Accent, Mysterious, Japanese Instrument, Shamisen 02 SND96989.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="536794557"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Musical, Plucked, Short Phrase, Musical Accent, Mysterious, Japanese Instrument, Shamisen 02 SND96989" ID="{21E460C9-789E-4ACF-940D-3F8C25B5CB4A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Footsteps" ID="{16C74E90-7FC4-4247-AFFC-FE1CD9B07EF8}" ShortID="938539900">

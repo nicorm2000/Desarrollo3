@@ -648,6 +648,27 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="WaveBegin" ID="{38A97198-16EC-4F0D-BD7E-0231987EA36E}">
+					<ChildrenList>
+						<Action Name="" ID="{50B28415-BB16-4BC6-A859-BEB23E6E2455}" ShortID="485572972">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WaveBegin" ID="{2EA3A473-61C9-4905-A639-68A9A8900C78}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C88A9C26-14D5-4127-84A0-CCD648484DFD}" ShortID="992772173">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WaveBegin" ID="{2EA3A473-61C9-4905-A639-68A9A8900C78}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -43,6 +43,7 @@ namespace AK
         static const AkUniqueID SPLAT = 236860119U;
         static const AkUniqueID TURNPAGE = 2936962349U;
         static const AkUniqueID TUTORIAL = 3762955427U;
+        static const AkUniqueID WAVEBEGIN = 607500489U;
         static const AkUniqueID WEAPONPICKUP = 2883364373U;
     } // namespace EVENTS
 

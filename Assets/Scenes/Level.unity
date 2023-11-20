@@ -9935,7 +9935,7 @@ MonoBehaviour:
   shop: {fileID: 37278418}
   waves:
   - waveIndex: 1
-    numberOfEnemies: 10
+    numberOfEnemies: 1
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     spawnInterval: 0.5
@@ -10042,6 +10042,8 @@ MonoBehaviour:
   waveUI: {fileID: 760154692}
   abilities: {fileID: 1941617724}
   increaseSizeOn: {fileID: 908161859}
+  audioManager: {fileID: 1351502573}
+  waveBegins: WaveBegin
 --- !u!114 &760154692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10061,6 +10063,8 @@ MonoBehaviour:
   waveShowCompletedDuration: 3
   mySceneManager: {fileID: 433192595}
   winScene: Win
+  audioManager: {fileID: 1351502573}
+  waveBegins: WaveBegin
 --- !u!1 &766050912 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8513424388201257645, guid: 5fb6f3a6e904b7b44b6cca0cb6fc54c4, type: 3}
