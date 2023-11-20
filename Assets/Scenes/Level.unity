@@ -1152,6 +1152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 1397132613}
+  audioManager: {fileID: 1351502573}
+  miniMap: MiniMap
   isMapActive: 0
 --- !u!114 &127761912
 MonoBehaviour:

@@ -45,13 +45,16 @@ public class UIInputManger : MonoBehaviour
 
     private void IsMiniMap()
     {
-        if (miniMap.isMapActive && !pauseMenu.isPaused)
+        if (!pauseMenu.isPaused)
         {
-            ActivateMiniMap();
-        }
-        else
-        {
-            DeativateMiniMap();
+            if (miniMap.isMapActive)
+            {
+                ActivateMiniMap();
+            }
+            else if (!miniMap.isMapActive)
+            {
+                DeativateMiniMap();
+            }
         }
     }
 
@@ -67,10 +70,6 @@ public class UIInputManger : MonoBehaviour
 
     public void PauseGame()
     {
-        if (!miniMap.isMapActive)
-        {
-            miniMap.DeactivateMap();
-        }
         pauseMenu.Pause();
     }
 

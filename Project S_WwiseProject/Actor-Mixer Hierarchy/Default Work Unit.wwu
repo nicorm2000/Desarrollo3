@@ -1500,6 +1500,36 @@
 								<ActiveSource Name="UI_TurningPage" ID="{AE43606E-273B-4312-B480-7FB732EBA0FF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="MiniMap" ID="{EA9178F8-FD00-4807-B759-F5362A3D0D03}" ShortID="472171328">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_Map" ID="{6C22CEC3-256F-491E-B6B6-C23B27B66124}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.257230038236617"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.266335526315789"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.380154127305443"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.965181736392262"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>UI_Map.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="745328686"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_Map" ID="{6C22CEC3-256F-491E-B6B6-C23B27B66124}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Sound Name="Scream" ID="{5AD990C8-440E-4DF5-BB0F-0D0448F34742}" ShortID="417014858">

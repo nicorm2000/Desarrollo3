@@ -4,6 +4,10 @@ public class MiniMap : MonoBehaviour
 {
     [SerializeField] private GameObject map;
 
+    [Header("Audio Manager")]
+    [SerializeField] AudioManager audioManager;
+    [SerializeField] private string miniMap;
+
     public bool isMapActive = true;
 
     public void ActivateMap()
@@ -11,6 +15,11 @@ public class MiniMap : MonoBehaviour
         isMapActive = false;
 
         map.SetActive(true);
+        
+        if (!AudioManager.muteSFX)
+        {
+            audioManager.PlaySound(miniMap);
+        }
     }
 
     public void DeactivateMap()
@@ -18,5 +27,10 @@ public class MiniMap : MonoBehaviour
         isMapActive = true;
 
         map.SetActive(false);
+
+        if (!AudioManager.muteSFX)
+        {
+            audioManager.PlaySound(miniMap);
+        }
     }
 }

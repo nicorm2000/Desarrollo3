@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 3af410611e2c92469af731b5137fe77a
     GuidInternal: 
-    m_lastTime: -8585011117089514251
+    m_lastTime: -8585011109784961356
     List:
     - name: Click
       guid: 29fd55656c568345b13d2c4c3e9a71e3
@@ -385,6 +385,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.619489
       minDuration: 0.619489
+    - name: MiniMap
+      guid: e3802d7e693ad74e85d6684e5fab3437
+      id: 3643184226
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: MiniMap
+        ObjectType: 3
+        guid: e3802d7e693ad74e85d6684e5fab3437
+      Path: Events\Default Work Unit\MiniMap
+      maxAttenuation: 0
+      maxDuration: 0.585028
+      minDuration: 0.585028
     - name: Music
       guid: f15d5dca6717554b9fcb74cf08a348a7
       id: 3991942870
