@@ -30,6 +30,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private MySceneManager mySceneManager;
     [SerializeField] private string loseScene;
 
+    [Header("Audio Manager")]
+    [SerializeField] AudioManager audioManager;
+
     /// <summary>
     /// Initializes the player's data and updates the player's health UI.
     /// </summary>
@@ -58,12 +61,21 @@ public class PlayerHealth : MonoBehaviour
     {
         StartCoroutine(screenShake.Shake(duration, animationCurve));
         StartCoroutine(playerHealthUI.ChangeBorderColor());
-        
+
+        if (!AudioManager.muteSFX)
+        {
+            audioManager.PlaySound(playerData.damageHit);
+        }
+
         playerData.currentHealth -= damage;
         playerHealthUI.SetHealth(playerData.currentHealth);
 
         if (playerData.currentHealth <= Constants.ZERO_F)
         {
+            if (!AudioManager.muteSFX)
+            {
+                audioManager.PlaySound(playerData.death);
+            }
             playerData.currentHealth = Constants.ZERO_F;
             playerData._isDead = true;
             onPlayerDeadChange?.Invoke(playerData._isDead);

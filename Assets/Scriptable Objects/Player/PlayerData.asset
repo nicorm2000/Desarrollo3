@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1b04ce56bbade4a9d3bf07e7c6ea26, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  currentHealth: 100
+  currentHealth: 0
   maxHealth: 100
-  speed: 8
+  speed: 5
   _isDead: 0
   weaponData:
   - {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
@@ -26,7 +26,7 @@ MonoBehaviour:
   dashCooldown: 3
   dashSpeed: 12
   dashLength: 0.25
-  activeMoveSpeed: 8
+  activeMoveSpeed: 5
   isDashing: 0
   rigidBody: {fileID: 0}
   playerCollider: {fileID: 0}
@@ -46,7 +46,11 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0}
   maxLevelStack: 5
   healthStackID: 0
-  speedStackID: 5
+  speedStackID: 0
   damageStackID: 0
   enterPlayer: 0
   transform: {fileID: 0}
+  haveAGun: 0
+  isButtonPress: 0
+  death: PlayerDeath
+  damageHit: PlayerDamageHit

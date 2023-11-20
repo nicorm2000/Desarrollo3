@@ -67,6 +67,10 @@ public class PlayerData : ScriptableObject
     public bool haveAGun;
     public bool isButtonPress;
 
+    [Header("SFX")]
+    public string death;
+    public string damageHit;
+
     public void ResetPlayerStacks() 
     {
         _isDead = false;
