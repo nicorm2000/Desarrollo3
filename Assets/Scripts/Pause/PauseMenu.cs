@@ -32,7 +32,10 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void Resume()
     {
-        audioManager.PlaySound(click);
+        if (!AudioManager.mute)
+        {
+            audioManager.PlaySound(click);
+        }
         Time.timeScale = 1f;
         isPaused = false;
         pauseMenuUI.SetActive(false);
@@ -45,7 +48,10 @@ public class PauseMenu : MonoBehaviour
     {
         if (!shop.isPopUpActive)
         {
-            audioManager.PlaySound(click);
+            if (!AudioManager.mute)
+            {
+                audioManager.PlaySound(click);
+            }
             Time.timeScale = 0f;
             isPaused = true;
             pauseMenuUI.SetActive(true);
@@ -71,7 +77,10 @@ public class PauseMenu : MonoBehaviour
             EditorApplication.isPlaying = false;
         }
 #endif
-        audioManager.PlaySound(click);
+        if (!AudioManager.mute)
+        {
+            audioManager.PlaySound(click);
+        }
         Application.Quit();
     }
 
@@ -97,7 +106,10 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void ActivatePauseWindow()
     {
-        audioManager.PlaySound(click);
+        if (!AudioManager.mute)
+        {
+            audioManager.PlaySound(click);
+        }
         optionsPlaceHolder.SetActive(false);
         pausePlaceHolder.SetActive(true);
         ChangeButtonImage(pauseImage, pausePlaceHolder);
@@ -109,7 +121,10 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void ActivateOptionsWindow()
     {
-        audioManager.PlaySound(click);
+        if (!AudioManager.mute)
+        {
+            audioManager.PlaySound(click);
+        }
         pausePlaceHolder.SetActive(false);
         optionsPlaceHolder.SetActive(true);
         ChangeButtonImage(optionsImage, optionsPlaceHolder);

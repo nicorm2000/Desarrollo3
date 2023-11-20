@@ -2076,6 +2076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ceadabfdfd3f084eba9e6994905a577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  muteManager: {fileID: 0}
   audioManager: {fileID: 1589391703}
   intro: Intro
 --- !u!1 &1105900307

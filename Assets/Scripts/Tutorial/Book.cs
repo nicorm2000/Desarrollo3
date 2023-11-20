@@ -39,8 +39,10 @@ public class Book : MonoBehaviour
         {
             return;
         }
-
-        audioManager.PlaySound(turnPage);
+        if (!AudioManager.mute)
+        {
+            audioManager.PlaySound(turnPage);
+        }
         _index++;
         float angle = 180;
         NextButtonActions();
@@ -61,14 +63,17 @@ public class Book : MonoBehaviour
         }
     }
 
-    public void RotateBack() 
+    public void RotateBack()
     {
         if (_rotate)
         {
             return;
         }
 
-        audioManager.PlaySound(turnPage);
+        if (!AudioManager.mute)
+        {
+            audioManager.PlaySound(turnPage);
+        }
         float angle = 0;
         pages[_index].SetAsLastSibling();
         BackButtonActions();
@@ -82,7 +87,7 @@ public class Book : MonoBehaviour
             nextButton.SetActive(true);
             playButton.SetActive(false);
         }
-        if (_index - 1 == - 1)
+        if (_index - 1 == -1)
         {
             backButton.SetActive(false);
         }
@@ -97,8 +102,8 @@ public class Book : MonoBehaviour
     private IEnumerator Rotate(float angle, bool forward)
     {
         float value = 0f;
-        
-        while (true) 
+
+        while (true)
         {
             _rotate = true;
             Quaternion targetRotation = Quaternion.Euler(0, angle, 0);
@@ -107,7 +112,7 @@ public class Book : MonoBehaviour
             float angle1 = Quaternion.Angle(pages[_index].rotation, targetRotation);
             if (angle1 < 0.1f)
             {
-                if (!forward) 
+                if (!forward)
                 {
                     _index--;
                 }

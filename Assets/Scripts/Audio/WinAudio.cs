@@ -1,4 +1,5 @@
 using UnityEngine;
+using static Unity.Collections.AllocatorManager;
 
 public class WinAudio : MonoBehaviour
 {
@@ -9,7 +10,10 @@ public class WinAudio : MonoBehaviour
 
     private void Start()
     {
-        audioManager.PlaySound(laugh);
-        audioManager.PlaySound(grill);
+        if (!AudioManager.mute)
+        {
+            audioManager.PlaySound(laugh);
+            audioManager.PlaySound(grill);
+        }
     }
 }

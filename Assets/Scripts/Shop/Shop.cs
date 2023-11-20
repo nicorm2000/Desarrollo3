@@ -42,7 +42,10 @@ public class Shop : MonoBehaviour
     /// </summary>
     public void DeactivatePopUp()
     {
-        audioManager.PlaySound(click);
+        if (!AudioManager.mute)
+        {
+            audioManager.PlaySound(click);
+        }
         isPopUpActive = false;
         cursorObject.MouseNotInteract();
         shopWindow.SetActive(false);

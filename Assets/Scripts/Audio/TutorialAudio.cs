@@ -8,6 +8,9 @@ public class TutorialAudio : MonoBehaviour
 
     private void Start()
     {
-        audioManager.PlaySound(tutorial);
+        if (!AudioManager.mute)
+        {
+            audioManager.PlaySound(tutorial);
+        }
     }
 }

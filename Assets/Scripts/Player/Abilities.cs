@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using static Unity.Collections.AllocatorManager;
 
 public class Abilities : MonoBehaviour
 {
@@ -92,7 +93,10 @@ public class Abilities : MonoBehaviour
         {
             if (!isCooldownLaser)
             {
-                audioManager.PlaySound(laser);
+                if (!AudioManager.mute)
+                {
+                    audioManager.PlaySound(laser);
+                }
                 isCooldownLaser = true;
                 laserImage.fillAmount = 1f;
 
@@ -134,7 +138,10 @@ public class Abilities : MonoBehaviour
         {
             if (!isCooldownSlower)
             {
-                audioManager.PlaySound(splat);
+                if (!AudioManager.mute)
+                {
+                    audioManager.PlaySound(splat);
+                }
                 isCooldownSlower = true;
                 slowerImage.fillAmount = 1f;
 
@@ -175,7 +182,10 @@ public class Abilities : MonoBehaviour
     {
         if (dashCoolDownCounter <= 0 && dashCounter <= 0)
         {
-            audioManager.PlaySound(roll);
+            if (!AudioManager.mute)
+            {
+                audioManager.PlaySound(roll);
+            }
             playerData.isDashing = true;
             dustParticles.Play();
             onPlayerDashChange?.Invoke(playerData.isDashing);
