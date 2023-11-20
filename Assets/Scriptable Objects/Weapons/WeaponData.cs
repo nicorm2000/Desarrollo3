@@ -32,4 +32,9 @@ public class WeaponData : ScriptableObject
     [Header("Camera Shake Configuration")]
     public float duration;
     public AnimationCurve animationCurve;
+
+    [Header("SFX")]
+    public string empty;
+    public string loaded;
+    public string cooldown;
 }

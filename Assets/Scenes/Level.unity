@@ -6614,6 +6614,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194230}
     - target: {fileID: 471063530683274035, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
+    - target: {fileID: 471063530683274035, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 1187821267}
@@ -6682,6 +6686,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194230}
     - target: {fileID: 2957269687264150804, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
+    - target: {fileID: 2957269687264150804, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 771723441}
@@ -6693,6 +6701,10 @@ PrefabInstance:
       propertyPath: weaponBlack
       value: 
       objectReference: {fileID: 1835414891}
+    - target: {fileID: 5661613424138094487, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
     - target: {fileID: 5661613424138094487, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: overHeatText
       value: 
@@ -6713,6 +6725,10 @@ PrefabInstance:
       propertyPath: weaponBlack
       value: 
       objectReference: {fileID: 1516056427}
+    - target: {fileID: 7654313808540026409, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
     - target: {fileID: 7654313808540026409, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: overHeatText
       value: 
@@ -6754,6 +6770,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 645429421}
     - target: {fileID: 8793071024267927714, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
+    - target: {fileID: 8793071024267927714, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: overHeatText
       value: 
       objectReference: {fileID: 1909702298}
@@ -6765,6 +6785,10 @@ PrefabInstance:
       propertyPath: screenShake
       value: 
       objectReference: {fileID: 963194230}
+    - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
     - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponOverheatUI
       value: 

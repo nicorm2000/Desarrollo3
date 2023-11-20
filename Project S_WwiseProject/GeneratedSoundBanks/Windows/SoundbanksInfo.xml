@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3564764673">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2087801487">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -68,6 +68,51 @@
 							<Path>SFX\creditos_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="948477392" Name="EmptyFamas" ObjectPath="\Events\Default Work Unit\EmptyFamas" DurationType="OneShot" DurationMin="0.065546" DurationMax="0.078507">
+					<IncludedMemoryFiles>
+						<File Id="80193230" Language="SFX">
+							<ShortName>RifleEmptyMag-002.wav</ShortName>
+							<Path>SFX\RifleEmptyMag-002_10C4C929.wem</Path>
+						</File>
+						<File Id="196164197" Language="SFX">
+							<ShortName>RifleEmptyMag-001.wav</ShortName>
+							<Path>SFX\RifleEmptyMag-001_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="2821460987" Name="Famas" ObjectPath="\Switches\Default Work Unit\Weapons\Famas"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="2743512573" Name="EmptySniper" ObjectPath="\Events\Default Work Unit\EmptySniper" DurationType="OneShot" DurationMin="0.08" DurationMax="0.086687">
+					<IncludedMemoryFiles>
+						<File Id="307801661" Language="SFX">
+							<ShortName>SniperEmptyMag-001.wav</ShortName>
+							<Path>SFX\SniperEmptyMag-001_10C4C929.wem</Path>
+						</File>
+						<File Id="1009135126" Language="SFX">
+							<ShortName>SniperEmptyMag-002.wav</ShortName>
+							<Path>SFX\SniperEmptyMag-002_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="2550763292" Name="Sniper" ObjectPath="\Switches\Default Work Unit\Weapons\Sniper"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="1210244458" Name="EmptyUzi" ObjectPath="\Events\Default Work Unit\EmptyUzi" DurationType="OneShot" DurationMin="0.031479" DurationMax="0.037208">
+					<IncludedMemoryFiles>
+						<File Id="263833320" Language="SFX">
+							<ShortName>UziEmptyMag-002.wav</ShortName>
+							<Path>SFX\UziEmptyMag-002_10C4C929.wem</Path>
+						</File>
+						<File Id="1067180262" Language="SFX">
+							<ShortName>UziEmptyMag-001.wav</ShortName>
+							<Path>SFX\UziEmptyMag-001_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry Id="862615877" Name="Uzi" ObjectPath="\Switches\Default Work Unit\Weapons\Uzi"/>
+					</ActionSetSwitch>
 				</Event>
 				<Event Id="2129816966" Name="FilmConversation" ObjectPath="\Events\Default Work Unit\FilmConversation" MaxAttenuation="25." DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -125,11 +170,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3076352219" Name="FutomakiAttack" ObjectPath="\Events\Default Work Unit\FutomakiAttack" DurationType="OneShot" DurationMin="0.279755" DurationMax="0.395633">
+					<IncludedMemoryFiles>
+						<File Id="934391759" Language="SFX">
+							<ShortName>FutomakiGrunt1.wav</ShortName>
+							<Path>SFX\FutomakiGrunt1_6A19D534.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2032173003" Name="FutomakiDeath" ObjectPath="\Events\Default Work Unit\FutomakiDeath" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.689083" DurationMax="0.689083">
 					<IncludedMemoryFiles>
 						<File Id="484635598" Language="SFX">
 							<ShortName>SushiRollDeath.wav</ShortName>
-							<Path>SFX\SushiRollDeath_D835230C.wem</Path>
+							<Path>SFX\SushiRollDeath_8921A352.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -141,11 +194,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1307358801" Name="IkuraAttack" ObjectPath="\Events\Default Work Unit\IkuraAttack" DurationType="OneShot" DurationMin="0.232719" DurationMax="0.369419">
+					<IncludedMemoryFiles>
+						<File Id="706791338" Language="SFX">
+							<ShortName>IkuraGrunt1.wav</ShortName>
+							<Path>SFX\IkuraGrunt1_28D3DC81.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3392074037" Name="IkuraDeath" ObjectPath="\Events\Default Work Unit\IkuraDeath" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.402809" DurationMax="0.402809">
 					<IncludedMemoryFiles>
 						<File Id="283542091" Language="SFX">
 							<ShortName>SushiRollDeath2.wav</ShortName>
-							<Path>SFX\SushiRollDeath2_362DE3CC.wem</Path>
+							<Path>SFX\SushiRollDeath2_64773226.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -153,7 +214,7 @@
 					<IncludedMemoryFiles>
 						<File Id="778056077" Language="SFX">
 							<ShortName>SushiRollProjectile.wav</ShortName>
-							<Path>SFX\SushiRollProjectile_AFB5184B.wem</Path>
+							<Path>SFX\SushiRollProjectile_31DD1A2E.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -185,7 +246,7 @@
 					<IncludedMemoryFiles>
 						<File Id="593905732" Language="SFX">
 							<ShortName>Med Kit.wav</ShortName>
-							<Path>SFX\Med Kit_5512756C.wem</Path>
+							<Path>SFX\Med Kit_38340ADB.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -193,7 +254,7 @@
 					<IncludedMemoryFiles>
 						<File Id="745328686" Language="SFX">
 							<ShortName>UI_Map.wav</ShortName>
-							<Path>SFX\UI_Map_F704017B.wem</Path>
+							<Path>SFX\UI_Map_D715AF9D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -205,11 +266,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2501306844" Name="OnigiriAttack" ObjectPath="\Events\Default Work Unit\OnigiriAttack" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.507565" DurationMax="0.537746">
+					<IncludedMemoryFiles>
+						<File Id="657552065" Language="SFX">
+							<ShortName>OnigiriGrunt1.wav</ShortName>
+							<Path>SFX\OnigiriGrunt1_5578D1DB.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1702629134" Name="OnigiriDeath" ObjectPath="\Events\Default Work Unit\OnigiriDeath" MaxAttenuation="20." DurationType="OneShot" DurationMin="1.026271" DurationMax="1.026271">
 					<IncludedMemoryFiles>
 						<File Id="45999561" Language="SFX">
 							<ShortName>OnigiriDeath.wav</ShortName>
-							<Path>SFX\OnigiriDeath_3324537C.wem</Path>
+							<Path>SFX\OnigiriDeath_1A904FC9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -217,7 +286,7 @@
 					<IncludedMemoryFiles>
 						<File Id="831139886" Language="SFX">
 							<ShortName>PlayerDamageHit2.wav</ShortName>
-							<Path>SFX\PlayerDamageHit2_F342E40E.wem</Path>
+							<Path>SFX\PlayerDamageHit2_E58FF3F6.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -225,7 +294,7 @@
 					<IncludedMemoryFiles>
 						<File Id="708636483" Language="SFX">
 							<ShortName>PlayerDeath.wav</ShortName>
-							<Path>SFX\PlayerDeath_138EBD81.wem</Path>
+							<Path>SFX\PlayerDeath_5A1C8B28.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -346,7 +415,7 @@
 					<IncludedMemoryFiles>
 						<File Id="1003545355" Language="SFX">
 							<ShortName>ShopFallDown.wav</ShortName>
-							<Path>SFX\ShopFallDown_8CB157FD.wem</Path>
+							<Path>SFX\ShopFallDown_95335FD3.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -378,7 +447,7 @@
 					<IncludedMemoryFiles>
 						<File Id="536794557" Language="SFX">
 							<ShortName>Musical, Plucked, Short Phrase, Musical Accent, Mysterious, Japanese Instrument, Shamisen 02 SND96989.wav</ShortName>
-							<Path>SFX\Musical, Plucked, Short Phrase, Musical Accent, Mysterious, Japanese Instrument, Shamisen 02 SND96989_E8606B57.wem</Path>
+							<Path>SFX\Musical, Plucked, Short Phrase, Musical Accent, Mysterious, Japanese Instrument, Shamisen 02 SND96989_E41AF79F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -386,7 +455,7 @@
 					<IncludedMemoryFiles>
 						<File Id="13970989" Language="SFX">
 							<ShortName>WeaponPickup.wav</ShortName>
-							<Path>SFX\WeaponPickup_214DE315.wem</Path>
+							<Path>SFX\WeaponPickup_20B84742.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -398,7 +467,7 @@
 				</File>
 				<File Id="13970989" Language="SFX">
 					<ShortName>WeaponPickup.wav</ShortName>
-					<Path>SFX\WeaponPickup_214DE315.wem</Path>
+					<Path>SFX\WeaponPickup_20B84742.wem</Path>
 				</File>
 				<File Id="45467557" Language="SFX">
 					<ShortName>RifleGunfire-004.wav</ShortName>
@@ -406,7 +475,7 @@
 				</File>
 				<File Id="45999561" Language="SFX">
 					<ShortName>OnigiriDeath.wav</ShortName>
-					<Path>SFX\OnigiriDeath_3324537C.wem</Path>
+					<Path>SFX\OnigiriDeath_1A904FC9.wem</Path>
 				</File>
 				<File Id="78108305" Language="SFX">
 					<ShortName>Voice_Scream.wav</ShortName>
@@ -466,7 +535,7 @@
 				</File>
 				<File Id="283542091" Language="SFX">
 					<ShortName>SushiRollDeath2.wav</ShortName>
-					<Path>SFX\SushiRollDeath2_362DE3CC.wem</Path>
+					<Path>SFX\SushiRollDeath2_64773226.wem</Path>
 				</File>
 				<File Id="307801661" Language="SFX">
 					<ShortName>SniperEmptyMag-001.wav</ShortName>
@@ -502,7 +571,7 @@
 				</File>
 				<File Id="484635598" Language="SFX">
 					<ShortName>SushiRollDeath.wav</ShortName>
-					<Path>SFX\SushiRollDeath_D835230C.wem</Path>
+					<Path>SFX\SushiRollDeath_8921A352.wem</Path>
 				</File>
 				<File Id="509604822" Language="SFX">
 					<ShortName>Footsteps_Enemies_A_4.wav</ShortName>
@@ -510,7 +579,7 @@
 				</File>
 				<File Id="536794557" Language="SFX">
 					<ShortName>Musical, Plucked, Short Phrase, Musical Accent, Mysterious, Japanese Instrument, Shamisen 02 SND96989.wav</ShortName>
-					<Path>SFX\Musical, Plucked, Short Phrase, Musical Accent, Mysterious, Japanese Instrument, Shamisen 02 SND96989_E8606B57.wem</Path>
+					<Path>SFX\Musical, Plucked, Short Phrase, Musical Accent, Mysterious, Japanese Instrument, Shamisen 02 SND96989_E41AF79F.wem</Path>
 				</File>
 				<File Id="561579131" Language="SFX">
 					<ShortName>creditos.wav</ShortName>
@@ -518,7 +587,7 @@
 				</File>
 				<File Id="593905732" Language="SFX">
 					<ShortName>Med Kit.wav</ShortName>
-					<Path>SFX\Med Kit_5512756C.wem</Path>
+					<Path>SFX\Med Kit_38340ADB.wem</Path>
 				</File>
 				<File Id="639313971" Language="SFX">
 					<ShortName>Footsteps_Enemies_A_1.wav</ShortName>
@@ -526,19 +595,23 @@
 				</File>
 				<File Id="657552065" Language="SFX">
 					<ShortName>OnigiriGrunt1.wav</ShortName>
-					<Path>SFX\OnigiriGrunt1_2B9934B5.wem</Path>
+					<Path>SFX\OnigiriGrunt1_5578D1DB.wem</Path>
+				</File>
+				<File Id="706791338" Language="SFX">
+					<ShortName>IkuraGrunt1.wav</ShortName>
+					<Path>SFX\IkuraGrunt1_28D3DC81.wem</Path>
 				</File>
 				<File Id="708636483" Language="SFX">
 					<ShortName>PlayerDeath.wav</ShortName>
-					<Path>SFX\PlayerDeath_138EBD81.wem</Path>
+					<Path>SFX\PlayerDeath_5A1C8B28.wem</Path>
 				</File>
 				<File Id="745328686" Language="SFX">
 					<ShortName>UI_Map.wav</ShortName>
-					<Path>SFX\UI_Map_F704017B.wem</Path>
+					<Path>SFX\UI_Map_D715AF9D.wem</Path>
 				</File>
 				<File Id="778056077" Language="SFX">
 					<ShortName>SushiRollProjectile.wav</ShortName>
-					<Path>SFX\SushiRollProjectile_AFB5184B.wem</Path>
+					<Path>SFX\SushiRollProjectile_31DD1A2E.wem</Path>
 				</File>
 				<File Id="785732627" Language="SFX">
 					<ShortName>SniperGunfire-002.wav</ShortName>
@@ -546,7 +619,7 @@
 				</File>
 				<File Id="831139886" Language="SFX">
 					<ShortName>PlayerDamageHit2.wav</ShortName>
-					<Path>SFX\PlayerDamageHit2_F342E40E.wem</Path>
+					<Path>SFX\PlayerDamageHit2_E58FF3F6.wem</Path>
 				</File>
 				<File Id="834402619" Language="SFX">
 					<ShortName>Grill.wav</ShortName>
@@ -559,6 +632,10 @@
 				<File Id="932633481" Language="SFX">
 					<ShortName>RifleGunfire-002.wav</ShortName>
 					<Path>SFX\RifleGunfire-002_10C4C929.wem</Path>
+				</File>
+				<File Id="934391759" Language="SFX">
+					<ShortName>FutomakiGrunt1.wav</ShortName>
+					<Path>SFX\FutomakiGrunt1_6A19D534.wem</Path>
 				</File>
 				<File Id="937201692" Language="SFX">
 					<ShortName>PlayerSkillSplat.wav</ShortName>
@@ -574,7 +651,7 @@
 				</File>
 				<File Id="1003545355" Language="SFX">
 					<ShortName>ShopFallDown.wav</ShortName>
-					<Path>SFX\ShopFallDown_8CB157FD.wem</Path>
+					<Path>SFX\ShopFallDown_95335FD3.wem</Path>
 				</File>
 				<File Id="1009135126" Language="SFX">
 					<ShortName>SniperEmptyMag-002.wav</ShortName>

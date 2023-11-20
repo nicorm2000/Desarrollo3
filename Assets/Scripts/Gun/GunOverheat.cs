@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,6 +23,9 @@ public class GunOverheat : MonoBehaviour
 
     public GameObject overHeatText;
     public GameObject overHeatEffect;
+
+    [Header("Audio Manager")]
+    [SerializeField] AudioManager audioManager;
 
     private void Start()
     {
@@ -67,6 +69,11 @@ public class GunOverheat : MonoBehaviour
         _overHeat = true;
         overHeatText.SetActive(true);
         overHeatEffect.SetActive(true);
+
+        if (!AudioManager.muteSFX)
+        {
+            audioManager.PlaySound(weaponData.cooldown);
+        }
 
         while (_currentOverheat > 0f)
         {

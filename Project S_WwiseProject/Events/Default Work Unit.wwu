@@ -711,6 +711,132 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="EmptyFamas" ID="{0F24F024-15F8-40F4-8595-C2C1629E4904}">
+					<ChildrenList>
+						<Action Name="" ID="{1599B7A1-4240-40E5-BBDA-207FBECE0BC9}" ShortID="300985708">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Famas" ID="{FE4AA9EE-4804-485A-A5A3-CFAE316994CE}" WorkUnitID="{96DE4057-CE0E-4F4F-8122-A79587657419}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F645F62E-E3CB-4522-9EFC-58A66A41DC79}" ShortID="242889376">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Empty" ID="{DCB76541-C031-44C0-BA25-61F655402F9C}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="EmptySniper" ID="{827A9242-0935-404B-B5CC-6A54ECBA6B8F}">
+					<ChildrenList>
+						<Action Name="" ID="{349749C9-BE14-44A3-A5BC-A365CFEC15D4}" ShortID="532338899">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sniper" ID="{1305F924-A73F-4EF7-BFE3-7059E57DE99A}" WorkUnitID="{96DE4057-CE0E-4F4F-8122-A79587657419}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{30F9BC78-75B5-4CDA-9F6B-B50E7C0AB1DB}" ShortID="750917926">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Empty" ID="{99CA6071-8CD6-4A6B-95A0-7DCDBFF99C64}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="EmptyUzi" ID="{9E24D7E8-D71B-460D-84E2-C985E5298531}">
+					<ChildrenList>
+						<Action Name="" ID="{79B422C8-AAC6-4E15-BF62-E08983CC2A13}" ShortID="901300437">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Uzi" ID="{EE8FB17D-F7BB-4DB3-8D8C-A42C51908DD6}" WorkUnitID="{96DE4057-CE0E-4F4F-8122-A79587657419}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AD4817EE-F049-422D-84D7-3B2D28E510C5}" ShortID="852070363">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Empty" ID="{6BBFF04E-3DA6-4E33-8A54-C115A3927BBF}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="OnigiriAttack" ID="{3F59B074-B8C7-42E4-BE12-54F60AEA6E3E}">
+					<ChildrenList>
+						<Action Name="" ID="{0FE10251-2676-4D8C-BA09-3B9205CE62DC}" ShortID="832242539">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OnigiriGrunt1" ID="{50C16AB5-192C-47C4-9DF0-48C4A63A35DD}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0B4E1541-3F45-46AC-933A-C72B629C4692}" ShortID="877367300">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OnigiriGrunt1" ID="{50C16AB5-192C-47C4-9DF0-48C4A63A35DD}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FutomakiAttack" ID="{92124E07-1D25-4E71-BBAB-81364401D5B9}">
+					<ChildrenList>
+						<Action Name="" ID="{29AA0805-BF18-4E70-BC4B-BD1F42214608}" ShortID="79438638">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FutomakiGrunt1" ID="{3D25DF35-56AC-4C8E-98A3-18E36A26CE94}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C1C979B0-D33D-454D-9ADC-E8C79AD3A772}" ShortID="736872584">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FutomakiGrunt1" ID="{3D25DF35-56AC-4C8E-98A3-18E36A26CE94}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="IkuraAttack" ID="{FFBC0333-1957-42CE-A76C-47322DA615AA}">
+					<ChildrenList>
+						<Action Name="" ID="{BA6687D7-0AB9-41F2-A15D-D2562F1BD225}" ShortID="996652964">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="IkuraGrunt1" ID="{9FDE9AF0-ED7A-4CDA-9DAF-4F1790FC2A99}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{ADAC42FE-EADB-4A18-BD8E-C7AD6C3A05A8}" ShortID="559063923">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="IkuraGrunt1" ID="{9FDE9AF0-ED7A-4CDA-9DAF-4F1790FC2A99}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

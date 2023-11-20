@@ -16,6 +16,9 @@ public class Shoot : MonoBehaviour
     [SerializeField] private PlayerData playerData;
     [SerializeField] private GunOverheat gunOverheat;
 
+    [Header("Audio Manager")]
+    [SerializeField] AudioManager audioManager;
+    
     private void Update()
     {
         if (playerData.isButtonPress) 
@@ -42,6 +45,11 @@ public class Shoot : MonoBehaviour
         if (weaponData.heavyWeapon)
         {
             StartCoroutine(screenShake.Shake(weaponData.duration, weaponData.animationCurve));
+        }
+
+        if (!AudioManager.muteSFX)
+        {
+            audioManager.PlaySound(weaponData.loaded);
         }
 
         Instantiate(weaponData.bulletPrefab, transform.position, transform.rotation);

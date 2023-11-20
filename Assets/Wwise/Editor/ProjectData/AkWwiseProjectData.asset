@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 3af410611e2c92469af731b5137fe77a
     GuidInternal: 
-    m_lastTime: -8585011109784961356
+    m_lastTime: -8585010991048448385
     List:
     - name: Click
       guid: 29fd55656c568345b13d2c4c3e9a71e3
@@ -198,6 +198,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: EmptyFamas
+      guid: 24f0240ff815f4408595c2c1629e4904
+      id: 948477392
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: EmptyFamas
+        ObjectType: 3
+        guid: 24f0240ff815f4408595c2c1629e4904
+      Path: Events\Default Work Unit\EmptyFamas
+      maxAttenuation: 0
+      maxDuration: 0.078507
+      minDuration: 0.065546
+    - name: EmptySniper
+      guid: 42927a8235094b40b5cc6a54ecba6b8f
+      id: 2743512573
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: EmptySniper
+        ObjectType: 3
+        guid: 42927a8235094b40b5cc6a54ecba6b8f
+      Path: Events\Default Work Unit\EmptySniper
+      maxAttenuation: 0
+      maxDuration: 0.086687
+      minDuration: 0.08
+    - name: EmptyUzi
+      guid: e8d7249e1bd70d4684e2c985e5298531
+      id: 1210244458
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: EmptyUzi
+        ObjectType: 3
+        guid: e8d7249e1bd70d4684e2c985e5298531
+      Path: Events\Default Work Unit\EmptyUzi
+      maxAttenuation: 0
+      maxDuration: 0.037208
+      minDuration: 0.031479
     - name: FilmConversation
       guid: a6d4adbe413c2a4cbb2df8f830329f40
       id: 2129816966
@@ -249,6 +300,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.304375
       minDuration: 1.226437
+    - name: FutomakiAttack
+      guid: 074e1292251d714ebbab81364401d5b9
+      id: 3076352219
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: FutomakiAttack
+        ObjectType: 3
+        guid: 074e1292251d714ebbab81364401d5b9
+      Path: Events\Default Work Unit\FutomakiAttack
+      maxAttenuation: 0
+      maxDuration: 0.395633
+      minDuration: 0.279755
     - name: FutomakiDeath
       guid: 81c779833791b3489c4a76b3588dc39c
       id: 2032173003
@@ -281,6 +349,23 @@ MonoBehaviour:
         guid: 825aed54aba9c841b0138764b4dc6efa
       Path: Events\Default Work Unit\Grill
       maxAttenuation: 17
+      maxDuration: -1
+      minDuration: -1
+    - name: IkuraAttack
+      guid: 3303bcff5719ce42a76c47322da615aa
+      id: 1307358801
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: IkuraAttack
+        ObjectType: 3
+        guid: 3303bcff5719ce42a76c47322da615aa
+      Path: Events\Default Work Unit\IkuraAttack
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: IkuraDeath
@@ -419,6 +504,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: OnigiriAttack
+      guid: 74b0593fc7b8e442be1254f60aea6e3e
+      id: 2501306844
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: OnigiriAttack
+        ObjectType: 3
+        guid: 74b0593fc7b8e442be1254f60aea6e3e
+      Path: Events\Default Work Unit\OnigiriAttack
+      maxAttenuation: 20
+      maxDuration: 0.537746
+      minDuration: 0.507565
     - name: OnigiriDeath
       guid: 7b5be7d42c09b14280bc65b72260fbed
       id: 1702629134

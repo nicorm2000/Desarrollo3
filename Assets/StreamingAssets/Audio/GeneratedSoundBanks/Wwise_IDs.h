@@ -19,11 +19,16 @@ namespace AK
         static const AkUniqueID COOLDOWNSNIPER = 4259908363U;
         static const AkUniqueID COOLDOWNUZI = 3686178940U;
         static const AkUniqueID CREDITS = 2201105581U;
+        static const AkUniqueID EMPTYFAMAS = 948477392U;
+        static const AkUniqueID EMPTYSNIPER = 2743512573U;
+        static const AkUniqueID EMPTYUZI = 1210244458U;
         static const AkUniqueID FILMCONVERSATION = 2129816966U;
         static const AkUniqueID FOOTSTEPSENEMIES = 443235554U;
         static const AkUniqueID FOOTSTEPSPLAYER = 3865216745U;
+        static const AkUniqueID FUTOMAKIATTACK = 3076352219U;
         static const AkUniqueID FUTOMAKIDEATH = 2032173003U;
         static const AkUniqueID GRILL = 3760814375U;
+        static const AkUniqueID IKURAATTACK = 1307358801U;
         static const AkUniqueID IKURADEATH = 3392074037U;
         static const AkUniqueID IKURAPROJECTILE = 3355135784U;
         static const AkUniqueID INTRO = 1125500713U;
@@ -32,6 +37,7 @@ namespace AK
         static const AkUniqueID MEDKIT = 2983074611U;
         static const AkUniqueID MINIMAP = 3643184226U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID ONIGIRIATTACK = 2501306844U;
         static const AkUniqueID ONIGIRIDEATH = 1702629134U;
         static const AkUniqueID PLAYERDAMAGEHIT = 2062279300U;
         static const AkUniqueID PLAYERDEATH = 1656947812U;

@@ -51,4 +51,5 @@ public class EnemyData : ScriptableObject
     [Header("SFX")]
     public string death;
     public string projectile;
+    public string attack;
 }
