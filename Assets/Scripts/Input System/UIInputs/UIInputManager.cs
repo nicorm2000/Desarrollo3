@@ -47,11 +47,11 @@ public class UIInputManger : MonoBehaviour
     {
         if (!pauseMenu.isPaused)
         {
-            if (miniMap.isMapActive)
+            if (!miniMap.isMapActive)
             {
                 ActivateMiniMap();
             }
-            else if (!miniMap.isMapActive)
+            else
             {
                 DeativateMiniMap();
             }

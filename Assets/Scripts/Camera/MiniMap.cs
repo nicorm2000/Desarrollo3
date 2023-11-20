@@ -8,11 +8,11 @@ public class MiniMap : MonoBehaviour
     [SerializeField] AudioManager audioManager;
     [SerializeField] private string miniMap;
 
-    public bool isMapActive = true;
+    public bool isMapActive = false;
 
     public void ActivateMap()
     {
-        isMapActive = false;
+        isMapActive = true;
 
         map.SetActive(true);
         
@@ -24,7 +24,7 @@ public class MiniMap : MonoBehaviour
 
     public void DeactivateMap()
     {
-        isMapActive = true;
+        isMapActive = false;
 
         map.SetActive(false);
 
