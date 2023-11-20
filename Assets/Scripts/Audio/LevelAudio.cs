@@ -14,7 +14,6 @@ public class LevelAudio : MonoBehaviour
     [SerializeField] private string conveyorBelt;
     [SerializeField] private GameObject[] conveyorBeltGO;
 
-
     private void Start()
     {
         if (!AudioManager.muteSFX)
@@ -28,5 +27,25 @@ public class LevelAudio : MonoBehaviour
                 audioManager.PlaySound(conveyorBelt, conveyorBeltGO[i]);
             }
         }
+    }
+
+    //private void OnEnable()
+    //{
+    //    if (!AudioManager.muteSFX)
+    //    {
+    //        audioManager.PlaySound(conversationL, conversationLGO);
+    //        audioManager.PlaySound(conversationR, conversationRGO);
+    //        audioManager.PlaySound(grill, grillLGO);
+    //        audioManager.PlaySound(grill, grillRGO);
+    //        for (int i = 0; i < conveyorBeltGO.Length; i++)
+    //        {
+    //            audioManager.PlaySound(conveyorBelt, conveyorBeltGO[i]);
+    //        }
+    //    }
+    //}
+
+    private void OnDisable()
+    {
+        audioManager.StopSounds();
     }
 }
