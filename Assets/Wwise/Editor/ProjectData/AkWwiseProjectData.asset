@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 3af410611e2c92469af731b5137fe77a
     GuidInternal: 
-    m_lastTime: -8585011142442001349
+    m_lastTime: -8585011117089514251
     List:
     - name: Click
       guid: 29fd55656c568345b13d2c4c3e9a71e3
@@ -368,6 +368,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 3.183604
       minDuration: 3.183604
+    - name: MedKit
+      guid: 2d4aa8799b4ba04288b7014de323f8cc
+      id: 2983074611
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: MedKit
+        ObjectType: 3
+        guid: 2d4aa8799b4ba04288b7014de323f8cc
+      Path: Events\Default Work Unit\MedKit
+      maxAttenuation: 0
+      maxDuration: 0.619489
+      minDuration: 0.619489
     - name: Music
       guid: f15d5dca6717554b9fcb74cf08a348a7
       id: 3991942870
@@ -813,7 +830,7 @@ MonoBehaviour:
     m_lastTime: -8585034087828296152
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000000800000017000000180000001b0000001c00000071000000720000007c0000007d00000095000000960000009b0000009c00000004010000050100000701000008010000
+  ExpandedWaapiItemIds: 0500000006000000070000000800000017000000180000001b0000001c0000005b0000005c00000071000000720000007c0000007d00000095000000960000009b0000009c00000004010000050100000701000008010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -29,6 +29,7 @@ namespace AK
         static const AkUniqueID INTRO = 1125500713U;
         static const AkUniqueID LASER = 3982605422U;
         static const AkUniqueID LAUGH = 4016454680U;
+        static const AkUniqueID MEDKIT = 2983074611U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID ONIGIRIDEATH = 1702629134U;
         static const AkUniqueID PLAYERDAMAGEHIT = 2062279300U;

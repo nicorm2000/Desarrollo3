@@ -2175,6 +2175,39 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="PickUps" ID="{F5A1E268-97AD-4C2F-8919-B2531D6E7519}" ShortID="716275624">
+					<ChildrenList>
+						<Sound Name="Med Kit" ID="{2A81C5B0-C3BE-4563-A920-134B4CDAE10C}" ShortID="509181062">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Med Kit" ID="{18519168-7722-4362-A3B1-CF09FCB361E1}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.454011404689609"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.810821524966263"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.43031079194782"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Med Kit.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="593905732"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Med Kit" ID="{18519168-7722-4362-A3B1-CF09FCB361E1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

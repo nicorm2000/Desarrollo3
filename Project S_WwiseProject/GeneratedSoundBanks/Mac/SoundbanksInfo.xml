@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2596458489">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3323160344">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -178,6 +178,14 @@
 						<File Id="1020595081" Language="SFX">
 							<ShortName>Voice_Laugh.wav</ShortName>
 							<Path>SFX\Voice_Laugh_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2983074611" Name="MedKit" ObjectPath="\Events\Default Work Unit\MedKit" DurationType="OneShot" DurationMin="0.619489" DurationMax="0.619489">
+					<IncludedMemoryFiles>
+						<File Id="593905732" Language="SFX">
+							<ShortName>Med Kit.wav</ShortName>
+							<Path>SFX\Med Kit_38340ADB.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -499,6 +507,10 @@
 				<File Id="561579131" Language="SFX">
 					<ShortName>creditos.wav</ShortName>
 					<Path>SFX\creditos_D79FB2B7.wem</Path>
+				</File>
+				<File Id="593905732" Language="SFX">
+					<ShortName>Med Kit.wav</ShortName>
+					<Path>SFX\Med Kit_38340ADB.wem</Path>
 				</File>
 				<File Id="639313971" Language="SFX">
 					<ShortName>Footsteps_Enemies_A_1.wav</ShortName>

@@ -21,6 +21,10 @@ public class MedKit : MonoBehaviour, IPickable
     [Header("Player Health UI Dependencies")]
     [SerializeField] private PlayerHealthUI playerHealthUI;
 
+    [Header("Audio Manager")]
+    [SerializeField] AudioManager audioManager;
+    [SerializeField] private string medKit;
+
     private bool isActive = true;
 
     public float CooldownTime => coolDownTime;
@@ -33,6 +37,10 @@ public class MedKit : MonoBehaviour, IPickable
             isActive = false;
             ModifyVisuals(cooldownMaterial, false);
             StartCooldown();
+            if (!AudioManager.muteSFX)
+            {
+                audioManager.PlaySound(medKit);
+            }
         }
     }
 

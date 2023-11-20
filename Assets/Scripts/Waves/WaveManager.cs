@@ -137,7 +137,7 @@ public class WaveManager : MonoBehaviour
             _currentWave.numberOfEnemies--;
             _nextSpawnTime = Time.time + _currentWave.spawnInterval;
 
-            if (_currentWave.numberOfEnemies <= Constants.ZERO)
+            if (_currentWave.numberOfEnemies <= Constants.ONE)
             {
                 _canSpawn = false;
             }

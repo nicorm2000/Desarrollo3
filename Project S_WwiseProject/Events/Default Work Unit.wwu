@@ -669,6 +669,27 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="MedKit" ID="{79A84A2D-4B9B-42A0-88B7-014DE323F8CC}">
+					<ChildrenList>
+						<Action Name="" ID="{024B9ED5-6C7D-43EC-A3BA-3DD1FC2DAF81}" ShortID="587548935">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Med Kit" ID="{2A81C5B0-C3BE-4563-A920-134B4CDAE10C}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0AA313B7-6F38-4B63-B6BE-A9D4ED881C89}" ShortID="362845226">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Med Kit" ID="{2A81C5B0-C3BE-4563-A920-134B4CDAE10C}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
