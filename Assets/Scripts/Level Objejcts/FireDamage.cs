@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class FireDamage : MonoBehaviour
@@ -9,7 +10,7 @@ public class FireDamage : MonoBehaviour
     [SerializeField] private PlayerHealth playerHealth;
 
     public PlayerData playerData;
-    private float lastDamageTime;
+    private bool canDamage = true;
 
     private void Start()
     {
@@ -20,11 +21,9 @@ public class FireDamage : MonoBehaviour
     {
         if (playerData.enterPlayer && !playerData.isDashing)
         {
-            if (Time.time - lastDamageTime >= damageCooldown)
+            if (canDamage)
             {
-                playerHealth.takeDamage(playerDamage);
-
-                lastDamageTime = Time.time;
+                StartCoroutine(DealDamageWithCooldown());
             }
         }
     }
@@ -48,5 +47,23 @@ public class FireDamage : MonoBehaviour
         {
             playerData.enterPlayer = false;
         }
+    }
+
+    private IEnumerator DealDamageWithCooldown()
+    {
+        canDamage = false;
+        playerHealth.takeDamage(playerDamage);
+        yield return new WaitForSeconds(damageCooldown);
+
+        if (gameObject.activeSelf)
+        {
+            canDamage = true;
+            playerData.enterPlayer = false;
+        }
+    }
+
+    private void OnDisable()
+    {
+        playerData.enterPlayer = false;
     }
 }

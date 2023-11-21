@@ -40,8 +40,6 @@ public class BBQController : MonoBehaviour
             }
 
             yield return new WaitForSeconds(cooldownDuration);
-
-            fireObjects[0].SetActive(false);
         }
     }
 }
