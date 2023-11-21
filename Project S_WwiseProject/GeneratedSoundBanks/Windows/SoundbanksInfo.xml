@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="540633228">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1996712222">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -314,7 +314,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="737767022" Name="Scream" ObjectPath="\Events\Default Work Unit\Scream" DurationType="OneShot" DurationMin="3.001604" DurationMax="3.001604">
+				<Event Id="737767022" Name="Scream" ObjectPath="\Events\Default Work Unit\Scream" DurationType="OneShot" DurationMin="3.501604" DurationMax="3.501604">
 					<IncludedMemoryFiles>
 						<File Id="78108305" Language="SFX">
 							<ShortName>Voice_Scream.wav</ShortName>

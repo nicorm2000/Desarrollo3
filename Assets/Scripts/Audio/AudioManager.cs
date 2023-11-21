@@ -1,8 +1,13 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
+    [SerializeField] private Image sfxImage;
+    [SerializeField] private Sprite sfxSpriteDefault;
+    [SerializeField] private Sprite sfxSpriteSelected;
+
     public static bool muteSFX = false;
     public static bool muteMusic = false;
     public UnityEvent onMute;
@@ -29,11 +34,13 @@ public class AudioManager : MonoBehaviour
 
         if (muteSFX)
         {
+            sfxImage.sprite = sfxSpriteSelected;
             StopSounds();
             onMute.Invoke();
         }
         else
         {
+            sfxImage.sprite = sfxSpriteDefault;
             onUnmute.Invoke();
         }
     }
