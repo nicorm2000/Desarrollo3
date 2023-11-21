@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Setup")]
-    [SerializeField] private float maxTime = 10f;
+    [SerializeField] private float maxTime;
     private float timer;
 
     public event Action<bool> onPlayerDeadChange;
@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Transitions increaseSizeOn;
 
     private float transitonOnTime = 1f;
-    private float transitonStart = 7f;
+    private float transitonStart = 0.9f;
 
     [Header("Camera Shake Configuration")]
     [SerializeField] private ScreenShake screenShake;
@@ -106,5 +106,7 @@ public class PlayerHealth : MonoBehaviour
             playerData.ResetPlayerStacks();
             mySceneManager.LoadSceneByName(loseScene);
         }
+
+        Debug.Log(timer);
     }
 }

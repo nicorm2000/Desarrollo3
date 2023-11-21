@@ -6320,6 +6320,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: maxTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: screenShake
       value: 
       objectReference: {fileID: 963194230}
