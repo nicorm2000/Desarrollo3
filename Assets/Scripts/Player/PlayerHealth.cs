@@ -49,6 +49,7 @@ public class PlayerHealth : MonoBehaviour
         if(playerData._isDead == true)
         {
             playerData.currentHealth = 0;
+            playerHealthUI.SetHealth(playerData.currentHealth);
             timer -= Time.deltaTime;
             PlayerDies();
         }
