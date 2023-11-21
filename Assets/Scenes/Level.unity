@@ -6416,6 +6416,14 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 771723441}
+    - target: {fileID: 3904972377429805774, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 524151
+      objectReference: {fileID: 0}
+    - target: {fileID: 3904972377429805774, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 4678239745530216768, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: m_Enabled
       value: 1

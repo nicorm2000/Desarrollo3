@@ -49,6 +49,7 @@ MonoBehaviour:
   screenShake: {fileID: 0}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   gunOverheat: {fileID: 8793071024267927714}
+  audioManager: {fileID: 0}
 --- !u!1 &1226622638706635938
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +134,59 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1594830241049893304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6866179577320966229}
+  - component: {fileID: 3904972377429805774}
+  m_Layer: 6
+  m_Name: Bullet_Collision
+  m_TagString: Player_BulletCollider
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6866179577320966229
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594830241049893304}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1973117993556571072}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3904972377429805774
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594830241049893304}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 524151
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.6015701, y: 0.49626654, z: 1}
+  m_Center: {x: -0.0013542175, y: -0.007349223, z: 0}
 --- !u!1 &1725156662470813297
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +267,7 @@ MonoBehaviour:
   screenShake: {fileID: 0}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   gunOverheat: {fileID: 5661613424138094487}
+  audioManager: {fileID: 0}
 --- !u!1 &3632110441304715640
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,6 +448,7 @@ MonoBehaviour:
   weaponRed: {fileID: 0}
   overHeatText: {fileID: 0}
   overHeatEffect: {fileID: 2858462186978751284}
+  audioManager: {fileID: 0}
 --- !u!1 &5569180708625838545
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +560,7 @@ MonoBehaviour:
   weaponRed: {fileID: 0}
   overHeatText: {fileID: 0}
   overHeatEffect: {fileID: 2858462186978751284}
+  audioManager: {fileID: 0}
 --- !u!1 &5852907201471573373
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,6 +787,7 @@ MonoBehaviour:
   weaponRed: {fileID: 0}
   overHeatText: {fileID: 0}
   overHeatEffect: {fileID: 2858462186978751284}
+  audioManager: {fileID: 0}
 --- !u!1 &7084124508468126883
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +975,7 @@ MonoBehaviour:
   screenShake: {fileID: 0}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   gunOverheat: {fileID: 7654313808540026409}
+  audioManager: {fileID: 0}
 --- !u!1 &7469210322841030696
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,6 +1027,7 @@ Transform:
   - {fileID: 8183599260786550366}
   - {fileID: 5048975881728947484}
   - {fileID: 2383452548935869646}
+  - {fileID: 6866179577320966229}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1674601915196207430
@@ -1132,8 +1192,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  levelToShop: {fileID: 0}
   abilities: {fileID: 464711979963327155}
   lookAtMouse: {fileID: 6429364731748367593}
+  baoBasket: {fileID: 0}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!114 &9160149820997449130
 MonoBehaviour:
@@ -1167,6 +1229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTime: 1
+  increaseSizeOn: {fileID: 0}
   screenShake: {fileID: 0}
   duration: 0.5
   animationCurve:
@@ -1206,6 +1269,7 @@ MonoBehaviour:
   playerHealthUI: {fileID: 7697177796423029369}
   mySceneManager: {fileID: 0}
   loseScene: Lose
+  audioManager: {fileID: 0}
 --- !u!114 &2257322957141227182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1255,21 +1319,22 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   waveManager: {fileID: 0}
   dashImage: {fileID: 0}
-  dash: 32
   dashColor: {r: 0, g: 1, b: 1, a: 1}
   dustParticles: {fileID: 2506248379278230478}
   slowerLogo: {fileID: 0}
   slowerImage: {fileID: 0}
-  slower: 101
   slowerColor: {r: 1, g: 1, b: 0, a: 1}
   prefabToSpawn: {fileID: 5360607739328788941, guid: 068c7a8d12bb2ec40ad0ff3fc3a882fc, type: 3}
   slowerLifetime: 10
   slowerZOffset: 0.1
   laserLogo: {fileID: 0}
   laserImage: {fileID: 0}
-  laser: 113
   laserColor: {r: 1, g: 0, b: 0, a: 1}
   laserObject: {fileID: 2297863809508382778}
+  audioManager: {fileID: 0}
+  roll: 
+  splat: 
+  laser: 113
 --- !u!114 &7697177796423029369
 MonoBehaviour:
   m_ObjectHideFlags: 0

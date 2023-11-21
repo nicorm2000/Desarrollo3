@@ -30,11 +30,11 @@ public class EnemyBullet : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player_BulletCollider"))
         {
-            if (!playerData.isDashing && !playerData._isDead) 
+            if (!playerData.isDashing && !playerData._isDead)
             {
                 playerHealth.takeDamage(damage);
             }
@@ -42,7 +42,7 @@ public class EnemyBullet : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
         {
             Destroy(gameObject);
         }
