@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AudioManager : MonoBehaviour
 {
     public static bool muteSFX = false;
     public static bool muteMusic = false;
-    public bool isPlaying = false;
+    public UnityEvent onMute;
+    public UnityEvent onUnmute;
 
     public void PlaySound(string audioEvent)
     {
@@ -21,27 +23,18 @@ public class AudioManager : MonoBehaviour
         AkSoundEngine.StopAll();
     }
 
-    public void Mute()
+    public void ToggleMute()
     {
         muteSFX = !muteSFX;
-        Debug.Log(muteSFX);
 
-        StopSounds();
-
-        //isPlaying = !isPlaying;
-        //Debug.Log(isPlaying);
-        /*if (!audioManager.isPlaying)
+        if (muteSFX)
         {
-            if (!AudioManager.mute)
-            {
-                audioManager.PlaySound(intro);
-            }
-            else
-            {
-                audioManager.StopSounds();
-            }
-
-            audioManager.isPlaying = true;
-        }*/
+            StopSounds();
+            onMute.Invoke();
+        }
+        else
+        {
+            onUnmute.Invoke();
+        }
     }
 }
