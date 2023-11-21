@@ -27,20 +27,26 @@ public class LevelAudio : MonoBehaviour
     {
         if (!AudioManager.muteSFX)
         {
-            PlaySounds();
+            PlaySFX();
+        }
+        if (!AudioManager.muteMusic)
+        {
+            PlayMusic();
         }
     }
 
     private void OnEnable()
     {
-        audioManager.onUnmute.AddListener(PlaySounds);
+        audioManager.onSFXUnmute.AddListener(PlaySFX);
+        audioManager.onMusicUnmute.AddListener(PlayMusic);
     }
 
     private void OnDisable()
     {
-        audioManager.onUnmute.RemoveListener(PlaySounds);
+        audioManager.onSFXUnmute.RemoveListener(PlaySFX);
+        audioManager.onMusicUnmute.RemoveListener(PlayMusic);
     }
-    private void PlaySounds()
+    private void PlaySFX()
     {
         audioManager.PlaySound(conversationL, conversationLGO);
         audioManager.PlaySound(conversationR, conversationRGO);
@@ -50,6 +56,10 @@ public class LevelAudio : MonoBehaviour
         {
             audioManager.PlaySound(conveyorBelt, conveyorBeltGO[i]);
         }
+    }
+
+    private void PlayMusic()
+    {
         audioManager.PlaySound(music);
     }
 }

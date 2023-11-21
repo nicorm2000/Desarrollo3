@@ -8,7 +8,7 @@ public class MainMenuAudio : MonoBehaviour
 
     private void Start()
     {
-        if (!AudioManager.muteSFX)
+        if (!AudioManager.muteMusic)
         {
             audioManager.PlaySound(intro);
         }
