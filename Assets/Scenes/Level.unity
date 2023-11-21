@@ -1103,9 +1103,15 @@ MonoBehaviour:
   pausePlaceHolder: {fileID: 1160231486}
   optionsPlaceHolder: {fileID: 1443194284}
   pauseImage: {fileID: 1774113946}
+  pauseImageIcon: {fileID: 2141111969}
   optionsImage: {fileID: 260157469}
+  optionsImageIcon: {fileID: 2136568957}
   activeButton: {fileID: 21300000, guid: b7db88f6c92c26541a6a730e93a362d3, type: 3}
+  activePauseButtonIcon: {fileID: 21300000, guid: 6a50bac7a8b66f9428d0af62026569c2, type: 3}
+  activeOptionsButtonIcon: {fileID: 21300000, guid: 99c29c082045078469f801d9307c7ff4, type: 3}
   inactiveButton: {fileID: 21300000, guid: 18ec6aa2551a1214db29e74f2a70b532, type: 3}
+  inactivePauseButtonIcon: {fileID: 21300000, guid: 38ffb719de71879488bcd0bb58ef5d36, type: 3}
+  inactiveOptionsButtonIcon: {fileID: 21300000, guid: 4e7d316c4b4676f4c85c2c694a8728f7, type: 3}
   mySceneManager: {fileID: 433192595}
   sceneName: MainMenu
   audioManager: {fileID: 1351502573}
@@ -19004,7 +19010,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1370068669
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30532,7 +30538,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 99c29c082045078469f801d9307c7ff4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e7d316c4b4676f4c85c2c694a8728f7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

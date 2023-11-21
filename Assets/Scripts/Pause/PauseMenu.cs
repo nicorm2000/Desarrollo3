@@ -15,9 +15,15 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pausePlaceHolder;
     [SerializeField] private GameObject optionsPlaceHolder;
     [SerializeField] private Image pauseImage;
+    [SerializeField] private Image pauseImageIcon;
     [SerializeField] private Image optionsImage;
+    [SerializeField] private Image optionsImageIcon;
     [SerializeField] private Sprite activeButton;
+    [SerializeField] private Sprite activePauseButtonIcon;
+    [SerializeField] private Sprite activeOptionsButtonIcon;
     [SerializeField] private Sprite inactiveButton;
+    [SerializeField] private Sprite inactivePauseButtonIcon;
+    [SerializeField] private Sprite inactiveOptionsButtonIcon;
 
     [Header("Scene Manager Dependencies")]
     [SerializeField] private MySceneManager mySceneManager;
@@ -113,7 +119,9 @@ public class PauseMenu : MonoBehaviour
         optionsPlaceHolder.SetActive(false);
         pausePlaceHolder.SetActive(true);
         ChangeButtonImage(pauseImage, pausePlaceHolder);
+        pauseImageIcon.sprite = activePauseButtonIcon;
         ChangeButtonImage(optionsImage, optionsPlaceHolder);
+        optionsImageIcon.sprite = inactiveOptionsButtonIcon;
     }
 
     /// <summary>
@@ -128,6 +136,8 @@ public class PauseMenu : MonoBehaviour
         pausePlaceHolder.SetActive(false);
         optionsPlaceHolder.SetActive(true);
         ChangeButtonImage(optionsImage, optionsPlaceHolder);
+        optionsImageIcon.sprite = activeOptionsButtonIcon;
         ChangeButtonImage(pauseImage, pausePlaceHolder);
+        pauseImageIcon.sprite = inactivePauseButtonIcon;
     }
 }
