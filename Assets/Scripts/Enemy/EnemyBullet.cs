@@ -34,7 +34,7 @@ public class EnemyBullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (!playerData.isDashing) 
+            if (!playerData.isDashing && !playerData._isDead) 
             {
                 playerHealth.takeDamage(damage);
             }

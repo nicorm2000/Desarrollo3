@@ -48,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
     {   
         if(playerData._isDead == true)
         {
+            playerData.currentHealth = 0;
             timer -= Time.deltaTime;
             PlayerDies();
         }
@@ -59,16 +60,18 @@ public class PlayerHealth : MonoBehaviour
     /// <param name="damage">The amount of damage to inflict.</param>
     public void takeDamage(float damage) 
     {
-        StartCoroutine(screenShake.Shake(duration, animationCurve));
-        StartCoroutine(playerHealthUI.ChangeBorderColor());
-
-        if (!AudioManager.muteSFX)
+        if(playerData._isDead == false) 
         {
-            audioManager.PlaySound(playerData.damageHit);
+            playerData.currentHealth -= damage;
+            playerHealthUI.SetHealth(playerData.currentHealth);
         }
 
-        playerData.currentHealth -= damage;
-        playerHealthUI.SetHealth(playerData.currentHealth);
+        if (!AudioManager.muteSFX && !playerData._isDead) 
+        {
+            audioManager.PlaySound(playerData.damageHit);
+            StartCoroutine(screenShake.Shake(duration, animationCurve));
+            StartCoroutine(playerHealthUI.ChangeBorderColor());
+        }
 
         if (playerData.currentHealth <= Constants.ZERO_F)
         {
@@ -80,6 +83,7 @@ public class PlayerHealth : MonoBehaviour
             playerData._isDead = true;
             onPlayerDeadChange?.Invoke(playerData._isDead);
         }
+
         else
         {
             playerData._isDead = false;
@@ -93,7 +97,6 @@ public class PlayerHealth : MonoBehaviour
     private void PlayerDies()
     {
         playerData.ResetPlayerFireDamage();
-        playerData.currentHealth = Constants.ZERO_F;
 
         if (timer <= transitonStart)
         {

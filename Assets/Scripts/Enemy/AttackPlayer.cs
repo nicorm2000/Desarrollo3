@@ -28,7 +28,7 @@ public class AttackPlayer : MonoBehaviour
     {
         if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO && !playerData.isDashing)
         {
-            if (!invulnerability)
+            if (!invulnerability && !playerData._isDead)
             {
                 if (!AudioManager.muteSFX)
                 {

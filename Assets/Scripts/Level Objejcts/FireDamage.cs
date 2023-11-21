@@ -21,7 +21,7 @@ public class FireDamage : MonoBehaviour
     {
         if (playerData.enterPlayer && !playerData.isDashing)
         {
-            if (canDamage)
+            if (canDamage && !playerData._isDead)
             {
                 StartCoroutine(DealDamageWithCooldown());
             }
