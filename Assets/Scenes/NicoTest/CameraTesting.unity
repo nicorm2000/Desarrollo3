@@ -1174,7 +1174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 363886499}
   moveSpeed: 20
-  returnSpeedTime: 1
+  returnSpeedTime: 0.1
   returnAnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -1199,6 +1199,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  maxDraggingDistance: 5
   offsetZ: -10
 --- !u!1 &1626310442
 GameObject:

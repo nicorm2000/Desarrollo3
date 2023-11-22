@@ -8,12 +8,14 @@ public class CameraDrag : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float returnSpeedTime;
     [SerializeField] private AnimationCurve returnAnimationCurve;
+    [SerializeField] private float maxDraggingDistance;
 
     [Header("Cammera Configuration")]
     [SerializeField] private float offsetZ;
 
     private Vector3 initialPosition;
     private Vector3 releasePosition;
+    private Vector3 dragStartPosition;
     private float timer = 0f;
     private bool isDragging = false;
     private Coroutine coroutine = null;
@@ -53,6 +55,19 @@ public class CameraDrag : MonoBehaviour
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
             Vector3 movement = new Vector3(-mouseX, -mouseY, 0f) * moveSpeed * Time.deltaTime;
+            Vector3 newPosition = transform.position + movement;
+
+            if (Vector3.Distance(dragStartPosition, newPosition) > maxDraggingDistance)
+            {
+                isDragging = false;
+                releasePosition = transform.position;
+                if (coroutine == null)
+                {
+                    coroutine = StartCoroutine(ReturnToOriginalPosition());
+                }
+                return;
+            }
+
             transform.Translate(movement, Space.World);
         }
     }
@@ -64,14 +79,7 @@ public class CameraDrag : MonoBehaviour
     private void StartDragging(Vector2 mousePosition)
     {
         isDragging = true;
-        //if (Vector2.Distance(mousePosition, new Vector2(5f, 5f)) < 5f)
-        //{
-        //    isDragging = true;
-        //}
-        //else
-        //{
-        //    isDragging = false;
-        //}
+        dragStartPosition = transform.position;
     }
 
     /// <summary>
