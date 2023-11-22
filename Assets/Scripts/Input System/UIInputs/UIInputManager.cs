@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class UIInputManger : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class UIInputManger : MonoBehaviour
     [Header("Cursor Dependencies")]
     [SerializeField] private CursorObject cursorObject;
 
+    public Vector2 mousePosition { get; private set; }
+    
     private UIInputs action;
 
     private void Awake()
@@ -27,6 +30,11 @@ public class UIInputManger : MonoBehaviour
         action.UI.Pause.performed += _ => IsPaused();
 
         action.UI.Map.performed += _ => IsMiniMap();
+    }
+
+    public void OnMousePos(InputValue value)
+    {
+        mousePosition = value.Get<Vector2>();
     }
 
     private void IsPaused()

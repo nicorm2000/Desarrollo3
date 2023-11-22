@@ -15,6 +15,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "MousePos",
+                    "type": "Value",
+                    "id": "f4b08ae6-dbca-4ac4-8bbc-3a7e9ec875db",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Map",
                     "type": "Button",
                     "id": "cbe9aa74-9bab-4864-8679-6e3ccbc8dddf",
@@ -66,6 +75,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Map",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d32a7606-482d-49db-9f81-5e98a63a464e",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MousePos",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
