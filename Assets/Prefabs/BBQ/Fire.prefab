@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDamage: 20
-  enemyDamage: 0.5
+  enemyDamage: 20
   damageCooldown: 1
   enemyHealth: {fileID: -5129004534547528821, guid: 1d26883000583fa4d95ee31b544ed7ed, type: 3}
   playerHealth: {fileID: 0}

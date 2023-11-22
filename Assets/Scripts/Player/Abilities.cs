@@ -24,6 +24,7 @@ public class Abilities : MonoBehaviour
 
     [Header("Slower")]
     [SerializeField] private GameObject slowerLogo;
+    [SerializeField] private GameObject slowerText;
     [SerializeField] private Image slowerImage;
     [SerializeField] private Color slowerColor = Color.cyan;
     [SerializeField] private GameObject prefabToSpawn;
@@ -34,6 +35,7 @@ public class Abilities : MonoBehaviour
 
     [Header("Laser")]
     [SerializeField] private GameObject laserLogo;
+    [SerializeField] private GameObject laserText;
     [SerializeField] private Image laserImage;
     [SerializeField] private Color laserColor = Color.cyan;
     [SerializeField] private GameObject laserObject;
@@ -73,6 +75,7 @@ public class Abilities : MonoBehaviour
         if (waveManager.currentWaveIndex >= 9)
         {
             laserLogo.SetActive(true);
+            laserText.SetActive(true);
 
             if (isCooldownLaser)
             {
@@ -117,6 +120,7 @@ public class Abilities : MonoBehaviour
         if (waveManager.currentWaveIndex >= 4)
         {
             slowerLogo.SetActive(true);
+            slowerText.SetActive(true);
 
             if (isCooldownSlower)
             {
