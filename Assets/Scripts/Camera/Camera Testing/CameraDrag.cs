@@ -64,6 +64,14 @@ public class CameraDrag : MonoBehaviour
     private void StartDragging(Vector2 mousePosition)
     {
         isDragging = true;
+        //if (Vector2.Distance(mousePosition, new Vector2(5f, 5f)) < 5f)
+        //{
+        //    isDragging = true;
+        //}
+        //else
+        //{
+        //    isDragging = false;
+        //}
     }
 
     /// <summary>

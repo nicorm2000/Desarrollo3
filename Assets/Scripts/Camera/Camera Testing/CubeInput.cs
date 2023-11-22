@@ -43,29 +43,39 @@ public class CubeInput : MonoBehaviour
             OnRightMouseButtonUp?.Invoke(Input.mousePosition);
         }
 
-        if (isRightMouseButtonHeld)
+        if (Input.GetMouseButtonDown(1))
         {
-            if (!IsMouseInsideScreen())
-            {
-                OnRightMouseButtonDown?.Invoke(Input.mousePosition);
-            }
-            else
-            {
-                OnRightMouseButtonUp?.Invoke(Input.mousePosition);
-            }
+            OnRightMouseButtonDown?.Invoke(Input.mousePosition);
         }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            OnRightMouseButtonUp?.Invoke(Input.mousePosition);
+        }
+
+        //if (isRightMouseButtonHeld)
+        //{
+        //    if (!IsMouseInsideScreen())
+        //    {
+        //        OnRightMouseButtonDown?.Invoke(Input.mousePosition);
+        //    }
+        //    else
+        //    {
+        //        OnRightMouseButtonUp?.Invoke(Input.mousePosition);
+        //    }
+        //}
     }
 
     /// <summary>
     /// Checks if the mouse is at the edge of the screen.
     /// </summary>
     /// <returns>True if the mouse is at the screen edge, false otherwise.</returns>
-    public bool IsMouseInsideScreen()
-    {
-        Vector3 mousePosition = Input.mousePosition;
-        return mousePosition.x <= screenEdgeThreshold || mousePosition.x >= Screen.width - screenEdgeThreshold || 
-            mousePosition.y <= screenEdgeThreshold || mousePosition.y >= Screen.height - screenEdgeThreshold;
-    }
+    //public bool IsMouseInsideScreen()
+    //{
+    //    Vector3 mousePosition = Input.mousePosition;
+    //    return mousePosition.x <= screenEdgeThreshold || mousePosition.x >= Screen.width - screenEdgeThreshold || 
+    //        mousePosition.y <= screenEdgeThreshold || mousePosition.y >= Screen.height - screenEdgeThreshold;
+    //}
 
     //Better camera movement
     //if (Input.GetMouseButtonDown(1))
