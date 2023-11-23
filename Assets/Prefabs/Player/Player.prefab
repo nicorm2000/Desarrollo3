@@ -176,7 +176,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 524151
@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 465f59f8c03e4004783549a309762a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 1
+  maxTime: 2.5
   increaseSizeOn: {fileID: 0}
   screenShake: {fileID: 0}
   duration: 0.5
@@ -1322,19 +1322,21 @@ MonoBehaviour:
   dashColor: {r: 0, g: 1, b: 1, a: 1}
   dustParticles: {fileID: 2506248379278230478}
   slowerLogo: {fileID: 0}
+  slowerText: {fileID: 0}
   slowerImage: {fileID: 0}
   slowerColor: {r: 1, g: 1, b: 0, a: 1}
   prefabToSpawn: {fileID: 5360607739328788941, guid: 068c7a8d12bb2ec40ad0ff3fc3a882fc, type: 3}
   slowerLifetime: 10
   slowerZOffset: 0.1
   laserLogo: {fileID: 0}
+  laserText: {fileID: 0}
   laserImage: {fileID: 0}
   laserColor: {r: 1, g: 0, b: 0, a: 1}
   laserObject: {fileID: 2297863809508382778}
   audioManager: {fileID: 0}
-  roll: 
-  splat: 
-  laser: 113
+  roll: Roll
+  splat: Splat
+  laser: Laser
 --- !u!114 &7697177796423029369
 MonoBehaviour:
   m_ObjectHideFlags: 0
