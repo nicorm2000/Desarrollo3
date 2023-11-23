@@ -6,32 +6,27 @@ public class CubeInput : MonoBehaviour
     [Header("Player Configuration")]
     [SerializeField] private float moveSpeed;
 
-    [Header("Interactable Space")]
-    [SerializeField] private float screenEdgeThreshold;
-
     public static event Action<Vector2> OnRightMouseButtonDown;
     public static event Action<Vector2> OnRightMouseButtonUp;
 
-    private bool isRightMouseButtonHeld = false;
-
     private void Update()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.position += new Vector3(0, 5f, 0) * moveSpeed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.position += new Vector3(0, -5f, 0) * moveSpeed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.position += new Vector3(-5f, 0, 0) * moveSpeed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position += new Vector3(5f, 0, 0) * moveSpeed * Time.deltaTime;
-        }
+        //if (Input.GetKey(KeyCode.W))
+        //{
+        //    transform.position += new Vector3(0, 5f, 0) * moveSpeed * Time.deltaTime;
+        //}
+        //if (Input.GetKey(KeyCode.S))
+        //{
+        //    transform.position += new Vector3(0, -5f, 0) * moveSpeed * Time.deltaTime;
+        //}
+        //if (Input.GetKey(KeyCode.A))
+        //{
+        //    transform.position += new Vector3(-5f, 0, 0) * moveSpeed * Time.deltaTime;
+        //}
+        //if (Input.GetKey(KeyCode.D))
+        //{
+        //    transform.position += new Vector3(5f, 0, 0) * moveSpeed * Time.deltaTime;
+        //}
 
         if (Input.GetMouseButtonDown(1))
         {

@@ -98,6 +98,33 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""CameraDragPress"",
+                    ""type"": ""Button"",
+                    ""id"": ""a4aaf80f-1d5c-4d25-8dd0-bfb49a42e8ab"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CameraDragNotPress"",
+                    ""type"": ""Button"",
+                    ""id"": ""62981984-cbc3-420e-93ee-dfff6f31006e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CameraPos"",
+                    ""type"": ""Value"",
+                    ""id"": ""a91fc398-ca27-4cb6-a556-cbd4a4bef3b3"",
+                    ""expectedControlType"": ""Delta"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -232,6 +259,39 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""MousePosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eb2c7f4f-e817-479e-9de2-4be529f74498"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraDragPress"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""09658738-5fac-4a6a-9d3a-828491e452e5"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraDragNotPress"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8ad5a30b-f2d1-4193-8760-fa17f6314955"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraPos"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -248,6 +308,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_Slower = m_Player.FindAction("Slower", throwIfNotFound: true);
         m_Player_Laser = m_Player.FindAction("Laser", throwIfNotFound: true);
         m_Player_MousePosition = m_Player.FindAction("MousePosition", throwIfNotFound: true);
+        m_Player_CameraDragPress = m_Player.FindAction("CameraDragPress", throwIfNotFound: true);
+        m_Player_CameraDragNotPress = m_Player.FindAction("CameraDragNotPress", throwIfNotFound: true);
+        m_Player_CameraPos = m_Player.FindAction("CameraPos", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -317,6 +380,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Slower;
     private readonly InputAction m_Player_Laser;
     private readonly InputAction m_Player_MousePosition;
+    private readonly InputAction m_Player_CameraDragPress;
+    private readonly InputAction m_Player_CameraDragNotPress;
+    private readonly InputAction m_Player_CameraPos;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -329,6 +395,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Slower => m_Wrapper.m_Player_Slower;
         public InputAction @Laser => m_Wrapper.m_Player_Laser;
         public InputAction @MousePosition => m_Wrapper.m_Player_MousePosition;
+        public InputAction @CameraDragPress => m_Wrapper.m_Player_CameraDragPress;
+        public InputAction @CameraDragNotPress => m_Wrapper.m_Player_CameraDragNotPress;
+        public InputAction @CameraPos => m_Wrapper.m_Player_CameraPos;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -362,6 +431,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @MousePosition.started += instance.OnMousePosition;
             @MousePosition.performed += instance.OnMousePosition;
             @MousePosition.canceled += instance.OnMousePosition;
+            @CameraDragPress.started += instance.OnCameraDragPress;
+            @CameraDragPress.performed += instance.OnCameraDragPress;
+            @CameraDragPress.canceled += instance.OnCameraDragPress;
+            @CameraDragNotPress.started += instance.OnCameraDragNotPress;
+            @CameraDragNotPress.performed += instance.OnCameraDragNotPress;
+            @CameraDragNotPress.canceled += instance.OnCameraDragNotPress;
+            @CameraPos.started += instance.OnCameraPos;
+            @CameraPos.performed += instance.OnCameraPos;
+            @CameraPos.canceled += instance.OnCameraPos;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -390,6 +468,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @MousePosition.started -= instance.OnMousePosition;
             @MousePosition.performed -= instance.OnMousePosition;
             @MousePosition.canceled -= instance.OnMousePosition;
+            @CameraDragPress.started -= instance.OnCameraDragPress;
+            @CameraDragPress.performed -= instance.OnCameraDragPress;
+            @CameraDragPress.canceled -= instance.OnCameraDragPress;
+            @CameraDragNotPress.started -= instance.OnCameraDragNotPress;
+            @CameraDragNotPress.performed -= instance.OnCameraDragNotPress;
+            @CameraDragNotPress.canceled -= instance.OnCameraDragNotPress;
+            @CameraPos.started -= instance.OnCameraPos;
+            @CameraPos.performed -= instance.OnCameraPos;
+            @CameraPos.canceled -= instance.OnCameraPos;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -417,5 +504,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnSlower(InputAction.CallbackContext context);
         void OnLaser(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
+        void OnCameraDragPress(InputAction.CallbackContext context);
+        void OnCameraDragNotPress(InputAction.CallbackContext context);
+        void OnCameraPos(InputAction.CallbackContext context);
     }
 }

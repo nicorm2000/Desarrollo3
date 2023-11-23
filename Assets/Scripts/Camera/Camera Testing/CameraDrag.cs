@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ public class CameraDrag : MonoBehaviour
 
     [Header("Cammera Configuration")]
     [SerializeField] private float offsetZ;
+
+    [SerializeField] PlayerInputManager playerInputManager;
 
     private Vector3 initialPosition;
     private Vector3 releasePosition;
@@ -45,6 +48,8 @@ public class CameraDrag : MonoBehaviour
     {
         initialPosition = new Vector3(targetTransform.position.x, targetTransform.position.y, targetTransform.position.z + offsetZ);
 
+
+
         if (!isDragging && coroutine == null)
         {
             transform.position = initialPosition;
@@ -52,9 +57,13 @@ public class CameraDrag : MonoBehaviour
 
         if (isDragging)
         {
-            float mouseX = Input.GetAxis("Mouse X");
-            float mouseY = Input.GetAxis("Mouse Y");
+            //float mouseX = Input.GetAxis("Mouse X");
+            //float mouseY = Input.GetAxis("Mouse Y");
+            float mouseX = playerInputManager.mouseDelta.x;
+            float mouseY = playerInputManager.mouseDelta.y;
+            Debug.Log(mouseY);
             Vector3 movement = new Vector3(-mouseX, -mouseY, 0f) * moveSpeed * Time.deltaTime;
+            //Vector3 movement = new Vector3(-playerInputManager.mousePosition.x, -playerInputManager.mousePosition.y, 0f) * moveSpeed * Time.deltaTime;
             Vector3 newPosition = transform.position + movement;
 
             if (Vector3.Distance(dragStartPosition, newPosition) > maxDraggingDistance)
