@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,10 +11,13 @@ public class CameraDrag : MonoBehaviour
     [SerializeField] private AnimationCurve returnAnimationCurve;
     [SerializeField] private float maxDraggingDistance;
 
-    [Header("Cammera Configuration")]
+    [Header("Camera Configuration")]
     [SerializeField] private float offsetZ;
 
-    private Vector3 initialPosition;
+    [Header("Player Input Manager Dependencies")]
+    [SerializeField] private PlayerInputManager playerInputManager;
+
+    public static Vector3 initialPosition;
     private Vector3 releasePosition;
     private Vector3 dragStartPosition;
     private float timer = 0f;
@@ -23,10 +27,10 @@ public class CameraDrag : MonoBehaviour
     /// <summary>
     /// Subscribes to the right mouse button down and up events.
     /// </summary>
-    private void Start()
+    private void Awake()
     {
-        CubeInput.OnRightMouseButtonDown += StartDragging;
-        CubeInput.OnRightMouseButtonUp += StopDragging;
+        PlayerInputManager.OnRightMouseButtonDown += StartDragging;
+        PlayerInputManager.OnRightMouseButtonUp += StopDragging;
     }
 
     /// <summary>
@@ -34,8 +38,8 @@ public class CameraDrag : MonoBehaviour
     /// </summary>
     private void OnDestroy()
     {
-        CubeInput.OnRightMouseButtonDown -= StartDragging;
-        CubeInput.OnRightMouseButtonUp -= StopDragging;
+        PlayerInputManager.OnRightMouseButtonDown -= StartDragging;
+        PlayerInputManager.OnRightMouseButtonUp -= StopDragging;
     }
 
     /// <summary>
@@ -52,8 +56,8 @@ public class CameraDrag : MonoBehaviour
 
         if (isDragging)
         {
-            float mouseX = Input.GetAxis("Mouse X");
-            float mouseY = Input.GetAxis("Mouse Y");
+            float mouseX = playerInputManager.mouseDelta.x;
+            float mouseY = playerInputManager.mouseDelta.y;
             Vector3 movement = new Vector3(-mouseX, -mouseY, 0f) * moveSpeed * Time.deltaTime;
             Vector3 newPosition = transform.position + movement;
 
@@ -89,10 +93,10 @@ public class CameraDrag : MonoBehaviour
     private void StopDragging(Vector2 mousePosition)
     {
         isDragging = false;
-        releasePosition = transform.position;
 
         if (coroutine == null)
         {
+            releasePosition = transform.position;
             coroutine = StartCoroutine(ReturnToOriginalPosition());
         }
     }
@@ -110,12 +114,6 @@ public class CameraDrag : MonoBehaviour
             float curveValue = returnAnimationCurve.Evaluate(progress);
             transform.position = Vector3.Lerp(releasePosition, initialPosition, curveValue);
             timer += Time.deltaTime;
-
-            if (isDragging)
-            {
-                transform.position = initialPosition;
-                yield return null;
-            }
 
             yield return null;
         }

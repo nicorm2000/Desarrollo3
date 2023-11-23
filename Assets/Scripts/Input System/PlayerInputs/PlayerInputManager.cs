@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,6 +19,29 @@ public class PlayerInputManager : MonoBehaviour
     [SerializeField] private PlayerData playerData;
 
     public Vector2 mousePosition { get; private set; }
+    public Vector2 mouseDelta { get; private set; }
+
+    public static bool isRightMouseButtonPressed { get; private set; }
+
+    public static event Action<Vector2> OnRightMouseButtonDown;
+    public static event Action<Vector2> OnRightMouseButtonUp;
+
+    public void OnCameraPos(InputValue value)
+    {
+        mouseDelta = value.Get<Vector2>();
+    }
+
+    public void OnCameraDragPress()
+    {
+        isRightMouseButtonPressed = true;
+        OnRightMouseButtonDown?.Invoke(mousePosition);
+    }
+
+    public void OnCameraDragNotPress()
+    {
+        isRightMouseButtonPressed = false;
+        OnRightMouseButtonUp?.Invoke(mousePosition);
+    }
 
     public void OnMove(InputValue value)
     {
