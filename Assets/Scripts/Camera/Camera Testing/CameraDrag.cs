@@ -6,7 +6,7 @@ public class CameraDrag : MonoBehaviour
 {
     [Header("Drag Configuration")]
     [SerializeField] private Transform targetTransform;
-    [SerializeField] private float moveSpeed;
+    [SerializeField] private float cameraDragSpeed;
     [SerializeField] private float returnSpeedTime;
     [SerializeField] private AnimationCurve returnAnimationCurve;
     [SerializeField] private float maxDraggingDistance;
@@ -58,7 +58,7 @@ public class CameraDrag : MonoBehaviour
         {
             float mouseX = playerInputManager.mouseDelta.x;
             float mouseY = playerInputManager.mouseDelta.y;
-            Vector3 movement = new Vector3(-mouseX, -mouseY, 0f) * moveSpeed * Time.deltaTime;
+            Vector3 movement = new Vector3(-mouseX, -mouseY, 0f) * cameraDragSpeed * Time.deltaTime;
             Vector3 newPosition = transform.position + movement;
 
             if (Vector3.Distance(dragStartPosition, newPosition) > maxDraggingDistance)

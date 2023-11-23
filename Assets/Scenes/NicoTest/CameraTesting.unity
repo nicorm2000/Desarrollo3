@@ -1051,7 +1051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 277167886}
-  moveSpeed: 2
+  cameraDragSpeed: 2
   returnSpeedTime: 1
   returnAnimationCurve:
     serializedVersion: 2
