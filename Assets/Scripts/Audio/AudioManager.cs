@@ -11,7 +11,7 @@ public class AudioManager : MonoBehaviour
     public static bool muteSFX = false;
     public UnityEvent onSFXMute;
     public UnityEvent onSFXUnmute;
-    
+
     [Header("Music Config")]
     [SerializeField] private Image musicImage;
     [SerializeField] private Sprite musicSpriteDefault;
@@ -20,21 +20,66 @@ public class AudioManager : MonoBehaviour
     public UnityEvent onMusicMute;
     public UnityEvent onMusicUnmute;
 
+    /// <summary>
+    /// Start is called before the first frame update. Sets the appropriate sprite for the SFX and music buttons based on the mute state.
+    /// </summary>
+    private void Start()
+    {
+        if (sfxImage != null)
+        {
+            if (muteSFX)
+            {
+                sfxImage.sprite = sfxSpriteSelected;
+            }
+            else
+            {
+                sfxImage.sprite = sfxSpriteDefault;
+            }
+        }
+
+        if (musicImage != null)
+        {
+            if (muteMusic)
+            {
+                musicImage.sprite = musicSpriteSelected;
+            }
+            else
+            {
+                musicImage.sprite = musicSpriteDefault;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Plays a sound using the specified audio event and game object.
+    /// </summary>
+    /// <param name="audioEvent">The name of the audio event to play.</param>
     public void PlaySound(string audioEvent)
     {
         AkSoundEngine.PostEvent(audioEvent, gameObject);
     }
 
+    /// <summary>
+    /// Plays a sound using the specified audio event and game object.
+    /// </summary>
+    /// <param name="audioEvent">The name of the audio event to play.</param>
+    /// <param name="gameObject">The game object associated with the sound.</param>
     public void PlaySound(string audioEvent, GameObject gameObject)
     {
         AkSoundEngine.PostEvent(audioEvent, gameObject);
     }
 
+    /// <summary>
+    /// Stops all currently playing sounds.
+    /// </summary>
     public void StopSounds()
     {
         AkSoundEngine.StopAll();
     }
 
+    /// <summary>
+    /// Toggles the mute state for SFX. Updates the sprite and invokes the appropriate events.
+    /// </summary>
     public void ToggleMute()
     {
         muteSFX = !muteSFX;
@@ -51,6 +96,9 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Toggles the mute state for music. Updates the sprite, stops all sounds, and invokes the appropriate events.
+    /// </summary>
     public void ToggleMusicMute()
     {
         muteMusic = !muteMusic;

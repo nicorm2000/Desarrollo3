@@ -10,7 +10,22 @@ public class MainMenuAudio : MonoBehaviour
     {
         if (!AudioManager.muteMusic)
         {
-            audioManager.PlaySound(intro);
+            PlayMusic();
         }
+    }
+
+    private void OnEnable()
+    {
+        audioManager.onMusicUnmute.AddListener(PlayMusic);
+    }
+
+    private void OnDisable()
+    {
+        audioManager.onMusicUnmute.RemoveListener(PlayMusic);
+    }
+
+    private void PlayMusic()
+    {
+        audioManager.PlaySound(intro);
     }
 }

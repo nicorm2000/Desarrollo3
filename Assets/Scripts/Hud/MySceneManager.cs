@@ -19,6 +19,7 @@ public class MySceneManager : MonoBehaviour
         StartCoroutine(increaseSizeOn.DisableTransition(timeToWait));
 
         audioManager.StopSounds();
+
         if (!AudioManager.muteSFX)
         {
             audioManager.PlaySound(click);
@@ -56,7 +57,11 @@ public class MySceneManager : MonoBehaviour
             UnityEditor.EditorApplication.isPlaying = false;
         }
 #endif
-        audioManager.PlaySound(click);
+        if (!AudioManager.muteSFX)
+        {
+            audioManager.PlaySound(click);
+        }
+
         Application.Quit();
     }
 
@@ -66,7 +71,11 @@ public class MySceneManager : MonoBehaviour
     /// <param name="link">The URL to open.</param>
     public void OpenURL(string link)
     {
-        audioManager.PlaySound(click);
+        if (!AudioManager.muteSFX)
+        {
+            audioManager.PlaySound(click);
+        }
+
         Application.OpenURL(link);
     }
 }
