@@ -63,12 +63,6 @@ public class CameraDrag : MonoBehaviour
 
             if (Vector3.Distance(dragStartPosition, newPosition) > maxDraggingDistance)
             {
-                isDragging = false;
-                releasePosition = transform.position;
-                if (coroutine == null)
-                {
-                    coroutine = StartCoroutine(ReturnToOriginalPosition());
-                }
                 return;
             }
 
