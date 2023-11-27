@@ -46,8 +46,6 @@ This game was also possible thanks to the support of these professors:
 - **Franco Guerra**
 - **Silvina Lemos Hoffmann**
 
-OTRAS PERSONAS A LAS QUE QUIERAN AGRADECERLES ACÁ, SINO SACAR ESTE TEXTO
-
 
 ## Links
 
