@@ -1845,7 +1845,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 94b4ca618052466429265eac94719448, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76c523626fcf94d4684600bff34c9c8e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3317,10 +3317,19 @@ MonoBehaviour:
   sfxImage: {fileID: 0}
   sfxSpriteDefault: {fileID: 0}
   sfxSpriteSelected: {fileID: 0}
-  onMute:
+  onSFXMute:
     m_PersistentCalls:
       m_Calls: []
-  onUnmute:
+  onSFXUnmute:
+    m_PersistentCalls:
+      m_Calls: []
+  musicImage: {fileID: 0}
+  musicSpriteDefault: {fileID: 0}
+  musicSpriteSelected: {fileID: 0}
+  onMusicMute:
+    m_PersistentCalls:
+      m_Calls: []
+  onMusicUnmute:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1595739138
