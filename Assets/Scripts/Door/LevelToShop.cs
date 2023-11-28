@@ -26,6 +26,10 @@ public class LevelToShop : MonoBehaviour
     [Header("GameObjects to Deactivate")]
     [SerializeField] private GameObject basket;
 
+    [Header("Enemies Movement Dependencies")]
+    [SerializeField] private AIChase[] aiChase;
+    [SerializeField] private AIShooterChase aIShooterChase;
+
     [Header("Audio Manager")]
     [SerializeField] AudioManager audioManager;
 
@@ -66,6 +70,9 @@ public class LevelToShop : MonoBehaviour
         }
 
         StartCoroutine(TeleportToShop(timeToWaitTransition));
+        aiChase[0].EnemiesCanNotMove();
+        aiChase[1].EnemiesCanNotMove();
+        aIShooterChase.EnemyShooterCanNotMove();
     }
 
     public IEnumerator TeleportToShop(float timeToWait) 

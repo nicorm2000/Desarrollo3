@@ -40,6 +40,9 @@ public class WaveManager : MonoBehaviour
     [SerializeField] AudioManager audioManager;
     [SerializeField] private string waveBegins;
 
+    [Header("Enemies Dependencies")]
+    [SerializeField] private EnemyData[] enemyData;
+
     public int currentWaveIndex { get; private set; }
 
     private int _maxWaves = Constants.ROUNDS_BETWEEN_SHOPS;
@@ -52,6 +55,7 @@ public class WaveManager : MonoBehaviour
     /// </summary>
     private void Start()
     {
+        ResetEnemiesValues();
         waveUI.ShowWaveText(waves[currentWaveIndex].waveIndex);
     }
 
@@ -160,5 +164,13 @@ public class WaveManager : MonoBehaviour
     private void SetShopWaves()
     {
         _maxWaves += Constants.ROUNDS_BETWEEN_SHOPS;
+    }
+
+    private void ResetEnemiesValues()
+    {
+        for (int i = 0; enemyData.Length > i; i++)
+        {
+            enemyData[i].ResetEnemiesValues();
+        }
     }
 }

@@ -10,6 +10,10 @@ public class SelectWeapon : MonoBehaviour
     [Header("Audio Manager")]
     [SerializeField] AudioManager audioManager;
 
+    [Header("Enemies Movement Dependencies")]
+    [SerializeField] private AIChase[] aIChase;
+    [SerializeField] private AIShooterChase aIShooterChase;
+
     private float transitonOnTime = 1f;
 
     [SerializeField] private GameObject levelSpawn;
@@ -60,6 +64,9 @@ public class SelectWeapon : MonoBehaviour
         }
 
         StartCoroutine(PlayerTeleport(transitonOnTime));
+        aIChase[0].EnemiesCanMove();
+        aIChase[1].EnemiesCanMove();
+        aIShooterChase.EnemyShooterCanMove();
     }
 
     public IEnumerator PlayerTeleport(float timeToWait)

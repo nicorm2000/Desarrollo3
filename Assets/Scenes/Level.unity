@@ -10550,6 +10550,10 @@ MonoBehaviour:
   increaseSizeOn: {fileID: 908161859}
   audioManager: {fileID: 1351502573}
   waveBegins: WaveBegin
+  enemyData:
+  - {fileID: 11400000, guid: f43bbcc79f28a0943a0752730dd121af, type: 2}
+  - {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}
+  - {fileID: 11400000, guid: bd7b1b114d37eda4888d68aff28b3e28, type: 2}
 --- !u!114 &760154692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15048,6 +15052,10 @@ MonoBehaviour:
   increaseSizeOn: {fileID: 908161859}
   increaseSizeOff: {fileID: 908161860}
   audioManager: {fileID: 1351502573}
+  aIChase:
+  - {fileID: 5770740514192762869, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
+  - {fileID: 5770740514192762869, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
+  aIShooterChase: {fileID: 7899699859354876490, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1183394189}
   changePlayerWeapon: {fileID: 2009772659}
@@ -16252,6 +16260,10 @@ MonoBehaviour:
   increaseSizeOn: {fileID: 908161859}
   increaseSizeOff: {fileID: 908161860}
   audioManager: {fileID: 1351502573}
+  aIChase:
+  - {fileID: 5770740514192762869, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
+  - {fileID: 5770740514192762869, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
+  aIShooterChase: {fileID: 7899699859354876490, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1183394189}
   changePlayerWeapon: {fileID: 2009772659}
@@ -18202,6 +18214,10 @@ MonoBehaviour:
   increaseSizeOn: {fileID: 908161859}
   increaseSizeOff: {fileID: 908161860}
   audioManager: {fileID: 1351502573}
+  aIChase:
+  - {fileID: 5770740514192762869, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
+  - {fileID: 5770740514192762869, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
+  aIShooterChase: {fileID: 7899699859354876490, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1183394189}
   changePlayerWeapon: {fileID: 2009772659}
@@ -30472,6 +30488,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   basket: {fileID: 1674702628}
+  aiChase:
+  - {fileID: 5770740514192762869, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
+  - {fileID: 5770740514192762869, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
+  aIShooterChase: {fileID: 7899699859354876490, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   audioManager: {fileID: 1351502573}
 --- !u!4 &2082787385
 Transform:

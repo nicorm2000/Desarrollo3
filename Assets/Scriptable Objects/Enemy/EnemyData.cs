@@ -29,6 +29,7 @@ public class EnemyData : ScriptableObject
 
     public bool ifFollowingPlayer;
     public bool isMelee;
+    public bool canChase = false;
 
     [Header("ShooterEnemy")]
 
@@ -52,4 +53,9 @@ public class EnemyData : ScriptableObject
     public string death;
     public string projectile;
     public string attack;
+
+    public void ResetEnemiesValues()
+    {
+        canChase = false;
+    }
 }

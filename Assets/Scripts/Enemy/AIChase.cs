@@ -29,7 +29,10 @@ public class AIChase : MonoBehaviour
 
     private void Update()
     {
-        EnemyMovement();
+        if (enemyData.canChase == true) 
+        {
+            EnemyMovement();
+        }
 
         if (healthSystem._dead)
         {
@@ -85,5 +88,20 @@ public class AIChase : MonoBehaviour
         {
             flipEnemy.FlipEnemyY();
         }
+    }
+
+    public void SetEnemyChase(bool canChase) 
+    {
+        enemyData.canChase = canChase;
+    }
+
+    public void EnemiesCanMove()
+    {
+        SetEnemyChase(true);
+    }
+
+    public void EnemiesCanNotMove()
+    {
+        SetEnemyChase(false);
     }
 }

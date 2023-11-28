@@ -47,7 +47,10 @@ public class AIShooterChase : MonoBehaviour
 
     private void Update()
     {
-        ShooterEnemyMovement();
+        if (enemyData.canChase == true) 
+        {
+            ShooterEnemyMovement();
+        }
 
         if (healthSystem._dead)
         {
@@ -148,5 +151,20 @@ public class AIShooterChase : MonoBehaviour
         {
             flipEnemy.FlipEnemyY();
         }
+    }
+
+    public void SetEnemyChase(bool canChase)
+    {
+        enemyData.canChase = canChase;
+    }
+
+    public void EnemyShooterCanMove()
+    {
+        SetEnemyChase(true);
+    }
+
+    public void EnemyShooterCanNotMove()
+    {
+        SetEnemyChase(false);
     }
 }

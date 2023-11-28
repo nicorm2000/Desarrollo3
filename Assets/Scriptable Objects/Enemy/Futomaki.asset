@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cf5c79c482a364289b65bc639aa2a1, type: 3}
   m_Name: Futomaki
   m_EditorClassIdentifier: 
-  lastHorizontalVector: -0.36189353
-  lastVerticalVector: -0.93221945
-  movementDirection: {x: -0.36189353, y: -0.93221945}
+  lastHorizontalVector: 0.70039135
+  lastVerticalVector: -0.713759
+  movementDirection: {x: 0.70039135, y: -0.713759}
   model: {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
   animator: {fileID: 0}
   dropData: {fileID: 11400000, guid: d1e545dd00ebe254f977e3d35bab8bb6, type: 2}
@@ -28,6 +28,7 @@ MonoBehaviour:
   avoidanceDistance: 1
   ifFollowingPlayer: 1
   isMelee: 1
+  canChase: 0
   shootDistance: 5
   fireRate: 1
   lifeSpawn: 0
