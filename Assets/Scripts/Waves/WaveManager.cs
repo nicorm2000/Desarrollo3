@@ -33,7 +33,8 @@ public class WaveManager : MonoBehaviour
 
     [Header("Transition Dependencies")]
     [SerializeField] private Transitions increaseSizeOn;
-    private float timeToWaitTransition = 1f;
+    private float timeToTurnOnTransition = 1f;
+    private float timeToTurnOffTrasition = 4f;
 
     [Header("Audio Manager")]
     [SerializeField] AudioManager audioManager;
@@ -51,6 +52,7 @@ public class WaveManager : MonoBehaviour
     /// </summary>
     private void Start()
     {
+        currentWaveIndex = 13;
         waveUI.ShowWaveText(waves[currentWaveIndex].waveIndex);
     }
 
@@ -88,8 +90,8 @@ public class WaveManager : MonoBehaviour
             else
             {
                 Debug.Log("Game Finished");
-                StartCoroutine(increaseSizeOn.ActiveTransition(timeToWaitTransition));
-                StartCoroutine(increaseSizeOn.DisableTransition(timeToWaitTransition));
+                StartCoroutine(increaseSizeOn.ActiveTransition(timeToTurnOnTransition));
+                StartCoroutine(increaseSizeOn.DisableTransition(timeToTurnOffTrasition));
                 StartCoroutine(waveUI.ShowWaveCompletedUI());
             }
         }
