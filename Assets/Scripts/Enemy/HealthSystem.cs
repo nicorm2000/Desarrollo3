@@ -5,7 +5,7 @@ public class HealthSystem : MonoBehaviour
 {
     [Header("Setup")]
     private ZoneTriggeredEffect _triggerEffect;
-    private SpriteRenderer _spriteRenderer;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
     private AudioManager _audioManager;
     [SerializeField] private GameObject miniMapIcon;
 
@@ -40,7 +40,6 @@ public class HealthSystem : MonoBehaviour
         _dead = enemyData.isDead;
         health = enemyData.health;
         _triggerEffect = GetComponent<ZoneTriggeredEffect>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
         _audioManager = GetComponent<AudioManager>();
         timer = maxTime;
     }

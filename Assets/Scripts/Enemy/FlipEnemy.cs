@@ -4,7 +4,7 @@ public class FlipEnemy : MonoBehaviour
 {
     public EnemyData enemyData;
 
-    public SpriteRenderer playerSprite;
+    public SpriteRenderer enemySprite;
 
     private void Update()
     {
@@ -18,12 +18,12 @@ public class FlipEnemy : MonoBehaviour
     {
         if (enemyData.lastHorizontalVector < 0)
         {
-            playerSprite.flipX = true;
+            enemySprite.flipX = true;
         }
 
         else
         {
-            playerSprite.flipX = false;
+            enemySprite.flipX = false;
         }
     }
 

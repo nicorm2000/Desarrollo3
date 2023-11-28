@@ -24,8 +24,6 @@ public class PlayerMovement : MonoBehaviour
         playerData.ResetPlayerStacks();
         playerData.rigidBody = GetComponent<Rigidbody>();
         playerData.playerCollider = GetComponent<BoxCollider>();
-        playerData.playerDashMaterial = GetComponent<Renderer>().material;
-        playerData.dashColor = playerData.playerDashMaterial.color;
         playerData.activeMoveSpeed = playerData.speed;
     }
 
