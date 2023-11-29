@@ -102,7 +102,6 @@ public class PlayerHealth : MonoBehaviour
         if (timer <= transitonStart)
         {
             StartCoroutine(increaseSizeOn.ActiveTransition(transitonOnTime));
-            StartCoroutine(increaseSizeOn.DisableTransition(transitonOnTime));
         }
 
         if (timer <= 0) 
