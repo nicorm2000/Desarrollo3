@@ -16,7 +16,6 @@ public class MySceneManager : MonoBehaviour
     public void LoadSceneWithTransition() 
     {
         StartCoroutine(increaseSizeOn.ActiveTransition(timeToWait));
-        StartCoroutine(increaseSizeOn.DisableTransition(timeToWait));
 
         audioManager.StopSounds();
 
