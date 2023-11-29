@@ -3735,7 +3735,7 @@ RectTransform:
   m_GameObject: {fileID: 260157467}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 3.3446767, z: 0.9}
+  m_LocalScale: {x: 0.855, y: 3.3446767, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2136568956}
@@ -3743,7 +3743,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71.31445, y: 236.8}
+  m_AnchoredPosition: {x: 66.9, y: 236.8}
   m_SizeDelta: {x: 160, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &260157469
@@ -11514,7 +11514,7 @@ GameObject:
   - component: {fileID: 895080477}
   - component: {fileID: 895080476}
   m_Layer: 5
-  m_Name: PauseText
+  m_Name: OptionsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11586,8 +11586,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 14.5
+  m_fontSizeBase: 14.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -19767,7 +19767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1370068669
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20615,7 +20615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 10e9f5048b5e31d4495f0e8d09d783d5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89c278c663ea8ae4c8b4778fb57d650e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26889,7 +26889,7 @@ RectTransform:
   m_GameObject: {fileID: 1774113943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 3.3446767, z: 0.9}
+  m_LocalScale: {x: 0.855, y: 3.3446767, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2141111968}
@@ -26897,7 +26897,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -71.24, y: 236.8}
+  m_AnchoredPosition: {x: -66.9, y: 236.8}
   m_SizeDelta: {x: 160, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1774113946
@@ -28362,8 +28362,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 14.5
+  m_fontSizeBase: 14.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
