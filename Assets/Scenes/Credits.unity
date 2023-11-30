@@ -2711,7 +2711,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26acb9fc876e30a46b5d312a299b4c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollTime: 30
+  scrollTime: 25
+  normalScrollSpeed: 1
+  boostedScrollSpeed: 2
   initialPosition: {fileID: 1019207250}
   targetPosition: {fileID: 1050766355}
   scrollSpeedCurve:
