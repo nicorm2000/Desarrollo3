@@ -15,7 +15,6 @@ public class LevelToShop : MonoBehaviour
     [Header("Transition Dependencies")]
     [SerializeField] private Transitions increaseSizeOn;
     [SerializeField] private Transitions increaseSizeOff;
-    private float timeToWaitTransition = 1f;
 
     [Header("Teleport Location")]
     [SerializeField] private Transform spawnWeaponSelect;
@@ -32,6 +31,8 @@ public class LevelToShop : MonoBehaviour
 
     [Header("Audio Manager")]
     [SerializeField] AudioManager audioManager;
+
+    private float _timeToWaitTransition = 1f;
 
     private void Start()
     {
@@ -64,12 +65,12 @@ public class LevelToShop : MonoBehaviour
     {
         if (isPlayerOnTeleportArea == true) 
         {
-            StartCoroutine(increaseSizeOn.ActiveTransition(timeToWaitTransition));
-            StartCoroutine(increaseSizeOn.DisableTransition(timeToWaitTransition));
+            StartCoroutine(increaseSizeOn.ActiveTransition(_timeToWaitTransition));
+            StartCoroutine(increaseSizeOn.DisableTransition(_timeToWaitTransition));
             canTeleport = true;
         }
 
-        StartCoroutine(TeleportToShop(timeToWaitTransition));
+        StartCoroutine(TeleportToShop(_timeToWaitTransition));
         aiChase[0].EnemiesCanNotMove();
         aiChase[1].EnemiesCanNotMove();
         aIShooterChase.EnemyShooterCanNotMove();
@@ -82,8 +83,8 @@ public class LevelToShop : MonoBehaviour
         if (canTeleport == true) 
         {
             player.transform.position = spawnWeaponSelect.transform.position;
-            StartCoroutine(increaseSizeOff.ActiveTransition(timeToWaitTransition));
-            StartCoroutine(increaseSizeOff.DisableTransition(timeToWaitTransition));
+            StartCoroutine(increaseSizeOff.ActiveTransition(_timeToWaitTransition));
+            StartCoroutine(increaseSizeOff.DisableTransition(_timeToWaitTransition));
         }
 
         canTeleport = false;

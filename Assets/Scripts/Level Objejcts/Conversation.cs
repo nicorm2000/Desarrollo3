@@ -13,7 +13,7 @@ public class Conversation : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(AnimateText());
+        StartConversation();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -30,6 +30,11 @@ public class Conversation : MonoBehaviour
         {
             animateText = false;
         }
+    }
+
+    public void StartConversation()
+    {
+        StartCoroutine(AnimateText());
     }
 
     private IEnumerator AnimateText()

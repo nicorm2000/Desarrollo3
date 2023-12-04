@@ -2712,8 +2712,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollTime: 25
-  normalScrollSpeed: 1
-  boostedScrollSpeed: 2
   initialPosition: {fileID: 1019207250}
   targetPosition: {fileID: 1050766355}
   scrollSpeedCurve:
