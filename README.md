@@ -17,7 +17,7 @@ This is a game being developed by students from <a href="https://www.imagecampus
 
 ## Credits
 
-- **Nicolas Ramos Mari** - *Programming*
+- **Nicolas Ramos Marin** - *Programming*
 - **Facundo Santos** - *Programming*
 - **Maria Elisa Gonda** - *Art*
 - **Candela Vargas Ernalz** - *Art*
