@@ -109,7 +109,5 @@ public class PlayerHealth : MonoBehaviour
             playerData.ResetPlayerStacks();
             mySceneManager.LoadSceneByName(loseScene);
         }
-
-        Debug.Log(timer);
     }
 }

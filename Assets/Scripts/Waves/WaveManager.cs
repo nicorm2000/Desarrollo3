@@ -48,6 +48,7 @@ public class WaveManager : MonoBehaviour
     private Wave _currentWave;
     private float _nextSpawnTime;
     private bool _canSpawn = true;
+    private bool _nextWave = false;
 
     /// <summary>
     /// Starts the game by showing the current wave index on the wave UI.
@@ -63,6 +64,8 @@ public class WaveManager : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        Debug.Log(_canSpawn);
+
         _currentWave = waves[currentWaveIndex];
         SpawnWave();
 
@@ -74,20 +77,24 @@ public class WaveManager : MonoBehaviour
                 SetShopWaves();
             }
 
-            return;
+            _nextWave = false;
         }
 
-        if (!_canSpawn)
+        if (HealthSystem.enemyCount == Constants.ZERO) 
         {
-            SpawnNextWave();
+            _nextWave = true;
+        }
+
+        if (_canSpawn == false && _nextWave == true)
+        {
             if (currentWaveIndex + Constants.ONE != waves.Length)
             {
                 if (!AudioManager.muteSFX)
                 {
                     audioManager.PlaySound(waveBegins);
                 }
-                shop.ActivatePopUp();
-                StartCoroutine(waveUI.ShowWaveUI(waves[currentWaveIndex].waveIndex));
+
+                SpawnNextWave();
             }
             else
             {
@@ -95,6 +102,8 @@ public class WaveManager : MonoBehaviour
                 StartCoroutine(increaseSizeOn.ActiveTransition(timeToTurnOnTransition));
                 StartCoroutine(waveUI.ShowWaveCompletedUI());
             }
+
+            _nextWave = false;
         }
     }
 
@@ -123,6 +132,8 @@ public class WaveManager : MonoBehaviour
     {
         abilities.DestroySlowers();
         currentWaveIndex++;
+        shop.ActivatePopUp();
+        StartCoroutine(waveUI.ShowWaveUI(waves[currentWaveIndex].waveIndex));
         _canSpawn = true;
     }
 
