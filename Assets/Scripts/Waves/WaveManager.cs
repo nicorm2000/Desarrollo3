@@ -21,6 +21,9 @@ public class WaveManager : MonoBehaviour
     [Header("Shop Dependencies")]
     [SerializeField] private Shop shop;
 
+    [Header("Player Dependencies")]
+    [SerializeField] private PlayerData playerData;
+
     [Header("Wave Configuration")]
     [SerializeField] private Wave[] waves;
     [SerializeField] private Transform[] spawnPoints;
@@ -42,7 +45,7 @@ public class WaveManager : MonoBehaviour
     [Header("Enemies Dependencies")]
     [SerializeField] private EnemyData[] enemyData;
 
-    public int currentWaveIndex { get; private set; }
+    public int currentWaveIndex;
 
     private int _maxWaves = Constants.ROUNDS_BETWEEN_SHOPS;
     private Wave _currentWave;
@@ -55,6 +58,7 @@ public class WaveManager : MonoBehaviour
     /// </summary>
     private void Start()
     {
+        ResetWaves();
         ResetEnemiesValues();
         waveUI.ShowWaveText(waves[currentWaveIndex].waveIndex);
     }
@@ -64,10 +68,17 @@ public class WaveManager : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        Debug.Log(_canSpawn);
+        //Debug.Log(_canSpawn);
+        //Debug.Log(_nextWave);
+        Debug.Log(HealthSystem.enemyCount);
 
         _currentWave = waves[currentWaveIndex];
         SpawnWave();
+
+        if (playerData._isDead == true)
+        {
+            ResetWaves();
+        }
 
         if (HealthSystem.enemyCount != Constants.ZERO)
         {
@@ -80,14 +91,14 @@ public class WaveManager : MonoBehaviour
             _nextWave = false;
         }
 
-        if (HealthSystem.enemyCount == Constants.ZERO) 
+        if (HealthSystem.enemyCount == Constants.ZERO)
         {
             _nextWave = true;
         }
 
         if (_canSpawn == false && _nextWave == true)
         {
-            if (currentWaveIndex + Constants.ONE != waves.Length)
+            if (currentWaveIndex + Constants.ONE != waves.Length && playerData._isDead == false)
             {
                 if (!AudioManager.muteSFX)
                 {
@@ -181,5 +192,10 @@ public class WaveManager : MonoBehaviour
         {
             enemyData[i].ResetEnemiesValues();
         }
+    }
+
+    private void ResetWaves() 
+    {
+        HealthSystem.enemyCount = 0;
     }
 }

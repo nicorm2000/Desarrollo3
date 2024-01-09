@@ -78,6 +78,11 @@ public class HealthSystem : MonoBehaviour
             enemyCount--;
         }
 
+        if(enemyCount <= 0) 
+        {
+            enemyCount = 0;
+        }
+
         onEnemyDeadChange?.Invoke(false);
         Destroy(gameObject);
     }
