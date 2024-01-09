@@ -63,7 +63,9 @@ MonoBehaviour:
   chargeTime: 0.5
   chargeSpeed: 5
   chargeDuration: 0.25
-  velocityIncrease: 2
+  initialDmgPower: 0.1
+  chargedDmgPower: 1
+  maxDmgPower: 1.5
   chargeSize: {x: 1, y: 5, z: 1}
   shotSize: {x: 5, y: 1, z: 1}
   empty: EmptySniper
