@@ -66,6 +66,7 @@ MonoBehaviour:
   initialDmgPower: 0.1
   chargedDmgPower: 1
   maxDmgPower: 1.5
+  distanceDivider: 7.5
   chargeSize: {x: 1, y: 5, z: 1}
   shotSize: {x: 5, y: 1, z: 1}
   empty: EmptySniper

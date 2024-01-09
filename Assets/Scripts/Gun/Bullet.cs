@@ -29,7 +29,6 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             collision.GetComponent<HealthSystem>().TakeDamage(currentDamage);
-            Debug.Log("Enemy: " + currentDamage);
             Destroy(gameObject);
         }
 
@@ -68,30 +67,6 @@ public class Bullet : MonoBehaviour
         yield return TranslateAndScaleBullet(2f);
     }
 
-    //private IEnumerator DopplerEffect()
-    //{
-    //    float chargeSpeed = weaponData.chargeSpeed;
-    //    float chargeDuration = weaponData.chargeDuration;
-    //    float baseDamage = weaponData.damage;
-    //    Vector3 chargeSize = weaponData.chargeSize;
-
-    //    while (scalingTimer < chargeDuration)
-    //    {
-    //        float scaleRatio = scalingTimer / chargeDuration;
-    //        float dmg = baseDamage;//Not finished code line
-
-    //        transform.Translate(Vector2.right * Time.deltaTime * chargeSpeed);
-    //        transform.localScale = Vector3.Lerp(Vector3.one, chargeSize, scaleRatio);
-
-    //        scalingTimer += Time.deltaTime;
-    //        weaponData.damage = dmg;
-    //        yield return null;
-    //    }
-
-    //    weaponData.damage = baseDamage;
-    //    yield return TranslateAndScaleBullet(2f);
-    //}
-
     private IEnumerator TranslateBullet()
     {
         float bulletSpeed = weaponData.bulletSpeed;
@@ -114,7 +89,7 @@ public class Bullet : MonoBehaviour
         float maxDmgPower = weaponData.maxDmgPower;
         float currentPower = chargedDmgPower;
         float bulletSpeed = weaponData.bulletSpeed;
-        float distanceDivider = 7.5f;
+        float distanceDivider = weaponData.distanceDivider;
 
         Vector3 chargeSize = weaponData.chargeSize;
         Vector3 shotSize = weaponData.shotSize;
@@ -135,7 +110,6 @@ public class Bullet : MonoBehaviour
 
             timer -= Time.deltaTime;
             yield return null;
-            Debug.Log("Power: " + currentDamage);
         }
 
         Destroy(gameObject);

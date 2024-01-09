@@ -41,6 +41,7 @@ public class WeaponData : ScriptableObject
     public float initialDmgPower;
     public float chargedDmgPower;
     public float maxDmgPower;
+    public float distanceDivider;
     public Vector3 chargeSize;
     public Vector3 shotSize;
 
