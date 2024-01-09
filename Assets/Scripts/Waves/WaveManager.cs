@@ -68,10 +68,6 @@ public class WaveManager : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        //Debug.Log(_canSpawn);
-        //Debug.Log(_nextWave);
-        Debug.Log(HealthSystem.enemyCount);
-
         _currentWave = waves[currentWaveIndex];
         SpawnWave();
 
