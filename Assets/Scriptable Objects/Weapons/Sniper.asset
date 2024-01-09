@@ -61,8 +61,11 @@ MonoBehaviour:
     m_RotationOrder: 4
   dopplerWeapon: 1
   chargeTime: 0.5
+  chargeSpeed: 5
+  chargeDuration: 0.25
   velocityIncrease: 2
-  sizeModifier: 0
+  chargeSize: {x: 1, y: 5, z: 1}
+  shotSize: {x: 5, y: 1, z: 1}
   empty: EmptySniper
   loaded: ShootSniper
   cooldown: CooldownSniper

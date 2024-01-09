@@ -36,8 +36,11 @@ public class WeaponData : ScriptableObject
     [Header("Doppler Bullet")]
     public bool dopplerWeapon;
     public float chargeTime;
+    public float chargeSpeed;
+    public float chargeDuration;
     public float velocityIncrease;
-    [Range(1, 10)]public float sizeModifier;
+    public Vector3 chargeSize;
+    public Vector3 shotSize;
 
     [Header("SFX")]
     public string empty;
