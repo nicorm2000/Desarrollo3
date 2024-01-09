@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class UIInputManger : MonoBehaviour
 {
@@ -14,9 +15,9 @@ public class UIInputManger : MonoBehaviour
     [Header("Cursor Dependencies")]
     [SerializeField] private CursorObject cursorObject;
 
-    public Vector2 mousePosition { get; private set; }
-    
     private UIInputs action;
+
+    public Vector2 mousePosition { get; private set; }
 
     private void Awake()
     {
