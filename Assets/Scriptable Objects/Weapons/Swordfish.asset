@@ -22,7 +22,7 @@ MonoBehaviour:
   weaponID: 3
   bulletSpeed: 20
   lifespan: 3
-  damage: 10
+  damage: 250
   bulletPrefab: {fileID: 0}
   attackSpeed: 10
   duration: 0.5
@@ -59,3 +59,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  dopplerWeapon: 0
+  delay: 0
+  velocityIncrease: 0
+  sizeModifier: 1
+  empty: 
+  loaded: 
+  cooldown: 

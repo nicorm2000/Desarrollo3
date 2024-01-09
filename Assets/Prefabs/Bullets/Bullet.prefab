@@ -100,9 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8af356b5acc8fb45b711ea88d645f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 15
-  lifespan: 3
-  damage: 1
   weaponData: {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
 --- !u!114 &1971574244084053114
 MonoBehaviour:
@@ -111,7 +108,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7942789937546522980}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d9e5dafd6b77004ea216f25087a0042, type: 3}
   m_Name: 

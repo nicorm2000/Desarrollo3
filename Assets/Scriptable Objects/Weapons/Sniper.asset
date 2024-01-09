@@ -21,7 +21,7 @@ MonoBehaviour:
   isShootWeapon: 1
   weaponID: 1
   bulletSpeed: 25
-  lifespan: 3
+  lifespan: 10
   damage: 250
   bulletPrefab: {fileID: 7942789937546522980, guid: 34085ce4b870d574895de834a02807ac, type: 3}
   attackSpeed: 1
@@ -59,6 +59,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  dopplerWeapon: 1
+  chargeTime: 0.5
+  velocityIncrease: 2
+  sizeModifier: 0
   empty: EmptySniper
   loaded: ShootSniper
   cooldown: CooldownSniper

@@ -18,10 +18,10 @@ public class Shoot : MonoBehaviour
 
     [Header("Audio Manager")]
     [SerializeField] AudioManager audioManager;
-    
+
     private void Update()
     {
-        if (playerData.isButtonPress) 
+        if (playerData.isButtonPress)
         {
             StartShoot();
         }

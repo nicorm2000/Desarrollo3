@@ -33,6 +33,12 @@ public class WeaponData : ScriptableObject
     public float duration;
     public AnimationCurve animationCurve;
 
+    [Header("Doppler Bullet")]
+    public bool dopplerWeapon;
+    public float chargeTime;
+    public float velocityIncrease;
+    [Range(1, 10)]public float sizeModifier;
+
     [Header("SFX")]
     public string empty;
     public string loaded;
