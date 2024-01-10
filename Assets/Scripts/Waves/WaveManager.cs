@@ -10,6 +10,16 @@ public class Wave
     public short numberOfEnemies;
     public GameObject[] enemyType;
     public float spawnInterval;
+
+    [Header("Enemies Amount")]
+    public EnemiesAmount enemiesAmount;
+}
+
+[System.Serializable]
+public class EnemiesAmount
+{
+    public GameObject[] enemies;
+    public int[] enemyAmount;
 }
 
 public class WaveManager : MonoBehaviour
@@ -52,6 +62,33 @@ public class WaveManager : MonoBehaviour
     private float _nextSpawnTime;
     private bool _canSpawn = true;
     private bool _nextWave = false;
+
+    private void OnValidate()
+    {
+        if (waves == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < waves.Length; i++)
+        {
+            if (waves[i].enemiesAmount == null)
+            {
+                return;
+            }
+
+            if (waves[i].enemiesAmount.enemyAmount != null || waves[i].enemiesAmount.enemyAmount.Length == 0)
+            {
+                if (waves[i].enemiesAmount.enemies != null || waves[i].enemiesAmount.enemies.Length == 0)
+                {
+                    if (waves[i].enemiesAmount.enemyAmount.Length != waves[i].enemiesAmount.enemies.Length)
+                    {
+                        waves[i].enemiesAmount.enemyAmount = new int[waves[i].enemiesAmount.enemies.Length];
+                    }
+                }
+            }
+        }
+    }
 
     /// <summary>
     /// Starts the game by showing the current wave index on the wave UI.
@@ -190,7 +227,7 @@ public class WaveManager : MonoBehaviour
         }
     }
 
-    private void ResetWaves() 
+    private void ResetWaves()
     {
         HealthSystem.enemyCount = 0;
     }

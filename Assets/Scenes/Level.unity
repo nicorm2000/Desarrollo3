@@ -10450,55 +10450,86 @@ MonoBehaviour:
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     spawnInterval: 0.5
+    enemiesAmount:
+      enemies:
+      - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
+      enemyAmount: 00000000
   - waveIndex: 2
     numberOfEnemies: 16
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     spawnInterval: 0.5
+    enemiesAmount:
+      enemies: []
+      enemyAmount: 
   - waveIndex: 3
     numberOfEnemies: 21
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     spawnInterval: 0.5
+    enemiesAmount:
+      enemies: []
+      enemyAmount: 
   - waveIndex: 4
     numberOfEnemies: 26
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     spawnInterval: 0.5
+    enemiesAmount:
+      enemies: []
+      enemyAmount: 
   - waveIndex: 5
     numberOfEnemies: 11
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     spawnInterval: 0.5
+    enemiesAmount:
+      enemies: []
+      enemyAmount: 
   - waveIndex: 6
     numberOfEnemies: 16
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     spawnInterval: 0.5
+    enemiesAmount:
+      enemies: []
+      enemyAmount: 
   - waveIndex: 7
     numberOfEnemies: 21
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     spawnInterval: 0.5
+    enemiesAmount:
+      enemies: []
+      enemyAmount: 
   - waveIndex: 8
     numberOfEnemies: 26
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     spawnInterval: 0.5
+    enemiesAmount:
+      enemies: []
+      enemyAmount: 
   - waveIndex: 9
     numberOfEnemies: 21
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     spawnInterval: 0.5
+    enemiesAmount:
+      enemies: []
+      enemyAmount: 
   - waveIndex: 10
     numberOfEnemies: 11
     enemyType:
     - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
     spawnInterval: 0.5
+    enemiesAmount:
+      enemies: []
+      enemyAmount: 
   - waveIndex: 11
     numberOfEnemies: 21
     enemyType:
@@ -10506,6 +10537,9 @@ MonoBehaviour:
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
     spawnInterval: 0.5
+    enemiesAmount:
+      enemies: []
+      enemyAmount: 
   - waveIndex: 12
     numberOfEnemies: 26
     enemyType:
@@ -10513,6 +10547,9 @@ MonoBehaviour:
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
     spawnInterval: 0.5
+    enemiesAmount:
+      enemies: []
+      enemyAmount: 
   - waveIndex: 13
     numberOfEnemies: 31
     enemyType:
@@ -10520,6 +10557,9 @@ MonoBehaviour:
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
     spawnInterval: 0.5
+    enemiesAmount:
+      enemies: []
+      enemyAmount: 
   - waveIndex: 14
     numberOfEnemies: 36
     enemyType:
@@ -10527,6 +10567,9 @@ MonoBehaviour:
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
     spawnInterval: 0.5
+    enemiesAmount:
+      enemies: []
+      enemyAmount: 
   - waveIndex: 15
     numberOfEnemies: 41
     enemyType:
@@ -10534,6 +10577,9 @@ MonoBehaviour:
     - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
     - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
     spawnInterval: 0.5
+    enemiesAmount:
+      enemies: []
+      enemyAmount: 
   spawnPoints:
   - {fileID: 1187711549}
   - {fileID: 1348440577}
@@ -14674,132 +14720,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!1 &1071127313
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1071127317}
-  - component: {fileID: 1071127316}
-  - component: {fileID: 1071127315}
-  - component: {fileID: 1071127314}
-  - component: {fileID: 1071127318}
-  m_Layer: 0
-  m_Name: Exploder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1071127314
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071127313}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1071127315
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071127313}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1071127316
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071127313}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1071127317
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071127313}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5474973, y: -8.114322, z: 0.21875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1071127318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071127313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05eb65444601de6428d8fd3d7c83fe8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detectionRadius: 2
-  explosionCooldown: 3
-  explosionRadius: 7
-  explosionDamage: 20
-  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
-  enemyData: {fileID: 11400000, guid: f43bbcc79f28a0943a0752730dd121af, type: 2}
-  detectionRadiusColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  explosionRadiusColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1089286544
 GameObject:
   m_ObjectHideFlags: 0
@@ -32104,6 +32024,63 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &2526376483534105651
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 179412998248534435, guid: abb5c1c9c3dde334f880884ca709497b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.5474973
+      objectReference: {fileID: 0}
+    - target: {fileID: 179412998248534435, guid: abb5c1c9c3dde334f880884ca709497b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.114322
+      objectReference: {fileID: 0}
+    - target: {fileID: 179412998248534435, guid: abb5c1c9c3dde334f880884ca709497b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.21875
+      objectReference: {fileID: 0}
+    - target: {fileID: 179412998248534435, guid: abb5c1c9c3dde334f880884ca709497b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 179412998248534435, guid: abb5c1c9c3dde334f880884ca709497b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 179412998248534435, guid: abb5c1c9c3dde334f880884ca709497b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 179412998248534435, guid: abb5c1c9c3dde334f880884ca709497b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 179412998248534435, guid: abb5c1c9c3dde334f880884ca709497b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 179412998248534435, guid: abb5c1c9c3dde334f880884ca709497b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 179412998248534435, guid: abb5c1c9c3dde334f880884ca709497b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700784936779435320, guid: abb5c1c9c3dde334f880884ca709497b, type: 3}
+      propertyPath: m_Name
+      value: Exploder
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abb5c1c9c3dde334f880884ca709497b, type: 3}
 --- !u!33 &2820719283046979567
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -32452,4 +32429,4 @@ SceneRoots:
   - {fileID: 296075858}
   - {fileID: 1950445034}
   - {fileID: 1044897502}
-  - {fileID: 1071127317}
+  - {fileID: 2526376483534105651}

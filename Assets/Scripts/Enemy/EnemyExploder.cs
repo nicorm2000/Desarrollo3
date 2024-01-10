@@ -22,13 +22,17 @@ public class EnemyExploder : MonoBehaviour
     [Header("Visualization")]
     [SerializeField] private Color detectionRadiusColor = Color.yellow;
     [SerializeField] private Color explosionRadiusColor = Color.red;
+    [SerializeField] private GameObject smallRadius;
+    [SerializeField] private GameObject mediumRadius;
+    [SerializeField] private GameObject bigRadius;
+    [SerializeField] private GameObject smokeRadius;
+    [SerializeField] private float smokeDuration;
 
     public GameObject target;
 
     private bool canExplode = true;
     private bool countdownStarted = false;
     private float damage;
-    private float countdownTimer;
 
     private void Start()
     {
@@ -53,13 +57,33 @@ public class EnemyExploder : MonoBehaviour
 
         float timer = explosionCooldown;
 
+        smallRadius.SetActive(true);
+
         while (timer > 0f)
         {
             timer -= Time.deltaTime;
+
+            if (timer <= explosionCooldown * 0.66f)
+            {
+                mediumRadius.SetActive(true);
+            }
+            if (timer <= explosionCooldown * 0.33f)
+            {
+                bigRadius.SetActive(true);
+            }
+
             yield return null;
         }
 
+        bigRadius.SetActive(false);
+        mediumRadius.SetActive(false);
+        smallRadius.SetActive(false);
+
         Explode();
+
+        smokeRadius.SetActive(true);
+        yield return new WaitForSeconds(smokeDuration);
+        smokeRadius.SetActive(false);
     }
 
     private void Explode()
