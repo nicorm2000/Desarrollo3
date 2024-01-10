@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class EnemyExploder : MonoBehaviour
 {
+    [Header("Detection Configuration")]
+    [SerializeField] private float detectionRadius;
+
     [Header("Explosion Configuration")]
     [SerializeField] private float explosionCooldown;
     [SerializeField] private float explosionRadius;
@@ -16,36 +19,74 @@ public class EnemyExploder : MonoBehaviour
     [Header("Enemy Data Dependencies")]
     [SerializeField] private EnemyData enemyData;
 
-    private bool canExplode = true;
-    private float damage;
+    [Header("Visualization")]
+    [SerializeField] private Color detectionRadiusColor = Color.yellow;
+    [SerializeField] private Color explosionRadiusColor = Color.red;
 
+    public GameObject target;
+
+    private bool canExplode = true;
+    private bool countdownStarted = false;
+    private float damage;
+    private float countdownTimer;
 
     private void Start()
     {
         damage = enemyData.damage;
+        target = GameObject.FindWithTag("Player");
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player") && canExplode)
+        float distanceToPlayer = Vector3.Distance(transform.position, playerData.transform.position);
+
+        if (distanceToPlayer <= detectionRadius && canExplode && !countdownStarted)
         {
-            Debug.Log("Boom");
-            //Explode(other);
-            //StartCoroutine(StartCooldown());
+            StartCoroutine(CountdownCoroutine());
+            countdownStarted = true;
         }
     }
 
-    //private void Explode(Collider player)
-    //{
-    //    player.GetComponent<PlayerHealth>().takeDamage(damage);
-    //
-    //    Destroy(gameObject);
-    //}
-    //
-    //private IEnumerator StartCooldown()
-    //{
-    //    canExplode = false;
-    //    yield return new WaitForSeconds(explosionCooldown);
-    //    canExplode = true;
-    //}
+    private IEnumerator CountdownCoroutine()
+    {
+        canExplode = false;
+
+        float timer = explosionCooldown;
+
+        while (timer > 0f)
+        {
+            timer -= Time.deltaTime;
+            yield return null;
+        }
+
+        Explode();
+    }
+
+    private void Explode()
+    {
+        float distanceToPlayer = Vector3.Distance(transform.position, playerData.transform.position);
+
+        if (distanceToPlayer <= explosionRadius)
+        {
+            target.GetComponent<PlayerHealth>().takeDamage(damage);
+        }
+
+        Debug.Log("Boom");
+
+        canExplode = true;
+        countdownStarted = false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        DrawRadius(detectionRadius, detectionRadiusColor);
+
+        DrawRadius(explosionRadius, explosionRadiusColor);
+    }
+
+    private void DrawRadius(float radius, Color color)
+    {
+        Gizmos.color = color;
+        Gizmos.DrawWireSphere(transform.position, radius);
+    }
 }

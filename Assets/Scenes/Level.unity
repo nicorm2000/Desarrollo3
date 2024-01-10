@@ -14688,7 +14688,7 @@ GameObject:
   - component: {fileID: 1071127314}
   - component: {fileID: 1071127318}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Exploder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14792,14 +14792,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05eb65444601de6428d8fd3d7c83fe8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionCooldown: 5
-  explosionRadius: 5
-  explosionDamage: 10
-  includeLayer:
-    serializedVersion: 2
-    m_Bits: 64
+  detectionRadius: 2
+  explosionCooldown: 3
+  explosionRadius: 7
+  explosionDamage: 20
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   enemyData: {fileID: 11400000, guid: f43bbcc79f28a0943a0752730dd121af, type: 2}
+  detectionRadiusColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  explosionRadiusColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1089286544
 GameObject:
   m_ObjectHideFlags: 0
