@@ -1614,13 +1614,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overheatSlider: {fileID: 128263357}
-  famasUI: {fileID: 128263355}
-  pistolUI: {fileID: 1385883762}
   uziUI: {fileID: 771723439}
+  famasUI: {fileID: 128263355}
   sniperUI: {fileID: 1187821264}
+  pistolUI: {fileID: 1385883762}
+  shotgunUI: {fileID: 1050300955}
   currentSliderOverheat: 0
   maxSliderOverheat: 0
-  weaponID: 0
+  weaponID: 1
 --- !u!1 &128783100
 GameObject:
   m_ObjectHideFlags: 0
@@ -3886,6 +3887,81 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &268584751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 268584752}
+  - component: {fileID: 268584754}
+  - component: {fileID: 268584753}
+  m_Layer: 5
+  m_Name: WeaponRed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &268584752
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268584751}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1.6666664}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1050300958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0018615723, y: 0.0009689331}
+  m_SizeDelta: {x: -249.45999, y: -159.24}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &268584753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268584751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 179efbf542344a64b8c18f59d5957769, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 1
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &268584754
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268584751}
+  m_CullTransparentMesh: 1
 --- !u!1001 &268790224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6153,7 +6229,7 @@ Transform:
   m_GameObject: {fileID: 430133303}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.269, y: 0.032, z: 0}
+  m_LocalPosition: {x: 0.26899785, y: 0.031999983, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6171,7 +6247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830101192c70d8b4ba186aeb25a7edb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 732e0b8dfa1b2b24fbc04ee53d0a6d73, type: 2}
+  weaponData: {fileID: 11400000, guid: 07cc2ca5b70974c4d872ab08b9ee83b9, type: 2}
   weaponOverheatUI: {fileID: 1385883763}
   screenShake: {fileID: 963194230}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
@@ -7129,7 +7205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &511416649
 Transform:
   m_ObjectHideFlags: 0
@@ -11089,13 +11165,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overheatSlider: {fileID: 771723442}
-  famasUI: {fileID: 128263355}
-  pistolUI: {fileID: 1385883762}
   uziUI: {fileID: 771723439}
+  famasUI: {fileID: 128263355}
   sniperUI: {fileID: 1187821264}
+  pistolUI: {fileID: 1385883762}
+  shotgunUI: {fileID: 1187821264}
   currentSliderOverheat: 0
   maxSliderOverheat: 0
-  weaponID: 1
+  weaponID: 0
 --- !u!114 &771723442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11411,10 +11488,11 @@ RectTransform:
   - {fileID: 1428125364}
   - {fileID: 1789849031}
   - {fileID: 1909702299}
-  - {fileID: 1385883765}
-  - {fileID: 128263356}
   - {fileID: 771723440}
+  - {fileID: 128263356}
   - {fileID: 1187821265}
+  - {fileID: 1385883765}
+  - {fileID: 1050300958}
   - {fileID: 279060191}
   - {fileID: 1046934545}
   - {fileID: 1397132614}
@@ -14442,6 +14520,117 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046934544}
   m_CullTransparentMesh: 1
+--- !u!1 &1050300955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1050300958}
+  - component: {fileID: 1050300957}
+  - component: {fileID: 1050300956}
+  m_Layer: 5
+  m_Name: WeaponOverheatShotgun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1050300956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050300955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea0de928c55089a429ad72e37e6615b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overheatSlider: {fileID: 1050300957}
+  uziUI: {fileID: 771723439}
+  famasUI: {fileID: 128263355}
+  sniperUI: {fileID: 1187821264}
+  pistolUI: {fileID: 1385883762}
+  shotgunUI: {fileID: 1050300955}
+  currentSliderOverheat: 0
+  maxSliderOverheat: 0
+  weaponID: 4
+--- !u!114 &1050300957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050300955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 0}
+  m_FillRect: {fileID: 268584752}
+  m_HandleRect: {fileID: 0}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 100
+  m_WholeNumbers: 0
+  m_Value: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!224 &1050300958
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050300955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1949269719}
+  - {fileID: 268584752}
+  m_Father: {fileID: 833676937}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.86447924, y: 0.097}
+  m_AnchorMax: {x: 0.86447924, y: 0.097}
+  m_AnchoredPosition: {x: 202, y: -99.425}
+  m_SizeDelta: {x: 311.8186, y: 199.05}
+  m_Pivot: {x: 1, y: 0}
 --- !u!1001 &1056215349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16872,10 +17061,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overheatSlider: {fileID: 1187821266}
-  famasUI: {fileID: 128263355}
-  pistolUI: {fileID: 1385883762}
   uziUI: {fileID: 771723439}
+  famasUI: {fileID: 128263355}
   sniperUI: {fileID: 1187821264}
+  pistolUI: {fileID: 1385883762}
+  shotgunUI: {fileID: 1050300955}
   currentSliderOverheat: 0
   maxSliderOverheat: 0
   weaponID: 2
@@ -20401,10 +20591,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   overheatSlider: {fileID: 1385883764}
-  famasUI: {fileID: 128263355}
-  pistolUI: {fileID: 1385883762}
   uziUI: {fileID: 771723439}
+  famasUI: {fileID: 128263355}
   sniperUI: {fileID: 1187821264}
+  pistolUI: {fileID: 1385883762}
+  shotgunUI: {fileID: 1050300955}
   currentSliderOverheat: 0
   maxSliderOverheat: 0
   weaponID: 3
@@ -21742,15 +21933,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433fb71f93758a2488a2e837eb5f50f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 732e0b8dfa1b2b24fbc04ee53d0a6d73, type: 2}
-  overheatDecreaseRate: 10
-  overheatIncreaseAmount: 20
+  weaponData: {fileID: 11400000, guid: 07cc2ca5b70974c4d872ab08b9ee83b9, type: 2}
+  overheatDecreaseRate: 20
+  overheatIncreaseAmount: 40
   weaponOverheat: 100
   _currentOverheat: 0
   _canShoot: 1
   _overHeat: 0
   _timeBetweenShots: 0
-  weaponOverheatUI: {fileID: 1385883763}
+  weaponOverheatUI: {fileID: 1050300956}
   weaponBlack: {fileID: 1516056427}
   weaponRed: {fileID: 1347483447}
   overHeatText: {fileID: 1909702298}
@@ -30007,6 +30198,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946912801}
+  m_CullTransparentMesh: 1
+--- !u!1 &1949269718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1949269719}
+  - component: {fileID: 1949269721}
+  - component: {fileID: 1949269720}
+  m_Layer: 5
+  m_Name: WeaponBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1949269719
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949269718}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1.6666664}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1050300958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0018615723, y: 0.0009689331}
+  m_SizeDelta: {x: -249.45999, y: -159.24}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1949269720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949269718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 79eeb2e4ed53c3047be849f5783e2cbe, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1949269721
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949269718}
   m_CullTransparentMesh: 1
 --- !u!1 &1949320247
 GameObject:

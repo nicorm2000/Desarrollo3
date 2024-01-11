@@ -10,17 +10,19 @@ public class WeaponOverheatUI : MonoBehaviour
         Uzi,
         Famas,
         Sniper,
-        Pistol
+        Pistol,
+        Shotgun
     }
 
     [Header("WeaponUI")]
     
     public Slider overheatSlider;
 
-    [SerializeField] private GameObject famasUI;
-    [SerializeField] private GameObject pistolUI;
     [SerializeField] private GameObject uziUI;
+    [SerializeField] private GameObject famasUI;
     [SerializeField] private GameObject sniperUI;
+    [SerializeField] private GameObject pistolUI;
+    [SerializeField] private GameObject shotgunUI;
 
     [Header("WeaponUI Images")]
 
@@ -55,17 +57,21 @@ public class WeaponOverheatUI : MonoBehaviour
         {
             case (int)Weapons.Uzi:
 
-                famasUI.SetActive(true);
-                uziUI.SetActive(false);
+                famasUI.SetActive(false);
+                uziUI.SetActive(true);
                 sniperUI.SetActive(false);
+                pistolUI.SetActive(false);
+                shotgunUI.SetActive(false);
 
                 break;
 
             case (int)Weapons.Famas:
 
-                famasUI.SetActive(false);
-                uziUI.SetActive(true);
+                famasUI.SetActive(true);
+                uziUI.SetActive(false);
                 sniperUI.SetActive(false);
+                pistolUI.SetActive(false);
+                shotgunUI.SetActive(false);
 
                 break;
 
@@ -74,6 +80,8 @@ public class WeaponOverheatUI : MonoBehaviour
                 famasUI.SetActive(false);
                 uziUI.SetActive(false);
                 sniperUI.SetActive(true);
+                pistolUI.SetActive(false);
+                shotgunUI.SetActive(false);
 
                 break;
 
@@ -83,6 +91,17 @@ public class WeaponOverheatUI : MonoBehaviour
                 uziUI.SetActive(false);
                 sniperUI.SetActive(false);
                 pistolUI.SetActive(true);
+                shotgunUI.SetActive(false);
+
+                break;
+
+            case (int)Weapons.Shotgun:
+
+                famasUI.SetActive(false);
+                uziUI.SetActive(false);
+                sniperUI.SetActive(false);
+                pistolUI.SetActive(false);
+                shotgunUI.SetActive(true);
 
                 break;
         }
