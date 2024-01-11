@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35cf5c79c482a364289b65bc639aa2a1, type: 3}
+  m_Name: Tekkamaki
+  m_EditorClassIdentifier: 
+  lastHorizontalVector: 0
+  lastVerticalVector: 0
+  movementDirection: {x: 0, y: 0}
+  model: {fileID: 0}
+  animator: {fileID: 0}
+  dropData: {fileID: 0}
+  suhsiName: Tekkamaki
+  damage: 0
+  spawnAnimationName: Spawn
+  spawnAnimationDuration: 0
+  deathAnimationName: Death
+  deathAnimationDuration: 0
+  movementSpeed: 1
+  avoidanceDistance: 1
+  ifFollowingPlayer: 1
+  isMelee: 1
+  canChase: 1
+  shootDistance: 5
+  fireRate: 1
+  lifeSpawn: 0
+  bulletSpeed: 0
+  bullet: {fileID: 0}
+  health: 400
+  isDead: 0
+  _triggerEffect: {fileID: 0}
+  _spriteRenderer: {fileID: 0}
+  enterEnemy: 0
+  death: 
+  projectile: 
+  attack: 
