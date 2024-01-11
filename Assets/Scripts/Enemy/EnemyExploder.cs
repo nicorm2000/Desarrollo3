@@ -12,7 +12,7 @@ public class EnemyExploder : MonoBehaviour
     [SerializeField] private float explosionCooldown;
     [SerializeField] private float explosionRadius;
     [SerializeField] private float explosionDamage;
-
+    
     [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
 
@@ -33,11 +33,13 @@ public class EnemyExploder : MonoBehaviour
     private bool canExplode = true;
     private bool countdownStarted = false;
     private float damage;
+    private BoxCollider enemyCollider = null;
 
     private void Start()
     {
         damage = enemyData.damage;
         target = GameObject.FindWithTag("Player");
+        enemyCollider = gameObject.GetComponent<BoxCollider>();
     }
 
     private void Update()
@@ -81,9 +83,14 @@ public class EnemyExploder : MonoBehaviour
 
         Explode();
 
+        //This can will help the player not receive damage if we make this enemy do damage while being melee
+        enemyCollider.enabled = false;
+
         smokeRadius.SetActive(true);
         yield return new WaitForSeconds(smokeDuration);
         smokeRadius.SetActive(false);
+
+        Destroy(gameObject);
     }
 
     private void Explode()
