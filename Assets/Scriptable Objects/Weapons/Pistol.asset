@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4f7d9191183631488a8626457379b3d, type: 3}
-  m_Name: Swordfish
+  m_Name: Pistol
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 5e6dd72cce851a9479ab180099eccbf1, type: 3}
+  sprite: {fileID: 21300000, guid: 17cd2f273184fb941891fbc16011f478, type: 3}
   model: {fileID: 0}
-  lightWeapon: 0
-  mediumWeapon: 1
+  lightWeapon: 1
+  mediumWeapon: 0
   heavyWeapon: 0
-  isMeleeWeapon: 1
-  isShootWeapon: 0
+  isMeleeWeapon: 0
+  isShootWeapon: 1
   weaponID: 3
-  bulletSpeed: 20
-  lifespan: 3
-  damage: 250
-  bulletPrefab: {fileID: 0}
-  attackSpeed: 10
+  bulletSpeed: 10
+  lifespan: 10
+  damage: 15
+  bulletPrefab: {fileID: 7942789937546522980, guid: 50f1408fcf3dc3a40baf87b3ecb91ecb, type: 3}
+  attackSpeed: 1
   duration: 0.5
   animationCurve:
     serializedVersion: 2
@@ -60,9 +60,15 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   dopplerWeapon: 0
-  delay: 0
-  velocityIncrease: 0
-  sizeModifier: 1
-  empty: 
-  loaded: 
-  cooldown: 
+  chargeTime: 0
+  chargeSpeed: 0
+  chargeDuration: 0
+  initialDmgPower: 0
+  chargedDmgPower: 0
+  maxDmgPower: 0
+  distanceDivider: 0
+  chargeSize: {x: 0, y: 0, z: 0}
+  shotSize: {x: 0, y: 0, z: 0}
+  empty: EmptyFamas
+  loaded: ShootFamas
+  cooldown: CooldownFamas
