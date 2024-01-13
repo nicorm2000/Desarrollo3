@@ -19,6 +19,11 @@ public class EnemyExploder : MonoBehaviour
     [Header("Enemy Data Dependencies")]
     [SerializeField] private EnemyData enemyData;
 
+    [Header("Camera Shake Configuration")]
+    [SerializeField] private ScreenShake screenShake;
+    [SerializeField] private float duration;
+    [SerializeField] private AnimationCurve animationCurve;
+
     [Header("Visualization")]
     [SerializeField] private Color detectionRadiusColor = Color.yellow;
     [SerializeField] private Color explosionRadiusColor = Color.red;
@@ -99,6 +104,7 @@ public class EnemyExploder : MonoBehaviour
 
         if (distanceToPlayer <= explosionRadius)
         {
+            StartCoroutine(screenShake.Shake(duration, animationCurve));
             target.GetComponent<PlayerHealth>().takeDamage(damage);
         }
 
