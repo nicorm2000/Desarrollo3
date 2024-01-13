@@ -28,7 +28,7 @@ public class EnemyExploder : MonoBehaviour
     [SerializeField] private GameObject smokeRadius;
     [SerializeField] private float smokeDuration;
 
-    public GameObject target;
+    private GameObject target;
 
     private bool canExplode = true;
     private bool countdownStarted = false;
