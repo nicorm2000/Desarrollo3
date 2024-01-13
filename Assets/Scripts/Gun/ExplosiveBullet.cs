@@ -1,7 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class ExplosiveBullet : MonoBehaviour
 {
     public WeaponData weaponData;
 
@@ -9,20 +10,10 @@ public class Bullet : MonoBehaviour
     private float currentDamage;
     private float scalingTimer = 0f;
 
-    [Header("Explosive Bullet")]
-    [SerializeField] bool isExplosive = false;
-    [SerializeField] SphereCollider sphereCollider;
-    [SerializeField] GameObject explosionEffect;
-
-    private float minExplosive = 0.15f;
-    private float maxExplosive = 1f;
-
     private void Start()
     {
         timer = weaponData.lifespan;
         currentDamage = weaponData.damage;
-
-        sphereCollider.radius = minExplosive;
 
         if (weaponData.dopplerWeapon)
         {
@@ -39,15 +30,11 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             collision.GetComponent<HealthSystem>().TakeDamage(currentDamage);
-            StartCoroutine(ExplosiveBullet());
-            explosionEffect.SetActive(false);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
         {
-            StartCoroutine(ExplosiveBullet());
-            explosionEffect.SetActive(false);
             Destroy(gameObject);
         }
     }
@@ -119,7 +106,7 @@ public class Bullet : MonoBehaviour
             transform.localScale = Vector3.Lerp(chargeSize, shotSize, divider);
 
             currentPower = Mathf.Lerp(chargedDmgPower, maxDmgPower, bulletDistance / distanceDivider);
-            
+
             currentDamage = baseDamage * currentPower;
 
             timer -= Time.deltaTime;
@@ -127,16 +114,5 @@ public class Bullet : MonoBehaviour
         }
 
         Destroy(gameObject);
-    }
-
-    private IEnumerator ExplosiveBullet() 
-    {
-        if(isExplosive == true) 
-        {
-            sphereCollider.radius = maxExplosive;
-            explosionEffect.SetActive(true);
-        }
-        
-        yield return new WaitForSeconds(1000f);
     }
 }

@@ -11,7 +11,8 @@ public class WeaponOverheatUI : MonoBehaviour
         Famas,
         Sniper,
         Pistol,
-        Shotgun
+        Shotgun,
+        Rpg
     }
 
     [Header("WeaponUI")]
@@ -23,6 +24,7 @@ public class WeaponOverheatUI : MonoBehaviour
     [SerializeField] private GameObject sniperUI;
     [SerializeField] private GameObject pistolUI;
     [SerializeField] private GameObject shotgunUI;
+    [SerializeField] private GameObject rpgUI;
 
     [Header("WeaponUI Images")]
 
@@ -62,6 +64,7 @@ public class WeaponOverheatUI : MonoBehaviour
                 sniperUI.SetActive(false);
                 pistolUI.SetActive(false);
                 shotgunUI.SetActive(false);
+                rpgUI.SetActive(false);
 
                 break;
 
@@ -72,6 +75,7 @@ public class WeaponOverheatUI : MonoBehaviour
                 sniperUI.SetActive(false);
                 pistolUI.SetActive(false);
                 shotgunUI.SetActive(false);
+                rpgUI.SetActive(false);
 
                 break;
 
@@ -82,6 +86,7 @@ public class WeaponOverheatUI : MonoBehaviour
                 sniperUI.SetActive(true);
                 pistolUI.SetActive(false);
                 shotgunUI.SetActive(false);
+                rpgUI.SetActive(false);
 
                 break;
 
@@ -92,6 +97,7 @@ public class WeaponOverheatUI : MonoBehaviour
                 sniperUI.SetActive(false);
                 pistolUI.SetActive(true);
                 shotgunUI.SetActive(false);
+                rpgUI.SetActive(false);
 
                 break;
 
@@ -102,6 +108,18 @@ public class WeaponOverheatUI : MonoBehaviour
                 sniperUI.SetActive(false);
                 pistolUI.SetActive(false);
                 shotgunUI.SetActive(true);
+                rpgUI.SetActive(false);
+
+                break;
+
+            case (int)Weapons.Rpg:
+
+                famasUI.SetActive(false);
+                uziUI.SetActive(false);
+                sniperUI.SetActive(false);
+                pistolUI.SetActive(false);
+                shotgunUI.SetActive(false);
+                rpgUI.SetActive(true);
 
                 break;
         }
