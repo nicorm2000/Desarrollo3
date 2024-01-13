@@ -8,6 +8,7 @@ public class GasTrail : MonoBehaviour
     [SerializeField] private float damagePerSecond;
     [SerializeField] private float timeBetweenDamage;
     [SerializeField] private float trailSize;
+    [SerializeField] private float gasCloudLifespan;
     [SerializeField] private GameObject gasCloud;
 
     private GameObject target;
@@ -15,21 +16,38 @@ public class GasTrail : MonoBehaviour
     private void Start()
     {
         target = GameObject.FindWithTag("Player");
+
+        StartCoroutine(GasCloudSpawn());
+        StartCoroutine(GasCloudTrail());
     }
 
     private IEnumerator GasCloudSpawn()
     {
-        yield return new WaitForSeconds(timeBetweenGasSpawns);
+        while (true)
+        {
+            SpawnGasCloud();
+            yield return new WaitForSeconds(timeBetweenGasSpawns);
+        }
     }
 
-    private IEnumerator GasTrailCheckRoutine()
+    private IEnumerator GasCloudTrail()
     {
+        while (true) 
+        { 
         yield return new WaitForSeconds(timeBetweenDamage);
+        
+            if (IsPlayerInsideGas())
+            {
+                DealDamageToPlayer();
+            }
+        }
     }
 
     private void SpawnGasCloud()
     {
+        Instantiate(gasCloud, transform.position, Quaternion.identity);
 
+        Destroy(gasCloud, gasCloudLifespan);
     }
 
     private void DealDamageToPlayer()
@@ -39,6 +57,9 @@ public class GasTrail : MonoBehaviour
 
     private bool IsPlayerInsideGas()
     {
-        return false;
+        Collider playerCollider = target.GetComponent<Collider>();
+        Collider gasTrailCollider = target.GetComponent<Collider>();
+
+        return playerCollider.bounds.Intersects(gasTrailCollider.bounds);
     }
 }

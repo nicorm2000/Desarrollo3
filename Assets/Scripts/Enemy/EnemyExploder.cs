@@ -83,7 +83,7 @@ public class EnemyExploder : MonoBehaviour
 
         Explode();
 
-        //This can will help the player not receive damage if we make this enemy do damage while being melee
+        //This can help the player not receive damage if we make this enemy do damage while being melee
         enemyCollider.enabled = false;
 
         smokeRadius.SetActive(true);

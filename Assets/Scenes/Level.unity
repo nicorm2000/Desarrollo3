@@ -28018,8 +28018,9 @@ GameObject:
   - component: {fileID: 1853752292}
   - component: {fileID: 1853752291}
   - component: {fileID: 1853752290}
+  - component: {fileID: 1853752295}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GasSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28124,6 +28125,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1853752295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853752289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9cd3edd56c7d124d8df3505a6239df2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenGasSpawns: 0.25
+  damagePerSecond: 10
+  timeBetweenDamage: 1
+  trailSize: 5
+  gasCloudLifespan: 3.5
+  gasCloud: {fileID: 4387127066184703811, guid: 40e2c4266a652064898bb3a906848075, type: 3}
 --- !u!1 &1862321366
 GameObject:
   m_ObjectHideFlags: 0
