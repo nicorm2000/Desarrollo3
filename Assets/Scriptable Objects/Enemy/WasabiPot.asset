@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35cf5c79c482a364289b65bc639aa2a1, type: 3}
-  m_Name: Tekkamaki
+  m_Name: WasabiPot
   m_EditorClassIdentifier: 
   lastHorizontalVector: 0
   lastVerticalVector: 0
@@ -18,7 +18,7 @@ MonoBehaviour:
   model: {fileID: 0}
   animator: {fileID: 0}
   dropData: {fileID: 0}
-  suhsiName: Tekkamaki
+  suhsiName: Wasabi Pot
   damage: 0
   spawnAnimationName: Spawn
   spawnAnimationDuration: 0
@@ -34,7 +34,7 @@ MonoBehaviour:
   lifeSpawn: 0
   bulletSpeed: 0
   bullet: {fileID: 0}
-  health: 400
+  health: 300
   isDead: 0
   _triggerEffect: {fileID: 0}
   _spriteRenderer: {fileID: 0}

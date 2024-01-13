@@ -15,7 +15,7 @@ public class EnemyData : ScriptableObject
     public Animator animator;
     public EnemyDropData dropData;
 
-    public string suhsiName;
+    public string sushiName;
     public float damage;
     public string spawnAnimationName;
     public float spawnAnimationDuration;
