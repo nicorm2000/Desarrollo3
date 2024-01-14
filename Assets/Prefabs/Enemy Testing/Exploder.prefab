@@ -294,6 +294,41 @@ MonoBehaviour:
   explosionDamage: 20
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   enemyData: {fileID: 11400000, guid: f43bbcc79f28a0943a0752730dd121af, type: 2}
+  screenShake: {fileID: 0}
+  duration: 0.5
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2.5
+      outSlope: 2.5
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.2
+      value: 0.5
+      inSlope: -0.0030712802
+      outSlope: -0.0030712802
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.1934524
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.625
+      outSlope: -0.625
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   detectionRadiusColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   explosionRadiusColor: {r: 1, g: 0, b: 0, a: 1}
   smallRadius: {fileID: 226534813644800258}
@@ -301,7 +336,6 @@ MonoBehaviour:
   bigRadius: {fileID: 5447720574061755953}
   smokeRadius: {fileID: 6295089635070589733}
   smokeDuration: 2
-  target: {fileID: 0}
 --- !u!1 &5447720574061755953
 GameObject:
   m_ObjectHideFlags: 0

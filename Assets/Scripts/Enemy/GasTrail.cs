@@ -12,10 +12,14 @@ public class GasTrail : MonoBehaviour
     [SerializeField] private GameObject gasCloud;
 
     private GameObject target;
+    private ObjectPool gasCloudPool;
 
     private void Start()
     {
         target = GameObject.FindWithTag("Player");
+
+        gasCloudPool = new ObjectPool(gasCloud);
+
 
         StartCoroutine(GasCloudSpawn());
         StartCoroutine(GasCloudTrail());
@@ -35,8 +39,9 @@ public class GasTrail : MonoBehaviour
         while (true) 
         { 
         yield return new WaitForSeconds(timeBetweenDamage);
-        
-            if (IsPlayerInsideGas())
+
+            Debug.Log(IsPlayerInsideGasTrail());
+            if (IsPlayerInsideGasTrail())
             {
                 DealDamageToPlayer();
             }
@@ -45,9 +50,18 @@ public class GasTrail : MonoBehaviour
 
     private void SpawnGasCloud()
     {
-        Instantiate(gasCloud, transform.position, Quaternion.identity);
+        GameObject gasCloud = gasCloudPool.GetPooledObject();
+        gasCloud.transform.position = transform.position;
+        gasCloud.SetActive(true);
+        StartCoroutine(ReturnGasCloudToPool(gasCloud));
+    }
 
-        Destroy(gasCloud, gasCloudLifespan);
+    private IEnumerator ReturnGasCloudToPool(GameObject gasCloud)
+    {
+        yield return new WaitForSeconds(gasCloudLifespan);
+
+        gasCloud.SetActive(false);
+        gasCloudPool.ReturnToPool(gasCloud);
     }
 
     private void DealDamageToPlayer()
@@ -55,11 +69,34 @@ public class GasTrail : MonoBehaviour
         target.GetComponent<PlayerHealth>().takeDamage(damagePerSecond);
     }
 
-    private bool IsPlayerInsideGas()
+    private bool IsPlayerInsideGasTrail()
     {
         Collider playerCollider = target.GetComponent<Collider>();
-        Collider gasTrailCollider = target.GetComponent<Collider>();
 
-        return playerCollider.bounds.Intersects(gasTrailCollider.bounds);
+        foreach (GameObject gasCloud in gasCloudPool.GetActiveObjects())
+        {
+            Collider gasCloudCollider = gasCloud.GetComponent<Collider>();
+
+            if (playerCollider.bounds.Intersects(gasCloudCollider.bounds))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public void SpawnFinalGasCloud(float duration)
+    {
+        GameObject finalGasCloud = Instantiate(gasCloud, transform.position, Quaternion.identity);
+
+        StartCoroutine(DestroyFinalGasCloud(finalGasCloud, duration));
+    }
+
+    private IEnumerator DestroyFinalGasCloud(GameObject finalGasCloud, float duration)
+    {
+        yield return new WaitForSeconds(duration);
+
+        Destroy(finalGasCloud);
     }
 }
