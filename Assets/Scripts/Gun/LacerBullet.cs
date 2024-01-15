@@ -1,32 +1,19 @@
 using System.Collections;
 using UnityEngine;
 
-public class ExplosiveBullet : MonoBehaviour
+public class LacerBullet : MonoBehaviour
 {
     public WeaponData weaponData;
-    
+
     private float bulletSpeed;
     private float timer;
     private float currentDamage;
-
-    [Header("Explosive Bullet")]
-    [SerializeField] SphereCollider sphereCollider;
-    [SerializeField] GameObject explosionEffect;
-    [SerializeField] SpriteRenderer bulletSprite;
-    
-    public float maxTimeToDestroy = 1f;
-
-
-    private float minExplosiveArea = 0.15f;
-    private float maxExplosiveArea = 1f;
 
     private void Start()
     {
         timer = weaponData.lifespan;
         currentDamage = weaponData.damage;
         bulletSpeed = weaponData.bulletSpeed;
-
-        sphereCollider.radius = minExplosiveArea;
 
         StartCoroutine(TranslateBullet());
     }
@@ -44,28 +31,18 @@ public class ExplosiveBullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private IEnumerator StopBullet() 
-    {
-        bulletSpeed = 0f;
-        sphereCollider.radius = maxExplosiveArea;
-        explosionEffect.SetActive(true);
-        bulletSprite.sprite = null;
-
-        yield return new WaitForSeconds(maxTimeToDestroy);
-        Destroy(gameObject);
-    }
-
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            StartCoroutine(StopBullet());
             collision.GetComponent<HealthSystem>().TakeDamage(currentDamage);
+
+            Destroy(gameObject);
         }
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
         {
-            StartCoroutine(StopBullet());
+            Destroy(gameObject);
         }
     }
 }
