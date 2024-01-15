@@ -5025,7 +5025,8 @@ MonoBehaviour:
   bulletSpeed: 0
   sphereCollider: {fileID: 2678454058040883649}
   explosionEffect: {fileID: 75932627180380641}
-  maxTimerToDestroy: 1
+  bulletSprite: {fileID: 1910734438672100343}
+  maxTimeToDestroy: 1
 --- !u!114 &1971574244084053114
 MonoBehaviour:
   m_ObjectHideFlags: 0

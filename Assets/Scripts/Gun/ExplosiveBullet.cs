@@ -12,9 +12,9 @@ public class ExplosiveBullet : MonoBehaviour
     [Header("Explosive Bullet")]
     [SerializeField] SphereCollider sphereCollider;
     [SerializeField] GameObject explosionEffect;
+    [SerializeField] SpriteRenderer bulletSprite;
     
-    public float maxTimerToDestroy = 2f;
-    private float timerToDestroy;
+    public float maxTimeToDestroy = 1f;
 
 
     private float minExplosiveArea = 0.15f;
@@ -27,8 +27,6 @@ public class ExplosiveBullet : MonoBehaviour
         bulletSpeed = weaponData.bulletSpeed;
 
         sphereCollider.radius = minExplosiveArea;
-
-        timerToDestroy = maxTimerToDestroy;
 
         StartCoroutine(TranslateBullet());
     }
@@ -51,9 +49,9 @@ public class ExplosiveBullet : MonoBehaviour
         bulletSpeed = 0f;
         sphereCollider.radius = maxExplosiveArea;
         explosionEffect.SetActive(true);
-        timerToDestroy = maxTimerToDestroy;
+        bulletSprite.sprite = null;
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(maxTimeToDestroy);
         Destroy(gameObject);
     }
 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1b04ce56bbade4a9d3bf07e7c6ea26, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  currentHealth: 60
+  currentHealth: 100
   maxHealth: 100
   speed: 5
   _isDead: 0
@@ -23,6 +23,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 732e0b8dfa1b2b24fbc04ee53d0a6d73, type: 2}
   - {fileID: 11400000, guid: 07cc2ca5b70974c4d872ab08b9ee83b9, type: 2}
   - {fileID: 11400000, guid: 92d4fa9258efa574c9b78761254a60c6, type: 2}
+  - {fileID: 11400000, guid: 8c81ff1cee96aea44975dfc6f8b73804, type: 2}
   invulnerabilityTime: 1
   _animator: {fileID: 0}
   _spriteRenderer: {fileID: 0}
@@ -44,8 +45,8 @@ MonoBehaviour:
   laserWidth: 20
   laserDuration: 1
   laserColor: {r: 1, g: 0, b: 0, a: 0}
-  lastHorizontalVector: -1
-  lastVerticalVector: 0.70710677
+  lastHorizontalVector: 0.70710677
+  lastVerticalVector: 1
   movementDirection: {x: 0, y: 0}
   maxLevelStack: 5
   healthStackID: 0

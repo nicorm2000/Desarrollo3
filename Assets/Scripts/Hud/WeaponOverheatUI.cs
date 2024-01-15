@@ -12,7 +12,8 @@ public class WeaponOverheatUI : MonoBehaviour
         Sniper,
         Pistol,
         Shotgun,
-        Rpg
+        Rpg,
+        Raygun
     }
 
     [Header("WeaponUI")]
@@ -25,6 +26,7 @@ public class WeaponOverheatUI : MonoBehaviour
     [SerializeField] private GameObject pistolUI;
     [SerializeField] private GameObject shotgunUI;
     [SerializeField] private GameObject rpgUI;
+    [SerializeField] private GameObject raygunUI;
 
     [Header("WeaponUI Images")]
 
@@ -120,6 +122,18 @@ public class WeaponOverheatUI : MonoBehaviour
                 pistolUI.SetActive(false);
                 shotgunUI.SetActive(false);
                 rpgUI.SetActive(true);
+
+                break;
+
+            case (int)Weapons.Raygun:
+
+                famasUI.SetActive(false);
+                uziUI.SetActive(false);
+                sniperUI.SetActive(false);
+                pistolUI.SetActive(false);
+                shotgunUI.SetActive(false);
+                rpgUI.SetActive(false);
+                raygunUI.SetActive(true);
 
                 break;
         }
