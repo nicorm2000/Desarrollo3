@@ -1,77 +1,40 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ExplosiveBullet : MonoBehaviour
 {
     public WeaponData weaponData;
+    public float bulletSpeed;
 
     private float timer;
     private float currentDamage;
-    private float scalingTimer = 0f;
+
+    [Header("Explosive Bullet")]
+    [SerializeField] SphereCollider sphereCollider;
+    [SerializeField] GameObject explosionEffect;
+    
+    public float maxTimerToDestroy = 2f;
+    private float timerToDestroy;
+
+
+    private float minExplosiveArea = 0.15f;
+    private float maxExplosiveArea = 1f;
 
     private void Start()
     {
         timer = weaponData.lifespan;
         currentDamage = weaponData.damage;
+        bulletSpeed = weaponData.bulletSpeed;
 
-        if (weaponData.dopplerWeapon)
-        {
-            StartCoroutine(DopplerEffect());
-        }
-        else
-        {
-            StartCoroutine(TranslateBullet());
-        }
-    }
+        sphereCollider.radius = minExplosiveArea;
 
-    private void OnTriggerEnter(Collider collision)
-    {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
-        {
-            collision.GetComponent<HealthSystem>().TakeDamage(currentDamage);
-            Destroy(gameObject);
-        }
+        timerToDestroy = maxTimerToDestroy;
 
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    private IEnumerator DopplerEffect()
-    {
-        float chargeSpeed = weaponData.chargeSpeed;
-        float chargeDuration = weaponData.chargeDuration;
-        float baseDamage = weaponData.damage;
-        float initDamagePower = weaponData.initialDmgPower;
-        float chargedDmgPower = weaponData.chargedDmgPower;
-        float currentPower = initDamagePower;
-        Vector3 chargeSize = weaponData.chargeSize;
-
-        while (scalingTimer < chargeDuration)
-        {
-            float scaleRatio = scalingTimer / chargeDuration;
-
-            currentPower = Mathf.Lerp(initDamagePower, chargedDmgPower, scaleRatio);
-            currentDamage = baseDamage * currentPower;
-
-            transform.Translate(Vector2.right * Time.deltaTime * chargeSpeed);
-            transform.localScale = Vector3.Lerp(Vector3.one, chargeSize, scaleRatio);
-
-            scalingTimer += Time.deltaTime;
-            yield return null;
-        }
-
-        currentDamage = weaponData.damage;
-
-        yield return TranslateAndScaleBullet(2f);
+        StartCoroutine(TranslateBullet());
     }
 
     private IEnumerator TranslateBullet()
     {
-        float bulletSpeed = weaponData.bulletSpeed;
-
         while (timer > 0f)
         {
             transform.Translate(Vector2.right * Time.deltaTime * bulletSpeed);
@@ -83,36 +46,28 @@ public class ExplosiveBullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private IEnumerator TranslateAndScaleBullet(float bulletSpeedMultiplier)
+    private IEnumerator StopBullet() 
     {
-        float baseDamage = weaponData.damage;
-        float chargedDmgPower = weaponData.chargedDmgPower;
-        float maxDmgPower = weaponData.maxDmgPower;
-        float currentPower = chargedDmgPower;
-        float bulletSpeed = weaponData.bulletSpeed;
-        float distanceDivider = weaponData.distanceDivider;
+        bulletSpeed = 0f;
+        sphereCollider.radius = maxExplosiveArea;
+        explosionEffect.SetActive(true);
+        timerToDestroy = maxTimerToDestroy;
 
-        Vector3 chargeSize = weaponData.chargeSize;
-        Vector3 shotSize = weaponData.shotSize;
-        Vector3 startPos = transform.position;
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
+    }
 
-        while (timer > 0f)
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            float bulletSpeedModified = bulletSpeed * bulletSpeedMultiplier;
-            float divider = Mathf.Abs(bulletSpeed - bulletSpeed / bulletSpeedModified);
-            float bulletDistance = Vector3.Distance(startPos, transform.position);
-
-            transform.Translate(Vector2.right * Time.deltaTime * bulletSpeedModified);
-            transform.localScale = Vector3.Lerp(chargeSize, shotSize, divider);
-
-            currentPower = Mathf.Lerp(chargedDmgPower, maxDmgPower, bulletDistance / distanceDivider);
-
-            currentDamage = baseDamage * currentPower;
-
-            timer -= Time.deltaTime;
-            yield return null;
+            StartCoroutine(StopBullet());
+            collision.GetComponent<HealthSystem>().TakeDamage(currentDamage);
         }
 
-        Destroy(gameObject);
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
+        {
+            StartCoroutine(StopBullet());
+        }
     }
 }

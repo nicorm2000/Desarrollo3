@@ -87,6 +87,11 @@ public class PlayerData : ScriptableObject
         weaponData[0].damage = 35;
         weaponData[1].damage = 250;
         weaponData[2].damage = 15;
+        weaponData[3].damage = 15;
+        weaponData[4].damage = 100;
+        weaponData[5].damage = 100;
+
+
     }
 
     public void ResetPlayerFireDamage() 
