@@ -7455,6 +7455,26 @@ PrefabInstance:
       propertyPath: selectWeapon.Array.data[2]
       value: 
       objectReference: {fileID: 1186112280}
+    - target: {fileID: 271190921871362969, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weapons.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 271190921871362969, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weapons.Array.data[3]
+      value: 
+      objectReference: {fileID: 511416648}
+    - target: {fileID: 271190921871362969, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weapons.Array.data[4]
+      value: 
+      objectReference: {fileID: 1458959374}
+    - target: {fileID: 271190921871362969, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weapons.Array.data[5]
+      value: 
+      objectReference: {fileID: 2133931363}
+    - target: {fileID: 271190921871362969, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: weapons.Array.data[6]
+      value: 
+      objectReference: {fileID: 993851539}
     - target: {fileID: 464711979963327155, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: roll
       value: Roll
