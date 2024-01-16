@@ -19,7 +19,7 @@ MonoBehaviour:
   heavyWeapon: 0
   isMeleeWeapon: 0
   isShootWeapon: 1
-  weaponID: 2
+  weaponID: 1
   bulletSpeed: 15
   lifespan: 3
   damage: 35
@@ -60,9 +60,15 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   dopplerWeapon: 0
-  delay: 0
-  velocityIncrease: 0
-  sizeModifier: 1
+  chargeTime: 0
+  chargeSpeed: 0
+  chargeDuration: 0
+  initialDmgPower: 0
+  chargedDmgPower: 0
+  maxDmgPower: 0
+  distanceDivider: 0
+  chargeSize: {x: 0, y: 0, z: 0}
+  shotSize: {x: 0, y: 0, z: 0}
   empty: EmptyFamas
   loaded: ShootFamas
   cooldown: CooldownFamas

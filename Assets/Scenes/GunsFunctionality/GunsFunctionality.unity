@@ -16134,7 +16134,7 @@ MonoBehaviour:
   aIShooterChase: {fileID: 7899699859354876490, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1183394189}
-  changePlayerWeapon: {fileID: 2009772659}
+  changePlayerWeapon: {fileID: 0}
   player: {fileID: 521703871}
   transitionOff: {fileID: 791532832}
   playerCanTeleport: 0
@@ -17342,7 +17342,7 @@ MonoBehaviour:
   aIShooterChase: {fileID: 7899699859354876490, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1183394189}
-  changePlayerWeapon: {fileID: 2009772659}
+  changePlayerWeapon: {fileID: 0}
   player: {fileID: 521703871}
   transitionOff: {fileID: 791532832}
   playerCanTeleport: 0
@@ -19300,7 +19300,7 @@ MonoBehaviour:
   aIShooterChase: {fileID: 7899699859354876490, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1183394189}
-  changePlayerWeapon: {fileID: 2009772659}
+  changePlayerWeapon: {fileID: 0}
   player: {fileID: 521703871}
   transitionOff: {fileID: 791532832}
   playerCanTeleport: 0
@@ -31763,17 +31763,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1186112281}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2009772659 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 271190921871362969, guid: a9df24e86a219ac458086842d36682f6, type: 3}
-  m_PrefabInstance: {fileID: 521703870}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93c2504d73d280f4b94e42aa2fd87f53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2009772660 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4071947474369335987, guid: a9df24e86a219ac458086842d36682f6, type: 3}
