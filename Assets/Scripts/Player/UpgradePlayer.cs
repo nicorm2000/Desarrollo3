@@ -39,5 +39,9 @@ public class UpgradePlayer : MonoBehaviour
         playerData.weaponData[0].damage += number;
         playerData.weaponData[1].damage += number;
         playerData.weaponData[2].damage += number;
+        playerData.weaponData[3].damage += number;
+        playerData.weaponData[4].damage += number;
+        playerData.weaponData[5].damage += number;
+        playerData.weaponData[6].damage += number;
     }
 }

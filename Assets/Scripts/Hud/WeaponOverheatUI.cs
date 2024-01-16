@@ -9,16 +9,24 @@ public class WeaponOverheatUI : MonoBehaviour
     {
         Uzi,
         Famas,
-        Sniper
+        Sniper,
+        Pistol,
+        Shotgun,
+        Rpg,
+        Raygun
     }
 
     [Header("WeaponUI")]
     
     public Slider overheatSlider;
 
-    [SerializeField] private GameObject famasUI;
     [SerializeField] private GameObject uziUI;
+    [SerializeField] private GameObject famasUI;
     [SerializeField] private GameObject sniperUI;
+    [SerializeField] private GameObject pistolUI;
+    [SerializeField] private GameObject shotgunUI;
+    [SerializeField] private GameObject rpgUI;
+    [SerializeField] private GameObject raygunUI;
 
     [Header("WeaponUI Images")]
 
@@ -53,17 +61,23 @@ public class WeaponOverheatUI : MonoBehaviour
         {
             case (int)Weapons.Uzi:
 
-                famasUI.SetActive(true);
-                uziUI.SetActive(false);
+                famasUI.SetActive(false);
+                uziUI.SetActive(true);
                 sniperUI.SetActive(false);
+                pistolUI.SetActive(false);
+                shotgunUI.SetActive(false);
+                rpgUI.SetActive(false);
 
                 break;
 
             case (int)Weapons.Famas:
 
-                famasUI.SetActive(false);
-                uziUI.SetActive(true);
+                famasUI.SetActive(true);
+                uziUI.SetActive(false);
                 sniperUI.SetActive(false);
+                pistolUI.SetActive(false);
+                shotgunUI.SetActive(false);
+                rpgUI.SetActive(false);
 
                 break;
 
@@ -72,6 +86,54 @@ public class WeaponOverheatUI : MonoBehaviour
                 famasUI.SetActive(false);
                 uziUI.SetActive(false);
                 sniperUI.SetActive(true);
+                pistolUI.SetActive(false);
+                shotgunUI.SetActive(false);
+                rpgUI.SetActive(false);
+
+                break;
+
+            case (int)Weapons.Pistol:
+
+                famasUI.SetActive(false);
+                uziUI.SetActive(false);
+                sniperUI.SetActive(false);
+                pistolUI.SetActive(true);
+                shotgunUI.SetActive(false);
+                rpgUI.SetActive(false);
+
+                break;
+
+            case (int)Weapons.Shotgun:
+
+                famasUI.SetActive(false);
+                uziUI.SetActive(false);
+                sniperUI.SetActive(false);
+                pistolUI.SetActive(false);
+                shotgunUI.SetActive(true);
+                rpgUI.SetActive(false);
+
+                break;
+
+            case (int)Weapons.Rpg:
+
+                famasUI.SetActive(false);
+                uziUI.SetActive(false);
+                sniperUI.SetActive(false);
+                pistolUI.SetActive(false);
+                shotgunUI.SetActive(false);
+                rpgUI.SetActive(true);
+
+                break;
+
+            case (int)Weapons.Raygun:
+
+                famasUI.SetActive(false);
+                uziUI.SetActive(false);
+                sniperUI.SetActive(false);
+                pistolUI.SetActive(false);
+                shotgunUI.SetActive(false);
+                rpgUI.SetActive(false);
+                raygunUI.SetActive(true);
 
                 break;
         }
