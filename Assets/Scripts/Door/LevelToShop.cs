@@ -73,6 +73,8 @@ public class LevelToShop : MonoBehaviour
         StartCoroutine(TeleportToShop(_timeToWaitTransition));
         aiChase[0].EnemiesCanNotMove();
         aiChase[1].EnemiesCanNotMove();
+        //Add new enemies here
+        aiChase[2].EnemiesCanNotMove();
         aIShooterChase.EnemyShooterCanNotMove();
     }
 

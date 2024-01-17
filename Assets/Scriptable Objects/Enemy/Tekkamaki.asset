@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lastHorizontalVector: 0
   lastVerticalVector: 0
-  movementDirection: {x: 0, y: 0}
+  movementDirection: {x: -0.9938826, y: 0.11044149}
   model: {fileID: 0}
   animator: {fileID: 0}
   dropData: {fileID: 0}
-  suhsiName: Tekkamaki
-  damage: 0
+  sushiName: 
+  damage: 20
   spawnAnimationName: Spawn
   spawnAnimationDuration: 0
   deathAnimationName: Death

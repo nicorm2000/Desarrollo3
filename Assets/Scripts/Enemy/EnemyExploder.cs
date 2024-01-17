@@ -19,10 +19,15 @@ public class EnemyExploder : MonoBehaviour
     [Header("Enemy Data Dependencies")]
     [SerializeField] private EnemyData enemyData;
 
-    [Header("Camera Shake Configuration")]
-    [SerializeField] private ScreenShake screenShake;
+    [Header("Screen Shake Configuration")]
     [SerializeField] private float duration;
     [SerializeField] private AnimationCurve animationCurve;
+
+    [Header("Custom Screen Shake Configuration")]
+    [SerializeField] private float maxShakeDistance;
+    [SerializeField] private float minShakeDuration;
+    [SerializeField] private float maxShakeDuration;
+    [SerializeField] private AnimationCurve maxShakeAnimationCurve;
 
     [Header("Visualization")]
     [SerializeField] private Color detectionRadiusColor = Color.yellow;
@@ -33,10 +38,12 @@ public class EnemyExploder : MonoBehaviour
     [SerializeField] private GameObject smokeRadius;
     [SerializeField] private float smokeDuration;
 
-    private GameObject target;
+    private AIChase aiChase;
 
-    private bool canExplode = true;
-    private bool countdownStarted = false;
+    private GameObject target;
+    private GameObject screenShakeDependency;
+
+    private bool hasExploded = false;
     private float damage;
     private BoxCollider enemyCollider = null;
 
@@ -44,25 +51,28 @@ public class EnemyExploder : MonoBehaviour
     {
         damage = enemyData.damage;
         target = GameObject.FindWithTag("Player");
+        screenShakeDependency = GameObject.FindWithTag("MainCamera");
         enemyCollider = gameObject.GetComponent<BoxCollider>();
+        aiChase = GetComponent<AIChase>();
+        Debug.Log("D" + damage);
+        Debug.Log("ED" + explosionDamage);
     }
 
     private void Update()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, playerData.transform.position);
 
-        if (distanceToPlayer <= detectionRadius && canExplode && !countdownStarted)
+        if (distanceToPlayer <= detectionRadius)
         {
             StartCoroutine(CountdownCoroutine());
-            countdownStarted = true;
         }
     }
 
     private IEnumerator CountdownCoroutine()
     {
-        canExplode = false;
-
         float timer = explosionCooldown;
+
+        aiChase.enabled = false;
 
         smallRadius.SetActive(true);
 
@@ -86,9 +96,12 @@ public class EnemyExploder : MonoBehaviour
         mediumRadius.SetActive(false);
         smallRadius.SetActive(false);
 
-        Explode();
+        if (!hasExploded)
+        {
+            Explode();
+            hasExploded = true;
+        }
 
-        //This can help the player not receive damage if we make this enemy do damage while being melee
         enemyCollider.enabled = false;
 
         smokeRadius.SetActive(true);
@@ -102,16 +115,20 @@ public class EnemyExploder : MonoBehaviour
     {
         float distanceToPlayer = Vector3.Distance(transform.position, playerData.transform.position);
 
+        float distanceNormalized = Mathf.Clamp01(distanceToPlayer / maxShakeDistance);
+
+        float adjustedShakeDuration = Mathf.Lerp(minShakeDuration, maxShakeDuration, distanceNormalized);
+        AnimationCurve adjustedShakeAnimationCurve = new AnimationCurve(
+            new Keyframe(0, 0),
+            new Keyframe(1, maxShakeAnimationCurve.Evaluate(distanceNormalized))
+        );
+
+        StartCoroutine(screenShakeDependency.GetComponent<ScreenShake>().Shake(adjustedShakeDuration, adjustedShakeAnimationCurve));
+
         if (distanceToPlayer <= explosionRadius)
         {
-            StartCoroutine(screenShake.Shake(duration, animationCurve));
             target.GetComponent<PlayerHealth>().takeDamage(damage);
         }
-
-        Debug.Log("Boom");
-
-        canExplode = true;
-        countdownStarted = false;
     }
 
     private void OnDrawGizmos()
@@ -119,6 +136,8 @@ public class EnemyExploder : MonoBehaviour
         DrawRadius(detectionRadius, detectionRadiusColor);
 
         DrawRadius(explosionRadius, explosionRadiusColor);
+
+        DrawRadius(maxShakeDistance, explosionRadiusColor);
     }
 
     private void DrawRadius(float radius, Color color)
