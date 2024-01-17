@@ -40,7 +40,6 @@ public class GasTrail : MonoBehaviour
         { 
         yield return new WaitForSeconds(timeBetweenDamage);
 
-            Debug.Log(IsPlayerInsideGasTrail());
             if (IsPlayerInsideGasTrail())
             {
                 DealDamageToPlayer();

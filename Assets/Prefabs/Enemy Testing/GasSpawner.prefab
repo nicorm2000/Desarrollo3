@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6730551599944370193}
   - component: {fileID: 1579679984041803312}
   - component: {fileID: 1392754504614204204}
-  - component: {fileID: 3960543526998408970}
   - component: {fileID: 3433986938689817990}
+  - component: {fileID: 2336305162499545279}
   m_Layer: 0
   m_Name: GasSpawner
   m_TagString: Untagged
@@ -107,19 +107,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3960543526998408970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7063499394934162958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490244c654b565e4dbd585d7fc3aa246, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!114 &3433986938689817990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,3 +125,21 @@ MonoBehaviour:
   trailSize: 5
   gasCloudLifespan: 3.5
   gasCloud: {fileID: 4387127066184703811, guid: 40e2c4266a652064898bb3a906848075, type: 3}
+--- !u!114 &2336305162499545279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7063499394934162958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ff78a32f3b44c4595bc0044bb6f7b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 1
+  healthSystem: {fileID: 0}
+  enemyData: {fileID: 11400000, guid: c75a6f980cce92c46a2394e752caa7ec, type: 2}
+  target: {fileID: 0}
+  flipEnemy: {fileID: 0}
+  maxTime: 1

@@ -31,6 +31,10 @@ public class EnemyData : ScriptableObject
     public bool isMelee;
     public bool canChase = false;
 
+    public bool isGas;
+    public float circularMovementSpeed;
+    public float avoidanceFactor;
+
     [Header("ShooterEnemy")]
 
     public float shootDistance;

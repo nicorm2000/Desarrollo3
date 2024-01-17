@@ -3,21 +3,26 @@ using UnityEngine;
 
 public class AIChase : MonoBehaviour
 {
-    [Header("Setup")]
+    [Header("AI Chase Setup")]
     public float chaseSpeed;
-
     public event Action<bool> onEnemyWalkChange;
 
-    private bool isWalking;
-
-    [Header("References")]
+    [Header("Health System Dependencies")]
     [SerializeField] private HealthSystem healthSystem;
-    public EnemyData enemyData;
-    public GameObject target;
-    public FlipEnemy flipEnemy;
+
+    [Header("Health System Dependencies")]
+    [SerializeField] private EnemyData enemyData;
+
+    [Header("Health System Dependencies")]
+    [SerializeField] private GameObject target;
+
+    [Header("Health System Dependencies")]
+    [SerializeField] private FlipEnemy flipEnemy;
 
     [Header("Timer")]
     [SerializeField] private float maxTime = 1f;
+    
+    private bool isWalking;
     private float timer = 0f;
 
     private void Start()
@@ -29,7 +34,7 @@ public class AIChase : MonoBehaviour
 
     private void Update()
     {
-        if (enemyData.canChase == true) 
+        if (enemyData.canChase)
         {
             EnemyMovement();
         }
@@ -50,31 +55,36 @@ public class AIChase : MonoBehaviour
             isWalking = true;
         }
 
-        Vector2 playerPosition = target.transform.position;
+        Vector2 playerPosition = target != null ? target.transform.position : Vector2.zero;
         Vector2 currentPosition = transform.position;
 
-        enemyData.movementDirection = (playerPosition - currentPosition).normalized;
+        float distanceToPlayer = Vector2.Distance(playerPosition, currentPosition);
 
-        RaycastHit2D hit = Physics2D.Raycast(currentPosition, enemyData.movementDirection, enemyData.avoidanceDistance);
-
-        Debug.DrawRay(currentPosition, enemyData.movementDirection, Color.red);
-
-        onEnemyWalkChange?.Invoke(isWalking);
-
-        if (hit.collider != null)
+        if (!enemyData.isGas)
         {
-            Vector2 avoidanceDirection = Vector2.Perpendicular(hit.normal).normalized;
+            enemyData.movementDirection = (playerPosition - currentPosition).normalized;
 
-            transform.Translate(avoidanceDirection * chaseSpeed * Time.deltaTime);
+            onEnemyWalkChange?.Invoke(isWalking);
 
-            CheckDirectionToFlip();
+            transform.Translate(enemyData.movementDirection * chaseSpeed * Time.deltaTime);
         }
         else
         {
-            transform.Translate(enemyData.movementDirection * chaseSpeed * Time.deltaTime);
+            if (distanceToPlayer <= enemyData.avoidanceDistance)
+            {
+                Vector2 toPlayer = playerPosition - currentPosition;
+                Vector2 perpendicularDirection = new Vector2(-toPlayer.y, toPlayer.x).normalized;
+                enemyData.movementDirection = Quaternion.Euler(0, 0, enemyData.circularMovementSpeed * Time.deltaTime) * perpendicularDirection;
+            }
+            else
+            {
+                enemyData.movementDirection = (playerPosition - currentPosition).normalized;
+            }
 
-            CheckDirectionToFlip();
+            transform.Translate(enemyData.movementDirection * chaseSpeed * Time.deltaTime);
         }
+
+        CheckDirectionToFlip();
     }
 
     private void CheckDirectionToFlip()
@@ -90,7 +100,7 @@ public class AIChase : MonoBehaviour
         }
     }
 
-    public void SetEnemyChase(bool canChase) 
+    public void SetEnemyChase(bool canChase)
     {
         enemyData.canChase = canChase;
     }
