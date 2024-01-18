@@ -75,6 +75,7 @@ public class LevelToShop : MonoBehaviour
         aiChase[1].EnemiesCanNotMove();
         //Add new enemies here
         //aiChase[2].EnemiesCanNotMove();
+        //aiChase[3].EnemiesCanNotMove();
         aIShooterChase.EnemyShooterCanNotMove();
     }
 

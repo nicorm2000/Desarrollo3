@@ -15915,7 +15915,6 @@ MonoBehaviour:
   aIChase:
   - {fileID: 5770740514192762869, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
   - {fileID: 5770740514192762869, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
-  - {fileID: 0}
   aIShooterChase: {fileID: 7899699859354876490, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1183394189}
@@ -17124,7 +17123,6 @@ MonoBehaviour:
   aIChase:
   - {fileID: 5770740514192762869, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
   - {fileID: 5770740514192762869, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
-  - {fileID: 0}
   aIShooterChase: {fileID: 7899699859354876490, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1183394189}
@@ -19158,7 +19156,6 @@ MonoBehaviour:
   aIChase:
   - {fileID: 5770740514192762869, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
   - {fileID: 5770740514192762869, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
-  - {fileID: 0}
   aIShooterChase: {fileID: 7899699859354876490, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   levelSpawn: {fileID: 2123702626}
   pickUpWeaponText: {fileID: 1183394189}

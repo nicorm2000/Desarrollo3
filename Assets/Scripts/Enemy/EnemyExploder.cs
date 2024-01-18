@@ -54,8 +54,6 @@ public class EnemyExploder : MonoBehaviour
         screenShakeDependency = GameObject.FindWithTag("MainCamera");
         enemyCollider = gameObject.GetComponent<BoxCollider>();
         aiChase = GetComponent<AIChase>();
-        Debug.Log("D" + damage);
-        Debug.Log("ED" + explosionDamage);
     }
 
     private void Update()

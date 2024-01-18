@@ -68,6 +68,7 @@ public class SelectWeapon : MonoBehaviour
         aIChase[1].EnemiesCanMove();
         //Add new enemies here
         //aIChase[2].EnemiesCanMove();
+        //aIChase[3].EnemiesCanMove();
         aIShooterChase.EnemyShooterCanMove();
     }
 
