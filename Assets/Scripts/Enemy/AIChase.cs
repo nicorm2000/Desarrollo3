@@ -23,13 +23,13 @@ public class AIChase : MonoBehaviour
     [SerializeField] private float maxTime = 1f;
     
     private bool isWalking;
-    private float timer = 0f;
+    private float _timer = 0f;
 
     private void Start()
     {
         chaseSpeed = enemyData.movementSpeed;
-        target = GameObject.FindWithTag("Player");
-        timer = maxTime;
+        target = EnemyManager.player;
+        _timer = maxTime;
     }
 
     private void Update()
@@ -47,11 +47,11 @@ public class AIChase : MonoBehaviour
 
     private void EnemyMovement()
     {
-        timer -= Time.deltaTime;
+        _timer -= Time.deltaTime;
 
-        if (timer <= 0f)
+        if (_timer <= 0f)
         {
-            timer = maxTime;
+            _timer = maxTime;
             isWalking = true;
         }
 

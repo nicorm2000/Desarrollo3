@@ -16,10 +16,8 @@ public class GasTrail : MonoBehaviour
 
     private void Start()
     {
-        target = GameObject.FindWithTag("Player");
-
+        target = EnemyManager.player;
         gasCloudPool = new ObjectPool(gasCloud);
-
 
         StartCoroutine(GasCloudSpawn());
         StartCoroutine(GasCloudTrail());

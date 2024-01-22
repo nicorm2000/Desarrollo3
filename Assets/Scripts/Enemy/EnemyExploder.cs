@@ -38,22 +38,22 @@ public class EnemyExploder : MonoBehaviour
     [SerializeField] private GameObject smokeRadius;
     [SerializeField] private float smokeDuration;
 
-    private AIChase aiChase;
+    private AIChase _aiChase;
 
-    private GameObject target;
-    private GameObject screenShakeDependency;
+    private GameObject _target;
+    private GameObject _screenShakeDependency;
 
-    private bool hasExploded = false;
-    private float damage;
-    private BoxCollider enemyCollider = null;
+    private bool _hasExploded = false;
+    private float _damage;
+    private BoxCollider _enemyCollider = null;
 
     private void Start()
     {
-        damage = enemyData.damage;
-        target = GameObject.FindWithTag("Player");
-        screenShakeDependency = GameObject.FindWithTag("MainCamera");
-        enemyCollider = gameObject.GetComponent<BoxCollider>();
-        aiChase = GetComponent<AIChase>();
+        _damage = enemyData.damage;
+        _target = EnemyManager.player;
+        _screenShakeDependency = EnemyManager.mainCamera;
+        _enemyCollider = gameObject.GetComponent<BoxCollider>();
+        _aiChase = GetComponent<AIChase>();
     }
 
     private void Update()
@@ -70,7 +70,7 @@ public class EnemyExploder : MonoBehaviour
     {
         float timer = explosionCooldown;
 
-        aiChase.enabled = false;
+        _aiChase.enabled = false;
 
         smallRadius.SetActive(true);
 
@@ -94,13 +94,13 @@ public class EnemyExploder : MonoBehaviour
         mediumRadius.SetActive(false);
         smallRadius.SetActive(false);
 
-        if (!hasExploded)
+        if (!_hasExploded)
         {
             Explode();
-            hasExploded = true;
+            _hasExploded = true;
         }
 
-        enemyCollider.enabled = false;
+        _enemyCollider.enabled = false;
 
         smokeRadius.SetActive(true);
         yield return new WaitForSeconds(smokeDuration);
@@ -121,11 +121,11 @@ public class EnemyExploder : MonoBehaviour
             new Keyframe(1, maxShakeAnimationCurve.Evaluate(distanceNormalized))
         );
 
-        StartCoroutine(screenShakeDependency.GetComponent<ScreenShake>().Shake(adjustedShakeDuration, adjustedShakeAnimationCurve));
+        StartCoroutine(_screenShakeDependency.GetComponent<ScreenShake>().Shake(adjustedShakeDuration, adjustedShakeAnimationCurve));
 
         if (distanceToPlayer <= explosionRadius)
         {
-            target.GetComponent<PlayerHealth>().takeDamage(damage);
+            _target.GetComponent<PlayerHealth>().takeDamage(_damage);
         }
     }
 

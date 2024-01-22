@@ -6,43 +6,36 @@ public class AIShooterChase : MonoBehaviour
 
     [Header("Setup")]
     private bool isWalking;
-
-    public event Action<bool> onShooterEnemyWalkChange;
-
-    private bool isFollowingPlayer;
-
-    private float nextFireTime;
-
-    public float chaseSpeed;
-
+    private bool _isFollowingPlayer;
+    private float _nextFireTime;
     private AudioManager _audioManager;
+    public event Action<bool> onShooterEnemyWalkChange;
+    public float chaseSpeed;
 
     [Header("Referemces")]
     [SerializeField] private GameObject bullet;
     public GameObject firePoint;
-
     public EnemyData enemyData;
     public GameObject target;
     public HealthSystem healthSystem;
-
     public FlipEnemy flipEnemy;
 
 
     [Header("Timer")]
     [SerializeField] private float maxTime = 1f;
-    private float timer = 0f;
+    private float _timer = 0f;
 
 
     private void Start()
     {
+        target = EnemyManager.player;
         _audioManager = GetComponent<AudioManager>();
-        nextFireTime = enemyData.fireRate;
+        _nextFireTime = enemyData.fireRate;
 
         enemyData.bullet = bullet;
-        isFollowingPlayer = enemyData.ifFollowingPlayer;
+        _isFollowingPlayer = enemyData.ifFollowingPlayer;
         chaseSpeed = enemyData.movementSpeed;
-        target = GameObject.FindWithTag("Player");
-        timer = maxTime;
+        _timer = maxTime;
     }
 
     private void Update()
@@ -60,11 +53,11 @@ public class AIShooterChase : MonoBehaviour
 
     private void ShooterEnemyMovement()
     {
-        timer -= Time.deltaTime;
+        _timer -= Time.deltaTime;
 
-        if (timer <= 0f)
+        if (_timer <= 0f)
         {
-            timer = maxTime;
+            _timer = maxTime;
             isWalking = true;
         }
 
@@ -74,7 +67,7 @@ public class AIShooterChase : MonoBehaviour
         float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
         firePoint.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-        if (isFollowingPlayer)
+        if (_isFollowingPlayer)
         {
             Vector2 playerPosition = target.transform.position;
             Vector2 currentPosition = transform.position;
@@ -89,7 +82,7 @@ public class AIShooterChase : MonoBehaviour
 
             if (Vector3.Distance(transform.position, target.transform.position) <= enemyData.shootDistance)
             {
-                isFollowingPlayer = false;
+                _isFollowingPlayer = false;
             }
 
             if (hit.collider != null)
@@ -110,16 +103,16 @@ public class AIShooterChase : MonoBehaviour
 
         else
         {
-            nextFireTime -= Time.deltaTime;
+            _nextFireTime -= Time.deltaTime;
 
-            if (nextFireTime <= 0 && healthSystem._dead == false)
+            if (_nextFireTime <= 0 && healthSystem._dead == false)
             {
                 Shoot();
             }
 
             if (Vector3.Distance(transform.position, target.transform.position) > enemyData.shootDistance)
             {
-                isFollowingPlayer = true;
+                _isFollowingPlayer = true;
             }
         }
     }
@@ -131,7 +124,7 @@ public class AIShooterChase : MonoBehaviour
             _audioManager.PlaySound(enemyData.projectile);
         }
         enemyData.bullet = Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
-        nextFireTime = enemyData.fireRate;
+        _nextFireTime = enemyData.fireRate;
     }
 
     void OnDrawGizmosSelected()

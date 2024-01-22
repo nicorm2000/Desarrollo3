@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class LevelToShop : MonoBehaviour
 {
+    [Header("Visual Dependencies")]
     [SerializeField] private GameObject teleportText;
 
     public bool canTeleport = false;
@@ -32,7 +33,7 @@ public class LevelToShop : MonoBehaviour
     [Header("Audio Manager")]
     [SerializeField] AudioManager audioManager;
 
-    private float _timeToWaitTransition = 1f;
+    private readonly float _timeToWaitTransition = 1f;
 
     private void Start()
     {

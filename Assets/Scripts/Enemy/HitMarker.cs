@@ -4,25 +4,25 @@ public class HitMarker : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer enemy;
 
-    private float timer;
-    public float maxTimer;
+    private float _timer;
+    public float _maxTimer;
 
 
     private void Start()
     {
-        timer = maxTimer;
+        _timer = _maxTimer;
     }
 
     private void Update()
     {
-        if (timer > 0)
+        if (_timer > 0)
         {
-            timer -= Time.deltaTime;
+            _timer -= Time.deltaTime;
         }
 
-        if (timer <= 0)
+        if (_timer <= 0)
         {
-            timer = maxTimer;
+            _timer = _maxTimer;
             ResetEnemyColor();
         }   
     }

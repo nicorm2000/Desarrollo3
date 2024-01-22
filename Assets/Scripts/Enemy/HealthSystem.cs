@@ -5,7 +5,7 @@ public class HealthSystem : MonoBehaviour
 {
     [Header("Setup")]
     private ZoneTriggeredEffect _triggerEffect;
-    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     private AudioManager _audioManager;
     [SerializeField] private GameObject miniMapIcon;
 
@@ -32,7 +32,7 @@ public class HealthSystem : MonoBehaviour
 
     private void Start()
     {
-        if (gameObject.tag == "Enemy")
+        if (gameObject.CompareTag("Enemy"))
         {
             enemyCount++;
         }
@@ -95,7 +95,7 @@ public class HealthSystem : MonoBehaviour
 
     private void DestroyEnemyTimer()
     {
-        _spriteRenderer.enabled = false;
+        spriteRenderer.enabled = false;
         Invoke("DestroyEnemy", _triggerEffect.dropData.objectLifespan + objectLifespanOffset);
     }
 }

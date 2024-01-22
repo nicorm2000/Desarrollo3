@@ -14,8 +14,9 @@ public class SelectWeapon : MonoBehaviour
     [SerializeField] private AIChase[] aIChase;
     [SerializeField] private AIShooterChase aIShooterChase;
 
-    private float transitonOnTime = 1f;
+    private float _transitonOnTime = 1f;
 
+    [Header("Visual Dependencies")]
     [SerializeField] private GameObject levelSpawn;
     [SerializeField] private GameObject pickUpWeaponText;
     [SerializeField] private ChangePlayerWeapon changePlayerWeapon;
@@ -58,12 +59,12 @@ public class SelectWeapon : MonoBehaviour
         if (isPlayerOnTeleportArea == true)
         {
             transitionOff.SetActive(false);
-            StartCoroutine(increaseSizeOn.ActiveTransition(transitonOnTime));
-            StartCoroutine(increaseSizeOn.DisableTransition(transitonOnTime));
+            StartCoroutine(increaseSizeOn.ActiveTransition(_transitonOnTime));
+            StartCoroutine(increaseSizeOn.DisableTransition(_transitonOnTime));
             playerCanTeleport = true;
         }
 
-        StartCoroutine(PlayerTeleport(transitonOnTime));
+        StartCoroutine(PlayerTeleport(_transitonOnTime));
         aIChase[0].EnemiesCanMove();
         aIChase[1].EnemiesCanMove();
         //Add new enemies here
@@ -84,8 +85,8 @@ public class SelectWeapon : MonoBehaviour
             }
             changePlayerWeapon.ChangeWeapon(weaponData.weaponID);
             player.transform.position = levelSpawn.transform.position;
-            StartCoroutine(increaseSizeOff.ActiveTransition(transitonOnTime));
-            StartCoroutine(increaseSizeOff.DisableTransition(transitonOnTime));
+            StartCoroutine(increaseSizeOff.ActiveTransition(_transitonOnTime));
+            StartCoroutine(increaseSizeOff.DisableTransition(_transitonOnTime));
         }
 
         playerCanTeleport = false;
