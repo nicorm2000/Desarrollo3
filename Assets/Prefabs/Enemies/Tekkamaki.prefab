@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ddd9aa9d7c4934ba96ad6daa6290a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spriteRenderer: {fileID: 1341053496429283583}
+  spriteRenderer: {fileID: 0}
   miniMapIcon: {fileID: 5864713616549052325}
   _dead: 0
   enemyData: {fileID: 11400000, guid: a937a3a7194277548bfbc3af0acd6616, type: 2}
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1341053496429283583}
-  maxTimer: 0.2
+  _maxTimer: 0.2
 --- !u!114 &4255178994272925037
 MonoBehaviour:
   m_ObjectHideFlags: 0
