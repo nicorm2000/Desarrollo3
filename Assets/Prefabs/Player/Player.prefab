@@ -49,6 +49,8 @@ MonoBehaviour:
   screenShake: {fileID: 0}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   gunOverheat: {fileID: 8793071024267927714}
+  gunMuzzle:
+  - {fileID: 687902261501288840}
   audioManager: {fileID: 0}
 --- !u!1 &1226622638706635938
 GameObject:
@@ -246,6 +248,37 @@ MonoBehaviour:
   overHeatText: {fileID: 0}
   overHeatEffect: {fileID: 2858462186978751284}
   audioManager: {fileID: 0}
+--- !u!1 &1535062901587880578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 782584708735407158}
+  m_Layer: 0
+  m_Name: Muzzle (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &782584708735407158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535062901587880578}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.17364816, w: 0.9848078}
+  m_LocalPosition: {x: 0.2689972, y: 0.032000005, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 827565897814791230}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20}
 --- !u!1 &1594830241049893304
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,7 +341,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3522965112433796741}
-  - component: {fileID: 6525721527348019233}
   m_Layer: 0
   m_Name: Muzzle
   m_TagString: Untagged
@@ -324,31 +356,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625755811549221622}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26899785, y: 0.031999983, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.3420201, w: 0.9396927}
+  m_LocalPosition: {x: 0.2689972, y: 0.032000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7201095306615803534}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6525721527348019233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1625755811549221622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 830101192c70d8b4ba186aeb25a7edb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 07cc2ca5b70974c4d872ab08b9ee83b9, type: 2}
-  weaponOverheatUI: {fileID: 0}
-  screenShake: {fileID: 0}
-  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
-  gunOverheat: {fileID: 1753551226827048246}
-  audioManager: {fileID: 0}
+  m_Father: {fileID: 827565897814791230}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40}
 --- !u!1 &1725156662470813297
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +443,8 @@ MonoBehaviour:
   screenShake: {fileID: 0}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   gunOverheat: {fileID: 2443186196316251944}
+  gunMuzzle:
+  - {fileID: 2027708604543404918}
   audioManager: {fileID: 0}
 --- !u!1 &2134314904804005271
 GameObject:
@@ -479,6 +495,8 @@ MonoBehaviour:
   screenShake: {fileID: 0}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   gunOverheat: {fileID: 4843775744071975369}
+  gunMuzzle:
+  - {fileID: 2134314904804005271}
   audioManager: {fileID: 0}
 --- !u!1 &2904720517886393248
 GameObject:
@@ -635,6 +653,8 @@ MonoBehaviour:
   screenShake: {fileID: 0}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   gunOverheat: {fileID: 3823591937530358882}
+  gunMuzzle:
+  - {fileID: 2987045905068621847}
   audioManager: {fileID: 0}
 --- !u!1 &3366467632441528355
 GameObject:
@@ -685,6 +705,8 @@ MonoBehaviour:
   screenShake: {fileID: 0}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   gunOverheat: {fileID: 5661613424138094487}
+  gunMuzzle:
+  - {fileID: 3366467632441528355}
   audioManager: {fileID: 0}
 --- !u!1 &3632110441304715640
 GameObject:
@@ -779,7 +801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7201095306615803534
 Transform:
   m_ObjectHideFlags: 0
@@ -793,7 +815,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3522965112433796741}
+  - {fileID: 827565897814791230}
   m_Father: {fileID: 4071947474369335987}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8883331313450484951
@@ -986,6 +1008,160 @@ MonoBehaviour:
   overHeatText: {fileID: 0}
   overHeatEffect: {fileID: 2858462186978751284}
   audioManager: {fileID: 0}
+--- !u!1 &3998718963908163994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 827565897814791230}
+  - component: {fileID: 8426163306637436627}
+  m_Layer: 0
+  m_Name: Muzzles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &827565897814791230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3998718963908163994}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.2689972, y: 0.032000005, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3522965112433796741}
+  - {fileID: 782584708735407158}
+  - {fileID: 692615262443341048}
+  - {fileID: 2885276004259046546}
+  - {fileID: 866883417169212957}
+  m_Father: {fileID: 7201095306615803534}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8426163306637436627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3998718963908163994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830101192c70d8b4ba186aeb25a7edb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: 07cc2ca5b70974c4d872ab08b9ee83b9, type: 2}
+  weaponOverheatUI: {fileID: 0}
+  screenShake: {fileID: 0}
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+  gunOverheat: {fileID: 1753551226827048246}
+  gunMuzzle:
+  - {fileID: 1625755811549221622}
+  - {fileID: 1535062901587880578}
+  - {fileID: 4224884683956916090}
+  - {fileID: 4275831011100707568}
+  - {fileID: 4001486749858588072}
+  audioManager: {fileID: 0}
+--- !u!1 &4001486749858588072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 866883417169212957}
+  m_Layer: 0
+  m_Name: Muzzle (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &866883417169212957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4001486749858588072}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.3420201, w: 0.9396927}
+  m_LocalPosition: {x: 0.2689972, y: 0.032000005, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 827565897814791230}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -40}
+--- !u!1 &4224884683956916090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 692615262443341048}
+  m_Layer: 0
+  m_Name: Muzzle (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &692615262443341048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4224884683956916090}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.2689972, y: 0.032000005, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 827565897814791230}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4275831011100707568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2885276004259046546}
+  m_Layer: 0
+  m_Name: Muzzle (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2885276004259046546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4275831011100707568}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.17364825, w: 0.9848078}
+  m_LocalPosition: {x: 0.2689972, y: 0.032000005, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 827565897814791230}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -20}
 --- !u!1 &5569180708625838545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,7 +1518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7989776353207526341
 Transform:
   m_ObjectHideFlags: 0
@@ -1629,6 +1805,8 @@ MonoBehaviour:
   screenShake: {fileID: 0}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   gunOverheat: {fileID: 7654313808540026409}
+  gunMuzzle:
+  - {fileID: 7195425578536629974}
   audioManager: {fileID: 0}
 --- !u!1 &7469210322841030696
 GameObject:

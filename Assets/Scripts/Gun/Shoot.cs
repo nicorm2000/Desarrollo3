@@ -17,7 +17,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private GunOverheat gunOverheat;
 
     [Header("ShootLogic")]
-    [SerializeField] private GameObject gunMuzzle;
+    [SerializeField] private GameObject[] gunMuzzle;
 
     [Header("Audio Manager")]
     [SerializeField] AudioManager audioManager;
@@ -110,18 +110,14 @@ public class Shoot : MonoBehaviour
 
     private void ShootgunShootLogic() 
     {
+        int maxBullets = 5;
+
         if (weaponData.multipleShoots)
         {
-            int maxBullets = 5;
-            float zRotation = 40f;
-            float aux = 20f;
-
-            for (int i = 0; i < maxBullets; i++)
+            for (int i = 0; i < maxBullets;  i++) 
             {
-                transform.rotation = Quaternion.Euler(0f, 0f, zRotation);
-                Instantiate(weaponData.bulletPrefab, transform.position, transform.rotation);
-                zRotation -= aux;
-            }
+                Instantiate(weaponData.bulletPrefab, gunMuzzle[i].transform.position, gunMuzzle[i].transform.rotation);
+            }         
         }
     }
 }
