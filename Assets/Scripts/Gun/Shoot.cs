@@ -16,6 +16,9 @@ public class Shoot : MonoBehaviour
     [SerializeField] private PlayerData playerData;
     [SerializeField] private GunOverheat gunOverheat;
 
+    [Header("ShootLogic")]
+    [SerializeField] private GameObject gunMuzzle;
+
     [Header("Audio Manager")]
     [SerializeField] AudioManager audioManager;
 
@@ -51,8 +54,14 @@ public class Shoot : MonoBehaviour
         {
             audioManager.PlaySound(weaponData.loaded);
         }
+            
+        ShootgunShootLogic();
 
-        Instantiate(weaponData.bulletPrefab, transform.position, transform.rotation);
+        if (!weaponData.multipleShoots)
+        { 
+            Instantiate(weaponData.bulletPrefab, transform.position, transform.rotation);
+        }
+
         DisableShooting();
         Invoke(nameof(EnableShooting), gunOverheat._timeBetweenShots);
     }
@@ -97,5 +106,22 @@ public class Shoot : MonoBehaviour
         gunOverheat.overHeatText.SetActive(false);
         gunOverheat.overHeatEffect.SetActive(false);
         gunOverheat._overHeat = false;
+    }
+
+    private void ShootgunShootLogic() 
+    {
+        if (weaponData.multipleShoots)
+        {
+            int maxBullets = 5;
+            float zRotation = 40f;
+            float aux = 20f;
+
+            for (int i = 0; i < maxBullets; i++)
+            {
+                transform.rotation = Quaternion.Euler(0f, 0f, zRotation);
+                Instantiate(weaponData.bulletPrefab, transform.position, transform.rotation);
+                zRotation -= aux;
+            }
+        }
     }
 }

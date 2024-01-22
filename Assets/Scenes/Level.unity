@@ -451,6 +451,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1297260549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &27046815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1625755811549221622, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+  m_PrefabInstance: {fileID: 521703870}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &37278417
 GameObject:
   m_ObjectHideFlags: 0
@@ -7248,9 +7253,21 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 771723441}
+    - target: {fileID: 3522965112433796741, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9396927
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522965112433796741, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.3420201
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522965112433796741, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 3729285721743270887, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3823591937530358882, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponRed
@@ -7353,6 +7370,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 823054430}
     - target: {fileID: 6525721527348019233, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: gunMuzzle
+      value: 
+      objectReference: {fileID: 27046815}
+    - target: {fileID: 6525721527348019233, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: screenShake
       value: 
       objectReference: {fileID: 963194230}
@@ -7366,7 +7387,7 @@ PrefabInstance:
       objectReference: {fileID: 899308655}
     - target: {fileID: 6624374951930773587, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: m_Name
