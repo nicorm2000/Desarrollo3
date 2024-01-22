@@ -41,8 +41,8 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1395257399889929355}
-  - {fileID: 3581562268750842296}
   - {fileID: 9146367676852870438}
+  - {fileID: 3581562268750842296}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5770740514192762869
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 3581562268750842296}
   - component: {fileID: 5311294396754552927}
   m_Layer: 17
-  m_Name: MiniMapIcon
+  m_Name: Mini Map Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 2119707651392460458}
   - component: {fileID: 2909097990312066601}
   m_Layer: 8
-  m_Name: FutomakiSprite
+  m_Name: Futomaki Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 9146367676852870438}
   - component: {fileID: 3991322670500684347}
   m_Layer: 8
-  m_Name: shadow
+  m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

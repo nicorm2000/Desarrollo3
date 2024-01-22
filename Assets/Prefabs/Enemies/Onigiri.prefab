@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1693049631523334331}
   - component: {fileID: 6999754454645746806}
   m_Layer: 17
-  m_Name: MiniMapIcon
+  m_Name: Mini Map Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 1025613470525115536}
   - component: {fileID: 8748117362255322127}
   m_Layer: 8
-  m_Name: shadow
+  m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 2218655680804427730}
   - component: {fileID: 5241803593329915667}
   m_Layer: 8
-  m_Name: OnigiriSprite
+  m_Name: Onigiri Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

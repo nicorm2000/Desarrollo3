@@ -13,7 +13,7 @@ public class AIChase : MonoBehaviour
     [Header("Health System Dependencies")]
     [SerializeField] private EnemyData enemyData;
 
-    [Header("Health System Dependencies")]
+    [Header("Player Dependencies")]
     [SerializeField] private GameObject target;
 
     [Header("Health System Dependencies")]

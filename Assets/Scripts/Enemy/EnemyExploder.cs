@@ -129,6 +129,7 @@ public class EnemyExploder : MonoBehaviour
         }
     }
 
+#if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         DrawRadius(detectionRadius, detectionRadiusColor);
@@ -143,4 +144,5 @@ public class EnemyExploder : MonoBehaviour
         Gizmos.color = color;
         Gizmos.DrawWireSphere(transform.position, radius);
     }
+#endif
 }
