@@ -5,9 +5,17 @@ public class Indicator : MonoBehaviour
 {
     [Header("Indicator Set Up")]
     [SerializeField] private GameObject indicator;
-    [SerializeField] private Camera indicatorCamera;
+    [SerializeField] private Transform target;
+
+    [Header("Visuals")]
     [SerializeField] private Sprite offScreenSprite;
-    [SerializeField] private Sprite onScreenSprite;
+    [SerializeField] private Sprite onScreenSprite;    
+    
+    [Header("Visibility Area")]
+    [SerializeField] private Collider visibilityCollider;
+
+    [Header("Interacting Layers")]
+    [SerializeField] private LayerMask includeLayer;
 
     private Vector3 _targetPosition;
     private RectTransform _indicatorRectTransform;
@@ -15,12 +23,40 @@ public class Indicator : MonoBehaviour
 
     void Awake()
     {
-        _targetPosition = new Vector3(0, 10);
+        //Replace with target position
+        _targetPosition = new Vector3(10f, 0f, 0f);
         _indicatorRectTransform = indicator.GetComponent<RectTransform>();
         _indicatorImage = indicator.GetComponent<Image>();
+
+        Hide();
     }
 
-    private void Update()
+    private void OnTriggerEnter(Collider other)
+    {
+        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
+        {
+            Show();
+            _indicatorImage.sprite = onScreenSprite;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
+        {
+            UpdateIndicatorPosition();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
+        {
+            Hide();
+        }
+    }
+
+    private void UpdateIndicatorPosition()
     {
         float borderSize = 100f;
         Vector3 targetPositionScreenPoint = Camera.main.WorldToScreenPoint(_targetPosition);
@@ -32,27 +68,17 @@ public class Indicator : MonoBehaviour
             _indicatorImage.sprite = offScreenSprite;
             Vector3 cappedTargetScreenPosition = targetPositionScreenPoint;
 
-            if (cappedTargetScreenPosition.x <= borderSize)
-                cappedTargetScreenPosition.x = 0f;
-            if (cappedTargetScreenPosition.x >= Screen.width - borderSize)
-                cappedTargetScreenPosition.x = Screen.width - borderSize;
-            if (cappedTargetScreenPosition.y <= borderSize)
-                cappedTargetScreenPosition.y = 0f;
-            if (cappedTargetScreenPosition.y >= Screen.height - borderSize)
-                cappedTargetScreenPosition.y = Screen.height - borderSize;
+            cappedTargetScreenPosition.x = Mathf.Clamp(cappedTargetScreenPosition.x, borderSize, Screen.width - borderSize);
+            cappedTargetScreenPosition.y = Mathf.Clamp(cappedTargetScreenPosition.y, borderSize, Screen.height - borderSize);
 
-            Vector3 indicatorWorldPosition = indicatorCamera.ScreenToWorldPoint(cappedTargetScreenPosition);
-            _indicatorRectTransform.position = indicatorWorldPosition;
+            _indicatorRectTransform.position = cappedTargetScreenPosition;
             _indicatorRectTransform.localPosition = new Vector3(_indicatorRectTransform.localPosition.x, _indicatorRectTransform.localPosition.y, 0f);
         }
-        else 
+        else
         {
             _indicatorImage.sprite = onScreenSprite;
-            Vector3 indicatorWorldPosition = indicatorCamera.ScreenToWorldPoint(targetPositionScreenPoint);
-            _indicatorRectTransform.position = indicatorWorldPosition;
+            _indicatorRectTransform.position = targetPositionScreenPoint;
             _indicatorRectTransform.localPosition = new Vector3(_indicatorRectTransform.localPosition.x, _indicatorRectTransform.localPosition.y, 0f);
-
-
             _indicatorRectTransform.localEulerAngles = Vector3.zero;
         }
     }
@@ -72,14 +98,12 @@ public class Indicator : MonoBehaviour
 
     private void Hide()
     {
-        gameObject.SetActive(false);
+        indicator.SetActive(false);
     }
 
-    private void Show(Vector3 targetPosition)
+    private void Show()
     {
-        gameObject.SetActive(true);
-
-        this._targetPosition = targetPosition;
+        indicator.SetActive(true);
     }
 
     private float GetAngleFromVectorFloat(Vector3 dir)
