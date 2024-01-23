@@ -25,6 +25,8 @@ MonoBehaviour:
   damage: 15
   bulletPrefab: {fileID: 7942789937546522980, guid: 50f1408fcf3dc3a40baf87b3ecb91ecb, type: 3}
   attackSpeed: 1
+  multipleShoots: 0
+  bulletsPerShoot: 1
   duration: 0.5
   animationCurve:
     serializedVersion: 2

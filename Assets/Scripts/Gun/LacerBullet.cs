@@ -31,6 +31,25 @@ public class LacerBullet : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private IEnumerator BulletBounce() 
+    {
+        if(bulletSpeed < 0) 
+        {
+            bulletSpeed = 0;
+            bulletSpeed = weaponData.bulletSpeed;
+        }
+
+        else 
+        {
+            bulletSpeed = 0;
+            bulletSpeed = -weaponData.bulletSpeed;
+        }
+
+        transform.Translate(Vector2.left * Time.deltaTime * bulletSpeed);
+
+        yield return new WaitForSeconds(1);
+    }
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
@@ -42,7 +61,7 @@ public class LacerBullet : MonoBehaviour
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
         {
-            Destroy(gameObject);
+            StartCoroutine(BulletBounce());
         }
     }
 }

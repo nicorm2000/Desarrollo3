@@ -25,6 +25,8 @@ MonoBehaviour:
   damage: 250
   bulletPrefab: {fileID: 0}
   attackSpeed: 10
+  multipleShoots: 0
+  bulletsPerShoot: 1
   duration: 0.5
   animationCurve:
     serializedVersion: 2
@@ -60,9 +62,15 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   dopplerWeapon: 0
-  delay: 0
-  velocityIncrease: 0
-  sizeModifier: 1
+  chargeTime: 0
+  chargeSpeed: 0
+  chargeDuration: 0
+  initialDmgPower: 0
+  chargedDmgPower: 0
+  maxDmgPower: 0
+  distanceDivider: 0
+  chargeSize: {x: 0, y: 0, z: 0}
+  shotSize: {x: 0, y: 0, z: 0}
   empty: 
   loaded: 
   cooldown: 

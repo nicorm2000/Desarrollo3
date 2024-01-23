@@ -20,11 +20,13 @@ MonoBehaviour:
   isMeleeWeapon: 0
   isShootWeapon: 1
   weaponID: 6
-  bulletSpeed: 15
+  bulletSpeed: 20
   lifespan: 7
   damage: 35
   bulletPrefab: {fileID: 7942789937546522980, guid: a42c1099ce028ae48933d3ca82dced78, type: 3}
-  attackSpeed: 1
+  attackSpeed: 2
+  multipleShoots: 0
+  bulletsPerShoot: 1
   duration: 0.5
   animationCurve:
     serializedVersion: 2

@@ -801,7 +801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7201095306615803534
 Transform:
   m_ObjectHideFlags: 0
@@ -1457,8 +1457,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 8c81ff1cee96aea44975dfc6f8b73804, type: 2}
-  overheatDecreaseRate: 35
-  overheatIncreaseAmount: 45
+  overheatDecreaseRate: 10
+  overheatIncreaseAmount: 20
   weaponOverheat: 100
   _currentOverheat: 0
   _canShoot: 1
@@ -1518,7 +1518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7989776353207526341
 Transform:
   m_ObjectHideFlags: 0
