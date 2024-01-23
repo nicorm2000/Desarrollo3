@@ -7153,10 +7153,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2082787382}
     - target: {fileID: 43016677604891885, guid: a9df24e86a219ac458086842d36682f6, type: 3}
-      propertyPath: selectWeapon.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 43016677604891885, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: selectWeapon.Array.data[0]
       value: 
       objectReference: {fileID: 1297260548}
