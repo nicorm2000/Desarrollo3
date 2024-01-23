@@ -110,11 +110,9 @@ public class Shoot : MonoBehaviour
 
     private void ShootgunShootLogic() 
     {
-        int maxBullets = 5;
-
         if (weaponData.multipleShoots)
         {
-            for (int i = 0; i < maxBullets;  i++) 
+            for (int i = 0; i < weaponData.bulletsPerShoot;  i++) 
             {
                 Instantiate(weaponData.bulletPrefab, gunMuzzle[i].transform.position, gunMuzzle[i].transform.rotation);
             }         

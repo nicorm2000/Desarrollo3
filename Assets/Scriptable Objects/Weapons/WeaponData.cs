@@ -29,6 +29,7 @@ public class WeaponData : ScriptableObject
     public GameObject bulletPrefab;
     public float attackSpeed;
     public bool multipleShoots;
+    public int bulletsPerShoot;
 
     [Header("Camera Shake Configuration")]
     public float duration;
