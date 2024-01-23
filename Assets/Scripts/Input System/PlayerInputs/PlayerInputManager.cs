@@ -70,7 +70,7 @@ public class PlayerInputManager : MonoBehaviour
     {
         if (playerData._isDead == false)
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < selectWeapon.Length; i++)
             {
                 selectWeapon[i].CheckPlayerTeleportToLevel();
             }

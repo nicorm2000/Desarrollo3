@@ -37,6 +37,46 @@ public class ChangePlayerWeapon : MonoBehaviour
                 weapons[5].SetActive(false);
                 weapons[6].SetActive(false);
                 break; 
+
+            case 3:
+                weapons[0].SetActive(false);
+                weapons[1].SetActive(false);
+                weapons[2].SetActive(false);
+                weapons[3].SetActive(true);
+                weapons[4].SetActive(false);
+                weapons[5].SetActive(false);
+                weapons[6].SetActive(false);
+            break;
+
+            case 4:
+                weapons[0].SetActive(false);
+                weapons[1].SetActive(false);
+                weapons[2].SetActive(false);
+                weapons[3].SetActive(false);
+                weapons[4].SetActive(true);
+                weapons[5].SetActive(false);
+                weapons[6].SetActive(false);
+                break;
+
+            case 5:
+                weapons[0].SetActive(false);
+                weapons[1].SetActive(false);
+                weapons[2].SetActive(false);
+                weapons[3].SetActive(false);
+                weapons[4].SetActive(false);
+                weapons[5].SetActive(true);
+                weapons[6].SetActive(false);
+                break;
+
+            case 6:
+                weapons[0].SetActive(false);
+                weapons[1].SetActive(false);
+                weapons[2].SetActive(false);
+                weapons[3].SetActive(false);
+                weapons[4].SetActive(false);
+                weapons[5].SetActive(false);
+                weapons[6].SetActive(true);
+                break;
         }
     }
 }
