@@ -27,8 +27,6 @@ public class PlayerInputManager : MonoBehaviour
     public static event Action<Vector2> OnRightMouseButtonDown;
     public static event Action<Vector2> OnRightMouseButtonUp;
 
-    public WeaponData weaponData;
-
     public void OnCameraPos(InputValue value)
     {
         mouseDelta = value.Get<Vector2>();

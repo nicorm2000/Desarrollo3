@@ -1947,6 +1947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 9160149820997449130}
   playerShoot: {fileID: 9101498851599914018}
+  teleportPlayerToLevel: {fileID: 0}
   selectWeapon:
   - {fileID: 0}
   - {fileID: 0}
@@ -1959,6 +1960,7 @@ MonoBehaviour:
   lookAtMouse: {fileID: 6429364731748367593}
   baoBasket: {fileID: 0}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+  weaponData: {fileID: 0}
 --- !u!114 &9160149820997449130
 MonoBehaviour:
   m_ObjectHideFlags: 0
