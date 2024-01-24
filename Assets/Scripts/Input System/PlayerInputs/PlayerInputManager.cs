@@ -7,6 +7,7 @@ public class PlayerInputManager : MonoBehaviour
     [Header("Refernces")]
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private Shoot playerShoot;
+    [SerializeField] private TeleportPlayerToLevel teleportPlayerToLevel;
     [SerializeField] private SelectWeapon[] selectWeapon;
     [SerializeField] private LevelToShop levelToShop;
     [SerializeField] private Abilities abilities;
@@ -25,6 +26,8 @@ public class PlayerInputManager : MonoBehaviour
 
     public static event Action<Vector2> OnRightMouseButtonDown;
     public static event Action<Vector2> OnRightMouseButtonUp;
+
+    public WeaponData weaponData;
 
     public void OnCameraPos(InputValue value)
     {
@@ -70,9 +73,11 @@ public class PlayerInputManager : MonoBehaviour
     {
         if (playerData._isDead == false)
         {
-            for (int i = 0; i < selectWeapon.Length; i++)
+            teleportPlayerToLevel.CheckPlayerTeleportToLevel();
+
+            for (int i = 0; i < selectWeapon.Length; i++) 
             {
-                selectWeapon[i].CheckPlayerTeleportToLevel();
+                selectWeapon[i].CheckWeapon();
             }
 
             if (baoBasket.activeSelf == true) 
