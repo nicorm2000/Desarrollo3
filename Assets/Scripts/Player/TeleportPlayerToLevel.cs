@@ -20,6 +20,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
     [SerializeField] private GameObject levelSpawn;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject transitionOff;
+    [SerializeField] private GameObject goToLevelText;
 
     public bool playerCanTeleport = false;
     public bool isPlayerOnTeleportArea = false;
@@ -31,6 +32,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
         if (player.gameObject.CompareTag("Player"))
         {
             isPlayerOnTeleportArea = true;
+            goToLevelText.SetActive(true);
         }
     }
 
@@ -39,6 +41,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
         if (player.gameObject.CompareTag("Player"))
         {
             isPlayerOnTeleportArea = false;
+            goToLevelText.SetActive(false);
         }
     }
 
