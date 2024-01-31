@@ -67,6 +67,7 @@ public class WeaponOverheatUI : MonoBehaviour
                 pistolUI.SetActive(false);
                 shotgunUI.SetActive(false);
                 rpgUI.SetActive(false);
+                raygunUI.SetActive(false);
 
                 break;
 
@@ -78,6 +79,7 @@ public class WeaponOverheatUI : MonoBehaviour
                 pistolUI.SetActive(false);
                 shotgunUI.SetActive(false);
                 rpgUI.SetActive(false);
+                raygunUI.SetActive(false);
 
                 break;
 
@@ -89,6 +91,7 @@ public class WeaponOverheatUI : MonoBehaviour
                 pistolUI.SetActive(false);
                 shotgunUI.SetActive(false);
                 rpgUI.SetActive(false);
+                raygunUI.SetActive(false);
 
                 break;
 
@@ -100,6 +103,7 @@ public class WeaponOverheatUI : MonoBehaviour
                 pistolUI.SetActive(true);
                 shotgunUI.SetActive(false);
                 rpgUI.SetActive(false);
+                raygunUI.SetActive(false);
 
                 break;
 
@@ -111,6 +115,7 @@ public class WeaponOverheatUI : MonoBehaviour
                 pistolUI.SetActive(false);
                 shotgunUI.SetActive(true);
                 rpgUI.SetActive(false);
+                raygunUI.SetActive(false);
 
                 break;
 
@@ -122,6 +127,7 @@ public class WeaponOverheatUI : MonoBehaviour
                 pistolUI.SetActive(false);
                 shotgunUI.SetActive(false);
                 rpgUI.SetActive(true);
+                raygunUI.SetActive(false);
 
                 break;
 
