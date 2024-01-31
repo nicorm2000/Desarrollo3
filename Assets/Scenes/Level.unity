@@ -1805,7 +1805,7 @@ GameObject:
   - component: {fileID: 128263357}
   - component: {fileID: 128263358}
   m_Layer: 5
-  m_Name: WeaponOverheatFamas
+  m_Name: WeaponOverheatRifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1818,7 +1818,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128263355}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1826,10 +1826,10 @@ RectTransform:
   - {fileID: 1516056426}
   - {fileID: 1347483446}
   m_Father: {fileID: 833676937}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.86447924, y: 0.097}
   m_AnchorMax: {x: 0.86447924, y: 0.097}
-  m_AnchoredPosition: {x: -153.61572, y: -99.42499}
+  m_AnchoredPosition: {x: 100, y: -99.42499}
   m_SizeDelta: {x: 311.8186, y: 199.05}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &128263357
@@ -7468,6 +7468,18 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 771723441}
+    - target: {fileID: 3462139810453423481, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462139810453423481, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462139810453423481, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 05a436d6b9738734b9c8682e94a1e67e, type: 3}
     - target: {fileID: 3823591937530358882, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponRed
       value: 
@@ -7512,6 +7524,34 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 1309145269}
+    - target: {fileID: 4568326188025922990, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568326188025922990, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568326188025922990, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568326188025922990, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568326188025922990, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568326188025922990, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568326188025922990, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 4843775744071975369, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponRed
       value: 
@@ -7532,6 +7572,14 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 823054430}
+    - target: {fileID: 5569180708625838545, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_Name
+      value: Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569180708625838545, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5661613424138094487, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponRed
       value: 
@@ -7568,9 +7616,49 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f154396113ff97b42afbdb151b67354e, type: 3}
+    - target: {fileID: 6624374951930773587, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543238300289498345, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.692
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543238300289498345, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.157
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543238300289498345, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543238300289498345, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543238300289498345, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543238300289498345, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543238300289498345, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543238300289498345, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543238300289498345, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 7654313808540026409, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponRed
@@ -11821,7 +11909,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.86447924, y: 0.097}
   m_AnchorMax: {x: 0.86447924, y: 0.097}
-  m_AnchoredPosition: {x: 202.00006, y: -99.42499}
+  m_AnchoredPosition: {x: 106, y: -99.42499}
   m_SizeDelta: {x: 311.8186, y: 199.05}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &825329472
@@ -21120,13 +21208,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1347483445}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1.6666664}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 7, y: 6, z: 2.333333}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 128263356}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.0018615723, y: 0.0009689331}
@@ -21152,7 +21240,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c7082932c1db0134aa90782d8580069b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab90ef714f9537b44b5a82aa3cbacdad, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -24705,13 +24793,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516056425}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1.6666664}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 7, y: 6, z: 2.333333}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 128263356}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.0018615723, y: 0.0009689331}
@@ -24737,7 +24825,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 17cd2f273184fb941891fbc16011f478, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05a436d6b9738734b9c8682e94a1e67e, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
