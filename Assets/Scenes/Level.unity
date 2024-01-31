@@ -6667,13 +6667,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444874082}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1.6666664}
+  m_LocalScale: {x: 4, y: 4, z: 1.3333333}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1187821265}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.0018615723, y: 0.0009765625}
@@ -6699,7 +6699,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 831c0dcb154d8e340aa343d0ec72bd4e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 69fbc89f9f47ea3469bfacfb18ccb3c0, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -7480,6 +7480,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 05a436d6b9738734b9c8682e94a1e67e, type: 3}
+    - target: {fileID: 3737204892843310438, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3823591937530358882, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponRed
       value: 
@@ -7608,6 +7612,14 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 1187821267}
+    - target: {fileID: 5845671866020659461, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5845671866020659461, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5914266854404477422, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -7634,7 +7646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6704732740935683612, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7469210322841030696, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: m_Name
@@ -7752,6 +7764,10 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 771723441}
+    - target: {fileID: 9074542851058020274, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 75499710c24b54841a75789929f5bf09, type: 3}
     - target: {fileID: 9101498851599914018, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: screenShake
       value: 
@@ -17977,7 +17993,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.86447924, y: 0.097}
   m_AnchorMax: {x: 0.86447924, y: 0.097}
-  m_AnchoredPosition: {x: -196, y: -99.42499}
+  m_AnchoredPosition: {x: -291, y: -85}
   m_SizeDelta: {x: 311.8186, y: 199.05}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1187821266
@@ -26924,7 +26940,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 0
   m_FillClockwise: 1
-  m_FillOrigin: 1
+  m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1636758987
@@ -30105,13 +30121,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835414889}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1.6666664}
+  m_LocalScale: {x: 4, y: 4, z: 1.3333333}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1187821265}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.0018615723, y: 0.0009765625}
@@ -30137,7 +30153,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9a75aa9f079f7ae4b9a14e71f9948955, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75499710c24b54841a75789929f5bf09, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
