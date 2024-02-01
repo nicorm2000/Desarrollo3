@@ -3,13 +3,24 @@ using UnityEngine;
 
 public class ColliderTrigger : MonoBehaviour
 {
-    public event EventHandler OnPlayerTriggerEnter;
+    [SerializeField] private string playerLayer;
 
-    private void OnTriggerEnter(Collider other)
+    public event EventHandler OnPlayerTriggerEnter;
+    public event EventHandler OnPlayerTriggerExit;
+
+    private void OnTriggerEnter(Collider collision)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer(playerLayer))
         {
             OnPlayerTriggerEnter?.Invoke(this, EventArgs.Empty);
+        }
+    }
+
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer(playerLayer))
+        {
+            OnPlayerTriggerExit?.Invoke(this, EventArgs.Empty);
         }
     }
 }
