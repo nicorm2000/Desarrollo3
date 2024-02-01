@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 8283603612003354825}
   - component: {fileID: 4443652411052594217}
   - component: {fileID: 5915558889253212157}
-  - component: {fileID: 2642363982879486186}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,24 +140,3 @@ MonoBehaviour:
     m_Bits: 128
   animationTriggerParameter: isHit
   hitMarker: {fileID: 4443652411052594217}
---- !u!95 &2642363982879486186
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9184180965656742676}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b00c906d159c0ca4a92c7ade9f031426, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

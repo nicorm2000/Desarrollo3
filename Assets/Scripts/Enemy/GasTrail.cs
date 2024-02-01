@@ -11,6 +11,9 @@ public class GasTrail : MonoBehaviour
     [SerializeField] private float gasCloudLifespan;
     [SerializeField] private GameObject gasCloud;
 
+    [Header("Health System Dependencies")]
+    [SerializeField] private HealthSystem healthSystem;
+
     private GameObject target;
     private ObjectPool gasCloudPool;
 
@@ -25,7 +28,7 @@ public class GasTrail : MonoBehaviour
 
     private IEnumerator GasCloudSpawn()
     {
-        while (true)
+        while (!healthSystem._dead)
         {
             SpawnGasCloud();
             yield return new WaitForSeconds(timeBetweenGasSpawns);
@@ -34,7 +37,7 @@ public class GasTrail : MonoBehaviour
 
     private IEnumerator GasCloudTrail()
     {
-        while (true) 
+        while (!healthSystem._dead) 
         { 
         yield return new WaitForSeconds(timeBetweenDamage);
 

@@ -225,6 +225,8 @@ MonoBehaviour:
     m_Bits: 64
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   playerHealthUI: {fileID: 0}
+  audioManager: {fileID: 0}
+  medKit: 
 --- !u!65 &6066928790653292648
 BoxCollider:
   m_ObjectHideFlags: 0
