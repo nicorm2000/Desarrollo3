@@ -17,13 +17,8 @@ public class EnemyData : ScriptableObject
 
     public string sushiName;
     public float damage;
-    public string spawnAnimationName;
-    public float spawnAnimationDuration;
-    public string deathAnimationName;
-    public float deathAnimationDuration;
 
     [Header("AIChase")]
-
     public float movementSpeed;
     public float avoidanceDistance;
 
@@ -36,7 +31,6 @@ public class EnemyData : ScriptableObject
     public float avoidanceFactor;
 
     [Header("ShooterEnemy")]
-
     public float shootDistance;
     public float fireRate;
     public float lifeSpawn;
@@ -44,7 +38,6 @@ public class EnemyData : ScriptableObject
     public GameObject bullet;
 
     [Header("HealthSystem")]
-
     public float health;
     public bool isDead;
     public ZoneTriggeredEffect _triggerEffect;
