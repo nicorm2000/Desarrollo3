@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6921108573341711683}
   - component: {fileID: 2649181454084446917}
   m_Layer: 0
-  m_Name: Chopping Tentacles
+  m_Name: Boss Attacks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,8 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
-  tentacleActiveDuration: 3
-  tentacleSpawnDelay: 2
-  tentacleSpawnDelayMultiplier: 0.9
-  tentacleSpawnMinimumDelay: 0.25
   tentacles: []
+  bulletPrefab: {fileID: 0}
+  bulletSpawnPoints: []
+  bulletSpawnDelay: 0

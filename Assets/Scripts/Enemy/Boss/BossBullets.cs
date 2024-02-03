@@ -25,7 +25,7 @@ public class BossBullets : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector2.right * bossData.attack2BulletSpeed * Time.deltaTime);
+        transform.Translate(Vector3.down * bossData.attack2BulletSpeed * Time.deltaTime);
 
         _timer -= Time.deltaTime;
         
@@ -53,10 +53,12 @@ public class BossBullets : MonoBehaviour
         }
     }
 
-    public void ActivateBullet(Vector3 position)
+    public void ActivateBullet(Vector3 position, Quaternion rotation)
     {
         gameObject.SetActive(true);
         transform.position = position;
+
+        transform.rotation = rotation;
 
         _timer = bossData.attack2BulletLifespan;
     }

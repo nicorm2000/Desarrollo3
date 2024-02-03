@@ -18,20 +18,17 @@ public class BossAttacks : MonoBehaviour
     [Header("Chopping Tentacles Set Up")]
     [SerializeField] private Transform[] tentacles;
 
-    [Header("Bullet Hell Attack Set Up")]
-    [SerializeField] private GameObject bulletPrefab;
+    [Header("Ink Hell Set Up")]
     [SerializeField] private Transform[] bulletSpawnPoints;
-    [SerializeField] private float bulletSpawnDelay;
 
     private AttackType currentAttack;
     private ObjectPool bulletPool;
 
     private void Start()
     {
-        bulletPool = new ObjectPool(bulletPrefab);
-        StartCoroutine(FireBullets());
-        //currentAttack = AttackType.None;
-        //StartCoroutine(InitialDelayRoutine());
+        bulletPool = new ObjectPool(bossData.attack2Object);
+        currentAttack = AttackType.None;
+        StartCoroutine(InitialDelayRoutine());
     }
 
     private IEnumerator InitialDelayRoutine()
@@ -41,6 +38,7 @@ public class BossAttacks : MonoBehaviour
         StartCoroutine(AttackRoutine());
     }
 
+    #region BOSS_ATTACKS
     private IEnumerator AttackRoutine()
     {
         while (!bossData.isDead)
@@ -48,9 +46,11 @@ public class BossAttacks : MonoBehaviour
             DetermineNextAttack();
 
             yield return StartCoroutine(PerformAttack());
-
+            Debug.Log("Wait for attack delay");
             yield return new WaitForSeconds(bossData.attackDelay);
+            Debug.Log("Can choose an attacck");
         }
+        Debug.Log("Boss is dead");
     }
 
     private void DetermineNextAttack()
@@ -71,16 +71,20 @@ public class BossAttacks : MonoBehaviour
                 break;
         }
     }
+    #endregion
 
     private IEnumerator PerformAttack()
     {
         switch (currentAttack)
         {
             case AttackType.Attack1:
+                Debug.Log("Attack 1");
                 yield return StartCoroutine(ChoppingTentaclesCoroutine());
                 break;
             case AttackType.Attack2:
-                Debug.Log("Second Attack");
+                Debug.Log("Attack 2");
+                StartCoroutine(RotateSpawnPoints());
+                yield return StartCoroutine(FireBullets());
                 break;
             case AttackType.Attack3:
                 Debug.Log("Third Attack");
@@ -88,14 +92,17 @@ public class BossAttacks : MonoBehaviour
             default:
                 break;
         }
+
+        yield return null;
     }
 
+    #region CHOPPING_TENTACLES
     private IEnumerator ChoppingTentaclesCoroutine()
     {
         float tentacleSpawnDelayAux = bossData.attack1SpawnDelay;
         int activeTentacleIndex = 0;
 
-        while (activeTentacleIndex < bossData.attack1Objects.Length)
+        while (activeTentacleIndex < tentacles.Length)
         {
             SlamTentacle(activeTentacleIndex);
             yield return new WaitForSeconds(tentacleSpawnDelayAux);
@@ -104,35 +111,55 @@ public class BossAttacks : MonoBehaviour
             tentacleSpawnDelayAux *= bossData.attack1SpawnDelayMultiplier;
             tentacleSpawnDelayAux = Mathf.Max(tentacleSpawnDelayAux, bossData.attack1SpawnMinimumDelay);
         }
-
         yield return new WaitForSeconds(bossData.attack1Despawn);
+        Debug.Log("Attack 1 Finish");
         DeactivateAllTentacles();
     }
 
     private void SlamTentacle(int index)
     {
-        bossData.attack1Objects[index].gameObject.SetActive(true);
+        tentacles[index].gameObject.SetActive(true);
     }
 
     private void DeactivateAllTentacles()
     {
-        foreach (Transform tentacle in bossData.attack1Objects)
+        foreach (Transform tentacle in tentacles)
         {
             tentacle.gameObject.SetActive(false);
         }
     }
+    #endregion
 
+    #region INK_HELL
     private IEnumerator FireBullets()
+    {
+        int bulletCount = 0;
+
+        while (bulletCount < bossData.attack2MaxAmountOfRounds)
+        {
+            foreach (Transform spawnPoint in bulletSpawnPoints)
+            {
+                GameObject bullet = bulletPool.GetPooledObject();
+                bullet.GetComponent<BossBullets>().ActivateBullet(spawnPoint.position, spawnPoint.localRotation);
+            }
+            yield return null;
+            bulletCount++;
+            yield return new WaitForSeconds(bossData.attack2BulletSpawnDelay);
+        }
+        Debug.Log("Attack 2 Finish");
+        StopCoroutine(RotateSpawnPoints());
+    }
+
+    private IEnumerator RotateSpawnPoints()
     {
         while (true)
         {
             foreach (Transform spawnPoint in bulletSpawnPoints)
             {
-                GameObject bullet = bulletPool.GetPooledObject();
-                bullet.GetComponent<BossBullets>().ActivateBullet(spawnPoint.position);
-                yield return new WaitForSeconds(bulletSpawnDelay);
+                spawnPoint.Rotate(Vector3.forward, bossData.attack2BulletSpawnPointRotation);
             }
             yield return null;
         }
     }
+    #endregion
 }

@@ -9,27 +9,22 @@ public class BossData : ScriptableObject
     public float collisionDamage;
     public float attackDelay;
 
-    [Header("Boss Attack 1 - Phase 1")]
+    [Header("Boss Attack 1")]
     public string attack1Name;
     public float attack1Damage;
     public float attack1Despawn;
     public float attack1SpawnDelay;
     public float attack1SpawnDelayMultiplier;
     public float attack1SpawnMinimumDelay;
-    public Transform[] attack1Objects;
-
-    [Header("Boss Attack 1 - Phase 2")]
-    public float p2Attack1Damage;
-    public float p2Attack1SpawnDelay;
-    public float p2Attack1SpawnDelayMultiplier;
-    public float p2Attack1SpawnMinimumDelay;
-    public Transform[] p2Attack1Objects;
 
     [Header("Boss Attack 2")]
     public string attack2Name;
     public float attack2BulletDamage;
     public float attack2BulletSpeed;
     public float attack2BulletLifespan;
+    public float attack2BulletSpawnDelay;
+    public float attack2BulletSpawnPointRotation;
+    public float attack2MaxAmountOfRounds;
     public GameObject attack2Object;
 
     [Header("Boss Attack 3")]
