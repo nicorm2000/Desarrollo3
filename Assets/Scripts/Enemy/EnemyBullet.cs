@@ -13,9 +13,9 @@ public class EnemyBullet : MonoBehaviour
 
     private void Start()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        playerHealth = EnemyManager.player.GetComponent<PlayerHealth>();
         damage = enemyData.damage;
-        timer = enemyData.lifeSpawn;
+        timer = enemyData.lifeSpan;
     }
 
     private void Update()

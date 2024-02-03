@@ -126,7 +126,6 @@ public class BossFight : MonoBehaviour
         //if (rnd < 65) EnemySpawn = enemy2;
         //if (rnd < 15) EnemySpawn = enemy3;
 
-
         Vector3 spawnPos = spawnPositionList[Random.Range(0, spawnPositionList.Count)];
 
         Instantiate(enemy, spawnPos, Quaternion.identity);

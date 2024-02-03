@@ -27,8 +27,9 @@ public class BossData : ScriptableObject
 
     [Header("Boss Attack 2")]
     public string attack2Name;
-    public float attack2Damage;
-    public float attack2Duration;
+    public float attack2BulletDamage;
+    public float attack2BulletSpeed;
+    public float attack2BulletLifespan;
     public GameObject attack2Object;
 
     [Header("Boss Attack 3")]

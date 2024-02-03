@@ -22,10 +22,16 @@ MonoBehaviour:
   attack1SpawnDelay: 2
   attack1SpawnDelayMultiplier: 0.9
   attack1SpawnMinimumDelay: 0.25
-  attack1Object: {fileID: 0}
+  attack1Objects: []
+  p2Attack1Damage: 0
+  p2Attack1SpawnDelay: 0
+  p2Attack1SpawnDelayMultiplier: 0
+  p2Attack1SpawnMinimumDelay: 0
+  p2Attack1Objects: []
   attack2Name: 
-  attack2Damage: 0
-  attack2Duration: 0
+  attack2BulletDamage: 1
+  attack2BulletSpeed: 10
+  attack2BulletLifespan: 3
   attack2Object: {fileID: 0}
   attack3Name: 
   attack3Damage: 0

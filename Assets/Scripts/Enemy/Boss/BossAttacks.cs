@@ -18,12 +18,20 @@ public class BossAttacks : MonoBehaviour
     [Header("Chopping Tentacles Set Up")]
     [SerializeField] private Transform[] tentacles;
 
+    [Header("Bullet Hell Attack Set Up")]
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform[] bulletSpawnPoints;
+    [SerializeField] private float bulletSpawnDelay;
+
     private AttackType currentAttack;
+    private ObjectPool bulletPool;
 
     private void Start()
     {
-        currentAttack = AttackType.None;
-        StartCoroutine(InitialDelayRoutine());
+        bulletPool = new ObjectPool(bulletPrefab);
+        StartCoroutine(FireBullets());
+        //currentAttack = AttackType.None;
+        //StartCoroutine(InitialDelayRoutine());
     }
 
     private IEnumerator InitialDelayRoutine()
@@ -111,6 +119,20 @@ public class BossAttacks : MonoBehaviour
         foreach (Transform tentacle in bossData.attack1Objects)
         {
             tentacle.gameObject.SetActive(false);
+        }
+    }
+
+    private IEnumerator FireBullets()
+    {
+        while (true)
+        {
+            foreach (Transform spawnPoint in bulletSpawnPoints)
+            {
+                GameObject bullet = bulletPool.GetPooledObject();
+                bullet.GetComponent<BossBullets>().ActivateBullet(spawnPoint.position);
+                yield return new WaitForSeconds(bulletSpawnDelay);
+            }
+            yield return null;
         }
     }
 }

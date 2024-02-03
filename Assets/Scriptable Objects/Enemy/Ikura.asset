@@ -18,20 +18,19 @@ MonoBehaviour:
   model: {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   animator: {fileID: 0}
   dropData: {fileID: 11400000, guid: 1ecd47809c2064c4399f205203da9d0c, type: 2}
-  suhsiName: Ikura
+  sushiName: 
   damage: 30
-  spawnAnimationName: Spawn
-  spawnAnimationDuration: 1
-  deathAnimationName: Death
-  deathAnimationDuration: 1
   movementSpeed: 1
   avoidanceDistance: 1
   ifFollowingPlayer: 1
   isMelee: 0
   canChase: 1
+  isGas: 0
+  circularMovementSpeed: 0
+  avoidanceFactor: 0
   shootDistance: 5
   fireRate: 1.5
-  lifeSpawn: 20
+  lifeSpan: 20
   bulletSpeed: 3
   bullet: {fileID: 6243113850147215193, guid: d7618c043af461a48970a8746eeecb95, type: 3}
   health: 80

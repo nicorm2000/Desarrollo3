@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class LacerBullet : MonoBehaviour
+public class LaserBullet : MonoBehaviour
 {
     public WeaponData weaponData;
 
