@@ -7,12 +7,23 @@ public class BossData : ScriptableObject
     public string sushiName;
     public float bossPresentationDuration;
     public float collisionDamage;
+    public float attackDelay;
 
-    [Header("Boss Attack 1")]
+    [Header("Boss Attack 1 - Phase 1")]
     public string attack1Name;
     public float attack1Damage;
-    public float attack1Duration;
-    public GameObject attack1Object;
+    public float attack1Despawn;
+    public float attack1SpawnDelay;
+    public float attack1SpawnDelayMultiplier;
+    public float attack1SpawnMinimumDelay;
+    public Transform[] attack1Objects;
+
+    [Header("Boss Attack 1 - Phase 2")]
+    public float p2Attack1Damage;
+    public float p2Attack1SpawnDelay;
+    public float p2Attack1SpawnDelayMultiplier;
+    public float p2Attack1SpawnMinimumDelay;
+    public Transform[] p2Attack1Objects;
 
     [Header("Boss Attack 2")]
     public string attack2Name;

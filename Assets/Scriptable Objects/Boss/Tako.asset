@@ -13,10 +13,30 @@ MonoBehaviour:
   m_Name: Tako
   m_EditorClassIdentifier: 
   sushiName: Tako
+  bossPresentationDuration: 3
+  collisionDamage: 10
+  attackDelay: 3
+  attack1Name: Chopping Tentacles
+  attack1Damage: 30
+  attack1Despawn: 2
+  attack1SpawnDelay: 2
+  attack1SpawnDelayMultiplier: 0.9
+  attack1SpawnMinimumDelay: 0.25
+  attack1Object: {fileID: 0}
+  attack2Name: 
+  attack2Damage: 0
+  attack2Duration: 0
+  attack2Object: {fileID: 0}
+  attack3Name: 
+  attack3Damage: 0
+  attack3Duration: 0
+  attack3Object: {fileID: 0}
   health: 5000
   isDead: 0
   _triggerEffect: {fileID: 0}
   _spriteRenderer: {fileID: 0}
+  spawn: 
   death: 
-  projectile: 
-  attack: 
+  attack1SFX: 
+  attack2SFX: 
+  attack3SFX: 

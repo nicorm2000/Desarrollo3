@@ -28381,7 +28381,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliderTrigger: {fileID: 1190987841}
   enemy: {fileID: 4387127066184703811, guid: 40e2c4266a652064898bb3a906848075, type: 3}
+  enemy2: {fileID: 0}
+  enemy3: {fileID: 0}
   enemySpawnInterval: 1
+  enemysMaxAmountAlive: 0
 --- !u!4 &1686854223
 Transform:
   m_ObjectHideFlags: 0

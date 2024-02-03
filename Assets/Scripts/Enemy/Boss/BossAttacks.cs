@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -11,7 +12,11 @@ public class BossAttacks : MonoBehaviour
         Attack3
     }
 
+    [Header("Boss Data Dependencies")]
     [SerializeField] private BossData bossData;
+
+    [Header("Chopping Tentacles Set Up")]
+    [SerializeField] private Transform[] tentacles;
 
     private AttackType currentAttack;
 
@@ -32,36 +37,80 @@ public class BossAttacks : MonoBehaviour
     {
         while (!bossData.isDead)
         {
-            yield return new WaitForSeconds(Random.Range(2f, 5f));
+            DetermineNextAttack();
 
-            //Open to debate, we do it by prob or by phase, what do you prefer Facu?
-            float rand = Random.value;
-            if (rand < 0.4f)
-                currentAttack = AttackType.Attack1;
-            else if (rand < 0.7f)
-                currentAttack = AttackType.Attack2;
-            else
-                currentAttack = AttackType.Attack3;
+            yield return StartCoroutine(PerformAttack());
 
-            PerformAttack();
+            yield return new WaitForSeconds(bossData.attackDelay);
         }
     }
 
-    public void PerformAttack()
+    private void DetermineNextAttack()
     {
         switch (currentAttack)
         {
             case AttackType.Attack1:
-
+                currentAttack = AttackType.Attack2;
                 break;
             case AttackType.Attack2:
-
+                currentAttack = AttackType.Attack3;
                 break;
             case AttackType.Attack3:
+                currentAttack = AttackType.Attack1;
+                break;
+            default:
+                currentAttack = AttackType.Attack1;
+                break;
+        }
+    }
 
+    private IEnumerator PerformAttack()
+    {
+        switch (currentAttack)
+        {
+            case AttackType.Attack1:
+                yield return StartCoroutine(ChoppingTentaclesCoroutine());
+                break;
+            case AttackType.Attack2:
+                Debug.Log("Second Attack");
+                break;
+            case AttackType.Attack3:
+                Debug.Log("Third Attack");
                 break;
             default:
                 break;
+        }
+    }
+
+    private IEnumerator ChoppingTentaclesCoroutine()
+    {
+        float tentacleSpawnDelayAux = bossData.attack1SpawnDelay;
+        int activeTentacleIndex = 0;
+
+        while (activeTentacleIndex < bossData.attack1Objects.Length)
+        {
+            SlamTentacle(activeTentacleIndex);
+            yield return new WaitForSeconds(tentacleSpawnDelayAux);
+
+            activeTentacleIndex++;
+            tentacleSpawnDelayAux *= bossData.attack1SpawnDelayMultiplier;
+            tentacleSpawnDelayAux = Mathf.Max(tentacleSpawnDelayAux, bossData.attack1SpawnMinimumDelay);
+        }
+
+        yield return new WaitForSeconds(bossData.attack1Despawn);
+        DeactivateAllTentacles();
+    }
+
+    private void SlamTentacle(int index)
+    {
+        bossData.attack1Objects[index].gameObject.SetActive(true);
+    }
+
+    private void DeactivateAllTentacles()
+    {
+        foreach (Transform tentacle in bossData.attack1Objects)
+        {
+            tentacle.gameObject.SetActive(false);
         }
     }
 }
