@@ -35,11 +35,11 @@ public class BossAttacks : MonoBehaviour
     {
         yield return new WaitForSeconds(bossData.bossPresentationDuration);
 
-        StartCoroutine(AttackRoutine());
+        StartCoroutine(AttackCoroutine());
     }
 
     #region BOSS_ATTACKS
-    private IEnumerator AttackRoutine()
+    private IEnumerator AttackCoroutine()
     {
         while (!bossData.isDead)
         {

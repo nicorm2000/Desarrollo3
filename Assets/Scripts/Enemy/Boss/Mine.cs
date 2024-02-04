@@ -1,37 +1,32 @@
+using System.Collections;
 using UnityEngine;
 
 public class Mine : MonoBehaviour
 {
     private bool isActive = false;
-    private float activationDuration = 2f;
-    private float playerActivationDelay = 1f;
+
+    public void Activate(float duration)
+    {
+        isActive = true;
+        StartCoroutine(DeactivateAfter(duration));
+    }
+
+    public bool IsActive()
+    {
+        return isActive;
+    }
+
+    private IEnumerator DeactivateAfter(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        isActive = false;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !isActive)
+        if (other.CompareTag("Player") && isActive)
         {
-            Invoke("ActivateMine", playerActivationDelay);
+            Debug.Log("Player triggered an active mine!");
         }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Player exited");
-        }
-    }
-
-    private void ActivateMine()
-    {
-        Debug.Log("Mine activated");
-        isActive = true;
-        Invoke("DeactivateMine", activationDuration);
-    }
-
-    private void DeactivateMine()
-    {
-        Debug.Log("Mine deactivated");
-        isActive = false;
     }
 }
