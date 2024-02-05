@@ -11,6 +11,9 @@ public class BossAttacks : MonoBehaviour
         Attack3
     }
 
+    [Header("Boss UI Set Up")]
+    [SerializeField] private GameObject bossPresentation;
+
     [Header("Boss Data Dependencies")]
     [SerializeField] private BossData bossData;
 
@@ -33,12 +36,18 @@ public class BossAttacks : MonoBehaviour
         StartCoroutine(InitialDelayRoutine());
     }
 
+    #region BOSS_PRESENTATION
     private IEnumerator InitialDelayRoutine()
     {
+        //Boss entering/spawning animation here
+        //yield return new WaitForSeconds(bossData.spawningAnimationDuration);
+        bossPresentation.SetActive(true);
         yield return new WaitForSeconds(bossData.bossPresentationDuration);
+        bossPresentation.SetActive(false);
 
         StartCoroutine(AttackCoroutine());
     }
+    #endregion
 
     #region BOSS_ATTACKS
     private IEnumerator AttackCoroutine()
