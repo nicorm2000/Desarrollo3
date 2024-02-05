@@ -21,6 +21,9 @@ public class BossAttacks : MonoBehaviour
     [Header("Ink Hell Set Up")]
     [SerializeField] private Transform[] bulletSpawnPoints;
 
+    [Header("Blind Octopus Set Up")]
+    [SerializeField] private FloorTentacleManager floorTentacleManager;
+
     private AttackType currentAttack;
     private ObjectPool bulletPool;
 
@@ -87,7 +90,8 @@ public class BossAttacks : MonoBehaviour
                 yield return StartCoroutine(FireBullets());
                 break;
             case AttackType.Attack3:
-                Debug.Log("Third Attack");
+                Debug.Log("Attack 3");
+                yield return StartCoroutine(floorTentacleManager.ActivateFloorTentacleCoroutine(bossData.attack3AmountOfFloorTentacles));
                 break;
             default:
                 break;

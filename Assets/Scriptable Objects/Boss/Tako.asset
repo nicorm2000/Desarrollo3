@@ -31,9 +31,12 @@ MonoBehaviour:
   attack2MaxAmountOfRounds: 100
   attack2Object: {fileID: 1922237827204055625, guid: 77ab439aa6adef74a920f10be60595a6, type: 3}
   attack3Name: Blind Octopus
-  attack3Damage: 0
-  attack3Duration: 0
-  attack3Object: {fileID: 0}
+  attack3Damage: 10
+  attack3AmountOfIterations: 20
+  attack3AmountOfFloorTentacles: 7
+  attack3ActivationInterval: 2
+  attack3ActivationDuration: 3
+  attack3WarningDisplay: 1
   health: 5000
   isDead: 0
   _triggerEffect: {fileID: 0}

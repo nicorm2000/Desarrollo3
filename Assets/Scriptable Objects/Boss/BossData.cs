@@ -30,8 +30,11 @@ public class BossData : ScriptableObject
     [Header("Boss Attack 3")]
     public string attack3Name;
     public float attack3Damage;
-    public float attack3Duration;
-    public GameObject attack3Object;
+    public int attack3AmountOfIterations;
+    public int attack3AmountOfFloorTentacles;
+    public float attack3ActivationInterval;
+    public float attack3ActivationDuration;
+    public float attack3WarningDisplay;
 
     [Header("Health System")]
     public float health;
