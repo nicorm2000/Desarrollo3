@@ -40,7 +40,7 @@ public class BossAttacks : MonoBehaviour
     private IEnumerator InitialDelayRoutine()
     {
         //Boss entering/spawning animation here
-        //yield return new WaitForSeconds(bossData.spawningAnimationDuration);
+        yield return new WaitForSeconds(bossData.bossPresentationDuration);//bossData.spawningAnimationDuration
         bossPresentation.SetActive(true);
         yield return new WaitForSeconds(bossData.bossPresentationDuration);
         bossPresentation.SetActive(false);
