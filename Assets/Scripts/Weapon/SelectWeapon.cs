@@ -9,7 +9,9 @@ public class SelectWeapon : MonoBehaviour
 
     [SerializeField] private bool canPickUp = false;
 
-    public int weaponToPickUpID;
+
+    [Header("WeaponData Dependences")]
+    [SerializeField] private WeaponData weaponData;
 
     private void Start()
     {
@@ -38,7 +40,7 @@ public class SelectWeapon : MonoBehaviour
     {
         if (canPickUp) 
         {
-            changePlayerWeapon.ChangeWeapon(weaponToPickUpID);
+            changePlayerWeapon.ChangeWeapon(weaponData.weaponID);
         }
     }
 }

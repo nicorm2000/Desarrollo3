@@ -28,13 +28,12 @@ public class WeaponOverheatUI : MonoBehaviour
     [SerializeField] private GameObject rpgUI;
     [SerializeField] private GameObject raygunUI;
 
-    [Header("WeaponUI Images")]
+    [Header("WeaponData Dependences")]
+    [SerializeField] private WeaponData weaponData;
 
+    [Header("WeaponUI Images")]
     public float currentSliderOverheat = 0f;
     public float maxSliderOverheat;
-
-    public int weaponID;
-
 
     void Start()
     {
@@ -57,7 +56,7 @@ public class WeaponOverheatUI : MonoBehaviour
 
     public void CheckTypeOfWeapon()
     {
-        switch (weaponID)
+        switch (weaponData.weaponID)
         {
             case (int)Weapons.Uzi:
 
