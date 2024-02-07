@@ -7969,6 +7969,50 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 1187821267}
+    - target: {fileID: 560269450349637374, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.46874836
+      objectReference: {fileID: 0}
+    - target: {fileID: 560269450349637374, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.093750075
+      objectReference: {fileID: 0}
+    - target: {fileID: 827565897814791230, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.325325
+      objectReference: {fileID: 0}
+    - target: {fileID: 827565897814791230, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08398646
+      objectReference: {fileID: 0}
+    - target: {fileID: 934148440766534992, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.3968217
+      objectReference: {fileID: 0}
+    - target: {fileID: 934148440766534992, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.075236514
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198981448993657280, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.41007513
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198981448993657280, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0752365
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474438955505684398, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670477477231343488, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4390723
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670477477231343488, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.026236452
+      objectReference: {fileID: 0}
     - target: {fileID: 1753551226827048246, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponRed
       value: 
@@ -8077,6 +8121,14 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 771723441}
+    - target: {fileID: 3729285721743270887, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3737204892843310438, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3823591937530358882, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponRed
       value: 
@@ -8121,6 +8173,10 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 1309145269}
+    - target: {fileID: 4568326188025922990, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.42932612
+      objectReference: {fileID: 0}
     - target: {fileID: 4843775744071975369, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponRed
       value: 
@@ -8141,6 +8197,10 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 823054430}
+    - target: {fileID: 5569180708625838545, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5661613424138094487, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponRed
       value: 
@@ -8161,6 +8221,10 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 1187821267}
+    - target: {fileID: 5937928717297510734, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5965273300116785429, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: screenShake
       value: 
@@ -8173,6 +8237,14 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 823054430}
+    - target: {fileID: 6624374951930773587, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704732740935683612, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7420418933998589246, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: overHeatText
       value: 
@@ -8225,6 +8297,14 @@ PrefabInstance:
       propertyPath: _currentHealthText
       value: 
       objectReference: {fileID: 1247569955}
+    - target: {fileID: 7921955327541263219, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.870569
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921955327541263219, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.049763534
+      objectReference: {fileID: 0}
     - target: {fileID: 8426163306637436627, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: screenShake
       value: 
