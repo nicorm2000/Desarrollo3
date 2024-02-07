@@ -2013,7 +2013,6 @@ MonoBehaviour:
   weaponData: {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
   currentSliderOverheat: 0
   maxSliderOverheat: 0
-  weaponID: 1
 --- !u!1 &128783100
 GameObject:
   m_ObjectHideFlags: 0
@@ -12629,7 +12628,6 @@ MonoBehaviour:
   weaponData: {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
   currentSliderOverheat: 0
   maxSliderOverheat: 0
-  weaponID: 0
 --- !u!114 &771723442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12869,7 +12867,6 @@ MonoBehaviour:
   weaponData: {fileID: 11400000, guid: 732e0b8dfa1b2b24fbc04ee53d0a6d73, type: 2}
   currentSliderOverheat: 0
   maxSliderOverheat: 0
-  weaponID: 3
 --- !u!114 &823054431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14009,7 +14006,6 @@ MonoBehaviour:
   weaponData: {fileID: 11400000, guid: 07cc2ca5b70974c4d872ab08b9ee83b9, type: 2}
   currentSliderOverheat: 0
   maxSliderOverheat: 0
-  weaponID: 4
 --- !u!114 &899308656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15271,7 +15267,6 @@ MonoBehaviour:
   changePlayerWeapon: {fileID: 521703875}
   canPickUp: 0
   weaponData: {fileID: 11400000, guid: 07cc2ca5b70974c4d872ab08b9ee83b9, type: 2}
-  weaponToPickUpID: 4
 --- !u!1001 &986691946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15844,7 +15839,6 @@ MonoBehaviour:
   weaponData: {fileID: 11400000, guid: 8c81ff1cee96aea44975dfc6f8b73804, type: 2}
   currentSliderOverheat: 0
   maxSliderOverheat: 0
-  weaponID: 6
 --- !u!114 &1017782200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17942,7 +17936,6 @@ MonoBehaviour:
   changePlayerWeapon: {fileID: 521703875}
   canPickUp: 0
   weaponData: {fileID: 11400000, guid: c6ae86df7e63a0140b6a976b49dcabee, type: 2}
-  weaponToPickUpID: 2
 --- !u!4 &1132396380
 Transform:
   m_ObjectHideFlags: 0
@@ -19360,7 +19353,6 @@ MonoBehaviour:
   changePlayerWeapon: {fileID: 521703875}
   canPickUp: 0
   weaponData: {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
-  weaponToPickUpID: 1
 --- !u!4 &1186112281
 Transform:
   m_ObjectHideFlags: 0
@@ -19542,7 +19534,6 @@ MonoBehaviour:
   weaponData: {fileID: 11400000, guid: c6ae86df7e63a0140b6a976b49dcabee, type: 2}
   currentSliderOverheat: 0
   maxSliderOverheat: 0
-  weaponID: 2
 --- !u!1001 &1188897014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21527,7 +21518,6 @@ MonoBehaviour:
   changePlayerWeapon: {fileID: 521703875}
   canPickUp: 0
   weaponData: {fileID: 11400000, guid: 8c81ff1cee96aea44975dfc6f8b73804, type: 2}
-  weaponToPickUpID: 6
 --- !u!1 &1292955833
 GameObject:
   m_ObjectHideFlags: 0
@@ -21737,7 +21727,6 @@ MonoBehaviour:
   changePlayerWeapon: {fileID: 521703875}
   canPickUp: 0
   weaponData: {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
-  weaponToPickUpID: 0
 --- !u!4 &1297260549
 Transform:
   m_ObjectHideFlags: 0
@@ -22186,7 +22175,6 @@ MonoBehaviour:
   weaponData: {fileID: 11400000, guid: 92d4fa9258efa574c9b78761254a60c6, type: 2}
   currentSliderOverheat: 0
   maxSliderOverheat: 0
-  weaponID: 5
 --- !u!114 &1309145270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24239,7 +24227,6 @@ MonoBehaviour:
   changePlayerWeapon: {fileID: 521703875}
   canPickUp: 0
   weaponData: {fileID: 11400000, guid: 92d4fa9258efa574c9b78761254a60c6, type: 2}
-  weaponToPickUpID: 5
 --- !u!1 &1397132613
 GameObject:
   m_ObjectHideFlags: 0
