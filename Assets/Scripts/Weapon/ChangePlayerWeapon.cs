@@ -4,6 +4,11 @@ public class ChangePlayerWeapon : MonoBehaviour
 {
     [SerializeField] private GameObject[] weapons;
 
+    [Header("Gun OverHeat Dependeces")]
+    [SerializeField] private GunOverheat[] gunOverheat;
+    [SerializeField] private GameObject overHeatText;
+    [SerializeField] private GameObject overHeatEffect;
+
     public void ChangeWeapon(int spriteNumber) 
     {
         switch (spriteNumber) 
@@ -16,6 +21,7 @@ public class ChangePlayerWeapon : MonoBehaviour
                 weapons[4].SetActive(false);
                 weapons[5].SetActive(false);
                 weapons[6].SetActive(false);
+                DesactiveOverHeatEffect();
                 break; 
             
             case 1:
@@ -26,6 +32,7 @@ public class ChangePlayerWeapon : MonoBehaviour
                 weapons[4].SetActive(false);
                 weapons[5].SetActive(false);
                 weapons[6].SetActive(false);
+                DesactiveOverHeatEffect();
                 break;
 
             case 2:
@@ -36,6 +43,7 @@ public class ChangePlayerWeapon : MonoBehaviour
                 weapons[4].SetActive(false);
                 weapons[5].SetActive(false);
                 weapons[6].SetActive(false);
+                DesactiveOverHeatEffect();
                 break; 
 
             case 3:
@@ -46,7 +54,8 @@ public class ChangePlayerWeapon : MonoBehaviour
                 weapons[4].SetActive(false);
                 weapons[5].SetActive(false);
                 weapons[6].SetActive(false);
-            break;
+                DesactiveOverHeatEffect();
+                break;
 
             case 4:
                 weapons[0].SetActive(false);
@@ -56,6 +65,7 @@ public class ChangePlayerWeapon : MonoBehaviour
                 weapons[4].SetActive(true);
                 weapons[5].SetActive(false);
                 weapons[6].SetActive(false);
+                DesactiveOverHeatEffect();
                 break;
 
             case 5:
@@ -66,6 +76,7 @@ public class ChangePlayerWeapon : MonoBehaviour
                 weapons[4].SetActive(false);
                 weapons[5].SetActive(true);
                 weapons[6].SetActive(false);
+                DesactiveOverHeatEffect();
                 break;
 
             case 6:
@@ -76,7 +87,20 @@ public class ChangePlayerWeapon : MonoBehaviour
                 weapons[4].SetActive(false);
                 weapons[5].SetActive(false);
                 weapons[6].SetActive(true);
+                DesactiveOverHeatEffect();
                 break;
         }
+    }
+
+    private void DesactiveOverHeatEffect() 
+    {
+        for (int i = 0; i < gunOverheat.Length; i++)
+        {
+            gunOverheat[i]._currentOverheat = 0;
+            gunOverheat[i]._overHeat = false;
+        }
+
+        overHeatText.SetActive(false);
+        overHeatEffect.SetActive(false);
     }
 }

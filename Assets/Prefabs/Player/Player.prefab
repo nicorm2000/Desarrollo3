@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 687902261501288840}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.269, y: 0.032, z: 0}
+  m_LocalPosition: {x: -0.44131953, y: 0.032, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -784,6 +784,16 @@ MonoBehaviour:
   - {fileID: 3729285721743270887}
   - {fileID: 1474438955505684398}
   - {fileID: 5937928717297510734}
+  gunOverheat:
+  - {fileID: 8793071024267927714}
+  - {fileID: 7654313808540026409}
+  - {fileID: 5661613424138094487}
+  - {fileID: 4843775744071975369}
+  - {fileID: 1753551226827048246}
+  - {fileID: 2443186196316251944}
+  - {fileID: 3823591937530358882}
+  overHeatText: {fileID: 0}
+  overHeatEffect: {fileID: 2858462186978751284}
 --- !u!1 &3729285721743270887
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,7 +934,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.032, y: -0.091, z: 0}
-  m_LocalScale: {x: 1, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7921955327541263219}
@@ -1385,8 +1395,8 @@ Transform:
   m_GameObject: {fileID: 5937928717297510734}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.602, y: -0.183, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.6, z: 1}
+  m_LocalPosition: {x: 0.74632525, y: -0.015763551, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 560269450349637374}
@@ -1639,7 +1649,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6704732740935683612}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.68, y: -0.216, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1690,7 +1700,7 @@ SpriteRenderer:
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 832cb71f29be8e644af323bc81e5b43e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}

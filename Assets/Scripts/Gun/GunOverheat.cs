@@ -6,7 +6,8 @@ public class GunOverheat : MonoBehaviour
 {
     [Header("WeaponOverheat")]
     [SerializeField] private WeaponData weaponData;
-     public float overheatDecreaseRate;
+
+    public float overheatDecreaseRate;
 
     public float overheatIncreaseAmount;
     public float weaponOverheat;
