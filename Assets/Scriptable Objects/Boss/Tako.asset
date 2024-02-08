@@ -15,6 +15,7 @@ MonoBehaviour:
   sushiName: Tako
   bossSpawningDuration: 3
   bossPresentationDuration: 5
+  bossHealthBarShow: 2
   collisionDamage: 10
   attackDelay: 5
   attack1Name: Chopping Tentacles

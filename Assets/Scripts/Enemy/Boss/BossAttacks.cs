@@ -13,25 +13,24 @@ public class BossAttacks : MonoBehaviour
 
     [Header("Boss UI Set Up")]
     [SerializeField] private GameObject bossPresentation;
+    [SerializeField] private GameObject bossHealthBar;
 
     [Header("Boss Data Dependencies")]
     [SerializeField] private BossData bossData;
 
     [Header("Chopping Tentacles Set Up")]
-    [SerializeField] private Transform[] tentacles;
+    [SerializeField] private ChoppingTentaclesManager choppingTentaclesManager;
 
     [Header("Ink Hell Set Up")]
-    [SerializeField] private Transform[] bulletSpawnPoints;
+    [SerializeField] private InkHellManager inkHellManager;
 
     [Header("Blind Octopus Set Up")]
     [SerializeField] private FloorTentacleManager floorTentacleManager;
 
     private AttackType currentAttack;
-    private ObjectPool bulletPool;
 
     private void Start()
     {
-        bulletPool = new ObjectPool(bossData.attack2Object);
         currentAttack = AttackType.None;
         StartCoroutine(InitialDelayRoutine());
     }
@@ -44,6 +43,8 @@ public class BossAttacks : MonoBehaviour
         bossPresentation.SetActive(true);
         yield return new WaitForSeconds(bossData.bossPresentationDuration);
         bossPresentation.SetActive(false);
+        bossHealthBar.SetActive(true);
+        yield return new WaitForSeconds(bossData.bossHealthBarShow);
 
         StartCoroutine(AttackCoroutine());
     }
@@ -90,13 +91,13 @@ public class BossAttacks : MonoBehaviour
         {
             case AttackType.Attack1:
                 Debug.Log("Attack 1");
-                yield return StartCoroutine(ChoppingTentaclesCoroutine());
+                yield return StartCoroutine(choppingTentaclesManager.ChoppingTentaclesCoroutine());
                 Debug.Log("Attack 1 finished");
                 break;
             case AttackType.Attack2:
                 Debug.Log("Attack 2");
-                StartCoroutine(RotateSpawnPoints());
-                yield return StartCoroutine(FireBullets());
+                StartCoroutine(inkHellManager.RotateSpawnPoints());
+                yield return StartCoroutine(inkHellManager.FireBullets());
                 Debug.Log("Attack 2 finished");
                 break;
             case AttackType.Attack3:
@@ -107,74 +108,6 @@ public class BossAttacks : MonoBehaviour
             default:
                 break;
         }
-
         yield return null;
     }
-
-    #region CHOPPING_TENTACLES
-    private IEnumerator ChoppingTentaclesCoroutine()
-    {
-        float tentacleSpawnDelayAux = bossData.attack1SpawnDelay;
-        int activeTentacleIndex = 0;
-
-        while (activeTentacleIndex < tentacles.Length)
-        {
-            SlamTentacle(activeTentacleIndex);
-            yield return new WaitForSeconds(tentacleSpawnDelayAux);
-
-            activeTentacleIndex++;
-            tentacleSpawnDelayAux *= bossData.attack1SpawnDelayMultiplier;
-            tentacleSpawnDelayAux = Mathf.Max(tentacleSpawnDelayAux, bossData.attack1SpawnMinimumDelay);
-        }
-        yield return new WaitForSeconds(bossData.attack1Despawn);
-        Debug.Log("Attack 1 Finish");
-        DeactivateAllTentacles();
-    }
-
-    private void SlamTentacle(int index)
-    {
-        tentacles[index].gameObject.SetActive(true);
-    }
-
-    private void DeactivateAllTentacles()
-    {
-        foreach (Transform tentacle in tentacles)
-        {
-            tentacle.gameObject.SetActive(false);
-        }
-    }
-    #endregion
-
-    #region INK_HELL
-    private IEnumerator FireBullets()
-    {
-        int bulletCount = 0;
-
-        while (bulletCount < bossData.attack2MaxAmountOfRounds)
-        {
-            foreach (Transform spawnPoint in bulletSpawnPoints)
-            {
-                GameObject bullet = bulletPool.GetPooledObject();
-                bullet.GetComponent<BossBullets>().ActivateBullet(spawnPoint.position, spawnPoint.localRotation);
-            }
-            yield return null;
-            bulletCount++;
-            yield return new WaitForSeconds(bossData.attack2BulletSpawnDelay);
-        }
-        Debug.Log("Attack 2 Finish");
-        StopCoroutine(RotateSpawnPoints());
-    }
-
-    private IEnumerator RotateSpawnPoints()
-    {
-        while (true)
-        {
-            foreach (Transform spawnPoint in bulletSpawnPoints)
-            {
-                spawnPoint.Rotate(Vector3.forward, bossData.attack2BulletSpawnPointRotation);
-            }
-            yield return null;
-        }
-    }
-    #endregion
 }

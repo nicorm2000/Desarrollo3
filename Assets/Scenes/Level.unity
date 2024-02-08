@@ -10865,7 +10865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &588338944
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11924,6 +11924,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1922237827204055625, guid: 77ab439aa6adef74a920f10be60595a6, type: 3}
     - target: {fileID: 2649181454084446917, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: bossHealthBar
+      value: 
+      objectReference: {fileID: 588338943}
+    - target: {fileID: 2649181454084446917, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: inkHellManager
+      value: 
+      objectReference: {fileID: 649419249}
+    - target: {fileID: 2649181454084446917, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: bossPresentation
       value: 
       objectReference: {fileID: 1358539175}
@@ -11934,7 +11942,7 @@ PrefabInstance:
     - target: {fileID: 2649181454084446917, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: floorTentacleManager
       value: 
-      objectReference: {fileID: 676807702}
+      objectReference: {fileID: 649419243}
     - target: {fileID: 2649181454084446917, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: tentacles.Array.size
       value: 16
@@ -11979,6 +11987,10 @@ PrefabInstance:
       propertyPath: tentacles.Array.data[9]
       value: 
       objectReference: {fileID: 544341562}
+    - target: {fileID: 2649181454084446917, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: choppingTentaclesManager
+      value: 
+      objectReference: {fileID: 649419248}
     - target: {fileID: 2649181454084446917, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: tentacles.Array.data[10]
       value: 
@@ -12032,13 +12044,112 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1633715405133253090, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       insertIndex: -1
       addedObject: {fileID: 861214291}
-    m_AddedComponents: []
+    - targetCorrespondingSourceObject: {fileID: 1633715405133253090, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1151789048}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2027434624522373027, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 649419248}
+    - targetCorrespondingSourceObject: {fileID: 2027434624522373027, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 649419249}
+    - targetCorrespondingSourceObject: {fileID: 2027434624522373027, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 649419243}
   m_SourcePrefab: {fileID: 100100000, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
 --- !u!4 &649419241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1633715405133253090, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
   m_PrefabInstance: {fileID: 649419240}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &649419242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2027434624522373027, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+  m_PrefabInstance: {fileID: 649419240}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &649419243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649419242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc3954e3877a664da4a3fa77c47d053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minePositions:
+  - {fileID: 1676730104}
+  - {fileID: 1524367790}
+  - {fileID: 1767657974}
+  - {fileID: 1032855257}
+  - {fileID: 1219170425}
+  - {fileID: 1066263457}
+  - {fileID: 987113239}
+  - {fileID: 803786929}
+  - {fileID: 1546398468}
+  - {fileID: 1322233062}
+  - {fileID: 1731936063}
+  - {fileID: 472945485}
+  - {fileID: 18947049}
+  - {fileID: 1603285125}
+  - {fileID: 1190390270}
+  - {fileID: 725925211}
+  - {fileID: 1536679196}
+  - {fileID: 1800427152}
+  - {fileID: 2097733421}
+  - {fileID: 1606025247}
+  bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+--- !u!114 &649419248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649419242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6317939ab86be4587447fb37060395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tentacles:
+  - {fileID: 338025408}
+  - {fileID: 151460695}
+  - {fileID: 1392851106}
+  - {fileID: 1491848455}
+  - {fileID: 176559250}
+  - {fileID: 1322418512}
+  - {fileID: 1635599135}
+  - {fileID: 1132603310}
+  - {fileID: 1106291736}
+  - {fileID: 544341562}
+  - {fileID: 865458881}
+  - {fileID: 464755583}
+  - {fileID: 1591275278}
+  - {fileID: 983510244}
+  - {fileID: 2146106517}
+  - {fileID: 1298205162}
+  bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+--- !u!114 &649419249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649419242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54259208b45ce74181494b257ea3d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpawnPoints:
+  - {fileID: 1113682453}
+  - {fileID: 1883369587}
+  - {fileID: 1819161988}
+  - {fileID: 1537637131}
+  bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
 --- !u!1001 &653601637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12403,73 +12514,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &676807701
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 676807703}
-  - component: {fileID: 676807702}
-  m_Layer: 0
-  m_Name: Floor Tentacles Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &676807702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676807701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bc3954e3877a664da4a3fa77c47d053, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minePositions:
-  - {fileID: 1676730104}
-  - {fileID: 1524367790}
-  - {fileID: 1767657974}
-  - {fileID: 1032855257}
-  - {fileID: 1219170425}
-  - {fileID: 1066263457}
-  - {fileID: 987113239}
-  - {fileID: 803786929}
-  - {fileID: 1546398468}
-  - {fileID: 1322233062}
-  - {fileID: 1731936063}
-  - {fileID: 472945485}
-  - {fileID: 18947049}
-  - {fileID: 1603285125}
-  - {fileID: 1190390270}
-  - {fileID: 725925211}
-  - {fileID: 1536679196}
-  - {fileID: 1800427152}
-  - {fileID: 2097733421}
-  - {fileID: 1606025247}
-  bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
---- !u!4 &676807703
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676807701}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: -9, z: 0.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1151789048}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &681392509
 GameObject:
   m_ObjectHideFlags: 0
@@ -21166,8 +21210,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151789047}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.6624296, y: 2.34375, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21191,7 +21235,7 @@ Transform:
   - {fileID: 1800427152}
   - {fileID: 2097733421}
   - {fileID: 1606025247}
-  m_Father: {fileID: 676807703}
+  m_Father: {fileID: 649419241}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1155348199
 GameObject:
@@ -44475,4 +44519,3 @@ SceneRoots:
   - {fileID: 1190987839}
   - {fileID: 1686854223}
   - {fileID: 649419240}
-  - {fileID: 676807703}
