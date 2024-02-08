@@ -5,6 +5,7 @@ public class BossData : ScriptableObject
 {
     [Header("Boss Information")]
     public string sushiName;
+    public float bossSpawningDuration;
     public float bossPresentationDuration;
     public float collisionDamage;
     public float attackDelay;

@@ -19,11 +19,9 @@ public class FloorTentacle : MonoBehaviour
 
     private IEnumerator ActivateWithDelay(float duration)
     {
-        Debug.Log("Delay Start");
         warningGO.SetActive(true);
         yield return new WaitForSeconds(bossData.attack3WarningDisplay);
         warningGO.SetActive(false);
-        Debug.Log("Delay Finish");
         isActive = true;
         gO.SetActive(isActive);
         Debug.Log(gameObject.name);

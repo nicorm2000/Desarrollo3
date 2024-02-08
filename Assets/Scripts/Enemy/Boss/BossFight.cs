@@ -18,11 +18,20 @@ public class BossFight : MonoBehaviour
     [SerializeField] private float enemySpawnInterval;
     [SerializeField] private float enemysMaxAmountAlive;
 
+
+
+    //El scheduler lo que hace es llamar una funcion una atras de otra, tipo para spawnearlos
     private FunctionScheduler scheduler;
 
     private List<Vector3> spawnPositionList;
 
     private BossStage bossStage;
+
+    //
+    //
+    //@Facu si queres modifica todo, elijamos si manejamos las cosas aca o en el boss attacks, para mi lo del principio del boss attacks lo podriamos manejar aca, el resto alla
+    //
+    //
 
     private void Awake()
     {

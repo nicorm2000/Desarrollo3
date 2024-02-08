@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Tako
   m_EditorClassIdentifier: 
   sushiName: Tako
-  bossPresentationDuration: 3
+  bossSpawningDuration: 3
+  bossPresentationDuration: 5
   collisionDamage: 10
-  attackDelay: 3
+  attackDelay: 5
   attack1Name: Chopping Tentacles
   attack1Damage: 30
   attack1Despawn: 2
   attack1SpawnDelay: 2
-  attack1SpawnDelayMultiplier: 0.9
+  attack1SpawnDelayMultiplier: 0.8
   attack1SpawnMinimumDelay: 0.25
   attack2Name: Ink Hell
   attack2BulletDamage: 1

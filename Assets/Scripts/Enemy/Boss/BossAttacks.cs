@@ -40,7 +40,7 @@ public class BossAttacks : MonoBehaviour
     private IEnumerator InitialDelayRoutine()
     {
         //Boss entering/spawning animation here
-        yield return new WaitForSeconds(bossData.bossPresentationDuration);//bossData.spawningAnimationDuration
+        yield return new WaitForSeconds(bossData.bossSpawningDuration);
         bossPresentation.SetActive(true);
         yield return new WaitForSeconds(bossData.bossPresentationDuration);
         bossPresentation.SetActive(false);
@@ -91,15 +91,18 @@ public class BossAttacks : MonoBehaviour
             case AttackType.Attack1:
                 Debug.Log("Attack 1");
                 yield return StartCoroutine(ChoppingTentaclesCoroutine());
+                Debug.Log("Attack 1 finished");
                 break;
             case AttackType.Attack2:
                 Debug.Log("Attack 2");
                 StartCoroutine(RotateSpawnPoints());
                 yield return StartCoroutine(FireBullets());
+                Debug.Log("Attack 2 finished");
                 break;
             case AttackType.Attack3:
                 Debug.Log("Attack 3");
                 yield return StartCoroutine(floorTentacleManager.ActivateFloorTentacleCoroutine(bossData.attack3AmountOfFloorTentacles));
+                Debug.Log("Attack 3 finished");
                 break;
             default:
                 break;
