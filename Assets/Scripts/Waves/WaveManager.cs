@@ -44,9 +44,8 @@ public class WaveManager : MonoBehaviour
     [Header("Abilities Dependencies")]
     [SerializeField] private Abilities abilities;
 
-    [Header("Transition Dependencies")]
-    [SerializeField] private Transitions increaseSizeOn;
-    private float timeToTurnOnTransition = 1f;
+    [Header("Bao Basket Inidicator Dependencies")]
+    [SerializeField] private GameObject baoBasketIndicator;
 
     [Header("Audio Manager")]
     [SerializeField] AudioManager audioManager;
@@ -137,13 +136,12 @@ public class WaveManager : MonoBehaviour
                 {
                     audioManager.PlaySound(waveBegins);
                 }
-
+                
                 SpawnNextWave();
             }
             else
             {
                 Debug.Log("Game Finished");
-                StartCoroutine(increaseSizeOn.ActiveTransition(timeToTurnOnTransition));
                 StartCoroutine(waveUI.ShowWaveCompletedUI());
             }
 
@@ -208,6 +206,7 @@ public class WaveManager : MonoBehaviour
     private void ActivateShop()
     {
         basket.SetActive(true);
+        baoBasketIndicator.SetActive(true);
         door.SetActive(true);
     }
 

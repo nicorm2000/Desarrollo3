@@ -7,6 +7,9 @@ public class TeleportPlayerToLevel : MonoBehaviour
     [SerializeField] private Transitions increaseSizeOn;
     [SerializeField] private Transitions increaseSizeOff;
 
+    [Header("Bao Basket Inidicator Dependencies")]
+    [SerializeField] private GameObject baoBasketIndicator;
+
     [Header("Audio Manager")]
     [SerializeField] AudioManager audioManager;
 
@@ -58,6 +61,8 @@ public class TeleportPlayerToLevel : MonoBehaviour
         }
 
         StartCoroutine(PlayerTeleport(_transitonOnTime));
+
+        baoBasketIndicator.SetActive(false);
     }
 
     public IEnumerator PlayerTeleport(float timeToWait)

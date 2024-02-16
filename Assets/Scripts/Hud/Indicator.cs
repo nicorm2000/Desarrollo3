@@ -24,7 +24,7 @@ public class Indicator : MonoBehaviour
     void Awake()
     {
         //Replace with target position
-        _targetPosition = new Vector3(10f, 0f, 0f);
+        _targetPosition = target.position;
         _indicatorRectTransform = indicator.GetComponent<RectTransform>();
         _indicatorImage = indicator.GetComponent<Image>();
 

@@ -19,6 +19,10 @@ public class WaveUI : MonoBehaviour
     [SerializeField] private MySceneManager mySceneManager;
     [SerializeField] private string winScene;
 
+    [Header("Transition Dependencies")]
+    [SerializeField] private Transitions increaseSizeOn;
+    private float timeToTurnOnTransition = 1f;
+
     /// <summary>
     /// Displays the wave index on the waveText UI element.
     /// </summary>
@@ -52,6 +56,10 @@ public class WaveUI : MonoBehaviour
         waveCompleted.SetActive(true);
         yield return new WaitForSeconds(waveShowCompletedDuration);
 
+        Debug.Log("Boss Fight Spawn");
+
+        StartCoroutine(increaseSizeOn.ActiveTransition(timeToTurnOnTransition));
+        yield return new WaitForSeconds(timeToTurnOnTransition);
         mySceneManager.LoadSceneByName(winScene);
     }
 }

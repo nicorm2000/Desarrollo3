@@ -1187,6 +1187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   increaseSizeOn: {fileID: 908161859}
   increaseSizeOff: {fileID: 908161860}
+  baoBasketIndicator: {fileID: 1674702628}
   audioManager: {fileID: 1351502573}
   aIChase:
   - {fileID: 5770740514192762869, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
@@ -5301,7 +5302,7 @@ GameObject:
   - component: {fileID: 270687537}
   - component: {fileID: 270687536}
   m_Layer: 5
-  m_Name: Med Kit Indicator
+  m_Name: Bao Basket Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9364,6 +9365,14 @@ PrefabInstance:
       propertyPath: selectWeapon.Array.data[5]
       value: 
       objectReference: {fileID: 1397019515}
+    - target: {fileID: 464711979963327155, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: dashLogo
+      value: 
+      objectReference: {fileID: 231123222}
+    - target: {fileID: 464711979963327155, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: dashText
+      value: 
+      objectReference: {fileID: 1742932075}
     - target: {fileID: 464711979963327155, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: dashImage
       value: 
@@ -14372,7 +14381,7 @@ MonoBehaviour:
   - {fileID: 639829615}
   waveUI: {fileID: 760154692}
   abilities: {fileID: 1941617724}
-  increaseSizeOn: {fileID: 908161859}
+  baoBasketIndicator: {fileID: 857688665}
   audioManager: {fileID: 1351502573}
   waveBegins: WaveBegin
   enemyData:
@@ -14399,6 +14408,7 @@ MonoBehaviour:
   waveShowCompletedDuration: 3
   mySceneManager: {fileID: 433192595}
   winScene: Win
+  increaseSizeOn: {fileID: 908161859}
 --- !u!1 &766042562
 GameObject:
   m_ObjectHideFlags: 0
@@ -15258,6 +15268,7 @@ GameObject:
   - component: {fileID: 825329473}
   - component: {fileID: 825329475}
   - component: {fileID: 825329474}
+  - component: {fileID: 825329476}
   m_Layer: 5
   m_Name: AbilityImage
   m_TagString: Untagged
@@ -15322,6 +15333,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825329472}
   m_CullTransparentMesh: 1
+--- !u!95 &825329476
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825329472}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5fca47ddace55164aad170783da5216b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &833676936
 GameObject:
   m_ObjectHideFlags: 0
@@ -15912,12 +15944,12 @@ GameObject:
   - component: {fileID: 857688668}
   - component: {fileID: 857688669}
   m_Layer: 0
-  m_Name: Med Kit
+  m_Name: Bao Basket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &857688666
 Transform:
   m_ObjectHideFlags: 0
@@ -15930,7 +15962,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 4.125532, z: 6.595193}
   m_LocalScale: {x: 77.79525, y: 34.790752, z: 8.729096}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1303440697}
   m_Father: {fileID: 1539059654}
   m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
 --- !u!65 &857688667
@@ -15994,9 +16027,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indicator: {fileID: 270687534}
-  target: {fileID: 0}
-  offScreenSprite: {fileID: 21300000, guid: 5a71dfa6ff33bdb4497735e9169e955d, type: 3}
-  onScreenSprite: {fileID: 21300000, guid: 6c1b75744efd76049837d35a7fe9e5b3, type: 3}
+  target: {fileID: 1303440697}
+  offScreenSprite: {fileID: 21300000, guid: fa840ff370f2b3249acb855c057f8ef0, type: 3}
+  onScreenSprite: {fileID: 21300000, guid: 3f78d657247b9a34ab91928a7bdaf5ad, type: 3}
   visibilityCollider: {fileID: 857688667}
   includeLayer:
     serializedVersion: 2
@@ -25992,6 +26025,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ed6723ab2b0944540bcd1ef25124773a, type: 3}
   m_PrefabInstance: {fileID: 1826611227}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1303440696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1303440697}
+  m_Layer: 0
+  m_Name: Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1303440697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303440696}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.08716792, y: -0.22006567, z: -0.03937971}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 857688666}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1303494629
 GameObject:
   m_ObjectHideFlags: 0
@@ -29454,7 +29518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1428965809}
   m_Layer: 0
-  m_Name: ExxtraColliders
+  m_Name: ExtraColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39603,6 +39667,7 @@ GameObject:
   - component: {fileID: 1882951107}
   - component: {fileID: 1882951109}
   - component: {fileID: 1882951108}
+  - component: {fileID: 1882951110}
   m_Layer: 5
   m_Name: AbilityImage
   m_TagString: Untagged
@@ -39667,6 +39732,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882951106}
   m_CullTransparentMesh: 1
+--- !u!95 &1882951110
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882951106}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4dfcfefbff922194bb77ba112274981e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1883030039
 GameObject:
   m_ObjectHideFlags: 0

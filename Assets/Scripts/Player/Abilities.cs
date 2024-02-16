@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using static Unity.Collections.AllocatorManager;
 
 public class Abilities : MonoBehaviour
 {
@@ -15,6 +14,8 @@ public class Abilities : MonoBehaviour
     [SerializeField] private WaveManager waveManager;
 
     [Header("Dash")]
+    [SerializeField] private GameObject dashLogo;
+    [SerializeField] private GameObject dashText;
     [SerializeField] private Image dashImage;
     [SerializeField] private Color dashColor = Color.cyan;
     [SerializeField] private ParticleSystem dustParticles;
@@ -48,6 +49,8 @@ public class Abilities : MonoBehaviour
 
     private float laserCooldown = 3f;
     private bool isCooldownLaser = false;
+    private float UIAnimationWait = 2f;
+    private float UIWait = 3f;
 
     private int targetLayer;
 
@@ -70,12 +73,19 @@ public class Abilities : MonoBehaviour
         LaserCounter();
     }
 
+    private IEnumerator TurnOnUI(GameObject logo, GameObject text, float waitTime, float animationWaitTime)
+    {
+        yield return new WaitForSeconds(animationWaitTime);
+        logo.SetActive(true);
+        yield return new WaitForSeconds(waitTime);
+        text.SetActive(true);
+    }
+
     private void LaserCounter()
     {
         if (waveManager.currentWaveIndex >= 9)
         {
-            laserLogo.SetActive(true);
-            laserText.SetActive(true);
+            StartCoroutine(TurnOnUI(laserLogo, laserText, UIAnimationWait, UIWait));
 
             if (isCooldownLaser)
             {
@@ -119,8 +129,7 @@ public class Abilities : MonoBehaviour
     {
         if (waveManager.currentWaveIndex >= 4)
         {
-            slowerLogo.SetActive(true);
-            slowerText.SetActive(true);
+            StartCoroutine(TurnOnUI(slowerLogo, slowerText, UIAnimationWait, UIWait));
 
             if (isCooldownSlower)
             {
@@ -163,6 +172,8 @@ public class Abilities : MonoBehaviour
 
     private void DashCounter()
     {
+        StartCoroutine(TurnOnUI(dashLogo, dashText, UIAnimationWait, UIWait));
+
         if (dashCounter > 0)
         {
             dashCounter -= Time.deltaTime;
