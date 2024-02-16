@@ -1187,7 +1187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   increaseSizeOn: {fileID: 908161859}
   increaseSizeOff: {fileID: 908161860}
-  baoBasketIndicator: {fileID: 1674702628}
+  baoBasketIndicator: {fileID: 270687534}
   audioManager: {fileID: 1351502573}
   aIChase:
   - {fileID: 5770740514192762869, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
@@ -42734,7 +42734,7 @@ Transform:
   m_GameObject: {fileID: 2079331784}
   serializedVersion: 2
   m_LocalRotation: {x: 0.21643952, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: -85.97, y: 1.0687345, z: 4.2388096}
+  m_LocalPosition: {x: -85.786, y: 4.14, z: 5.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

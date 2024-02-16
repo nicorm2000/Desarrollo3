@@ -78,7 +78,7 @@ public class PlayerInputManager : MonoBehaviour
                 selectWeapon[i].CheckWeapon();
             }
 
-            if (baoBasket.activeSelf == true) 
+            if (baoBasket.activeInHierarchy == true)
             {
                 levelToShop.CheckPlayerTeleportToShop();
             }
