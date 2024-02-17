@@ -21,7 +21,7 @@ public class AIChase : MonoBehaviour
 
     [Header("Timer")]
     [SerializeField] private float maxTime = 1f;
-    
+
     private bool isWalking;
     private float _timer = 0f;
 
@@ -60,11 +60,11 @@ public class AIChase : MonoBehaviour
 
         float distanceToPlayer = Vector2.Distance(playerPosition, currentPosition);
 
+        onEnemyWalkChange?.Invoke(isWalking);
+
         if (!enemyData.isGas)
         {
             enemyData.movementDirection = (playerPosition - currentPosition).normalized;
-
-            onEnemyWalkChange?.Invoke(isWalking);
 
             transform.Translate(enemyData.movementDirection * chaseSpeed * Time.deltaTime);
         }
