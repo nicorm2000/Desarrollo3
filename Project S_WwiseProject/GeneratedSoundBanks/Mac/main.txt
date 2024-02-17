@@ -21,6 +21,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2201105581	Credits			\Default Work Unit\Credits	
 	2283047610	DummyHit			\Default Work Unit\DummyHit	
 	2501306844	OnigiriAttack			\Default Work Unit\OnigiriAttack	
+	2724248488	WarningBoss			\Default Work Unit\WarningBoss	
 	2743512573	EmptySniper			\Default Work Unit\EmptySniper	
 	2883364373	WeaponPickup			\Default Work Unit\WeaponPickup	
 	2936962349	TurnPage			\Default Work Unit\TurnPage	
@@ -107,4 +108,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1047770942	Footsteps_Player_4	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Footsteps_Player_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Player\Footsteps_Player_4		124572
 	1063476344	Footsteps_Enemies_A_5	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Footsteps_Enemies_A_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Enemy\Footsteps_Enemies_A_5		120652
 	1067180262	UziEmptyMag-001	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\UziEmptyMag-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Empty\UziEmptyMag-001		7208
+	1069559790	Warning	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Warning_C28F0F0C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boss\Warning		88264
 

@@ -563,6 +563,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &18947051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9334,6 +9336,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &472945487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13044,10 +13048,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 329023835062560484, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 420076221680128930, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
     - target: {fileID: 420076221680128930, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 553968338714109559, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
     - target: {fileID: 553968338714109559, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13093,6 +13109,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1670930989764740199, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
+    - target: {fileID: 1670930989764740199, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -13105,13 +13125,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2044138025583872009, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
+    - target: {fileID: 2044138025583872009, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 2048037843795850948, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
+    - target: {fileID: 2048037843795850948, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 2177013112044486250, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
     - target: {fileID: 2177013112044486250, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13233,57 +13265,113 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1537637131}
     - target: {fileID: 3068380704653783943, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
+    - target: {fileID: 3068380704653783943, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 3411757958069916723, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
     - target: {fileID: 3411757958069916723, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3841174909129781048, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
+    - target: {fileID: 3841174909129781048, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 4177924731355759935, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
     - target: {fileID: 4177924731355759935, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4433782572913520832, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
+    - target: {fileID: 4433782572913520832, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 5395795064980337249, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
     - target: {fileID: 5395795064980337249, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 5804502537797853037, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
+    - target: {fileID: 5804502537797853037, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 6321619102095478973, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
     - target: {fileID: 6321619102095478973, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 6622160387189967350, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
+    - target: {fileID: 6622160387189967350, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 6679164349713099304, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
     - target: {fileID: 6679164349713099304, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 7616366370895811841, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
+    - target: {fileID: 7616366370895811841, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 8795640461280452908, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
     - target: {fileID: 8795640461280452908, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 8832288607416982156, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
+    - target: {fileID: 8832288607416982156, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 9017930408701182340, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
     - target: {fileID: 9017930408701182340, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -14747,6 +14835,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &725925213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16052,6 +16142,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &803786931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19324,6 +19416,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &987113241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20379,6 +20473,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &1032855259
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21240,6 +21336,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &1066263459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24620,6 +24718,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &1190390272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25232,6 +25332,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &1219170427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28041,6 +28143,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &1322233064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33466,6 +33570,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &1524367792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33775,6 +33881,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &1536679198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34130,6 +34238,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &1546398470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35834,6 +35944,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &1603285127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35991,6 +36103,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &1606025249
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37386,6 +37500,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!1001 &1679203426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38402,6 +38518,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &1731936065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39163,6 +39281,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &1767657976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39813,6 +39933,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &1800427154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45232,6 +45354,8 @@ MonoBehaviour:
   includeLayer:
     serializedVersion: 2
     m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: 
 --- !u!65 &2097733423
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 3af410611e2c92469af731b5137fe77a
     GuidInternal: 
-    m_lastTime: -8584934078981840194
+    m_lastTime: -8584934050666078676
     List:
     - name: Click
       guid: 29fd55656c568345b13d2c4c3e9a71e3
@@ -759,6 +759,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: WarningBoss
+      guid: 7cfeadabfbce894fb7bef1e52dc6b6fb
+      id: 2724248488
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: WarningBoss
+        ObjectType: 3
+        guid: 7cfeadabfbce894fb7bef1e52dc6b6fb
+      Path: Events\Default Work Unit\WarningBoss
+      maxAttenuation: 0
+      maxDuration: 0.740814
+      minDuration: 0.740814
     - name: WaveBegin
       guid: 9871a938ec160d4fbd7e0231987ea36e
       id: 607500489

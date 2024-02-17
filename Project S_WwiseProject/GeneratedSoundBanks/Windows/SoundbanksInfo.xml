@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1801821120">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3263105517">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -451,6 +451,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2724248488" Name="WarningBoss" ObjectPath="\Events\Default Work Unit\WarningBoss" DurationType="OneShot" DurationMin="0.477421" DurationMax="0.477421">
+					<IncludedMemoryFiles>
+						<File Id="1069559790" Language="SFX">
+							<ShortName>Warning.wav</ShortName>
+							<Path>SFX\Warning_C28F0F0C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="607500489" Name="WaveBegin" ObjectPath="\Events\Default Work Unit\WaveBegin" DurationType="OneShot" DurationMin="2.025309" DurationMax="2.025309">
 					<IncludedMemoryFiles>
 						<File Id="536794557" Language="SFX">
@@ -688,6 +696,10 @@
 				<File Id="1067180262" Language="SFX">
 					<ShortName>UziEmptyMag-001.wav</ShortName>
 					<Path>SFX\UziEmptyMag-001_10C4C929.wem</Path>
+				</File>
+				<File Id="1069559790" Language="SFX">
+					<ShortName>Warning.wav</ShortName>
+					<Path>SFX\Warning_C28F0F0C.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 			<SwitchGroups>

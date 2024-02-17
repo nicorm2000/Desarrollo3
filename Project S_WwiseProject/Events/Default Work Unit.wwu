@@ -858,6 +858,27 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="WarningBoss" ID="{ABADFE7C-CEFB-4F89-B7BE-F1E52DC6B6FB}">
+					<ChildrenList>
+						<Action Name="" ID="{E7C7B651-43D8-440E-8F31-47B3AB994D9B}" ShortID="713546901">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Warning" ID="{C1AA0F5C-556A-43D3-B5BD-FB56C9B85FB0}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{482B6896-4B14-40EC-B489-6896EA989E46}" ShortID="491943222">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Warning" ID="{C1AA0F5C-556A-43D3-B5BD-FB56C9B85FB0}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

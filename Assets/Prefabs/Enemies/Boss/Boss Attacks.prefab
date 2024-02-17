@@ -1391,6 +1391,11 @@ MonoBehaviour:
   gO: {fileID: 9172672551615051360}
   warningGO: {fileID: 6419757779927151760}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &1010032794293585426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,6 +1710,11 @@ MonoBehaviour:
   gO: {fileID: 483303337130268675}
   warningGO: {fileID: 2570834169483383619}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &1488851833408025286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2624,6 +2634,11 @@ MonoBehaviour:
   gO: {fileID: 1112974379440211474}
   warningGO: {fileID: 925212960616687471}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &2468707066507102050
 GameObject:
   m_ObjectHideFlags: 0
@@ -3012,6 +3027,11 @@ MonoBehaviour:
   gO: {fileID: 9010341028972990832}
   warningGO: {fileID: 4835930439364402970}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &3007753780472224448
 GameObject:
   m_ObjectHideFlags: 0
@@ -3083,6 +3103,11 @@ MonoBehaviour:
   gO: {fileID: 2026364431278117828}
   warningGO: {fileID: 4339539391700205573}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &3191650365093292082
 GameObject:
   m_ObjectHideFlags: 0
@@ -3939,6 +3964,11 @@ MonoBehaviour:
   gO: {fileID: 7058653006167162528}
   warningGO: {fileID: 1488851833408025286}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &4339539391700205573
 GameObject:
   m_ObjectHideFlags: 0
@@ -4963,6 +4993,11 @@ MonoBehaviour:
   gO: {fileID: 8572307609781897579}
   warningGO: {fileID: 5738751694943120335}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &5339585217260429821
 GameObject:
   m_ObjectHideFlags: 0
@@ -5034,6 +5069,11 @@ MonoBehaviour:
   gO: {fileID: 105072683471581361}
   warningGO: {fileID: 2118188749862152497}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &5344413153893360474
 GameObject:
   m_ObjectHideFlags: 0
@@ -5210,6 +5250,11 @@ MonoBehaviour:
   gO: {fileID: 8116259715645021135}
   warningGO: {fileID: 4942786793251055975}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &5652349071765575672
 GameObject:
   m_ObjectHideFlags: 0
@@ -5281,6 +5326,11 @@ MonoBehaviour:
   gO: {fileID: 7587186783738471275}
   warningGO: {fileID: 2486006483198849638}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &5738751694943120335
 GameObject:
   m_ObjectHideFlags: 0
@@ -5564,6 +5614,11 @@ MonoBehaviour:
   gO: {fileID: 4755707828599270393}
   warningGO: {fileID: 3943762610838088747}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &6026467144058686545
 GameObject:
   m_ObjectHideFlags: 0
@@ -5635,6 +5690,11 @@ MonoBehaviour:
   gO: {fileID: 7735433232564119065}
   warningGO: {fileID: 3342482775664960842}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &6385069359861377270
 GameObject:
   m_ObjectHideFlags: 0
@@ -5843,6 +5903,11 @@ MonoBehaviour:
   gO: {fileID: 4009763715731311785}
   warningGO: {fileID: 5848994883457104356}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &6600180554533990427
 GameObject:
   m_ObjectHideFlags: 0
@@ -6126,6 +6191,11 @@ MonoBehaviour:
   gO: {fileID: 3700641713966081682}
   warningGO: {fileID: 5236589117245964730}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &7054196354221973732
 GameObject:
   m_ObjectHideFlags: 0
@@ -6516,6 +6586,11 @@ MonoBehaviour:
   gO: {fileID: 7054196354221973732}
   warningGO: {fileID: 3591799824308313835}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &7587186783738471275
 GameObject:
   m_ObjectHideFlags: 0
@@ -6801,6 +6876,11 @@ MonoBehaviour:
   gO: {fileID: 766072521763420231}
   warningGO: {fileID: 1882253209697123181}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &7817059960388410226
 GameObject:
   m_ObjectHideFlags: 0
@@ -6977,6 +7057,11 @@ MonoBehaviour:
   gO: {fileID: 687240652400735627}
   warningGO: {fileID: 2198695863296507860}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &7954860464201937808
 GameObject:
   m_ObjectHideFlags: 0
@@ -7048,6 +7133,11 @@ MonoBehaviour:
   gO: {fileID: 634922818295852716}
   warningGO: {fileID: 358949633372002638}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &8116259715645021135
 GameObject:
   m_ObjectHideFlags: 0
@@ -7333,6 +7423,11 @@ MonoBehaviour:
   gO: {fileID: 4728878289450463731}
   warningGO: {fileID: 8958520930454381835}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &8958520930454381835
 GameObject:
   m_ObjectHideFlags: 0
@@ -7722,6 +7817,11 @@ MonoBehaviour:
   gO: {fileID: 6600180554533990427}
   warningGO: {fileID: 329023835062560484}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  audioManager: {fileID: 0}
+  warning: WarningBoss
 --- !u!1 &9172672551615051360
 GameObject:
   m_ObjectHideFlags: 0
