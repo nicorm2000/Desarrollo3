@@ -136,13 +136,14 @@ public class WaveManager : MonoBehaviour
                 {
                     audioManager.PlaySound(waveBegins);
                 }
-                
+
                 SpawnNextWave();
             }
             else
             {
                 Debug.Log("Game Finished");
                 StartCoroutine(waveUI.ShowWaveCompletedUI());
+                Debug.Log("Boss Fight Spawn");
             }
 
             _nextWave = false;
@@ -206,8 +207,8 @@ public class WaveManager : MonoBehaviour
     private void ActivateShop()
     {
         basket.SetActive(true);
-        baoBasketIndicator.SetActive(true);
         door.SetActive(true);
+        baoBasketIndicator.SetActive(true);
     }
 
     /// <summary>

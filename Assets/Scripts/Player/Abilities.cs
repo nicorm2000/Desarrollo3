@@ -49,8 +49,6 @@ public class Abilities : MonoBehaviour
 
     private float laserCooldown = 3f;
     private bool isCooldownLaser = false;
-    private float UIAnimationWait = 2f;
-    private float UIWait = 3f;
 
     private int targetLayer;
 
@@ -73,19 +71,12 @@ public class Abilities : MonoBehaviour
         LaserCounter();
     }
 
-    private IEnumerator TurnOnUI(GameObject logo, GameObject text, float waitTime, float animationWaitTime)
-    {
-        yield return new WaitForSeconds(animationWaitTime);
-        logo.SetActive(true);
-        yield return new WaitForSeconds(waitTime);
-        text.SetActive(true);
-    }
-
     private void LaserCounter()
     {
         if (waveManager.currentWaveIndex >= 9)
         {
-            StartCoroutine(TurnOnUI(laserLogo, laserText, UIAnimationWait, UIWait));
+            laserLogo.SetActive(true);
+            laserText.SetActive(true);
 
             if (isCooldownLaser)
             {
@@ -129,7 +120,8 @@ public class Abilities : MonoBehaviour
     {
         if (waveManager.currentWaveIndex >= 4)
         {
-            StartCoroutine(TurnOnUI(slowerLogo, slowerText, UIAnimationWait, UIWait));
+            slowerLogo.SetActive(true);
+            slowerText.SetActive(true);
 
             if (isCooldownSlower)
             {
@@ -172,7 +164,8 @@ public class Abilities : MonoBehaviour
 
     private void DashCounter()
     {
-        StartCoroutine(TurnOnUI(dashLogo, dashText, UIAnimationWait, UIWait));
+        dashLogo.SetActive(true);
+        dashText.SetActive(true);
 
         if (dashCounter > 0)
         {
@@ -213,7 +206,7 @@ public class Abilities : MonoBehaviour
 
     public void DestroySlowers()
     {
-        GameObject[] slowerObjects = GameObject.FindObjectsOfType<GameObject>();
+        GameObject[] slowerObjects = FindObjectsOfType<GameObject>();
 
         foreach (GameObject obj in slowerObjects)
         {

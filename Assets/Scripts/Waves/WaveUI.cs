@@ -56,7 +56,7 @@ public class WaveUI : MonoBehaviour
         waveCompleted.SetActive(true);
         yield return new WaitForSeconds(waveShowCompletedDuration);
 
-        Debug.Log("Boss Fight Spawn");
+        
 
         StartCoroutine(increaseSizeOn.ActiveTransition(timeToTurnOnTransition));
         yield return new WaitForSeconds(timeToTurnOnTransition);

@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossHealthSystem : MonoBehaviour
 {
+    [Header("Boss Data Dependencies")]
     [SerializeField] private BossData bossData;
 
     public void SetHealth(float maxHealth) 
