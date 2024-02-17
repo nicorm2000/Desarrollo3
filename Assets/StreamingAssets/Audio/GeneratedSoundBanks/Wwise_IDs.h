@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID CHOPPINGTENTACLE = 1237719143U;
         static const AkUniqueID CLICK = 1584507803U;
         static const AkUniqueID CONVEYORBELT = 1687970961U;
         static const AkUniqueID COOLDOWNFAMAS = 333089542U;

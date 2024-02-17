@@ -879,6 +879,27 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="ChoppingTentacle" ID="{E79A9D23-F4BD-4DCC-A5F4-E8C128E8922C}">
+					<ChildrenList>
+						<Action Name="" ID="{B766D73C-C196-4C16-96B9-8D26FE797487}" ShortID="319800980">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ChoppingTentacle" ID="{8E9285C3-FBAA-4B19-A2A2-AF0D8A754EAC}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E1412ED8-B81C-4608-B2B3-822E79C437FC}" ShortID="853677066">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ChoppingTentacle" ID="{8E9285C3-FBAA-4B19-A2A2-AF0D8A754EAC}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

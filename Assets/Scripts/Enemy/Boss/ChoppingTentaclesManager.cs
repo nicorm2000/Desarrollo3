@@ -9,6 +9,10 @@ public class ChoppingTentaclesManager : MonoBehaviour
     [Header("Boss Data Dependencies")]
     [SerializeField] private BossData bossData;
 
+    [Header("Audio Manager")]
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private string choppingSFX;
+
     public IEnumerator ChoppingTentaclesCoroutine()
     {
         float tentacleSpawnDelayAux = bossData.attack1SpawnDelay;
@@ -31,6 +35,10 @@ public class ChoppingTentaclesManager : MonoBehaviour
     private void SlamTentacle(int index)
     {
         tentacles[index].gameObject.SetActive(true);
+        if (!AudioManager.muteSFX)
+        {
+            audioManager.PlaySound(choppingSFX);
+        }
     }
 
     private void DeactivateAllTentacles()

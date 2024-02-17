@@ -94,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 3af410611e2c92469af731b5137fe77a
     GuidInternal: 
-    m_lastTime: -8584934050666078676
+    m_lastTime: -8584934032786510167
     List:
+    - name: ChoppingTentacle
+      guid: 239d9ae7bdf4cc4da5f4e8c128e8922c
+      id: 1237719143
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: ChoppingTentacle
+        ObjectType: 3
+        guid: 239d9ae7bdf4cc4da5f4e8c128e8922c
+      Path: Events\Default Work Unit\ChoppingTentacle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Click
       guid: 29fd55656c568345b13d2c4c3e9a71e3
       id: 1584507803
@@ -774,8 +791,8 @@ MonoBehaviour:
         guid: 7cfeadabfbce894fb7bef1e52dc6b6fb
       Path: Events\Default Work Unit\WarningBoss
       maxAttenuation: 0
-      maxDuration: 0.740814
-      minDuration: 0.740814
+      maxDuration: 0.477421
+      minDuration: 0.477421
     - name: WaveBegin
       guid: 9871a938ec160d4fbd7e0231987ea36e
       id: 607500489

@@ -13368,6 +13368,14 @@ PrefabInstance:
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 8905662929203660996, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: choppingSFX
+      value: ChoppingTentacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905662929203660996, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1351502573}
     - target: {fileID: 9017930408701182340, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
@@ -13473,6 +13481,8 @@ MonoBehaviour:
   - {fileID: 2146106517}
   - {fileID: 1298205162}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  audioManager: {fileID: 0}
+  choppingSFX: 
 --- !u!114 &649419249
 MonoBehaviour:
   m_ObjectHideFlags: 0

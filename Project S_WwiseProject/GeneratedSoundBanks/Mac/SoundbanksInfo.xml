@@ -16,11 +16,19 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3263105517">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2167504701">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1237719143" Name="ChoppingTentacle" ObjectPath="\Events\Default Work Unit\ChoppingTentacle" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<IncludedMemoryFiles>
+						<File Id="263263317" Language="SFX">
+							<ShortName>TentacleSlam.wav</ShortName>
+							<Path>SFX\TentacleSlam_E220DFAC.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1584507803" Name="Click" ObjectPath="\Events\Default Work Unit\Click" DurationType="OneShot" DurationMin="0.100417" DurationMax="0.100417">
 					<IncludedMemoryFiles>
 						<File Id="311343723" Language="SFX">
@@ -540,6 +548,10 @@
 				<File Id="232622653" Language="SFX">
 					<ShortName>Footsteps_Player_3.wav</ShortName>
 					<Path>SFX\Footsteps_Player_3_10C4C929.wem</Path>
+				</File>
+				<File Id="263263317" Language="SFX">
+					<ShortName>TentacleSlam.wav</ShortName>
+					<Path>SFX\TentacleSlam_E220DFAC.wem</Path>
 				</File>
 				<File Id="263833320" Language="SFX">
 					<ShortName>UziEmptyMag-002.wav</ShortName>
