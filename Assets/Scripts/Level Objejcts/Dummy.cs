@@ -10,6 +10,9 @@ public class Dummy : MonoBehaviour
     [Header("Hit Marker Dependencies")]
     [SerializeField] private HitMarker hitMarker;
 
+    [Header("Audio Manager")]
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private string dummyHit;
 
     private Animator animator;
 
@@ -20,10 +23,14 @@ public class Dummy : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet"))
+        if (((Constants.ONE << collision.gameObject.layer) & layerToInteract) != Constants.ZERO)
         {
             hitMarker.HitEnemy();
             animator.SetBool(animationTriggerParameter, true);
+            if (!AudioManager.muteSFX)
+            {
+                audioManager.PlaySound(dummyHit);
+            }
             Invoke("ResetAnimationParameter", animationDuration);
         }
     }

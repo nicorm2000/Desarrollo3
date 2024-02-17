@@ -2287,6 +2287,41 @@
 								<ActiveSource Name="IkuraGrunt1" ID="{36F2886B-B9E9-4EC8-A8AD-28D855705952}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="DummyHit" ID="{BB145D15-0638-4255-96B4-FE5CDE74C6B7}" ShortID="262220705">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>710</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DummyHit" ID="{AD05F578-4BD7-437C-AC34-515C926B1679}">
+									<Language>SFX</Language>
+									<AudioFile>DummyHit.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="473519752"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="DummyHit" ID="{AD05F578-4BD7-437C-AC34-515C926B1679}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{52B7E77D-4858-4CE1-9B51-AD5A1743E651}" ShortID="1007940730">

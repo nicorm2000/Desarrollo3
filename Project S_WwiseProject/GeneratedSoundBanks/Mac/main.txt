@@ -19,6 +19,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2062279300	PlayerDamageHit			\Default Work Unit\PlayerDamageHit	
 	2129816966	FilmConversation			\Default Work Unit\FilmConversation	
 	2201105581	Credits			\Default Work Unit\Credits	
+	2283047610	DummyHit			\Default Work Unit\DummyHit	
 	2501306844	OnigiriAttack			\Default Work Unit\OnigiriAttack	
 	2743512573	EmptySniper			\Default Work Unit\EmptySniper	
 	2883364373	WeaponPickup			\Default Work Unit\WeaponPickup	
@@ -76,6 +77,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	409067037	RifleGunfire-001	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\RifleGunfire-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Loaded\RifleGunfire-001		8818
 	419086052	Footsteps_Enemies_A_3	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Footsteps_Enemies_A_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Enemy\Footsteps_Enemies_A_3		107110
 	450423694	UziGunfire-001	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\UziGunfire-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Loaded\UziGunfire-001		6170
+	473519752	DummyHit	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\DummyHit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\DummyHit		167248
 	480149809	romanticConversation	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\romanticConversation_DBBDE2E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PeopleTalking\romanticConversation		7813424
 	483170663	Cooldown	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\RifleCooldown_3620EBCC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Cooldown		984912
 	484635598	FutomakiDeath	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\SushiRollDeath_8921A352.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\FutomakiDeath		66216

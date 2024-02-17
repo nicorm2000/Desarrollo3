@@ -26,14 +26,17 @@ public class TeleportPlayerToLevel : MonoBehaviour
     [SerializeField] private GameObject transitionOff;
     [SerializeField] private GameObject goToLevelText;
 
-    public bool playerCanTeleport = false;
-    public bool isPlayerOnTeleportArea = false;
+    [Header("Interacting Layers")]
+    [SerializeField] private LayerMask includeLayer;
+
+    private bool playerCanTeleport = false;
+    private bool isPlayerOnTeleportArea = false;
 
     public PlayerData playerData;
 
     private void OnTriggerEnter(Collider player)
     {
-        if (player.gameObject.CompareTag("Player"))
+        if (((Constants.ONE << player.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
             isPlayerOnTeleportArea = true;
             goToLevelText.SetActive(true);
@@ -42,7 +45,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
 
     private void OnTriggerExit(Collider player)
     {
-        if (player.gameObject.CompareTag("Player"))
+        if (((Constants.ONE << player.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
             isPlayerOnTeleportArea = false;
             goToLevelText.SetActive(false);

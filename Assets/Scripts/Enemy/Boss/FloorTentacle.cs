@@ -10,6 +10,9 @@ public class FloorTentacle : MonoBehaviour
     [Header("Boss Data Dependencies")]
     [SerializeField] private BossData bossData;
 
+    [Header("Interacting Layers")]
+    [SerializeField] private LayerMask includeLayer;
+
     private bool isActive = false;
 
     public void Activate(float duration)
@@ -42,7 +45,7 @@ public class FloorTentacle : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && isActive)
+        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO && isActive)
         {
             Debug.Log("Player damaged!");
         }

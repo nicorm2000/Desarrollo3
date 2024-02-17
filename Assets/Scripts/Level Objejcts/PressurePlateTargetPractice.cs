@@ -1,0 +1,79 @@
+using System.Collections;
+using UnityEngine;
+
+public class PressurePlateTargetPractice : MonoBehaviour
+{
+    [Header("Setup")]
+    [SerializeField] private float activationTime;
+    [SerializeField] private float deactivationTime;
+    [SerializeField] private GameObject[] targetList1;
+    [SerializeField] private GameObject[] targetList2;
+    [SerializeField] private GameObject[] targetList3;
+
+    [Header("Interacting Layers")]
+    [SerializeField] private LayerMask includeLayer;
+
+    private Coroutine activationCoroutine;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
+        {
+            activationCoroutine ??= StartCoroutine(ActivateTargetsAfterDelay());
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
+        {
+            if (activationCoroutine != null)
+            {
+                StopCoroutine(activationCoroutine);
+                activationCoroutine = null;
+            }
+            StartCoroutine(TurnOffAllTargets());
+        }
+    }
+
+    private IEnumerator ActivateTargetsAfterDelay()
+    {
+        yield return new WaitForSeconds(activationTime);
+
+        ActivateTargets();
+        activationCoroutine = null;
+    }
+
+    private void ActivateTargets()
+    {
+        ActivateRandomTarget(targetList1);
+        ActivateRandomTarget(targetList2);
+        ActivateRandomTarget(targetList3);
+    }
+
+    private void ActivateRandomTarget(GameObject[] targets)
+    {
+        if (targets.Length > 0)
+        {
+            int randomIndex = Random.Range(0, targets.Length);
+            targets[randomIndex].SetActive(true);
+        }
+    }
+
+    private IEnumerator TurnOffAllTargets()
+    {
+        yield return new WaitForSeconds(deactivationTime);
+
+        TurnOffTargets(targetList1);
+        TurnOffTargets(targetList2);
+        TurnOffTargets(targetList3);
+    }
+
+    private void TurnOffTargets(GameObject[] targets)
+    {
+        foreach (GameObject target in targets)
+        {
+            target.SetActive(false);
+        }
+    }
+}

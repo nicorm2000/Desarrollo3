@@ -20,7 +20,7 @@ public class SelectWeapon : MonoBehaviour
 
     private void OnTriggerEnter(Collider player)
     {
-        if (player.gameObject.CompareTag("Player"))
+        if (player.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             pickUpWeaponText.SetActive(true);
             canPickUp = true;
@@ -29,7 +29,7 @@ public class SelectWeapon : MonoBehaviour
 
     private void OnTriggerExit(Collider player)
     {
-        if (player.gameObject.CompareTag("Player"))
+        if (player.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             pickUpWeaponText.SetActive(false);
             canPickUp = false;

@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 3af410611e2c92469af731b5137fe77a
     GuidInternal: 
-    m_lastTime: -8585010991048448385
+    m_lastTime: -8584934078981840194
     List:
     - name: Click
       guid: 29fd55656c568345b13d2c4c3e9a71e3
@@ -198,6 +198,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: DummyHit
+      guid: 5a1c85af626b664e9595cd5a6a2e0da5
+      id: 2283047610
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: DummyHit
+        ObjectType: 3
+        guid: 5a1c85af626b664e9595cd5a6a2e0da5
+      Path: Events\Default Work Unit\DummyHit
+      maxAttenuation: 0
+      maxDuration: 0.577809
+      minDuration: 0.577809
     - name: EmptyFamas
       guid: 24f0240ff815f4408595c2c1629e4904
       id: 948477392
@@ -949,7 +966,7 @@ MonoBehaviour:
     m_lastTime: -8585034087828296152
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="4075396168">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1801821120">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -66,6 +66,14 @@
 						<File Id="561579131" Language="SFX">
 							<ShortName>creditos.wav</ShortName>
 							<Path>SFX\creditos_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2283047610" Name="DummyHit" ObjectPath="\Events\Default Work Unit\DummyHit" DurationType="OneShot" DurationMin="0.577809" DurationMax="0.577809">
+					<IncludedMemoryFiles>
+						<File Id="473519752" Language="SFX">
+							<ShortName>DummyHit.wav</ShortName>
+							<Path>SFX\DummyHit_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -564,6 +572,10 @@
 				<File Id="450423694" Language="SFX">
 					<ShortName>UziGunfire-001.wav</ShortName>
 					<Path>SFX\UziGunfire-001_10C4C929.wem</Path>
+				</File>
+				<File Id="473519752" Language="SFX">
+					<ShortName>DummyHit.wav</ShortName>
+					<Path>SFX\DummyHit_10C4C929.wem</Path>
 				</File>
 				<File Id="480149809" Language="SFX">
 					<ShortName>romanticConversation.wav</ShortName>

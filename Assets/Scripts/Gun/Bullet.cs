@@ -29,7 +29,9 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             collision.GetComponent<HealthSystem>().TakeDamage(currentDamage);
-            Destroy(gameObject);
+
+            if (!weaponData.heavyWeapon)
+                Destroy(gameObject);
         }
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
@@ -105,7 +107,7 @@ public class Bullet : MonoBehaviour
             transform.localScale = Vector3.Lerp(chargeSize, shotSize, divider);
 
             currentPower = Mathf.Lerp(chargedDmgPower, maxDmgPower, bulletDistance / distanceDivider);
-            
+
             currentDamage = baseDamage * currentPower;
 
             timer -= Time.deltaTime;

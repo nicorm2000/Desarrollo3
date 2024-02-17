@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID COOLDOWNSNIPER = 4259908363U;
         static const AkUniqueID COOLDOWNUZI = 3686178940U;
         static const AkUniqueID CREDITS = 2201105581U;
+        static const AkUniqueID DUMMYHIT = 2283047610U;
         static const AkUniqueID EMPTYFAMAS = 948477392U;
         static const AkUniqueID EMPTYSNIPER = 2743512573U;
         static const AkUniqueID EMPTYUZI = 1210244458U;
