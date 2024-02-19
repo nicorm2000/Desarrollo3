@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 8c81ff1cee96aea44975dfc6f8b73804, type: 2}
+  bulletSprite: {fileID: 1910734438672100343}
 --- !u!114 &1971574244084053114
 MonoBehaviour:
   m_ObjectHideFlags: 0

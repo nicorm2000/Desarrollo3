@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class LaserBullet : MonoBehaviour
 {
+    [Header("Bullet Dependences")]
     public WeaponData weaponData;
+    public SpriteRenderer bulletSprite;
 
     private float bulletSpeed;
     private float timer;
@@ -37,12 +39,14 @@ public class LaserBullet : MonoBehaviour
         {
             bulletSpeed = 0;
             bulletSpeed = weaponData.bulletSpeed;
+            bulletSprite.flipX = false;
         }
 
         else 
         {
             bulletSpeed = 0;
             bulletSpeed = -weaponData.bulletSpeed;
+            bulletSprite.flipX = true;
         }
 
         transform.Translate(Vector2.left * Time.deltaTime * bulletSpeed);
