@@ -25,12 +25,17 @@ public class TeleportPlayerToLevel : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject transitionOff;
     [SerializeField] private GameObject goToLevelText;
+    [SerializeField] private GameObject teleportTimer;
 
     [Header("Interacting Layers")]
     [SerializeField] private LayerMask includeLayer;
 
-    private bool playerCanTeleport = false;
-    private bool isPlayerOnTeleportArea = false;
+    public bool playerCanTeleport = false;
+    public bool isPlayerOnTeleportArea = false;
+
+    [Header("Time to teleport player")]
+    [SerializeField] private TeleportingTimer teleportingTimer;
+    [SerializeField] private int timeToTeleportPlayer = 5;
 
     public PlayerData playerData;
 
@@ -48,25 +53,20 @@ public class TeleportPlayerToLevel : MonoBehaviour
         if (((Constants.ONE << player.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
             isPlayerOnTeleportArea = false;
+            playerCanTeleport = false;
             goToLevelText.SetActive(false);
+            teleportTimer.SetActive(false);
+            teleportingTimer.currentTime = teleportingTimer.maxTime;
         }
     }
 
     public void CheckPlayerTeleportToLevel()
     {
-        playerData.haveAGun = true;
-
         if (isPlayerOnTeleportArea == true)
         {
-            transitionOff.SetActive(false);
-            StartCoroutine(increaseSizeOn.ActiveTransition(_transitonOnTime));
-            StartCoroutine(increaseSizeOn.DisableTransition(_transitonOnTime));
-            playerCanTeleport = true;
+            teleportTimer.SetActive(true);
+            StartCoroutine(CheckTeleport(timeToTeleportPlayer));
         }
-
-        baoBasketIndicator.SetActive(false);
-        baoBasketIndicatorLogic.SetActive(false);
-        StartCoroutine(PlayerTeleport(_transitonOnTime));
     }
 
     public IEnumerator PlayerTeleport(float timeToWait)
@@ -90,8 +90,32 @@ public class TeleportPlayerToLevel : MonoBehaviour
             //aIChase[2].EnemiesCanMove();
             //aIChase[3].EnemiesCanMove();
             aIShooterChase.EnemyShooterCanMove();
+            teleportTimer.SetActive(false);
         }
 
         playerCanTeleport = false;
+    }
+
+    private IEnumerator CheckTeleport(float timeToWait) 
+    {
+        goToLevelText.SetActive(false);
+
+        yield return new WaitForSeconds(timeToWait);
+
+        playerData.haveAGun = true;
+
+        if (isPlayerOnTeleportArea == true)
+        {
+            teleportTimer.SetActive(true);
+            transitionOff.SetActive(false);
+            StartCoroutine(increaseSizeOn.ActiveTransition(_transitonOnTime));
+            StartCoroutine(increaseSizeOn.DisableTransition(_transitonOnTime));
+            playerCanTeleport = true;
+        }
+
+        baoBasketIndicator.SetActive(false);
+        baoBasketIndicatorLogic.SetActive(false);
+
+        StartCoroutine(PlayerTeleport(_transitonOnTime));
     }
 }
