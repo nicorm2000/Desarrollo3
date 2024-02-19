@@ -31,8 +31,10 @@ public class Abilities : MonoBehaviour
     [SerializeField] private GameObject prefabToSpawn;
     [SerializeField] private float slowerLifetime = 5f;
     [SerializeField] private float slowerZOffset = 5f;
+    [SerializeField] private int waveToUnlockSlower;
     private float slowerCooldown = 3f;
     private bool isCooldownSlower = false;
+
 
     [Header("Laser")]
     [SerializeField] private GameObject laserLogo;
@@ -40,6 +42,7 @@ public class Abilities : MonoBehaviour
     [SerializeField] private Image laserImage;
     [SerializeField] private Color laserColor = Color.cyan;
     [SerializeField] private GameObject laserObject;
+    [SerializeField] private int waveToUnlockLaser;  
 
     [Header("Audio Manager")]
     [SerializeField] AudioManager audioManager;
@@ -73,9 +76,10 @@ public class Abilities : MonoBehaviour
 
     private void LaserCounter()
     {
-        if (waveManager.currentWaveIndex >= 9)
+        if (waveManager.currentWaveIndex >= waveToUnlockLaser)
         {
-            laserLogo.SetActive(true);
+            StartCoroutine(EnableAnimatorComponent(laserLogo));
+
             laserText.SetActive(true);
 
             if (isCooldownLaser)
@@ -93,7 +97,7 @@ public class Abilities : MonoBehaviour
 
     public void LaserLogic()
     {
-        if (waveManager.currentWaveIndex >= 9)
+        if (waveManager.currentWaveIndex >= waveToUnlockLaser)
         {
             if (!isCooldownLaser)
             {
@@ -118,9 +122,10 @@ public class Abilities : MonoBehaviour
 
     private void SlowerCounter()
     {
-        if (waveManager.currentWaveIndex >= 4)
+        if (waveManager.currentWaveIndex >= waveToUnlockSlower)
         {
-            slowerLogo.SetActive(true);
+            StartCoroutine(EnableAnimatorComponent(slowerLogo));
+
             slowerText.SetActive(true);
 
             if (isCooldownSlower)
@@ -139,7 +144,7 @@ public class Abilities : MonoBehaviour
 
     public void SlowerLogic()
     {
-        if (waveManager.currentWaveIndex >= 4)
+        if (waveManager.currentWaveIndex >= waveToUnlockLaser)
         {
             if (!isCooldownSlower)
             {
@@ -215,5 +220,14 @@ public class Abilities : MonoBehaviour
                 Destroy(obj);
             }
         }
+    }
+
+    private IEnumerator EnableAnimatorComponent(GameObject objectAnimator) 
+    {
+        float timeToWait = 5;
+
+        objectAnimator.SetActive(true);
+        yield return new WaitForSeconds(timeToWait);
+        objectAnimator.GetComponent<Animator>().enabled = false;
     }
 }

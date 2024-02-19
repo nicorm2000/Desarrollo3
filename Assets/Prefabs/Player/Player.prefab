@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 687902261501288840}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.44131953, y: 0.032, z: 0}
+  m_LocalPosition: {x: 0.41007513, y: 0.0752365, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -420,7 +420,7 @@ Transform:
   m_GameObject: {fileID: 2027708604543404918}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26899785, y: 0.031999983, z: 0}
+  m_LocalPosition: {x: 0.4390723, y: 0.026236452, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -472,7 +472,7 @@ Transform:
   m_GameObject: {fileID: 2134314904804005271}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.122, y: 0.103, z: 0}
+  m_LocalPosition: {x: -0.3968217, y: 0.075236514, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -630,7 +630,7 @@ Transform:
   m_GameObject: {fileID: 2987045905068621847}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.122, y: 0.103, z: 0}
+  m_LocalPosition: {x: 0.46874836, y: 0.093750075, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -682,7 +682,7 @@ Transform:
   m_GameObject: {fileID: 3366467632441528355}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.503, y: 0.002, z: 0}
+  m_LocalPosition: {x: 0.870569, y: -0.049763534, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1044,7 +1044,7 @@ Transform:
   m_GameObject: {fileID: 3998718963908163994}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2689972, y: 0.032000005, z: 0}
+  m_LocalPosition: {x: 0.325325, y: 0.08398646, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1792,7 +1792,7 @@ Transform:
   m_GameObject: {fileID: 7195425578536629974}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.269, y: 0.032, z: 0}
+  m_LocalPosition: {x: -0.42932612, y: 0.032, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2091,6 +2091,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   waveManager: {fileID: 0}
+  dashLogo: {fileID: 0}
+  dashText: {fileID: 0}
   dashImage: {fileID: 0}
   dashColor: {r: 0, g: 1, b: 1, a: 1}
   dustParticles: {fileID: 2506248379278230478}
@@ -2101,11 +2103,13 @@ MonoBehaviour:
   prefabToSpawn: {fileID: 5360607739328788941, guid: 068c7a8d12bb2ec40ad0ff3fc3a882fc, type: 3}
   slowerLifetime: 10
   slowerZOffset: 0.1
+  waveToUnlockSlower: 4
   laserLogo: {fileID: 0}
   laserText: {fileID: 0}
   laserImage: {fileID: 0}
   laserColor: {r: 1, g: 0, b: 0, a: 1}
   laserObject: {fileID: 2297863809508382778}
+  waveToUnlockLaser: 9
   audioManager: {fileID: 0}
   roll: Roll
   splat: Splat

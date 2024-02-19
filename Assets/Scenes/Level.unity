@@ -9981,6 +9981,14 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1351502573}
+    - target: {fileID: 464711979963327155, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: waveToUnlockLaser
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 464711979963327155, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: waveToUnlockSlower
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 471063530683274035, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: screenShake
       value: 
@@ -16479,7 +16487,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825329472}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5fca47ddace55164aad170783da5216b, type: 2}
   m_CullingMode: 0
@@ -41432,7 +41440,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882951106}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 4dfcfefbff922194bb77ba112274981e, type: 2}
   m_CullingMode: 0
