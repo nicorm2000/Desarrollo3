@@ -4998,7 +4998,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 18db1cec38a7cdd41a88294e45a7e3e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 668c69d4678b41846b37ff96bfdc33e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5022,7 +5022,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 92d4fa9258efa574c9b78761254a60c6, type: 2}
-  bulletSpeed: 0
   sphereCollider: {fileID: 2678454058040883649}
   explosionEffect: {fileID: 75932627180380641}
   bulletSprite: {fileID: 1910734438672100343}
