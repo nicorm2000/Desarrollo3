@@ -55,11 +55,12 @@ public class WaveUI : MonoBehaviour
     {
         waveCompleted.SetActive(true);
         yield return new WaitForSeconds(waveShowCompletedDuration);
+        waveCompleted.SetActive(false);
 
-        
+        //Waves finished
 
-        StartCoroutine(increaseSizeOn.ActiveTransition(timeToTurnOnTransition));
-        yield return new WaitForSeconds(timeToTurnOnTransition);
-        mySceneManager.LoadSceneByName(winScene);
+        //StartCoroutine(increaseSizeOn.ActiveTransition(timeToTurnOnTransition));
+        //yield return new WaitForSeconds(timeToTurnOnTransition);
+        //mySceneManager.LoadSceneByName(winScene);
     }
 }

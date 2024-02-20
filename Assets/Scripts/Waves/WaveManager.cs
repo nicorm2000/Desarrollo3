@@ -61,6 +61,7 @@ public class WaveManager : MonoBehaviour
     private float _nextSpawnTime;
     private bool _canSpawn = true;
     private bool _nextWave = false;
+    private bool _finishedWaves = false;
 
     private void OnValidate()
     {
@@ -141,9 +142,13 @@ public class WaveManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Game Finished");
-                StartCoroutine(waveUI.ShowWaveCompletedUI());
-                Debug.Log("Boss Fight Spawn");
+                if (!_finishedWaves)
+                {
+                    StartCoroutine(waveUI.ShowWaveCompletedUI());
+                    Debug.Log("Boss Fight Spawn");
+                    ActivateShop();
+                    _finishedWaves = true;
+                }
             }
 
             _nextWave = false;

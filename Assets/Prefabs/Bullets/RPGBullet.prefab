@@ -4931,7 +4931,6 @@ GameObject:
   - component: {fileID: 7562965351982642189}
   - component: {fileID: 1910734438672100343}
   - component: {fileID: 281028019973430144}
-  - component: {fileID: 1971574244084053114}
   - component: {fileID: 2678454058040883649}
   - component: {fileID: 6844609257836818166}
   m_Layer: 7
@@ -5026,22 +5025,6 @@ MonoBehaviour:
   explosionEffect: {fileID: 75932627180380641}
   bulletSprite: {fileID: 1910734438672100343}
   maxTimeToDestroy: 1
---- !u!114 &1971574244084053114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7942789937546522980}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d9e5dafd6b77004ea216f25087a0042, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxYPosition: 10
-  minYPosition: -10
-  minScale: 0.75
-  maxScale: 1.25
 --- !u!135 &2678454058040883649
 SphereCollider:
   m_ObjectHideFlags: 0

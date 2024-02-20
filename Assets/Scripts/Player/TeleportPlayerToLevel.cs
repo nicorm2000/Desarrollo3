@@ -11,8 +11,11 @@ public class TeleportPlayerToLevel : MonoBehaviour
     [SerializeField] private GameObject baoBasketIndicator;
     [SerializeField] private GameObject baoBasketIndicatorLogic;
 
-    [Header("Audio Manager")]
+    [Header("Audio Manager Dependencies")]
     [SerializeField] AudioManager audioManager;
+
+    [Header("Wave Manager Dependencies")]
+    [SerializeField] WaveManager waveManager;
 
     [Header("Enemies Movement Dependencies")]
     [SerializeField] private AIChase[] aIChase;
@@ -20,8 +23,11 @@ public class TeleportPlayerToLevel : MonoBehaviour
 
     private float _transitonOnTime = 1f;
 
+    [Header("Teleport locations")]
+    [SerializeField] private Transform levelSpawn;
+    [SerializeField] private Transform bosLevelSpawn;
+
     [Header("Visual Dependencies")]
-    [SerializeField] private GameObject levelSpawn;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject transitionOff;
     [SerializeField] private GameObject goToLevelText;
@@ -35,7 +41,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
 
     [Header("Time to teleport player")]
     [SerializeField] private TeleportingTimer teleportingTimer;
-    [SerializeField] private int timeToTeleportPlayer = 5;
+    [SerializeField] private int timeToTeleportPlayer;
 
     public PlayerData playerData;
 
@@ -80,7 +86,16 @@ public class TeleportPlayerToLevel : MonoBehaviour
                 audioManager.PlaySound(playerData.pickUpWeapon);
             }
 
-            player.transform.position = levelSpawn.transform.position;
+            player.transform.position = levelSpawn.position;
+            
+            //if (waveManager.currentWaveIndex <= Constants.MAX_WAVES)
+            //{
+            //}
+            //else
+            //{
+            //    player.transform.position = bosLevelSpawn.position;
+            //}
+
             StartCoroutine(increaseSizeOff.ActiveTransition(_transitonOnTime));
             StartCoroutine(increaseSizeOff.DisableTransition(_transitonOnTime));
 
@@ -96,7 +111,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
         playerCanTeleport = false;
     }
 
-    private IEnumerator CheckTeleport(float timeToWait) 
+    private IEnumerator CheckTeleport(float timeToWait)
     {
         goToLevelText.SetActive(false);
 

@@ -144,7 +144,7 @@ public class Abilities : MonoBehaviour
 
     public void SlowerLogic()
     {
-        if (waveManager.currentWaveIndex >= waveToUnlockLaser)
+        if (waveManager.currentWaveIndex >= waveToUnlockSlower)
         {
             if (!isCooldownSlower)
             {
