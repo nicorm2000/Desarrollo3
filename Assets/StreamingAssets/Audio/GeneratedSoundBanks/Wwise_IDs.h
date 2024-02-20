@@ -51,6 +51,7 @@ namespace AK
         static const AkUniqueID SHOOTUZI = 3176895516U;
         static const AkUniqueID SHOPFALLDOWN = 3877889958U;
         static const AkUniqueID SPLAT = 236860119U;
+        static const AkUniqueID TAKOBACKGROUND = 1970138382U;
         static const AkUniqueID TURNPAGE = 2936962349U;
         static const AkUniqueID TUTORIAL = 3762955427U;
         static const AkUniqueID WARNINGBOSS = 2724248488U;

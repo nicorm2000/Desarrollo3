@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2167504701">
+		<SoundBank Id="3161908922" Language="SFX" Hash="346779270">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -443,6 +443,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1970138382" Name="TakoBackground" ObjectPath="\Events\Default Work Unit\TakoBackground" DurationType="OneShot" DurationMin="4.5" DurationMax="4.5">
+					<IncludedMemoryFiles>
+						<File Id="547415516" Language="SFX">
+							<ShortName>BossBackground.wav</ShortName>
+							<Path>SFX\BossBackground_D06F855E.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2936962349" Name="TurnPage" ObjectPath="\Events\Default Work Unit\TurnPage" DurationType="OneShot" DurationMin="1.416937" DurationMax="1.785229">
 					<IncludedMemoryFiles>
 						<File Id="169643596" Language="SFX">
@@ -612,6 +620,10 @@
 				<File Id="536794557" Language="SFX">
 					<ShortName>Musical, Plucked, Short Phrase, Musical Accent, Mysterious, Japanese Instrument, Shamisen 02 SND96989.wav</ShortName>
 					<Path>SFX\Musical, Plucked, Short Phrase, Musical Accent, Mysterious, Japanese Instrument, Shamisen 02 SND96989_E41AF79F.wem</Path>
+				</File>
+				<File Id="547415516" Language="SFX">
+					<ShortName>BossBackground.wav</ShortName>
+					<Path>SFX\BossBackground_D06F855E.wem</Path>
 				</File>
 				<File Id="561579131" Language="SFX">
 					<ShortName>creditos.wav</ShortName>

@@ -2498,6 +2498,42 @@
 								<ActiveSource Name="TentacleSlam" ID="{274CD64A-237D-44E9-9F33-87B6A6F992F7}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="TakoBackground" ID="{F9E0D98A-D9D2-491E-960B-A24197753CF0}" ShortID="447567010">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BossBackground" ID="{78929FC3-3D72-4EBF-8878-86164D5D00D3}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.91580640243902"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.89428048780488"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.5"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>BossBackground.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="547415516"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="BossBackground" ID="{78929FC3-3D72-4EBF-8878-86164D5D00D3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

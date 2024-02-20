@@ -15,6 +15,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1656947812	PlayerDeath			\Default Work Unit\PlayerDeath	
 	1687970961	ConveyorBelt			\Default Work Unit\ConveyorBelt	
 	1702629134	OnigiriDeath			\Default Work Unit\OnigiriDeath	
+	1970138382	TakoBackground			\Default Work Unit\TakoBackground	
 	2026920480	Roll			\Default Work Unit\Roll	
 	2032173003	FutomakiDeath			\Default Work Unit\FutomakiDeath	
 	2062279300	PlayerDamageHit			\Default Work Unit\PlayerDamageHit	
@@ -86,6 +87,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	484635598	FutomakiDeath	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\SushiRollDeath_8921A352.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\FutomakiDeath		66216
 	509604822	Footsteps_Enemies_A_4	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Footsteps_Enemies_A_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Enemy\Footsteps_Enemies_A_4		115306
 	536794557	WaveBegin	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Musical, Plucked, Short Phrase, Musical Accent, Mysterious, Japanese Instrument, Shamisen 02 SND96989_E41AF79F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\WaveBegin		388924
+	547415516	TakoBackground	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\BossBackground_D06F855E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boss\TakoBackground		864064
 	561579131	creditos	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\creditos_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Credits\creditos\creditos		4096064
 	593905732	Med Kit	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Med Kit_38340ADB.wem		\Actor-Mixer Hierarchy\Default Work Unit\PickUps\Med Kit		119008
 	639313971	Footsteps_Enemies_A_1	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Footsteps_Enemies_A_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Enemy\Footsteps_Enemies_A_1		116376

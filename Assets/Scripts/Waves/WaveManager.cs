@@ -50,6 +50,7 @@ public class WaveManager : MonoBehaviour
     [Header("Audio Manager")]
     [SerializeField] AudioManager audioManager;
     [SerializeField] private string waveBegins;
+    [SerializeField] private string waveBeforeTako;
 
     [Header("Enemies Dependencies")]
     [SerializeField] private EnemyData[] enemyData;
@@ -131,27 +132,7 @@ public class WaveManager : MonoBehaviour
 
         if (_canSpawn == false && _nextWave == true)
         {
-            if (currentWaveIndex + Constants.ONE != waves.Length && playerData._isDead == false)
-            {
-                if (!AudioManager.muteSFX)
-                {
-                    audioManager.PlaySound(waveBegins);
-                }
-
-                SpawnNextWave();
-            }
-            else
-            {
-                if (!_finishedWaves)
-                {
-                    StartCoroutine(waveUI.ShowWaveCompletedUI());
-                    Debug.Log("Boss Fight Spawn");
-                    ActivateShop();
-                    _finishedWaves = true;
-                }
-            }
-
-            _nextWave = false;
+            WaveUpdater();
         }
     }
 
@@ -171,6 +152,39 @@ public class WaveManager : MonoBehaviour
             Debug.Log(waves.Length - Constants.ONE);
             waveUI.ShowWaveText(waves[currentWaveIndex].waveIndex);
         }
+    }
+
+    /// <summary>
+    /// Updates to the next wave.
+    /// </summary>
+    private void WaveUpdater()
+    {
+        if (currentWaveIndex + Constants.ONE != waves.Length && playerData._isDead == false)
+        {
+            if (!AudioManager.muteSFX)
+            {
+                audioManager.PlaySound(waveBegins);
+            }
+
+            SpawnNextWave();
+        }
+        else
+        {
+            if (!_finishedWaves)
+            {
+                StartCoroutine(waveUI.ShowWaveCompletedUI());
+                Debug.Log("Boss Fight Spawn");
+                ActivateShop();
+                _finishedWaves = true;
+
+                if (!AudioManager.muteSFX)
+                {
+                    audioManager.PlaySound(waveBeforeTako);
+                }
+            }
+        }
+
+        _nextWave = false;
     }
 
     /// <summary>

@@ -15553,6 +15553,7 @@ MonoBehaviour:
   baoBasketIndicator: {fileID: 857688665}
   audioManager: {fileID: 1351502573}
   waveBegins: WaveBegin
+  waveBeforeTako: TakoBackground
   enemyData:
   - {fileID: 11400000, guid: f43bbcc79f28a0943a0752730dd121af, type: 2}
   - {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}

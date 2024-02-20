@@ -900,6 +900,27 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="TakoBackground" ID="{B72B2DA2-A7A2-4F71-835C-CD1D1B9F2648}">
+					<ChildrenList>
+						<Action Name="" ID="{9B181996-A06A-4271-994F-8EDC8B5B7459}" ShortID="689272944">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TakoBackground" ID="{F9E0D98A-D9D2-491E-960B-A24197753CF0}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C186EE0B-E3B8-42DA-8360-578242F8400D}" ShortID="810097338">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TakoBackground" ID="{F9E0D98A-D9D2-491E-960B-A24197753CF0}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
