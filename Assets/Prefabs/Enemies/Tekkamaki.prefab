@@ -674,7 +674,6 @@ MonoBehaviour:
   chaseSpeed: 1
   healthSystem: {fileID: 5345744617377966691}
   enemyData: {fileID: 11400000, guid: a937a3a7194277548bfbc3af0acd6616, type: 2}
-  target: {fileID: 0}
   flipEnemy: {fileID: 2514241438589823774}
   maxTime: 1
 --- !u!114 &5345744617377966691
@@ -880,6 +879,9 @@ MonoBehaviour:
   explosionDamage: 20
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   enemyData: {fileID: 11400000, guid: f43bbcc79f28a0943a0752730dd121af, type: 2}
+  audioManager: {fileID: 2458315473507534293}
+  explosionTimer: ExplosionTimer
+  explosionSFX: Explosion
   duration: 0.5
   animationCurve:
     serializedVersion: 2

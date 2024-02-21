@@ -24,6 +24,8 @@ namespace AK
         static const AkUniqueID EMPTYFAMAS = 948477392U;
         static const AkUniqueID EMPTYSNIPER = 2743512573U;
         static const AkUniqueID EMPTYUZI = 1210244458U;
+        static const AkUniqueID EXPLOSION = 13776098U;
+        static const AkUniqueID EXPLOSIONTIMER = 2139269741U;
         static const AkUniqueID FILMCONVERSATION = 2129816966U;
         static const AkUniqueID FOOTSTEPSENEMIES = 443235554U;
         static const AkUniqueID FOOTSTEPSPLAYER = 3865216745U;

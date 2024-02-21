@@ -921,6 +921,48 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="ExplosionTimer" ID="{D45F0F18-4D5E-4463-A3EC-0CF23E544B9C}">
+					<ChildrenList>
+						<Action Name="" ID="{7ABCA354-0D06-4FB5-839C-DC04CABC19FB}" ShortID="881612264">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ExplosionTimer" ID="{A1A52453-9A65-41D9-A0EF-128960A7E309}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{68EC3285-DEAB-4DB9-86EA-CBBA04502DD1}" ShortID="352673490">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ExplosionTimer" ID="{A1A52453-9A65-41D9-A0EF-128960A7E309}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Explosion" ID="{DF3EA114-2165-43A5-93B4-5ADC1292B16B}">
+					<ChildrenList>
+						<Action Name="" ID="{097C0560-39A1-4AFF-A702-558462591734}" ShortID="902667974">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Explosion" ID="{7D1144BC-A195-4E18-AD1F-F7FF5BEF68D5}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4C5DAD77-D08E-4199-8461-BE79D229EE50}" ShortID="618897994">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Explosion" ID="{7D1144BC-A195-4E18-AD1F-F7FF5BEF68D5}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

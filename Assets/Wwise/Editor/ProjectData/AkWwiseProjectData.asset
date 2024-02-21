@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 3af410611e2c92469af731b5137fe77a
     GuidInternal: 
-    m_lastTime: -8584932130132477493
+    m_lastTime: -8584931192470962486
     List:
     - name: ChoppingTentacle
       guid: 239d9ae7bdf4cc4da5f4e8c128e8922c
@@ -283,6 +283,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.037208
       minDuration: 0.031479
+    - name: Explosion
+      guid: 14a13edf6521a54393b45adc1292b16b
+      id: 13776098
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: Explosion
+        ObjectType: 3
+        guid: 14a13edf6521a54393b45adc1292b16b
+      Path: Events\Default Work Unit\Explosion
+      maxAttenuation: 0
+      maxDuration: 1.822771
+      minDuration: 1.822771
+    - name: ExplosionTimer
+      guid: 180f5fd45e4d6344a3ec0cf23e544b9c
+      id: 2139269741
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: ExplosionTimer
+        ObjectType: 3
+        guid: 180f5fd45e4d6344a3ec0cf23e544b9c
+      Path: Events\Default Work Unit\ExplosionTimer
+      maxAttenuation: 0
+      maxDuration: 3
+      minDuration: 3
     - name: FilmConversation
       guid: a6d4adbe413c2a4cbb2df8f830329f40
       id: 2129816966
@@ -1017,7 +1051,7 @@ MonoBehaviour:
     m_lastTime: -8585034087828296152
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 06000000070000000201000003010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

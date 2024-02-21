@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="346779270">
+		<SoundBank Id="3161908922" Language="SFX" Hash="4213193285">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -129,6 +129,22 @@
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry Id="862615877" Name="Uzi" ObjectPath="\Switches\Default Work Unit\Weapons\Uzi"/>
 					</ActionSetSwitch>
+				</Event>
+				<Event Id="13776098" Name="Explosion" ObjectPath="\Events\Default Work Unit\Explosion" DurationType="OneShot" DurationMin="1.822771" DurationMax="1.822771">
+					<IncludedMemoryFiles>
+						<File Id="935939003" Language="SFX">
+							<ShortName>Explosion.wav</ShortName>
+							<Path>SFX\Explosion_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2139269741" Name="ExplosionTimer" ObjectPath="\Events\Default Work Unit\ExplosionTimer" DurationType="OneShot" DurationMin="3." DurationMax="3.">
+					<IncludedMemoryFiles>
+						<File Id="476604813" Language="SFX">
+							<ShortName>ExplosionTimer.wav</ShortName>
+							<Path>SFX\ExplosionTimer_30075EE3.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2129816966" Name="FilmConversation" ObjectPath="\Events\Default Work Unit\FilmConversation" MaxAttenuation="25." DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -447,7 +463,7 @@
 					<IncludedMemoryFiles>
 						<File Id="547415516" Language="SFX">
 							<ShortName>BossBackground.wav</ShortName>
-							<Path>SFX\BossBackground_D06F855E.wem</Path>
+							<Path>SFX\BossBackground_09766194.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -605,6 +621,10 @@
 					<ShortName>DummyHit.wav</ShortName>
 					<Path>SFX\DummyHit_10C4C929.wem</Path>
 				</File>
+				<File Id="476604813" Language="SFX">
+					<ShortName>ExplosionTimer.wav</ShortName>
+					<Path>SFX\ExplosionTimer_30075EE3.wem</Path>
+				</File>
 				<File Id="480149809" Language="SFX">
 					<ShortName>romanticConversation.wav</ShortName>
 					<Path>SFX\romanticConversation_DBBDE2E2.wem</Path>
@@ -623,7 +643,7 @@
 				</File>
 				<File Id="547415516" Language="SFX">
 					<ShortName>BossBackground.wav</ShortName>
-					<Path>SFX\BossBackground_D06F855E.wem</Path>
+					<Path>SFX\BossBackground_09766194.wem</Path>
 				</File>
 				<File Id="561579131" Language="SFX">
 					<ShortName>creditos.wav</ShortName>
@@ -680,6 +700,10 @@
 				<File Id="934391759" Language="SFX">
 					<ShortName>FutomakiGrunt1.wav</ShortName>
 					<Path>SFX\FutomakiGrunt1_6A19D534.wem</Path>
+				</File>
+				<File Id="935939003" Language="SFX">
+					<ShortName>Explosion.wav</ShortName>
+					<Path>SFX\Explosion_10C4C929.wem</Path>
 				</File>
 				<File Id="937201692" Language="SFX">
 					<ShortName>PlayerSkillSplat.wav</ShortName>

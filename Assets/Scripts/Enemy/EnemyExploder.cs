@@ -21,6 +21,11 @@ public class EnemyExploder : MonoBehaviour
     [Header("Enemy Data Dependencies")]
     [SerializeField] private EnemyData enemyData;
 
+    [Header("Audio Manager Dependencies")]
+    [SerializeField] AudioManager audioManager;
+    [SerializeField] string explosionTimer;
+    [SerializeField] string explosionSFX;
+
     [Header("Screen Shake Configuration")]
     [SerializeField] private float duration;
     [SerializeField] private AnimationCurve animationCurve;
@@ -68,6 +73,10 @@ public class EnemyExploder : MonoBehaviour
         {
             isAttacking = true;
             onEnemyAttackChange?.Invoke(isAttacking);
+            if (!AudioManager.muteSFX)
+            {
+                audioManager.PlaySound(explosionTimer);
+            }
             StartCoroutine(CountdownCoroutine());
         }
     }
@@ -102,6 +111,10 @@ public class EnemyExploder : MonoBehaviour
 
         if (!_hasExploded)
         {
+            if (!AudioManager.muteSFX)
+            {
+                audioManager.PlaySound(explosionSFX);
+            }
             Explode();
             _hasExploded = true;
         }

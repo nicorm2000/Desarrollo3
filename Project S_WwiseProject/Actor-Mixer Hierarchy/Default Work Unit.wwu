@@ -2322,6 +2322,67 @@
 								<ActiveSource Name="DummyHit" ID="{AD05F578-4BD7-437C-AC34-515C926B1679}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="ExplosionTimer" ID="{A1A52453-9A65-41D9-A0EF-128960A7E309}" ShortID="1041715326">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ExplosionTimer" ID="{21CDA4E4-8D83-450B-8DE0-FF106F3867E0}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="3"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ExplosionTimer.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="476604813"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="ExplosionTimer" ID="{21CDA4E4-8D83-450B-8DE0-FF106F3867E0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Explosion" ID="{7D1144BC-A195-4E18-AD1F-F7FF5BEF68D5}" ShortID="436378408">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Explosion" ID="{CF0382B1-1A74-4BAC-A7A7-8B24708390A5}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Explosion.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="935939003"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Explosion" ID="{CF0382B1-1A74-4BAC-A7A7-8B24708390A5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player" ID="{52B7E77D-4858-4CE1-9B51-AD5A1743E651}" ShortID="1007940730">
