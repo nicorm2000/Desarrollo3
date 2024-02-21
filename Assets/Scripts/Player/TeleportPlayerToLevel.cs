@@ -101,9 +101,8 @@ public class TeleportPlayerToLevel : MonoBehaviour
 
             aIChase[0].EnemiesCanMove();
             aIChase[1].EnemiesCanMove();
-            //Add new enemies here
-            //aIChase[2].EnemiesCanMove();
-            //aIChase[3].EnemiesCanMove();
+            aIChase[2].EnemiesCanMove();
+            aIChase[3].EnemiesCanMove();
             aIShooterChase.EnemyShooterCanMove();
             teleportTimer.SetActive(false);
         }

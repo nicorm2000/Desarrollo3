@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class EnemyExploder : MonoBehaviour
 {
+    public event Action<bool> onEnemyAttackChange;
+
     [Header("Detection Configuration")]
     [SerializeField] private float detectionRadius;
 
     [Header("Explosion Configuration")]
-    [SerializeField] private float explosionCooldown;
+    [SerializeField] private float explosionBuildUp;
     [SerializeField] private float explosionRadius;
     [SerializeField] private float explosionDamage;
     
@@ -45,14 +47,16 @@ public class EnemyExploder : MonoBehaviour
 
     private bool _hasExploded = false;
     private float _damage;
-    private BoxCollider _enemyCollider = null;
+    private Collider _enemyCollider = null;
+
+    private bool isAttacking;
 
     private void Start()
     {
         _damage = enemyData.damage;
         _target = EnemyManager.player;
         _screenShakeDependency = EnemyManager.mainCamera;
-        _enemyCollider = gameObject.GetComponent<BoxCollider>();
+        _enemyCollider = gameObject.GetComponent<Collider>();
         _aiChase = GetComponent<AIChase>();
     }
 
@@ -62,13 +66,15 @@ public class EnemyExploder : MonoBehaviour
 
         if (distanceToPlayer <= detectionRadius)
         {
+            isAttacking = true;
+            onEnemyAttackChange?.Invoke(isAttacking);
             StartCoroutine(CountdownCoroutine());
         }
     }
 
     private IEnumerator CountdownCoroutine()
     {
-        float timer = explosionCooldown;
+        float timer = explosionBuildUp;
 
         _aiChase.enabled = false;
 
@@ -78,11 +84,11 @@ public class EnemyExploder : MonoBehaviour
         {
             timer -= Time.deltaTime;
 
-            if (timer <= explosionCooldown * 0.66f)
+            if (timer <= explosionBuildUp * 0.66f)
             {
                 mediumRadius.SetActive(true);
             }
-            if (timer <= explosionCooldown * 0.33f)
+            if (timer <= explosionBuildUp * 0.33f)
             {
                 bigRadius.SetActive(true);
             }

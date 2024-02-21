@@ -20,21 +20,17 @@ MonoBehaviour:
   dropData: {fileID: 11400000, guid: c33f07bb2e1b4a14d9fac1a16a24e084, type: 2}
   sushiName: Wasabi
   damage: 0
-  spawnAnimationName: Spawn
-  spawnAnimationDuration: 0
-  deathAnimationName: Death
-  deathAnimationDuration: 0
   movementSpeed: 1
   avoidanceDistance: 2
   ifFollowingPlayer: 1
   isMelee: 1
-  canChase: 1
+  canChase: 0
   isGas: 1
   circularMovementSpeed: 1
   avoidanceFactor: 10
   shootDistance: 5
   fireRate: 1
-  lifeSpawn: 0
+  lifeSpan: 0
   bulletSpeed: 0
   bullet: {fileID: 0}
   health: 300

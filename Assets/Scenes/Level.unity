@@ -613,6 +613,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ed6723ab2b0944540bcd1ef25124773a, type: 3}
   m_PrefabInstance: {fileID: 314536091}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &36377811
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2253121219630259449, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622741844156727097, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622741844156727097, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.976409
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622741844156727097, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622741844156727097, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622741844156727097, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622741844156727097, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622741844156727097, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622741844156727097, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622741844156727097, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622741844156727097, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675668403965106887, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212661043742640571, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8664848049110730462, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794192663361722567, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_Name
+      value: Tekkamaki
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794192663361722567, guid: 533244e993e72a342abf16de948666f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 533244e993e72a342abf16de948666f6, type: 3}
 --- !u!1 &36680732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,6 +1394,8 @@ MonoBehaviour:
   aIChase:
   - {fileID: 5770740514192762869, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
   - {fileID: 5770740514192762869, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
+  - {fileID: 9216954252921922108, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+  - {fileID: 2746745100448764345, guid: 533244e993e72a342abf16de948666f6, type: 3}
   aIShooterChase: {fileID: 7899699859354876490, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   levelSpawn: {fileID: 2123702627}
   bosLevelSpawn: {fileID: 731228045}
@@ -45233,6 +45312,8 @@ MonoBehaviour:
   aiChase:
   - {fileID: 5770740514192762869, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
   - {fileID: 5770740514192762869, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
+  - {fileID: 9216954252921922108, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+  - {fileID: 2746745100448764345, guid: 533244e993e72a342abf16de948666f6, type: 3}
   aIShooterChase: {fileID: 7899699859354876490, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   audioManager: {fileID: 1351502573}
 --- !u!4 &2082787385
@@ -47603,3 +47684,4 @@ SceneRoots:
   - {fileID: 1190987839}
   - {fileID: 1686854223}
   - {fileID: 649419240}
+  - {fileID: 36377811}

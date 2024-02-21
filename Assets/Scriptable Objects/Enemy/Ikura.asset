@@ -24,7 +24,7 @@ MonoBehaviour:
   avoidanceDistance: 1
   ifFollowingPlayer: 1
   isMelee: 0
-  canChase: 1
+  canChase: 0
   isGas: 0
   circularMovementSpeed: 0
   avoidanceFactor: 0

@@ -13,15 +13,13 @@ public class AIChase : MonoBehaviour
     [Header("Health System Dependencies")]
     [SerializeField] private EnemyData enemyData;
 
-    [Header("Player Dependencies")]
-    [SerializeField] private GameObject target;
-
     [Header("Health System Dependencies")]
     [SerializeField] private FlipEnemy flipEnemy;
 
     [Header("Timer")]
     [SerializeField] private float maxTime = 1f;
 
+    private GameObject target;
     private bool isWalking;
     private float _timer = 0f;
 
@@ -30,6 +28,7 @@ public class AIChase : MonoBehaviour
         chaseSpeed = enemyData.movementSpeed;
         target = EnemyManager.player;
         _timer = maxTime;
+        Debug.Log(target);
     }
 
     private void Update()

@@ -203,6 +203,7 @@ MonoBehaviour:
   aiChase: {fileID: 9216954252921922108}
   aiShooterChase: {fileID: 7899699859354876490, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   healthSystem: {fileID: 8250440763916729179}
+  enemyExploder: {fileID: 120729506796625832, guid: 533244e993e72a342abf16de948666f6, type: 3}
 --- !u!114 &5770550829314660929
 MonoBehaviour:
   m_ObjectHideFlags: 0
