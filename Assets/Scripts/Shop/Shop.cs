@@ -5,6 +5,8 @@ public class Shop : MonoBehaviour
     [Header("GameObjects")]
     [SerializeField] private GameObject hud;
     [SerializeField] private GameObject shopWindow;
+    [SerializeField] private GameObject[] upgradeButtons;
+    [SerializeField] private GameObject[] maxTexts;
 
     [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
@@ -46,10 +48,12 @@ public class Shop : MonoBehaviour
         {
             audioManager.PlaySound(click);
         }
+
         isPopUpActive = false;
         cursorObject.MouseNotInteract();
         shopWindow.SetActive(false);
         hud.SetActive(true);
+
         Time.timeScale = Constants.ONE_F;
     }
 
@@ -64,9 +68,12 @@ public class Shop : MonoBehaviour
             upgradePlayer.UpgradeHealth(healthUpgradeAmount);
             spriteCycle[Constants.HEALTH_ID].UpdateStatsUI(playerData.healthStackID);
         }
-        else 
+
+        if (playerData.healthStackID >= playerData.maxLevelStack)
         {
             playerData.healthStackID = Constants.MAX_AMOUNT_OF_STACKS;
+            upgradeButtons[1].SetActive(false);
+            maxTexts[1].SetActive(true);
         }
     }
 
@@ -81,9 +88,12 @@ public class Shop : MonoBehaviour
             upgradePlayer.UpgradeSpeed(Constants.ONE_F);
             spriteCycle[Constants.SPEED_ID].UpdateStatsUI(playerData.speedStackID);
         }
-        else
+
+        if (playerData.speedStackID >= playerData.maxLevelStack)
         {
             playerData.speedStackID = Constants.MAX_AMOUNT_OF_STACKS;
+            upgradeButtons[0].SetActive(false);
+            maxTexts[0].SetActive(true);
         }
     }
 
@@ -97,10 +107,13 @@ public class Shop : MonoBehaviour
             playerData.damageStackID += Constants.ONE_F;
             upgradePlayer.UpgradeDamage(damageToIncease);
             spriteCycle[Constants.DAMAGE_ID].UpdateStatsUI(playerData.damageStackID);
-        } 
-        else 
+        }
+
+        if (playerData.damageStackID >= playerData.maxLevelStack)
         {
             playerData.damageStackID = Constants.MAX_AMOUNT_OF_STACKS;
+            upgradeButtons[2].SetActive(false);
+            maxTexts[2].SetActive(true);
         }
     }
 }
