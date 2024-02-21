@@ -1396,6 +1396,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &1010032794293585426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,6 +1716,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &1488851833408025286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2299,6 +2301,8 @@ MonoBehaviour:
   - {fileID: 5715843577884324096}
   - {fileID: 7360449226600723865}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  audioManager: {fileID: 0}
+  choppingSFX: 
 --- !u!114 &3593106544723208558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2639,6 +2643,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &2468707066507102050
 GameObject:
   m_ObjectHideFlags: 0
@@ -3032,6 +3037,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &3007753780472224448
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,6 +3114,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &3191650365093292082
 GameObject:
   m_ObjectHideFlags: 0
@@ -3969,6 +3976,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &4339539391700205573
 GameObject:
   m_ObjectHideFlags: 0
@@ -4998,6 +5006,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &5339585217260429821
 GameObject:
   m_ObjectHideFlags: 0
@@ -5074,6 +5083,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &5344413153893360474
 GameObject:
   m_ObjectHideFlags: 0
@@ -5255,6 +5265,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &5652349071765575672
 GameObject:
   m_ObjectHideFlags: 0
@@ -5331,6 +5342,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &5738751694943120335
 GameObject:
   m_ObjectHideFlags: 0
@@ -5619,6 +5631,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &6026467144058686545
 GameObject:
   m_ObjectHideFlags: 0
@@ -5695,6 +5708,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &6385069359861377270
 GameObject:
   m_ObjectHideFlags: 0
@@ -5908,6 +5922,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &6600180554533990427
 GameObject:
   m_ObjectHideFlags: 0
@@ -6196,6 +6211,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &7054196354221973732
 GameObject:
   m_ObjectHideFlags: 0
@@ -6591,6 +6607,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &7587186783738471275
 GameObject:
   m_ObjectHideFlags: 0
@@ -6881,6 +6898,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &7817059960388410226
 GameObject:
   m_ObjectHideFlags: 0
@@ -7062,6 +7080,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &7954860464201937808
 GameObject:
   m_ObjectHideFlags: 0
@@ -7138,6 +7157,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &8116259715645021135
 GameObject:
   m_ObjectHideFlags: 0
@@ -7428,6 +7448,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &8958520930454381835
 GameObject:
   m_ObjectHideFlags: 0
@@ -7822,6 +7843,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: WarningBoss
+  crackingFloor: CrackingFloor
 --- !u!1 &9172672551615051360
 GameObject:
   m_ObjectHideFlags: 0

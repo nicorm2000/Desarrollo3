@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID COOLDOWNFAMAS = 333089542U;
         static const AkUniqueID COOLDOWNSNIPER = 4259908363U;
         static const AkUniqueID COOLDOWNUZI = 3686178940U;
+        static const AkUniqueID CRACKINGFLOOR = 2057496675U;
         static const AkUniqueID CREDITS = 2201105581U;
         static const AkUniqueID DUMMYHIT = 2283047610U;
         static const AkUniqueID EMPTYFAMAS = 948477392U;
@@ -31,6 +32,7 @@ namespace AK
         static const AkUniqueID FOOTSTEPSPLAYER = 3865216745U;
         static const AkUniqueID FUTOMAKIATTACK = 3076352219U;
         static const AkUniqueID FUTOMAKIDEATH = 2032173003U;
+        static const AkUniqueID GAS = 579662040U;
         static const AkUniqueID GRILL = 3760814375U;
         static const AkUniqueID IKURAATTACK = 1307358801U;
         static const AkUniqueID IKURADEATH = 3392074037U;
@@ -54,6 +56,7 @@ namespace AK
         static const AkUniqueID SHOPFALLDOWN = 3877889958U;
         static const AkUniqueID SPLAT = 236860119U;
         static const AkUniqueID TAKOBACKGROUND = 1970138382U;
+        static const AkUniqueID TENTACLESLAM = 1348410100U;
         static const AkUniqueID TURNPAGE = 2936962349U;
         static const AkUniqueID TUTORIAL = 3762955427U;
         static const AkUniqueID WARNINGBOSS = 2724248488U;

@@ -60,7 +60,6 @@ MonoBehaviour:
   chaseSpeed: 1
   healthSystem: {fileID: 8250440763916729179}
   enemyData: {fileID: 11400000, guid: c75a6f980cce92c46a2394e752caa7ec, type: 2}
-  target: {fileID: 0}
   flipEnemy: {fileID: 5770550829314660929}
   maxTime: 1
 --- !u!114 &8250440763916729179
@@ -267,6 +266,8 @@ MonoBehaviour:
   gasCloudLifespan: 3.5
   gasCloud: {fileID: 4387127066184703811, guid: 40e2c4266a652064898bb3a906848075, type: 3}
   healthSystem: {fileID: 8250440763916729179}
+  audioManager: {fileID: 2178206136016929384}
+  gasSFX: Gas
 --- !u!1 &3745233483390449127
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,10 +10,10 @@ public class AIChase : MonoBehaviour
     [Header("Health System Dependencies")]
     [SerializeField] private HealthSystem healthSystem;
 
-    [Header("Health System Dependencies")]
+    [Header("Enemy Data Dependencies")]
     [SerializeField] private EnemyData enemyData;
 
-    [Header("Health System Dependencies")]
+    [Header("Flip Enemy Dependencies")]
     [SerializeField] private FlipEnemy flipEnemy;
 
     [Header("Timer")]

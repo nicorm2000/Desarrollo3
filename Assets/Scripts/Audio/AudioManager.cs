@@ -78,6 +78,14 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Stop playing specific sound.
+    /// </summary>
+    public void StopSpecificSound(string audioEvent, GameObject gameObject)
+    {
+        AkSoundEngine.StopPlayingID(AkSoundEngine.PostEvent(audioEvent, gameObject));
+    }
+
+    /// <summary>
     /// Toggles the mute state for SFX. Updates the sprite and invokes the appropriate events.
     /// </summary>
     public void ToggleMute()

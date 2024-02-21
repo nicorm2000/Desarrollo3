@@ -963,6 +963,66 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Gas" ID="{18A6BC4F-D9D5-41F6-944C-1170C872111D}">
+					<ChildrenList>
+						<Action Name="" ID="{5732AB69-2EE9-4058-B8E0-2982DE270863}" ShortID="526807489">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gas" ID="{6C7E0A99-4860-4666-B2F7-F2923A760404}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2932D5B3-AC47-48C4-8DAC-78DF13CC6411}" ShortID="360205299">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gas" ID="{6C7E0A99-4860-4666-B2F7-F2923A760404}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="TentacleSlam" ID="{E4D1F5A5-9CAF-4085-A411-373B6F91E844}">
+					<ChildrenList>
+						<Action Name="" ID="{BD41369C-68DD-4451-B7D4-00A080E49661}" ShortID="1049740126">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TentacleSlam" ID="{77D77072-9667-4F78-BEA7-D4E03415A8DC}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2E229A3D-B182-450F-8D84-E256455F4A82}" ShortID="684753810">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TentacleSlam" ID="{77D77072-9667-4F78-BEA7-D4E03415A8DC}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="CrackingFloor" ID="{1E902C9E-FECC-4A14-B2D1-DD3971E173E8}">
+					<ChildrenList>
+						<Action Name="" ID="{579DA1CE-DD59-408C-A37F-C04C289A496B}" ShortID="223910130">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CrackingFloor" ID="{1400D6FB-B9C3-459B-A4F4-65DE0003A3F8}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{65106A20-3A5E-4E87-BFE7-2CBF8EF8871F}" ShortID="429949611">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CrackingFloor" ID="{1400D6FB-B9C3-459B-A4F4-65DE0003A3F8}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

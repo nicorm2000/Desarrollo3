@@ -14,6 +14,10 @@ public class GasTrail : MonoBehaviour
     [Header("Health System Dependencies")]
     [SerializeField] private HealthSystem healthSystem;
 
+    [Header("Audio Manager Dependencies")]
+    [SerializeField] AudioManager audioManager;
+    [SerializeField] string gasSFX;
+
     private GameObject target;
     private ObjectPool gasCloudPool;
 
@@ -21,7 +25,6 @@ public class GasTrail : MonoBehaviour
     {
         target = EnemyManager.player;
         gasCloudPool = new ObjectPool(gasCloud);
-
         StartCoroutine(GasCloudSpawn());
         StartCoroutine(GasCloudTrail());
     }
@@ -31,6 +34,15 @@ public class GasTrail : MonoBehaviour
         while (!healthSystem._dead)
         {
             SpawnGasCloud();
+            if (!AudioManager.muteSFX)
+            {
+                audioManager.PlaySound(gasSFX);
+            }
+            else if (AudioManager.muteSFX)
+            {
+                audioManager.StopSpecificSound(gasSFX, gameObject);
+            }
+
             yield return new WaitForSeconds(timeBetweenGasSpawns);
         }
     }

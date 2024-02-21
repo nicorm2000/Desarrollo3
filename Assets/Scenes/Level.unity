@@ -532,6 +532,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7992870}
   m_CullTransparentMesh: 1
+--- !u!1001 &13094659
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 359069447674901461, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: m_Name
+      value: Wasabi
+      objectReference: {fileID: 0}
+    - target: {fileID: 359069447674901461, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287498465961912756, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.5027843
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287498465961912756, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.684536
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287498465961912756, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.6960926
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287498465961912756, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287498465961912756, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287498465961912756, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287498465961912756, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287498465961912756, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287498465961912756, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287498465961912756, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
 --- !u!1 &18947048
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,6 +648,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &18947051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9697,6 +9759,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &472945487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13636,7 +13699,7 @@ PrefabInstance:
     - target: {fileID: 420076221680128930, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 420076221680128930, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13644,7 +13707,7 @@ PrefabInstance:
     - target: {fileID: 553968338714109559, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 553968338714109559, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13692,7 +13755,7 @@ PrefabInstance:
     - target: {fileID: 1670930989764740199, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 1670930989764740199, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13708,7 +13771,7 @@ PrefabInstance:
     - target: {fileID: 2044138025583872009, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 2044138025583872009, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13716,7 +13779,7 @@ PrefabInstance:
     - target: {fileID: 2048037843795850948, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 2048037843795850948, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13724,7 +13787,7 @@ PrefabInstance:
     - target: {fileID: 2177013112044486250, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 2177013112044486250, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13848,7 +13911,7 @@ PrefabInstance:
     - target: {fileID: 3068380704653783943, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 3068380704653783943, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13856,7 +13919,7 @@ PrefabInstance:
     - target: {fileID: 3411757958069916723, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 3411757958069916723, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13864,7 +13927,7 @@ PrefabInstance:
     - target: {fileID: 3841174909129781048, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 3841174909129781048, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13872,7 +13935,7 @@ PrefabInstance:
     - target: {fileID: 4177924731355759935, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 4177924731355759935, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13880,7 +13943,7 @@ PrefabInstance:
     - target: {fileID: 4433782572913520832, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 4433782572913520832, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13888,7 +13951,7 @@ PrefabInstance:
     - target: {fileID: 5395795064980337249, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 5395795064980337249, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13896,7 +13959,7 @@ PrefabInstance:
     - target: {fileID: 5804502537797853037, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 5804502537797853037, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13904,7 +13967,7 @@ PrefabInstance:
     - target: {fileID: 6321619102095478973, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 6321619102095478973, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13912,7 +13975,7 @@ PrefabInstance:
     - target: {fileID: 6622160387189967350, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 6622160387189967350, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13920,7 +13983,7 @@ PrefabInstance:
     - target: {fileID: 6679164349713099304, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 6679164349713099304, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13928,7 +13991,7 @@ PrefabInstance:
     - target: {fileID: 7616366370895811841, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 7616366370895811841, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13936,7 +13999,7 @@ PrefabInstance:
     - target: {fileID: 8795640461280452908, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 8795640461280452908, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13944,7 +14007,7 @@ PrefabInstance:
     - target: {fileID: 8832288607416982156, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 8832288607416982156, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -13956,11 +14019,11 @@ PrefabInstance:
     - target: {fileID: 8905662929203660996, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 9017930408701182340, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
-      objectReference: {fileID: 1351502573}
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 9017930408701182340, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: includeLayer.m_Bits
       value: 64
@@ -14062,8 +14125,8 @@ MonoBehaviour:
   - {fileID: 2146106517}
   - {fileID: 1298205162}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
-  audioManager: {fileID: 0}
-  choppingSFX: 
+  audioManager: {fileID: 1686854225}
+  choppingSFX: ChoppingTentacle
 --- !u!114 &649419249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15429,6 +15492,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &725925213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16768,6 +16832,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &803786931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20311,6 +20376,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &987113241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21372,6 +21438,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &1032855259
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22235,6 +22302,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &1066263459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25648,6 +25716,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &1190390272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26262,6 +26331,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &1219170427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29073,6 +29143,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &1322233064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34503,6 +34574,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &1524367792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34814,6 +34886,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &1536679198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35171,6 +35244,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &1546398470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36877,6 +36951,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &1603285127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37036,6 +37111,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &1606025249
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38433,6 +38509,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!1001 &1679203426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38779,6 +38856,7 @@ GameObject:
   - component: {fileID: 1686854223}
   - component: {fileID: 1686854222}
   - component: {fileID: 1686854224}
+  - component: {fileID: 1686854225}
   m_Layer: 0
   m_Name: Boss Fight Manager
   m_TagString: Untagged
@@ -38832,6 +38910,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bf540e47427e9d42abd67070423e218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1686854225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686854221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b446fc0bba2e9694199584e3e1cfb6ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxImage: {fileID: 0}
+  sfxSpriteDefault: {fileID: 0}
+  sfxSpriteSelected: {fileID: 0}
+  onSFXMute:
+    m_PersistentCalls:
+      m_Calls: []
+  onSFXUnmute:
+    m_PersistentCalls:
+      m_Calls: []
+  musicImage: {fileID: 0}
+  musicSpriteDefault: {fileID: 0}
+  musicSpriteSelected: {fileID: 0}
+  onMusicMute:
+    m_PersistentCalls:
+      m_Calls: []
+  onMusicUnmute:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1689532153
 GameObject:
   m_ObjectHideFlags: 0
@@ -39535,6 +39643,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &1731936065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40298,6 +40407,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &1767657976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40950,6 +41060,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &1800427154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46457,6 +46568,7 @@ MonoBehaviour:
     m_Bits: 0
   audioManager: {fileID: 0}
   warning: 
+  crackingFloor: 
 --- !u!65 &2097733423
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48134,3 +48246,4 @@ SceneRoots:
   - {fileID: 649419240}
   - {fileID: 1125554891}
   - {fileID: 36377811}
+  - {fileID: 13094659}

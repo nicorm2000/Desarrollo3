@@ -16,6 +16,7 @@ public class FloorTentacle : MonoBehaviour
     [Header("Audio Manager")]
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private string warning;
+    [SerializeField] private string crackingFloor;
 
     private bool isActive = false;
 
@@ -34,6 +35,10 @@ public class FloorTentacle : MonoBehaviour
         yield return new WaitForSeconds(bossData.attack3WarningDisplay);
         warningGO.SetActive(false);
         isActive = true;
+        if (!AudioManager.muteSFX)
+        {
+            audioManager.PlaySound(crackingFloor);
+        }
         gO.SetActive(isActive);
         Debug.Log(gameObject.name);
         StartCoroutine(DeactivateAfter(duration));

@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	236860119	Splat			\Default Work Unit\Splat	
 	333089542	CooldownFamas			\Default Work Unit\CooldownFamas	
 	443235554	FootstepsEnemies			\Default Work Unit\FootstepsEnemies	
+	579662040	Gas			\Default Work Unit\Gas	
 	607500489	WaveBegin			\Default Work Unit\WaveBegin	
 	643270054	ShootFamas			\Default Work Unit\ShootFamas	
 	737767022	Scream			\Default Work Unit\Scream	
@@ -12,6 +13,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1237719143	ChoppingTentacle			\Default Work Unit\ChoppingTentacle	
 	1242093309	RomanticConversation			\Default Work Unit\RomanticConversation	
 	1307358801	IkuraAttack			\Default Work Unit\IkuraAttack	
+	1348410100	TentacleSlam			\Default Work Unit\TentacleSlam	
 	1584507803	Click			\Default Work Unit\Click	
 	1656947812	PlayerDeath			\Default Work Unit\PlayerDeath	
 	1687970961	ConveyorBelt			\Default Work Unit\ConveyorBelt	
@@ -19,6 +21,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1970138382	TakoBackground			\Default Work Unit\TakoBackground	
 	2026920480	Roll			\Default Work Unit\Roll	
 	2032173003	FutomakiDeath			\Default Work Unit\FutomakiDeath	
+	2057496675	CrackingFloor			\Default Work Unit\CrackingFloor	
 	2062279300	PlayerDamageHit			\Default Work Unit\PlayerDamageHit	
 	2129816966	FilmConversation			\Default Work Unit\FilmConversation	
 	2139269741	ExplosionTimer			\Default Work Unit\ExplosionTimer	
@@ -56,6 +59,7 @@ Switch	ID	Name	Switch Group			Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	11758809	Laser	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\PlayerSkillBeam_EA14B6FC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilities\Laser		438416
 	13970989	WeaponPickup	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\WeaponPickup_20B84742.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\WeaponPickup		157888
+	40070512	CrackingFloor	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\CrackingFloor_19F06622.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boss\CrackingFloor		124864
 	45467557	RifleGunfire-004	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\RifleGunfire-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Loaded\RifleGunfire-004		8284
 	45999561	OnigiriDeath	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\OnigiriDeath_1A904FC9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\OnigiriDeath		98586
 	51529185	Cooldown	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\UziCooldown_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Cooldown		993548
@@ -71,6 +75,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	209719382	SniperGunfire-001	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\SniperGunfire-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Loaded\SniperGunfire-001		98080
 	211043125	SniperGunfire-003	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\SniperGunfire-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Loaded\SniperGunfire-003		99974
 	232622653	Footsteps_Player_3	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Footsteps_Player_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Player\Footsteps_Player_3		124216
+	234422318	Gas	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Gas_BAD99CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Gas		960064
 	263263317	ChoppingTentacle	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\TentacleSlam_E220DFAC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boss\ChoppingTentacle		96064
 	263833320	UziEmptyMag-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\UziEmptyMag-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Empty\UziEmptyMag-002		6108
 	277254803	mainTheme	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\mainTheme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MainTheme1\mainTheme		25872064
@@ -89,6 +94,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	483170663	Cooldown	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\RifleCooldown_3620EBCC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Cooldown		984912
 	484635598	FutomakiDeath	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\SushiRollDeath_8921A352.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\FutomakiDeath		66216
 	509604822	Footsteps_Enemies_A_4	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Footsteps_Enemies_A_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Enemy\Footsteps_Enemies_A_4		115306
+	520716974	TentacleSlam	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Slam_CDC513A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boss\TentacleSlam		76864
 	536794557	WaveBegin	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Musical, Plucked, Short Phrase, Musical Accent, Mysterious, Japanese Instrument, Shamisen 02 SND96989_E41AF79F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\WaveBegin		388924
 	547415516	TakoBackground	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\BossBackground_09766194.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boss\TakoBackground		864064
 	561579131	creditos	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\creditos_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Credits\creditos\creditos		4096064

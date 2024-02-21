@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cf5c79c482a364289b65bc639aa2a1, type: 3}
   m_Name: Wasabi
   m_EditorClassIdentifier: 
-  lastHorizontalVector: 0
-  lastVerticalVector: 0
-  movementDirection: {x: 0.9988444, y: -0.048060853}
+  lastHorizontalVector: -0.9051688
+  lastVerticalVector: -0.42505246
+  movementDirection: {x: -0.9051688, y: -0.42505246}
   model: {fileID: 359069447674901461, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
   animator: {fileID: 0}
   dropData: {fileID: 11400000, guid: c33f07bb2e1b4a14d9fac1a16a24e084, type: 2}
