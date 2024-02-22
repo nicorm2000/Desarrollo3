@@ -10511,7 +10511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activationTime: 2
-  deactivationTime: 1
+  deactivationTime: 0.1
   targetList1:
   - {fileID: 1345767390}
   - {fileID: 190213017}
@@ -10532,7 +10532,6 @@ MonoBehaviour:
   - {fileID: 6009347}
   cameraMovement: {fileID: 1613688440}
   playerTransform: {fileID: 1941617696}
-  targetTransform: {fileID: 834532665}
   transitionCurve:
     serializedVersion: 2
     m_Curve:
@@ -37683,7 +37682,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1941617696}
+  maxOffset: -3.5
   offset: {x: 0, y: 0, z: -10}
+  cameraSpeed: 2.5
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!1 &1620393587
 GameObject:

@@ -13,7 +13,6 @@ public class PressurePlateTargetPractice : MonoBehaviour
     [Header("Camera Movement Dependencies")]
     [SerializeField] private CameraMovement cameraMovement;
     [SerializeField] private Transform playerTransform;
-    [SerializeField] private Transform targetTransform;
     [SerializeField] private AnimationCurve transitionCurve;
     [SerializeField] private float transitionDuration;
 
@@ -26,7 +25,7 @@ public class PressurePlateTargetPractice : MonoBehaviour
     {
         if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
-            cameraMovement.target = targetTransform;
+            StartCoroutine(cameraMovement.ActiveMoveCameraOffsetY(1));
 
             activationCoroutine ??= StartCoroutine(ActivateTargetsAfterDelay());
         }
@@ -36,7 +35,7 @@ public class PressurePlateTargetPractice : MonoBehaviour
     {
         if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
-            cameraMovement.target = playerTransform;
+            StartCoroutine(cameraMovement.DesactiveMoveCameraOffsetY(1));
 
             if (activationCoroutine != null)
             {
