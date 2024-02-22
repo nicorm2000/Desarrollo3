@@ -13952,6 +13952,14 @@ PrefabInstance:
       propertyPath: includeLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 3593106544723208558, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: inkShoot
+      value: InkShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593106544723208558, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1686854225}
     - target: {fileID: 3841174909129781048, guid: a64c8de18afe5244eb04c615205d9546, type: 3}
       propertyPath: audioManager
       value: 
@@ -14173,6 +14181,8 @@ MonoBehaviour:
   - {fileID: 1819161988}
   - {fileID: 1537637131}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  audioManager: {fileID: 0}
+  inkShoot: 
 --- !u!1001 &653601637
 PrefabInstance:
   m_ObjectHideFlags: 0

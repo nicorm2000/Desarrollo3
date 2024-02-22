@@ -1023,6 +1023,27 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="InkShoot" ID="{054A92D0-240F-4601-BE32-DC81C9669E81}">
+					<ChildrenList>
+						<Action Name="" ID="{FC93EF2E-FDEC-4DE3-88CC-391B7CF8E903}" ShortID="347429981">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="InkShoot" ID="{75FDF28B-273D-4483-AD00-EAA4F2298762}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{103D8208-3739-436B-8DF4-E58E70137921}" ShortID="134823271">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="InkShoot" ID="{75FDF28B-273D-4483-AD00-EAA4F2298762}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

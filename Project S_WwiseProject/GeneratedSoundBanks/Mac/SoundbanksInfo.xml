@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1102002313">
+		<SoundBank Id="3161908922" Language="SFX" Hash="157040933">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -263,6 +263,14 @@
 						<File Id="778056077" Language="SFX">
 							<ShortName>SushiRollProjectile.wav</ShortName>
 							<Path>SFX\SushiRollProjectile_31DD1A2E.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3500068760" Name="InkShoot" ObjectPath="\Events\Default Work Unit\InkShoot" DurationType="OneShot" DurationMin="0.35" DurationMax="0.35">
+					<IncludedMemoryFiles>
+						<File Id="991654610" Language="SFX">
+							<ShortName>ShootInk.wav</ShortName>
+							<Path>SFX\ShootInk_BB95E35A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -752,6 +760,10 @@
 				<File Id="979923448" Language="SFX">
 					<ShortName>UziGunfire-003.wav</ShortName>
 					<Path>SFX\UziGunfire-003_10C4C929.wem</Path>
+				</File>
+				<File Id="991654610" Language="SFX">
+					<ShortName>ShootInk.wav</ShortName>
+					<Path>SFX\ShootInk_BB95E35A.wem</Path>
 				</File>
 				<File Id="1003545355" Language="SFX">
 					<ShortName>ShopFallDown.wav</ShortName>

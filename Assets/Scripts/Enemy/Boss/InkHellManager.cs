@@ -9,6 +9,10 @@ public class InkHellManager : MonoBehaviour
     [Header("Boss Data Dependencies")]
     [SerializeField] private BossData bossData;
 
+    [Header("Audio Manager Dependencies")]
+    [SerializeField] AudioManager audioManager;
+    [SerializeField] string inkShoot;
+
     private ObjectPool bulletPool;
 
     private void Start()
@@ -22,6 +26,10 @@ public class InkHellManager : MonoBehaviour
 
         while (bulletCount < bossData.attack2MaxAmountOfRounds)
         {
+            if (!AudioManager.muteSFX)
+            {
+                audioManager.PlaySound(inkShoot);
+            }
             foreach (Transform spawnPoint in bulletSpawnPoints)
             {
                 GameObject bullet = bulletPool.GetPooledObject();

@@ -38,6 +38,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3176895516	ShootUzi			\Default Work Unit\ShootUzi	
 	3355135784	IkuraProjectile			\Default Work Unit\IkuraProjectile	
 	3392074037	IkuraDeath			\Default Work Unit\IkuraDeath	
+	3500068760	InkShoot			\Default Work Unit\InkShoot	
 	3643184226	MiniMap			\Default Work Unit\MiniMap	
 	3686178940	CooldownUzi			\Default Work Unit\CooldownUzi	
 	3760814375	Grill			\Default Work Unit\Grill	
@@ -115,6 +116,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	937201692	Splat	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\PlayerSkillSplat_C5503650.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilities\Splat		105044
 	973734017	UziGunfire-004	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\UziGunfire-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Loaded\UziGunfire-004		8224
 	979923448	UziGunfire-003	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\UziGunfire-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Loaded\UziGunfire-003		5166
+	991654610	InkShoot	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\ShootInk_BB95E35A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boss\InkShoot		67264
 	1003545355	ShopFallDown	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\ShopFallDown_95335FD3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\ShopFallDown		60996
 	1009135126	SniperEmptyMag-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\SniperEmptyMag-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Empty\SniperEmptyMag-002		16708
 	1020595081	Laugh	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Voice_Laugh_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Laugh		419316

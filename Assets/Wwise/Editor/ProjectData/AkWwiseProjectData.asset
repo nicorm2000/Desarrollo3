@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 3af410611e2c92469af731b5137fe77a
     GuidInternal: 
-    m_lastTime: -8584930519703408204
+    m_lastTime: -8584930448864270437
     List:
     - name: ChoppingTentacle
       guid: 239d9ae7bdf4cc4da5f4e8c128e8922c
@@ -504,6 +504,23 @@ MonoBehaviour:
       maxAttenuation: 20
       maxDuration: 0.108095
       minDuration: 0.108095
+    - name: InkShoot
+      guid: d0924a050f240146be32dc81c9669e81
+      id: 3500068760
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: InkShoot
+        ObjectType: 3
+        guid: d0924a050f240146be32dc81c9669e81
+      Path: Events\Default Work Unit\InkShoot
+      maxAttenuation: 0
+      maxDuration: 0.35
+      minDuration: 0.35
     - name: Intro
       guid: 7928ff60e1e4ac4e8755157df840299e
       id: 1125500713
@@ -1102,7 +1119,7 @@ MonoBehaviour:
     m_lastTime: -8585034087828296152
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000600000007000000
+  ExpandedWaapiItemIds: 050000000600000007000000c4000000c5000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

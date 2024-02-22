@@ -37,6 +37,7 @@ namespace AK
         static const AkUniqueID IKURAATTACK = 1307358801U;
         static const AkUniqueID IKURADEATH = 3392074037U;
         static const AkUniqueID IKURAPROJECTILE = 3355135784U;
+        static const AkUniqueID INKSHOOT = 3500068760U;
         static const AkUniqueID INTRO = 1125500713U;
         static const AkUniqueID LASER = 3982605422U;
         static const AkUniqueID LAUGH = 4016454680U;

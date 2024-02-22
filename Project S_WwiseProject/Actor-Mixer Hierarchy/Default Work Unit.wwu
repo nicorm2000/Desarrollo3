@@ -2740,6 +2740,50 @@
 								<ActiveSource Name="CrackingFloor" ID="{7A5F5A01-F145-4D43-A653-2780D4DB3B0C}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="InkShoot" ID="{75FDF28B-273D-4483-AD00-EAA4F2298762}" ShortID="319378201">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>25</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ShootInk" ID="{4E11168D-9198-4966-B42D-0A31E0C70F16}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.35"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ShootInk.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="991654610"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="ShootInk" ID="{4E11168D-9198-4966-B42D-0A31E0C70F16}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
