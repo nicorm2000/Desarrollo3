@@ -10,6 +10,13 @@ public class PressurePlateTargetPractice : MonoBehaviour
     [SerializeField] private GameObject[] targetList2;
     [SerializeField] private GameObject[] targetList3;
 
+    [Header("Camera Movement Dependencies")]
+    [SerializeField] private CameraMovement cameraMovement;
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private Transform targetTransform;
+    [SerializeField] private AnimationCurve transitionCurve;
+    [SerializeField] private float transitionDuration;
+
     [Header("Interacting Layers")]
     [SerializeField] private LayerMask includeLayer;
 
@@ -19,6 +26,8 @@ public class PressurePlateTargetPractice : MonoBehaviour
     {
         if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
+            cameraMovement.target = targetTransform;
+
             activationCoroutine ??= StartCoroutine(ActivateTargetsAfterDelay());
         }
     }
@@ -27,6 +36,8 @@ public class PressurePlateTargetPractice : MonoBehaviour
     {
         if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
+            cameraMovement.target = playerTransform;
+
             if (activationCoroutine != null)
             {
                 StopCoroutine(activationCoroutine);
