@@ -2321,6 +2321,8 @@ MonoBehaviour:
   - {fileID: 4032172758137496795}
   - {fileID: 7090275484214717271}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  audioManager: {fileID: 0}
+  inkShoot: 
 --- !u!114 &5126426956202692783
 MonoBehaviour:
   m_ObjectHideFlags: 0
