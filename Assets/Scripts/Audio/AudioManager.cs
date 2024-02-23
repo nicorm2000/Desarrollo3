@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private Image sfxImage;
     [SerializeField] private Sprite sfxSpriteDefault;
     [SerializeField] private Sprite sfxSpriteSelected;
+    
     public static bool muteSFX = false;
     public UnityEvent onSFXMute;
     public UnityEvent onSFXUnmute;
@@ -16,6 +17,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private Image musicImage;
     [SerializeField] private Sprite musicSpriteDefault;
     [SerializeField] private Sprite musicSpriteSelected;
+    
     public static bool muteMusic = false;
     public UnityEvent onMusicMute;
     public UnityEvent onMusicUnmute;

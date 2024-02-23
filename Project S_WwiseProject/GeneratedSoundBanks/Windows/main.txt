@@ -14,10 +14,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	1242093309	RomanticConversation			\Default Work Unit\RomanticConversation	
 	1307358801	IkuraAttack			\Default Work Unit\IkuraAttack	
 	1348410100	TentacleSlam			\Default Work Unit\TentacleSlam	
+	1392147812	TeleportButton			\Default Work Unit\TeleportButton	
 	1584507803	Click			\Default Work Unit\Click	
 	1656947812	PlayerDeath			\Default Work Unit\PlayerDeath	
 	1687970961	ConveyorBelt			\Default Work Unit\ConveyorBelt	
 	1702629134	OnigiriDeath			\Default Work Unit\OnigiriDeath	
+	1772555380	DummyCountdown			\Default Work Unit\DummyCountdown	
 	1970138382	TakoBackground			\Default Work Unit\TakoBackground	
 	2026920480	Roll			\Default Work Unit\Roll	
 	2032173003	FutomakiDeath			\Default Work Unit\FutomakiDeath	
@@ -70,6 +72,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	152369639	Footsteps_Player_2	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Footsteps_Player_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Player\Footsteps_Player_2		124216
 	169562177	ConveyorBelt	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\ConveyorBelt_57BE3351.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\ConveyorBelt		3235264
 	169643596	UI_TurningPage	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\UI_TurningPage_74B490CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_TurningPage		305432
+	193436424	TeleportButton	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Button_68F63CBD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\TeleportButton		70808
 	193992199	Roll	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\PlayerSkillRoll_90A63FCE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilities\Roll		104368
 	196164197	RifleEmptyMag-001	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\RifleEmptyMag-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Empty\RifleEmptyMag-001		14128
 	201673485	Footsteps_Player_1	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Footsteps_Player_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Player\Footsteps_Player_1		117802
@@ -79,6 +82,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	234422318	Gas	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Gas_BAD99CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Gas		960064
 	263263317	ChoppingTentacle	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\TentacleSlam_E220DFAC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boss\ChoppingTentacle		96064
 	263833320	UziEmptyMag-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\UziEmptyMag-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Empty\UziEmptyMag-002		6108
+	267200071	DummyCountdown	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\DummyCountdown_28E4A37F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\DummyCountdown		604864
 	277254803	mainTheme	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\mainTheme_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MainTheme1\mainTheme		25872064
 	283542091	IkuraDeath	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\SushiRollDeath2_64773226.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\IkuraDeath		38734
 	287055274	Cooldown	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\SniperCooldown_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Cooldown		984704

@@ -1044,6 +1044,48 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="DummyCountdown" ID="{EA8AAF8A-3086-4B41-9C15-FBF133CAFFFC}">
+					<ChildrenList>
+						<Action Name="" ID="{B019A1D0-0C25-457F-BF11-498179200D07}" ShortID="856645529">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DummyCountdown" ID="{1DF2F008-2990-43C9-8ADE-3C2B71D517CF}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{83ADBB9C-549E-452F-9030-A2ECA54E329F}" ShortID="204683302">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DummyCountdown" ID="{1DF2F008-2990-43C9-8ADE-3C2B71D517CF}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="TeleportButton" ID="{A23B58EC-D211-4DBD-933C-195B94DC8B57}">
+					<ChildrenList>
+						<Action Name="" ID="{F5326576-62CF-4209-A6CA-697387180863}" ShortID="246649880">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TeleportButton" ID="{DC0EF567-AE2D-46FA-9DF3-00D3C2C23930}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{55EDBEB7-49B9-4747-8C01-9C421B836DA0}" ShortID="29440497">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TeleportButton" ID="{DC0EF567-AE2D-46FA-9DF3-00D3C2C23930}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

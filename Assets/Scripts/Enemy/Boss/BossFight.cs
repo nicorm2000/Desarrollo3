@@ -81,6 +81,9 @@ public class BossFight : MonoBehaviour
                 }
                 break;
             case BossStage.Stage3:
+                //StartCoroutine(increaseSizeOn.ActiveTransition(timeToTurnOnTransition));
+                //yield return new WaitForSeconds(timeToTurnOnTransition);
+                //mySceneManager.LoadSceneByName(winScene);
                 break;
         }
     }

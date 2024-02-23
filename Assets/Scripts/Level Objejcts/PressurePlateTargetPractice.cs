@@ -19,6 +19,10 @@ public class PressurePlateTargetPractice : MonoBehaviour
     [Header("Interacting Layers")]
     [SerializeField] private LayerMask includeLayer;
 
+    [Header("Audio Manager Dependencies")]
+    [SerializeField] AudioManager audioManager;
+    [SerializeField] string dummyCountdown;
+
     private Coroutine activationCoroutine;
 
     private void OnTriggerEnter(Collider other)
@@ -35,8 +39,8 @@ public class PressurePlateTargetPractice : MonoBehaviour
     {
         if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
-            StartCoroutine(cameraMovement.DesactiveMoveCameraOffsetY(1));
-
+            StartCoroutine(cameraMovement.DeactiveMoveCameraOffsetY(1));
+            
             if (activationCoroutine != null)
             {
                 StopCoroutine(activationCoroutine);
@@ -48,6 +52,10 @@ public class PressurePlateTargetPractice : MonoBehaviour
 
     private IEnumerator ActivateTargetsAfterDelay()
     {
+        if (!AudioManager.muteSFX)
+        {
+            audioManager.PlaySound(dummyCountdown);
+        }
         yield return new WaitForSeconds(activationTime);
 
         ActivateTargets();

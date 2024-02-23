@@ -36,9 +36,12 @@ public class CameraMovement : MonoBehaviour
         transform.position = desiredPosition;
     }
 
+    /// <summary>
+    /// Check if camera should move up.
+    /// </summary>
     private void CheckCameraGoUp() 
     {
-        if (isOnAimPractice == true)
+        if (isOnAimPractice)
         {
             if (offset.y >= maxOffset)
             {
@@ -47,9 +50,12 @@ public class CameraMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Check if camera should move down.
+    /// </summary>
     private void CheckCameraGoDown() 
     {
-        if (isOnAimPractice == false)
+        if (!isOnAimPractice)
         {
             if (offset.y < 0)
             {
@@ -63,13 +69,19 @@ public class CameraMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Activates camera mmovement offset in the Y axis.
+    /// </summary>
     public IEnumerator ActiveMoveCameraOffsetY(int timeToWait) 
     {
         isOnAimPractice = true;
         yield return new WaitForSeconds(timeToWait);
     }
 
-    public IEnumerator DesactiveMoveCameraOffsetY(int timeToWait)
+    /// <summary>
+    /// Deactivates camera mmovement offset in the Y axis.
+    /// </summary>
+    public IEnumerator DeactiveMoveCameraOffsetY(int timeToWait)
     {
         isOnAimPractice = false;
         yield return new WaitForSeconds(timeToWait);

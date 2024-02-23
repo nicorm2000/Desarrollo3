@@ -13,6 +13,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
 
     [Header("Audio Manager Dependencies")]
     [SerializeField] AudioManager audioManager;
+    [SerializeField] string teleportButton;
 
     [Header("Wave Manager Dependencies")]
     [SerializeField] WaveManager waveManager;
@@ -21,7 +22,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
     [SerializeField] private AIChase[] aIChase;
     [SerializeField] private AIShooterChase aIShooterChase;
 
-    private float _transitonOnTime = 1f;
+    private readonly float _transitonOnTime = 1f;
 
     [Header("Teleport locations")]
     [SerializeField] private Transform levelSpawn;
@@ -71,6 +72,10 @@ public class TeleportPlayerToLevel : MonoBehaviour
         if (isPlayerOnTeleportArea == true)
         {
             teleportTimer.SetActive(true);
+            if (!AudioManager.muteSFX)
+            {
+                audioManager.PlaySound(teleportButton);
+            }
             StartCoroutine(CheckTeleport(timeToTeleportPlayer));
         }
     }
