@@ -113,8 +113,8 @@ public class TeleportPlayerToLevel : MonoBehaviour
             {
                 audioManager.PlaySound(playerData.pickUpWeapon);
             }
-            //Cambiar (>), es para testear el cambio de camara del boss.
-            if (waveManager.currentWaveIndex >= Constants.MAX_WAVES)
+
+            if (waveManager.currentWaveIndex <= Constants.MAX_WAVES)
             {
                 player.transform.position = levelSpawn.position;
             }
