@@ -5,6 +5,7 @@ public class CameraMovement : MonoBehaviour
 {
     [Header("Target to Follow")]
     private bool isOnAimPractice = false;
+    private bool isOnBossArena = false;
 
     public Transform target;
     
@@ -70,20 +71,11 @@ public class CameraMovement : MonoBehaviour
     }
 
     /// <summary>
-    /// Activates camera mmovement offset in the Y axis.
+    /// Sets true or false depending on whether the player is at aim practice.
     /// </summary>
-    public IEnumerator ActiveMoveCameraOffsetY(int timeToWait) 
+    /// <param name="isActive"></param>
+    public void SetAimPractiveActivator(bool isActive) 
     {
-        isOnAimPractice = true;
-        yield return new WaitForSeconds(timeToWait);
-    }
-
-    /// <summary>
-    /// Deactivates camera mmovement offset in the Y axis.
-    /// </summary>
-    public IEnumerator DeactiveMoveCameraOffsetY(int timeToWait)
-    {
-        isOnAimPractice = false;
-        yield return new WaitForSeconds(timeToWait);
+        isOnAimPractice = isActive;
     }
 }

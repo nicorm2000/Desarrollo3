@@ -29,7 +29,7 @@ public class PressurePlateTargetPractice : MonoBehaviour
     {
         if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
-            StartCoroutine(cameraMovement.ActiveMoveCameraOffsetY(1));
+            cameraMovement.SetAimPractiveActivator(true);
 
             activationCoroutine ??= StartCoroutine(ActivateTargetsAfterDelay());
         }
@@ -39,8 +39,8 @@ public class PressurePlateTargetPractice : MonoBehaviour
     {
         if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
-            StartCoroutine(cameraMovement.DeactiveMoveCameraOffsetY(1));
-            
+            cameraMovement.SetAimPractiveActivator(false);
+
             if (activationCoroutine != null)
             {
                 StopCoroutine(activationCoroutine);
