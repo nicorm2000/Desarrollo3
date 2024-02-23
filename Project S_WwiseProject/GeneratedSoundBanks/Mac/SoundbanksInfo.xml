@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3456568478">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1554259367">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -503,7 +503,7 @@
 					<IncludedMemoryFiles>
 						<File Id="193436424" Language="SFX">
 							<ShortName>Button.wav</ShortName>
-							<Path>SFX\Button_68F63CBD.wem</Path>
+							<Path>SFX\Button_B5B34C90.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -603,7 +603,7 @@
 				</File>
 				<File Id="193436424" Language="SFX">
 					<ShortName>Button.wav</ShortName>
-					<Path>SFX\Button_68F63CBD.wem</Path>
+					<Path>SFX\Button_B5B34C90.wem</Path>
 				</File>
 				<File Id="193992199" Language="SFX">
 					<ShortName>PlayerSkillRoll.wav</ShortName>
