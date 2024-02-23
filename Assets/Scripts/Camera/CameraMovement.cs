@@ -5,12 +5,13 @@ public class CameraMovement : MonoBehaviour
 {
     [Header("Target to Follow")]
     private bool isOnAimPractice = false;
-    private bool isOnBossArena = false;
+    public bool isOnBossArena = false;
 
     public Transform target;
-    
+    public Transform boss;
+
     [Header("Camera Offset")]
-    [SerializeField] public float maxOffset;
+    [SerializeField] public float maxOffsetOnAimPractice;
     [SerializeField] public Vector3 offset;
 
     [Header("Camera Movement Speed")]
@@ -33,6 +34,11 @@ public class CameraMovement : MonoBehaviour
         CheckCameraGoUp();
         CheckCameraGoDown();
 
+        if (isOnBossArena) 
+        {
+            target = boss;
+        }
+
         Vector3 desiredPosition = new Vector3(target.position.x + offset.x, target.position.y + offset.y, transform.position.z);
         transform.position = desiredPosition;
     }
@@ -44,7 +50,7 @@ public class CameraMovement : MonoBehaviour
     {
         if (isOnAimPractice)
         {
-            if (offset.y >= maxOffset)
+            if (offset.y >= maxOffsetOnAimPractice)
             {
                 offset.y -= cameraSpeed * Time.deltaTime;
             }
@@ -74,8 +80,17 @@ public class CameraMovement : MonoBehaviour
     /// Sets true or false depending on whether the player is at aim practice.
     /// </summary>
     /// <param name="isActive"></param>
-    public void SetAimPractiveActivator(bool isActive) 
+    public void AimPractiveActivator(bool isActive) 
     {
         isOnAimPractice = isActive;
+    }
+
+    /// <summary>
+    /// Sets true or false depending on whether the player is on boss arena.
+    /// </summary>
+    /// <param name="isActive"></param>
+    public void BossArenaActivator(bool isActive) 
+    {
+        isOnBossArena = isActive;
     }
 }

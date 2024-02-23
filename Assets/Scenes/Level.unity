@@ -1432,6 +1432,7 @@ MonoBehaviour:
     m_Bits: 64
   playerCanTeleport: 0
   isPlayerOnTeleportArea: 0
+  cameraMovement: {fileID: 1613688440}
   teleportingTimer: {fileID: 188440825}
   timeToTeleportPlayer: 3
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
@@ -9573,13 +9574,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451851943}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2164396, y: 0, z: 0, w: 0.97629607}
-  m_LocalPosition: {x: 97.8, y: -18.2, z: -4.4}
+  m_LocalRotation: {x: -0, y: -0.97629607, z: -0.21643952, w: 0}
+  m_LocalPosition: {x: 97.8, y: -18, z: -4}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2067340814}
-  m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -25, y: -180, z: 0}
 --- !u!212 &451851945
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16042,7 +16043,7 @@ Transform:
   m_GameObject: {fileID: 731228044}
   serializedVersion: 2
   m_LocalRotation: {x: 0.21643952, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 97.8, y: -28.8, z: -8.4}
+  m_LocalPosition: {x: 97.8, y: -26.67, z: -7.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39016,8 +39017,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf01a61403e11d4399a25cc2d221719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOnBossArena: 0
   target: {fileID: 1941617696}
-  maxOffset: -3.5
+  boss: {fileID: 451851944}
+  maxOffsetOnAimPractice: -3.5
   offset: {x: 0, y: 0, z: -10}
   cameraSpeed: 2.5
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}

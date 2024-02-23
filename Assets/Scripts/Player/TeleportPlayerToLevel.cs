@@ -41,6 +41,9 @@ public class TeleportPlayerToLevel : MonoBehaviour
     public bool playerCanTeleport = false;
     public bool isPlayerOnTeleportArea = false;
 
+    [Header("Camera Movement Dependences")]
+    [SerializeField] private CameraMovement cameraMovement;
+
     [Header("Time to teleport player")]
     [SerializeField] private TeleportingTimer teleportingTimer;
     [SerializeField] private int timeToTeleportPlayer;
@@ -110,8 +113,8 @@ public class TeleportPlayerToLevel : MonoBehaviour
             {
                 audioManager.PlaySound(playerData.pickUpWeapon);
             }
-
-            if (waveManager.currentWaveIndex <= Constants.MAX_WAVES)
+            //Cambiar (>), es para testear el cambio de camara del boss.
+            if (waveManager.currentWaveIndex >= Constants.MAX_WAVES)
             {
                 player.transform.position = levelSpawn.position;
             }
@@ -119,6 +122,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
             else
             {
                 player.transform.position = bosLevelSpawn.position;
+                cameraMovement.BossArenaActivator(true);
             }
 
             StartCoroutine(increaseSizeOff.ActiveTransition(_transitonOnTime));
