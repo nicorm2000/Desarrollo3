@@ -1,8 +1,15 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BossFight : MonoBehaviour
 {
+    public event Action<bool> onBossDeadChange;
+    //private bool _isDead;
+    //_isDead = false;
+    //_isDead = true;
+    //onBossDeadChange?.Invoke(_isDead);
+
     public enum BossStage
     { 
         WaitingToStart,
@@ -138,7 +145,7 @@ public class BossFight : MonoBehaviour
         //if (rnd < 65) EnemySpawn = enemy2;
         //if (rnd < 15) EnemySpawn = enemy3;
 
-        Vector3 spawnPos = spawnPositionList[Random.Range(0, spawnPositionList.Count)];
+        Vector3 spawnPos = spawnPositionList[UnityEngine.Random.Range(0, spawnPositionList.Count)];
 
         Instantiate(enemy, spawnPos, Quaternion.identity);
     }

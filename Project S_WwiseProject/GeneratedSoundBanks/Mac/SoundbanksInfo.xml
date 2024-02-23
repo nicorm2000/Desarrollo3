@@ -16,11 +16,19 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1554259367">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2153329458">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2162906834" Name="BaoMumbling" ObjectPath="\Events\Default Work Unit\BaoMumbling" DurationType="OneShot" DurationMin="2.9" DurationMax="2.9">
+					<IncludedMemoryFiles>
+						<File Id="571832634" Language="SFX">
+							<ShortName>BaoMumbling.wav</ShortName>
+							<Path>SFX\BaoMumbling_91D9E720.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1237719143" Name="ChoppingTentacle" ObjectPath="\Events\Default Work Unit\ChoppingTentacle" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
 					<IncludedMemoryFiles>
 						<File Id="263263317" Language="SFX">
@@ -716,6 +724,10 @@
 				<File Id="561579131" Language="SFX">
 					<ShortName>creditos.wav</ShortName>
 					<Path>SFX\creditos_D79FB2B7.wem</Path>
+				</File>
+				<File Id="571832634" Language="SFX">
+					<ShortName>BaoMumbling.wav</ShortName>
+					<Path>SFX\BaoMumbling_91D9E720.wem</Path>
 				</File>
 				<File Id="593905732" Language="SFX">
 					<ShortName>Med Kit.wav</ShortName>

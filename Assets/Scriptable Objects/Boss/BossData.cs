@@ -38,6 +38,11 @@ public class BossData : ScriptableObject
     public float attack3ActivationDuration;
     public float attack3WarningDisplay;
 
+    [Header("Boss Animations")]
+    public float attack1AnimationDuration;
+    public float attack2AnimationDuration;
+    public float attack3AnimationDuration;
+
     [Header("Health System")]
     public float health;
     public bool isDead;

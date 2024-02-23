@@ -1086,6 +1086,27 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="BaoMumbling" ID="{471B6860-62A5-45A9-9254-2C31C0DCC178}">
+					<ChildrenList>
+						<Action Name="" ID="{B0D77634-E9CD-47CA-B27E-C0B27632D882}" ShortID="825300781">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BaoMumbling" ID="{D9204CB9-D520-465F-8EDD-39EAE9FEA924}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{952A5E04-19B2-47EC-8467-A261811F87AA}" ShortID="327008751">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BaoMumbling" ID="{D9204CB9-D520-465F-8EDD-39EAE9FEA924}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

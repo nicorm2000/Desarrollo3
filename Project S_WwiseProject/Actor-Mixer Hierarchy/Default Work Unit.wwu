@@ -473,6 +473,41 @@
 								<ActiveSource Name="Button" ID="{3E27F7E8-38BE-4238-8C3E-BA258F5D81B7}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="BaoMumbling" ID="{D9204CB9-D520-465F-8EDD-39EAE9FEA924}" ShortID="183162028">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BaoMumbling" ID="{61CFFE09-BE1B-4D7F-90D4-B10BC0D8A84E}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.84128276815777"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.9"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>BaoMumbling.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="571832634"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="BaoMumbling" ID="{61CFFE09-BE1B-4D7F-90D4-B10BC0D8A84E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Footsteps" ID="{16C74E90-7FC4-4247-AFFC-FE1CD9B07EF8}" ShortID="938539900">

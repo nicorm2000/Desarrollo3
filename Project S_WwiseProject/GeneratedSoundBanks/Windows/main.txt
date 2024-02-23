@@ -27,6 +27,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2062279300	PlayerDamageHit			\Default Work Unit\PlayerDamageHit	
 	2129816966	FilmConversation			\Default Work Unit\FilmConversation	
 	2139269741	ExplosionTimer			\Default Work Unit\ExplosionTimer	
+	2162906834	BaoMumbling			\Default Work Unit\BaoMumbling	
 	2201105581	Credits			\Default Work Unit\Credits	
 	2283047610	DummyHit			\Default Work Unit\DummyHit	
 	2501306844	OnigiriAttack			\Default Work Unit\OnigiriAttack	
@@ -103,6 +104,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	536794557	WaveBegin	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Musical, Plucked, Short Phrase, Musical Accent, Mysterious, Japanese Instrument, Shamisen 02 SND96989_E41AF79F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\WaveBegin		388924
 	547415516	TakoBackground	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\BossBackground_09766194.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boss\TakoBackground		864064
 	561579131	creditos	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\creditos_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Credits\creditos\creditos		4096064
+	571832634	BaoMumbling	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\BaoMumbling_91D9E720.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\BaoMumbling		556864
 	593905732	Med Kit	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Med Kit_38340ADB.wem		\Actor-Mixer Hierarchy\Default Work Unit\PickUps\Med Kit		119008
 	639313971	Footsteps_Enemies_A_1	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Footsteps_Enemies_A_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Enemy\Footsteps_Enemies_A_1		116376
 	657552065	OnigiriGrunt1	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\OnigiriGrunt1_5578D1DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\OnigiriGrunt1		50218
