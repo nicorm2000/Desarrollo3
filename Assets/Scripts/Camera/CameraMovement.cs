@@ -35,7 +35,7 @@ public class CameraMovement : MonoBehaviour
         CheckCameraGoDown();
 
         if (isOnBossArena) 
-        {
+        {   
             target = boss;
         }
 
