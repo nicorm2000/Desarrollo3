@@ -32,6 +32,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject transitionOff;
     [SerializeField] private GameObject goToLevelText;
+    [SerializeField] private GameObject goToBossLevelText;
     [SerializeField] private GameObject teleportTimer;
 
     [Header("Interacting Layers")]
@@ -51,7 +52,16 @@ public class TeleportPlayerToLevel : MonoBehaviour
         if (((Constants.ONE << player.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
             isPlayerOnTeleportArea = true;
-            goToLevelText.SetActive(true);
+
+            if (waveManager.currentWaveIndex <= Constants.MAX_WAVES)
+            {
+                goToLevelText.SetActive(true);
+            }
+
+            else
+            {
+                goToBossLevelText.SetActive(true);
+            }
         }
     }
 
@@ -61,9 +71,19 @@ public class TeleportPlayerToLevel : MonoBehaviour
         {
             isPlayerOnTeleportArea = false;
             playerCanTeleport = false;
-            goToLevelText.SetActive(false);
             teleportTimer.SetActive(false);
             teleportingTimer.currentTime = teleportingTimer.maxTime;
+
+
+            if (waveManager.currentWaveIndex <= Constants.MAX_WAVES)
+            {
+                goToLevelText.SetActive(false);
+            }
+
+            else
+            {
+                goToBossLevelText.SetActive(false);
+            }
         }
     }
 
@@ -91,15 +111,15 @@ public class TeleportPlayerToLevel : MonoBehaviour
                 audioManager.PlaySound(playerData.pickUpWeapon);
             }
 
-            player.transform.position = levelSpawn.position;
-            
-            //if (waveManager.currentWaveIndex <= Constants.MAX_WAVES)
-            //{
-            //}
-            //else
-            //{
-            //    player.transform.position = bosLevelSpawn.position;
-            //}
+            if (waveManager.currentWaveIndex <= Constants.MAX_WAVES)
+            {
+                player.transform.position = levelSpawn.position;
+            }
+
+            else
+            {
+                player.transform.position = bosLevelSpawn.position;
+            }
 
             StartCoroutine(increaseSizeOff.ActiveTransition(_transitonOnTime));
             StartCoroutine(increaseSizeOff.DisableTransition(_transitonOnTime));
@@ -118,6 +138,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
     private IEnumerator CheckTeleport(float timeToWait)
     {
         goToLevelText.SetActive(false);
+        goToBossLevelText.SetActive(false);
 
         yield return new WaitForSeconds(timeToWait);
 
