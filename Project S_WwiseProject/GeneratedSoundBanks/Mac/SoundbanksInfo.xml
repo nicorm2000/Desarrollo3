@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2153329458">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2642572188">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -282,11 +282,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3500068760" Name="InkShoot" ObjectPath="\Events\Default Work Unit\InkShoot" DurationType="OneShot" DurationMin="0.35" DurationMax="0.35">
+				<Event Id="3500068760" Name="InkShoot" ObjectPath="\Events\Default Work Unit\InkShoot" DurationType="OneShot" DurationMin="0.15" DurationMax="0.15">
 					<IncludedMemoryFiles>
-						<File Id="991654610" Language="SFX">
-							<ShortName>ShootInk.wav</ShortName>
-							<Path>SFX\ShootInk_BB95E35A.wem</Path>
+						<File Id="433266741" Language="SFX">
+							<ShortName>InkShootV2.wav</ShortName>
+							<Path>SFX\InkShootV2_04872DE5.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -684,6 +684,10 @@
 				<File Id="419086052" Language="SFX">
 					<ShortName>Footsteps_Enemies_A_3.wav</ShortName>
 					<Path>SFX\Footsteps_Enemies_A_3_10C4C929.wem</Path>
+				</File>
+				<File Id="433266741" Language="SFX">
+					<ShortName>InkShootV2.wav</ShortName>
+					<Path>SFX\InkShootV2_04872DE5.wem</Path>
 				</File>
 				<File Id="450423694" Language="SFX">
 					<ShortName>UziGunfire-001.wav</ShortName>

@@ -2882,6 +2882,34 @@
 								<ActiveSource Name="ShootInk" ID="{4E11168D-9198-4966-B42D-0A31E0C70F16}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="InkShootV2" ID="{DE79FB98-3D46-45E6-A85C-7910313CD8E8}" ShortID="342586274">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="InkShootV2" ID="{ECD71647-7E05-4E70-B1B3-4312997B42AB}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.25"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.4"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>InkShootV2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="433266741"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="InkShootV2" ID="{ECD71647-7E05-4E70-B1B3-4312997B42AB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
