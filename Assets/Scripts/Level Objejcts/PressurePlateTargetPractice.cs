@@ -25,10 +25,21 @@ public class PressurePlateTargetPractice : MonoBehaviour
 
     private Coroutine activationCoroutine;
 
+    private Animator pressurePlateAnimator;
+    private bool _isPressed;
+
+    private void Start()
+    {
+        pressurePlateAnimator = GetComponent<Animator>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
+            _isPressed = true;
+            HandlePressurePlateChange(_isPressed);
+
             cameraMovement.AimPractiveActivator(true);
 
             activationCoroutine ??= StartCoroutine(ActivateTargetsAfterDelay());
@@ -46,6 +57,10 @@ public class PressurePlateTargetPractice : MonoBehaviour
                 StopCoroutine(activationCoroutine);
                 activationCoroutine = null;
             }
+
+            _isPressed = false;
+            HandlePressurePlateChange(_isPressed);
+
             StartCoroutine(TurnOffAllTargets());
         }
     }
@@ -93,5 +108,10 @@ public class PressurePlateTargetPractice : MonoBehaviour
         {
             target.SetActive(false);
         }
+    }
+
+    private void HandlePressurePlateChange(bool isPressed)
+    {
+        pressurePlateAnimator.SetBool("IsPressed", isPressed);
     }
 }

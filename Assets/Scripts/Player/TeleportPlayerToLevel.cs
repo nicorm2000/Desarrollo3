@@ -48,7 +48,12 @@ public class TeleportPlayerToLevel : MonoBehaviour
     [SerializeField] private TeleportingTimer teleportingTimer;
     [SerializeField] private int timeToTeleportPlayer;
 
-    public PlayerData playerData;
+    [Header("Button animation")]
+    [SerializeField] private Animator buttonAnimator;
+    private bool _isPressed;
+
+    [Header("Player Data Dependencies")]
+    [SerializeField] private PlayerData playerData;
 
     private void OnTriggerEnter(Collider player)
     {
@@ -92,9 +97,11 @@ public class TeleportPlayerToLevel : MonoBehaviour
 
     public void CheckPlayerTeleportToLevel()
     {
-        if (isPlayerOnTeleportArea == true)
+        if (isPlayerOnTeleportArea)
         {
             teleportTimer.SetActive(true);
+            _isPressed = true;
+            HandleTeleportButtonChange(_isPressed);
             if (!AudioManager.muteSFX)
             {
                 audioManager.PlaySound(teleportButton);
@@ -107,7 +114,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToWait);
 
-        if (playerCanTeleport == true)
+        if (playerCanTeleport)
         {
             if (!AudioManager.muteSFX)
             {
@@ -148,7 +155,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
 
         playerData.haveAGun = true;
 
-        if (isPlayerOnTeleportArea == true)
+        if (isPlayerOnTeleportArea)
         {
             teleportTimer.SetActive(true);
             transitionOff.SetActive(false);
@@ -161,5 +168,13 @@ public class TeleportPlayerToLevel : MonoBehaviour
         baoBasketIndicatorLogic.SetActive(false);
 
         StartCoroutine(PlayerTeleport(_transitonOnTime));
+
+        _isPressed = false;
+        HandleTeleportButtonChange(_isPressed);
+    }
+
+    private void HandleTeleportButtonChange(bool isPressed)
+    {
+        buttonAnimator.SetBool("IsPressed", isPressed);
     }
 }

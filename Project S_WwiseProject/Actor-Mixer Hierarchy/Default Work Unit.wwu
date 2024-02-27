@@ -508,6 +508,34 @@
 								<ActiveSource Name="BaoMumbling" ID="{61CFFE09-BE1B-4D7F-90D4-B10BC0D8A84E}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Red Button" ID="{B56CBF33-DF21-450B-9B37-672FF5A3B419}" ShortID="275043383">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Red Button" ID="{F2300498-F925-4A50-85AD-450422359089}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.09833"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Red Button.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="575349978"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Red Button" ID="{F2300498-F925-4A50-85AD-450422359089}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Footsteps" ID="{16C74E90-7FC4-4247-AFFC-FE1CD9B07EF8}" ShortID="938539900">
