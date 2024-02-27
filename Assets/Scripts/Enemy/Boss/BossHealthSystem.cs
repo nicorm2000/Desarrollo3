@@ -5,14 +5,28 @@ public class BossHealthSystem : MonoBehaviour
     [Header("Boss Data Dependencies")]
     [SerializeField] private BossData bossData;
 
-    public void SetHealth(float maxHealth) 
+    [Header("Hit Marker")]
+    [SerializeField] private HitMarker hitMarker;
+
+    private void Start()
     {
-        bossData.health = maxHealth;
+        bossData.ResetBossData();
+        bossData.currentHealth = bossData.maxHealth;
     }
 
     public void TakeDamage(float damage) 
     {
-        bossData.health -= damage;
+        if (!bossData.isDead) 
+        {
+            bossData.currentHealth -= damage;
+            hitMarker.HitEnemy();
+        }
+
+        if(bossData.currentHealth <= 0) 
+        {
+            bossData.currentHealth = 0f;
+            BossDies();
+        }
     }
 
     public void BossDies() 

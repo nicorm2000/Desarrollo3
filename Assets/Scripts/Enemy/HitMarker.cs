@@ -6,8 +6,6 @@ public class HitMarker : MonoBehaviour
 
     private float _timer;
     public float _maxTimer;
-
-
     private void Start()
     {
         _timer = _maxTimer;

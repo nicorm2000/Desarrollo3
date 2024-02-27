@@ -42,7 +42,8 @@ MonoBehaviour:
   attack1AnimationDuration: 1
   attack2AnimationDuration: 1
   attack3AnimationDuration: 1
-  health: 5000
+  currentHealth: 0
+  maxHealth: 800
   isDead: 0
   _triggerEffect: {fileID: 0}
   _spriteRenderer: {fileID: 0}

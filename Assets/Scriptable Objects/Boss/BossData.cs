@@ -44,7 +44,8 @@ public class BossData : ScriptableObject
     public float attack3AnimationDuration;
 
     [Header("Health System")]
-    public float health;
+    public float currentHealth;
+    public float maxHealth;
     public bool isDead;
     public ZoneTriggeredEffect _triggerEffect;
     public SpriteRenderer _spriteRenderer;
@@ -55,4 +56,10 @@ public class BossData : ScriptableObject
     public string attack1SFX;
     public string attack2SFX;
     public string attack3SFX;
+
+    public void ResetBossData() 
+    {
+        currentHealth = maxHealth;
+        isDead = false;
+    }
 }

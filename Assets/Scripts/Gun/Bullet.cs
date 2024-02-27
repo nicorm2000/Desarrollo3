@@ -34,6 +34,14 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject);
         }
 
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Boss"))
+        {
+            collision.GetComponent<BossHealthSystem>().TakeDamage(currentDamage);
+
+            if (!weaponData.heavyWeapon)
+                Destroy(gameObject);
+        }
+
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
         {
             Destroy(gameObject);
