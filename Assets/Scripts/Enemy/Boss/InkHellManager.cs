@@ -14,6 +14,7 @@ public class InkHellManager : MonoBehaviour
     [SerializeField] string inkShoot;
 
     private ObjectPool bulletPool;
+    private bool _isRotating;
 
     private void Start()
     {
@@ -22,6 +23,9 @@ public class InkHellManager : MonoBehaviour
 
     public IEnumerator FireBullets()
     {
+        _isRotating = true;
+        StartCoroutine(RotateSpawnPoints());
+
         int bulletCount = 0;
 
         while (bulletCount < bossData.attack2MaxAmountOfRounds)
@@ -40,12 +44,13 @@ public class InkHellManager : MonoBehaviour
             yield return new WaitForSeconds(bossData.attack2BulletSpawnDelay);
         }
         Debug.Log("Attack 2 Finish");
-        StopCoroutine(RotateSpawnPoints());
+        _isRotating = false;
+        StopAllCoroutines();
     }
 
     public IEnumerator RotateSpawnPoints()
     {
-        while (true)
+        while (_isRotating)
         {
             foreach (Transform spawnPoint in bulletSpawnPoints)
             {

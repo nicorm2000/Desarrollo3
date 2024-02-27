@@ -73,7 +73,7 @@ public class BossAttacks : MonoBehaviour
             _isIdle = true;
             onBossIdleChange?.Invoke(_isIdle);
             yield return new WaitForSeconds(bossData.attackDelay);
-            Debug.Log("Can choose an attacck");
+            Debug.Log("Can choose an attack");
         }
         Debug.Log("Boss is dead");
     }
@@ -119,7 +119,6 @@ public class BossAttacks : MonoBehaviour
                 onBossIdleChange?.Invoke(_isIdle);
                 _isInkHell = true;
                 onBossInkHellChange?.Invoke(_isInkHell);
-                StartCoroutine(inkHellManager.RotateSpawnPoints());
                 yield return StartCoroutine(inkHellManager.FireBullets());
                 _isInkHell = false;
                 onBossInkHellChange?.Invoke(_isInkHell);
