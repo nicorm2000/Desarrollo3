@@ -8,10 +8,19 @@ public class BossHealthSystem : MonoBehaviour
     [Header("Hit Marker")]
     [SerializeField] private HitMarker hitMarker;
 
+    [Header("Boss Health bar")]
+    [SerializeField] private BossHealthBar bossHealthBar;
+
     private void Start()
     {
         bossData.ResetBossData();
         bossData.currentHealth = bossData.maxHealth;
+        bossHealthBar.SetMaxAndCurrentHealth(bossData.maxHealth, bossData.currentHealth);
+    }
+
+    private void Update()
+    {
+        bossHealthBar.SetHealth(bossData.currentHealth);
     }
 
     public void TakeDamage(float damage) 
