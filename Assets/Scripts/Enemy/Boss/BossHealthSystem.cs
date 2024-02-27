@@ -10,6 +10,7 @@ public class BossHealthSystem : MonoBehaviour
 
     [Header("Boss Health bar")]
     [SerializeField] private BossHealthBar bossHealthBar;
+    [SerializeField] private GameObject goHealthBar;
 
     private void Start()
     {
@@ -41,5 +42,6 @@ public class BossHealthSystem : MonoBehaviour
     public void BossDies() 
     {
         bossData.isDead = true;
+        goHealthBar.SetActive(false);
     }
 }

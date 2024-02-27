@@ -4037,9 +4037,9 @@ GameObject:
   m_Component:
   - component: {fileID: 204904158}
   - component: {fileID: 204904159}
+  - component: {fileID: 204904163}
   - component: {fileID: 204904160}
   - component: {fileID: 204904162}
-  - component: {fileID: 204904163}
   - component: {fileID: 204904161}
   m_Layer: 19
   m_Name: Tako
@@ -4094,6 +4094,7 @@ MonoBehaviour:
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
   hitMarker: {fileID: 204904162}
   bossHealthBar: {fileID: 204904163}
+  goHealthBar: {fileID: 542421057}
 --- !u!65 &204904161
 BoxCollider:
   m_ObjectHideFlags: 0
