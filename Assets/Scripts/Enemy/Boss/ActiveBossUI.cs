@@ -6,6 +6,8 @@ public class ActiveBossUI : MonoBehaviour
 {
     [SerializeField] private GameObject bossHealthBar;
 
+    [SerializeField] private CameraMovement cameraMovement;
+
 
     void Start()
     {
@@ -17,6 +19,7 @@ public class ActiveBossUI : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             bossHealthBar.SetActive(true);
+            cameraMovement.BossArenaActivator(true);
         }
     }
 }

@@ -4383,7 +4383,7 @@ Transform:
   m_GameObject: {fileID: 204904157}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.97629607, z: -0.21643952, w: 0}
-  m_LocalPosition: {x: 97.8, y: -20.4, z: -4.94}
+  m_LocalPosition: {x: 97.8, y: -16.08, z: -2.92}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -35033,6 +35033,7 @@ MonoBehaviour:
   target: {fileID: 1941617696}
   boss: {fileID: 451851944}
   maxOffsetOnAimPractice: -3.5
+  maxOffsetOnBossArena: 3
   offset: {x: 0, y: 0, z: -10}
   cameraSpeed: 2.5
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
@@ -35993,6 +35994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossHealthBar: {fileID: 542421057}
+  cameraMovement: {fileID: 1613688440}
 --- !u!1 &1674702628
 GameObject:
   m_ObjectHideFlags: 0

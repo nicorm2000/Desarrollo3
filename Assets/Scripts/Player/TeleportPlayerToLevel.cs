@@ -129,7 +129,6 @@ public class TeleportPlayerToLevel : MonoBehaviour
             else
             {
                 player.transform.position = bosLevelSpawn.position;
-                cameraMovement.BossArenaActivator(true);
             }
 
             StartCoroutine(increaseSizeOff.ActiveTransition(_transitonOnTime));

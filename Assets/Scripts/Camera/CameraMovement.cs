@@ -14,6 +14,7 @@ public class CameraMovement : MonoBehaviour
 
     [Header("Camera Offset")]
     [SerializeField] public float maxOffsetOnAimPractice;
+    [SerializeField] public float maxOffsetOnBossArena;
     [SerializeField] public Vector3 offset;
 
     [Header("Camera Movement Speed")]
@@ -35,6 +36,9 @@ public class CameraMovement : MonoBehaviour
 
         StartCoroutine(CheckAimPracticeCameraUp());
         StartCoroutine(CheckAimPracticeCameraDown());
+
+        StartCoroutine(CheckBossArenaCameraUp());
+        StartCoroutine(CheckBossArenaCameraDown());
 
         Vector3 desiredPosition = new Vector3(target.position.x + offset.x, target.position.y + offset.y, transform.position.z);
         transform.position = desiredPosition;
@@ -66,6 +70,32 @@ public class CameraMovement : MonoBehaviour
             if (offset.y < 0)
             {
                 offset.y += cameraSpeed * Time.deltaTime;
+            }
+        }
+
+        yield return new WaitForSeconds(timeToWait);
+    }
+
+    private IEnumerator CheckBossArenaCameraUp()
+    {
+        if (isOnBossArena)
+        {
+            if (offset.y <= maxOffsetOnBossArena)
+            {
+                offset.y += cameraSpeed * Time.deltaTime;
+            }
+        }
+
+        yield return new WaitForSeconds(timeToWait);
+    }
+
+    private IEnumerator CheckBossArenaCameraDown() 
+    {
+        if (!isOnBossArena)
+        {
+            if (offset.y > 0)
+            {
+                offset.y -= cameraSpeed * Time.deltaTime;
             }
         }
 
