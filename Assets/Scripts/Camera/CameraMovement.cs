@@ -7,6 +7,8 @@ public class CameraMovement : MonoBehaviour
     private bool isOnAimPractice = false;
     public bool isOnBossArena = false;
 
+    private int timeToWait = 1;
+
     public Transform target;
     public Transform boss;
 
@@ -31,13 +33,8 @@ public class CameraMovement : MonoBehaviour
             return;
         }
 
-        CheckCameraGoUp();
-        CheckCameraGoDown();
-
-        if (isOnBossArena) 
-        {   
-            target = boss;
-        }
+        StartCoroutine(CheckAimPracticeCameraUp());
+        StartCoroutine(CheckAimPracticeCameraDown());
 
         Vector3 desiredPosition = new Vector3(target.position.x + offset.x, target.position.y + offset.y, transform.position.z);
         transform.position = desiredPosition;
@@ -46,7 +43,7 @@ public class CameraMovement : MonoBehaviour
     /// <summary>
     /// Check if camera should move up.
     /// </summary>
-    private void CheckCameraGoUp() 
+    private IEnumerator CheckAimPracticeCameraUp() 
     {
         if (isOnAimPractice)
         {
@@ -55,12 +52,14 @@ public class CameraMovement : MonoBehaviour
                 offset.y -= cameraSpeed * Time.deltaTime;
             }
         }
+
+        yield return new WaitForSeconds(timeToWait);
     }
 
     /// <summary>
     /// Check if camera should move down.
     /// </summary>
-    private void CheckCameraGoDown() 
+    private IEnumerator CheckAimPracticeCameraDown() 
     {
         if (!isOnAimPractice)
         {
@@ -68,12 +67,9 @@ public class CameraMovement : MonoBehaviour
             {
                 offset.y += cameraSpeed * Time.deltaTime;
             }
-
-            if (offset.y >= 0)
-            {
-                offset.y = 0f;
-            }
         }
+
+        yield return new WaitForSeconds(timeToWait);
     }
 
     /// <summary>
