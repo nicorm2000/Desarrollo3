@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3851752617">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1890412560">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -26,6 +26,14 @@
 						<File Id="571832634" Language="SFX">
 							<ShortName>BaoMumbling.wav</ShortName>
 							<Path>SFX\BaoMumbling_ACB84370.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2129132928" Name="BossGrunt" ObjectPath="\Events\Default Work Unit\BossGrunt" DurationType="OneShot" DurationMin="0.407226" DurationMax="0.575904">
+					<IncludedMemoryFiles>
+						<File Id="934391759" Language="SFX">
+							<ShortName>FutomakiGrunt1.wav</ShortName>
+							<Path>SFX\FutomakiGrunt1_6A19D534.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

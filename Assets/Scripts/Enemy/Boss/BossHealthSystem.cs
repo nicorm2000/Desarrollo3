@@ -12,6 +12,10 @@ public class BossHealthSystem : MonoBehaviour
     [SerializeField] private BossHealthBar bossHealthBar;
     [SerializeField] private GameObject goHealthBar;
 
+    [Header("Audio Manager Dependencies")]
+    [SerializeField] AudioManager audioManager;
+    [SerializeField] string bossGrunt;
+
     private void Start()
     {
         bossData.ResetBossData();
@@ -28,6 +32,10 @@ public class BossHealthSystem : MonoBehaviour
     {
         if (!bossData.isDead) 
         {
+            if (!AudioManager.muteSFX)
+            {
+                audioManager.PlaySound(bossGrunt);
+            }
             bossData.currentHealth -= damage;
             hitMarker.HitEnemy();
         }

@@ -1107,6 +1107,27 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="BossGrunt" ID="{C9031131-BFBA-4FF0-A534-99A7563B9DF5}">
+					<ChildrenList>
+						<Action Name="" ID="{9AD31ACC-EE4B-462D-B55A-5B6D3AB7C688}" ShortID="928185159">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BossGrunt" ID="{090AFDD3-9E7C-406A-9A34-6E486C142C02}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B4352391-07A8-4AE0-A4B9-ACE5C0345190}" ShortID="444566544">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BossGrunt" ID="{090AFDD3-9E7C-406A-9A34-6E486C142C02}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

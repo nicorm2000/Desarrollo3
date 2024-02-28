@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 3af410611e2c92469af731b5137fe77a
     GuidInternal: 
-    m_lastTime: -8584928741314564326
+    m_lastTime: -8584925241277767357
     List:
     - name: BaoMumbling
       guid: 60681b47a562a94592542c31c0dcc178
@@ -113,6 +113,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.9
       minDuration: 2.9
+    - name: BossGrunt
+      guid: 311103c9babff04fa53499a7563b9df5
+      id: 2129132928
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: BossGrunt
+        ObjectType: 3
+        guid: 311103c9babff04fa53499a7563b9df5
+      Path: Events\Default Work Unit\BossGrunt
+      maxAttenuation: 0
+      maxDuration: 0.575904
+      minDuration: 0.407226
     - name: ChoppingTentacle
       guid: 239d9ae7bdf4cc4da5f4e8c128e8922c
       id: 1237719143
@@ -1170,7 +1187,7 @@ MonoBehaviour:
     m_lastTime: -8585034087828296152
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 050000000600000007000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
