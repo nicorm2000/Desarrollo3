@@ -1128,6 +1128,27 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="BossScream" ID="{F93795A2-1A29-4360-9A5B-34FA61BCE409}">
+					<ChildrenList>
+						<Action Name="" ID="{494593A2-08B6-463D-B309-D749AA9624B9}" ShortID="265472036">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BossScream" ID="{AADF0582-C904-4FDB-91C2-6E84635E99FC}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5BCE6AEE-DADB-4432-9259-CF4311486884}" ShortID="1044929430">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BossScream" ID="{AADF0582-C904-4FDB-91C2-6E84635E99FC}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

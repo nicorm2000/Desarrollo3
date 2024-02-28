@@ -2983,6 +2983,46 @@
 								<ActiveSource Name="FutomakiGrunt1" ID="{76DBA1A3-FB2B-4E0A-A19B-BD85A2EFBC2E}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="BossScream" ID="{AADF0582-C904-4FDB-91C2-6E84635E99FC}" ShortID="875074553">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-300</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BossScream" ID="{FABFED19-121F-4724-9048-6255B74FD6EF}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.477347200922758"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.966337016502163"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>BossScream.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="936623039"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="BossScream" ID="{FABFED19-121F-4724-9048-6255B74FD6EF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
