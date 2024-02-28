@@ -15,6 +15,7 @@ public class BossHealthSystem : MonoBehaviour
     [Header("Audio Manager Dependencies")]
     [SerializeField] AudioManager audioManager;
     [SerializeField] string bossGrunt;
+    [SerializeField] string bossScream;
 
     private void Start()
     {
@@ -32,7 +33,7 @@ public class BossHealthSystem : MonoBehaviour
     {
         if (!bossData.isDead) 
         {
-            if (!AudioManager.muteSFX)
+            if (!AudioManager.muteSFX && bossData.currentHealth <= 0)
             {
                 audioManager.PlaySound(bossGrunt);
             }
@@ -42,6 +43,10 @@ public class BossHealthSystem : MonoBehaviour
 
         if(bossData.currentHealth <= 0) 
         {
+            if (!AudioManager.muteSFX)
+            {
+                audioManager.PlaySound(bossScream);
+            }
             bossData.currentHealth = 0f;
             BossDies();
         }
