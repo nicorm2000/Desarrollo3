@@ -4418,6 +4418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  cameraMovement: {fileID: 1613688440}
   hitMarker: {fileID: 204904162}
   bossHealthBar: {fileID: 204904163}
   goHealthBar: {fileID: 542421057}
@@ -14781,7 +14782,7 @@ Transform:
   m_GameObject: {fileID: 731228044}
   serializedVersion: 2
   m_LocalRotation: {x: 0.21643952, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 97.8, y: -24.16, z: -6.24}
+  m_LocalPosition: {x: 97.8, y: -21.55, z: -5.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32909,7 +32910,7 @@ Transform:
   m_GameObject: {fileID: 1540155398}
   serializedVersion: 2
   m_LocalRotation: {x: 0.1530459, y: 0.1530459, z: -0.6903456, w: 0.6903456}
-  m_LocalPosition: {x: 98, y: -25.33, z: -10.15}
+  m_LocalPosition: {x: 98, y: -22.69, z: -8.92}
   m_LocalScale: {x: 1, y: 30, z: 40}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -35033,7 +35034,7 @@ MonoBehaviour:
   target: {fileID: 1941617696}
   boss: {fileID: 451851944}
   maxOffsetOnAimPractice: -3.5
-  maxOffsetOnBossArena: 3
+  maxOffsetOnBossArena: -3
   offset: {x: 0, y: 0, z: -10}
   cameraSpeed: 2.5
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}

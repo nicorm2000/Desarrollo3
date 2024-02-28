@@ -5,6 +5,9 @@ public class BossHealthSystem : MonoBehaviour
     [Header("Boss Data Dependencies")]
     [SerializeField] private BossData bossData;
 
+    [Header("Camera Movement")]
+    [SerializeField] private CameraMovement cameraMovement;
+
     [Header("Hit Marker")]
     [SerializeField] private HitMarker hitMarker;
 
@@ -56,5 +59,8 @@ public class BossHealthSystem : MonoBehaviour
     {
         bossData.isDead = true;
         goHealthBar.SetActive(false);
+
+        //Add the new camera target here.
+        //cameraMovement.target = newCameraTarget;
     }
 }

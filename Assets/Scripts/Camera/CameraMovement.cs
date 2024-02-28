@@ -34,11 +34,8 @@ public class CameraMovement : MonoBehaviour
             return;
         }
 
-        StartCoroutine(CheckAimPracticeCameraUp());
-        StartCoroutine(CheckAimPracticeCameraDown());
-
-        StartCoroutine(CheckBossArenaCameraUp());
-        StartCoroutine(CheckBossArenaCameraDown());
+        StartCoroutine(CheckCameraMovementUp());
+        StartCoroutine(CheckCameraMovementDown());
 
         Vector3 desiredPosition = new Vector3(target.position.x + offset.x, target.position.y + offset.y, transform.position.z);
         transform.position = desiredPosition;
@@ -47,8 +44,18 @@ public class CameraMovement : MonoBehaviour
     /// <summary>
     /// Check if camera should move up.
     /// </summary>
-    private IEnumerator CheckAimPracticeCameraUp() 
+    private IEnumerator CheckCameraMovementUp()
     {
+        if (isOnBossArena)
+        {
+            if (offset.y >= maxOffsetOnAimPractice)
+            {
+                offset.y -= cameraSpeed * Time.deltaTime;
+            }
+
+            target = boss;
+        }
+
         if (isOnAimPractice)
         {
             if (offset.y >= maxOffsetOnAimPractice)
@@ -63,39 +70,13 @@ public class CameraMovement : MonoBehaviour
     /// <summary>
     /// Check if camera should move down.
     /// </summary>
-    private IEnumerator CheckAimPracticeCameraDown() 
+    private IEnumerator CheckCameraMovementDown() 
     {
-        if (!isOnAimPractice)
+        if (!isOnAimPractice && !isOnBossArena)
         {
             if (offset.y < 0)
             {
                 offset.y += cameraSpeed * Time.deltaTime;
-            }
-        }
-
-        yield return new WaitForSeconds(timeToWait);
-    }
-
-    private IEnumerator CheckBossArenaCameraUp()
-    {
-        if (isOnBossArena)
-        {
-            if (offset.y <= maxOffsetOnBossArena)
-            {
-                offset.y += cameraSpeed * Time.deltaTime;
-            }
-        }
-
-        yield return new WaitForSeconds(timeToWait);
-    }
-
-    private IEnumerator CheckBossArenaCameraDown() 
-    {
-        if (!isOnBossArena)
-        {
-            if (offset.y > 0)
-            {
-                offset.y -= cameraSpeed * Time.deltaTime;
             }
         }
 
