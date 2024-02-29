@@ -9761,6 +9761,7 @@ GameObject:
   - component: {fileID: 281028019973430144}
   - component: {fileID: 2678454058040883649}
   - component: {fileID: 6844609257836818166}
+  - component: {fileID: 6469272711142020297}
   m_Layer: 7
   m_Name: RPGBullet
   m_TagString: Untagged
@@ -9903,6 +9904,36 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6469272711142020297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7942789937546522980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b446fc0bba2e9694199584e3e1cfb6ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxImage: {fileID: 0}
+  sfxSpriteDefault: {fileID: 0}
+  sfxSpriteSelected: {fileID: 0}
+  onSFXMute:
+    m_PersistentCalls:
+      m_Calls: []
+  onSFXUnmute:
+    m_PersistentCalls:
+      m_Calls: []
+  musicImage: {fileID: 0}
+  musicSpriteDefault: {fileID: 0}
+  musicSpriteSelected: {fileID: 0}
+  onMusicMute:
+    m_PersistentCalls:
+      m_Calls: []
+  onMusicUnmute:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8158030733090165653
 GameObject:
   m_ObjectHideFlags: 0

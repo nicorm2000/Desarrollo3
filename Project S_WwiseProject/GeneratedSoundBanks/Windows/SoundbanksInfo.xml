@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="13799525">
+		<SoundBank Id="3161908922" Language="SFX" Hash="4182898782">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -402,6 +402,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="4020555763" Name="RpgExplosion" ObjectPath="\Events\Default Work Unit\RpgExplosion" DurationType="OneShot" DurationMin="0.888" DurationMax="0.888">
+					<IncludedMemoryFiles>
+						<File Id="28444962" Language="SFX">
+							<ShortName>explosion-47163.wav</ShortName>
+							<Path>SFX\explosion-47163_C3F1F33E.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="737767022" Name="Scream" ObjectPath="\Events\Default Work Unit\Scream" DurationType="OneShot" DurationMin="3.501604" DurationMax="3.501604">
 					<IncludedMemoryFiles>
 						<File Id="78108305" Language="SFX">
@@ -440,6 +448,38 @@
 					<ActionSetSwitch>
 						<ActionSetSwitchEntry Id="2821460987" Name="Famas" ObjectPath="\Switches\Default Work Unit\Weapons\Famas"/>
 					</ActionSetSwitch>
+				</Event>
+				<Event Id="1959458075" Name="ShootPistol" ObjectPath="\Events\Default Work Unit\ShootPistol" DurationType="OneShot" DurationMin="0.4" DurationMax="0.4">
+					<IncludedMemoryFiles>
+						<File Id="44734596" Language="SFX">
+							<ShortName>9mm_gunshot-104571.wav</ShortName>
+							<Path>SFX\9mm_gunshot-104571_38044A92.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1343187212" Name="ShootRaygun" ObjectPath="\Events\Default Work Unit\ShootRaygun" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<IncludedMemoryFiles>
+						<File Id="601837460" Language="SFX">
+							<ShortName>laser-gun-shot-sound-future-sci-fi-lazer-wobble-chakongaudio-174883.wav</ShortName>
+							<Path>SFX\laser-gun-shot-sound-future-sci-fi-lazer-wobble-chakongaudio-174883_C28F0F0C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3108652399" Name="ShootRpg" ObjectPath="\Events\Default Work Unit\ShootRpg" DurationType="OneShot" DurationMin="1.25" DurationMax="1.25">
+					<IncludedMemoryFiles>
+						<File Id="161125620" Language="SFX">
+							<ShortName>missile-blast-2-95177.wav</ShortName>
+							<Path>SFX\missile-blast-2-95177_E60B39B6.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1800572192" Name="ShootShotgun" ObjectPath="\Events\Default Work Unit\ShootShotgun" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="1007127103" Language="SFX">
+							<ShortName>shotgun-firing-3-14483.wav</ShortName>
+							<Path>SFX\shotgun-firing-3-14483_A98AC5B3.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="3097990443" Name="ShootSniper" ObjectPath="\Events\Default Work Unit\ShootSniper" DurationType="OneShot" DurationMin="0.08" DurationMax="1.157292">
 					<IncludedMemoryFiles>
@@ -589,9 +629,17 @@
 					<ShortName>WeaponPickup.wav</ShortName>
 					<Path>SFX\WeaponPickup_20B84742.wem</Path>
 				</File>
+				<File Id="28444962" Language="SFX">
+					<ShortName>explosion-47163.wav</ShortName>
+					<Path>SFX\explosion-47163_C3F1F33E.wem</Path>
+				</File>
 				<File Id="40070512" Language="SFX">
 					<ShortName>CrackingFloor.wav</ShortName>
 					<Path>SFX\CrackingFloor_19F06622.wem</Path>
+				</File>
+				<File Id="44734596" Language="SFX">
+					<ShortName>9mm_gunshot-104571.wav</ShortName>
+					<Path>SFX\9mm_gunshot-104571_38044A92.wem</Path>
 				</File>
 				<File Id="45467557" Language="SFX">
 					<ShortName>RifleGunfire-004.wav</ShortName>
@@ -616,6 +664,10 @@
 				<File Id="152369639" Language="SFX">
 					<ShortName>Footsteps_Player_2.wav</ShortName>
 					<Path>SFX\Footsteps_Player_2_10C4C929.wem</Path>
+				</File>
+				<File Id="161125620" Language="SFX">
+					<ShortName>missile-blast-2-95177.wav</ShortName>
+					<Path>SFX\missile-blast-2-95177_E60B39B6.wem</Path>
 				</File>
 				<File Id="169562177" Language="SFX">
 					<ShortName>ConveyorBelt.wav</ShortName>
@@ -757,6 +809,10 @@
 					<ShortName>Med Kit.wav</ShortName>
 					<Path>SFX\Med Kit_38340ADB.wem</Path>
 				</File>
+				<File Id="601837460" Language="SFX">
+					<ShortName>laser-gun-shot-sound-future-sci-fi-lazer-wobble-chakongaudio-174883.wav</ShortName>
+					<Path>SFX\laser-gun-shot-sound-future-sci-fi-lazer-wobble-chakongaudio-174883_C28F0F0C.wem</Path>
+				</File>
 				<File Id="639313971" Language="SFX">
 					<ShortName>Footsteps_Enemies_A_1.wav</ShortName>
 					<Path>SFX\Footsteps_Enemies_A_1_10C4C929.wem</Path>
@@ -832,6 +888,10 @@
 				<File Id="1003545355" Language="SFX">
 					<ShortName>ShopFallDown.wav</ShortName>
 					<Path>SFX\ShopFallDown_95335FD3.wem</Path>
+				</File>
+				<File Id="1007127103" Language="SFX">
+					<ShortName>shotgun-firing-3-14483.wav</ShortName>
+					<Path>SFX\shotgun-firing-3-14483_A98AC5B3.wem</Path>
 				</File>
 				<File Id="1009135126" Language="SFX">
 					<ShortName>SniperEmptyMag-002.wav</ShortName>

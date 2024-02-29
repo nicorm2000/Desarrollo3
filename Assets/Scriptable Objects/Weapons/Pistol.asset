@@ -72,5 +72,5 @@ MonoBehaviour:
   chargeSize: {x: 0, y: 0, z: 0}
   shotSize: {x: 0, y: 0, z: 0}
   empty: EmptyFamas
-  loaded: ShootFamas
+  loaded: ShootPistol
   cooldown: CooldownFamas

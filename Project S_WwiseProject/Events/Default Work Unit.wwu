@@ -1149,6 +1149,111 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="ShootShotgun" ID="{74B503D3-DADD-4FF4-A26A-1CD2D593CAF6}">
+					<ChildrenList>
+						<Action Name="" ID="{DE561210-0374-405F-8D55-0A1A31DCC49B}" ShortID="172036464">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ShotugnGunfire" ID="{01758948-2466-403D-BDA0-C245B79FC3D4}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{57A939AC-6E38-4ED3-8446-5A2605C145EE}" ShortID="933522446">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ShotugnGunfire" ID="{01758948-2466-403D-BDA0-C245B79FC3D4}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ShootRaygun" ID="{901DC3A8-5E02-4B56-B08F-B9D2B8FC8F38}">
+					<ChildrenList>
+						<Action Name="" ID="{1C88CED4-58A5-42A5-99BB-E535CE5B1865}" ShortID="85195851">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RaygunGunfire" ID="{B6AFA138-AAC9-463E-93C8-C1AC9CD6F093}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AC33AB94-4241-471F-A8E4-472AF9ECE956}" ShortID="91266205">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RaygunGunfire" ID="{B6AFA138-AAC9-463E-93C8-C1AC9CD6F093}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ShootPistol" ID="{B4FF956A-AFBA-4D6A-9EA0-D77FF38991C9}">
+					<ChildrenList>
+						<Action Name="" ID="{FF630D08-0E96-423E-8843-18D95AACD07F}" ShortID="926521149">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PistolGunfire" ID="{2C28A304-5B85-46E3-A55B-9CD81A989AFB}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{44738672-8F45-4DAC-9967-E6105C6D9326}" ShortID="449923929">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PistolGunfire" ID="{2C28A304-5B85-46E3-A55B-9CD81A989AFB}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ShootRpg" ID="{80B3A25B-29CE-4962-9805-09378C98786D}">
+					<ChildrenList>
+						<Action Name="" ID="{58FDDB3F-DC29-48F6-9A2C-EEA6158868A7}" ShortID="135360345">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RpgGunfire" ID="{228C3825-9899-49B5-B2E7-331E39A88151}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9FFCA5ED-7FBC-4AB6-9212-A24A7583A209}" ShortID="285634346">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RpgGunfire" ID="{228C3825-9899-49B5-B2E7-331E39A88151}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="RpgExplosion" ID="{98732EEC-6091-46F8-BC5A-05A6F229A8A1}">
+					<ChildrenList>
+						<Action Name="" ID="{9260B8EE-B01F-489E-8676-5F961858DE61}" ShortID="1012466497">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RpgExplosion" ID="{292F0CFB-EFCB-4710-BD78-071B137FFA65}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5F737CD6-D09A-48AA-9E9D-D8295A8DBA23}" ShortID="563665415">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RpgExplosion" ID="{292F0CFB-EFCB-4710-BD78-071B137FFA65}" WorkUnitID="{D924F30E-A8AA-41AB-92C8-E3A3A43F65BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

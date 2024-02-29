@@ -51,4 +51,5 @@ public class WeaponData : ScriptableObject
     public string empty;
     public string loaded;
     public string cooldown;
+    public string explosion;
 }

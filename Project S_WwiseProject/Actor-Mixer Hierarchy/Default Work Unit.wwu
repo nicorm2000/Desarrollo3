@@ -1564,6 +1564,180 @@
 								<ActiveSource Name="WeaponPickup" ID="{D2FEBFB5-E5B5-48B0-AD75-B81AE9BF16F5}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="RpgGunfire" ID="{228C3825-9899-49B5-B2E7-331E39A88151}" ShortID="35996831">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="missile-blast-2-95177" ID="{5DFBEC6C-F54B-4738-B7C0-6FAD826CFAB7}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.70685549132948"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.25"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>missile-blast-2-95177.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="161125620"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="missile-blast-2-95177" ID="{5DFBEC6C-F54B-4738-B7C0-6FAD826CFAB7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="PistolGunfire" ID="{2C28A304-5B85-46E3-A55B-9CD81A989AFB}" ShortID="307965498">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="9mm_gunshot-104571" ID="{543E4CA5-E379-4581-9185-453C9BB496B4}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.2"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.6"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>9mm_gunshot-104571.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="44734596"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="9mm_gunshot-104571" ID="{543E4CA5-E379-4581-9185-453C9BB496B4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="RaygunGunfire" ID="{B6AFA138-AAC9-463E-93C8-C1AC9CD6F093}" ShortID="513841090">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="laser-gun-shot-sound-future-sci-fi-lazer-wobble-chakongaudio-174883" ID="{DC232FEF-8474-4F05-A6B9-2DD89D74112F}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>laser-gun-shot-sound-future-sci-fi-lazer-wobble-chakongaudio-174883.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="601837460"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="laser-gun-shot-sound-future-sci-fi-lazer-wobble-chakongaudio-174883" ID="{DC232FEF-8474-4F05-A6B9-2DD89D74112F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ShotugnGunfire" ID="{01758948-2466-403D-BDA0-C245B79FC3D4}" ShortID="586526798">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="shotgun-firing-3-14483" ID="{7B68F4B4-7995-43A0-8BC9-5AE8E14EA94C}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>shotgun-firing-3-14483.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1007127103"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="shotgun-firing-3-14483" ID="{7B68F4B4-7995-43A0-8BC9-5AE8E14EA94C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="RpgExplosion" ID="{292F0CFB-EFCB-4710-BD78-071B137FFA65}" ShortID="175719200">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="explosion-47163" ID="{BA5C7EB1-6421-4D7A-A72E-B533ED24B109}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.574890173410405"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>explosion-47163.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="28444962"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="explosion-47163" ID="{BA5C7EB1-6421-4D7A-A72E-B533ED24B109}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{5337D090-A0A7-41CD-829A-04A6A495B03D}" ShortID="157516378">

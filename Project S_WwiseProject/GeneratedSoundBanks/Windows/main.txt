@@ -13,6 +13,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1237719143	ChoppingTentacle			\Default Work Unit\ChoppingTentacle	
 	1242093309	RomanticConversation			\Default Work Unit\RomanticConversation	
 	1307358801	IkuraAttack			\Default Work Unit\IkuraAttack	
+	1343187212	ShootRaygun			\Default Work Unit\ShootRaygun	
 	1348410100	TentacleSlam			\Default Work Unit\TentacleSlam	
 	1392147812	TeleportButton			\Default Work Unit\TeleportButton	
 	1584507803	Click			\Default Work Unit\Click	
@@ -21,6 +22,8 @@ Event	ID	Name			Wwise Object Path	Notes
 	1702629134	OnigiriDeath			\Default Work Unit\OnigiriDeath	
 	1772555380	DummyCountdown			\Default Work Unit\DummyCountdown	
 	1792029697	BossScream			\Default Work Unit\BossScream	
+	1800572192	ShootShotgun			\Default Work Unit\ShootShotgun	
+	1959458075	ShootPistol			\Default Work Unit\ShootPistol	
 	1970138382	TakoBackground			\Default Work Unit\TakoBackground	
 	2026920480	Roll			\Default Work Unit\Roll	
 	2032173003	FutomakiDeath			\Default Work Unit\FutomakiDeath	
@@ -40,6 +43,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2983074611	MedKit			\Default Work Unit\MedKit	
 	3076352219	FutomakiAttack			\Default Work Unit\FutomakiAttack	
 	3097990443	ShootSniper			\Default Work Unit\ShootSniper	
+	3108652399	ShootRpg			\Default Work Unit\ShootRpg	
 	3176895516	ShootUzi			\Default Work Unit\ShootUzi	
 	3355135784	IkuraProjectile			\Default Work Unit\IkuraProjectile	
 	3392074037	IkuraDeath			\Default Work Unit\IkuraDeath	
@@ -53,6 +57,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3982605422	Laser			\Default Work Unit\Laser	
 	3991942870	Music			\Default Work Unit\Music	
 	4016454680	Laugh			\Default Work Unit\Laugh	
+	4020555763	RpgExplosion			\Default Work Unit\RpgExplosion	
 	4259908363	CooldownSniper			\Default Work Unit\CooldownSniper	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
@@ -65,7 +70,9 @@ Switch	ID	Name	Switch Group			Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	11758809	Laser	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\PlayerSkillBeam_EA14B6FC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilities\Laser		438416
 	13970989	WeaponPickup	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\WeaponPickup_20B84742.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\WeaponPickup		157888
+	28444962	RpgExplosion	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\explosion-47163_C3F1F33E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\RpgExplosion		85312
 	40070512	CrackingFloor	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\CrackingFloor_19F06622.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boss\CrackingFloor		124864
+	44734596	PistolGunfire	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\9mm_gunshot-104571_38044A92.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\PistolGunfire		38464
 	45467557	RifleGunfire-004	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\RifleGunfire-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Loaded\RifleGunfire-004		8284
 	45999561	OnigiriDeath	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\OnigiriDeath_1A904FC9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\OnigiriDeath		98586
 	51529185	Cooldown	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\UziCooldown_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Cooldown		993548
@@ -73,6 +80,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	80193230	RifleEmptyMag-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\RifleEmptyMag-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Empty\RifleEmptyMag-002		13552
 	98181527	RifleGunfire-003	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\RifleGunfire-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Loaded\RifleGunfire-003		7436
 	152369639	Footsteps_Player_2	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Footsteps_Player_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Player\Footsteps_Player_2		124216
+	161125620	RpgGunfire	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\missile-blast-2-95177_E60B39B6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\RpgGunfire		120064
 	169562177	ConveyorBelt	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\ConveyorBelt_57BE3351.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\ConveyorBelt		3235264
 	169643596	UI_TurningPage	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\UI_TurningPage_74B490CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_TurningPage		305432
 	193436424	TeleportButton	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Button_B5B34C90.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\TeleportButton		70808
@@ -110,6 +118,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	571832634	BaoMumbling	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\BaoMumbling_ACB84370.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\BaoMumbling		556864
 	575349978	Red Button	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Red Button_A92D62C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Red Button		786944
 	593905732	Med Kit	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Med Kit_38340ADB.wem		\Actor-Mixer Hierarchy\Default Work Unit\PickUps\Med Kit		119008
+	601837460	RaygunGunfire	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\laser-gun-shot-sound-future-sci-fi-lazer-wobble-chakongaudio-174883_C28F0F0C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\RaygunGunfire		96064
 	639313971	Footsteps_Enemies_A_1	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Footsteps_Enemies_A_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Enemy\Footsteps_Enemies_A_1		116376
 	657552065	OnigiriGrunt1	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\OnigiriGrunt1_5578D1DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\OnigiriGrunt1		50218
 	706791338	IkuraGrunt1	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\IkuraGrunt1_28D3DC81.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\IkuraGrunt1		50218
@@ -129,6 +138,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	979923448	UziGunfire-003	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\UziGunfire-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Loaded\UziGunfire-003		5166
 	991654610	InkShoot	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\ShootInk_BB95E35A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boss\InkShoot		67264
 	1003545355	ShopFallDown	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\ShopFallDown_95335FD3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\ShopFallDown		60996
+	1007127103	ShotugnGunfire	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\shotgun-firing-3-14483_A98AC5B3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\ShotugnGunfire		96064
 	1009135126	SniperEmptyMag-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\SniperEmptyMag-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Sniper\Empty\SniperEmptyMag-002		16708
 	1020595081	Laugh	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Voice_Laugh_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Laugh		419316
 	1042105654	Footsteps_Player_5	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Windows\SFX\Footsteps_Player_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Player\Footsteps_Player_5		125284

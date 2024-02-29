@@ -3,23 +3,24 @@ using UnityEngine;
 
 public class ExplosiveBullet : MonoBehaviour
 {
-    public WeaponData weaponData;
+    [Header("Weapon Data Dependencies")]
+    [SerializeField] private WeaponData weaponData;
     
     private float bulletSpeed;
     private float timer;
     private float currentDamage;
 
     [Header("Explosive Bullet")]
-    [SerializeField] SphereCollider sphereCollider;
-    [SerializeField] GameObject explosionEffect;
-    [SerializeField] GameObject trailEffect;
-    [SerializeField] SpriteRenderer bulletSprite;
-    
-    public float maxTimeToDestroy = 1f;
+    [SerializeField] private SphereCollider sphereCollider;
+    [SerializeField] private GameObject explosionEffect;
+    [SerializeField] private GameObject trailEffect;
+    [SerializeField] private SpriteRenderer bulletSprite;
+    [SerializeField] private float maxTimeToDestroy = 1f;
 
+    private readonly float _minExplosiveArea = 0.15f;
+    private readonly float _maxExplosiveArea = 1f;
 
-    private float minExplosiveArea = 0.15f;
-    private float maxExplosiveArea = 1f;
+    private AudioManager _audioManager;
 
     private void Start()
     {
@@ -27,7 +28,9 @@ public class ExplosiveBullet : MonoBehaviour
         currentDamage = weaponData.damage;
         bulletSpeed = weaponData.bulletSpeed;
 
-        sphereCollider.radius = minExplosiveArea;
+        _audioManager = GetComponent<AudioManager>();
+
+        sphereCollider.radius = _minExplosiveArea;
         trailEffect.SetActive(true);
         StartCoroutine(TranslateBullet());
     }
@@ -49,7 +52,7 @@ public class ExplosiveBullet : MonoBehaviour
     {
         trailEffect.SetActive(false);
         bulletSpeed = 0f;
-        sphereCollider.radius = maxExplosiveArea;
+        sphereCollider.radius = _maxExplosiveArea;
         explosionEffect.SetActive(true);
         bulletSprite.sprite = null;
 
@@ -62,11 +65,19 @@ public class ExplosiveBullet : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             StartCoroutine(StopBullet());
+            if (!AudioManager.muteSFX)
+            {
+                _audioManager.PlaySound(weaponData.explosion);
+            }
             collision.GetComponent<HealthSystem>().TakeDamage(currentDamage);
         }
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
         {
+            if (!AudioManager.muteSFX)
+            {
+                _audioManager.PlaySound(weaponData.explosion);
+            }
             StartCoroutine(StopBullet());
         }
     }

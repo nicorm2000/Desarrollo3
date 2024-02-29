@@ -54,8 +54,13 @@ namespace AK
         static const AkUniqueID PLAYERDEATH = 1656947812U;
         static const AkUniqueID ROLL = 2026920480U;
         static const AkUniqueID ROMANTICCONVERSATION = 1242093309U;
+        static const AkUniqueID RPGEXPLOSION = 4020555763U;
         static const AkUniqueID SCREAM = 737767022U;
         static const AkUniqueID SHOOTFAMAS = 643270054U;
+        static const AkUniqueID SHOOTPISTOL = 1959458075U;
+        static const AkUniqueID SHOOTRAYGUN = 1343187212U;
+        static const AkUniqueID SHOOTRPG = 3108652399U;
+        static const AkUniqueID SHOOTSHOTGUN = 1800572192U;
         static const AkUniqueID SHOOTSNIPER = 3097990443U;
         static const AkUniqueID SHOOTUZI = 3176895516U;
         static const AkUniqueID SHOPFALLDOWN = 3877889958U;
