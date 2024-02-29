@@ -5,20 +5,28 @@ public class CameraMovement : MonoBehaviour
 {
     [Header("Target to Follow")]
     private bool isOnAimPractice = false;
-    public bool isOnBossArena = false;
+    private bool isOnBossArena = false;
 
     private int timeToWait = 1;
 
     public Transform target;
     public Transform boss;
 
-    [Header("Camera Offset")]
-    [SerializeField] public float maxOffsetOnAimPractice;
-    [SerializeField] public float maxOffsetOnBossArena;
+    [Header("Camera Offset: Aim Practice")]
+    [SerializeField] public float maxOffsetYOnAimPractice;
+    
+    [Header("Camera Offset: Boss Arena")]
+    [SerializeField] public float maxOffsetYOnBossArena;
+    [SerializeField] public float maxOffsetZOnBossArena;
+
+    [Header("Current Camera Offset:")]
     [SerializeField] public Vector3 offset;
 
-    [Header("Camera Movement Speed")]
-    [SerializeField] private float cameraSpeed;
+    [Header("Camera Movement Speed: Aim Practice")]
+    [SerializeField] private float cameraSpeedAP;
+
+    [Header("Camera Movement Speed: Boss Arena")]
+    [SerializeField] private float cameraSpeedBA;
 
     [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
@@ -37,7 +45,7 @@ public class CameraMovement : MonoBehaviour
         StartCoroutine(CheckCameraMovementUp());
         StartCoroutine(CheckCameraMovementDown());
 
-        Vector3 desiredPosition = new Vector3(target.position.x + offset.x, target.position.y + offset.y, transform.position.z);
+        Vector3 desiredPosition = new Vector3(target.position.x + offset.x, target.position.y + offset.y, offset.z);
         transform.position = desiredPosition;
     }
 
@@ -48,9 +56,14 @@ public class CameraMovement : MonoBehaviour
     {
         if (isOnBossArena)
         {
-            if (offset.y >= maxOffsetOnAimPractice)
+            if (offset.y >= maxOffsetYOnBossArena)
             {
-                offset.y -= cameraSpeed * Time.deltaTime;
+                offset.y -= cameraSpeedBA * Time.deltaTime;
+            }
+
+            if (offset.z >= maxOffsetZOnBossArena) 
+            {
+                offset.z -= cameraSpeedBA * Time.deltaTime;
             }
 
             target = boss;
@@ -58,9 +71,9 @@ public class CameraMovement : MonoBehaviour
 
         if (isOnAimPractice)
         {
-            if (offset.y >= maxOffsetOnAimPractice)
+            if (offset.y >= maxOffsetYOnAimPractice)
             {
-                offset.y -= cameraSpeed * Time.deltaTime;
+                offset.y -= cameraSpeedAP * Time.deltaTime;
             }
         }
 
@@ -76,7 +89,7 @@ public class CameraMovement : MonoBehaviour
         {
             if (offset.y < 0)
             {
-                offset.y += cameraSpeed * Time.deltaTime;
+                offset.y += cameraSpeedAP * Time.deltaTime;
             }
         }
 
