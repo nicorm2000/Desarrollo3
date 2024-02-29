@@ -125,7 +125,7 @@ public class WaveManager : MonoBehaviour
             _nextWave = false;
         }
 
-        if (HealthSystem.enemyCount == Constants.ZERO)
+        if (HealthSystem.enemyCount == Constants.ZERO && !playerData._isDead)
         {
             _nextWave = true;
         }
