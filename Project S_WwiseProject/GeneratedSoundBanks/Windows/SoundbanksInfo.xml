@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1890412560">
+		<SoundBank Id="3161908922" Language="SFX" Hash="13799525">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -34,6 +34,14 @@
 						<File Id="934391759" Language="SFX">
 							<ShortName>FutomakiGrunt1.wav</ShortName>
 							<Path>SFX\FutomakiGrunt1_6A19D534.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1792029697" Name="BossScream" ObjectPath="\Events\Default Work Unit\BossScream" DurationType="OneShot" DurationMin="2.395268" DurationMax="2.395268">
+					<IncludedMemoryFiles>
+						<File Id="936623039" Language="SFX">
+							<ShortName>BossScream.wav</ShortName>
+							<Path>SFX\BossScream_FD382447.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -800,6 +808,10 @@
 				<File Id="935939003" Language="SFX">
 					<ShortName>Explosion.wav</ShortName>
 					<Path>SFX\Explosion_10C4C929.wem</Path>
+				</File>
+				<File Id="936623039" Language="SFX">
+					<ShortName>BossScream.wav</ShortName>
+					<Path>SFX\BossScream_FD382447.wem</Path>
 				</File>
 				<File Id="937201692" Language="SFX">
 					<ShortName>PlayerSkillSplat.wav</ShortName>

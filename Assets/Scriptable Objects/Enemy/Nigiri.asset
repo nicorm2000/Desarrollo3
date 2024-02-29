@@ -20,7 +20,7 @@ MonoBehaviour:
   dropData: {fileID: 11400000, guid: 66a444bfdb8c109488e350b7074f8776, type: 2}
   sushiName: 
   damage: 20
-  movementSpeed: 1
+  movementSpeed: 1.25
   avoidanceDistance: 1
   ifFollowingPlayer: 1
   isMelee: 1

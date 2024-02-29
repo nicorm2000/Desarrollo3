@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cf5c79c482a364289b65bc639aa2a1, type: 3}
   m_Name: Ikura
   m_EditorClassIdentifier: 
-  lastHorizontalVector: -0.41314343
-  lastVerticalVector: -0.910666
-  movementDirection: {x: -0.41314343, y: -0.910666}
+  lastHorizontalVector: 0.9995433
+  lastVerticalVector: -0.030219974
+  movementDirection: {x: 0.9995433, y: -0.030219974}
   model: {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
   animator: {fileID: 0}
   dropData: {fileID: 11400000, guid: 1ecd47809c2064c4399f205203da9d0c, type: 2}
   sushiName: 
   damage: 30
-  movementSpeed: 1
+  movementSpeed: 1.25
   avoidanceDistance: 1
   ifFollowingPlayer: 1
   isMelee: 0
@@ -32,7 +32,7 @@ MonoBehaviour:
   fireRate: 1.5
   lifeSpan: 20
   bulletSpeed: 3
-  bullet: {fileID: 0}
+  bullet: {fileID: 6243113850147215193, guid: d7618c043af461a48970a8746eeecb95, type: 3}
   health: 80
   isDead: 0
   _triggerEffect: {fileID: 0}

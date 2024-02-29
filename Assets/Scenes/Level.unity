@@ -588,6 +588,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5790305519619994793, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: trailSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790305519619994793, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: damagePerSecond
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790305519619994793, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: gasCloudLifespan
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790305519619994793, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: timeBetweenDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790305519619994793, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
+      propertyPath: timeBetweenGasSpawns
+      value: 0.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4418,7 +4438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
-  cameraMovement: {fileID: 1613688440}
+  cameraMovement: {fileID: 0}
   hitMarker: {fileID: 204904162}
   bossHealthBar: {fileID: 204904163}
   goHealthBar: {fileID: 542421057}
@@ -10233,6 +10253,10 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 1309145269}
+    - target: {fileID: 2443186196316251944, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: overheatDecreaseRate
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 2791571064387588381, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: screenShake
       value: 
@@ -10281,6 +10305,14 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 1017782199}
+    - target: {fileID: 3823591937530358882, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: overheatDecreaseRate
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3823591937530358882, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: overheatIncreaseAmount
+      value: 12.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3970204813613353202, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: screenShake
       value: 
@@ -25225,7 +25257,7 @@ MonoBehaviour:
   m_text: ~Delicious with Soy Sauce~
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1431d80935cee34b9fd4113e7d94866, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: df1f7dc6ec86afa42806254cb7cca6a2, type: 2}
+  m_sharedMaterial: {fileID: 8233435915380040242, guid: c1431d80935cee34b9fd4113e7d94866, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -35034,7 +35066,7 @@ MonoBehaviour:
   target: {fileID: 1941617696}
   boss: {fileID: 451851944}
   maxOffsetOnAimPractice: -3.5
-  maxOffsetOnBossArena: -3
+  maxOffsetOnBossArena: 0
   offset: {x: 0, y: 0, z: -10}
   cameraSpeed: 2.5
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
@@ -35995,7 +36027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossHealthBar: {fileID: 542421057}
-  cameraMovement: {fileID: 1613688440}
+  cameraMovement: {fileID: 0}
 --- !u!1 &1674702628
 GameObject:
   m_ObjectHideFlags: 0
@@ -41471,7 +41503,7 @@ MonoBehaviour:
   m_text: TAKO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1431d80935cee34b9fd4113e7d94866, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: df1f7dc6ec86afa42806254cb7cca6a2, type: 2}
+  m_sharedMaterial: {fileID: 8233435915380040242, guid: c1431d80935cee34b9fd4113e7d94866, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -46259,6 +46291,10 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 204904164}
+    - target: {fileID: 3386810092469362221, guid: 43d46852a505e394d990a0c1d5dc2fc8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6342365921240023053, guid: 43d46852a505e394d990a0c1d5dc2fc8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9

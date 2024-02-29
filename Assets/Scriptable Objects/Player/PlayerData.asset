@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1b04ce56bbade4a9d3bf07e7c6ea26, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  currentHealth: 100
+  currentHealth: 90
   maxHealth: 100
   speed: 5
   _isDead: 0
   weaponData:
   - {fileID: 11400000, guid: 7949a75c82f2de84fb005776d57d86ba, type: 2}
-  - {fileID: 11400000, guid: 07aa8a2279e9b2d4ab4941cfb619acbc, type: 2}
+  - {fileID: 11400000, guid: c6ae86df7e63a0140b6a976b49dcabee, type: 2}
   - {fileID: 11400000, guid: 946b40ff31be0a54bb49d30eb8869ef7, type: 2}
   - {fileID: 11400000, guid: 732e0b8dfa1b2b24fbc04ee53d0a6d73, type: 2}
   - {fileID: 11400000, guid: 07cc2ca5b70974c4d872ab08b9ee83b9, type: 2}
@@ -36,17 +36,16 @@ MonoBehaviour:
   playerCollider: {fileID: 0}
   playerDashMaterial: {fileID: 0}
   dashColor: {r: 1, g: 1, b: 1, a: 1}
-  shieldCooldown: 10
-  shieldDuration: 3
+  slowerCooldown: 10
   shieldColor: {r: 0, g: 0.0963881, b: 1, a: 0}
   laserCooldown: 30
-  laserDamage: 1000
+  laserDamage: 400
   laserRange: 100
   laserWidth: 20
   laserDuration: 1
   laserColor: {r: 1, g: 0, b: 0, a: 0}
   lastHorizontalVector: -1
-  lastVerticalVector: -0.70710677
+  lastVerticalVector: 1
   movementDirection: {x: 0, y: 0}
   maxLevelStack: 5
   healthStackID: 0
@@ -54,7 +53,7 @@ MonoBehaviour:
   damageStackID: 0
   enterPlayer: 0
   transform: {fileID: 0}
-  haveAGun: 0
+  haveAGun: 1
   isButtonPress: 0
   death: PlayerDeath
   damageHit: PlayerDamageHit

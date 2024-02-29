@@ -21,7 +21,7 @@ MonoBehaviour:
   isShootWeapon: 1
   weaponID: 2
   bulletSpeed: 25
-  lifespan: 10
+  lifespan: 5
   damage: 250
   bulletPrefab: {fileID: 7942789937546522980, guid: 34085ce4b870d574895de834a02807ac, type: 3}
   attackSpeed: 1

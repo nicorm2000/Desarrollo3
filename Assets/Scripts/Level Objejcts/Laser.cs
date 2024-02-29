@@ -7,7 +7,9 @@ public class Laser : MonoBehaviour
 
     [Header("Health System Dependencies")]
     [SerializeField] private HealthSystem enemyHealth;
-    [SerializeField] private float enemyDamage;
+    
+    [Header("Player Data Dependencies")]
+    [SerializeField] private PlayerData playerData;
 
     /// <summary>
     /// Handles the event when a collider enters the trigger, causing damage to the collider's health system if its layer is included.
@@ -17,7 +19,7 @@ public class Laser : MonoBehaviour
     {
         if (((Constants.ONE << other.gameObject.layer) & includeLayer) != Constants.ZERO)
         {
-            other.GetComponent<HealthSystem>().TakeDamage(enemyDamage);
+            other.GetComponent<HealthSystem>().TakeDamage(playerData.laserDamage);
         }
     }
 }

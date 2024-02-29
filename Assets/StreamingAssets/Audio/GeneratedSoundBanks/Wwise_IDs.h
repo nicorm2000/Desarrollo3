@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID BAOMUMBLING = 2162906834U;
         static const AkUniqueID BOSSGRUNT = 2129132928U;
+        static const AkUniqueID BOSSSCREAM = 1792029697U;
         static const AkUniqueID CHOPPINGTENTACLE = 1237719143U;
         static const AkUniqueID CLICK = 1584507803U;
         static const AkUniqueID CONVEYORBELT = 1687970961U;

@@ -95,10 +95,12 @@ public class EnemyExploder : MonoBehaviour
 
             if (timer <= explosionBuildUp * 0.66f)
             {
+                smallRadius.SetActive(false);
                 mediumRadius.SetActive(true);
             }
             if (timer <= explosionBuildUp * 0.33f)
             {
+                mediumRadius.SetActive(false);
                 bigRadius.SetActive(true);
             }
 
@@ -106,8 +108,6 @@ public class EnemyExploder : MonoBehaviour
         }
 
         bigRadius.SetActive(false);
-        mediumRadius.SetActive(false);
-        smallRadius.SetActive(false);
 
         if (!_hasExploded)
         {

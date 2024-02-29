@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cf5c79c482a364289b65bc639aa2a1, type: 3}
   m_Name: Tekkamaki
   m_EditorClassIdentifier: 
-  lastHorizontalVector: -0.7539222
-  lastVerticalVector: 0.6569637
-  movementDirection: {x: -0.7539222, y: 0.6569637}
+  lastHorizontalVector: -0.97976136
+  lastVerticalVector: -0.20016919
+  movementDirection: {x: -0.97976136, y: -0.20016919}
   model: {fileID: 8794192663361722567, guid: 533244e993e72a342abf16de948666f6, type: 3}
   animator: {fileID: 0}
   dropData: {fileID: 11400000, guid: 79449a2c2dee238438fb7dd78d2037c8, type: 2}
   sushiName: Tekkamaki
-  damage: 20
+  damage: 40
   movementSpeed: 1
   avoidanceDistance: 1
   ifFollowingPlayer: 1
@@ -33,7 +33,7 @@ MonoBehaviour:
   lifeSpan: 0
   bulletSpeed: 0
   bullet: {fileID: 0}
-  health: 400
+  health: 300
   isDead: 0
   _triggerEffect: {fileID: 0}
   _spriteRenderer: {fileID: 0}

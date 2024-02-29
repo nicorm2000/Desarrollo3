@@ -25,16 +25,16 @@ MonoBehaviour:
   attack1SpawnDelayMultiplier: 0.8
   attack1SpawnMinimumDelay: 0.25
   attack2Name: Ink Hell
-  attack2BulletDamage: 1
+  attack2BulletDamage: 10
   attack2BulletSpeed: 5
   attack2BulletLifespan: 3
   attack2BulletSpawnDelay: 0.25
   attack2BulletSpawnPointRotation: -0.5
-  attack2MaxAmountOfRounds: 10
+  attack2MaxAmountOfRounds: 35
   attack2Object: {fileID: 1922237827204055625, guid: 77ab439aa6adef74a920f10be60595a6, type: 3}
   attack3Name: Blind Octopus
-  attack3Damage: 10
-  attack3AmountOfIterations: 5
+  attack3Damage: 30
+  attack3AmountOfIterations: 10
   attack3AmountOfFloorTentacles: 7
   attack3ActivationInterval: 2
   attack3ActivationDuration: 3
@@ -42,8 +42,8 @@ MonoBehaviour:
   attack1AnimationDuration: 1
   attack2AnimationDuration: 1
   attack3AnimationDuration: 1
-  currentHealth: 800
-  maxHealth: 800
+  currentHealth: 2000
+  maxHealth: 2000
   isDead: 0
   _triggerEffect: {fileID: 0}
   _spriteRenderer: {fileID: 0}

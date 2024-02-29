@@ -20,6 +20,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1687970961	ConveyorBelt			\Default Work Unit\ConveyorBelt	
 	1702629134	OnigiriDeath			\Default Work Unit\OnigiriDeath	
 	1772555380	DummyCountdown			\Default Work Unit\DummyCountdown	
+	1792029697	BossScream			\Default Work Unit\BossScream	
 	1970138382	TakoBackground			\Default Work Unit\TakoBackground	
 	2026920480	Roll			\Default Work Unit\Roll	
 	2032173003	FutomakiDeath			\Default Work Unit\FutomakiDeath	
@@ -122,6 +123,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	932633481	RifleGunfire-002	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\RifleGunfire-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\Famas\Loaded\RifleGunfire-002		7874
 	934391759	FutomakiGrunt1	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\FutomakiGrunt1_6A19D534.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\FutomakiGrunt1		47916
 	935939003	Explosion	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\Explosion_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\Explosion		350036
+	936623039	BossScream	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\BossScream_FD382447.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boss\BossScream		355364
 	937201692	Splat	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\PlayerSkillSplat_C5503650.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilities\Splat		105044
 	973734017	UziGunfire-004	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\UziGunfire-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Loaded\UziGunfire-004		8224
 	979923448	UziGunfire-003	C:\Users\Nico\Desktop\Project S\Project S_WwiseProject\.cache\Mac\SFX\UziGunfire-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\UZI\Loaded\UziGunfire-003		5166

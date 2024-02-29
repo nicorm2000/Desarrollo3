@@ -31,9 +31,8 @@ public class PlayerData : ScriptableObject
     public Material playerDashMaterial;
     public Color dashColor;
 
-    [Header("Player Shield")]
-    public float shieldCooldown;
-    public float shieldDuration;
+    [Header("Player Slower")]
+    public float slowerCooldown;
     public Color shieldColor;
 
     [Header("Player Laser")]
@@ -88,9 +87,9 @@ public class PlayerData : ScriptableObject
         weaponData[1].damage = 250;
         weaponData[2].damage = 15;
         weaponData[3].damage = 15;
-        weaponData[4].damage = 100;
+        weaponData[4].damage = 50;
         weaponData[5].damage = 100;
-        weaponData[6].damage = 35;
+        weaponData[6].damage = 50;
     }
 
     public void ResetPlayerFireDamage() 

@@ -59,7 +59,7 @@ public class Abilities : MonoBehaviour
     {
         targetLayer = LayerMask.NameToLayer("Slower");
         dashCooldown = playerData.dashCooldown;
-        slowerCooldown = playerData.shieldCooldown;
+        slowerCooldown = playerData.slowerCooldown;
         laserCooldown = playerData.laserCooldown;
 
         dashImage.fillAmount = 0f;
