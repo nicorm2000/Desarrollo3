@@ -4487,11 +4487,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 204904158}
+  - component: {fileID: 204904161}
   - component: {fileID: 204904159}
   - component: {fileID: 204904163}
   - component: {fileID: 204904160}
   - component: {fileID: 204904162}
-  - component: {fileID: 204904161}
   - component: {fileID: 204904164}
   m_Layer: 19
   m_Name: Tako
@@ -10233,6 +10233,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2297863809508382778, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2443186196316251944, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: weaponRed
       value: 
@@ -10389,6 +10393,18 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 823054430}
+    - target: {fileID: 6500976940419146429, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+    - target: {fileID: 6500976940419146429, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: bossEnemyHealth
+      value: 
+      objectReference: {fileID: 204904160}
+    - target: {fileID: 6500976940419146429, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: includeLayer.m_Bits
+      value: 524544
+      objectReference: {fileID: 0}
     - target: {fileID: 7420418933998589246, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: overHeatText
       value: 

@@ -40,6 +40,7 @@ MonoBehaviour:
   shieldColor: {r: 0, g: 0.0963881, b: 1, a: 0}
   laserCooldown: 30
   laserDamage: 400
+  laserDamageToBoss: 100
   laserRange: 100
   laserWidth: 20
   laserDuration: 1

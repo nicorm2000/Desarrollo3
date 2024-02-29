@@ -38,6 +38,7 @@ public class PlayerData : ScriptableObject
     [Header("Player Laser")]
     public float laserCooldown;
     public float laserDamage;
+    public float laserDamageToBoss;
     public float laserRange;
     public float laserWidth;
     public float laserDuration;
