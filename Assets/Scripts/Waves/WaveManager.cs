@@ -11,7 +11,7 @@ public class Wave
     public GameObject[] enemyType;
     public float spawnInterval;
 
-    [Header("Enemies Amount")]
+    [Header("Enemies")]
     public EnemiesAmount enemiesAmount;
 }
 
@@ -98,7 +98,6 @@ public class WaveManager : MonoBehaviour
     {
         ResetWaves();
         ResetEnemiesValues();
-        currentWaveIndex = 13;
         waveUI.ShowWaveText(waves[currentWaveIndex].waveIndex);
     }
 
