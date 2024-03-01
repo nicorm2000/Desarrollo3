@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossHealthSystem : MonoBehaviour
 {
@@ -19,6 +21,14 @@ public class BossHealthSystem : MonoBehaviour
     [SerializeField] AudioManager audioManager;
     [SerializeField] string bossGrunt;
     [SerializeField] string bossScream;
+
+    [Header("Transition Dependencies")]
+    [SerializeField] private Transitions increaseSizeOn;
+    private readonly float timeToTurnOnTransition = 1f;
+
+    [Header("Scene Manager Dependencies")]
+    [SerializeField] private MySceneManager mySceneManager;
+    [SerializeField] private string winScene;
 
     private void Start()
     {
@@ -62,5 +72,14 @@ public class BossHealthSystem : MonoBehaviour
 
         //Add the new camera target here.
         //cameraMovement.target = newCameraTarget;
+
+        StartCoroutine(BossDeathSequence());
+    }
+
+    private IEnumerator BossDeathSequence()
+    {
+        StartCoroutine(increaseSizeOn.ActiveTransition(timeToTurnOnTransition));
+        yield return new WaitForSeconds(timeToTurnOnTransition);
+        mySceneManager.LoadSceneByName(winScene);
     }
 }

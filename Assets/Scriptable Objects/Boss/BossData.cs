@@ -18,6 +18,7 @@ public class BossData : ScriptableObject
     public float attack1SpawnDelay;
     public float attack1SpawnDelayMultiplier;
     public float attack1SpawnMinimumDelay;
+    public float attack1ColliderActivationDelay;
 
     [Header("Boss Attack 2")]
     public string attack2Name;

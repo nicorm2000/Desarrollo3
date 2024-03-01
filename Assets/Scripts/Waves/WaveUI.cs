@@ -15,14 +15,6 @@ public class WaveUI : MonoBehaviour
     [SerializeField] private float waveShowDuration;
     [SerializeField] private float waveShowCompletedDuration;
 
-    [Header("Scene Manager Dependencies")]
-    [SerializeField] private MySceneManager mySceneManager;
-    [SerializeField] private string winScene;
-
-    [Header("Transition Dependencies")]
-    [SerializeField] private Transitions increaseSizeOn;
-    private float timeToTurnOnTransition = 1f;
-
     /// <summary>
     /// Displays the wave index on the waveText UI element.
     /// </summary>
