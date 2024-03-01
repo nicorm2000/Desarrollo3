@@ -41,9 +41,6 @@ public class TeleportPlayerToLevel : MonoBehaviour
     public bool playerCanTeleport = false;
     public bool isPlayerOnTeleportArea = false;
 
-    [Header("Camera Movement Dependences")]
-    [SerializeField] private CameraMovement cameraMovement;
-
     [Header("Time to teleport player")]
     [SerializeField] private TeleportingTimer teleportingTimer;
     [SerializeField] private int timeToTeleportPlayer;
@@ -52,8 +49,11 @@ public class TeleportPlayerToLevel : MonoBehaviour
     [SerializeField] private Animator buttonAnimator;
     private bool _isPressed;
 
-    [Header("Player Data Dependencies")]
+    [Header("Player Data Dependences")]
     [SerializeField] private PlayerData playerData;
+
+    [Header("Active Boss Fight Dependences")]
+    [SerializeField] private ActiveBossFight activeBossFight;
 
     private void OnTriggerEnter(Collider player)
     {
@@ -129,6 +129,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
             else
             {
                 player.transform.position = bosLevelSpawn.position;
+                StartCoroutine(activeBossFight.ActiveBoss(1f));
             }
 
             StartCoroutine(increaseSizeOff.ActiveTransition(_transitonOnTime));

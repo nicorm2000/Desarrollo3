@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Tako
   m_EditorClassIdentifier: 
   sushiName: Tako
-  bossSpawningDuration: 3
-  bossPresentationDuration: 5
-  bossHealthBarShow: 2
+  bossSpawningDuration: 1
+  bossPresentationDuration: 4
+  bossHealthBarShow: 1.5
   collisionDamage: 10
   attackDelay: 5
   attack1Name: Chopping Tentacles
