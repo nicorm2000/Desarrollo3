@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4019345869186744409}
   - component: {fileID: 240753478506801131}
+  - component: {fileID: 209776333725642212}
   m_Layer: 0
   m_Name: Chopping Tentacle
   m_TagString: Untagged
@@ -52,8 +53,28 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.128016, y: 4.8631015, z: 1}
-  m_Center: {x: 0.0049237013, y: -0.10870385, z: 0}
+  m_Size: {x: 1.128016, y: 4.8631015, z: 3.9291391}
+  m_Center: {x: 0.004923713, y: -0.10870398, z: 1.4645692}
+--- !u!114 &209776333725642212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5797017068476925439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8b7cc27be9bbb4e84016ed2eeb127a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+  bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  enemyData: {fileID: 11400000, guid: bd7b1b114d37eda4888d68aff28b3e28, type: 2}
+  boxCollider: {fileID: 240753478506801131}
+  maxTimeToResetAttack: 1
 --- !u!1 &6283849730624153406
 GameObject:
   m_ObjectHideFlags: 0
