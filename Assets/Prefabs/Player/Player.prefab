@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 92d4fa9258efa574c9b78761254a60c6, type: 2}
-  overheatDecreaseRate: 30
+  overheatDecreaseRate: 35
   overheatIncreaseAmount: 100
   weaponOverheat: 100
   _currentOverheat: 0
@@ -330,8 +330,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6015701, y: 0.49626654, z: 1}
-  m_Center: {x: -0.0013542175, y: -0.007349223, z: 0}
+  m_Size: {x: 0.6, y: 0.4, z: 1.4}
+  m_Center: {x: -0.0013542175, y: -0.007349223, z: -0.07735169}
 --- !u!1 &1625755811549221622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,8 +1467,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 8c81ff1cee96aea44975dfc6f8b73804, type: 2}
-  overheatDecreaseRate: 10
-  overheatIncreaseAmount: 20
+  overheatDecreaseRate: 20
+  overheatIncreaseAmount: 12.5
   weaponOverheat: 100
   _currentOverheat: 0
   _canShoot: 1
@@ -2286,6 +2286,14 @@ PrefabInstance:
     - target: {fileID: 296049249673461059, guid: 89523ff41de499b40a4117161c601a89, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988748519302646094, guid: 89523ff41de499b40a4117161c601a89, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+    - target: {fileID: 4988748519302646094, guid: 89523ff41de499b40a4117161c601a89, type: 3}
+      propertyPath: includeLayer.m_Bits
+      value: 524544
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

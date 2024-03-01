@@ -37,7 +37,7 @@ public class BossBullets : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(playerBulletCollisionTag))
+        if (other.gameObject.CompareTag(playerBulletCollisionTag))
         {
             if (!playerData.isDashing && !playerData._isDead)
             {

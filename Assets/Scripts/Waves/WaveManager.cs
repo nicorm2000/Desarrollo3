@@ -249,5 +249,6 @@ public class WaveManager : MonoBehaviour
     private void ResetWaves()
     {
         HealthSystem.enemyCount = 0;
+        //currentWaveIndex = 0;
     }
 }
