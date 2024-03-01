@@ -6,6 +6,7 @@ public class FloorTentacle : MonoBehaviour
     [Header("Floor Tentacle Set Up")]
     [SerializeField] private GameObject gO;
     [SerializeField] private GameObject warningGO;
+    [SerializeField] private BoxCollider boxCollider;
 
     [Header("Boss Data Dependencies")]
     [SerializeField] private BossData bossData;
@@ -19,6 +20,11 @@ public class FloorTentacle : MonoBehaviour
     [SerializeField] private string crackingFloor;
 
     private bool isActive = false;
+
+    private void Start()
+    {
+        boxCollider.enabled = false;
+    }
 
     public void Activate(float duration)
     {
@@ -40,6 +46,7 @@ public class FloorTentacle : MonoBehaviour
             audioManager.PlaySound(crackingFloor);
         }
         gO.SetActive(isActive);
+        boxCollider.enabled = true;
         Debug.Log(gameObject.name);
         StartCoroutine(DeactivateAfter(duration));
     }
@@ -54,6 +61,7 @@ public class FloorTentacle : MonoBehaviour
         yield return new WaitForSeconds(duration);
         isActive = false;
         gO.SetActive(isActive);
+        boxCollider.enabled = false;
     }
 
     private void OnTriggerEnter(Collider other)

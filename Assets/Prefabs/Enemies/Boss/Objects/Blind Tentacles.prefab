@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6342365921240023053}
   - component: {fileID: 142155275609551482}
   - component: {fileID: 3296170355227044523}
+  - component: {fileID: 2994994766976251639}
   m_Layer: 0
   m_Name: Blind Tentacles
   m_TagString: Untagged
@@ -54,8 +55,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 16.361599}
+  m_Center: {x: 0, y: 0, z: 7.6807995}
 --- !u!114 &3296170355227044523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,6 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gO: {fileID: 3386810092469362221}
   warningGO: {fileID: 3705013074694969513}
+  boxCollider: {fileID: 142155275609551482}
   bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
   includeLayer:
     serializedVersion: 2
@@ -77,6 +79,26 @@ MonoBehaviour:
   audioManager: {fileID: 0}
   warning: WarningBoss
   crackingFloor: CrackingFloor
+--- !u!114 &2994994766976251639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78649472390985096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8b7cc27be9bbb4e84016ed2eeb127a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+  bossData: {fileID: 11400000, guid: 311edd65652fe4a4092626fa56c18d12, type: 2}
+  enemyData: {fileID: 11400000, guid: bd7b1b114d37eda4888d68aff28b3e28, type: 2}
+  boxCollider: {fileID: 142155275609551482}
+  maxTimeToResetAttack: 1
 --- !u!1 &3386810092469362221
 GameObject:
   m_ObjectHideFlags: 0
