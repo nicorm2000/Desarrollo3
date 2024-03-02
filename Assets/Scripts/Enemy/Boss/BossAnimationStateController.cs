@@ -9,7 +9,7 @@ public class BossAnimationStateController : MonoBehaviour
     [SerializeField] private BossAttacks bossAttacks;
 
     [Header("Boss Manager Dependencies")]
-    [SerializeField] private BossFight bossFight;
+    [SerializeField] private BossHealthSystem bossHealthSystem;
 
     private void OnEnable()
     {
@@ -17,7 +17,7 @@ public class BossAnimationStateController : MonoBehaviour
         bossAttacks.onBossChoppingTentaclesChange += HandleChoppingTentacleChange;
         bossAttacks.onBossInkHellChange += HandleInkHellChange;
         bossAttacks.onBossBlindOctopusChange += HandleBlindOctopusChange;
-        bossFight.onBossDeadChange += HandleBossDeathChange;
+        bossHealthSystem.onBossDeadChange += HandleBossDeathChange;
     }
     private void OnDisable()
     {
@@ -25,10 +25,9 @@ public class BossAnimationStateController : MonoBehaviour
         bossAttacks.onBossChoppingTentaclesChange -= HandleChoppingTentacleChange;
         bossAttacks.onBossInkHellChange -= HandleInkHellChange;
         bossAttacks.onBossBlindOctopusChange -= HandleBlindOctopusChange;
-        bossFight.onBossDeadChange -= HandleBossDeathChange;
+        bossHealthSystem.onBossDeadChange -= HandleBossDeathChange;
     }
 
-    //Call this method with an event keyframe in the animation
     public void HandleBossIdleChangeAfterSpawn()
     {
         HandleBossIdleChange(true);

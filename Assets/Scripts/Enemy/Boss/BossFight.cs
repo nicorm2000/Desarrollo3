@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class BossFight : MonoBehaviour
 {
-    public event Action<bool> onBossDeadChange;
-    //private bool _isDead;
-    //_isDead = false;
-    //_isDead = true;
-    //onBossDeadChange?.Invoke(_isDead);
-
     public enum BossStage
     { 
         WaitingToStart,
@@ -33,12 +27,6 @@ public class BossFight : MonoBehaviour
     private List<Vector3> spawnPositionList;
 
     private BossStage bossStage;
-
-    //
-    //
-    //@Facu si queres modifica todo, elijamos si manejamos las cosas aca o en el boss attacks, para mi lo del principio del boss attacks lo podriamos manejar aca, el resto alla
-    //
-    //
 
     private void Awake()
     {

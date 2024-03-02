@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class BossHealthSystem : MonoBehaviour
 {
+    public event Action<bool> onBossDeadChange;
+
     [Header("Boss Data Dependencies")]
     [SerializeField] private BossData bossData;
 
@@ -30,11 +32,15 @@ public class BossHealthSystem : MonoBehaviour
     [SerializeField] private MySceneManager mySceneManager;
     [SerializeField] private string winScene;
 
+    private bool _isDead;
+
     private void Start()
     {
         bossData.ResetBossData();
         bossData.currentHealth = bossData.maxHealth;
         bossHealthBar.SetMaxAndCurrentHealth(bossData.maxHealth, bossData.currentHealth);
+        _isDead = false;
+        onBossDeadChange?.Invoke(_isDead);
     }
 
     private void Update()
@@ -56,6 +62,8 @@ public class BossHealthSystem : MonoBehaviour
 
         if(bossData.currentHealth <= 0) 
         {
+            _isDead = true;
+            onBossDeadChange?.Invoke(_isDead);
             if (!AudioManager.muteSFX)
             {
                 audioManager.PlaySound(bossScream);
@@ -80,6 +88,7 @@ public class BossHealthSystem : MonoBehaviour
     {
         StartCoroutine(increaseSizeOn.ActiveTransition(timeToTurnOnTransition));
         yield return new WaitForSeconds(timeToTurnOnTransition);
+        _isDead = false;
         mySceneManager.LoadSceneByName(winScene);
     }
 }
