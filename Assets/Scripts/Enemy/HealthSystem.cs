@@ -12,7 +12,6 @@ public class HealthSystem : MonoBehaviour
     public bool _dead;
     public EnemyData enemyData;
     public GameObject firePoint;
-    public static int enemyCount;
 
     public event Action<bool> onEnemyDeadChange;
 
@@ -32,11 +31,6 @@ public class HealthSystem : MonoBehaviour
 
     private void Start()
     {
-        if (gameObject.CompareTag("Enemy"))
-        {
-            enemyCount++;
-        }
-
         _dead = enemyData.isDead;
         health = enemyData.health;
         _triggerEffect = GetComponent<ZoneTriggeredEffect>();
@@ -73,14 +67,14 @@ public class HealthSystem : MonoBehaviour
 
     public void DestroyEnemy()
     {
-        if (gameObject.tag == "Enemy")
+        if (gameObject.CompareTag("Enemy"))
         {
-            enemyCount--;
+            EnemyManager.enemyCount--;
         }
 
-        if(enemyCount <= 0) 
+        if(EnemyManager.enemyCount <= 0) 
         {
-            enemyCount = 0;
+            EnemyManager.enemyCount = 0;
         }
 
         onEnemyDeadChange?.Invoke(false);

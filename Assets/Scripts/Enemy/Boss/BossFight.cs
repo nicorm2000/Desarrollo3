@@ -34,17 +34,17 @@ public class BossFight : MonoBehaviour
 
         spawnPositionList = new List<Vector3>();
 
-        foreach (Transform spawnPosition in transform.Find("SpawnPositions"))
-        {
-            spawnPositionList.Add(spawnPosition.position);
-        }
+        //foreach (Transform spawnPosition in transform.Find("SpawnPositions"))
+        //{
+        //    spawnPositionList.Add(spawnPosition.position);
+        //}
 
         bossStage = BossStage.WaitingToStart;
     }
 
     private void Start()
     {
-        colliderTrigger.OnPlayerTriggerEnter += ColliderTrigger_OnPlayerTriggerEnter;
+        //colliderTrigger.OnPlayerTriggerEnter += ColliderTrigger_OnPlayerTriggerEnter;
     }
 
     private void OnDestroy()

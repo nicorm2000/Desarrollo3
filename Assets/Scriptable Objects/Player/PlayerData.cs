@@ -71,6 +71,7 @@ public class PlayerData : ScriptableObject
     public string death;
     public string damageHit;
     public string shopFall;
+    public float shopFallTimer;
     public string pickUpWeapon;
 
     public void ResetPlayerStacks() 

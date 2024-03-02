@@ -4,6 +4,7 @@ public class EnemyManager : MonoBehaviour
 {
     public static GameObject player;
     public static GameObject mainCamera;
+    public static int enemyCount;
 
     void Awake()
     {

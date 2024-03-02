@@ -30,8 +30,8 @@ public class LevelToShop : MonoBehaviour
     [SerializeField] private AIChase[] aiChase;
     [SerializeField] private AIShooterChase aIShooterChase;
 
-    [Header("Audio Manager")]
-    [SerializeField] AudioManager audioManager;
+    [Header("Wave Manager")]
+    [SerializeField] WaveManager waveManager;
 
     private readonly float _timeToWaitTransition = 1f;
 
@@ -64,12 +64,15 @@ public class LevelToShop : MonoBehaviour
 
     public void CheckPlayerTeleportToShop() 
     {
-        if (isPlayerOnTeleportArea == true) 
+        if (isPlayerOnTeleportArea) 
         {
             StartCoroutine(increaseSizeOn.ActiveTransition(_timeToWaitTransition));
             StartCoroutine(increaseSizeOn.DisableTransition(_timeToWaitTransition));
             canTeleport = true;
         }
+
+        waveManager.iAmInShop = true;
+        waveManager.SetShopWaves();
 
         StartCoroutine(TeleportToShop(_timeToWaitTransition));
         aiChase[0].EnemiesCanNotMove();
@@ -83,7 +86,7 @@ public class LevelToShop : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToWait);
 
-        if (canTeleport == true) 
+        if (canTeleport) 
         {
             player.transform.position = spawnWeaponSelect.transform.position;
             StartCoroutine(increaseSizeOff.ActiveTransition(_timeToWaitTransition));
@@ -94,10 +97,5 @@ public class LevelToShop : MonoBehaviour
         isPlayerOnTeleportArea = false;
         basket.SetActive(false);
         teleportText.SetActive(false);
-
-        if (!AudioManager.muteSFX)
-        {
-            audioManager.PlaySound(playerData.shopFall);
-        }
     }
 }

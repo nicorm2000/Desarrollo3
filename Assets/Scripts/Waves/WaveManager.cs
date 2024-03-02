@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 
 [System.Serializable]
@@ -9,7 +11,7 @@ public class Wave
     [Header("Wave Properties")]
     public short numberOfEnemies;
     public GameObject[] enemyType;
-    public float spawnInterval;
+    public int spawnInterval;
 
     [Header("Enemies")]
     public EnemiesAmount enemiesAmount;
@@ -52,14 +54,17 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private string waveBegins;
     [SerializeField] private string waveBeforeTako;
 
+    private bool basketSFXHasPlayed = false;
+
     [Header("Enemies Dependencies")]
     [SerializeField] private EnemyData[] enemyData;
 
     public int currentWaveIndex;
 
+    public bool iAmInShop = false;
+
     private int _maxWaves = Constants.ROUNDS_BETWEEN_SHOPS;
     private Wave _currentWave;
-    private float _nextSpawnTime;
     private bool _canSpawn = true;
     private bool _nextWave = false;
     private bool _finishedWaves = false;
@@ -107,30 +112,29 @@ public class WaveManager : MonoBehaviour
     private void Update()
     {
         _currentWave = waves[currentWaveIndex];
-        SpawnWave();
 
-        if (playerData._isDead == true)
+        if (_canSpawn)
+        {
+            SpawnWave();
+        }
+
+        if (playerData._isDead)
         {
             ResetWaves();
         }
 
-        if (HealthSystem.enemyCount != Constants.ZERO)
+        if (EnemyManager.enemyCount == Constants.ZERO && !playerData._isDead)
         {
-            if (waves[currentWaveIndex].waveIndex == _maxWaves)
+            if (waves[currentWaveIndex].waveIndex == _maxWaves - Constants.ONE && !iAmInShop)
             {
                 ActivateShop();
-                SetShopWaves();
+                return;
             }
 
-            _nextWave = false;
-        }
-
-        if (HealthSystem.enemyCount == Constants.ZERO && !playerData._isDead)
-        {
             _nextWave = true;
         }
 
-        if (_canSpawn == false && _nextWave == true)
+        if (!_canSpawn && _nextWave)
         {
             WaveUpdater();
         }
@@ -159,7 +163,7 @@ public class WaveManager : MonoBehaviour
     /// </summary>
     private void WaveUpdater()
     {
-        if (currentWaveIndex + Constants.ONE != waves.Length && playerData._isDead == false)
+        if (currentWaveIndex + Constants.ONE != waves.Length && !playerData._isDead)
         {
             if (!AudioManager.muteSFX)
             {
@@ -183,7 +187,7 @@ public class WaveManager : MonoBehaviour
                 }
             }
         }
-
+        basketSFXHasPlayed = false;
         _nextWave = false;
     }
 
@@ -202,20 +206,20 @@ public class WaveManager : MonoBehaviour
     /// <summary>
     /// Spawns individual enemies within the current wave.
     /// </summary>
-    private void SpawnWave()
+    private async void SpawnWave()
     {
-        if (_canSpawn && _nextSpawnTime < Time.time)
+        _canSpawn = false;
+        for (int i = 0; i < _currentWave.enemiesAmount.enemies.Length; i++)
         {
-            GameObject randomEnemy = _currentWave.enemyType[Random.Range(Constants.ZERO, _currentWave.enemyType.Length)];
-            Transform randomSpawnPoint = spawnPoints[Random.Range(Constants.ZERO, spawnPoints.Length)];
-            Instantiate(randomEnemy, new Vector3(randomSpawnPoint.position.x, randomSpawnPoint.position.y, randomSpawnPoint.position.z - Constants.Z_VALUE_OFFSET), Quaternion.identity);
+            GameObject enemyPrefab = _currentWave.enemiesAmount.enemies[i];
+            int enemyAmount = _currentWave.enemiesAmount.enemyAmount[i];
 
-            _currentWave.numberOfEnemies--;
-            _nextSpawnTime = Time.time + _currentWave.spawnInterval;
-
-            if (_currentWave.numberOfEnemies <= Constants.ONE)
+            for (int j = 0; j < enemyAmount; j++)
             {
-                _canSpawn = false;
+                Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+                EnemyManager.enemyCount++;
+                Instantiate(enemyPrefab, new Vector3(randomSpawnPoint.position.x, randomSpawnPoint.position.y, randomSpawnPoint.position.z - Constants.Z_VALUE_OFFSET), Quaternion.identity);
+                await Task.Delay(_currentWave.spawnInterval);
             }
         }
     }
@@ -228,12 +232,14 @@ public class WaveManager : MonoBehaviour
         basket.SetActive(true);
         door.SetActive(true);
         baoBasketIndicator.SetActive(true);
+
+        StartCoroutine(WaitForBasketToFall());
     }
 
     /// <summary>
     /// Sets the number of waves before the next shop becomes available.
     /// </summary>
-    private void SetShopWaves()
+    public void SetShopWaves()
     {
         _maxWaves += Constants.ROUNDS_BETWEEN_SHOPS;
     }
@@ -248,7 +254,19 @@ public class WaveManager : MonoBehaviour
 
     private void ResetWaves()
     {
-        HealthSystem.enemyCount = 0;
-        //currentWaveIndex = 0;
+        EnemyManager.enemyCount = 0;
+    }
+
+    private IEnumerator WaitForBasketToFall()
+    {
+        if (!basketSFXHasPlayed)
+        {
+            basketSFXHasPlayed = true;
+            yield return new WaitForSeconds(playerData.shopFallTimer);
+            if (!AudioManager.muteSFX)
+            {
+                audioManager.PlaySound(playerData.shopFall);
+            }
+        }
     }
 }

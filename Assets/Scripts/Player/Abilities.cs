@@ -224,8 +224,9 @@ public class Abilities : MonoBehaviour
 
     private IEnumerator EnableAnimatorComponent(GameObject objectAnimator) 
     {
+        float timeToWaitAcivate = 2;
         float timeToWait = 5;
-
+        yield return new WaitForSeconds(timeToWaitAcivate);
         objectAnimator.SetActive(true);
         yield return new WaitForSeconds(timeToWait);
         objectAnimator.GetComponent<Animator>().enabled = false;

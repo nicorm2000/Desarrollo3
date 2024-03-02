@@ -59,4 +59,5 @@ MonoBehaviour:
   death: PlayerDeath
   damageHit: PlayerDamageHit
   shopFall: ShopFallDown
+  shopFallTimer: 0.6
   pickUpWeapon: WeaponPickup
