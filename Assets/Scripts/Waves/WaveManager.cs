@@ -9,8 +9,6 @@ public class Wave
     public short waveIndex;
 
     [Header("Wave Properties")]
-    public short numberOfEnemies;
-    public GameObject[] enemyType;
     public int spawnInterval;
 
     [Header("Enemies")]
