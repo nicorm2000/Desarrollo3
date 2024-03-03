@@ -29,6 +29,6 @@ public static class Constants
 
     #region WAVES_VALUES
     public const int ROUNDS_BETWEEN_SHOPS = 5;
-    public const int MAX_WAVES = 15;
+    public const int MAX_WAVES = 14;
     #endregion
 }

@@ -61,7 +61,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
         {
             isPlayerOnTeleportArea = true;
 
-            if (waveManager.currentWaveIndex <= Constants.MAX_WAVES)
+            if (waveManager.currentWaveIndex < Constants.MAX_WAVES)
             {
                 goToLevelText.SetActive(true);
             }
@@ -83,7 +83,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
             teleportingTimer.currentTime = teleportingTimer.maxTime;
 
 
-            if (waveManager.currentWaveIndex <= Constants.MAX_WAVES)
+            if (waveManager.currentWaveIndex < Constants.MAX_WAVES)
             {
                 goToLevelText.SetActive(false);
             }
@@ -121,7 +121,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
                 audioManager.PlaySound(playerData.pickUpWeapon);
             }
 
-            if (waveManager.currentWaveIndex <= Constants.MAX_WAVES)
+            if (waveManager.currentWaveIndex < Constants.MAX_WAVES)
             {
                 player.transform.position = levelSpawn.position;
             }
