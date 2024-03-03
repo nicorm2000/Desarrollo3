@@ -45,7 +45,7 @@ public class AIShooterChase : MonoBehaviour
             ShooterEnemyMovement();
         }
 
-        if (healthSystem._dead)
+        if (healthSystem.dead)
         {
             onShooterEnemyWalkChange?.Invoke(false);
         }
@@ -105,7 +105,7 @@ public class AIShooterChase : MonoBehaviour
         {
             _nextFireTime -= Time.deltaTime;
 
-            if (_nextFireTime <= 0 && healthSystem._dead == false)
+            if (_nextFireTime <= 0 && healthSystem.dead == false)
             {
                 Shoot();
             }

@@ -101,6 +101,7 @@ public class WaveManager : MonoBehaviour
     {
         ResetWaves();
         ResetEnemiesValues();
+        currentWaveIndex = 6;
         waveUI.ShowWaveText(waves[currentWaveIndex].waveIndex);
     }
 
@@ -109,6 +110,7 @@ public class WaveManager : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        Debug.Log(EnemyManager.enemyCount);
         _currentWave = waves[currentWaveIndex];
 
         if (_canSpawn)

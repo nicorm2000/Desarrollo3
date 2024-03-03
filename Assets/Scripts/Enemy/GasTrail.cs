@@ -31,7 +31,7 @@ public class GasTrail : MonoBehaviour
 
     private IEnumerator GasCloudSpawn()
     {
-        while (!healthSystem._dead)
+        while (!healthSystem.dead)
         {
             SpawnGasCloud();
             if (!AudioManager.muteSFX)
@@ -49,7 +49,7 @@ public class GasTrail : MonoBehaviour
 
     private IEnumerator GasCloudTrail()
     {
-        while (!healthSystem._dead) 
+        while (!healthSystem.dead) 
         { 
         yield return new WaitForSeconds(timeBetweenDamage);
 

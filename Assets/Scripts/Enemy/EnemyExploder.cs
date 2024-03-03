@@ -14,12 +14,15 @@ public class EnemyExploder : MonoBehaviour
     [SerializeField] private float explosionBuildUp;
     [SerializeField] private float explosionRadius;
     [SerializeField] private float explosionDamage;
-    
+
     [Header("Player Data Dependencies")]
     [SerializeField] private PlayerData playerData;
 
     [Header("Enemy Data Dependencies")]
     [SerializeField] private EnemyData enemyData;
+
+    [Header("Health System Dependencies")]
+    [SerializeField] private HealthSystem healthSystem;
 
     [Header("Audio Manager Dependencies")]
     [SerializeField] AudioManager audioManager;
@@ -50,7 +53,7 @@ public class EnemyExploder : MonoBehaviour
     private GameObject _target;
     private GameObject _screenShakeDependency;
 
-    private bool _hasExploded = false;
+    private bool _hasExploded;
     private float _damage;
     private Collider _enemyCollider = null;
 
@@ -63,13 +66,14 @@ public class EnemyExploder : MonoBehaviour
         _screenShakeDependency = EnemyManager.mainCamera;
         _enemyCollider = gameObject.GetComponent<Collider>();
         _aiChase = GetComponent<AIChase>();
+        _hasExploded = false;
     }
 
     private void Update()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, playerData.transform.position);
 
-        if (distanceToPlayer <= detectionRadius)
+        if (distanceToPlayer <= detectionRadius && !healthSystem.dead)
         {
             isAttacking = true;
             onEnemyAttackChange?.Invoke(isAttacking);
@@ -125,7 +129,14 @@ public class EnemyExploder : MonoBehaviour
         yield return new WaitForSeconds(smokeDuration);
         smokeRadius.SetActive(false);
 
-        Destroy(gameObject);
+        if (healthSystem.dead)
+        {
+            yield return null;
+        }
+        else
+        {
+            healthSystem.DestroyEnemy();
+        }
     }
 
     private void Explode()
@@ -135,7 +146,7 @@ public class EnemyExploder : MonoBehaviour
         float distanceNormalized = Mathf.Clamp01(distanceToPlayer / maxShakeDistance);
 
         float adjustedShakeDuration = Mathf.Lerp(minShakeDuration, maxShakeDuration, distanceNormalized);
-        AnimationCurve adjustedShakeAnimationCurve = new AnimationCurve(
+        AnimationCurve adjustedShakeAnimationCurve = new(
             new Keyframe(0, 0),
             new Keyframe(1, maxShakeAnimationCurve.Evaluate(distanceNormalized))
         );

@@ -216,7 +216,7 @@ Transform:
   m_GameObject: {fileID: 2253121219630259449}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.325}
+  m_LocalPosition: {x: 0, y: 0, z: 0.125}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -301,7 +301,7 @@ Transform:
   m_GameObject: {fileID: 4675668403965106887}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.11499995}
+  m_LocalPosition: {x: 0, y: 0, z: 0.125}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -490,7 +490,7 @@ Transform:
   m_GameObject: {fileID: 6212661043742640571}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.22499996}
+  m_LocalPosition: {x: 0, y: 0, z: 0.125}
   m_LocalScale: {x: 3.1, y: 3.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -712,7 +712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1341053496429283583}
   miniMapIcon: {fileID: 5864713616549052325}
-  _dead: 0
+  dead: 0
   enemyData: {fileID: 11400000, guid: a937a3a7194277548bfbc3af0acd6616, type: 2}
   firePoint: {fileID: 0}
   enemyCollider: {fileID: 1358996746618416340}
@@ -901,6 +901,7 @@ MonoBehaviour:
   explosionDamage: 20
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   enemyData: {fileID: 11400000, guid: f43bbcc79f28a0943a0752730dd121af, type: 2}
+  healthSystem: {fileID: 5345744617377966691}
   audioManager: {fileID: 2458315473507534293}
   explosionTimer: ExplosionTimer
   explosionSFX: Explosion

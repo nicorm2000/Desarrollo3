@@ -38,7 +38,7 @@ public class AIChase : MonoBehaviour
             EnemyMovement();
         }
 
-        if (healthSystem._dead)
+        if (healthSystem.dead)
         {
             onEnemyWalkChange?.Invoke(false);
         }

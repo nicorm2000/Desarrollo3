@@ -9,7 +9,7 @@ public class HealthSystem : MonoBehaviour
     private AudioManager _audioManager;
     [SerializeField] private GameObject miniMapIcon;
 
-    public bool _dead;
+    public bool dead;
     public EnemyData enemyData;
     public GameObject firePoint;
 
@@ -31,7 +31,7 @@ public class HealthSystem : MonoBehaviour
 
     private void Start()
     {
-        _dead = enemyData.isDead;
+        dead = enemyData.isDead;
         health = enemyData.health;
         _triggerEffect = GetComponent<ZoneTriggeredEffect>();
         _audioManager = GetComponent<AudioManager>();
@@ -42,13 +42,13 @@ public class HealthSystem : MonoBehaviour
     {
         if (health <= 0)
         {
-            onEnemyDeadChange?.Invoke(!_dead);
+            onEnemyDeadChange?.Invoke(!dead);
             timer -= Time.deltaTime;
             enemyCollider.enabled = false;
             enemyTriggerCollider.enabled = false;
             miniMapIcon.SetActive(false);
 
-            if (!_dead && timer <= 0)
+            if (!dead && timer <= 0)
             {
                 if (!AudioManager.muteSFX)
                 {
@@ -58,7 +58,7 @@ public class HealthSystem : MonoBehaviour
 
                 _triggerEffect.TriggerEffect();
 
-                _dead = true;
+                dead = true;
 
                 DestroyEnemyTimer();
             }
@@ -90,6 +90,6 @@ public class HealthSystem : MonoBehaviour
     private void DestroyEnemyTimer()
     {
         spriteRenderer.enabled = false;
-        Invoke("DestroyEnemy", _triggerEffect.dropData.objectLifespan + objectLifespanOffset);
+        Invoke(nameof(DestroyEnemy), _triggerEffect.dropData.objectLifespan + objectLifespanOffset);
     }
 }

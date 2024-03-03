@@ -15942,7 +15942,7 @@ MonoBehaviour:
       - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
       - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
       - {fileID: 8794192663361722567, guid: 533244e993e72a342abf16de948666f6, type: 3}
-      enemyAmount: 0f0000000a00000005000000
+      enemyAmount: 010000000100000005000000
   - waveIndex: 8
     spawnInterval: 500
     enemiesAmount:
@@ -16037,6 +16037,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f43bbcc79f28a0943a0752730dd121af, type: 2}
   - {fileID: 11400000, guid: 5e248133a38d54d488f3aff70233d8a7, type: 2}
   - {fileID: 11400000, guid: bd7b1b114d37eda4888d68aff28b3e28, type: 2}
+  - {fileID: 11400000, guid: a937a3a7194277548bfbc3af0acd6616, type: 2}
+  - {fileID: 11400000, guid: c75a6f980cce92c46a2394e752caa7ec, type: 2}
   currentWaveIndex: 0
   iAmInShop: 0
 --- !u!114 &760154692

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cf5c79c482a364289b65bc639aa2a1, type: 3}
   m_Name: Tekkamaki
   m_EditorClassIdentifier: 
-  lastHorizontalVector: 0.048153102
-  lastVerticalVector: -0.99884
-  movementDirection: {x: 0.048153102, y: -0.99884}
+  lastHorizontalVector: -0.9928064
+  lastVerticalVector: -0.119731136
+  movementDirection: {x: -0.9928064, y: -0.119731136}
   model: {fileID: 8794192663361722567, guid: 533244e993e72a342abf16de948666f6, type: 3}
   animator: {fileID: 0}
   dropData: {fileID: 11400000, guid: 79449a2c2dee238438fb7dd78d2037c8, type: 2}
@@ -24,7 +24,7 @@ MonoBehaviour:
   avoidanceDistance: 1
   ifFollowingPlayer: 1
   isMelee: 1
-  canChase: 1
+  canChase: 0
   isGas: 0
   circularMovementSpeed: 0
   avoidanceFactor: 0
