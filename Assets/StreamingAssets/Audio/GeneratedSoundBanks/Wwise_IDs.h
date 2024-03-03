@@ -68,11 +68,15 @@ namespace AK
         static const AkUniqueID SPLAT = 236860119U;
         static const AkUniqueID TAKOBACKGROUND = 1970138382U;
         static const AkUniqueID TAKOSPLAT = 3483809414U;
+        static const AkUniqueID TEKKAMAKIATTACK = 3411720253U;
+        static const AkUniqueID TEKKAMAKIDEATH = 2201750977U;
         static const AkUniqueID TELEPORTBUTTON = 1392147812U;
         static const AkUniqueID TENTACLESLAM = 1348410100U;
         static const AkUniqueID TURNPAGE = 2936962349U;
         static const AkUniqueID TUTORIAL = 3762955427U;
         static const AkUniqueID WARNINGBOSS = 2724248488U;
+        static const AkUniqueID WASABIATTACK = 1045106998U;
+        static const AkUniqueID WASABIDEATH = 4154409516U;
         static const AkUniqueID WAVEBEGIN = 607500489U;
         static const AkUniqueID WEAPONPICKUP = 2883364373U;
     } // namespace EVENTS

@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="202422524">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1436638595">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -579,6 +579,22 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3411720253" Name="TekkamakiAttack" ObjectPath="\Events\Default Work Unit\TekkamakiAttack" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.507565" DurationMax="0.537746">
+					<IncludedMemoryFiles>
+						<File Id="657552065" Language="SFX">
+							<ShortName>OnigiriGrunt1.wav</ShortName>
+							<Path>SFX\OnigiriGrunt1_5578D1DB.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2201750977" Name="TekkamakiDeath" ObjectPath="\Events\Default Work Unit\TekkamakiDeath" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.791363" DurationMax="0.791363">
+					<IncludedMemoryFiles>
+						<File Id="45999561" Language="SFX">
+							<ShortName>OnigiriDeath.wav</ShortName>
+							<Path>SFX\OnigiriDeath_1A904FC9.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1392147812" Name="TeleportButton" ObjectPath="\Events\Default Work Unit\TeleportButton" DurationType="OneShot" DurationMin="0.401029" DurationMax="0.401029">
 					<IncludedMemoryFiles>
 						<File Id="193436424" Language="SFX">
@@ -616,6 +632,22 @@
 						<File Id="1069559790" Language="SFX">
 							<ShortName>Warning.wav</ShortName>
 							<Path>SFX\Warning_C28F0F0C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1045106998" Name="WasabiAttack" ObjectPath="\Events\Default Work Unit\WasabiAttack" DurationType="OneShot" DurationMin="0.314014" DurationMax="0.444083">
+					<IncludedMemoryFiles>
+						<File Id="934391759" Language="SFX">
+							<ShortName>FutomakiGrunt1.wav</ShortName>
+							<Path>SFX\FutomakiGrunt1_6A19D534.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4154409516" Name="WasabiDeath" ObjectPath="\Events\Default Work Unit\WasabiDeath" MaxAttenuation="20." DurationType="OneShot" DurationMin="0.843475" DurationMax="0.843475">
+					<IncludedMemoryFiles>
+						<File Id="484635598" Language="SFX">
+							<ShortName>SushiRollDeath.wav</ShortName>
+							<Path>SFX\SushiRollDeath_8921A352.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
