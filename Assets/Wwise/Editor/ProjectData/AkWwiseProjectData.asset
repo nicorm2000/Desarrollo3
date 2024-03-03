@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 3af410611e2c92469af731b5137fe77a
     GuidInternal: 
-    m_lastTime: -8584921826025994404
+    m_lastTime: -8584921816734801244
     List:
     - name: BaoMumbling
       guid: 60681b47a562a94592542c31c0dcc178
@@ -1031,6 +1031,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1
       minDuration: 1
+    - name: TekkamakiAttack
+      guid: 79d5f2416b900044acfb18aacb84d6c0
+      id: 3411720253
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: TekkamakiAttack
+        ObjectType: 3
+        guid: 79d5f2416b900044acfb18aacb84d6c0
+      Path: Events\Default Work Unit\TekkamakiAttack
+      maxAttenuation: 20
+      maxDuration: 0.537746
+      minDuration: 0.507565
+    - name: TekkamakiDeath
+      guid: e15061134d98e74e8e6ca5ffcb8077e2
+      id: 2201750977
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: TekkamakiDeath
+        ObjectType: 3
+        guid: e15061134d98e74e8e6ca5ffcb8077e2
+      Path: Events\Default Work Unit\TekkamakiDeath
+      maxAttenuation: 20
+      maxDuration: 0.791363
+      minDuration: 0.791363
     - name: TeleportButton
       guid: ec583ba211d2bd4d933c195b94dc8b57
       id: 1392147812
@@ -1116,6 +1150,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.477421
       minDuration: 0.477421
+    - name: WasabiAttack
+      guid: 10e796dff7f7b847a6c8f8e26ac516da
+      id: 1045106998
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: WasabiAttack
+        ObjectType: 3
+        guid: 10e796dff7f7b847a6c8f8e26ac516da
+      Path: Events\Default Work Unit\WasabiAttack
+      maxAttenuation: 0
+      maxDuration: 0.444083
+      minDuration: 0.314014
+    - name: WasabiDeath
+      guid: 006af142104fdc49ae7adae44b00b56d
+      id: 4154409516
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3af410611e2c92469af731b5137fe77a
+      - ElementName: WasabiDeath
+        ObjectType: 3
+        guid: 006af142104fdc49ae7adae44b00b56d
+      Path: Events\Default Work Unit\WasabiDeath
+      maxAttenuation: 20
+      maxDuration: 0.843475
+      minDuration: 0.843475
     - name: WaveBegin
       guid: 9871a938ec160d4fbd7e0231987ea36e
       id: 607500489
