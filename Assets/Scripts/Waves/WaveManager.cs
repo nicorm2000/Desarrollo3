@@ -9,7 +9,7 @@ public class Wave
     public short waveIndex;
 
     [Header("Wave Properties")]
-    public int spawnInterval;
+    public float spawnInterval;
 
     [Header("Enemies")]
     public EnemiesAmount enemiesAmount;
@@ -101,7 +101,6 @@ public class WaveManager : MonoBehaviour
     {
         ResetWaves();
         ResetEnemiesValues();
-        currentWaveIndex = 6;
         waveUI.ShowWaveText(waves[currentWaveIndex].waveIndex);
     }
 
@@ -204,9 +203,17 @@ public class WaveManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Calls the coroutine in charge of spawning enemies.
+    /// </summary>
+    private void SpawnWave()
+    {
+        StartCoroutine(SpawnWaveCoroutine());
+    }
+
+    /// <summary>
     /// Spawns individual enemies within the current wave.
     /// </summary>
-    private async void SpawnWave()
+    private IEnumerator SpawnWaveCoroutine()
     {
         _canSpawn = false;
         for (int i = 0; i < _currentWave.enemiesAmount.enemies.Length; i++)
@@ -219,7 +226,7 @@ public class WaveManager : MonoBehaviour
                 Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
                 EnemyManager.enemyCount++;
                 Instantiate(enemyPrefab, new Vector3(randomSpawnPoint.position.x, randomSpawnPoint.position.y, randomSpawnPoint.position.z - Constants.Z_VALUE_OFFSET), Quaternion.identity);
-                await Task.Delay(_currentWave.spawnInterval);
+                yield return new WaitForSeconds(_currentWave.spawnInterval);
             }
         }
     }

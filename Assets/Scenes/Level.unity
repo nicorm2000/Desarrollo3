@@ -15892,27 +15892,27 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
   waves:
   - waveIndex: 1
-    spawnInterval: 500
+    spawnInterval: 0.5
     enemiesAmount:
       enemies:
       - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
       enemyAmount: 0a000000
   - waveIndex: 2
-    spawnInterval: 500
+    spawnInterval: 0.5
     enemiesAmount:
       enemies:
       - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
       - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
       enemyAmount: 0a00000005000000
   - waveIndex: 3
-    spawnInterval: 500
+    spawnInterval: 0.5
     enemiesAmount:
       enemies:
       - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
       - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
       enemyAmount: 0f0000000a000000
   - waveIndex: 4
-    spawnInterval: 500
+    spawnInterval: 0.5
     enemiesAmount:
       enemies:
       - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
@@ -15920,7 +15920,7 @@ MonoBehaviour:
       - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
       enemyAmount: 140000000f00000001000000
   - waveIndex: 5
-    spawnInterval: 500
+    spawnInterval: 0.5
     enemiesAmount:
       enemies:
       - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
@@ -15928,7 +15928,7 @@ MonoBehaviour:
       - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
       enemyAmount: 140000000f00000005000000
   - waveIndex: 6
-    spawnInterval: 500
+    spawnInterval: 0.5
     enemiesAmount:
       enemies:
       - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
@@ -15936,15 +15936,15 @@ MonoBehaviour:
       - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
       enemyAmount: 190000000f00000005000000
   - waveIndex: 7
-    spawnInterval: 500
+    spawnInterval: 0.5
     enemiesAmount:
       enemies:
       - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
       - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
       - {fileID: 8794192663361722567, guid: 533244e993e72a342abf16de948666f6, type: 3}
-      enemyAmount: 010000000100000005000000
+      enemyAmount: 0f0000000a00000005000000
   - waveIndex: 8
-    spawnInterval: 500
+    spawnInterval: 0.5
     enemiesAmount:
       enemies:
       - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
@@ -15952,14 +15952,14 @@ MonoBehaviour:
       - {fileID: 8794192663361722567, guid: 533244e993e72a342abf16de948666f6, type: 3}
       enemyAmount: 0f0000000a0000000a000000
   - waveIndex: 9
-    spawnInterval: 500
+    spawnInterval: 0.5
     enemiesAmount:
       enemies:
       - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
       - {fileID: 8794192663361722567, guid: 533244e993e72a342abf16de948666f6, type: 3}
       enemyAmount: 140000000a000000
   - waveIndex: 10
-    spawnInterval: 500
+    spawnInterval: 0.5
     enemiesAmount:
       enemies:
       - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
@@ -15967,7 +15967,7 @@ MonoBehaviour:
       - {fileID: 8794192663361722567, guid: 533244e993e72a342abf16de948666f6, type: 3}
       enemyAmount: 14000000050000000a000000
   - waveIndex: 11
-    spawnInterval: 500
+    spawnInterval: 0.5
     enemiesAmount:
       enemies:
       - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
@@ -15976,7 +15976,7 @@ MonoBehaviour:
       - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
       enemyAmount: 14000000050000000a00000005000000
   - waveIndex: 12
-    spawnInterval: 500
+    spawnInterval: 0.5
     enemiesAmount:
       enemies:
       - {fileID: 1779284332624663121, guid: c748f271efe8c244282e1af3d36651c2, type: 3}
@@ -15985,14 +15985,14 @@ MonoBehaviour:
       - {fileID: 1779284332624663121, guid: 10c70a248949ea646a3a9d9af9305522, type: 3}
       enemyAmount: 0f0000000a0000000a00000005000000
   - waveIndex: 13
-    spawnInterval: 500
+    spawnInterval: 0.5
     enemiesAmount:
       enemies:
       - {fileID: 359069447674901461, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
       - {fileID: 8794192663361722567, guid: 533244e993e72a342abf16de948666f6, type: 3}
       enemyAmount: 0f0000000f000000
   - waveIndex: 14
-    spawnInterval: 500
+    spawnInterval: 0.5
     enemiesAmount:
       enemies:
       - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}
@@ -16002,7 +16002,7 @@ MonoBehaviour:
       - {fileID: 359069447674901461, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
       enemyAmount: 0f0000000a000000050000000a00000005000000
   - waveIndex: 15
-    spawnInterval: 500
+    spawnInterval: 0.5
     enemiesAmount:
       enemies:
       - {fileID: 1779284332624663121, guid: 3c4592f0e28d00242b07b691dacc0963, type: 3}

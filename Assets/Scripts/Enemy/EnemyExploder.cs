@@ -95,6 +95,18 @@ public class EnemyExploder : MonoBehaviour
 
         while (timer > 0f)
         {
+            if (healthSystem.dead)
+            {
+                if (!AudioManager.muteSFX)
+                {
+                    audioManager.StopSpecificSound(explosionSFX, gameObject);
+                }
+                smallRadius.SetActive(false);
+                mediumRadius.SetActive(false);
+                bigRadius.SetActive(false);
+                yield break;
+            }
+
             timer -= Time.deltaTime;
 
             if (timer <= explosionBuildUp * 0.66f)
@@ -129,14 +141,7 @@ public class EnemyExploder : MonoBehaviour
         yield return new WaitForSeconds(smokeDuration);
         smokeRadius.SetActive(false);
 
-        if (healthSystem.dead)
-        {
-            yield return null;
-        }
-        else
-        {
-            healthSystem.DestroyEnemy();
-        }
+        healthSystem.DestroyEnemy();
     }
 
     private void Explode()
