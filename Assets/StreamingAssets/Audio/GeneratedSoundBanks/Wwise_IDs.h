@@ -31,6 +31,7 @@ namespace AK
         static const AkUniqueID EMPTYUZI = 1210244458U;
         static const AkUniqueID EXPLOSION = 13776098U;
         static const AkUniqueID EXPLOSIONTIMER = 2139269741U;
+        static const AkUniqueID FALLINGBACK = 1225251435U;
         static const AkUniqueID FILMCONVERSATION = 2129816966U;
         static const AkUniqueID FOOTSTEPSENEMIES = 443235554U;
         static const AkUniqueID FOOTSTEPSPLAYER = 3865216745U;
@@ -66,6 +67,7 @@ namespace AK
         static const AkUniqueID SHOPFALLDOWN = 3877889958U;
         static const AkUniqueID SPLAT = 236860119U;
         static const AkUniqueID TAKOBACKGROUND = 1970138382U;
+        static const AkUniqueID TAKOSPLAT = 3483809414U;
         static const AkUniqueID TELEPORTBUTTON = 1392147812U;
         static const AkUniqueID TENTACLESLAM = 1348410100U;
         static const AkUniqueID TURNPAGE = 2936962349U;

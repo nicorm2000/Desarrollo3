@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="4182898782">
+		<SoundBank Id="3161908922" Language="SFX" Hash="202422524">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -183,6 +183,14 @@
 						<File Id="476604813" Language="SFX">
 							<ShortName>ExplosionTimer.wav</ShortName>
 							<Path>SFX\ExplosionTimer_30075EE3.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1225251435" Name="FallingBack" ObjectPath="\Events\Default Work Unit\FallingBack" DurationType="OneShot" DurationMin="0.375077" DurationMax="0.375077">
+					<IncludedMemoryFiles>
+						<File Id="413264812" Language="SFX">
+							<ShortName>FallingBack.wav</ShortName>
+							<Path>SFX\FallingBack_48E33B2F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -406,7 +414,7 @@
 					<IncludedMemoryFiles>
 						<File Id="28444962" Language="SFX">
 							<ShortName>explosion-47163.wav</ShortName>
-							<Path>SFX\explosion-47163_C3F1F33E.wem</Path>
+							<Path>SFX\explosion-47163_7AA70F30.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -469,7 +477,7 @@
 					<IncludedMemoryFiles>
 						<File Id="161125620" Language="SFX">
 							<ShortName>missile-blast-2-95177.wav</ShortName>
-							<Path>SFX\missile-blast-2-95177_E60B39B6.wem</Path>
+							<Path>SFX\missile-blast-2-95177_E6E19D0A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -563,6 +571,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3483809414" Name="TakoSplat" ObjectPath="\Events\Default Work Unit\TakoSplat" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="402710038" Language="SFX">
+							<ShortName>TakoSplat.wav</ShortName>
+							<Path>SFX\TakoSplat_9B5A0430.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1392147812" Name="TeleportButton" ObjectPath="\Events\Default Work Unit\TeleportButton" DurationType="OneShot" DurationMin="0.401029" DurationMax="0.401029">
 					<IncludedMemoryFiles>
 						<File Id="193436424" Language="SFX">
@@ -631,7 +647,7 @@
 				</File>
 				<File Id="28444962" Language="SFX">
 					<ShortName>explosion-47163.wav</ShortName>
-					<Path>SFX\explosion-47163_C3F1F33E.wem</Path>
+					<Path>SFX\explosion-47163_7AA70F30.wem</Path>
 				</File>
 				<File Id="40070512" Language="SFX">
 					<ShortName>CrackingFloor.wav</ShortName>
@@ -667,7 +683,7 @@
 				</File>
 				<File Id="161125620" Language="SFX">
 					<ShortName>missile-blast-2-95177.wav</ShortName>
-					<Path>SFX\missile-blast-2-95177_E60B39B6.wem</Path>
+					<Path>SFX\missile-blast-2-95177_E6E19D0A.wem</Path>
 				</File>
 				<File Id="169562177" Language="SFX">
 					<ShortName>ConveyorBelt.wav</ShortName>
@@ -745,9 +761,17 @@
 					<ShortName>Footsteps_Enemies_A_2.wav</ShortName>
 					<Path>SFX\Footsteps_Enemies_A_2_10C4C929.wem</Path>
 				</File>
+				<File Id="402710038" Language="SFX">
+					<ShortName>TakoSplat.wav</ShortName>
+					<Path>SFX\TakoSplat_9B5A0430.wem</Path>
+				</File>
 				<File Id="409067037" Language="SFX">
 					<ShortName>RifleGunfire-001.wav</ShortName>
 					<Path>SFX\RifleGunfire-001_10C4C929.wem</Path>
+				</File>
+				<File Id="413264812" Language="SFX">
+					<ShortName>FallingBack.wav</ShortName>
+					<Path>SFX\FallingBack_48E33B2F.wem</Path>
 				</File>
 				<File Id="419086052" Language="SFX">
 					<ShortName>Footsteps_Enemies_A_3.wav</ShortName>

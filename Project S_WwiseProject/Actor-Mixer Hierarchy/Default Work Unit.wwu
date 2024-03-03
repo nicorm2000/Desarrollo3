@@ -3197,6 +3197,77 @@
 								<ActiveSource Name="BossScream" ID="{FABFED19-121F-4724-9048-6255B74FD6EF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="FallingBack" ID="{8B1897E2-4C2C-44CA-9422-6276F24AB2A7}" ShortID="733146099">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FallingBack" ID="{AB84ED63-7C3D-4793-A873-01CDFE15F510}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0448461283718691"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.13746089234104"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.51253760236031"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>FallingBack.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="413264812"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="FallingBack" ID="{AB84ED63-7C3D-4793-A873-01CDFE15F510}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="TakoSplat" ID="{2FA93C13-1F16-4CCD-A760-D9C0F95770FA}" ShortID="901070419">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A0D30568-FA87-4DF0-A43E-F4971A29081E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{45985A57-42C5-4344-94DF-D29888A832BF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="TakoSplat" ID="{70CF340F-CC2A-4ABB-819B-7625F664B126}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.558797687861272"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>TakoSplat.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="402710038"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="TakoSplat" ID="{70CF340F-CC2A-4ABB-819B-7625F664B126}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
