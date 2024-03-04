@@ -3284,6 +3284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioManager: {fileID: 1589391703}
   click: Click
+  increaseSizeOn: {fileID: 1629116569}
   sceneName: MainMenu
 --- !u!114 &1435219479
 MonoBehaviour:

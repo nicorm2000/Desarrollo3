@@ -9,11 +9,19 @@ public class ReturnToMenu : MonoBehaviour
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private string click;
 
+    [Header("Transition Dependencies")]
+    [SerializeField] private Transitions increaseSizeOn;
+
+    private float timeToWait = 1f;
+
     public string sceneName = "MainMenu";
+
+    public string functionName = "LoadScene";
 
     public void ReturnMenu()
     {
-        Debug.Log("ReturnMenu");
+        StartCoroutine(increaseSizeOn.ActiveTransition(timeToWait));
+
         audioManager.StopSounds();
 
         if (!AudioManager.muteSFX)
@@ -21,6 +29,11 @@ public class ReturnToMenu : MonoBehaviour
             audioManager.PlaySound(click);
         }
 
+        Invoke(functionName, 1f);
+    }
+
+    private void LoadScene()
+    {
         SceneManager.LoadScene(sceneName);
     }
 }
