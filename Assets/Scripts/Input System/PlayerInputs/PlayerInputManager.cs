@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputManager : MonoBehaviour
 {
-    [Header("Refernces")]
+    [Header("References")]
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private Shoot playerShoot;
     [SerializeField] private TeleportPlayerToLevel teleportPlayerToLevel;
@@ -12,6 +12,9 @@ public class PlayerInputManager : MonoBehaviour
     [SerializeField] private LevelToShop levelToShop;
     [SerializeField] private Abilities abilities;
     [SerializeField] private LookAtMouse lookAtMouse;
+
+    [Header("Pause Menu References")]
+    [SerializeField] private PauseMenu pauseMenu;
 
     [Header("Bao Basket Reference")]
     [SerializeField] private GameObject baoBasket;
@@ -51,7 +54,7 @@ public class PlayerInputManager : MonoBehaviour
 
     public void OnShootPress()
     {
-        if (!playerData._isDead)
+        if (!playerData._isDead && !pauseMenu.isPaused)
         {
             playerData.isButtonPress = true;
         }

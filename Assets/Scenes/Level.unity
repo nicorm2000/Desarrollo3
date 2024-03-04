@@ -2438,7 +2438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 127761908}
-  resumeButton: {fileID: 0}
+  resumeButton: {fileID: 394153632}
   miniMap: {fileID: 127761911}
   cursorObject: {fileID: 127761909}
 --- !u!114 &127761911
@@ -10893,6 +10893,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1674702628}
     - target: {fileID: 43016677604891885, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 127761908}
+    - target: {fileID: 43016677604891885, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: levelToShop
       value: 
       objectReference: {fileID: 2082787382}
@@ -16039,7 +16043,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bd7b1b114d37eda4888d68aff28b3e28, type: 2}
   - {fileID: 11400000, guid: a937a3a7194277548bfbc3af0acd6616, type: 2}
   - {fileID: 11400000, guid: c75a6f980cce92c46a2394e752caa7ec, type: 2}
-  currentWaveIndex: 14
+  currentWaveIndex: 0
   iAmInShop: 0
 --- !u!114 &760154692
 MonoBehaviour:
