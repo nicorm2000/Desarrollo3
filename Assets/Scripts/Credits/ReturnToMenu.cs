@@ -11,16 +11,9 @@ public class ReturnToMenu : MonoBehaviour
 
     public string sceneName = "MainMenu";
 
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.Escape)) 
-        {
-            ReturnMenu();
-        }
-    }
-
     public void ReturnMenu()
     {
+        Debug.Log("ReturnMenu");
         audioManager.StopSounds();
 
         if (!AudioManager.muteSFX)

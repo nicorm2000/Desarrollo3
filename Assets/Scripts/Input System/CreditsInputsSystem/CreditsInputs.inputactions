@@ -1,0 +1,34 @@
+{
+    "name": "CreditsInputs",
+    "maps": [
+        {
+            "name": "Credits",
+            "id": "b7d7557d-a102-4a0e-9799-6dc55fa8facc",
+            "actions": [
+                {
+                    "name": "OnInteract",
+                    "type": "Button",
+                    "id": "1eab08f0-e6ce-4b45-b646-a8e0233f260c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "16526aa3-cb8a-4c5b-b6b4-ee9d7793990c",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnInteract",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

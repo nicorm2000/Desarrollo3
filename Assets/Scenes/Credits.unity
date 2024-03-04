@@ -1925,24 +1925,24 @@ MonoBehaviour:
 
     Elise Grey
 
-    
+
+
+
+
+    Nicolas Palavecino
+
 
 
 
     Nicolas
-    Palavecino
-
-
-
-
-    Nicolas Nahuel Carnota
+    Nahuel Carnota
 
     Sebastian Cartella
 
-    Valentin
-    Andres Gamero
+    Valentin Andres Gamero
 
-    Mateo Taylor
+    Mateo
+    Taylor
 
 
 
@@ -1952,21 +1952,21 @@ MonoBehaviour:
 
     Sergio Baretto
 
-    Juan Pablo
-    Varela Aloisio
+    Juan Pablo Varela Aloisio
 
     Ramiro Cabrera
 
-    Eugenio Taboada
+    Eugenio
+    Taboada
 
     Nazareno Rivero
 
-    Lucia
-    Ines Patetta
+    Lucia Ines Patetta
 
     Federico Barra
 
-    Franco Guerra
+    Franco
+    Guerra
 
     Silvina Lemos Hoffmann'
   m_isRightToLeft: 0
@@ -3231,6 +3231,8 @@ GameObject:
   - component: {fileID: 1435219477}
   - component: {fileID: 1435219476}
   - component: {fileID: 1435219478}
+  - component: {fileID: 1435219479}
+  - component: {fileID: 1435219480}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -3283,6 +3285,49 @@ MonoBehaviour:
   audioManager: {fileID: 1589391703}
   click: Click
   sceneName: MainMenu
+--- !u!114 &1435219479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435219475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334c2b80a7ccefc4098de46e04a0d06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  returnToMenu: {fileID: 1435219478}
+--- !u!114 &1435219480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435219475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: db66a1dbc89f0f04e89e687327ad5891, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Credits
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1450523187
 GameObject:
   m_ObjectHideFlags: 0
