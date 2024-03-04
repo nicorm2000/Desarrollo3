@@ -10889,6 +10889,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 43016677604891885, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: shop
+      value: 
+      objectReference: {fileID: 37278418}
+    - target: {fileID: 43016677604891885, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: baoBasket
       value: 
       objectReference: {fileID: 1674702628}

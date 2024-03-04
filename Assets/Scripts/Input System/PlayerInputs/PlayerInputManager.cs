@@ -16,6 +16,9 @@ public class PlayerInputManager : MonoBehaviour
     [Header("Pause Menu References")]
     [SerializeField] private PauseMenu pauseMenu;
 
+    [Header("Shop Dependencies")]
+    [SerializeField] private Shop shop;
+
     [Header("Bao Basket Reference")]
     [SerializeField] private GameObject baoBasket;
 
@@ -54,7 +57,7 @@ public class PlayerInputManager : MonoBehaviour
 
     public void OnShootPress()
     {
-        if (!playerData._isDead && !pauseMenu.isPaused)
+        if (!playerData._isDead && !pauseMenu.isPaused && !shop.isPopUpActive)
         {
             playerData.isButtonPress = true;
         }
