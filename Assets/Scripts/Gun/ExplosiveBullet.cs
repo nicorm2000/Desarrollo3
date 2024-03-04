@@ -72,6 +72,16 @@ public class ExplosiveBullet : MonoBehaviour
             collision.GetComponent<HealthSystem>().TakeDamage(currentDamage);
         }
 
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Boss"))
+        {
+            StartCoroutine(StopBullet());
+
+            collision.GetComponent<BossHealthSystem>().TakeDamage(currentDamage);
+
+            if (!weaponData.heavyWeapon)
+                Destroy(gameObject);
+        }
+
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
         {
             if (!AudioManager.muteSFX)

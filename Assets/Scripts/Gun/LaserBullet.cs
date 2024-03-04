@@ -63,6 +63,13 @@ public class LaserBullet : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Boss"))
+        {
+            collision.GetComponent<BossHealthSystem>().TakeDamage(currentDamage);
+
+            Destroy(gameObject);
+        }
+
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet_Collider"))
         {
             StartCoroutine(BulletBounce());
