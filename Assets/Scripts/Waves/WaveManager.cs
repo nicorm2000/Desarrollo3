@@ -109,7 +109,7 @@ public class WaveManager : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        Debug.Log(EnemyManager.enemyCount);
+        Debug.Log(_maxWaves);
         _currentWave = waves[currentWaveIndex];
 
         if (_canSpawn)

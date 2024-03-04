@@ -124,6 +124,7 @@ public class TeleportPlayerToLevel : MonoBehaviour
             if (waveManager.currentWaveIndex < Constants.MAX_WAVES)
             {
                 player.transform.position = levelSpawn.position;
+                waveManager.iAmInShop = false;
             }
 
             else
