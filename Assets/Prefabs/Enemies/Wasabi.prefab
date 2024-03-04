@@ -9,17 +9,18 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5287498465961912756}
-  - component: {fileID: 9216954252921922108}
-  - component: {fileID: 8250440763916729179}
-  - component: {fileID: 5471748933222071273}
   - component: {fileID: 73492346004507134}
   - component: {fileID: 1072501727647823141}
   - component: {fileID: 4078869031465706449}
+  - component: {fileID: 9216954252921922108}
+  - component: {fileID: 8250440763916729179}
+  - component: {fileID: 5471748933222071273}
   - component: {fileID: 7309651278043152717}
   - component: {fileID: 1381426249112580613}
   - component: {fileID: 5770550829314660929}
   - component: {fileID: 2178206136016929384}
   - component: {fileID: 5790305519619994793}
+  - component: {fileID: 1606488347721498718}
   m_Layer: 8
   m_Name: Wasabi
   m_TagString: Enemy
@@ -45,60 +46,6 @@ Transform:
   - {fileID: 2732064067284554266}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9216954252921922108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 359069447674901461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21ff78a32f3b44c4595bc0044bb6f7b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseSpeed: 1
-  healthSystem: {fileID: 8250440763916729179}
-  enemyData: {fileID: 11400000, guid: c75a6f980cce92c46a2394e752caa7ec, type: 2}
-  flipEnemy: {fileID: 5770550829314660929}
-  maxTime: 1
---- !u!114 &8250440763916729179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 359069447674901461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1ddd9aa9d7c4934ba96ad6daa6290a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 6957981709291660077}
-  miniMapIcon: {fileID: 3745233483390449127}
-  dead: 0
-  enemyData: {fileID: 11400000, guid: c75a6f980cce92c46a2394e752caa7ec, type: 2}
-  firePoint: {fileID: 0}
-  enemyCollider: {fileID: 1072501727647823141}
-  enemyTriggerCollider: {fileID: 4078869031465706449}
-  shadow: {fileID: 6339517438967630748}
-  health: 0
-  objectLifespanOffset: 0.5
-  hitMarker: {fileID: 7309651278043152717}
-  maxTime: 0.5
---- !u!114 &5471748933222071273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 359069447674901461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13830eb822c5fe340bca5ebed25f330f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropData: {fileID: 11400000, guid: c33f07bb2e1b4a14d9fac1a16a24e084, type: 2}
 --- !u!54 &73492346004507134
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -172,6 +119,60 @@ CapsuleCollider:
   m_Height: 1.25
   m_Direction: 2
   m_Center: {x: 0, y: -0.06, z: 0}
+--- !u!114 &9216954252921922108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359069447674901461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ff78a32f3b44c4595bc0044bb6f7b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 1
+  healthSystem: {fileID: 8250440763916729179}
+  enemyData: {fileID: 11400000, guid: c75a6f980cce92c46a2394e752caa7ec, type: 2}
+  flipEnemy: {fileID: 5770550829314660929}
+  maxTime: 1
+--- !u!114 &8250440763916729179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359069447674901461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ddd9aa9d7c4934ba96ad6daa6290a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 6957981709291660077}
+  miniMapIcon: {fileID: 3745233483390449127}
+  dead: 0
+  enemyData: {fileID: 11400000, guid: c75a6f980cce92c46a2394e752caa7ec, type: 2}
+  firePoint: {fileID: 0}
+  enemyCollider: {fileID: 1072501727647823141}
+  enemyTriggerCollider: {fileID: 4078869031465706449}
+  shadow: {fileID: 6339517438967630748}
+  health: 0
+  objectLifespanOffset: 0.5
+  hitMarker: {fileID: 7309651278043152717}
+  maxTime: 0.5
+--- !u!114 &5471748933222071273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359069447674901461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13830eb822c5fe340bca5ebed25f330f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropData: {fileID: 11400000, guid: c33f07bb2e1b4a14d9fac1a16a24e084, type: 2}
 --- !u!114 &7309651278043152717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +269,25 @@ MonoBehaviour:
   healthSystem: {fileID: 8250440763916729179}
   audioManager: {fileID: 2178206136016929384}
   gasSFX: Gas
+--- !u!114 &1606488347721498718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359069447674901461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646c66060c2c9004db9c265f5001c254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+  enemyData: {fileID: 11400000, guid: c75a6f980cce92c46a2394e752caa7ec, type: 2}
+  capsuleCollider: {fileID: 1072501727647823141}
+  maxTimeToResetAttack: 1
 --- !u!1 &3745233483390449127
 GameObject:
   m_ObjectHideFlags: 0

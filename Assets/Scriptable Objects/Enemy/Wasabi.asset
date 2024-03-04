@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cf5c79c482a364289b65bc639aa2a1, type: 3}
   m_Name: Wasabi
   m_EditorClassIdentifier: 
-  lastHorizontalVector: -0.5701202
-  lastVerticalVector: 0.8215613
-  movementDirection: {x: -0.5701202, y: 0.8215613}
+  lastHorizontalVector: -0.95783174
+  lastVerticalVector: -0.2873297
+  movementDirection: {x: -0.95783174, y: -0.2873297}
   model: {fileID: 359069447674901461, guid: e22e9c5733399404f9dba66d7c0213f9, type: 3}
   animator: {fileID: 0}
   dropData: {fileID: 11400000, guid: c33f07bb2e1b4a14d9fac1a16a24e084, type: 2}
   sushiName: Wasabi
-  damage: 0
+  damage: 30
   movementSpeed: 1.5
   avoidanceDistance: 1.5
   ifFollowingPlayer: 1
   isMelee: 1
-  canChase: 0
+  canChase: 1
   isGas: 1
   circularMovementSpeed: 1
   avoidanceFactor: 10

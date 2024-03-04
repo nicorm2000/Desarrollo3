@@ -641,17 +641,18 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4622741844156727097}
-  - component: {fileID: 2746745100448764345}
-  - component: {fileID: 5345744617377966691}
-  - component: {fileID: 5169719680340860735}
   - component: {fileID: 1889735117020333829}
   - component: {fileID: 1358996746618416340}
   - component: {fileID: 7706989699719050296}
+  - component: {fileID: 2746745100448764345}
+  - component: {fileID: 5345744617377966691}
+  - component: {fileID: 5169719680340860735}
   - component: {fileID: 1762173664161471690}
   - component: {fileID: 4255178994272925037}
   - component: {fileID: 2514241438589823774}
   - component: {fileID: 2458315473507534293}
   - component: {fileID: 120729506796625832}
+  - component: {fileID: 4011139221454773812}
   m_Layer: 8
   m_Name: Tekkamaki
   m_TagString: Enemy
@@ -681,60 +682,6 @@ Transform:
   - {fileID: 2180492289680299435}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2746745100448764345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8794192663361722567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21ff78a32f3b44c4595bc0044bb6f7b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseSpeed: 1
-  healthSystem: {fileID: 5345744617377966691}
-  enemyData: {fileID: 11400000, guid: a937a3a7194277548bfbc3af0acd6616, type: 2}
-  flipEnemy: {fileID: 2514241438589823774}
-  maxTime: 1
---- !u!114 &5345744617377966691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8794192663361722567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1ddd9aa9d7c4934ba96ad6daa6290a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 1341053496429283583}
-  miniMapIcon: {fileID: 5864713616549052325}
-  dead: 0
-  enemyData: {fileID: 11400000, guid: a937a3a7194277548bfbc3af0acd6616, type: 2}
-  firePoint: {fileID: 0}
-  enemyCollider: {fileID: 1358996746618416340}
-  enemyTriggerCollider: {fileID: 7706989699719050296}
-  shadow: {fileID: 72096330519569044}
-  health: 0
-  objectLifespanOffset: 0.5
-  hitMarker: {fileID: 1762173664161471690}
-  maxTime: 0.5
---- !u!114 &5169719680340860735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8794192663361722567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13830eb822c5fe340bca5ebed25f330f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropData: {fileID: 11400000, guid: 79449a2c2dee238438fb7dd78d2037c8, type: 2}
 --- !u!54 &1889735117020333829
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -808,6 +755,60 @@ CapsuleCollider:
   m_Height: 1.25
   m_Direction: 2
   m_Center: {x: 0, y: -0.06, z: 0}
+--- !u!114 &2746745100448764345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8794192663361722567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ff78a32f3b44c4595bc0044bb6f7b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 1
+  healthSystem: {fileID: 5345744617377966691}
+  enemyData: {fileID: 11400000, guid: a937a3a7194277548bfbc3af0acd6616, type: 2}
+  flipEnemy: {fileID: 2514241438589823774}
+  maxTime: 1
+--- !u!114 &5345744617377966691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8794192663361722567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ddd9aa9d7c4934ba96ad6daa6290a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1341053496429283583}
+  miniMapIcon: {fileID: 5864713616549052325}
+  dead: 0
+  enemyData: {fileID: 11400000, guid: a937a3a7194277548bfbc3af0acd6616, type: 2}
+  firePoint: {fileID: 0}
+  enemyCollider: {fileID: 1358996746618416340}
+  enemyTriggerCollider: {fileID: 7706989699719050296}
+  shadow: {fileID: 72096330519569044}
+  health: 0
+  objectLifespanOffset: 0.5
+  hitMarker: {fileID: 1762173664161471690}
+  maxTime: 0.5
+--- !u!114 &5169719680340860735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8794192663361722567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13830eb822c5fe340bca5ebed25f330f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropData: {fileID: 11400000, guid: 79449a2c2dee238438fb7dd78d2037c8, type: 2}
 --- !u!114 &1762173664161471690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -982,3 +983,22 @@ MonoBehaviour:
   bigRadius: {fileID: 2253121219630259449}
   smokeRadius: {fileID: 4675668403965106887}
   smokeDuration: 2
+--- !u!114 &4011139221454773812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8794192663361722567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646c66060c2c9004db9c265f5001c254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  includeLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
+  enemyData: {fileID: 11400000, guid: a937a3a7194277548bfbc3af0acd6616, type: 2}
+  capsuleCollider: {fileID: 1358996746618416340}
+  maxTimeToResetAttack: 1
