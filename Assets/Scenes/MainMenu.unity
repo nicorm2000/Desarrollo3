@@ -266,8 +266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxImage: {fileID: 1992961179}
-  sfxSpriteDefault: {fileID: 21300000, guid: 342f93d1c32fdcc4f8f49300c073efa5, type: 3}
-  sfxSpriteSelected: {fileID: 21300000, guid: 9615c1dca2ad1254c9fab8c90de2d88a, type: 3}
+  sfxSpriteDefault: {fileID: 21300000, guid: 0a838a9099c183d40b07293a4ea2128b, type: 3}
+  sfxSpriteSelected: {fileID: 21300000, guid: 450603820b189e943827109a90052cbc, type: 3}
   onSFXMute:
     m_PersistentCalls:
       m_Calls: []
@@ -275,8 +275,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   musicImage: {fileID: 1385556081}
-  musicSpriteDefault: {fileID: 21300000, guid: 0a838a9099c183d40b07293a4ea2128b, type: 3}
-  musicSpriteSelected: {fileID: 21300000, guid: 450603820b189e943827109a90052cbc, type: 3}
+  musicSpriteDefault: {fileID: 21300000, guid: 342f93d1c32fdcc4f8f49300c073efa5, type: 3}
+  musicSpriteSelected: {fileID: 21300000, guid: 9615c1dca2ad1254c9fab8c90de2d88a, type: 3}
   onMusicMute:
     m_PersistentCalls:
       m_Calls: []
@@ -2782,8 +2782,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -200, y: -30}
-  m_SizeDelta: {x: 160, y: 160}
+  m_AnchoredPosition: {x: -200, y: -50}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1385556080
 MonoBehaviour:
@@ -2861,7 +2861,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0a838a9099c183d40b07293a4ea2128b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 342f93d1c32fdcc4f8f49300c073efa5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4280,8 +4280,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -50}
-  m_SizeDelta: {x: 120, y: 120}
+  m_AnchoredPosition: {x: -50, y: -30}
+  m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1992961178
 MonoBehaviour:
@@ -4359,7 +4359,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 342f93d1c32fdcc4f8f49300c073efa5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a838a9099c183d40b07293a4ea2128b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
