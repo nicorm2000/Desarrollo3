@@ -43010,7 +43010,7 @@ PrefabInstance:
       objectReference: {fileID: 1941617754}
     - target: {fileID: 907778569999458767, guid: 3188265c2e459a345b976ea968e13e5b, type: 3}
       propertyPath: m_RenderMode
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5417707559661993434, guid: 3188265c2e459a345b976ea968e13e5b, type: 3}
       propertyPath: m_LocalPosition.x
