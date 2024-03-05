@@ -66,6 +66,7 @@ public class WaveManager : MonoBehaviour
     private bool _canSpawn = true;
     private bool _nextWave = false;
     private bool _finishedWaves = false;
+    private bool _popUpActive = false;
 
     private void OnValidate()
     {
@@ -101,6 +102,7 @@ public class WaveManager : MonoBehaviour
     {
         ResetWaves();
         ResetEnemiesValues();
+        currentWaveIndex = 3;
         waveUI.ShowWaveText(waves[currentWaveIndex].waveIndex);
     }
 
@@ -125,7 +127,14 @@ public class WaveManager : MonoBehaviour
         {
             if (waves[currentWaveIndex].waveIndex == _maxWaves - Constants.ONE && !iAmInShop)
             {
-                ActivateShop();
+                if (!_popUpActive)
+                {
+                    if (!AudioManager.muteSFX)
+                    {
+                        audioManager.PlaySound(waveBegins);
+                    }
+                    ActivateShop();
+                }
                 return;
             }
 
@@ -163,11 +172,6 @@ public class WaveManager : MonoBehaviour
     {
         if (currentWaveIndex + Constants.ONE != waves.Length && !playerData._isDead)
         {
-            if (!AudioManager.muteSFX)
-            {
-                audioManager.PlaySound(waveBegins);
-            }
-
             SpawnNextWave();
         }
         else
@@ -196,8 +200,16 @@ public class WaveManager : MonoBehaviour
     {
         abilities.DestroySlowers();
         currentWaveIndex++;
-        shop.ActivatePopUp();
+        if (waves[currentWaveIndex].waveIndex != _maxWaves - Constants.ONE - Constants.ROUNDS_BETWEEN_SHOPS && !_popUpActive)
+        {
+            if (!AudioManager.muteSFX)
+            {
+                audioManager.PlaySound(waveBegins);
+            }
+            shop.ActivatePopUp();
+        }
         StartCoroutine(waveUI.ShowWaveUI(waves[currentWaveIndex].waveIndex));
+        _popUpActive = false;
         _canSpawn = true;
     }
 
@@ -235,10 +247,12 @@ public class WaveManager : MonoBehaviour
     /// </summary>
     private void ActivateShop()
     {
+        shop.ActivatePopUp();
         basket.SetActive(true);
         door.SetActive(true);
         baoBasketIndicator.SetActive(true);
 
+        _popUpActive = true;
         StartCoroutine(WaitForBasketToFall());
     }
 

@@ -90,7 +90,7 @@ public class PlayerData : ScriptableObject
         weaponData[2].damage = 15;
         weaponData[3].damage = 15;
         weaponData[4].damage = 50;
-        weaponData[5].damage = 100;
+        weaponData[5].damage = 150;
         weaponData[6].damage = 50;
     }
 

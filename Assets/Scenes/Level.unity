@@ -11067,6 +11067,10 @@ PrefabInstance:
       propertyPath: weaponOverheatUI
       value: 
       objectReference: {fileID: 1017782199}
+    - target: {fileID: 3823591937530358882, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: overheatIncreaseAmount
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3970204813613353202, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: screenShake
       value: 

@@ -22,7 +22,7 @@ MonoBehaviour:
   weaponID: 0
   bulletSpeed: 20
   lifespan: 3
-  damage: 15
+  damage: 200
   bulletPrefab: {fileID: 7942789937546522980, guid: f0dd38f37e49c7849ad18429ca7bb8d9, type: 3}
   attackSpeed: 12.5
   multipleShoots: 0
@@ -74,3 +74,4 @@ MonoBehaviour:
   empty: EmptyUzi
   loaded: ShootUzi
   cooldown: CooldownUzi
+  explosion: 
