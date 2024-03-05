@@ -85,7 +85,7 @@ public class PlayerData : ScriptableObject
 
         speed = 5;
         maxHealth = 100;
-        weaponData[0].damage = 35;
+        weaponData[0].damage = 25;
         weaponData[1].damage = 250;
         weaponData[2].damage = 15;
         weaponData[3].damage = 15;
