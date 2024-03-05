@@ -1840,7 +1840,6 @@ GameObject:
   - component: {fileID: 4132694925241967873}
   - component: {fileID: 2044061180053155192}
   - component: {fileID: 6002068005353944329}
-  - component: {fileID: 1408420863254263586}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1968,6 +1967,8 @@ MonoBehaviour:
   levelToShop: {fileID: 0}
   abilities: {fileID: 464711979963327155}
   lookAtMouse: {fileID: 6429364731748367593}
+  pauseMenu: {fileID: 0}
+  shop: {fileID: 0}
   baoBasket: {fileID: 0}
   playerData: {fileID: 11400000, guid: 1880c9da973ae8a47a84f113fc312d9d, type: 2}
 --- !u!114 &9160149820997449130
@@ -2218,19 +2219,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1408420863254263586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7469210322841030696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fea8951faf8185439d80d88f1da0609, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0
 --- !u!1001 &2234775309246934003
 PrefabInstance:
   m_ObjectHideFlags: 0
