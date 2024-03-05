@@ -23,14 +23,10 @@ public class BossHealthSystem : MonoBehaviour
     [SerializeField] AudioManager audioManager;
     [SerializeField] private string bossGrunt;
     [SerializeField] private string bossScream;
-    [SerializeField] private string bossFall;
-    [SerializeField] private float bossFallTime;
-    [SerializeField] private string bossSplat;
-    [SerializeField] private float bossSplatTime;
 
     [Header("Transition Dependencies")]
     [SerializeField] private Transitions increaseSizeOn;
-    private readonly float timeToTurnOnTransition = 1f;
+    private readonly float timeToTurnOnTransition = 5f;
 
     [Header("Scene Manager Dependencies")]
     [SerializeField] private MySceneManager mySceneManager;
@@ -69,9 +65,6 @@ public class BossHealthSystem : MonoBehaviour
             _isDead = true;
             onBossDeadChange?.Invoke(_isDead);
 
-            StartCoroutine(WaitForFall());
-            StartCoroutine(WaitForSplat());
-
             if (!AudioManager.muteSFX)
             {
                 audioManager.PlaySound(bossScream);
@@ -91,29 +84,9 @@ public class BossHealthSystem : MonoBehaviour
 
     private IEnumerator BossDeathSequence()
     {
-        StartCoroutine(increaseSizeOn.ActiveTransition(timeToTurnOnTransition));
         yield return new WaitForSeconds(timeToTurnOnTransition);
+        StartCoroutine(increaseSizeOn.ActiveTransition(timeToTurnOnTransition));
         _isDead = false;
         mySceneManager.LoadSceneByName(winScene);
-    }
-
-    private IEnumerator WaitForFall()
-    {
-        yield return new WaitForSeconds(bossFallTime);
-
-        if (!AudioManager.muteSFX)
-        {
-            audioManager.PlaySound(bossFall);
-        }
-    }
-
-    private IEnumerator WaitForSplat()
-    {
-        yield return new WaitForSeconds(bossSplatTime);
-
-        if (!AudioManager.muteSFX)
-        {
-            audioManager.PlaySound(bossFall);
-        }
     }
 }

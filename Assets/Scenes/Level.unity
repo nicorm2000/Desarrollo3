@@ -4815,10 +4815,6 @@ MonoBehaviour:
   audioManager: {fileID: 204904164}
   bossGrunt: BossGrunt
   bossScream: BossScream
-  bossFall: FallingBack
-  bossFallTime: 0.75
-  bossSplat: TakoSplat
-  bossSplatTime: 2
   increaseSizeOn: {fileID: 908161859}
   mySceneManager: {fileID: 433192595}
   winScene: Win
