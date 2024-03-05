@@ -13977,6 +13977,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PedestalVoxel 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d9addf1351a93ed48ba99a8319242c2d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15730,6 +15734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PedestalVoxel 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d9addf1351a93ed48ba99a8319242c2d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15937,7 +15945,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bd7b1b114d37eda4888d68aff28b3e28, type: 2}
   - {fileID: 11400000, guid: a937a3a7194277548bfbc3af0acd6616, type: 2}
   - {fileID: 11400000, guid: c75a6f980cce92c46a2394e752caa7ec, type: 2}
-  currentWaveIndex: 14
+  currentWaveIndex: 0
   iAmInShop: 0
 --- !u!114 &760154692
 MonoBehaviour:
@@ -16548,6 +16556,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d9addf1351a93ed48ba99a8319242c2d, type: 3}
       propertyPath: m_Name
       value: PedestalVoxel 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d9addf1351a93ed48ba99a8319242c2d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19664,6 +19676,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d9addf1351a93ed48ba99a8319242c2d, type: 3}
       propertyPath: m_Name
       value: PedestalVoxel 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d9addf1351a93ed48ba99a8319242c2d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27546,6 +27562,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PedestalVoxel 4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d9addf1351a93ed48ba99a8319242c2d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32559,6 +32579,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d9addf1351a93ed48ba99a8319242c2d, type: 3}
       propertyPath: m_Name
       value: PedestalVoxel 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d9addf1351a93ed48ba99a8319242c2d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -44491,6 +44515,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d9addf1351a93ed48ba99a8319242c2d, type: 3}
       propertyPath: m_Name
       value: Button Pedestal
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d9addf1351a93ed48ba99a8319242c2d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
