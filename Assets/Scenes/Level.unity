@@ -6667,7 +6667,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1327362360}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CheatController, Assembly-CSharp
         m_MethodName: UpdateWave
         m_Mode: 1
@@ -27711,53 +27711,6 @@ Transform:
   - {fileID: 1965812401}
   m_Father: {fileID: 661987637}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1327362358
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1327362359}
-  - component: {fileID: 1327362360}
-  m_Layer: 0
-  m_Name: CheatsManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1327362359
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1327362358}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1327362360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1327362358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1925dc24356425942af24191fe4863c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cheatsText: {fileID: 1046934544}
-  enemyWaveUpdater: {fileID: 279060190}
-  waveManager: {fileID: 760154691}
 --- !u!1 &1336191966
 GameObject:
   m_ObjectHideFlags: 0
@@ -36701,8 +36654,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1686854223}
   - component: {fileID: 1686854225}
-  - component: {fileID: 1686854222}
-  - component: {fileID: 1686854224}
   m_Layer: 0
   m_Name: Boss Fight Manager
   m_TagString: Untagged
@@ -36710,24 +36661,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1686854222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686854221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25a33232ce928494e922486ccd2dfd76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colliderTrigger: {fileID: 0}
-  enemy: {fileID: 4387127066184703811, guid: 40e2c4266a652064898bb3a906848075, type: 3}
-  enemy2: {fileID: 0}
-  enemy3: {fileID: 0}
-  enemySpawnInterval: 1
-  enemysMaxAmountAlive: 0
 --- !u!4 &1686854223
 Transform:
   m_ObjectHideFlags: 0
@@ -36743,18 +36676,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1686854224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686854221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bf540e47427e9d42abd67070423e218, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1686854225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46427,7 +46348,6 @@ SceneRoots:
   - {fileID: 435437618}
   - {fileID: 433192594}
   - {fileID: 760154690}
-  - {fileID: 1327362359}
   - {fileID: 5189041369103466874}
   - {fileID: 1504507316}
   - {fileID: 619087541}
