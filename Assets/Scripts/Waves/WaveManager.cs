@@ -102,7 +102,6 @@ public class WaveManager : MonoBehaviour
     {
         ResetWaves();
         ResetEnemiesValues();
-        currentWaveIndex = 3;
         waveUI.ShowWaveText(waves[currentWaveIndex].waveIndex);
     }
 
