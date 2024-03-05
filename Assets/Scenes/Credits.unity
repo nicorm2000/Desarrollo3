@@ -1902,7 +1902,6 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-
     Nicolas Ramos Marin
 
     Facundo Santos
@@ -1924,7 +1923,6 @@ MonoBehaviour:
 
 
     Elise Grey
-
 
 
 
@@ -3286,6 +3284,7 @@ MonoBehaviour:
   click: Click
   increaseSizeOn: {fileID: 1629116569}
   sceneName: MainMenu
+  functionName: LoadScene
 --- !u!114 &1435219479
 MonoBehaviour:
   m_ObjectHideFlags: 0
