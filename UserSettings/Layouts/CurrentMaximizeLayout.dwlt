@@ -26,7 +26,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 3236
+  controlID: 3454
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 3114
+  controlID: 3350
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -702,7 +702,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 00fefdffdad3ffffd2dbffff58e2ffff80f6ffff2cd20000
+      m_ExpandedIDs: 00fefdffdad3ffffd2dbffff58e2ffff80f6ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -745,8 +745,8 @@ MonoBehaviour:
     y: 0
     width: 220
     height: 724
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
@@ -797,7 +797,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Bullets
+    - Assets/Prefabs/Enemies/Boss
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -805,7 +805,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Bullets
+  - Assets/Prefabs/Enemies/Boss
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\facus\OneDrive\Escritorio\Desarrollo de videojuegos
     3\Desarrollo3
@@ -813,9 +813,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 2e7a0000
-    m_LastClickedID: 31278
-    m_ExpandedIDs: 00000000a8790000aa790000ac790000ae79000000ca9a3b
+    m_SelectedIDs: ca2c0100
+    m_LastClickedID: 77002
+    m_ExpandedIDs: 00000000a8790000aa790000ac790000ae790000307a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -870,7 +870,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 40ca0000
     m_LastClickedInstanceID: 51776
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
