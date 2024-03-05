@@ -11246,7 +11246,8 @@ PrefabInstance:
       propertyPath: selectWeapon.Array.data[2]
       value: 
       objectReference: {fileID: 1186112280}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1408420863254263586, guid: a9df24e86a219ac458086842d36682f6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
