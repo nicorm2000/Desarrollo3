@@ -31,6 +31,7 @@ public class Abilities : MonoBehaviour
     [SerializeField] private GameObject prefabToSpawn;
     [SerializeField] private float slowerLifetime = 5f;
     [SerializeField] private float slowerZOffset = 5f;
+    [SerializeField] private float slowerZOffsetBossArea = 1f;
     [SerializeField] private int waveToUnlockSlower;
     private float slowerCooldown = 3f;
     private bool isCooldownSlower = false;
@@ -49,6 +50,9 @@ public class Abilities : MonoBehaviour
     [SerializeField] string roll;
     [SerializeField] string splat;
     [SerializeField] string laser;
+
+    [Header ("Boss Attacks Dependences")]
+    [SerializeField] private BossAttacks bossAttacks;
 
     private float laserCooldown = 3f;
     private bool isCooldownLaser = false;
@@ -155,9 +159,17 @@ public class Abilities : MonoBehaviour
                 isCooldownSlower = true;
                 slowerImage.fillAmount = 1f;
 
-                GameObject spawnedObject = Instantiate(prefabToSpawn, new Vector3(transform.position.x, transform.position.y, transform.position.z + slowerZOffset), Quaternion.Euler(-90f, 0f, 0f));
+                if (bossAttacks.isOnBossArea) 
+                {
+                    GameObject spawnedObject = Instantiate(prefabToSpawn, new Vector3(transform.position.x, transform.position.y, transform.position.z + slowerZOffsetBossArea), Quaternion.Euler(-90f, 0f, 0f));
+                    StartCoroutine(DestroyAfterTime(spawnedObject));
+                }
 
-                StartCoroutine(DestroyAfterTime(spawnedObject));
+                if (!bossAttacks.isOnBossArea)
+                {
+                    GameObject spawnedObject = Instantiate(prefabToSpawn, new Vector3(transform.position.x, transform.position.y, transform.position.z + slowerZOffset), Quaternion.Euler(-90f, 0f, 0f));
+                    StartCoroutine(DestroyAfterTime(spawnedObject));
+                }
             }
         }
     }

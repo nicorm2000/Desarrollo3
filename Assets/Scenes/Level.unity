@@ -4919,6 +4919,7 @@ MonoBehaviour:
   choppingTentaclesManager: {fileID: 204904168}
   inkHellManager: {fileID: 204904167}
   floorTentacleManager: {fileID: 204904166}
+  isOnBossArea: 0
 --- !u!114 &204904166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10907,6 +10908,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 473135369}
     - target: {fileID: 464711979963327155, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: bossAttacks
+      value: 
+      objectReference: {fileID: 204904165}
+    - target: {fileID: 464711979963327155, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: slowerImage
       value: 
       objectReference: {fileID: 312420385}
@@ -10918,6 +10923,14 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1351502573}
+    - target: {fileID: 464711979963327155, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: slowerZOffset
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 464711979963327155, guid: a9df24e86a219ac458086842d36682f6, type: 3}
+      propertyPath: slowerZOffsetBossArea
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 471063530683274035, guid: a9df24e86a219ac458086842d36682f6, type: 3}
       propertyPath: screenShake
       value: 

@@ -39,10 +39,14 @@ public class BossAttacks : MonoBehaviour
     private bool _isInkHell;
     private bool _isBlindOctopus;
 
+    [Header("Boss Area")]
+    public bool isOnBossArea = false;
+
     private void Start()
     {
         _currentAttack = AttackType.None;
         StartCoroutine(InitialDelayRoutine());
+        isOnBossArea = true;
     }
 
     #region BOSS_PRESENTATION
