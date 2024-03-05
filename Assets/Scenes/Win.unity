@@ -881,7 +881,7 @@ MonoBehaviour:
   m_text: WIN!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1431d80935cee34b9fd4113e7d94866, type: 2}
-  m_sharedMaterial: {fileID: 8233435915380040242, guid: c1431d80935cee34b9fd4113e7d94866, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: df1f7dc6ec86afa42806254cb7cca6a2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1131,10 +1131,19 @@ MonoBehaviour:
   sfxImage: {fileID: 0}
   sfxSpriteDefault: {fileID: 0}
   sfxSpriteSelected: {fileID: 0}
-  onMute:
+  onSFXMute:
     m_PersistentCalls:
       m_Calls: []
-  onUnmute:
+  onSFXUnmute:
+    m_PersistentCalls:
+      m_Calls: []
+  musicImage: {fileID: 0}
+  musicSpriteDefault: {fileID: 0}
+  musicSpriteSelected: {fileID: 0}
+  onMusicMute:
+    m_PersistentCalls:
+      m_Calls: []
+  onMusicUnmute:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1399084929

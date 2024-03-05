@@ -1103,7 +1103,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 62c85f8d65bfae046bcded1c3f27f1a8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4cb053621bb856847891eee4e22c67ba, type: 2}
+      objectReference: {fileID: 2100000, guid: c03cd865e2fb8104c87d23b123acbf4f, type: 2}
     - target: {fileID: 919132149155446097, guid: 62c85f8d65bfae046bcded1c3f27f1a8, type: 3}
       propertyPath: m_Name
       value: mesa
