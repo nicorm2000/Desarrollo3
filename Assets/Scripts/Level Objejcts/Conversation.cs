@@ -1,60 +1,73 @@
 using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class Conversation : MonoBehaviour
 {
     [Header("Conversation Configuration")]
-    [SerializeField] private TMPro.TextMeshProUGUI textMeshPro;
+    [SerializeField] private TextMeshProUGUI textMeshPro;
     [SerializeField] private float typingSpeed;
-    [SerializeField] private string[] phrases = { "Hey, this is the shop!", "Please, choose your next weapon!", "Let the carnage begin!" };
+    [SerializeField] private float wordWait;
+    [SerializeField] private string[] phrases;
+    [SerializeField] private string[] phrasesBeforeBoss;
+    private bool _isBeforeBossPhase = false;
 
-    private bool animateText = true;
-    private int currentIndex = 0;
+    [Header("Layers to include")]
+    [SerializeField] private LayerMask includeLayer;
+
+    [Header("Wave Manager Dependencies")]
+    [SerializeField] private WaveManager waveManager;
 
     private void Start()
     {
-        StartConversation();
+        StartCoroutine(TypePhrases());
     }
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player") && Time.timeScale != 0)
+        if (((Constants.ONE << collision.gameObject.layer) & includeLayer) != Constants.ZERO && Time.timeScale != 0)
         {
-            animateText = true;
+            if (waveManager.currentWaveIndex == 14)
+            {
+                _isBeforeBossPhase = true;
+            }
+
+            StartCoroutine(TypePhrases());
         }
     }
 
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player") && Time.timeScale != 0)
+        if (((Constants.ONE << collision.gameObject.layer) & includeLayer) != Constants.ZERO && Time.timeScale != 0)
         {
-            animateText = false;
+            StopAllCoroutines();
         }
     }
 
-    public void StartConversation()
-    {
-        StartCoroutine(AnimateText());
-    }
 
-    private IEnumerator AnimateText()
+    private IEnumerator TypePhrases()
     {
-        while (animateText)
+        string[] selectedPhrases = _isBeforeBossPhase ? phrasesBeforeBoss : phrases;
+
+        int index = 0;
+
+        while (true)
         {
-            string currentPhrase = phrases[currentIndex];
-
+            string phrase = selectedPhrases[index];
+            yield return TypePhrase(phrase);
+            yield return new WaitForSeconds(wordWait);
             textMeshPro.text = "";
 
-            for (int i = 0; i < currentPhrase.Length; i++)
-            {
-                textMeshPro.text += currentPhrase[i];
+            index = (index + 1) % selectedPhrases.Length;
+        }
+    }
 
-                yield return new WaitForSeconds(typingSpeed * Time.deltaTime);
-            }
-
-            yield return new WaitForSeconds(2f);
-
-            currentIndex = (currentIndex + 1) % phrases.Length;
+    private IEnumerator TypePhrase(string phrase)
+    {
+        for (int i = 0; i < phrase.Length; i++)
+        {
+            textMeshPro.text = phrase[..(i + 1)];
+            yield return new WaitForSeconds(typingSpeed);
         }
     }
 }
